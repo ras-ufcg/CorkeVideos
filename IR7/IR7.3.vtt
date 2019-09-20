@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.730 --> 00:00:09.540
+We're going to do a quick recap on the trigonometric
+function Tan and its inverse. Nothing on this
+
+00:00:09.540 --> 00:00:14.799
+slide so far should surprise you. This is
+pretty standard high school maths. We can
+
+00:00:14.799 --> 00:00:20.920
+re-arrange it to isolate Tan theta and we
+write that in terms of Y divided by X and
+
+00:00:20.920 --> 00:00:26.279
+then we can introduce the inverse tan function,
+so we can write theta in terms of the inverse
+
+00:00:26.279 --> 00:00:28.460
+tan of Y divided my X.
+
+00:00:28.460 --> 00:00:33.050
+The inverse tan function is denoted in many
+different ways, but most commonly it's written
+
+00:00:33.050 --> 00:00:37.829
+as tan to the power of minus one, sometimes
+it’s written as A tan and sometimes it's
+
+00:00:37.829 --> 00:00:43.160
+written as Arc Tan. They're perhaps the most
+common ways of representing the inverse tangent
+
+00:00:43.160 --> 00:00:48.359
+function. Now let's look at some more complex
+cases, but we'll start off with the simplest
+
+00:00:48.359 --> 00:00:53.739
+of these cases. And we have a triangle, its
+height is one, its width is two and the angle
+
+00:00:53.739 --> 00:01:00.960
+marked in the triangle is equal to 0.4636
+radiance. If I apply the inverse tan function
+
+00:01:00.960 --> 00:01:07.640
+to the ration one over two, then I get exactly
+the same value, 0.4636. That's right for the
+
+00:01:07.640 --> 00:01:14.600
+case where the angle is negative. In this case the width is two but the height is equal to minus one.
+
+00:01:14.820 --> 00:01:19.220
+I can compute the arc tangent of minus one
+divided by two and I get the result which
+
+00:01:19.230 --> 00:01:25.830
+is minus 0.4636 just as I would expect. Now
+let's consider the case of an angle that's
+
+00:01:25.830 --> 00:01:31.480
+bigger than Pi on two. In this case the height
+is one and the width is equal to minus two.
+
+00:01:31.480 --> 00:01:40.300
+In this case theta is equal to 2.6779 radiance.
+If I compute the arc tangent of one over minus
+
+00:01:40.300 --> 00:01:46.570
+two, then I get a result which is minus 0.4636.
+We see that there is a discrepancy between
+
+00:01:46.570 --> 00:01:53.500
+the actual angle of this line and the angle
+that is given to us by the arc tangent function.
+
+00:01:53.500 --> 00:01:59.000
+And similarly for this case, the width is
+minus two, the height is minus one and if
+
+00:01:59.000 --> 00:02:06.980
+I compute the arc tangent of that, the result
+I get is 0.4636. The problem in this last
+
+00:02:06.980 --> 00:02:12.760
+case is that negative one divided by negative
+two, gives a result which is the same as one
+
+00:02:12.760 --> 00:02:17.590
+divided by two. It's a positive number and
+that's the same as the example we did at the
+
+00:02:17.590 --> 00:02:19.670
+beginning up here.
+
+00:02:19.670 --> 00:02:24.950
+The underlying problem here is that inverse
+tan function has got a range which only spans
+
+00:02:24.950 --> 00:02:30.810
+from minus Pi on two to plus Pi on two. To
+get around the problem we introduce a new
+
+00:02:30.810 --> 00:02:36.069
+function and it's commonly called "A Tan Two",
+you’ll find a function of this name in the
+
+00:02:36.069 --> 00:02:41.540
+mathematical library of many programming languages
+and you’ll certainly find it in MATLAB.
+
+00:02:41.540 --> 00:02:46.810
+It takes into account the sign of A and the
+sign of B and from that information it can
+
+00:02:46.810 --> 00:02:52.859
+determine which quadrant of the circle the
+angle lies within. So the range of this function
+
+00:02:52.859 --> 00:02:59.280
+is from minus Pi to plus Pi inclusive. And
+here's a simple example using MATLAB, computing
+
+00:02:59.280 --> 00:03:06.530
+the arc tangent of one divided by minus two,
+it gives us the answer of 2.6779 radiance
+
+00:03:06.530 --> 00:03:09.959
+and that's an angle in the second quadrant
+of the circle.
+

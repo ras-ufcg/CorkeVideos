@@ -1,0 +1,185 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.669 --> 00:00:06.080
+Here we have an image of a redundant robot.
+
+00:00:06.080 --> 00:00:09.090
+And this is a concept that we introduced in
+the previous lecture.
+
+00:00:09.090 --> 00:00:14.010
+This is a robot with a very large number of
+degrees of freedom or joints.
+
+00:00:14.010 --> 00:00:17.840
+We also introduced the concepts of task space
+and configuration space.
+
+00:00:17.840 --> 00:00:23.650
+Now the task space of this robot is a subset
+of SE3 and that's exactly the same task space
+
+00:00:23.650 --> 00:00:29.320
+as the Puma robot has, that is within a working
+volume, it can move to a particular point
+
+00:00:29.320 --> 00:00:33.500
+and achieve a particular end effector orientation.
+
+00:00:33.500 --> 00:00:36.940
+However the configuration space of this robot
+is much, much bigger.
+
+00:00:36.940 --> 00:00:42.000
+We're assuming that this robot has got a hundred
+joints, then its configuration space is R
+
+00:00:42.000 --> 00:00:47.389
+to the 100, with a Puma robot with only 6
+joints, it has got a configuration space of
+
+00:00:47.389 --> 00:00:48.909
+R to the 6th.
+
+00:00:48.909 --> 00:00:53.000
+The task space has got a dimension of 6, the
+configuration space has got a dimension space
+
+00:00:53.000 --> 00:00:54.699
+of 100.
+
+00:00:54.699 --> 00:00:58.969
+So we could consider that six of those degrees
+of freedom are used to control the position
+
+00:00:58.969 --> 00:01:00.910
+and orientation of the end effector.
+
+00:01:00.910 --> 00:01:07.990
+The other 94 degrees of freedom are used to
+define an arbitrary shape for the robot arm,
+
+00:01:07.990 --> 00:01:12.340
+so that we can independently control the position
+and orientation of the end effector and the
+
+00:01:12.340 --> 00:01:17.680
+path that the arm follows in order to get
+from the base of the robot to the end effector.
+
+00:01:17.680 --> 00:01:22.310
+When it comes to determining the inverse kinematics
+then, we have a bit of a problem; there are
+
+00:01:22.310 --> 00:01:29.170
+in fact an infinite number of sets of joint
+angles and infinite number of robot configurations
+
+00:01:29.170 --> 00:01:32.950
+that will lead to exactly the same end effector
+pose.
+
+00:01:32.950 --> 00:01:37.640
+In the case of the Puma robot, there were
+six configurations that gave the same end
+
+00:01:37.640 --> 00:01:41.680
+effector pose; for this robot there are an
+infinite number.
+
+00:01:41.680 --> 00:01:47.030
+To solve the inverse kinematics then for a
+redundant robot, we have to rely on a numerical
+
+00:01:47.030 --> 00:01:48.810
+solution.
+
+00:01:48.810 --> 00:01:54.749
+We're going to do an example now with a redundant
+robot and we're going to use a Toolbox model
+
+00:01:54.749 --> 00:01:57.869
+called MDL Hyper 3D.
+
+00:01:57.869 --> 00:02:05.289
+So this is a Hyper-redundant robot, in 3 dimensions
+and I'm going to ask for a robot with 20 dimensions.
+
+00:02:05.289 --> 00:02:09.851
+We can see that there is a new serial link
+object in the workspace called H3D and if
+
+00:02:09.851 --> 00:02:14.200
+we look at the parameters of the robot, we
+can see that it has got 20 joints, each joint
+
+00:02:14.200 --> 00:02:17.500
+is only 0.05 meters long.
+
+00:02:17.500 --> 00:02:23.769
+Let's compute the inverse kinematics numerically
+and we're going to apply the ikine method
+
+00:02:23.769 --> 00:02:27.950
+on that particular object and I'm going to
+pass in the pose that I want the robot to
+
+00:02:27.950 --> 00:02:32.400
+adopt, that I have already defined and I'm
+going to pass in the initial joint angles
+
+00:02:32.400 --> 00:02:37.620
+and I'm going to use the workspace variable
+QZ, that was defined by the script that created
+
+00:02:37.620 --> 00:02:39.810
+the robot for me.
+
+00:02:39.810 --> 00:02:41.420
+And here we have the solution.
+
+00:02:41.420 --> 00:02:46.510
+We've computed a 20 element vector, which
+are the joint angles necessary for this 20
+
+00:02:46.510 --> 00:02:50.150
+joint robot to adopt the pose T2.
+
+00:02:50.150 --> 00:02:54.660
+I can test the correctness of this by computing
+the forward Kinematics for the set of joint
+
+00:02:54.660 --> 00:02:59.410
+angles that I just computed and that's what
+it looks like and this is the original pose
+
+00:02:59.410 --> 00:03:00.410
+that I asked for.
+
+00:03:00.410 --> 00:03:02.579
+So we can see that they are identical.
+
+00:03:02.579 --> 00:03:07.360
+I can plot the configuration of the robot
+at the set of joint angles computed by the
+
+00:03:07.360 --> 00:03:13.590
+inverse kinematics and it looks something
+like that.
+
+00:03:13.590 --> 00:03:19.530
+Hold on so I can overlay on that now the original
+pose that I asked for, which was in the workspace
+
+00:03:19.530 --> 00:03:20.879
+variable T2.
+
+00:03:20.879 --> 00:03:24.690
+And there we see that the end effector is
+in the correct position and that it has the
+
+00:03:24.690 --> 00:03:26.150
+correct orientation.
+

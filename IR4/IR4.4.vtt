@@ -1,0 +1,281 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.399 --> 00:00:05.500
+Let’s consider a more complex case.
+
+00:00:05.500 --> 00:00:08.889
+I want to start at this particular X value.
+
+00:00:08.889 --> 00:00:11.720
+I want to finish at this particular X value.
+
+00:00:11.720 --> 00:00:16.379
+But, in between, I wanted to visit this X
+value and this X value.
+
+00:00:16.379 --> 00:00:19.810
+I refer to these intermediate points as via
+points.
+
+00:00:19.810 --> 00:00:24.050
+Sometimes, it’s also referred to as way
+points.
+
+00:00:24.050 --> 00:00:28.400
+If a robot is going to do this particular
+motion, we have a problem in that the trajectory
+
+00:00:28.400 --> 00:00:29.789
+is not smooth.
+
+00:00:29.789 --> 00:00:34.829
+At each of the points, the velocity abruptly
+changes from one value to another.
+
+00:00:34.829 --> 00:00:37.360
+Here, the velocity is increasing.
+
+00:00:37.360 --> 00:00:40.030
+A moment later, the velocity is decreasing.
+
+00:00:40.030 --> 00:00:44.230
+The way we get around this problem is to introduce
+what are called blends.
+
+00:00:44.230 --> 00:00:49.390
+So here, we have the motion between these
+points and in red, it’s shown the blend
+
+00:00:49.390 --> 00:00:50.390
+phase.
+
+00:00:50.390 --> 00:00:55.550
+Now, this is where we introduce a smooth mathematical
+curve which maintains continuity.
+
+00:00:55.550 --> 00:01:00.190
+So, initially, we accelerate on to the curve
+and head towards X2.
+
+00:01:00.190 --> 00:01:06.710
+When we get near X2, we start to transition
+in to the velocity we require on to the next
+
+00:01:06.710 --> 00:01:07.710
+path.
+
+00:01:07.710 --> 00:01:12.690
+So, we transition our velocity over a set
+period, over what’s called the acceleration
+
+00:01:12.690 --> 00:01:13.690
+interval.
+
+00:01:13.690 --> 00:01:20.060
+So, our path now consists of segments of linear
+velocity with parabolic or higher-order polynomial
+
+00:01:20.060 --> 00:01:22.730
+blends to join them together.
+
+00:01:22.730 --> 00:01:25.810
+We can consider the motion in terms of three
+segments.
+
+00:01:25.810 --> 00:01:30.740
+The first segment gets us from point 1 to
+point 2, second segment from point 2 to point
+
+00:01:30.740 --> 00:01:32.720
+3 and so on.
+
+00:01:32.720 --> 00:01:36.800
+Because you probably noticed by now that the
+robot isn’t actually getting to the via
+
+00:01:36.800 --> 00:01:37.800
+points.
+
+00:01:37.800 --> 00:01:41.860
+It’s getting close to X2 and then it’s
+going to turn to get on to the path to head
+
+00:01:41.860 --> 00:01:42.860
+towards X3.
+
+00:01:42.860 --> 00:01:47.400
+So, it misses X2 and then actually misses
+X3 as well.
+
+00:01:47.400 --> 00:01:49.680
+Now, this is just a bit of a trade off.
+
+00:01:49.680 --> 00:01:54.750
+If the acceleration time is very small, then
+we will go very close to the via points, but
+
+00:01:54.750 --> 00:01:56.590
+the acceleration will be very high.
+
+00:01:56.590 --> 00:02:01.520
+We’re going to have to head towards X2 and
+then very, very quickly change our velocity
+
+00:02:01.520 --> 00:02:04.450
+in to the velocity we need to head towards
+X3.
+
+00:02:04.450 --> 00:02:09.429
+If the acceleration time is large, then the
+acceleration of the robot is much lower, but
+
+00:02:09.429 --> 00:02:13.349
+we’re going to miss the via points by a
+larger amount.
+
+00:02:13.349 --> 00:02:18.700
+This is a fundamental engineering trade off
+between accuracy and acceleration.
+
+00:02:18.700 --> 00:02:23.500
+Let’s create a trajectory with via points.
+
+00:02:23.500 --> 00:02:27.900
+The first point we want to visit has got a
+value of 10.
+
+00:02:27.900 --> 00:02:31.420
+The last point that I visit has got a value
+of 30.
+
+00:02:31.420 --> 00:02:39.529
+And, the via points I’m going to set as
+40, 10 and the last one.
+
+00:02:39.529 --> 00:02:44.879
+To compute a trajectory with via points, I
+used the Toolbox function mstraj and it’s
+
+00:02:44.879 --> 00:02:46.719
+got rather a lot of arguments.
+
+00:02:46.719 --> 00:02:48.790
+First argument is the via points.
+
+00:02:48.790 --> 00:02:54.469
+The next argument is the velocity at which
+we move, and it’s going to be one unit per
+
+00:02:54.469 --> 00:02:55.469
+second.
+
+00:02:55.469 --> 00:02:59.139
+The third argument I’m going to set to null
+for the time being.
+
+00:02:59.139 --> 00:03:03.569
+And, I’m going to put in the first location
+that we want to visit.
+
+00:03:03.569 --> 00:03:11.249
+I’m going to put in the time interval and
+I’m going to put in the acceleration time.
+
+00:03:11.249 --> 00:03:13.769
+And, here is our trajectory.
+
+00:03:13.769 --> 00:03:18.849
+We’ve gone from 10 up to 40, back down to
+10 and up to 30.
+
+00:03:18.849 --> 00:03:22.980
+Now, let’s look at what happens when we
+adjust some of the parameters.
+
+00:03:22.980 --> 00:03:25.930
+The first thing I’m going to do is to increase
+the acceleration time.
+
+00:03:25.930 --> 00:03:30.799
+So, I’m going to increase it from 2 to 4
+and we can see that the trajectory has become
+
+00:03:30.799 --> 00:03:31.799
+more rounded.
+
+00:03:31.799 --> 00:03:36.819
+And, we can also see the distance by which
+the trajectory misses the via points has increased.
+
+00:03:36.819 --> 00:03:41.279
+I can increase the acceleration time even
+more, put it up to 8 and we can see again
+
+00:03:41.279 --> 00:03:47.159
+that the trajectory is much more rounded because
+the acceleration is much gentler but, the
+
+00:03:47.159 --> 00:03:51.419
+distance between the trajectory and the via
+points is increased even further.
+
+00:03:51.419 --> 00:03:56.750
+If I set the acceleration time to 0, we exactly
+reach the via points but the trajectory will
+
+00:03:56.750 --> 00:03:58.169
+be discontinuous.
+
+00:03:58.169 --> 00:04:00.849
+The acceleration will be infinite at the via
+points.
+
+00:04:00.849 --> 00:04:03.970
+Let’s go back to something a little bit
+more gentle.
+
+00:04:03.970 --> 00:04:09.859
+And now, what I’m going to do is to increase
+the velocity at which we move along the trajectory.
+
+00:04:09.859 --> 00:04:14.420
+You can see right now that this trajectory
+takes nearly 90 seconds to execute.
+
+00:04:14.420 --> 00:04:18.800
+So, I’m going to double the speed at which
+we move along the trajectory, change the velocity
+
+00:04:18.800 --> 00:04:24.720
+from 1 to 2, and now we execute the trajectory
+in just under 50 seconds.
+
+00:04:24.720 --> 00:04:30.210
+The last thing that I’m going to do is to
+remove the velocity specification and replace
+
+00:04:30.210 --> 00:04:32.129
+it with a time specification.
+
+00:04:32.129 --> 00:04:37.210
+I’m going to say that I don’t care about
+velocity, but I do care about the time.
+
+00:04:37.210 --> 00:04:40.180
+And, I want to specify the times of the segments.
+
+00:04:40.180 --> 00:04:43.070
+I want the first segment to last for 10 seconds.
+
+00:04:43.070 --> 00:04:45.770
+I want the second segment to last for 30 seconds.
+
+00:04:45.770 --> 00:04:49.620
+And, I want the last segment to last for 20
+seconds.
+
+00:04:49.620 --> 00:04:51.870
+And now, the trajectory looks like this.
+

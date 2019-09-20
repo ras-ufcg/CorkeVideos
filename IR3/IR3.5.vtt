@@ -1,0 +1,249 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.419 --> 00:00:09.580
+Here again are two, 3-dimensional coordinate
+frames labeled A and B, and the relative pose
+
+00:00:09.580 --> 00:00:15.650
+A ksi B which is the pose of B with respect
+to A. We've introduced the point P and we
+
+00:00:15.650 --> 00:00:20.471
+can describe that in terms of a vector with
+respect to the origin of coordinate frame
+
+00:00:20.471 --> 00:00:25.300
+A, and we denote that just as we did for the
+2-dimensional case in the last lecture in
+
+00:00:25.300 --> 00:00:30.529
+this fashion where P indicates a vector and
+A is the reference frame that indicates that
+
+00:00:30.529 --> 00:00:35.570
+the vector P is defined with respect to the
+coordinate frame A.
+
+00:00:35.570 --> 00:00:40.629
+We can also define this point with respect
+to the coordinate frame B and just as for
+
+00:00:40.629 --> 00:00:45.659
+the 2-dimensional case, we can transform a
+vector from one coordinate frame to another
+
+00:00:45.659 --> 00:00:47.289
+using the dot operator.
+
+00:00:47.289 --> 00:00:55.249
+So, we take the relative pose A ksi B and
+use the dot to apply it to the vector P with
+
+00:00:55.249 --> 00:01:00.019
+respect to B and we can think of the B's in
+the middle here cancelling out and the result
+
+00:01:00.019 --> 00:01:06.240
+is that we are left with P defined with respect
+to coordinate frame A. We can extend this
+
+00:01:06.240 --> 00:01:07.240
+process.
+
+00:01:07.240 --> 00:01:12.090
+Now, we can define coordinate frame C with
+respect to coordinate frame B using the symbol
+
+00:01:12.090 --> 00:01:19.680
+B ksi C. And we can compose the 2 relative
+transformations, B with respect to A and C
+
+00:01:19.680 --> 00:01:25.490
+with respect to B in order to obtain the relative
+pose of C with respect to A and we use the
+
+00:01:25.490 --> 00:01:30.570
+composition operator which is a plus sign
+inside a circle and exactly what that means
+
+00:01:30.570 --> 00:01:35.780
+is something we'll get to later in this lecture
+but it's a process referred to as composing
+
+00:01:35.780 --> 00:01:40.749
+or compounding and we can extend this process
+indefinitely.
+
+00:01:40.749 --> 00:01:45.330
+And once we've compounded these two relative
+poses, now we have the relative pose of frame
+
+00:01:45.330 --> 00:01:50.679
+C with respect to A, we can write an expression
+for the vector with respect to frame C and
+
+00:01:50.679 --> 00:01:55.679
+the vector with respect to frame A and we
+can extend this approach indefinitely.
+
+00:01:55.679 --> 00:02:00.639
+We've introduced a pose algebra and there
+were just a few simple rules, and these are
+
+00:02:00.639 --> 00:02:04.639
+exactly the same as for the 2-dimensional
+case.
+
+00:02:04.639 --> 00:02:10.220
+The actual implementation of ksi differs between
+the 2-D case and the 3-D case but when we
+
+00:02:10.220 --> 00:02:16.060
+deal with it in terms of the abstract symbol
+ksi and abstract operators, the rules are
+
+00:02:16.060 --> 00:02:17.209
+absolutely identical.
+
+00:02:17.209 --> 00:02:19.670
+So, the first rule is composition.
+
+00:02:19.670 --> 00:02:24.970
+Two relative poses can be compounded to get
+a third relative pose.
+
+00:02:24.970 --> 00:02:27.569
+When we do this, there are some important
+checks.
+
+00:02:27.569 --> 00:02:31.650
+These two inner indices must be equal and
+they effectively cancel out.
+
+00:02:31.650 --> 00:02:36.099
+The leading indices are the same and the trailing
+indices are the same.
+
+00:02:36.099 --> 00:02:42.420
+In general, composition is not commutative
+so that means ksi 1 compounded with ksi 2
+
+00:02:42.420 --> 00:02:46.870
+is different to ksi 2 compounded with ksi
+1.
+
+00:02:46.870 --> 00:02:52.200
+There is a notion of a null relative pose,
+that means no change in the pose and we represent
+
+00:02:52.200 --> 00:02:53.920
+that by the symbol O.
+
+00:02:53.920 --> 00:02:59.660
+So, if I have a relative pose of ksi and I
+compound it with the null pose, the result
+
+00:02:59.660 --> 00:03:00.970
+is the original pose.
+
+00:03:00.970 --> 00:03:03.549
+It's made no change to the pose.
+
+00:03:03.549 --> 00:03:07.720
+If I consider a pose as a relative motion
+from A to B, and then I go back from B to
+
+00:03:07.720 --> 00:03:10.709
+A, I'm back where I started from, I haven't
+moved any distance.
+
+00:03:10.709 --> 00:03:13.030
+That's the null pose 0.
+
+00:03:13.030 --> 00:03:17.860
+And if I compound with the inverse of the
+null pose, again, I'm left with my original
+
+00:03:17.860 --> 00:03:20.120
+pose.
+
+00:03:20.120 --> 00:03:25.620
+Now for vectors, we can apply a relative pose
+to a vector, effectively transforms a vector
+
+00:03:25.620 --> 00:03:28.440
+from one coordinate frame to another.
+
+00:03:28.440 --> 00:03:33.829
+In this particular case, it transforms the
+vector from frame Y to frame X, and to check
+
+00:03:33.829 --> 00:03:37.969
+if we've done this right, these inner two
+indices must be the same, we can think of
+
+00:03:37.969 --> 00:03:40.710
+them as effectively cancelling out.
+
+00:03:40.710 --> 00:03:43.610
+And these two leading indices must be the
+same.
+
+00:03:43.610 --> 00:03:47.360
+These are very simple checks that we can use
+to ensure that we've written our expressions
+
+00:03:47.360 --> 00:03:49.329
+down correctly.
+
+00:03:49.329 --> 00:03:53.590
+Here's a very complex example where I have
+a large number of 3-dimensional coordinate
+
+00:03:53.590 --> 00:03:56.270
+frames representing some robotics scenario.
+
+00:03:56.270 --> 00:03:58.250
+I’ve got a world coordinate frame.
+
+00:03:58.250 --> 00:04:00.439
+I've got a camera that's fixed in the world.
+
+00:04:00.439 --> 00:04:01.682
+I've got a robot.
+
+00:04:01.682 --> 00:04:05.189
+There's a camera attached to the robot and
+there's an object in the world that the robot
+
+00:04:05.189 --> 00:04:08.510
+is looking at and might want to pick up.
+
+00:04:08.510 --> 00:04:13.060
+Just as for the 2-dimensional case, we can
+represent this by a pose-graph.
+
+00:04:13.060 --> 00:04:18.650
+Each node, each blue circle here represents
+a particular coordinate frame and the edges
+
+00:04:18.650 --> 00:04:22.750
+of the graph represent the relative poses.
+
+00:04:22.750 --> 00:04:27.470
+From this pose graph representation, I can
+write an expression something like this and
+
+00:04:27.470 --> 00:04:31.310
+to check that it's correct, we can look at
+it graphically in the pose-graph.
+
+00:04:31.310 --> 00:04:36.200
+The left hand side of the expression is shown
+in red and the right hand side of the expression
+
+00:04:36.200 --> 00:04:37.620
+is shown in blue.
+

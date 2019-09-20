@@ -1,0 +1,146 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.149 --> 00:00:06.720
+We're going to look at the results of the
+recursive Newton-Euler algorithm again. But
+
+00:00:06.720 --> 00:00:10.610
+this time, we're going to do the operations
+symbolically using MATLAB’s computer algebra
+
+00:00:10.610 --> 00:00:14.089
+capability.
+The first thing we are going to do is to bring
+
+00:00:14.089 --> 00:00:20.939
+in a model of the two link robot, that’s
+the mdl_twolink with a suffix sym to indicate
+
+00:00:20.939 --> 00:00:26.500
+that it is a symbolic model. And once again,
+we have a serial link object created in our
+
+00:00:26.500 --> 00:00:28.119
+workspace called twolink.
+
+00:00:28.119 --> 00:00:32.700
+Because I am going to work with symbols rather
+than numbers, I need to actually define my
+
+00:00:32.700 --> 00:00:38.380
+variables in advance. So, I'm going to define
+a symbolic variable called Q1 and Q2. And
+
+00:00:38.380 --> 00:00:46.810
+Q1D and Q2D to represent the velocity of joints
+1 and joint 2 and Q1DD to represent the acceleration
+
+00:00:46.810 --> 00:00:51.780
+of joint 1 and the acceleration of joint 2.
+
+00:00:51.780 --> 00:00:58.260
+Now that I have that, I can use the rne method
+just as I did last time and I'm going to pass
+
+00:00:58.260 --> 00:01:03.600
+in the joint angles which are the symbolic
+variables Q1 and Q2. I am going to pass in
+
+00:01:03.600 --> 00:01:10.140
+the, joint velocities which are the symbolic
+variables Q1D and Q2D and I'm going to pass
+
+00:01:10.140 --> 00:01:18.330
+in the symbolic variables for the joint acceleration
+which is Q1DD and Q2DD.
+
+00:01:18.330 --> 00:01:26.930
+And, I'm going to save this into a variable
+called tau. Do that while I remember. Here
+
+00:01:26.930 --> 00:01:30.380
+we go. Here is the result.
+So, if I look at the torque that is acting
+
+00:01:30.380 --> 00:01:35.770
+on the first joint, here we have a symbolic
+expression for that torque and it is a very
+
+00:01:35.770 --> 00:01:41.530
+long and complex expression. We can see that
+there are a number of kinematic parameters
+
+00:01:41.530 --> 00:01:48.901
+in here like A1 and A2. We can see there are
+joint accelerations, joint velocities. We
+
+00:01:48.901 --> 00:01:55.409
+can see G, the gravitational acceleration
+there are trigonometric terms. There are joint
+
+00:01:55.409 --> 00:02:00.760
+masses. There is all sorts of stuff. It is
+a very long and very complicated expression
+
+00:02:00.760 --> 00:02:06.880
+for the torque acting on Joint 1 of our simple
+two link robot.
+
+00:02:06.880 --> 00:02:13.150
+The torque acting on Joint 2, that's the elbow
+joint robot, is a more concise expression.
+
+00:02:13.150 --> 00:02:18.450
+There are less complex forces and torques
+acting on the second joint of robot. We can
+
+00:02:18.450 --> 00:02:23.189
+see this very complex expression. Imagine
+what it will be like for a six-link robot.
+
+00:02:23.189 --> 00:02:29.200
+Now, it is possible to factorize and simplify
+those very complex expressions that we just
+
+00:02:29.200 --> 00:02:35.239
+looked at. In particular, if we express it
+in matrix form like this. Tau is a vector
+
+00:02:35.239 --> 00:02:41.230
+of the applied joint torques. Q, of course,
+is our joint coordinates, generally the joint
+
+00:02:41.230 --> 00:02:47.549
+angles of the serial link manipulator. Q-dot,
+the joint velocities, the rates of change
+
+00:02:47.549 --> 00:02:54.260
+of the joint coordinates and Q-dot-dot is
+the joint acceleration. G is a term which
+
+00:02:54.260 --> 00:02:59.959
+represents the torque that's due to the gravity
+acting on the robot manipulator and gravity
+
+00:02:59.959 --> 00:03:06.400
+is a function only of the joint coordinates
+Q. M is the inertia matrix and it is a function
+
+00:03:06.400 --> 00:03:10.540
+only of the joint coordinates multiply by
+the joint accelerations.
+
+00:03:10.540 --> 00:03:16.200
+This gives us the torque that's required to
+accelerate our serial link manipulator. C
+
+00:03:16.200 --> 00:03:21.930
+is referred to as the Coriolis and centripetal
+term and this represents the gyroscopic and
+
+00:03:21.930 --> 00:03:27.849
+other forces that act on the robot joints
+due to the rotation of other robot joints.
+

@@ -1,0 +1,287 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.220 --> 00:00:06.390
+Let’s summarise some of the concepts that
+we’ve learned in this lecture. It’s all
+
+00:00:06.390 --> 00:00:11.370
+being about motion in three-dimensional space.
+First of all, we introduced the concept of
+
+00:00:11.370 --> 00:00:17.160
+translational velocity that is the rate of
+change of the X, Y and Z components of a point
+
+00:00:17.160 --> 00:00:22.150
+in space and we define that with respect to
+a reference coordinate frame.
+
+00:00:22.150 --> 00:00:27.460
+We introduced the concept of angular velocity
+and that is a vector quantity. The direction
+
+00:00:27.460 --> 00:00:31.869
+of the vector is the axis about which the
+body is rotating at that instance in time
+
+00:00:31.869 --> 00:00:38.050
+and the magnitude of the vector is the rate
+of rotation. Angular velocity has three components:
+
+00:00:38.050 --> 00:00:44.070
+ωx, ωy, and ωz defined with respect to
+a reference coordinate frame.
+
+00:00:44.070 --> 00:00:48.690
+Translational velocity V and angular velocity
+ω are combined into a quantity we referred
+
+00:00:48.690 --> 00:00:55.030
+to as spatial velocity or sometimes referred
+to as twist. It’s a six-element vector.
+
+00:00:55.030 --> 00:01:00.060
+We introduced a skew symmetric matrix. This
+is a matrix whose transpose is equal to the
+
+00:01:00.060 --> 00:01:04.439
+negative of itself. When we are talking about
+rotation in three dimensions, the relevant
+
+00:01:04.439 --> 00:01:10.000
+skew symmetric matrix is a 3.3 element matrix
+which is a function of a vector. There is
+
+00:01:10.000 --> 00:01:14.510
+a really important relationship between the
+angular velocity of that body and the time
+
+00:01:14.510 --> 00:01:17.470
+derivative of the rotation matrix.
+
+00:01:17.470 --> 00:01:21.890
+For a robot with six joints, we can write
+a relationship like this, which relates the
+
+00:01:21.890 --> 00:01:27.060
+rate of change of the robot joint angles to
+this spatial velocity of the robots end effector,
+
+00:01:27.060 --> 00:01:32.280
+and the relationship is in terms of a six
+by six Jacobian matrix which we denote by
+
+00:01:32.280 --> 00:01:38.270
+the symbol J. The Jacobian matrix is a function
+of the joint angles themselves.
+
+00:01:38.270 --> 00:01:42.520
+We can write this general relationship between
+the robot joint angle velocity Qdot and spatial
+
+00:01:42.520 --> 00:01:47.420
+velocity in terms of the Jacobian matrix.
+If the Jacobian matrix is square, then we
+
+00:01:47.420 --> 00:01:51.920
+can invert the relationship and that allows
+us to transform a desired spatial velocity
+
+00:01:51.920 --> 00:01:57.380
+for the robot’s end effector into the joint
+angle rates of the robots’ motors need to attain.
+
+00:01:58.040 --> 00:02:03.740
+The motion of any robot joint affects the
+spatial velocity of the robot’s end effector.
+
+00:02:03.740 --> 00:02:07.960
+We can think of the columns of the Jacobian
+matrix as described at that relationship.
+
+00:02:07.960 --> 00:02:12.450
+The first column tells us how the spatial
+velocity is affected by the first joint. The
+
+00:02:12.450 --> 00:02:17.180
+second column tells us how the spatial velocity
+is affected by the second joint and so on.
+
+00:02:17.180 --> 00:02:22.690
+We can think of it as a summation of the effect
+of each of the individual joints, we add them
+
+00:02:22.690 --> 00:02:28.360
+all together to determine the overall spatial
+velocity of the robot’s end effector.
+
+00:02:28.360 --> 00:02:33.250
+In some cases, the robot Jacobian can be singular
+and that’s when more than one joint cause
+
+00:02:33.250 --> 00:02:38.060
+exactly the same motion of the robot end effector,
+that there are two columns in the Jacobian
+
+00:02:38.060 --> 00:02:42.280
+matrix which are identical and that makes
+the robot singular.
+
+00:02:42.280 --> 00:02:46.220
+For robots that move in three-dimensional
+space, the Jacobian matrix always has six
+
+00:02:46.220 --> 00:02:51.010
+roles but the number of columns is equal to
+the number of joints that the robot has. If
+
+00:02:51.010 --> 00:02:55.970
+the robot got six joints, the Jacobian matrix
+will be square and we can invert it so long
+
+00:02:55.970 --> 00:03:01.090
+as the robot is not in a singular configuration.
+For a robot with less than six joints which
+
+00:03:01.090 --> 00:03:06.840
+we refer to as an under-actuated robot, the
+Jacobian is not square. In order to square
+
+00:03:06.840 --> 00:03:12.040
+it up so we can use it for control purposes,
+we need to eliminate some rows in that Jacobian
+
+00:03:12.040 --> 00:03:17.530
+matrix. For the case of a robot with more
+than six joints, which we refer to as an over-actuated
+
+00:03:17.530 --> 00:03:22.680
+robot, the Jacobian has many more columns
+than has rows. If we want to invert it for
+
+00:03:22.680 --> 00:03:26.709
+control purposes, we need to use a technique
+called the Pseudo Inverse. We can also think
+
+00:03:26.709 --> 00:03:30.610
+about the robot like this as having a large
+number of spare joints and we can use this
+
+00:03:30.610 --> 00:03:35.830
+to control the configuration with the shape
+of the robot arm independently of the pose
+
+00:03:35.830 --> 00:03:39.959
+of its end effector. We refer to this as null
+space motion.
+
+00:03:39.959 --> 00:03:44.870
+We can transform velocity expressed with respect
+to one frame to velocity with respect to another
+
+00:03:44.870 --> 00:03:50.920
+frame by a Jacobian matrix, and that Jacobian
+matrix is a function of the relative pose
+
+00:03:50.920 --> 00:03:56.599
+between the two frames. In particular, it’s
+a function of the relative orientation between
+
+00:03:56.599 --> 00:03:58.569
+the two coordinate frames.
+
+00:03:58.569 --> 00:04:03.170
+We can use that velocity transform technique
+in order to determine the robot’s end-effector
+
+00:04:03.170 --> 00:04:08.290
+spatial velocity with respect to the end-effector
+coordinate frame rather than the world coordinate
+
+00:04:08.290 --> 00:04:13.720
+frame, and that’s typically a very useful
+and convenient thing to have. We can therefore define
+
+00:04:13.720 --> 00:04:19.760
+a variant of the Jacobian matrix which gives us the velocity in frame six, the end-effector coordinate frame.
+
+00:04:20.080 --> 00:04:24.680
+Angular velocity is a somewhat abstract concept
+that’s a little difficult to visualize.
+
+00:04:24.690 --> 00:04:28.750
+We often talk about the orientation of a body
+in terms of its roll, pitch, and yaw angles
+
+00:04:28.750 --> 00:04:33.160
+so it’s more intuitive to express the rotational
+velocity of an object in terms of the rates
+
+00:04:33.160 --> 00:04:39.919
+of change of its roll, pitch, and yaw angles.
+We can derive a 3x3 Jacobian matrix which
+
+00:04:39.919 --> 00:04:45.620
+transforms roll, pitch, and yaw angle rates
+into traditional angular velocity. Then we
+
+00:04:45.620 --> 00:04:50.880
+can introduce a variant of a spatial velocity
+vector and we replace the angular velocity
+
+00:04:50.880 --> 00:04:55.590
+component with a roll, pitch, yaw velocity
+component. This leads to something called
+
+00:04:55.590 --> 00:05:01.020
+the Analytic Jacobian matrix and this maps
+robot joint angle rates to the modified spatial
+
+00:05:01.020 --> 00:05:02.199
+velocity vector.
+
+00:05:02.199 --> 00:05:07.160
+We introduced the concept of the velocity
+ellipsoid in three dimensions. The ellipsoid
+
+00:05:07.160 --> 00:05:11.940
+says something about the ability of the robot
+to achieve velocity in different directions
+
+00:05:11.940 --> 00:05:17.110
+in three-dimensional space. The end-effector
+is able to move most quickly in the direction
+
+00:05:17.110 --> 00:05:22.699
+parallel to the longest axis of the ellipsoid
+and it moves most slowly parallel to the direction
+
+00:05:22.699 --> 00:05:28.290
+of the shortest axis of the ellipsoid. We
+can describe the overall shape of the ellipsoid
+
+00:05:28.290 --> 00:05:33.509
+in terms of a scalar measure which we call
+manipulability, and it says something about
+
+00:05:33.509 --> 00:05:39.919
+the compactness of the ellipsoid. If the manipulability
+is equal to one, the ellipsoid is in fact
+
+00:05:39.919 --> 00:05:44.979
+the sphere, and we refer to this as the isotropic
+motion case. The robot is able to move equally
+
+00:05:44.979 --> 00:05:51.020
+quickly in any direction. In the case of manipulability
+is equal to zero, that indicates that motion
+
+00:05:51.020 --> 00:05:55.870
+in one partition direction is not possible
+and the three-dimensional ellipsoid has been
+
+00:05:55.870 --> 00:05:58.310
+flattened into an elliptical plate.
+

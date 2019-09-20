@@ -1,0 +1,335 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.370 --> 00:00:06.680
+Let’s recap some of the important concepts
+from this lecture.
+
+00:00:06.680 --> 00:00:12.740
+Firstly, there are some very important conventions.
+First is the so called right-handed coordinate
+
+00:00:12.740 --> 00:00:17.410
+frame. When we construct a 3-dimensional coordinate
+frame, we need to construct it properly and
+
+00:00:17.410 --> 00:00:22.960
+we use our right hand to guide us. The x-axis
+is aligned with our thumb, the y-axis is aligned
+
+00:00:22.960 --> 00:00:27.989
+with our index finger and the z-axis with
+our middle finger. When it comes to describing
+
+00:00:27.989 --> 00:00:33.329
+the direction of rotation around an axis,
+we imagine that we’re grasping that axis
+
+00:00:33.329 --> 00:00:37.640
+with our thumb pointing in the direction of
+the arrow and the direction that our fingers
+
+00:00:37.640 --> 00:00:42.929
+curl around the axis indicate the positive
+rotational direction.
+
+00:00:42.929 --> 00:00:49.179
+A rotation matrix in three dimensions can
+be described by a 3 x 3 matrix and the columns
+
+00:00:49.179 --> 00:00:55.780
+of that matrix are unit vectors that are aligned
+with the axes of coordinate frame B. The first
+
+00:00:55.780 --> 00:01:02.159
+column is the x-axis of frame B, second column
+is the y-axis of frame B and the third column
+
+00:01:02.159 --> 00:01:08.340
+is the z-axis of frame B. And, we use this
+rotation matrix to rotate a vector from frame
+
+00:01:08.340 --> 00:01:12.590
+B to frame A.
+There are three elementary rotation matrices
+
+00:01:12.590 --> 00:01:19.440
+which correspond to rotation around the x-axis,
+the y-axis and the z-axis. We can create an
+
+00:01:19.440 --> 00:01:25.240
+arbitrary rotation between any two coordinate
+frames by using a sequence of these elementary
+
+00:01:25.240 --> 00:01:32.230
+rotations. There are in fact 12 possible rotation
+sequences. An important caveat, part of Euler
+
+00:01:32.230 --> 00:01:40.040
+rotation theorem, is that no two consecutive
+rotations can be about the same axis. Of this
+
+00:01:40.040 --> 00:01:46.680
+12, 6 of these sequences are referred to as
+Euler angles. They contain two rotations about
+
+00:01:46.680 --> 00:01:54.380
+the same axis, but not sequentially. For example,
+rotate about x, then, y, then x again. Although
+
+00:01:54.380 --> 00:01:59.070
+all six of these technically are Euler angles,
+when the term Euler angles is used, people
+
+00:01:59.070 --> 00:02:05.890
+are generally referring to the specific sequence,
+ZYZ. But, this convention varies across different
+
+00:02:05.890 --> 00:02:09.560
+disciplines of engineering. So, it’s important
+to be sure when you’re talking to somebody
+
+00:02:09.560 --> 00:02:13.849
+about Euler angles that you’re talking about
+exactly the same sequence.
+
+00:02:13.849 --> 00:02:18.569
+The other six are referred to as Cardan angles.
+And, two of these specifically are often referred
+
+00:02:18.569 --> 00:02:25.509
+to as roll, pitch, yaw angles. The Cardan
+angles have rotations about three different axes.
+
+00:02:25.920 --> 00:02:28.260
+We can describe the rotation from any one
+
+00:02:28.269 --> 00:02:34.969
+frame to another in terms of a single rotation,
+a rotation by an angle Theta about some axis
+
+00:02:34.969 --> 00:02:41.280
+V. And, we’ve discussed techniques to determine
+Theta and V given a rotation matrix. And,
+
+00:02:41.280 --> 00:02:46.739
+we introduced the Rodriguez equation which
+allows us to go from an axis and an angle
+
+00:02:46.739 --> 00:02:52.950
+back to a rotation matrix.
+We introduced quaternions. These are hypercomplex
+
+00:02:52.950 --> 00:02:58.810
+numbers. They actually comprise a scalar and
+a three-element vector. A unit magnitude quaternion
+
+00:02:58.810 --> 00:03:04.180
+which is referred to as a unit quaternion
+can be used to encode rotation. And, there
+
+00:03:04.180 --> 00:03:09.849
+are some simple rules to determine the inverse
+of a quaternion and to compound two quaternions,
+
+00:03:09.849 --> 00:03:14.260
+and we can work out the effect of two consecutive
+rotations.
+
+00:03:14.260 --> 00:03:19.590
+An important question that comes up a lot
+is why do we use something like a rotation
+
+00:03:19.590 --> 00:03:25.249
+matrix. A rotation matrix is a 3 by 3 matrix
+and it contains nine numbers, but we know
+
+00:03:25.249 --> 00:03:31.099
+from Euler’s theorem that we only need three
+numbers - three angles - to describe a rotation.
+
+00:03:31.099 --> 00:03:35.569
+What’s the advantage of using nine numbers
+when I could just use three?
+
+00:03:35.569 --> 00:03:42.529
+Well, importantly, the rotation matrix is
+not just any old 3 by 3 matrix. It is a specific
+
+00:03:42.529 --> 00:03:47.980
+matrix. It is an orthonormal matrix. So, although
+there are nine elements, there are a number
+
+00:03:47.980 --> 00:03:54.010
+of constraints. In fact there are six constraints,
+which leaves us with only 3 degrees of freedom.
+
+00:03:54.010 --> 00:03:58.549
+The first constraints are that each column
+in this matrix is a unit vector. In fact,
+
+00:03:58.549 --> 00:04:03.540
+that each column is a unit vector introduces
+three constraints. And then, the columns are
+
+00:04:03.540 --> 00:04:08.809
+all orthogonal to one another and that introduces
+another three constraints.
+
+00:04:08.809 --> 00:04:13.639
+The rotation matrix has some very convenient
+properties. Firstly, we can compound poses
+
+00:04:13.639 --> 00:04:20.479
+or rotations simply by multiplication. That’s
+not the case for Euler angles or roll, pitch,
+
+00:04:20.479 --> 00:04:23.669
+yaw angles.
+A second really important benefit is that
+
+00:04:23.669 --> 00:04:30.169
+the columns of a rotation matrix describe
+the x, y and z axes of the new coordinate
+
+00:04:30.169 --> 00:04:35.120
+frame in terms of the old one. Another important
+property is that you can actually read a rotation
+
+00:04:35.120 --> 00:04:41.370
+matrix. The columns of the rotation matrix
+describe in terms of unit vectors the x,y
+
+00:04:41.370 --> 00:04:46.530
+and z-axis of the new coordinate frame.
+Let’s have a look at a few of the different
+
+00:04:46.530 --> 00:04:51.520
+rotational representations that we’ve discussed.
+We can have a rotation matrix with its nine
+
+00:04:51.520 --> 00:04:56.960
+numbers in it. And, one of the advantages
+of rotation matrix is that there is no possibility
+
+00:04:56.960 --> 00:05:02.830
+of having a singularity. We talked about singularities,
+the gimbal problem, and that occurs with
+
+00:05:02.830 --> 00:05:08.210
+Euler angles or roll, pitch, yaw representation
+of orientation.
+
+00:05:08.210 --> 00:05:13.060
+Compounding two rotations is easy. For a rotation
+matrix, we simply multiply the two matrices
+
+00:05:13.060 --> 00:05:18.800
+together, whereas for the three-angle representations,
+it’s nontrivial. We can also consider that
+
+00:05:18.800 --> 00:05:25.259
+we can represent a coordinate frame’s orientation
+by two vectors; an approach vector and an
+
+00:05:25.259 --> 00:05:30.960
+orientation vector. That’s just six numbers.
+It’s singularity free but not very easy
+
+00:05:30.960 --> 00:05:37.120
+to compound two orientations expressed in this
+form. We can also consider the angle + axis
+
+00:05:37.120 --> 00:05:42.720
+orientation. We have one number to describe
+the amount of rotation, the angle, and we
+
+00:05:42.720 --> 00:05:49.300
+need two more numbers to represent the rotational
+axis. It’s a unit vector in three dimensions,
+
+00:05:49.300 --> 00:05:54.360
+so there are only two unique numbers in it.
+This representation is singularity free, but
+
+00:05:54.360 --> 00:05:59.370
+it’s a bit problematic to represent a zero
+rotation. And, once again, compounding two
+
+00:05:59.370 --> 00:06:05.949
+rotations is nontrivial. Final representation
+is the unit quaternion. It’s got four numbers,
+
+00:06:05.949 --> 00:06:11.180
+though only three of them are unique because
+it’s got a unit magnitude. It’s singularity
+
+00:06:11.180 --> 00:06:16.689
+free. And, we introduced the Hamiltonian product
+as a way of multiplying two quaternions. So,
+
+00:06:16.689 --> 00:06:21.819
+in some respect, the quaternion has got a
+lot of advantages, singularity free, represented
+
+00:06:21.819 --> 00:06:27.699
+by a fewer numbers, and two quaternions can
+be multiplied together using fewer arithmetic
+
+00:06:27.699 --> 00:06:32.699
+operation than is the case for matrix
+multiplication. In robotics, it’s really
+
+00:06:32.699 --> 00:06:37.569
+the top and bottom representation that are
+in common use, the rotation matrix and the
+
+00:06:37.569 --> 00:06:41.090
+unit quaternion.
+Finally, we can represent pose, which has
+
+00:06:41.090 --> 00:06:46.650
+got both translational component and a rotational
+component, by a single homogeneous transformation
+
+00:06:46.650 --> 00:06:54.229
+matrix - a 4 x 4 matrix. Composition of relative
+poses is done by multiplying matrices. Negation
+
+00:06:54.229 --> 00:06:59.810
+or an inverse relative pose is done by inverting
+the matrix. Remember that inverting a homogeneous
+
+00:06:59.810 --> 00:07:06.169
+transformation matrix is not computed by taking
+its transpose. That’s a property only of
+
+00:07:06.169 --> 00:07:11.919
+a rotation matrix. And, transforming a point
+represented by a vector from one frame to
+
+00:07:11.919 --> 00:07:18.560
+another is done by multiplying homogeneous
+representation of the point by a homogeneous
+
+00:07:18.560 --> 00:07:24.110
+transformation matrix.
+Final thing to remember, coordinate frames
+
+00:07:24.110 --> 00:07:29.250
+are your friend. Use lots of them when you’re
+trying to describe a complex problem. Attach
+
+00:07:29.250 --> 00:07:34.050
+them to every object of interest and write
+them the relationships between the coordinate
+
+00:07:34.050 --> 00:07:37.960
+frames. Some of the relationships might be
+constant. Some of those relationships might
+
+00:07:37.960 --> 00:07:41.889
+be time varying. And, remember, NASA uses
+them. They must be good.
+

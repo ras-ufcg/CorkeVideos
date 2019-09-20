@@ -1,0 +1,179 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.500 --> 00:00:08.710
+Let's now consider the important and very
+realistic problem of moving a robot end effector
+
+00:00:08.710 --> 00:00:16.020
+from one pose to another. From side A to side
+B and we want to move it smoothly. Well we
+
+00:00:16.020 --> 00:00:21.850
+can determine the joint angles that correspond
+to pose A and we can determine the joint angles
+
+00:00:21.850 --> 00:00:27.539
+that correspond to pose B, simply by applying
+the inverse kinematics that we've already
+
+00:00:27.539 --> 00:00:28.300
+studied.
+
+00:00:28.300 --> 00:00:32.830
+Now that we've got these two sets of joint
+angles, the initial set of joint angles and
+
+00:00:32.830 --> 00:00:38.190
+the final set of joint angles, all we need
+to do is move smoothly from one set to the
+
+00:00:38.190 --> 00:00:45.270
+other and we've previously discussed how to do this, how to interpret vector quantities smoothly over time.
+
+00:00:45.880 --> 00:00:53.039
+Okay, we're back in MATLAB and first of all
+I'm going to define model for my Puma 560
+
+00:00:53.039 --> 00:01:03.000
+robot. And now I'm going to define a couple
+of poses and I am going to orientate this
+
+00:01:03.000 --> 00:01:09.240
+particular pose so that the Z axis is pointing
+straight down, as if the robot was working
+
+00:01:09.240 --> 00:01:21.560
+above a table. And the destination pose is
+going to be like this, minus 0.20 and I'm
+
+00:01:21.560 --> 00:01:31.189
+going to orientate it so that the Z axis is
+parallel to the XY plane, rotated around the
+
+00:01:31.189 --> 00:01:34.409
+X axis by Pi on 2.
+
+00:01:34.409 --> 00:01:42.470
+Now I can determine the joint angles for the
+initial pose ikine6s, I'm going to pass in
+
+00:01:42.470 --> 00:01:52.700
+the initial pose and that's the joint angles
+and for the final pose I will do the same
+
+00:01:52.700 --> 00:01:59.170
+thing. Now I can compute a trajectory that
+goes from the initial set of joint angles
+
+00:01:59.170 --> 00:02:03.840
+to the final set of joint angles in 50 steps,
+put a semi colon on the end so it doesn't
+
+00:02:03.840 --> 00:02:10.940
+print that, but the result will be a 50 by
+6 matrix, we can see here, 50 rows, one row
+
+00:02:10.940 --> 00:02:19.230
+per time step and each column represents the
+joint angle evolving over time. Now I can
+
+00:02:19.230 --> 00:02:25.280
+plot the robot making that particular motion.
+I can animate it by passing in the trajectory
+
+00:02:25.280 --> 00:02:34.060
+and here we see the robot doing the motion; it's moving from left to right and the tool is rotating.
+
+00:02:37.240 --> 00:02:46.180
+If I start a new figure I can plot the joint
+angles and see how they evolved over time.
+
+00:02:46.190 --> 00:02:52.620
+And we can see that they vary smoothly as
+a function of time over the 50 time steps.
+
+00:02:52.620 --> 00:02:58.640
+Now we can look at the joint angle trajectories
+and we can see that the joint angles vary
+
+00:02:58.640 --> 00:03:03.400
+smoothly along the trajectories, starting
+with the joint angles necessary to achieve
+
+00:03:03.400 --> 00:03:09.610
+pose A and ending with the set of joint angles
+necessary to achieve pose B and this smooth
+
+00:03:09.610 --> 00:03:16.099
+motion occurs over a period of two seconds.
+Given that I have the joint angles at every
+
+00:03:16.099 --> 00:03:21.569
+point along the trajectory; it's relatively
+straight forward to compute the forward kinematics
+
+00:03:21.569 --> 00:03:27.769
+for each of those intermediate sets of joint
+angles. And here I can plot the end effector
+
+00:03:27.769 --> 00:03:33.659
+Cartesian position, that's it's X, Y and Z
+co-ordinate as a function of time and we can
+
+00:03:33.659 --> 00:03:39.479
+see that those co-ordinates vary smoothly
+as a function of time, which is very, very desirable.
+
+00:03:39.480 --> 00:03:45.959
+However if I plot the path on the XY plane,
+we can see that it starts at A and goes to
+
+00:03:45.959 --> 00:03:52.640
+B but it doesn't move in a straight line in
+the XY plane. When I'm computing the kinematics
+
+00:03:52.640 --> 00:03:58.150
+for every set of intermediate joint angles,
+I can also determine the end effector orientation
+
+00:03:58.150 --> 00:04:02.879
+and here I've plotted the roll, pitch and
+yaw angles of the end effector, as it moves
+
+00:04:02.879 --> 00:04:07.450
+from A to B. We can see that the pitch and
+yaw angles are zero at the beginning of the
+
+00:04:07.450 --> 00:04:11.260
+trajectory and at the end of the trajectory,
+but in the middle of the trajectory we can
+
+00:04:11.260 --> 00:04:16.880
+see that the pitch angle is not equal to zero.
+By tackling the problem in this particular
+
+00:04:16.880 --> 00:04:19.080
+form, we've really only applied two constraints.
+
+00:04:19.080 --> 00:04:22.840
+We've said what we want to happen at A and
+what we want to happen at B, but we haven't
+
+00:04:22.840 --> 00:04:28.080
+said anything about what happens in between.
+And the result of this approach is that the
+
+00:04:28.080 --> 00:04:33.070
+end effector has not followed a straight line
+path in the world and the orientation of the
+
+00:04:33.070 --> 00:04:39.210
+end effector has deviated from the desired orientation
+in the mid points of the trajectory. In the
+
+00:04:39.210 --> 00:04:41.780
+next section we'll look at a way we can remedy
+this.
+

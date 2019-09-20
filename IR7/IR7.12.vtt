@@ -1,0 +1,315 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.860 --> 00:00:08.519
+Let's recap some of the big things that we've
+learned in this lecture. In the previous lecture
+
+00:00:08.519 --> 00:00:14.249
+we discussed the forward kinematic function;
+that's the function K. Its argument is Q and
+
+00:00:14.249 --> 00:00:19.430
+that's the vector of joint angles, its vector
+of length N, where N is the number of joints
+
+00:00:19.430 --> 00:00:25.690
+that the robot has. The result of the forward
+kinematic function is the pose of the robots
+
+00:00:25.690 --> 00:00:31.850
+end effector, which I call here ksiN. Forward
+kinematics takes the joint angles and gives
+
+00:00:31.850 --> 00:00:35.000
+us the robot end effector pose.
+
+00:00:35.000 --> 00:00:39.340
+In this lecture we've discussed the inverse
+kinematic function that's shown here as K
+
+00:00:39.340 --> 00:00:46.050
+to the minus one. It operates on the robot
+end effector pose and tells us the joint angles
+
+00:00:46.050 --> 00:00:52.450
+required to achieve that pose. The inverse
+is not unique. For a particular robot end
+
+00:00:52.450 --> 00:00:58.120
+effector pose, there can be multiple sets
+of joint angles which will achieve that particular
+
+00:00:58.120 --> 00:01:02.930
+pose, for our little two link robot, there
+are two possible configurations shown here.
+
+00:01:02.930 --> 00:01:07.610
+For our six link Puma robot, which operates
+in three dimensional space, there are in fact
+
+00:01:07.610 --> 00:01:09.820
+six possible solutions.
+
+00:01:09.820 --> 00:01:14.060
+There are several approaches to solving the
+inverse kinematic problem for a particular
+
+00:01:14.060 --> 00:01:19.369
+robot. For a simple robot like the two link
+example, we use a geometric solution and that
+
+00:01:19.369 --> 00:01:25.290
+requires some intuition and some insight,
+it involves defining particular triangles,
+
+00:01:25.290 --> 00:01:30.299
+introducing new angles and applying a number
+of simple trigonometric relationships in order
+
+00:01:30.299 --> 00:01:36.570
+to solve for the joint angles we're interested
+in, in this case Q1 and Q2 as a function of
+
+00:01:36.570 --> 00:01:44.820
+the end effector pose XY and the robot's constant
+link lengths A1 and A2. We right down the
+
+00:01:44.820 --> 00:01:49.729
+forward kinematic equations, which here give
+us the end effector pose X and Y in terms
+
+00:01:49.729 --> 00:01:54.250
+of the joint angles and then with a large
+amount of manipulation and again with some
+
+00:01:54.250 --> 00:02:00.180
+insight and intuition, we can write down equations
+which give us the robot joint angles.
+
+00:02:00.180 --> 00:02:04.960
+The steps involved in the analytic solution
+for robot inverse kinematics involves the
+
+00:02:04.960 --> 00:02:09.819
+following steps; firstly we need a model of
+the robot, we need to know the position and
+
+00:02:09.819 --> 00:02:13.780
+orientation of the joints with respect to
+the links. We need to know the lengths of
+
+00:02:13.780 --> 00:02:19.150
+the links and so on. From that we extract
+a number of equations and we attempt to solve
+
+00:02:19.150 --> 00:02:24.700
+for the unknown joint variables. As I said
+before, it requires some human insight, although
+
+00:02:24.700 --> 00:02:29.989
+it can be automated using computer algebra
+techniques for particular robots or particular
+
+00:02:29.989 --> 00:02:31.849
+classes of robots.
+
+00:02:31.849 --> 00:02:38.069
+The great advantages of the analytic solution
+is it explicitly shows you the multiple configurations
+
+00:02:38.069 --> 00:02:42.730
+of the robot and lets you choose the joint
+angles that will give you the configuration
+
+00:02:42.730 --> 00:02:48.709
+that you want. For the Puma 560 robot it allows
+you to explicitly choose a left handed configuration
+
+00:02:48.709 --> 00:02:54.650
+or a right handed configuration or the elbow
+up or the elbow down. Another advantage is
+
+00:02:54.650 --> 00:03:00.349
+that the solutions are very compact and fast
+to execute. You can take the resulting equations
+
+00:03:00.349 --> 00:03:03.800
+and you can code them up in your favorite
+programming language and they will execute
+
+00:03:03.800 --> 00:03:09.050
+very, very quickly. However the analytic approach
+is increasingly difficult as the number of
+
+00:03:09.050 --> 00:03:14.860
+joints increases and takes quite a lot of
+work to do it for a six link robot. Fortunately
+
+00:03:14.860 --> 00:03:19.300
+a lot of smart people have looked at this
+problem over many, many decades and solutions
+
+00:03:19.300 --> 00:03:25.060
+for almost all robots have been derived and
+are published somewhere in the literature.
+
+00:03:25.060 --> 00:03:29.610
+An alternative to the analytic solution is
+the numerical solution and that's applicable
+
+00:03:29.610 --> 00:03:34.129
+when the analytic solution doesn't exist or
+the analytic solution is just too hard to
+
+00:03:34.129 --> 00:03:38.980
+figure out. It relies on the fact that we
+can always determine the forward kinematics
+
+00:03:38.980 --> 00:03:43.239
+of the robot, that’s relatively straightforward
+to do and we talked about that in the previous
+
+00:03:43.239 --> 00:03:46.530
+lecture.
+We know the pose that we want the robot end
+
+00:03:46.530 --> 00:03:51.560
+effector to achieve which is called ksi*,
+but all we need to do is adjust the joint
+
+00:03:51.560 --> 00:03:58.470
+angles Q until ksi matches ksi* and we can
+pose this mathematically as an optimization
+
+00:03:58.470 --> 00:04:03.379
+problem written very formally here. And we
+showed how we can use MATLAB and the robotics
+
+00:04:03.379 --> 00:04:09.450
+toolbox to determine the numerical solution
+for a two link robot and for a six link robot.
+
+00:04:09.450 --> 00:04:13.879
+There are some disadvantages with the numerical
+solution. You need to be careful about choosing
+
+00:04:13.879 --> 00:04:19.629
+the initial set of joint angles that you use
+for your optimizer. You can't guarantee that
+
+00:04:19.629 --> 00:04:24.909
+the optimizer will find the particular robot
+configuration that you're interested in. If
+
+00:04:24.909 --> 00:04:30.309
+you wanted a left handed configuration, you
+can't guarantee the optimizer will find that
+
+00:04:30.309 --> 00:04:36.259
+particular configuration, it depends on your
+choice of initial joint angles. It can also
+
+00:04:36.259 --> 00:04:41.639
+be computationally expensive. It's an iterative
+algorithm and the number of iterations depends
+
+00:04:41.639 --> 00:04:48.479
+on how good your initial set of joint angles
+is and that computational expense maybe inappropriate
+
+00:04:48.479 --> 00:04:53.939
+in a hard, real time system where you need
+to compute inverse kinematics within a small
+
+00:04:53.939 --> 00:04:59.729
+and finite amount of time. We talked about
+how to create smooth paths for the robot end
+
+00:04:59.729 --> 00:05:05.069
+effector moving from one pose to another and
+we introduced two approaches to doing this.
+
+00:05:05.069 --> 00:05:10.249
+The first is what's called a "Joint Interpolated
+Path." We take the initial pose and final
+
+00:05:10.249 --> 00:05:16.550
+pose and we use inverse kinematics to determine
+the initial and final sets of joint angles,
+
+00:05:16.550 --> 00:05:21.819
+then we smoothly interpolate between those
+two sets of joint angles and that's relatively
+
+00:05:21.819 --> 00:05:23.639
+straightforward to do.
+
+00:05:23.639 --> 00:05:28.469
+The disadvantage of this is we can't guarantee
+that the robot will follow a straight line
+
+00:05:28.469 --> 00:05:34.330
+path in three dimensional space. We also can't
+guarantee that the end effector orientation
+
+00:05:34.330 --> 00:05:41.069
+will be our desired value at every point along
+that path; however joint interpolated paths
+
+00:05:41.069 --> 00:05:46.740
+are relatively cheap to compute because we're
+only interpolating joint angle vectors at
+
+00:05:46.740 --> 00:05:52.729
+ever time step. An alternative is to compute
+a Cartesian interpolated path and what we
+
+00:05:52.729 --> 00:05:58.419
+do here is for every point along the trajectory
+we interpolate between the initial and final
+
+00:05:58.419 --> 00:06:04.110
+end effector pose. For each interpolated pose
+we then compute the inverse kinematics to
+
+00:06:04.110 --> 00:06:08.279
+find the joint angles that are appropriate
+at that particular time step.
+
+00:06:08.279 --> 00:06:12.759
+The advantage of this technique is that it
+allows for straight line paths in three dimensional
+
+00:06:12.759 --> 00:06:17.779
+space. It also ensures that the end effector
+has got the desired orientation at every point
+
+00:06:17.779 --> 00:06:19.619
+along the trajectory.
+
+00:06:19.619 --> 00:06:24.860
+The disadvantage is that computationally it's
+much more expensive. We need to interpolate
+
+00:06:24.860 --> 00:06:29.710
+poses and that involves interpolating the
+translational component and the rotational
+
+00:06:29.710 --> 00:06:35.529
+component and that might in fact involve converting
+from rotation matrix to a quaternion interpolating
+
+00:06:35.529 --> 00:06:40.339
+the quaternion and then transforming that
+back to a rotation matrix, then we have to
+
+00:06:40.339 --> 00:06:46.589
+perform the inverse kinematics at every single
+time step. So much more computation involved,
+
+00:06:46.589 --> 00:06:50.989
+upside is that we can guarantee straight line
+paths in three dimensional space.
+

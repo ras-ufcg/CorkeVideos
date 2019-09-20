@@ -1,0 +1,136 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.679 --> 00:00:08.330
+In a much earlier lecture, we introduced the
+notion of roll, pitch, yaw angles. It’s
+
+00:00:08.330 --> 00:00:13.699
+an intuitive way to think about the orientation
+of a body in space and we can think about
+
+00:00:13.699 --> 00:00:18.939
+it as the product of a number of elementary
+rotations. It’s a rotation around the x-axis
+
+00:00:18.939 --> 00:00:24.140
+by the roll angle, a rotation around the y-axis
+by the pitch angle, and a rotation around
+
+00:00:24.140 --> 00:00:29.440
+the z-axis by the yaw angle.
+Now, we could take the derivative of this
+
+00:00:29.440 --> 00:00:34.039
+expression and we obtain a relationship for
+the rate of change of the rotation matrix
+
+00:00:34.039 --> 00:00:39.170
+in terms of some elementary rotation matrices.
+The derivatives of some elementary rotation
+
+00:00:39.170 --> 00:00:44.590
+matrices, and the derivative of the roll angle,
+pitch angle and yaw angle which are here denoted
+
+00:00:44.590 --> 00:00:50.441
+by r dot, p dot and y dot, respectively.
+We also know that the time derivative of a
+
+00:00:50.441 --> 00:00:54.809
+rotation matrix can be expressed in terms
+of a skew-symmetric matrix which is a function
+
+00:00:54.809 --> 00:00:59.809
+of angular velocity and the rotation matrix
+itself. I can rearrange this rather complex
+
+00:00:59.809 --> 00:01:05.799
+expression and so for the skew-symmetric matrix,
+s. And then, I can equate the finite elements
+
+00:01:05.799 --> 00:01:10.299
+of s between the left and right hand side
+of my equation.
+
+00:01:10.299 --> 00:01:14.780
+The result is a relationship between angular
+velocity, omega, and the rates of change of
+
+00:01:14.780 --> 00:01:20.820
+my roll, pitch and yaw angles. And, this relationship
+is in terms of yet another Jacobian matrix.
+
+00:01:20.820 --> 00:01:27.490
+It’s a 3 x 3 Jacobian matrix and is denoted
+by the symbol capital B. B is a function of
+
+00:01:27.490 --> 00:01:32.810
+the roll, pitch, yaw angles. And, more precisely,
+it’s a function of the roll angle and the
+
+00:01:32.810 --> 00:01:38.670
+pitch angle. The yaw angle does not appear
+in the expression for this Jacobian matrix.
+
+00:01:38.670 --> 00:01:44.229
+This is a nice relationship because it links
+a very obscure and abstract quantity like
+
+00:01:44.229 --> 00:01:49.130
+angular velocity and expresses it in terms
+of roll, pitch and yaw rates which are much
+
+00:01:49.130 --> 00:01:53.270
+more intuitive for engineers.
+Here is the expression that we introduced
+
+00:01:53.270 --> 00:01:58.860
+earlier which maps the rate of change of robot
+joint angles to the robot end effector spatial
+
+00:01:58.860 --> 00:02:03.140
+velocity. The spatial velocity, as we know,
+comprises two components: the translational
+
+00:02:03.140 --> 00:02:09.489
+component and a rotational component expressed
+here as an angular velocity vector.
+
+00:02:09.489 --> 00:02:15.410
+What we'd like to do is to redefine this spatial
+velocity vector so that the rotational part
+
+00:02:15.410 --> 00:02:20.810
+now contains the roll, pitch and yaw rates
+of change. If we are going to do that, then
+
+00:02:20.810 --> 00:02:26.739
+we need to change our definition of the Jacobian
+matrix itself. So, we introduce a variant
+
+00:02:26.739 --> 00:02:33.540
+of the Jacobian matrix called JA and that
+is the analytic Jacobian matrix and it relates
+
+00:02:33.540 --> 00:02:39.609
+the change in robot joint angles to spatial
+velocity defined now with roll, pitch and
+
+00:02:39.609 --> 00:02:44.260
+yaw angle rates.
+To obtain the analytic Jacobian, we start
+
+00:02:44.260 --> 00:02:49.879
+with the standard robot manipulator Jacobian
+matrix and we pre-multiply it by this matrix,
+
+00:02:49.879 --> 00:02:57.519
+contains a lot of 1s and 0s and it also contains
+the inverse of the 3 x 3 Jacobian matrix B.
+
+00:02:57.519 --> 00:03:02.890
+B is a function of the roll, pitch, yaw angles
+which I denote by the symbol capital Gamma.
+

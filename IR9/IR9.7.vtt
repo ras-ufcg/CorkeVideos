@@ -1,0 +1,111 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.750 --> 00:00:08.210
+In the previous lecture, we looked at transforming
+spatial velocity from one coordinate frame
+
+00:00:08.210 --> 00:00:13.760
+to another. We did this for the two-dimensional
+case and we learned that the relationship
+
+00:00:13.760 --> 00:00:19.240
+between velocities is given by a Jacobian
+matrix which is actually a function of the
+
+00:00:19.240 --> 00:00:23.500
+relative orientation between the two coordinate
+frames.
+
+00:00:23.500 --> 00:00:27.519
+For three dimensions, things are actually
+quite similar. So, here is a three-dimensional
+
+00:00:27.519 --> 00:00:32.300
+reference coordinate frame, a point which
+has a spatial velocity with respect to Frame
+
+00:00:32.300 --> 00:00:38.480
+A. And, here is Frame B and we can describe
+the relative pose between Frame A and Frame
+
+00:00:38.480 --> 00:00:44.329
+B. We can show in red the spatial velocity
+with respect to Frame B and the relationship
+
+00:00:44.329 --> 00:00:50.350
+between the two is given by a Jacobian matrix.
+For the three-dimensional case, the Jacobian
+
+00:00:50.350 --> 00:00:56.789
+matrix is 6 x 6. And, once again, it is a
+function only of the relative orientation
+
+00:00:56.789 --> 00:01:02.750
+between the two coordinate frames. It’s
+a function of rotation matrix from Frame B
+
+00:01:02.750 --> 00:01:07.560
+to Frame A.
+Here is an example of an industrial robot.
+
+00:01:07.560 --> 00:01:13.360
+And, if I apply a particular set of robot
+joint angle velocities, I obtain a particular
+
+00:01:13.360 --> 00:01:18.770
+spatial velocity for the robot end effector
+and those two quantities are related by the
+
+00:01:18.770 --> 00:01:23.770
+manipulator, Jacobian.
+Now, this assumes that the robot end effector
+
+00:01:23.770 --> 00:01:30.280
+velocity is defined with respect to the world
+coordinate frame, denoted zero here. It’s
+
+00:01:30.280 --> 00:01:35.990
+often very useful to describe the velocity
+of the end effector with respect to the end
+
+00:01:35.990 --> 00:01:40.060
+effector’s coordinate frame. I have denoted
+here as Frame 6.
+
+00:01:40.060 --> 00:01:46.189
+Now, we can write this in terms of a different
+Jacobian matrix. This Jacobian matrix relates
+
+00:01:46.189 --> 00:01:51.579
+the robot joint angle velocity to the robot
+end effector velocity expressed in terms of
+
+00:01:51.579 --> 00:01:56.250
+Frame 6.
+We can write an expression for the end effector’s
+
+00:01:56.250 --> 00:02:02.320
+spatial velocity with respect to Frame 6 in
+terms of two Jacobian matrices. This Jacobian
+
+00:02:02.320 --> 00:02:06.479
+is the standard robot manipulator Jacobian
+matrix that we have talked about previously.
+
+00:02:06.479 --> 00:02:13.330
+And, this Jacobian matrix is responsible for
+transforming velocity from Frame 0 to Frame
+
+00:02:13.330 --> 00:02:20.170
+6 and it is a function of the relative pose
+from Frame 6 to Frame 0. And, that Jacobian
+
+00:02:20.170 --> 00:02:26.040
+matrix, as we introduced in the previous slide,
+is a function simply of the rotational part
+
+00:02:26.040 --> 00:02:27.790
+of the relative pose.
+

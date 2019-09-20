@@ -1,0 +1,221 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.949 --> 00:00:06.649
+Now we are going to add a third link to my
+robot.
+
+00:00:06.649 --> 00:00:12.549
+So now, we have a 3-degree of freedom robot
+with 3 revolute or 3 rotational joints.
+
+00:00:12.549 --> 00:00:14.960
+This robot has a much larger working volume.
+
+00:00:14.960 --> 00:00:20.590
+It can reach any point within this very large
+circle here, but because it has got 3 degrees
+
+00:00:20.590 --> 00:00:25.070
+of freedom it means it cannot only reach any
+particular position within its work space.
+
+00:00:25.070 --> 00:00:29.400
+It can also achieve any orientation at that
+particular position.
+
+00:00:29.400 --> 00:00:34.090
+If for example the robot's end effector position
+is here, then the robot with 3 degrees of
+
+00:00:34.090 --> 00:00:39.340
+freedom is able to achieve any arbitrate orientation
+of this last link of the robot.
+
+00:00:39.340 --> 00:00:44.440
+We could see I can move it through quite a
+large range of angles of that link and it
+
+00:00:44.440 --> 00:00:49.989
+is possible because it has 1 extra degree
+of freedom.
+
+00:00:49.989 --> 00:00:53.530
+Let us determine the pose of the end effector
+of our 3-link robot.
+
+00:00:53.530 --> 00:00:58.680
+The first thing we are going to do is to annotate
+the robot and introduce the lengths of the
+
+00:00:58.680 --> 00:01:02.970
+various links and then we are going to introduce
+the various joint angles.
+
+00:01:02.970 --> 00:01:08.500
+Q1 and Q2 in this diagram are both positive
+and Q3 here is a negative value.
+
+00:01:08.500 --> 00:01:13.659
+You note that the direction of rotation is
+the opposite of that for Q1 and Q2.
+
+00:01:13.659 --> 00:01:18.780
+When we did this for the 1 and 2 joint robots,
+I showed an animation of the coordinate frame
+
+00:01:18.780 --> 00:01:23.920
+moving from the reference coordinate frame
+along the links and ending up at the end effector.
+
+00:01:23.920 --> 00:01:26.189
+I am not going to do that animation this time.
+
+00:01:26.189 --> 00:01:30.630
+I think you got the general idea and what
+we are going to do is just write down the
+
+00:01:30.630 --> 00:01:33.340
+transform expression by inspection.
+
+00:01:33.340 --> 00:01:37.950
+The 1st thing we are going to do is to rotate
+it at Q1, translate in the X-direction by
+
+00:01:37.950 --> 00:01:45.170
+A1, rotate by the angle Q2, translate along
+the 2nd link in its X-direction by the amount
+
+00:01:45.170 --> 00:01:52.130
+of A2 and then rotate by the angle Q3 and
+then translate in the X-direction by an amount
+
+00:01:52.130 --> 00:01:53.130
+A3.
+
+00:01:53.130 --> 00:01:58.709
+Once again, I can expand out what these matrices
+and multiply them together to come up with
+
+00:01:58.709 --> 00:02:04.530
+a homogenous transformation which represents
+the pose of the end effector of this 3-joint
+
+00:02:04.530 --> 00:02:05.530
+robot.
+
+00:02:05.530 --> 00:02:08.670
+To do this by hand for the 3-link robot is
+a little bit tedious.
+
+00:02:08.670 --> 00:02:09.670
+I might make an error.
+
+00:02:09.670 --> 00:02:12.340
+So we are going to go straight to MATLAB and
+do it there.
+
+00:02:12.340 --> 00:02:18.049
+Now, we are going to use the MATLAB to compute
+the pose of the end effector of this 3-link
+
+00:02:18.049 --> 00:02:19.049
+planar robot.
+
+00:02:19.049 --> 00:02:21.599
+We are going to do it just in symbolic form
+this time.
+
+00:02:21.599 --> 00:02:28.230
+I create some symbols to represent the 3 links
+lengths: A1, A2 and A3 and they represent
+
+00:02:28.230 --> 00:02:33.110
+the 3 joint angles: Q1, Q2 and Q3.
+
+00:02:33.110 --> 00:02:38.519
+Once again, we used the trchain2 to function
+and the string now I pass in describes the
+
+00:02:38.519 --> 00:02:42.209
+way the coordinate frame moves from the base
+of the robot to the tip.
+
+00:02:42.209 --> 00:02:50.030
+So I am going to do a rotation by the angle
+Q1, translation by the distance A1, a rotation
+
+00:02:50.030 --> 00:02:56.560
+by angle Q2, translation in the X-direction
+by the distance A2, another rotation this
+
+00:02:56.560 --> 00:03:02.909
+one by the angle Q3 and another translation
+by the distance A3 that is moving along the
+
+00:03:02.909 --> 00:03:04.370
+3rd link of the robot.
+
+00:03:04.370 --> 00:03:11.121
+Now, I am going to pass the end effector of
+the joint angles Q1, Q2 and Q3 and here, we
+
+00:03:11.121 --> 00:03:16.930
+have a symbolic expression which represents
+the pose of the end effector of this 3-link
+
+00:03:16.930 --> 00:03:17.930
+robot.
+
+00:03:17.930 --> 00:03:22.880
+You see this is now quite a complex expression
+as we need to scroll sideways to see the end
+
+00:03:22.880 --> 00:03:25.329
+of it.
+
+00:03:25.329 --> 00:03:32.209
+The x component for example is given by the
+1st row and the 3rd column of the result that
+
+00:03:32.209 --> 00:03:37.239
+I just computed and that is the expression
+for the X-coordinate of the end effector of
+
+00:03:37.239 --> 00:03:40.110
+the 3-link robot.
+
+00:03:40.110 --> 00:03:46.650
+I can also import a model of a planar 3-link
+robot and that is the tool box function and
+
+00:03:46.650 --> 00:03:51.739
+the planar tree creates a serial link object
+in our workspace.
+
+00:03:51.739 --> 00:03:57.519
+The variable is called P3 and there is some
+methods that I can apply to this object and
+
+00:03:57.519 --> 00:03:59.239
+the teach method that we have looked at previously.
+
+00:03:59.239 --> 00:04:03.040
+I can do it on this 3-link robot and here
+it is.
+
+00:04:03.040 --> 00:04:05.360
+I can increase joint angle number 1.
+
+00:04:05.360 --> 00:04:07.879
+I can decrease joint angle number 2.
+
+00:04:07.879 --> 00:04:13.590
+I can increase joint angle number 3 and we
+can see it moving and we can see the position
+
+00:04:13.590 --> 00:04:18.050
+of the end effector changing as I adjust these
+sliders.
+

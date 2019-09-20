@@ -1,0 +1,403 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.480 --> 00:00:08.500
+Peter: Lets have another look at converting
+roll/pitch/yaw angles to a rotation matrix.
+
+00:00:08.500 --> 00:00:14.160
+We use the function that we introduced a moment
+ago; rpy2r, and I’m going to pass in a roll
+
+00:00:14.160 --> 00:00:21.820
+angle of 0.3 radians, a pitch radians of pi/2
+radians, and a yaw angle of 0.5 radians. And
+
+00:00:21.820 --> 00:00:24.960
+as before we have an orthonormal rotation
+matrix.
+
+00:00:24.960 --> 00:00:30.210
+Now I’m going to convert that back to roll/pitch/yaw
+angles. To do that I use the inverse function
+
+00:00:30.210 --> 00:00:38.050
+tr2rpy and I pass in the rotation matrix that
+we just computed, and here are the roll/pitch/yaw
+
+00:00:38.050 --> 00:00:43.649
+angles. You’ll notice they are quite different
+to those that we passed in. The middle angle,
+
+00:00:43.649 --> 00:00:49.430
+the pitch angle is the same, its pi/2. The
+roll angle has changed from 0.3 to 0, and
+
+00:00:49.430 --> 00:00:52.100
+the yaw angle has changed form 0.5 to 0.8.
+
+00:00:52.100 --> 00:00:58.809
+If you are sharp you’ll have noticed that
+0.8 is the sum of 0.3 and 0.5. So one of our
+
+00:00:58.809 --> 00:01:04.680
+angles has got 0, and the yaw angle has gone
+to the sum of the original roll and yaw angles.
+
+00:01:04.680 --> 00:01:06.840
+What’s going on here?
+
+00:01:06.840 --> 00:01:12.510
+This is a condition known as singularity,
+and it occurs in any three-angle sequence
+
+00:01:12.510 --> 00:01:18.520
+representation of an orientation. It occurs
+for roll/pitch/yaw angles, it occurs for Euler
+
+00:01:18.520 --> 00:01:24.550
+angles. It always occurs when the middle angle
+takes on a particular value, and for roll/pitch
+
+00:01:24.550 --> 00:01:30.560
+/yaw angles the pitch angle is equal to pi/2,
+leads to the singularity condition.
+
+00:01:30.560 --> 00:01:35.310
+This condition is also known by the rather
+unusual name of gimbal lock. If you’ve ever
+
+00:01:35.310 --> 00:01:39.440
+seen the movie Apollo 13 you will have heard
+that term used.
+
+00:01:39.440 --> 00:01:43.710
+Apollo 13 is actually one of my favourite
+movies. It’s a dramatisation of the very
+
+00:01:43.710 --> 00:01:47.360
+famous Apollo 13 mission to the moon back
+in 1970.
+
+00:01:47.360 --> 00:01:51.030
+Astronaut: Ok Houston we’ve had a problem
+here.
+
+00:01:51.030 --> 00:01:54.700
+Ground Controller: This is Houston, say again
+please.
+
+00:01:54.700 --> 00:01:58.430
+Astronaut: Alright Houston we’ve had a problem.
+We’ve had a Main B Bus undervolt.
+
+00:01:58.430 --> 00:02:02.530
+Peter: There was a faulty component built
+into the spacecraft and eventually caused
+
+00:02:02.530 --> 00:02:07.320
+a massive explosion. The moon landing was
+aborted and the astronauts were really lucky
+
+00:02:07.320 --> 00:02:09.009
+to get back to earth alive.
+
+00:02:09.009 --> 00:02:16.780
+The explosion presented the astronauts and
+NASA ground staff with all kinds of problems;
+
+00:02:16.780 --> 00:02:22.670
+saving the crew’s oxygen, removing excess
+carbon dioxide, dealing with power shortage,
+
+00:02:22.670 --> 00:02:26.280
+and devising a strategy for getting the astronauts
+safely back to Earth.
+
+00:02:26.280 --> 00:02:32.129
+A rather more obscure element of this dramatic
+crisis is gimbal lock. It is a pretty esoteric
+
+00:02:32.129 --> 00:02:36.700
+term. It’s a very geeky term, and I'm pretty
+sure it's also the first and perhaps the last
+
+00:02:36.700 --> 00:02:41.519
+time it will ever be mentioned in a Hollywood
+movie!
+
+00:02:41.519 --> 00:02:45.030
+The problem first of all was picked up by
+the ground controllers, as they monitor the
+
+00:02:45.030 --> 00:02:48.269
+crew onboard trying to stabilise the stricken
+spacecraft.
+
+00:02:48.269 --> 00:02:53.090
+Ground Controller: 13, Houston. We see you
+getting close to gimbal lock there. We’d
+
+00:02:53.090 --> 00:03:00.670
+like you to bring up all Quad C’s on Main
+A. Quad C1, C2, C3 and C4 on Main A, and also
+
+00:03:00.670 --> 00:03:03.420
+bring B3 and B4 up on Main A.
+
+00:03:03.420 --> 00:03:07.420
+Peter: The pilot was trying desperately to
+keep it away from the Gimbal lock condition.
+
+00:03:07.420 --> 00:03:10.659
+Ground Controller: 13, Houston. Do you read?
+
+00:03:10.659 --> 00:03:12.980
+Astronaut: Yeah we got it.
+
+00:03:12.980 --> 00:03:19.200
+Peter: The Apollo spacecraft’s flying controls
+were something like those seen in this NASA testbed.
+
+00:03:21.320 --> 00:03:25.280
+This gimbal lock condition is related to the
+example that we were looking at in MATLAB
+
+00:03:25.280 --> 00:03:29.920
+a moment ago but in this case, in the NASA
+case, they were dealing with real physical
+
+00:03:29.920 --> 00:03:34.959
+gimbals. So let's have a look at physical
+gimbals and how they work.
+
+00:03:34.959 --> 00:03:40.279
+A Gimbal is a simple mechanism that's used
+to keep a delicate instrument like a compass
+
+00:03:40.279 --> 00:03:46.029
+or a clock, level when it's mounted on a vehicle
+or a vessel that's undergoing considerable
+
+00:03:46.029 --> 00:03:52.900
+motion. And the first example here is a compass
+in we call a two axis Gimbal, so the compass
+
+00:03:52.900 --> 00:03:59.760
+can rotate around this particular axis and
+then that whole assembly rotates around this
+
+00:03:59.760 --> 00:04:06.200
+axis. Or if the base of the compass was mounted
+on the ship and the ship is rolling and pitching
+
+00:04:06.200 --> 00:04:12.749
+then the compass is going to remain level.
+The same for this clock indicated here, its
+
+00:04:12.749 --> 00:04:19.060
+first free to rotate around this axis and
+then it's free to rotate around this axis.
+
+00:04:19.060 --> 00:04:23.890
+If I place this box on the table in my cabin
+on board a sailing ship then the clock is
+
+00:04:23.890 --> 00:04:30.730
+going to remain level even though the ship
+is undergoing quite considerable motion. This
+
+00:04:30.730 --> 00:04:35.810
+last example is a little bit more complex
+it contains what we call a three axis Gimbal.
+
+00:04:35.810 --> 00:04:40.720
+In the first case then, the compass is free
+to rotate around this axis and then that whole
+
+00:04:40.720 --> 00:04:46.290
+assembly is free to rotate around this axis
+and finally all that inner assembly is
+
+00:04:46.290 --> 00:04:50.070
+free to rotate around this axis.
+
+00:04:50.070 --> 00:04:54.720
+Gimbals are widely used in engineering systems
+and this is a schematic of a gimbal that was
+
+00:04:54.720 --> 00:05:00.480
+part of the navigation system for the Apollo
+lunar module that was referred to earlier
+
+00:05:00.480 --> 00:05:06.480
+in the movie. The key component is what's
+called the stabilized platform and it consists
+
+00:05:06.480 --> 00:05:11.920
+of three gyroscopes spinning quickly and they
+keep this particular assembly shown here in
+
+00:05:11.920 --> 00:05:20.130
+blue at a fixed orientation with respect to
+the universe. Now because the vehicle in which
+
+00:05:20.130 --> 00:05:25.920
+it's mounted is going to be rotating and translating,
+then we need some way to mechanically connect
+
+00:05:25.920 --> 00:05:32.300
+the space craft to the stable platform but
+in such a way that the motion of the space
+
+00:05:32.300 --> 00:05:38.080
+craft does not introduce any torque or force
+on the stable platform. So the way to do that
+
+00:05:38.080 --> 00:05:44.490
+is to use a series of gimbals so the first
+gimbal is a rotation around this axis here
+
+00:05:44.490 --> 00:05:51.860
+and then that whole assembly is free to rotate
+around this axis and then finally all that
+
+00:05:51.860 --> 00:05:59.190
+assembly is free to rotate around this axis.
+What this allows is really important, if we
+
+00:05:59.190 --> 00:06:05.020
+measure the angles of the shaft in each of
+the gimbals then that tells us the orientation
+
+00:06:05.020 --> 00:06:10.390
+of the vehicle with respect to the stable
+platform. And that's how this vehicle is able
+
+00:06:10.390 --> 00:06:16.810
+to determine it's orientation in space. The
+problem occurs when the angle of the second
+
+00:06:16.810 --> 00:06:22.350
+gimbal approaches plus or minus 90 degrees
+and that's the condition referred to as Gimbal
+
+00:06:22.350 --> 00:06:25.630
+Lock which was mentioned in the movie clip.
+
+00:06:25.630 --> 00:06:30.630
+For space craft navigation it works something
+like this, we have this inner element which
+
+00:06:30.630 --> 00:06:35.650
+is referred to as a stable platform, it's
+got three orthogonal gyroscopes on it and
+
+00:06:35.650 --> 00:06:40.800
+what that means is that the platform maintains
+a constant orientation with respect to the
+
+00:06:40.800 --> 00:06:45.160
+universe. It's a very impressive thing, the
+space craft then is attached to the other
+
+00:06:45.160 --> 00:06:51.130
+side of the gimbal mechanism. So as the space
+craft's orientation changes over time by reading
+
+00:06:51.130 --> 00:06:56.040
+the gimbal angles we can determine the orientation
+of the space craft with respect to the stable
+
+00:06:56.040 --> 00:07:00.980
+platform whose orientation is a constant.
+
+00:07:00.980 --> 00:07:05.000
+Let's consider the case where the orientation
+of the vehicle is expressed in terms of roll,
+
+00:07:05.000 --> 00:07:10.290
+pitch, yaw angles. We write this as a sequence
+of elementary rotations, a rotation around
+
+00:07:10.290 --> 00:07:15.170
+the X axis by the roll angle, rotation around
+the Y axis by the pitch angle and a rotation
+
+00:07:15.170 --> 00:07:20.710
+around the Z axis by the yaw angle. Now let's
+consider what happens when the pitch angle
+
+00:07:20.710 --> 00:07:27.510
+equals 90 degrees or pi on 2 radians. We
+can write the expression like this, now the
+
+00:07:27.510 --> 00:07:34.270
+pitch angle is equal to pi on 2 and with some
+well known identities I can rewrite it in
+
+00:07:34.270 --> 00:07:40.130
+this form. Now what we have is 2 consecutive
+rotations around the X axis so I can write
+
+00:07:40.130 --> 00:07:46.550
+this now as a single rotation around the X
+axis. The amount of the rotation is R+Y, it's
+
+00:07:46.550 --> 00:07:51.930
+the sum of the roll angle and the yaw angle
+and there's a final constant rotation. What
+
+00:07:51.930 --> 00:07:58.610
+this indicates is that now roll and yaw are
+equivalent we can't tell one from another.
+
+00:07:58.610 --> 00:08:03.270
+Another way to think about this mechanical
+way in terms of the Gimbal mechanism itself
+
+00:08:03.270 --> 00:08:08.800
+is to think that the axis of the first gimbal
+and the third gimbal and now parallel to each
+
+00:08:08.800 --> 00:08:16.010
+other and aligned. This is a mathematical
+representation of the Gimbal lock phenomenon.
+
+00:08:16.010 --> 00:08:21.310
+And it occurs when the angle of the middle
+gimbal approaches pi on 2. This is the condition
+
+00:08:21.310 --> 00:08:25.100
+that they were concerned about in the Apollo
+13 clip.
+
+00:08:25.100 --> 00:08:31.070
+So what this means is when you define your
+coordinate system for any particular vehicle
+
+00:08:31.070 --> 00:08:36.589
+and if you want to describe it's orientation
+in terms of roll, pitch and yaw angles it's
+
+00:08:36.589 --> 00:08:43.180
+important that the pitch angle is around 0
+for the nominal configuration of your vehicle.
+
+00:08:43.180 --> 00:08:49.410
+So if it's an aircraft then the pitch angle
+would be 0 when it is in default horizontal configuration
+
+00:08:49.410 --> 00:08:54.779
+or as if it was a rocket you would want to
+make sure that the 0 pitch angle corresponded
+
+00:08:54.779 --> 00:08:59.779
+to the condition of going straight up. You
+need to ensure that the situation with the
+
+00:08:59.779 --> 00:09:04.980
+pitch angle equals plus or minus 2 does not
+occur during normal operating conditions.
+

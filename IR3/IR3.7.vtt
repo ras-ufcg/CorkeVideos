@@ -1,0 +1,122 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.610 --> 00:00:09.040
+Now we're going to talk about one of the more
+perplexing elements of rotations in 3D.
+
+00:00:09.040 --> 00:00:12.710
+I've got three coordinate frames here and
+they're all initially parallel to each other.
+
+00:00:12.710 --> 00:00:15.669
+The x-axes, the y-axes and the z-axes are
+all aligned.
+
+00:00:15.669 --> 00:00:20.800
+I'm going to pick up the first one, the red
+one, and I'm going to rotate it by +90 degrees
+
+00:00:20.800 --> 00:00:22.500
+around its x-axis.
+
+00:00:22.500 --> 00:00:26.810
+Positive is in this direction so after rotating
+it by 90 degrees in x-axis, it looks like
+
+00:00:26.810 --> 00:00:27.810
+this.
+
+00:00:27.810 --> 00:00:31.150
+And now I'm going to rotate it by +90 degrees
+around the y-axis.
+
+00:00:31.150 --> 00:00:33.910
+So this frame is going to end up looking like
+this.
+
+00:00:33.910 --> 00:00:35.470
+This is its final orientation.
+
+00:00:35.470 --> 00:00:37.860
+I'm just going to put it down there.
+
+00:00:37.860 --> 00:00:42.579
+I'm going to pick up the blue frame and I'm
+going to do the rotation within the opposite
+
+00:00:42.579 --> 00:00:43.710
+order.
+
+00:00:43.710 --> 00:00:48.070
+First of all, I'm going to rotate it by +90
+degrees around the y-axis.
+
+00:00:48.070 --> 00:00:49.250
+That's the positive direction.
+
+00:00:49.250 --> 00:00:51.530
+So it's initially going to look like this.
+
+00:00:51.530 --> 00:00:55.350
+And now I'm going to rotate it by +90 degrees
+around the x-axis.
+
+00:00:55.350 --> 00:00:59.430
+The x-axis is now pointing downwards, that's
+the positive rotation direction.
+
+00:00:59.430 --> 00:01:02.120
+So this is what the final orientation will
+look like.
+
+00:01:02.120 --> 00:01:06.840
+And we can see that these two frames have gotten
+very, very different orientations.
+
+00:01:06.840 --> 00:01:12.000
+So when it comes to doing rotations in three
+dimensions, the order in which you do them
+
+00:01:12.000 --> 00:01:14.430
+is critically important.
+
+00:01:14.430 --> 00:01:16.330
+Rotations are not to commutative.
+
+00:01:16.330 --> 00:01:21.490
+Let's look at the non-commutative nature of
+rotation matrix multiplication.
+
+00:01:21.490 --> 00:01:26.340
+I'm going to have a rotation of 90 degrees
+around the x-axis.
+
+00:01:26.340 --> 00:01:31.390
+And then I'm going to rotate by 90 degrees
+around the y-axis.
+
+00:01:31.390 --> 00:01:34.610
+And the resulting rotation matrix looks like
+this.
+
+00:01:34.610 --> 00:01:40.430
+If I do this in the opposite order, I'll rotate
+around the y-axis first, and then I'll rotate
+
+00:01:40.430 --> 00:01:43.880
+around the x-axis, by 90 degrees in each case.
+
+00:01:43.880 --> 00:01:47.540
+I end up with a resulting rotation matrix
+which looks like this.
+
+00:01:47.540 --> 00:01:52.200
+And we can see that these two matrices are
+quite different.
+
+00:01:52.200 --> 00:01:55.770
+When you're multiplying rotation matrices,
+the order is critically important.
+

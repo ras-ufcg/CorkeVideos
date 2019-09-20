@@ -1,0 +1,204 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.870 --> 00:00:07.799
+Let’s have a look at a few different kinds
+of robots. The first one we’re going to
+
+00:00:07.799 --> 00:00:12.559
+consider is what’s called a Gantry robot
+and sometimes called a Cartesian robot. It’s
+
+00:00:12.559 --> 00:00:17.860
+a robot that allows us to control the position
+of the tool-tip in three-dimensional space,
+
+00:00:17.860 --> 00:00:24.009
+so we can control the X, Y and Z coordinate
+of the tool-tip. The Gantry robot has got
+
+00:00:24.009 --> 00:00:29.430
+a boom which moves in the direction indicated
+by the blue arrow and the tool moves along
+
+00:00:29.430 --> 00:00:35.050
+the boom in the direction shown by the red
+arrow. And, finally, the tool itself moves
+
+00:00:35.050 --> 00:00:40.559
+up and down in the direction indicated by
+the green arrow. We have three motion axes,
+
+00:00:40.559 --> 00:00:45.329
+each orthogonal to the others.
+This kind of robot is known as a SCARA robot
+
+00:00:45.329 --> 00:00:50.690
+and they are widely used in manufacturing
+and package handling applications.
+
+00:00:50.690 --> 00:00:55.489
+The part of the robot that’s highlighted
+in red rotates around the axis shown here.
+
+00:00:55.489 --> 00:01:01.780
+And, the part of the robot that’s highlighted
+in blue rotates around this axis. And, finally,
+
+00:01:01.780 --> 00:01:07.600
+the tool moves up and down along the axis
+shown here by the green arrow. Some variants
+
+00:01:07.600 --> 00:01:14.610
+of the SCARA robots also rotate the tool around
+the axis shown by the green dashed line. The
+
+00:01:14.610 --> 00:01:21.410
+term SCARA is an acronym for Selective Compliance
+Articulating Robot and so why the complex
+
+00:01:21.410 --> 00:01:25.960
+and tortured acronym? But essentially, what
+it means is that the robot is quite free to
+
+00:01:25.960 --> 00:01:31.450
+move in the horizontal plane, but it’s very,
+very stiff in the vertical direction and that’s
+
+00:01:31.450 --> 00:01:36.140
+just a consequence of the way it has been
+designed and constructed.
+
+00:01:36.140 --> 00:01:41.570
+A relatively new class of robot is the parallel
+link robot and this is an example of one shown
+
+00:01:41.570 --> 00:01:47.420
+here. A great advantage of the parallel link
+robot is all of the motors can be situated
+
+00:01:47.420 --> 00:01:52.980
+in the base of the robot and they are connected
+via mechanical linkages to the tool. So, there
+
+00:01:52.980 --> 00:01:59.180
+are a number of mechanical linkages in parallel
+connecting the tool to the motors. This is
+
+00:01:59.180 --> 00:02:04.890
+a very different architecture to the Gantry
+robot and the SCARA robot. Those robots are referred
+
+00:02:04.890 --> 00:02:10.280
+to as serial link robots because there is
+a chain of links from the base to the tool-tip.
+
+00:02:10.280 --> 00:02:17.069
+Here, the links are all in parallel.
+Here are a couple of examples of educational
+
+00:02:17.069 --> 00:02:22.959
+robots. The one on the left is a hobby robot
+that has got four mechanical joints connecting
+
+00:02:22.959 --> 00:02:28.980
+the base to the tool-tip where there is a
+parallel jaw or a two-finger gripper.
+
+00:02:28.980 --> 00:02:35.439
+The Aldebaran NAO robot shown here has got
+two arms and two legs. And, each of the arms
+
+00:02:35.439 --> 00:02:40.709
+and the legs is essentially a serial link
+manipulator. In the case of the arms, there
+
+00:02:40.709 --> 00:02:46.090
+are four joints, two at the shoulder, one
+at the elbow and one at the wrist, which control
+
+00:02:46.090 --> 00:02:51.659
+the position and orientation of the wrist
+which holds a number of fingers. And, those
+
+00:02:51.659 --> 00:02:55.079
+fingers themselves have got a number of joints
+within them.
+
+00:02:55.079 --> 00:03:01.069
+A very common class of robots have got six
+axes, the six-axis serial link robot. On the
+
+00:03:01.069 --> 00:03:06.590
+left, we can see an example of a state of
+the art industrial robot which has got six
+
+00:03:06.590 --> 00:03:12.129
+links. And, on the right, we can see a very
+unusual example of a six-axis robot. This
+
+00:03:12.129 --> 00:03:18.789
+arm is used to load and unload satellites
+and other cargo from the shuttle’s payload bay.
+
+00:03:20.140 --> 00:03:25.459
+Here is a very famous robotic arm in
+the history of robot arm development. It was
+
+00:03:25.459 --> 00:03:30.769
+developed at Stanford University and it’s
+commonly known just as the Stanford Robotic
+
+00:03:30.769 --> 00:03:37.459
+Arm. It was developed in 1969. That’s the
+year that people first walked on the moon.
+
+00:03:37.459 --> 00:03:42.829
+What differentiates this robot arm from robot
+arms that are very common today is that it
+
+00:03:42.829 --> 00:03:48.719
+has got a sliding joint. The third joint in
+this robot slides backwards and forwards and
+
+00:03:48.719 --> 00:03:55.760
+changes the distance between the robot’s
+tool, it’s wrist and the base of the robot.
+
+00:03:55.760 --> 00:04:00.469
+The first company to produce an industrial
+robot was Unimation Inc, a Connecticut-based
+
+00:04:00.469 --> 00:04:06.319
+company and they were founded in 1956 and
+installed their first industrial robot in
+
+00:04:06.319 --> 00:04:11.959
+to a manufacturing plant a couple of years
+later. The technology is really quite old.
+
+00:04:11.959 --> 00:04:18.320
+This is an example of one of those Unimate
+robots from 1983. It’s the PUMA 560 robot,
+
+00:04:18.320 --> 00:04:23.479
+quite a famous robot really in the history
+of robotics research. There were many, many
+
+00:04:23.479 --> 00:04:28.500
+of these robots actively involved in manufacturing,
+but there are also a great number of them
+
+00:04:28.500 --> 00:04:33.400
+in university research labs such as learning
+how to hack these robots so that they could
+
+00:04:33.400 --> 00:04:38.949
+add their own control algorithms to the robot.
+So, many, many early robotics research papers
+
+00:04:38.949 --> 00:04:43.889
+are all based on these particular PUMA robots,
+the PUMA 560.
+

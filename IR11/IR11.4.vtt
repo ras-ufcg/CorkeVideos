@@ -1,0 +1,306 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.429 --> 00:00:07.609
+Here is the expression we introduced earlier
+for the inverse dynamics of a serial link
+
+00:00:07.609 --> 00:00:13.480
+robot manipulator expressed in matrix form.
+We are interested now to consider the effect
+
+00:00:13.480 --> 00:00:18.650
+of gravity. Gravity is the force that acts
+on the robot even if it's not moving. So we
+
+00:00:18.650 --> 00:00:24.830
+can eliminate the terms that are proportional
+to the joint acceleration and the joint velocity.
+
+00:00:24.830 --> 00:00:29.840
+It's just this term on the end here. The term
+G. This represents the gravity torque that's
+
+00:00:29.840 --> 00:00:35.370
+acting on the joints of the robot manipulator.
+It's the torque that counteracts gravity and
+
+00:00:35.370 --> 00:00:38.810
+stops the arm from collapsing under its own
+weight.
+
+00:00:38.810 --> 00:00:43.640
+Here again we have a symbolic model of our
+2 link robot. And what I'm going to do is
+
+00:00:43.640 --> 00:00:49.579
+to use the method gravload which tells me
+the torque that is acting on the joints of
+
+00:00:49.579 --> 00:00:57.379
+the robot. The arguments to gravload are the
+joint angles. I pass in a vector which contains
+
+00:00:57.379 --> 00:01:02.579
+Q1 and Q2; this symbolic joint variables.
+And here's the expression for gravity which
+
+00:01:02.579 --> 00:01:08.720
+is acting on the joints of the robot. And
+we see that the term for joint 1 is quite
+
+00:01:08.720 --> 00:01:14.080
+long where as the expression for joint 2 is
+a little bit shorter.
+
+00:01:14.080 --> 00:01:18.990
+We can see that this expression contains a
+kinematic parameters the link lengths A1 and
+
+00:01:18.990 --> 00:01:26.650
+A2. The positions of the centres of mass C1
+and C2, the masses of the two joints M1 and
+
+00:01:26.650 --> 00:01:30.939
+M2. And we can see that there are a lot of
+cos and sine terms in here.
+
+00:01:30.939 --> 00:01:35.420
+So far we've talked about the forces on the
+robot just due to its own weight. But a useful
+
+00:01:35.420 --> 00:01:39.900
+robot also has to be able to carry a payload.
+Pick an object up from here and put it down
+
+00:01:39.900 --> 00:01:45.909
+over there. So clearly the last link in the
+chain of the robot has to hold the payload.
+
+00:01:45.909 --> 00:01:50.040
+But that propagates down the chain towards
+the base of the robot. Every joint in the
+
+00:01:50.040 --> 00:01:56.590
+robot has to help hold up the payload to stop
+it being pulled down by the force of gravity.
+
+00:01:56.590 --> 00:02:01.810
+So what's the effect of payload? Well every
+joint has got a maximum possible torque. So
+
+00:02:01.810 --> 00:02:06.870
+let's imagine that we have a payload on the
+end of the robot and we keep increasing it's mass.
+
+00:02:06.920 --> 00:02:12.800
+We can work out the torque that each of the
+Joints needs to exert in order to hold up
+
+00:02:12.809 --> 00:02:17.370
+that payload. As we increase the mass of the
+payload, eventually we will find that one
+
+00:02:17.370 --> 00:02:22.950
+joint will hit its torque limit it will become
+overloaded. And that's the maximum payload
+
+00:02:22.950 --> 00:02:24.629
+that the robot can hold.
+
+00:02:24.629 --> 00:02:29.599
+Now we know that the gravity torque is the
+function of the configuration of the robot.
+
+00:02:29.599 --> 00:02:33.579
+If a robot's holding 10 kg there might be
+some configurations particularly where the
+
+00:02:33.579 --> 00:02:39.349
+10 kg is close to the base of the robot where
+it's possible to hold that particular payload.
+
+00:02:39.349 --> 00:02:44.279
+But if the robot has got its arm fully stretched,
+it may not be able to hold that particular
+
+00:02:44.279 --> 00:02:49.639
+payload. So the maximum payload of the robot
+is a function of the torque capabilities of
+
+00:02:49.639 --> 00:02:55.150
+the motors but it is also a function of the
+configuration of the robot.
+
+00:02:55.150 --> 00:03:02.249
+I am going to go back to a numerical model
+of our 2 link robot and I load that using
+
+00:03:02.249 --> 00:03:07.689
+the script mdl_twolink.
+
+00:03:07.689 --> 00:03:12.760
+I'm going to now compute the gravity load
+on the robot's joints using the gravload method.
+
+00:03:12.760 --> 00:03:20.189
+I'm going to compute that for joint angle
+0 and 0. And this is the result we get. In
+
+00:03:20.189 --> 00:03:25.400
+fact the same result we got a little bit earlier
+using the recursive Newton-Euler algorithm.
+
+00:03:25.400 --> 00:03:29.949
+In fact gravity load itself is based on the
+recursive Newton-Euler algorithm.
+
+00:03:29.949 --> 00:03:37.159
+Let's just have a look at a configuration
+of our robot. We're going to plot it for joint
+
+00:03:37.159 --> 00:03:43.739
+angles 0 and 0 and this is what it looks like.
+Now let's imagine that we put the robot into
+
+00:03:43.739 --> 00:03:48.260
+a different configuration. Let's make the
+first joint angle equal to PI on 2 radians
+
+00:03:48.260 --> 00:03:52.379
+or 90 degrees. But now our robot is pointing
+straight upwards.
+
+00:03:52.379 --> 00:03:56.659
+So what do we think the gravity load on the
+joints would be in this case? Well it's easy
+
+00:03:56.659 --> 00:04:03.619
+enough to figure out. We use the twolink object,
+the gravload method and we pass in the joint
+
+00:04:03.619 --> 00:04:10.699
+angles, PI on 2 and 0. And we see that the
+gravity load on the joints is almost equal
+
+00:04:10.699 --> 00:04:15.760
+to zero or some slight numerical error here.
+It's 10 to the minus 14. And this is what
+
+00:04:15.760 --> 00:04:20.609
+we expect because in this particular configuration,
+the joints don't need to exert any torque
+
+00:04:20.609 --> 00:04:26.939
+at all to hold the robot straight up. The
+robot is in fact balancing in an upright
+
+00:04:26.939 --> 00:04:31.449
+configuration. It's not stable but it doesn't
+require any joint torque to maintain this
+
+00:04:31.449 --> 00:04:34.680
+exact configuration.
+
+00:04:34.680 --> 00:04:39.560
+Now we're going to look at the effect on payload.
+I can add a payload to my robot object very
+
+00:04:39.560 --> 00:04:45.199
+easily. Here is my robot object and I used
+the payload method and I'm going to add a
+
+00:04:45.199 --> 00:04:51.370
+1 kg payload, and it's going to be placed
+at the coordinate 0, 0, 0 with respect to
+
+00:04:51.370 --> 00:04:53.240
+the link 2 coordinate frame.
+
+00:04:53.240 --> 00:04:58.800
+So it's actually going to be right on the
+end of link 2. The robot now has a payload
+
+00:04:58.800 --> 00:05:05.020
+and now I'm going to compute the gravity load
+for the robot when it's in the configuration
+
+00:05:05.020 --> 00:05:10.240
+0,0. So that's with the arm stretched out
+straight and horizontally.
+
+00:05:10.240 --> 00:05:14.990
+Now we see that the torque on the joints,
+on joint 1 and joint 2 is increased. And that's
+
+00:05:14.990 --> 00:05:21.560
+because the robot is trying to hold a 1 kg
+load in this rather awkward configuration.
+
+00:05:21.560 --> 00:05:26.949
+So the robot joints are going to have to work
+about as hard as they can in order to keep
+
+00:05:26.949 --> 00:05:30.330
+that 1 kg from pulling the end of the robot
+down.
+
+00:05:30.330 --> 00:05:37.780
+Let's look now at a complex robot model. We
+introduce a model for the PUMA 560 robot.
+
+00:05:37.780 --> 00:05:42.030
+And you can see that there is a new variable
+in our workspace called P560, it’s another
+
+00:05:42.030 --> 00:05:45.750
+serial link object which can describe a robot
+manipulator.
+
+00:05:45.750 --> 00:05:52.110
+We're going to use the same gravload method
+for this robot. And for one of anything better
+
+00:05:52.110 --> 00:05:58.319
+I'm going to put in joint angles all equal
+to zero. And this is what the gravity load
+
+00:05:58.319 --> 00:06:03.449
+looks like. Now we can see what the PUMA robot
+looks like in that particular configuration.
+
+00:06:03.449 --> 00:06:13.210
+0, 0, 0, 0, 0, 0. And PUMA robot with a all
+zero joint angle configuration looks like
+
+00:06:13.210 --> 00:06:18.240
+this. The upper arm is horizontal and the
+lower arm is vertical. And these are the joint
+
+00:06:18.240 --> 00:06:21.080
+torques that are required to do that.
+
+00:06:21.080 --> 00:06:24.479
+The toolbox robot object has got a lot of
+capabilities and one of the things we could
+
+00:06:24.479 --> 00:06:31.780
+do is to change gravitational acceleration.
+And we change that to 0, 0, 9.81, which
+
+00:06:31.780 --> 00:06:37.540
+is nominal earth’s gravity, going to divide
+by 6 because that's what the gravity is on the moon.
+
+00:06:38.700 --> 00:06:44.520
+Now we can see the gravity load on the robot,
+given that it's on the moon, it's the gravity
+
+00:06:44.530 --> 00:06:52.069
+load function. And I put in the joint angles
+six zeros again. And here we see what the
+
+00:06:52.069 --> 00:06:58.829
+gravity load, gravity torques on the joints of this PUMA robot would be if it was working on the moon.
+

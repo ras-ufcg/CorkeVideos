@@ -1,0 +1,32 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.340 --> 00:00:09.520
+Now it's time to start making these concepts
+real. What is this thing? What is this letter ksi?
+
+00:00:10.060 --> 00:00:14.480
+We're going to do this by separating
+rotation and translation.
+
+00:00:14.490 --> 00:00:19.390
+Here we have the car at two different poses.
+And we can describe the second pose in terms
+
+00:00:19.390 --> 00:00:27.609
+of a relative pose from here to there. Now
+in order to aid our understanding and development
+
+00:00:27.609 --> 00:00:34.160
+of the concept, we're going to split this
+into two parts. A translation followed by
+
+00:00:34.160 --> 00:00:39.730
+a rotation. We're going to deal with the rotational
+part first because it's actually more complex
+
+00:00:39.730 --> 00:00:43.859
+than translation and conceptually more difficult
+to understand.
+

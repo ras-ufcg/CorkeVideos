@@ -1,0 +1,470 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.340 --> 00:00:07.830
+Let's return to the simple two-link robot
+manipulator that we looked at much, much earlier
+
+00:00:07.830 --> 00:00:12.090
+in the course. When we first looked at it,
+we were interested in the kinematics, that's
+
+00:00:12.090 --> 00:00:17.400
+looking at the relationship between the joint
+angles, Q1 and Q2 and the position and orientation
+
+00:00:17.400 --> 00:00:20.530
+of the end effector.
+Now what we're going to do is to consider
+
+00:00:20.530 --> 00:00:25.440
+that these links have got masses so I have
+dropped on the symbols for the centre of mass
+
+00:00:25.440 --> 00:00:30.600
+of each of these links. So we think about
+how this works mechanically in practice: Each
+
+00:00:30.600 --> 00:00:35.620
+link has to support all of the other links
+that are beyond it and each link of course
+
+00:00:35.620 --> 00:00:38.600
+then is supported by all the links that are
+before it.
+
+00:00:38.600 --> 00:00:42.620
+So there is mechanically a connection between
+the links, and the weight of one link has to
+
+00:00:42.620 --> 00:00:48.090
+be born by the link before it and the link
+before that and so on. Every link then exerts
+
+00:00:48.090 --> 00:00:51.850
+a force and a moment on its neighbouring links.
+
+00:00:51.850 --> 00:00:55.879
+So a really useful way to consider the forces
+and moments that are acting on each of these
+
+00:00:55.879 --> 00:01:00.870
+links is to draw a free body diagram. What
+we do is we disconnect the different links
+
+00:01:00.870 --> 00:01:04.559
+and we look at them individually, they are
+free bodies.
+
+00:01:04.559 --> 00:01:09.380
+Each link has got a mass and gravity's going
+to act on that mass with a downward force.
+
+00:01:09.380 --> 00:01:13.399
+The base of the robot is going to provide
+a vertical upward force to hold the red link
+
+00:01:13.399 --> 00:01:17.889
+up to stop it from falling down and the green
+link is going to provide a downward force
+
+00:01:17.889 --> 00:01:21.049
+on the end of the red link due to its own
+weight.
+
+00:01:21.049 --> 00:01:24.420
+Look now at the green link, there's going
+to be an upward force here, which equal and
+
+00:01:24.420 --> 00:01:28.899
+opposite of the downward force on the red
+link. This is Newton's third law. So if there
+
+00:01:28.899 --> 00:01:32.649
+is a downward force on the red link is the
+weight of green link and there is a upward
+
+00:01:32.649 --> 00:01:38.099
+force on the green link which is provided
+by the red link to keep it up.
+
+00:01:38.099 --> 00:01:42.829
+Now there is a moment provided by the motor
+which is driving joint one. It's providing
+
+00:01:42.829 --> 00:01:48.239
+a torque to stop the red link rotating. And
+similarly there's a torque applied to the
+
+00:01:48.239 --> 00:01:53.779
+green link by the joint two motor to stop
+the green link from rotating. And then there
+
+00:01:53.779 --> 00:02:00.399
+is a reaction torque, equal and opposite torque
+from that motor which is applied to the red link.
+
+00:02:00.640 --> 00:02:06.899
+So here we see, all the forces and moments
+that are acting on each of a link's of a robot.
+
+00:02:06.899 --> 00:02:11.969
+These forces and moments depend on the pose
+of each link, depend on the speed of a link
+
+00:02:11.969 --> 00:02:16.969
+and the acceleration of the link and of course,
+they also depend on gravity.
+
+00:02:16.969 --> 00:02:21.980
+These forces and moments also depend on the
+link parameters; the actual mass of a link
+
+00:02:21.980 --> 00:02:27.260
+and its inertia and its length and so on.
+So let's have a look at some of these link parameters.
+
+00:02:27.640 --> 00:02:32.079
+In kinematic parameters, we introduced much
+earlier in the course, we have the link
+
+00:02:32.079 --> 00:02:40.299
+length. In this case, the length A1 from the
+axis of joint one to the axis of joint two.
+
+00:02:40.299 --> 00:02:43.430
+And similarly, we have the length of link
+two.
+
+00:02:43.430 --> 00:02:48.150
+We introduced link coordinate frames here.
+Coordinate frame one is attached to the end
+
+00:02:48.150 --> 00:02:53.879
+of link one and coordinate frame two is attached
+to the coordinate frame of link two. And we
+
+00:02:53.879 --> 00:02:57.939
+looked at link co-ordinate frames again, much
+earlier when we were considering serial link
+
+00:02:57.939 --> 00:02:59.959
+manipulator kinematics.
+
+00:02:59.959 --> 00:03:05.010
+We can also describe the position of the centre
+of mass with respect to the link one coordinate
+
+00:03:05.010 --> 00:03:11.140
+frame. In this case, it is a displacement
+of C1 in the negative X1 direction. And we
+
+00:03:11.140 --> 00:03:15.280
+also have a mass associated with a link that's
+the mass M1.
+
+00:03:15.280 --> 00:03:20.390
+Then we also have an inertia. This is the
+inertia of the link with respect to its centre
+
+00:03:20.390 --> 00:03:26.189
+of mass and we can do the same thing for link
+two, the distance from the link two coordinate
+
+00:03:26.189 --> 00:03:32.449
+frame to its centre of mass and the inertia
+of link two with respect to its centre of mass.
+
+00:03:32.450 --> 00:03:37.019
+So we have now quite a number of parameters
+associated with each of the links. For each
+
+00:03:37.019 --> 00:03:41.689
+link, we have a mass, we have a centre of
+mass which in the general case would be a
+
+00:03:41.689 --> 00:03:47.920
+vector described by three numbers and we have
+an inertia matrix. This is a 3x3 matrix and
+
+00:03:47.920 --> 00:03:54.160
+if we consider the inertia with respect to
+the centre of mass, that 3x3 is a symmetric matrix.
+
+00:03:54.160 --> 00:03:58.940
+Now, a symmetric matrix, instead of having
+nine unique elements, its got only six unique
+
+00:03:58.950 --> 00:04:03.870
+elements. In total, we have ten parameters
+to describe the dynamics of each link. We
+
+00:04:03.870 --> 00:04:08.450
+have one mass, we have three translations
+to describe the position of the centre of
+
+00:04:08.450 --> 00:04:14.159
+mass with respect to the link coordinate frame,
+and we have six unique elements of the symmetric
+
+00:04:14.159 --> 00:04:17.720
+inertia matrix, with respect to the centre
+of mass.
+
+00:04:17.720 --> 00:04:24.180
+So for link number one, those parameters are
+M1, the centre of mass is negative C1 in the
+
+00:04:24.180 --> 00:04:29.020
+X direction. The other two elements are zero,
+the vector R1, describes the position of the
+
+00:04:29.020 --> 00:04:34.920
+centre of mass. And in this case, it's negative
+C1 and the Y and Z components are equal to zero.
+
+00:04:34.920 --> 00:04:40.480
+And we have the inertia matrix which has only
+got one element and that is the inertia about
+
+00:04:40.490 --> 00:04:45.680
+the Z axis. Now in this case, the Z axis is
+coming at us out of the page. So we have only
+
+00:04:45.680 --> 00:04:48.330
+one finite element that's IZZ1.
+
+00:04:48.330 --> 00:04:54.500
+For link two, it looks somewhat similar. These
+are the dynamic parameters of each of the
+
+00:04:54.500 --> 00:04:58.900
+links, sometimes referred to as the inertial
+parameters of the links. When it comes to
+
+00:04:58.900 --> 00:05:02.479
+describing the dynamics of moving bodies,
+there are number of different approaches that
+
+00:05:02.479 --> 00:05:07.900
+we can take, one of the most common of course
+is Newton's second law, F = ma which relates
+
+00:05:07.900 --> 00:05:13.860
+the force applied to the body to the acceleration
+that experiences as a function of its mass.
+
+00:05:13.860 --> 00:05:18.150
+For a rotating body, we can use Euler's equation
+which relates the torque applied to its body
+
+00:05:18.150 --> 00:05:23.840
+given by the symbol tau to its rotational
+inertia, J, it's angular rate, Omega, and
+
+00:05:23.840 --> 00:05:26.190
+its angular acceleration Omega dot.
+
+00:05:26.190 --> 00:05:31.349
+A quite different approach is Lagrange's equation,
+which relates the kinetic, and potential energy
+
+00:05:31.349 --> 00:05:38.440
+of a body to the derivatives of the Lagrangian
+term, T minus V, and the derivatives of Lagrangian
+
+00:05:38.440 --> 00:05:44.289
+with respect to the generalized coordinates
+and the generalized velocities of the bodies
+
+00:05:44.289 --> 00:05:45.720
+in the mechanism.
+
+00:05:45.720 --> 00:05:50.210
+We can use any of these approaches to analyze
+the dynamics of a serial link manipulator
+
+00:05:50.210 --> 00:05:55.590
+but in this lecture, we're going to consider
+the Newton-Euler method. This is a combination
+
+00:05:55.590 --> 00:06:02.020
+of Newton's law to describe translational motion and Euler's equation to describe the rotational motion.
+
+00:06:02.020 --> 00:06:07.310
+A very simple and elegant approach to determining
+the dynamic motion of a serial link manipulator
+
+00:06:07.310 --> 00:06:11.889
+is what's called the recursive Newton-Euler
+algorithm. And I'm not going to go into all
+
+00:06:11.889 --> 00:06:16.080
+of the details here, you find it in many,
+many textbooks but what I'm want to do is
+
+00:06:16.080 --> 00:06:19.060
+give you an intuition for how it works.
+
+00:06:19.060 --> 00:06:24.129
+And the first step is to determine the translational
+and rotational velocity and acceleration for
+
+00:06:24.129 --> 00:06:29.180
+the center of mass of each of the links. Use
+Newton's law for the translational motion
+
+00:06:29.180 --> 00:06:32.639
+and we use Euler's equation for the rotational
+motion.
+
+00:06:32.639 --> 00:06:37.039
+We start at the base of the robot and we work
+outwards, determining the translational and
+
+00:06:37.039 --> 00:06:42.759
+angular velocity for the centre of mass of each
+link in turn. Once we get to the end of the
+
+00:06:42.759 --> 00:06:48.009
+robot, we then work our way back inwards and
+then we determine the force and moment that
+
+00:06:48.009 --> 00:06:53.939
+each link exerts on the link that's closer
+towards the base of the robot. This method
+
+00:06:53.939 --> 00:06:57.479
+is computationally elegant and very, very
+efficient.
+
+00:06:57.479 --> 00:07:02.250
+I'm going to create a two-link robot in MATLAB.
+To do that, I'm going to use toolbox script
+
+00:07:02.250 --> 00:07:09.229
+mdl_twolink and that will create in the MATLAB
+workspace a robot object called two-link.
+
+00:07:09.229 --> 00:07:15.689
+This is an object that has great number of methods and properties and we'll start to explore some of these.
+
+00:07:15.689 --> 00:07:20.270
+One of the first ones we're going to look
+at is the plot method. So for the robot object
+
+00:07:20.270 --> 00:07:25.169
+two-link, we’re going to invoke the plot
+method so that’s dot plot invokes the plot
+
+00:07:25.169 --> 00:07:33.720
+method on that object. And I'm going to plot
+it for Q1 equal to zero, and Q2 equal to zero.
+
+00:07:33.720 --> 00:07:38.360
+And here we see the robot manipulator. Unlike
+the one we looked at previously which operated
+
+00:07:38.360 --> 00:07:46.669
+in the XY plane, we can see that this two-link
+robot is operating in the XZ plane. So gravitational
+
+00:07:46.669 --> 00:07:52.060
+acceleration which is in the Z direction is
+acting on the centre of mass of each of the
+
+00:07:52.060 --> 00:07:56.289
+links of this robot and will tend to pull
+it down to make it collapse.
+
+00:07:56.289 --> 00:08:03.319
+And we can use the recursive Newton-Euler
+equation and we can, which is the rne method
+
+00:08:03.319 --> 00:08:07.979
+for recursive Newton-Euler. And I can ask,
+what are the torques on this robot if the
+
+00:08:07.979 --> 00:08:12.229
+joint angles are both equal to zero? So that's
+a situation I've just plotted.
+
+00:08:12.229 --> 00:08:16.969
+And let's say the joints are not moving at
+all, so they've got zero velocity each and
+
+00:08:16.969 --> 00:08:22.509
+the joints are also not accelerating. So they've
+each got acceleration of zero.
+
+00:08:22.509 --> 00:08:27.689
+It says that the torque on the first joint
+on Q1 is necessary to hold it in this position
+
+00:08:27.689 --> 00:08:35.210
+is 19.62 Newton meters and the torque on the
+second joint is 4.9 Newton meters. This makes
+
+00:08:35.210 --> 00:08:39.830
+intuitive sense to us. The torque on the shoulder
+joint is going to be greater than the torque
+
+00:08:39.830 --> 00:08:45.100
+on the elbow joint because the shoulder has
+to hold up the upper arm and the lower arm,
+
+00:08:45.100 --> 00:08:50.940
+where as the elbow joint only has to hold
+up the lower part of the arm.
+
+00:08:50.940 --> 00:08:55.800
+What we don't have a handle on are the signs
+of these two torques, which way are they acting.
+
+00:08:55.800 --> 00:09:03.790
+So a good way to see that is to re-plot the
+robot using a different option which is jvek.
+
+00:09:03.790 --> 00:09:07.900
+What this shows is the access of rotation
+of each joint.
+
+00:09:07.900 --> 00:09:13.170
+So if we remember our right hand rule, in
+order to understand the direction of a positive
+
+00:09:13.170 --> 00:09:18.890
+torque, what we do is grab the axis with our
+right hand, point our thumb in the direction
+
+00:09:18.890 --> 00:09:25.130
+of the arrowhead and curl our fingers around the vector to indicate the direction of positive rotation.
+
+00:09:25.130 --> 00:09:31.840
+What we can see here then is that a positive
+torque of 19.6 acting on a shoulder joint
+
+00:09:31.840 --> 00:09:37.610
+is going to be a torque that's trying to lift
+the robot arm up, which is exactly what we
+
+00:09:37.610 --> 00:09:40.940
+would expect and similarly for joint two.
+
+00:09:40.940 --> 00:09:46.590
+So the recursive Newton-Euler algorithm has
+given us the torques that are required for
+
+00:09:46.590 --> 00:09:52.540
+the robot to stay in this particular configuration
+with both its joint angles equal to zero and
+
+00:09:52.540 --> 00:09:57.770
+with zero joint velocity and with zero joint
+acceleration. These are the torques that are
+
+00:09:57.770 --> 00:10:01.480
+required for the robot to be in this configuration
+and not move.
+

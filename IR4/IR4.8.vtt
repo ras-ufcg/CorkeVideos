@@ -1,0 +1,242 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.720 --> 00:00:07.480
+Let’s summarize some of the main ideas that
+we have learned in this lecture. There is
+
+00:00:07.480 --> 00:00:12.910
+an important distinction between a path and
+a trajectory. A path is a spatial construct
+
+00:00:12.910 --> 00:00:19.839
+and tells us how we get from A to B through
+the world. A trajectory is a path plus a schedule.
+
+00:00:19.839 --> 00:00:24.400
+It tells us how quickly we should move along
+the path, at what time we should be at what
+
+00:00:24.400 --> 00:00:30.019
+point along the path. It’s important with
+trajectories that the position and orientation
+
+00:00:30.019 --> 00:00:34.710
+vary smoothly with time. We do this for a
+number of reasons. We want to reduce the maximum
+
+00:00:34.710 --> 00:00:39.540
+acceleration on the robot, allows us to reduce
+the size of the motors, and it perhaps reduces
+
+00:00:39.540 --> 00:00:44.190
+vibrations induced in the structure of the
+robot. What the smooth mean would mean that
+
+00:00:44.190 --> 00:00:49.730
+the position is continuous as a function of
+time and velocity is continuous as a function
+
+00:00:49.730 --> 00:00:55.120
+of time. And, we would hope that the acceleration
+is continuous and perhaps the jerk is continuous
+
+00:00:55.120 --> 00:01:00.480
+and so on up through higher-order derivatives.
+In robotics, a common technique for generating
+
+00:01:00.480 --> 00:01:07.100
+a trajectory is to use a polynomial, typically,
+a quintic polynomial which has got six coefficients
+
+00:01:07.100 --> 00:01:13.170
+which lets us independently specify six boundary
+conditions, the initial and final position,
+
+00:01:13.170 --> 00:01:19.030
+initial and final velocity, initial and final
+acceleration. And, we can write this simple
+
+00:01:19.030 --> 00:01:24.930
+matrix relationship which gives us the coefficient
+values as a function of the trajectory time,
+
+00:01:24.930 --> 00:01:31.490
+capital T, and the boundary conditions. There
+is, however, a performance problem with polynomial
+
+00:01:31.490 --> 00:01:37.520
+trajectories and that is that the peak velocity
+is almost twice the average velocity and we’re
+
+00:01:37.520 --> 00:01:41.870
+wasting motor performance and effectively
+taking twice as long to get where we want
+
+00:01:41.870 --> 00:01:45.260
+to get to.
+A more efficient trajectory is what’s called
+
+00:01:45.260 --> 00:01:51.140
+the trapezoidal profile where we have some
+acceleration phase followed by a coasting
+
+00:01:51.140 --> 00:01:57.330
+or constant velocity phase, followed by a
+deceleration phase. A slight disadvantage
+
+00:01:57.330 --> 00:02:03.260
+of the trapezoidal profile is that the second
+derivative, the acceleration is discontinuous,
+
+00:02:03.260 --> 00:02:08.670
+but it has many, many other virtues and very,
+very commonly used in robotics and machine
+
+00:02:08.670 --> 00:02:14.110
+tool control. If we want to move from one
+point to another through a few intermediate
+
+00:02:14.110 --> 00:02:20.590
+points which we call via points or way points,
+then in order to achieve continuity in the
+
+00:02:20.590 --> 00:02:25.650
+path, we need to introduce what are called
+blends and they are shown here in red. We
+
+00:02:25.650 --> 00:02:30.330
+introduce an acceleration period to transition
+from the velocity heading towards, for instance,
+
+00:02:30.330 --> 00:02:35.880
+point 2 in to the velocity we need to head
+towards point 3. The disadvantage being we
+
+00:02:35.880 --> 00:02:38.940
+never actually get to the point that we’re
+heading for.
+
+00:02:38.940 --> 00:02:43.860
+If the acceleration time is small, we get
+very close to the via points, but the acceleration
+
+00:02:43.860 --> 00:02:49.580
+on the machine is high. Acceleration time
+is large, then the acceleration of the robot
+
+00:02:49.580 --> 00:02:55.349
+is low, but we miss the via points by a larger
+amount. We introduced the notion of interpolating
+
+00:02:55.349 --> 00:03:01.239
+between an initial value and a final value
+based on a scalar S which varies between 0
+
+00:03:01.239 --> 00:03:07.260
+and 1. 0 gives us the initial value, 1 gives
+us the final value, and 0.5 is halfway in
+
+00:03:07.260 --> 00:03:13.790
+between. X can be a vector. And, if S is a
+smooth function of time, then so is X.
+
+00:03:13.790 --> 00:03:19.830
+We talked about how we cannot apply this simple
+interpolation scheme to rotation matrices.
+
+00:03:19.830 --> 00:03:24.599
+Rotation matrices are special. They are orthogonal
+matrices. So, adding two of them together
+
+00:03:24.599 --> 00:03:31.030
+does not result in another orthogonal matrix.
+So, we don’t do this to rotation matrices.
+
+00:03:31.030 --> 00:03:37.160
+Instead, what we can do is convert our rotation
+to a set of angles. It could be Euler angles,
+
+00:03:37.160 --> 00:03:43.090
+it could be roll, pitch, yaw angles, and we
+can interpolate those. We introduced the direction
+
+00:03:43.090 --> 00:03:47.709
+problem. When we’re interpolating an angle
+from an initial value to a final value, it’s
+
+00:03:47.709 --> 00:03:53.239
+important to remember that there are two ways
+we can travel around the circle. We can travel
+
+00:03:53.239 --> 00:03:58.030
+the long way which is shown here in blue,
+or the short way which is shown here in red
+
+00:03:58.030 --> 00:04:04.640
+through the value of Theta equals pi. We can
+interpolate quaternions. We need a more complex
+
+00:04:04.640 --> 00:04:09.629
+formula in which to do this. Interpolation,
+once again, is a function of S and S varies
+
+00:04:09.629 --> 00:04:14.780
+from 0 to 1. And, an important parameter in
+this interpolation is Theta which is determined
+
+00:04:14.780 --> 00:04:20.699
+from the parameters of the initial and final
+quaternion. Quaternion interpolation provides
+
+00:04:20.699 --> 00:04:25.370
+the shortest and most direct path between
+two orientations.
+
+00:04:25.370 --> 00:04:30.850
+This figure shows the position of the tip
+of a vector which is undergoing different
+
+00:04:30.850 --> 00:04:36.900
+types of rotational interpolation. The white
+path is due to quaternion interpolation and,
+
+00:04:36.900 --> 00:04:41.560
+as just mentioned, it’s the shortest and
+most direct path. We can see that the Euler
+
+00:04:41.560 --> 00:04:46.810
+angle and roll, pitch, yaw angle interpolation
+paths deviate from that. That means that they
+
+00:04:46.810 --> 00:04:54.460
+take a longer and more indirect path between
+the two orientations. Finally, we come to
+
+00:04:54.460 --> 00:05:01.340
+pose interpolation, often referred to as Cartesian
+interpolation. We have two poses, pose 0 and
+
+00:05:01.340 --> 00:05:07.160
+pose 1, which each represented by a rotation
+matrix and a translation vector. We can convert
+
+00:05:07.160 --> 00:05:13.560
+the rotation matrix to a quaternion. Interpolating
+the translation is very simple. We apply linear
+
+00:05:13.560 --> 00:05:19.060
+interpolation to the translational component,
+and then we apply quaternion interpolation
+
+00:05:19.060 --> 00:05:25.000
+to the rotation component. We can convert
+the interpolated quaternion back to a rotation
+
+00:05:25.000 --> 00:05:28.440
+matrix, combine it with the interpolated translation
+
+00:05:28.500 --> 00:05:32.420
+to rebuild a homogeneous transformation if that’s what we want.
+

@@ -1,0 +1,553 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.600 --> 00:00:08.670
+If you pick up any of the standard textbooks
+about robotics, you will find reference to
+
+00:00:08.670 --> 00:00:14.760
+Denavit and Hartenberg notation. This is named
+after Jacques Denavit and Richard Hartenberg
+
+00:00:14.760 --> 00:00:21.850
+who in 1955 wrote an article and later, a
+book which proposed a very, very general way
+
+00:00:21.850 --> 00:00:28.080
+of describing serial link mechanisms and most
+of the robots that we've looked at are serial
+
+00:00:28.080 --> 00:00:33.550
+link manipulators. So, the Denavit and Hartenberg
+notation is particularly applicable for this
+
+00:00:33.550 --> 00:00:35.250
+class of mechanism.
+
+00:00:35.250 --> 00:00:40.620
+Now in most of the standard textbooks. People
+start off with introducing this particular
+
+00:00:40.620 --> 00:00:46.440
+notation. Personally, I find the notation
+somewhat complex and not particularly intuitive.
+
+00:00:46.440 --> 00:00:51.870
+So, what I've done in this particular lecture
+is left it until the end. A key aspect of
+
+00:00:51.870 --> 00:00:58.399
+Denavit-Hartenberg notation is that each joint
+in the robot is described simply by 4 parameters.
+
+00:00:58.399 --> 00:01:02.850
+So, let's start off with a very simple serial
+link manipulative that 2 joint robot that
+
+00:01:02.850 --> 00:01:08.189
+we've seen a number of times before. Each
+joint is attached via a link to the previous
+
+00:01:08.189 --> 00:01:12.299
+joint. So here, we can see joint 1 which is
+connected to link 1 which is connected to
+
+00:01:12.299 --> 00:01:18.049
+joint 2 which is connected to link 2. Their
+links are rigid but the joints can move. They
+
+00:01:18.049 --> 00:01:23.490
+can be either rotational as an example shown
+here or they can be prismatic or sliding joints
+
+00:01:23.490 --> 00:01:25.539
+that we've talked about before.
+
+00:01:25.539 --> 00:01:30.840
+Every joint connects to links and every link
+connects to joints except for the first and
+
+00:01:30.840 --> 00:01:35.890
+last link. The first link is the base of the
+robot which does not move refer to that as
+
+00:01:35.890 --> 00:01:42.109
+link 0 and the last link is the in-defector
+or is attached to the in-defector of the robot.
+
+00:01:42.109 --> 00:01:47.530
+If a robot has got n-joints then, it must
+have n plus 1 links, that's including the
+
+00:01:47.530 --> 00:01:54.759
+0th link or the base. Fundamental to the Denavit-Hartenberg
+notation is we attach a coordinate frame to
+
+00:01:54.759 --> 00:02:01.439
+the far end of every link of the robot. So
+here, we can see link J shown in blue and
+
+00:02:01.439 --> 00:02:07.149
+we attach the coordinate frame J to the far
+end of link J that is the end of the link
+
+00:02:07.149 --> 00:02:13.400
+that's closest to the robots tool. Then, we
+describe the pose of that link frame with
+
+00:02:13.400 --> 00:02:19.170
+respect to the link frame of the previous
+joint. So, this is a relative pose and this
+
+00:02:19.170 --> 00:02:25.040
+is a concept we should be familiar with now.
+This is a relative pose from coordinate frame
+
+00:02:25.040 --> 00:02:28.140
+J-1 to coordinate frame J.
+
+00:02:28.140 --> 00:02:34.090
+In the Denavit-Hartenberg notation, the link
+transform is represented by a homogeneous
+
+00:02:34.090 --> 00:02:39.690
+transformation matrix which is typically denoted
+by the letter A and it comprises a number
+
+00:02:39.690 --> 00:02:45.140
+of elementary transformations. It comprises
+a rotation around the Z axis. A translation
+
+00:02:45.140 --> 00:02:52.850
+along the Z axis. A translation along the
+X axis and a rotation around the X axis. It's
+
+00:02:52.850 --> 00:02:57.540
+very concise. It allows us to describe the
+relationship between the 2 link coordinate
+
+00:02:57.540 --> 00:03:04.310
+frames by simply 4 parameters, theta, D, A
+and alpha. Let's see how that works in practice.
+
+00:03:04.310 --> 00:03:12.990
+So here, we have in red link J-1 and the coordinate
+frame attached to link J-1. First thing that
+
+00:03:12.990 --> 00:03:19.120
+we're going to do is to rotate that coordinate
+frame around its Z axis by an amount theta
+
+00:03:19.120 --> 00:03:24.760
+J and we rotate the axis. The next thing we're
+going to do is to translate that coordinate
+
+00:03:24.760 --> 00:03:29.950
+frame along the Z axis by an amount D and
+then, we're going to translate it along the
+
+00:03:29.950 --> 00:03:38.060
+X axis by an amount J and finally, we're going
+to rotate it around the X axis by an angle
+
+00:03:38.060 --> 00:03:40.170
+alpha and now, it looks like this.
+
+00:03:40.170 --> 00:03:48.260
+So, we have moved from the frame J-1 to the
+frame J by applying 4 elementary transformations,
+
+00:03:48.260 --> 00:03:56.280
+2 translations and 2 rotations. You're probably
+asking is how can we do this using only 4
+
+00:03:56.280 --> 00:04:02.160
+parameters because a pose has got 2 components.
+It's got a translational component which we
+
+00:04:02.160 --> 00:04:08.950
+described by 3 numbers and it has a rotation
+which we described by 3 numbers. For example,
+
+00:04:08.950 --> 00:04:14.470
+roll, pitch, yaw angles or Euler angles. How
+do we do it with just 4 numbers? Well, the
+
+00:04:14.470 --> 00:04:19.900
+reason this works is that the Denavit-Hartenberg
+notation requires some constraints on where
+
+00:04:19.900 --> 00:04:27.380
+we place the coordinate frames. The first
+constraint is that the X axis of frame J intersects
+
+00:04:27.380 --> 00:04:35.340
+the Z axis of frame J-1. The second constraint
+is that the X axis of frame J is perpendicular
+
+00:04:35.340 --> 00:04:40.940
+to the Z axis of frame J-1. Although, there
+are only 6 degrees of freedom in a relative
+
+00:04:40.940 --> 00:04:46.550
+pose. The fact that we've introduced 2 constraints
+means that we can describe this using only
+
+00:04:46.550 --> 00:04:51.860
+4 parameters. There's an interesting and often
+confusing consequence of this and that means
+
+00:04:51.860 --> 00:04:57.220
+that the link frames are not necessarily on
+the link itself and this is something that
+
+00:04:57.220 --> 00:05:02.320
+quite often confuses people when they're starting
+off and learning about Denavit-Hartenberg
+
+00:05:02.320 --> 00:05:03.640
+notation.
+
+00:05:03.640 --> 00:05:10.080
+The axis of a rotational joint has to be aligned
+with the Z axis of that joints coordinate
+
+00:05:10.080 --> 00:05:16.290
+frame. The Denavit-Hartenberg notation requires
+that the axis of joint J is parallel to the
+
+00:05:16.290 --> 00:05:21.960
+Z axis of a coordinate frame but it's not
+the coordinate frame attached to link J. The
+
+00:05:21.960 --> 00:05:28.590
+axis of joint J is aligned with the Z axis
+of the previous coordinate frame, that's coordinate
+
+00:05:28.590 --> 00:05:35.000
+frame J-1 and again, this is a confusing aspect
+for people who is starting out learning about
+
+00:05:35.000 --> 00:05:41.300
+this notation. For the case of a prismatic
+or sliding joint, the motion must be along
+
+00:05:41.300 --> 00:05:47.389
+the Z axis. So, for rotational joint, rotate
+around the Z axis of the previous frame for
+
+00:05:47.389 --> 00:05:53.160
+a prismatic joint, we translate along the
+Z axis of the previous frame.
+
+00:05:53.160 --> 00:06:00.030
+The relative pose from the frame of 1 link
+to the next is described by 4 elementary transformations.
+
+00:06:00.030 --> 00:06:05.490
+For an n-link robot, we can stack groups of
+these elementary transformations and each
+
+00:06:05.490 --> 00:06:10.900
+group contains 4 parameters which described
+the relationship between 1 link frame and
+
+00:06:10.900 --> 00:06:16.850
+the next. If the robot has got all revolute
+joints then, the joint angles correspond to
+
+00:06:16.850 --> 00:06:22.550
+the theta values shown here. So, these are
+the joint variables. They change as the robot
+
+00:06:22.550 --> 00:06:27.470
+moves. All the other parameters, the D's,
+the A's and the alpha's are all constant.
+
+00:06:27.470 --> 00:06:33.790
+They're a function of the mechanical design
+of the particular robot. Let's consider a
+
+00:06:33.790 --> 00:06:38.830
+robot that has got a prismatic joint. Its
+second joint is prismatic. Since the first
+
+00:06:38.830 --> 00:06:45.520
+joint is revolute, we substitute Q1 in here.
+For the second joint which is prismatic, we
+
+00:06:45.520 --> 00:06:52.240
+substitute Q2 in here. For a joint like this,
+theta 2 is a constant just like A2 and alpha
+
+00:06:52.240 --> 00:06:57.770
+2. They are the function of the mechanical
+design of this particular robot.
+
+00:06:57.770 --> 00:07:01.669
+The great advantage of the Denavit-Hartenberg
+notation is that it allows us to very concisely
+
+00:07:01.669 --> 00:07:07.530
+describe a robot. So, for the 2 link robot,
+it can be described simply by a table like this.
+
+00:07:07.530 --> 00:07:13.669
+We have 1 column for each of the Denavit-Hartenberg
+parameters and we have one row for each joint
+
+00:07:13.669 --> 00:07:19.860
+of the robot. The joint variables Q1 and Q2
+lie in the theta column because they are revolute
+
+00:07:19.860 --> 00:07:25.830
+joints. The D values are all 0. There are no translations along the Z axis because this robot exists
+
+00:07:25.830 --> 00:07:31.840
+in a plane and the 2 link lengths appear in the A column and the alpha values are all equal to 0.
+
+00:07:31.840 --> 00:07:37.050
+So, this very compact table completely describes what we call the kinematics of the robot.
+
+00:07:37.050 --> 00:07:43.690
+The robotics toolbox is very well set-up to deal with Denavit-Hartenberg notation.
+
+00:07:43.750 --> 00:07:49.820
+I'm going to create a Denavit-Hartenberg matrix
+and each row in this matrix represents a single
+
+00:07:49.820 --> 00:07:53.520
+link. It's just like the table we looked at
+a moment ago. Now, I'm going to enter the
+
+00:07:53.520 --> 00:08:01.250
+numbers corresponding to the columns of that
+table; theta, D, A and alpha for the first
+
+00:08:01.250 --> 00:08:10.300
+joint and theta, D, A and alpha for the second
+joint and finish that matrix offset, I have
+
+00:08:10.300 --> 00:08:17.110
+a simple 2 by 4 matrix which contains a Denavit-Hartenberg
+parameters for a 2 joint robot.
+
+00:08:17.110 --> 00:08:21.889
+While I can create a robot object, I'm going
+to put it into the workspace variable R and
+
+00:08:21.889 --> 00:08:27.199
+I use the toolbox function serial link and
+I pass in the Denavit-Hartenberg parameter
+
+00:08:27.199 --> 00:08:33.709
+matrix and the result is a serial link object
+created in my workspace and the serial link
+
+00:08:33.709 --> 00:08:41.110
+object represents a robot arm. We can see
+here that it's displayed the Denavit-Hartenberg
+
+00:08:41.110 --> 00:08:45.589
+parameters in table form. There are some additional
+parameters around the bottom which we will
+
+00:08:45.589 --> 00:08:48.209
+introduce shortly.
+
+00:08:48.209 --> 00:08:52.869
+Once I have this object then, I can perform
+some simple functions on it I can plot the
+
+00:08:52.869 --> 00:08:59.230
+robot with the configuration where the joint
+angles are perhaps 0.2 radiance and 0.3 radiance
+
+00:08:59.230 --> 00:09:04.860
+and this is what it looks like and I can also
+create a teach pendant.
+
+00:09:04.860 --> 00:09:09.850
+So, here is the teach pendant, brings up the
+sliders that we've seen before allows me to
+
+00:09:09.850 --> 00:09:12.970
+move the joints of this robot arm.
+
+00:09:12.970 --> 00:09:20.660
+The robot object also has a forward kinematic
+method. So, I can apply that to the robot
+
+00:09:20.660 --> 00:09:27.189
+object. It's the fkine method and if I pass
+in for instance, the joint angles 0.2 and
+
+00:09:27.189 --> 00:09:36.199
+0.3, it will return for me a homogeneous transformation
+representing the pose of the in-defector of that robot.
+
+00:09:36.199 --> 00:09:41.819
+We can see here the X coordinate and the Y
+coordinate and this matrix over here represents
+
+00:09:41.819 --> 00:09:48.999
+the orientation of the in-defector of this
+robot. For a more complex robot like the Puma
+
+00:09:48.999 --> 00:09:54.949
+560, it can be described by a table like this.
+Once again, the table has got 4 columns but
+
+00:09:54.949 --> 00:10:00.579
+in this case, it's got 6 rows because there
+are 6 joints, because this robot is all revolute,
+
+00:10:00.579 --> 00:10:05.819
+we find all the joint verbals in the theta
+column. In the D column and the A column,
+
+00:10:05.819 --> 00:10:10.800
+we find a number of numbers which correspond
+to physical lengths on the Puma robot.
+
+00:10:10.800 --> 00:10:15.209
+The length of the upper arm, the length of
+the lower arm, some horizontal offsets and
+
+00:10:15.209 --> 00:10:21.819
+so on and the alpha column, we find a number
+of rotations which either pi on 2 or negative
+
+00:10:21.819 --> 00:10:28.309
+pi on 2 and they say something about the orientation
+of 1 joints rotational axis and the next joints
+
+00:10:28.309 --> 00:10:31.369
+rotational axis.
+
+00:10:31.369 --> 00:10:35.660
+Where MATLAB and robotics toolbox really come
+into their own is when we're dealing with
+
+00:10:35.660 --> 00:10:41.670
+complex robots, those with 6 joints or more.
+I can import a model of the classical Puma
+
+00:10:41.670 --> 00:10:47.540
+560 robot and it's created a verbal in the
+workspace called P560 and I can have a look
+
+00:10:47.540 --> 00:10:52.929
+at that and here, we see a table which contains
+the Denavit-Hartenberg parameters that described
+
+00:10:52.929 --> 00:10:55.119
+that particular robot.
+
+00:10:55.119 --> 00:11:00.689
+Now, I can plot that robot for a particular
+joint angle configuration. Now, I'm going
+
+00:11:00.689 --> 00:11:06.499
+to use the variable QZ which was defined by
+the function in the Puma 560. We can see that
+
+00:11:06.499 --> 00:11:11.959
+over here in the workspace. It's a vector
+with 6 elements all equal to 0 and here, we
+
+00:11:11.959 --> 00:11:18.819
+see the robot in the configuration where all
+its joint angles are equal to 0. Another configuration
+
+00:11:18.819 --> 00:11:23.290
+that was defined is this one QR which was
+referred to the robot's ready pose and this
+
+00:11:23.290 --> 00:11:27.110
+is with the arm pointing straight up into
+the air.
+
+00:11:27.110 --> 00:11:31.420
+I can also bring up a teach pendant on this
+particular robot. Here, we see it. Now, I
+
+00:11:31.420 --> 00:11:37.240
+have got 6 sliders, 1 for each of its joints.
+I can rotate it above the waist. I can move
+
+00:11:37.240 --> 00:11:44.610
+the shoulder down. I can lift the elbow up.
+I'll move the elbow down, move it down a bit
+
+00:11:44.610 --> 00:11:50.369
+more and I can rotate it around the waist
+so we can see what's going on.
+
+00:11:50.369 --> 00:11:54.920
+We can see the in-defector coordinate frame
+there and if I adjust the wrist joint angles,
+
+00:11:54.920 --> 00:12:01.399
+we can see the orientation of the in-defector
+changing. The object has got a forward kinematic
+
+00:12:01.399 --> 00:12:06.749
+method. So, if I asked for the forward kinematics
+for a set of joint angles, perhaps the joint
+
+00:12:06.749 --> 00:12:13.879
+angles equal 0.1, 0.2, 0.3. I'm just making
+up some numbers here. This is the homogeneous
+
+00:12:13.879 --> 00:12:21.499
+transformation which represents the pose of
+the in-defector of this 6 axis Puma 560 robot.
+
+00:12:21.499 --> 00:12:27.660
+So, to use a very general mathematical notation,
+we can say that the pose of an n-joint robot
+
+00:12:27.660 --> 00:12:34.300
+which I'm going to write as PSI N is a function
+and the function is K and K stands for kinematics,
+
+00:12:34.300 --> 00:12:39.369
+a term that we will define concisely shortly
+and it's a function of the joint configuration,
+
+00:12:39.369 --> 00:12:42.730
+that's the vector of the N joint variables.
+
+00:12:42.730 --> 00:12:47.839
+They might be angles or they might be links
+in the case of a sliding joint. A vector of
+
+00:12:47.839 --> 00:12:53.670
+joint angles, a vector of link offsets, a
+vector of link lengths and a vector of what
+
+00:12:53.670 --> 00:12:58.429
+are called link twists and a vector of joint
+types.
+
+00:12:58.429 --> 00:13:03.540
+Sigma is a vector that contains elements which
+are either R or P and they indicate whether
+
+00:13:03.540 --> 00:13:09.480
+the joint is revolute or prismatic. In the
+case of a revolute joint, we substitute the
+
+00:13:09.480 --> 00:13:16.179
+corresponding element of theta from the corresponding
+element of Q and for prismatic joint, we substitute
+
+00:13:16.179 --> 00:13:23.519
+the corresponding element of D from the corresponding
+element of Q. All the other elements of D,
+
+00:13:23.519 --> 00:13:26.100
+theta, A and alpha are constant.
+

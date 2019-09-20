@@ -1,0 +1,181 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.970 --> 00:00:08.010
+The final component of the inertia measurement
+unit are the sensors that measure angular
+
+00:00:08.010 --> 00:00:13.550
+velocity, and these are commonly referred
+to as gyroscopes. You might have had a gyroscope
+
+00:00:13.550 --> 00:00:17.260
+as a toy when you were a child, and it is
+difficult to understand the relationship between
+
+00:00:17.260 --> 00:00:22.089
+this toy gyroscope, which can balance on the
+end of a pencil with a device that can measure
+
+00:00:22.089 --> 00:00:27.099
+angular velocity. To understand how we can
+use a gyroscope as an angular velocity sensor,
+
+00:00:27.099 --> 00:00:31.880
+we need to get right back to fundamentals
+of spinning bodies. Here, we have a disc which
+
+00:00:31.880 --> 00:00:37.110
+is spinning about the axis shown by the dotted
+line, and it is spinning with an angular velocity,
+
+00:00:37.110 --> 00:00:43.250
+omega g and the disc has got a rotational
+inertia, j. We refer to the angular momentum
+
+00:00:43.250 --> 00:00:48.570
+of this disc and give that the symbol h.
+h is j times omega g. Now, let's
+
+00:00:48.570 --> 00:00:54.730
+imagine that I apply a torque to this rotating
+disc. If I do that, the disc wants to rotate
+
+00:00:54.730 --> 00:01:00.380
+about the axis shown by the blue arrow. It's
+the cross product of the vector h and
+
+00:01:00.380 --> 00:01:01.970
+the vector Tau.
+
+00:01:01.970 --> 00:01:06.572
+What we have here is a gyroscope and at the
+moment, the device is not spinning we can
+
+00:01:06.572 --> 00:01:13.060
+see that it moves very freely and nicely inside
+its gimbal mechanism. If I turn the motor
+
+00:01:13.060 --> 00:01:18.970
+on, it takes a little moment to come up to
+speed, it now behaves very very differently.
+
+00:01:18.970 --> 00:01:24.700
+Now, I'm going to rotate the spinning disc
+assembly about the blue arrow and now; the
+
+00:01:24.700 --> 00:01:29.060
+spinning disc is going to exert a torque about
+the red arrow, and that torque is the cross
+
+00:01:29.060 --> 00:01:34.850
+product of the vectors omega and h.
+So, how do I measure the torque? If the disc
+
+00:01:34.850 --> 00:01:40.549
+axis is supported by two bearings then, this
+torque will exert a force up on one bearing
+
+00:01:40.549 --> 00:01:45.700
+and down on the other bearing, and those forces
+can be measured. The spinning disc then has
+
+00:01:45.700 --> 00:01:50.979
+converted the angular velocity omega into
+a torque which is then, measured using force
+
+00:01:50.979 --> 00:01:51.979
+sensors.
+
+00:01:51.979 --> 00:01:57.570
+Importantly, if I pull on this axis of the
+gyroscope with a rubber band, I am basically
+
+00:01:57.570 --> 00:02:01.710
+going to exert a force on it. And so, I pull
+in this direction. You will see that the gyroscope
+
+00:02:01.710 --> 00:02:06.310
+is trying to rotate about an axis like this.
+
+00:02:06.310 --> 00:02:10.220
+Angular velocity sensors based on spinning
+discs are not very common anymore. They tend
+
+00:02:10.220 --> 00:02:14.870
+to be rather bulky and require a lot of power
+to keep that disc spinning. Sensors today
+
+00:02:14.870 --> 00:02:20.400
+are based on vibrating rather than rotating
+element, but we still tend to call them gyroscopes
+
+00:02:20.400 --> 00:02:25.490
+or gyroscopic sensors. The vibrating elements
+are fabricated using ‘MEMS’ technology.
+
+00:02:25.490 --> 00:02:31.190
+So, the sensing elements themselves are microscopic
+in size but the underlying principle is the
+
+00:02:31.190 --> 00:02:36.900
+same. Angular velocity in the sensor causes
+forces or torques to be exerted on the micro
+
+00:02:36.900 --> 00:02:42.950
+scale elements and that leads to displacements,
+which can be measured and amplified to produce
+
+00:02:42.950 --> 00:02:48.620
+an angular velocity signal. As with accelerometers
+and magnetometers it is very common to package
+
+00:02:48.620 --> 00:02:53.430
+three gyroscope sensors into a single chip,
+and they are arranged orthogonally again so
+
+00:02:53.430 --> 00:03:00.630
+they measure the three components of the angular
+velocity vector. Just as you have accelerometers
+
+00:03:00.630 --> 00:03:04.989
+in your head, you also have gyroscopes in
+your head and once again, these are in the
+
+00:03:04.989 --> 00:03:11.050
+inner ear assembly. In particular, the three
+very distinctive elements known as the semi-circular
+
+00:03:11.050 --> 00:03:17.489
+canals. These are very thin tubes filled with
+fluid and rotational motion of your head causes
+
+00:03:17.489 --> 00:03:23.010
+the liquid in those tubes to move. The motion
+of a fluid is detected by tiny hair cells
+
+00:03:23.010 --> 00:03:28.569
+within the canals, and this leads to an angular
+velocity signal to your brain. The angular
+
+00:03:28.569 --> 00:03:33.769
+velocity signal is combined with motion information
+that comes from your eyes. If these two signals
+
+00:03:33.769 --> 00:03:38.240
+are not consistent, it leads to a problem
+which we experience as motion sickness, that's
+
+00:03:38.240 --> 00:03:42.319
+when our inner ear is telling us that our
+body is moving in one way, but our eyes tell
+
+00:03:42.319 --> 00:03:47.720
+us that our body is moving in a different
+way. So, this is motion sickness or sea sickness,
+
+00:03:47.720 --> 00:03:51.290
+and our body responds rather illogically by
+wanting us to throw up.
+

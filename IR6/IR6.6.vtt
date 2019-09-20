@@ -1,0 +1,27 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.990 --> 00:00:08.960
+Most real world robots like industrial robots
+shown here have got 6 joints.
+
+00:00:08.960 --> 00:00:12.639
+And typically for industrial robots, those
+links are all revolute.
+
+00:00:12.639 --> 00:00:14.379
+That means they are rotating joints.
+
+00:00:14.379 --> 00:00:19.310
+Not sliding joints such as we saw earlier
+with the stand foot arm.
+
+00:00:19.310 --> 00:00:24.920
+These robots are also all serial link manipulators
+and that means that we get from the base to
+
+00:00:24.920 --> 00:00:29.720
+the end effector by a series of robot links
+and robot joints.
+

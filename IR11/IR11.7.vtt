@@ -1,0 +1,367 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:04.170 --> 00:00:09.090
+In the last lecture, we considered independent
+joint control, which is an idealisation of
+
+00:00:09.090 --> 00:00:13.781
+the real world. With independent joint control,
+the motor torque has got two components. It
+
+00:00:13.781 --> 00:00:18.750
+has a component due to the motor's inertia,
+and it has a component due to the motor's
+
+00:00:18.750 --> 00:00:24.380
+viscous friction. So, one is a function of
+the motor inertia and the motor's acceleration,
+
+00:00:24.380 --> 00:00:28.270
+the motor's viscous friction and the motor's
+angular velocity.
+
+00:00:28.270 --> 00:00:33.410
+Now, we're going to consider the more realistic
+case of non-independent joint control and
+
+00:00:33.410 --> 00:00:38.070
+we've added the so-called rigid body dynamic
+terms here. What this means is the torque
+
+00:00:38.070 --> 00:00:43.030
+seen by the motor on joint J is going
+to be influenced by the acceleration of all
+
+00:00:43.030 --> 00:00:48.280
+of the joints, the velocity of all of the
+joints, and gravity. Now, I've introduced
+
+00:00:48.280 --> 00:00:53.540
+a bit of additional notation here. It's the
+subscript j and what that means is the jth
+
+00:00:53.540 --> 00:00:59.720
+row of the corresponding matrix. So, this
+is the jth row of the matrix M, jth row of
+
+00:00:59.720 --> 00:01:06.200
+the matrix C or the jth element of the vector
+G. For example, if I multiply the jth row
+
+00:01:06.200 --> 00:01:12.000
+of the matrix M by the column vector, which
+is the acceleration of all of the joints,
+
+00:01:12.000 --> 00:01:17.210
+the result will be a scalar. This is a scalar
+expression because it's about the torque acting
+
+00:01:17.210 --> 00:01:21.229
+on joint J.
+You'll see that there are two terms here that
+
+00:01:21.229 --> 00:01:27.159
+involve joint acceleration. So, what I'm going
+to do is consider the vector Mj in two components.
+
+00:01:27.159 --> 00:01:32.170
+There is the component associated with joint
+J and there's the component associated with
+
+00:01:32.170 --> 00:01:38.149
+all of the other joints, which I've denoted
+by M bar. I can do a little bit of rearrangement
+
+00:01:38.149 --> 00:01:43.729
+now. What we have now is an expression for
+the torque acting on joint J in terms of the
+
+00:01:43.729 --> 00:01:48.579
+motor's own inertia and the component of the
+inertia matrix associated with this joint,
+
+00:01:48.579 --> 00:01:52.539
+the viscous friction, and then, we have all
+of the other terms at the end which are the
+
+00:01:52.539 --> 00:01:56.310
+disturbance torque.
+This term here is the inertia of a motor
+
+00:01:56.310 --> 00:02:01.659
+which is driving joint J. This is a variable
+inertia term that we pull out off the manipulator
+
+00:02:01.659 --> 00:02:06.600
+inertia matrix. We have the motor joint friction,
+which is a function just of the motor driving
+
+00:02:06.600 --> 00:02:11.780
+the joint, and then we have this rather complex
+disturbance term on the end, which is the
+
+00:02:11.780 --> 00:02:17.060
+acceleration of all the other joints, the
+Coriolis and centripetal terms and the gravity
+
+00:02:17.060 --> 00:02:23.349
+term. I can simplify it even further and we
+now have a new inertia, I call that J prime,
+
+00:02:23.349 --> 00:02:28.290
+which is a function of the configuration of
+the robot. It's a function of Q. We have our
+
+00:02:28.290 --> 00:02:34.260
+viscous friction and we have tau D which is
+the disturbance torque lumped into a single
+
+00:02:34.260 --> 00:02:37.390
+variable.
+So, what are the issues that arise from this?
+
+00:02:37.390 --> 00:02:43.140
+Well firstly, we have an issue because the
+inertia experienced by the joint varies with
+
+00:02:43.140 --> 00:02:47.690
+the configuration of the robot. In the last
+lecture, we tuned our controller so that it
+
+00:02:47.690 --> 00:02:52.750
+had a nice response in terms of settling time
+and overshoot, but the tuning was a function
+
+00:02:52.750 --> 00:02:58.610
+of the particular values of inertia and viscous
+friction. Now, what we're saying is that the
+
+00:02:58.610 --> 00:03:03.330
+inertia that the joint controller sees is
+a function of the configuration. It depends
+
+00:03:03.330 --> 00:03:08.030
+on all of the joint angles. So, that means
+that the response of the control system will
+
+00:03:08.030 --> 00:03:10.620
+depend on the robot's pose.
+
+00:03:10.620 --> 00:03:16.110
+The other big issue is the disturbance torque,
+that's a torque that’s exerted on joint J due
+
+00:03:16.110 --> 00:03:23.709
+to motion of all the other joints, acceleration
+and velocity and also, due to gravity. This
+
+00:03:23.709 --> 00:03:28.760
+may lead to undesirable motion of the joint.
+It may lead to path following errors, for
+
+00:03:28.760 --> 00:03:33.340
+example. So, what can we do about these issues?
+Well, a really simple technique is really
+
+00:03:33.340 --> 00:03:39.670
+widely used in robots is to introduce a gearbox.
+Most robots have a reduction gearbox. So,
+
+00:03:39.670 --> 00:03:45.950
+the output shaft rotates a factor of G times
+slower than the input shaft. G is the gear
+
+00:03:45.950 --> 00:03:50.909
+ratio. The reason that this typically happens
+is that electric motors are capable of running
+
+00:03:50.909 --> 00:03:55.900
+very, very quickly, capable of very, very
+high rotational velocity, but generally quite
+
+00:03:55.900 --> 00:04:00.079
+low in torque. What a gearbox does is it allows
+us to trade off some of this high angular
+
+00:04:00.079 --> 00:04:05.200
+velocity for motor torque. Torque is actually
+more useful than speed. We can see here the
+
+00:04:05.200 --> 00:04:09.069
+relationship between torque and velocity on
+the output side of the gear box indicated
+
+00:04:09.069 --> 00:04:15.299
+by the subscript l. L meaning the load side
+and torque and velocity on the input side
+
+00:04:15.299 --> 00:04:19.060
+denoted by the subscript m.
+If we now address the expression that we had
+
+00:04:19.060 --> 00:04:23.600
+from the previous slide and introduce the
+gearbox, we see the expression now looks something
+
+00:04:23.600 --> 00:04:28.890
+like this. We can see that the effect of this
+variable inertia, the inertia that's a function
+
+00:04:28.890 --> 00:04:34.220
+of Q, is now being reduced by a factor of
+G squared. If I considered the case where I've got
+
+00:04:34.220 --> 00:04:40.850
+a reduction gearbox, where G is equal to 50,
+this is a reduction by 2500. It's a very,
+
+00:04:40.850 --> 00:04:46.100
+very significant reduction in this configuration
+dependent inertia. It means that the motor’s
+
+00:04:46.100 --> 00:04:52.090
+own inertia, this term here, will dominate.
+The inertia will look more constant. We can
+
+00:04:52.090 --> 00:04:57.900
+also see that our disturbance term has been
+reduced by a factor of G. Again, if I have
+
+00:04:57.900 --> 00:05:03.790
+a reduction ratio of 50, this term here is
+50 times less significant than it would be
+
+00:05:03.790 --> 00:05:09.140
+without a gearbox. So, a gearbox is useful
+for many reasons and it's a really effective
+
+00:05:09.140 --> 00:05:15.220
+way of reducing the effect of disturbance
+torques and configuration dependent inertia.
+
+00:05:15.220 --> 00:05:20.590
+A more sophisticated technique to deal with
+this is to compute this disturbance torque.
+
+00:05:20.590 --> 00:05:25.610
+If we have a dynamic model of our robot and
+we know the position, velocity and acceleration
+
+00:05:25.610 --> 00:05:30.260
+of all of the links, then we can compute this
+disturbance term. So, the control that is
+
+00:05:30.260 --> 00:05:36.130
+shown here is effectively a P, D controller.
+This is the P term. This is the D term, and
+
+00:05:36.130 --> 00:05:41.840
+this is the feedforward term, with the feedforward,
+the disturbance that we can compute. Of course,
+
+00:05:41.840 --> 00:05:46.590
+this means that we need to know accurately
+the dynamic parameters of our robot arm.
+
+00:05:46.590 --> 00:05:51.060
+The third approach that we can use is called
+computed-torque control. It has some similarities
+
+00:05:51.060 --> 00:05:55.810
+but also, some important differences to the
+feedforward control expression. Here, we can
+
+00:05:55.810 --> 00:05:59.370
+see a term which is effectively a proportional
+controller. Here, we can see a term which
+
+00:05:59.370 --> 00:06:04.440
+is effectively a derivative controller. They're
+multiplied by the inertia matrix and here,
+
+00:06:04.440 --> 00:06:08.480
+we have the centripetal and Coriolis term
+and the gravity term.
+
+00:06:08.480 --> 00:06:13.050
+What are the pros and cons of these different
+techniques? A gearbox is cheap and straightforward.
+
+00:06:13.050 --> 00:06:19.720
+Often times, we use a gearbox in a robot anyway
+so that we can use a cheaper low torque motor.
+
+00:06:19.720 --> 00:06:25.640
+Gearboxes do add cost and they add weight.
+They do some inefficiency and they make noise.
+
+00:06:25.640 --> 00:06:30.750
+Computed-torque control has to be computed
+every single sample. So, if our robot controller
+
+00:06:30.750 --> 00:06:34.360
+is running, at say, a thousand Hertz, then
+the expression that we had on the previous
+
+00:06:34.360 --> 00:06:39.830
+slide needs to be computed at one thousand
+Hertz. That involves the computation of those
+
+00:06:39.830 --> 00:06:45.870
+matrices, the M, the C and the G matrix and
+some matrix multiplication. So a lot of computation
+
+00:06:45.870 --> 00:06:50.930
+needs to be done. Once upon a time, this was
+really, really hard to do. In the early days
+
+00:06:50.930 --> 00:06:56.090
+of robotics, when computers were really slow,
+it was a very hard thing. So, all sorts of
+
+00:06:56.090 --> 00:07:01.300
+approximations were introduced, but today
+it's very, very easy to do that at a frequency
+
+00:07:01.300 --> 00:07:05.320
+like one thousand Hertz.
+The feedforward control can actually be computed
+
+00:07:05.320 --> 00:07:10.890
+at a slow rate, and that reflects the reality
+that the dynamic torques don't actually change
+
+00:07:10.890 --> 00:07:16.190
+all that much from one sample time to the
+next. So, the feedforward control signal can
+
+00:07:16.190 --> 00:07:21.360
+be computed at perhaps fifty Hertz or a hundred
+Hertz, while the main control is implemented
+
+00:07:21.360 --> 00:07:26.470
+at something like one thousand Hertz. They
+don't have to be computed at the same rate.
+
+00:07:26.470 --> 00:07:30.290
+For the computed-torque control and for the
+feedforward control, there is a significant
+
+00:07:30.290 --> 00:07:35.660
+challenge in knowing the actual values of
+the dynamic parameters of each of the links.
+
+00:07:35.660 --> 00:07:41.350
+For each link, there are ten dynamic parameters
+as we discussed earlier. So, for a six link
+
+00:07:41.350 --> 00:07:48.140
+industrial robot, that's sixty dynamic parameters
+need to be identified. You can do it experimentally
+
+00:07:48.140 --> 00:07:50.111
+or you can perhaps do it from a CAD model
+of the robot.
+

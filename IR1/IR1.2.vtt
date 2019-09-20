@@ -1,0 +1,275 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.360 --> 00:00:08.740
+There’s been a long-term human interest
+or fascination in building machines that look
+
+00:00:08.740 --> 00:00:14.619
+and act like we do. Back in the 18th and 19th
+centuries, people were building machines that
+
+00:00:14.619 --> 00:00:19.140
+they called Automata, and some examples of
+them are shown here. Essentially, they’re
+
+00:00:19.140 --> 00:00:24.350
+very ingenious, clock-work machines filled
+with gears and cams and so on.
+
+00:00:24.350 --> 00:00:29.500
+The example the writer draftsman shown here
+on the right hand side, was able to perform
+
+00:00:29.500 --> 00:00:35.590
+very, very elaborate drawings. An example
+here, a drawing of a sheep is shown. An earlier
+
+00:00:35.590 --> 00:00:41.570
+and very famous example of machines of this
+class is the digesting duck and once again
+
+00:00:41.570 --> 00:00:46.010
+it is a clock-work machine. What you’d do
+with this duck is you would feed it with small
+
+00:00:46.010 --> 00:00:50.660
+pellets which it would appear to eat and they
+would pass through the digestive tracts of
+
+00:00:50.660 --> 00:00:53.100
+the duck and be eventually excreted.
+
+00:00:53.100 --> 00:00:58.440
+They’re able to build a machine that appeared
+to be life-like, it would eat and it would
+
+00:00:58.440 --> 00:01:05.110
+excrete. Two of the important functions of
+something that is alive. At that time, this
+
+00:01:05.110 --> 00:01:09.950
+was considered quite wonderful, an example
+of technological progress, how they were able
+
+00:01:09.950 --> 00:01:15.080
+to build machines that were very, very life-like.
+Of course by today’s standards, it looks
+
+00:01:15.080 --> 00:01:19.240
+very, very primitive but at that time, it
+was an amazing achievement.
+
+00:01:19.240 --> 00:01:25.190
+Now, the gentleman who designed this, Vaucanson,
+went on to do some more useful things. He
+
+00:01:25.190 --> 00:01:31.470
+got involved in automating the process of
+silk weaving. The technology of weaving was
+
+00:01:31.470 --> 00:01:37.400
+advanced further by Jacquard and he introduced
+the innovation of controlling the weave pattern
+
+00:01:37.400 --> 00:01:44.920
+by means of a series of punched wooden cards.
+So, this was a form of automated machine and
+
+00:01:44.920 --> 00:01:49.479
+it was programmable. The pattern that came
+out depended on the patterns of holes punched
+
+00:01:49.479 --> 00:01:51.930
+in those wooden cards.
+
+00:01:51.930 --> 00:01:57.830
+The notion of punch card control was picked
+up by Charles Babbage, when he was conceiving
+
+00:01:57.830 --> 00:02:04.229
+a mechanical computing engine in the late
+1800s. At that time he didn't have the technology
+
+00:02:04.229 --> 00:02:10.039
+to actually build this machine but he introduced
+the really important notion of a general-purpose
+
+00:02:10.039 --> 00:02:15.650
+computing engine and the computation that
+it performed is dictated by a program. In
+
+00:02:15.650 --> 00:02:19.500
+his case, input on punched cards.
+
+00:02:19.500 --> 00:02:25.090
+The ideas embodied in this machine influenced
+later electronic computing devices. For an
+
+00:02:25.090 --> 00:02:29.790
+instance, the ENIAC Computer that was built
+during World War II and from that machine,
+
+00:02:29.790 --> 00:02:35.560
+we can trace a lineage to the computers we
+use every day, in our laptops and in our mobile
+
+00:02:35.560 --> 00:02:42.390
+phones, and computers of course, are a critical
+component of robot systems that we build today.
+
+00:02:42.390 --> 00:02:48.069
+We can perhaps think of a robot as a computer
+that can do things to the physical world.
+
+00:02:48.069 --> 00:02:53.230
+The other really important innovation that
+led to robotics as we know them today is this
+
+00:02:53.230 --> 00:02:58.379
+work that was done after World War II at the
+Argonne National Laboratory in the United
+
+00:02:58.379 --> 00:03:04.840
+States. In there, they were faced by a problem
+of assembling nuclear weapons. This required
+
+00:03:04.840 --> 00:03:11.510
+them to handle, to manipulate pieces of material
+that were radioactive. This was a task that
+
+00:03:11.510 --> 00:03:16.019
+couldn't be undertaken by human beings because
+it would injure or kill the people who did
+
+00:03:16.019 --> 00:03:22.140
+that work. We needed to have machines to handle
+that material instead but the problem was
+
+00:03:22.140 --> 00:03:27.730
+that we need a lot of skill and intelligence
+in order to manipulate this radioactive material,
+
+00:03:27.730 --> 00:03:31.209
+so, they came up with a concept called teleoperation.
+
+00:03:31.209 --> 00:03:35.629
+The people in white coats are sitting with
+what are called the master manipulator arms
+
+00:03:35.629 --> 00:03:41.159
+so they would grab those arms with their hands
+and they would move them. The arms over here
+
+00:03:41.159 --> 00:03:47.190
+are referred to as the slave arms. They move
+in such a way as to mimic the motion of the
+
+00:03:47.190 --> 00:03:52.129
+master arm. So, the people who were doing
+the assembly work and controlling the master
+
+00:03:52.129 --> 00:03:58.440
+arms, the slave arms are in a remote room
+performing work on the radioactive material.
+
+00:03:58.440 --> 00:04:03.250
+Video of what’s going on in the radioactive
+room is transmitted back to the people doing
+
+00:04:03.250 --> 00:04:08.510
+the work with the master arm so they can see
+what’s happening on a TV monitor. They move
+
+00:04:08.510 --> 00:04:14.970
+the master arms, the slave arms move in synchronism
+and perform the task remotely. This is a technique
+
+00:04:14.970 --> 00:04:19.919
+called teleoperation. It’s not really robotic.
+In some ways, you can think of it as a very-sophisticated,
+
+00:04:19.919 --> 00:04:25.869
+remote-controlled technology. It was really
+important to achieve this specific task at
+
+00:04:25.869 --> 00:04:27.860
+the Argonne National Laboratory.
+
+00:04:27.860 --> 00:04:33.259
+This technology is an important precursor
+to modern manufacturing robots. What we do
+
+00:04:33.259 --> 00:04:38.059
+is we cut the wire between the master arm
+and the slave arm and instead of the master
+
+00:04:38.059 --> 00:04:43.400
+arm sending the commands to the slave arm,
+we put a computer there instead. So, the computer
+
+00:04:43.400 --> 00:04:48.199
+is sending commands to the slave arm which
+is going to move in accordance to the signals
+
+00:04:48.199 --> 00:04:53.909
+coming out of the computer. Of course, the
+computer is an infinitely reprogrammable device
+
+00:04:53.909 --> 00:04:58.740
+so therefore we can make the slave arm do
+anything that we like at all and now, there
+
+00:04:58.740 --> 00:05:03.059
+are no longer any human beings involved. We've
+created a robot.
+
+00:05:03.059 --> 00:05:07.589
+And perhaps the person that this idea first
+occurred to is George Devol, the gentleman shown
+
+00:05:07.589 --> 00:05:14.050
+here, a prolific American inventor who died
+only recently. He had the idea of creating
+
+00:05:14.050 --> 00:05:19.039
+what he called universal automation which
+was contracted to Unimation. That was the
+
+00:05:19.039 --> 00:05:24.930
+name of the company that he founded in 1956
+with Joseph Engelberger. They founded the
+
+00:05:24.930 --> 00:05:30.199
+company to produce industrial robots that
+would eventually go to work in General Motors
+
+00:05:30.199 --> 00:05:35.719
+plants. The first of their robots which was
+installed in 1961 is shown here. What this
+
+00:05:35.719 --> 00:05:40.369
+robot did was to unload castings from a die-casting
+machine.
+
+00:05:40.369 --> 00:05:46.300
+This was the start of the revolution of robots
+working in the manufacturing industry. Unimation,
+
+00:05:46.300 --> 00:05:51.369
+Inc. was the first company to build manufacturing
+robots. They were the pioneers. They’re
+
+00:05:51.369 --> 00:05:56.080
+no longer in business and today, there are
+many, many companies that build manufacturing
+
+00:05:56.080 --> 00:06:01.389
+robots, but most of them can trace their ancestry,
+their ideas or perhaps even the people back
+
+00:06:01.389 --> 00:06:06.749
+to this little company founded in 1956 in
+Connecticut in the United States.
+

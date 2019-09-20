@@ -1,0 +1,187 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.530 --> 00:00:07.770
+Modern electric motors are wonderful devices,
+but there are limits to their performance.
+
+00:00:07.770 --> 00:00:12.759
+There is a maximum acceleration, a maximum
+velocity and a maximum power.
+
+00:00:12.759 --> 00:00:18.380
+So, let’s look first at what limits the
+acceleration of a motor. We have rearranged
+
+00:00:18.380 --> 00:00:23.410
+an earlier equation in to this form here,
+the ratio of the motor torque to the motor
+
+00:00:23.410 --> 00:00:28.290
+inertia. Clearly because inertia is in the
+denominator, if we increase inertia, we are
+
+00:00:28.290 --> 00:00:34.050
+going to reduce the acceleration. The inertia
+that the motor experiences has got two components.
+
+00:00:34.050 --> 00:00:38.160
+One of those components is the inertia of
+the motor’s armature. That’s the rotating
+
+00:00:38.160 --> 00:00:43.890
+part of electric motor that I denote by J
+sub m. The other inertia that the motor experiences
+
+00:00:43.890 --> 00:00:48.360
+is due to the link itself.
+In this case, I have drawn a very simple rectangular
+
+00:00:48.360 --> 00:00:54.230
+prism for the link and the inertia of that
+is M times R squared. The R squared is problematic
+
+00:00:54.230 --> 00:00:58.320
+because it means that the inertia grows very
+quickly with the size of the link.
+
+00:00:58.320 --> 00:01:03.440
+So, we can write the total inertia that the
+motor experiences in terms of these two components,
+
+00:01:03.440 --> 00:01:08.000
+the motor armature inertia which is a constant
+and the inertia of the link. And, in this
+
+00:01:08.000 --> 00:01:12.180
+simple case, the inertia of the link is a
+constant. But, for a real robot, the inertia
+
+00:01:12.180 --> 00:01:17.110
+is going to depend on the configuration of
+all the links that are attached to the end
+
+00:01:17.110 --> 00:01:22.470
+of this particular link and also to the payload
+which is held by the last link in the chain.
+
+00:01:22.470 --> 00:01:27.360
+So, the link inertia is going to be highly
+variable. However, in a real robot, there's
+
+00:01:27.360 --> 00:01:31.950
+typically a gearbox between the motor and
+the link and this is another advantage of
+
+00:01:31.950 --> 00:01:36.759
+the gearbox because it allows me to write
+the expression for inertia like this.
+
+00:01:36.759 --> 00:01:41.829
+The inertia of the link is reduced by a factor
+of G squared. And, for a robot like the Puma,
+
+00:01:41.829 --> 00:01:47.859
+G is a number anywhere between say 10 and
+a 100. So, the link inertia is going to be
+
+00:01:47.859 --> 00:01:52.880
+greatly reduced. It means that the inertia
+that the motor control system is going to
+
+00:01:52.880 --> 00:01:58.109
+“see” is dominated by the constant motor armature
+inertia.
+
+00:01:58.109 --> 00:02:04.181
+Variation in inertia due to link configuration
+change is going to be very, very small. If
+
+00:02:04.181 --> 00:02:09.229
+we consider now the numerator of the expression
+at the top, we know that the maximum torque
+
+00:02:09.229 --> 00:02:14.120
+depends on the maximum current. The maximum
+possible current is a function of the power
+
+00:02:14.120 --> 00:02:18.720
+amplifier which supplies current to the motor.
+If we apply too much current to the motor,
+
+00:02:18.720 --> 00:02:21.709
+the armature and the brushes will overheat
+and be damaged.
+
+00:02:21.709 --> 00:02:27.390
+Also, remember that some of the torque generated
+by the motor is used to oppose friction and
+
+00:02:27.390 --> 00:02:32.920
+also to oppose gravity in the motor. So, less
+of it is actually available for acceleration.
+
+00:02:32.920 --> 00:02:39.290
+What we have defined here is an upper bound
+on the maximum acceleration of the robot joint.
+
+00:02:39.290 --> 00:02:43.849
+Turning now to the maximum velocity
+the electrical model for the motor contains
+
+00:02:43.849 --> 00:02:48.849
+a generator, the circle is the back EMF source, and
+as the motor rotates faster and faster, the
+
+00:02:48.849 --> 00:02:54.269
+back EMF rises. And, when the back EMF equals
+the applied voltage, then no further current
+
+00:02:54.269 --> 00:03:00.430
+can flow in to motor. It will stop accelerating
+and that will define the maximum speed of
+
+00:03:00.430 --> 00:03:05.549
+the motor given by an equation like this.
+The electrical power in to the motor is given
+
+00:03:05.549 --> 00:03:09.659
+by the product of the applied voltage and
+current. The mechanical power out of the motor
+
+00:03:09.659 --> 00:03:15.049
+is the product of speed and the torque. We
+can plot motor torque against motor speed
+
+00:03:15.049 --> 00:03:18.390
+and there are other two critical points on
+this curve.
+
+00:03:18.390 --> 00:03:22.519
+One point is when the motor has got no load
+at all and it’s spinning as fast as it possibly
+
+00:03:22.519 --> 00:03:27.220
+can. We refer to this as the no load speed.
+At the other end of the line, the motor is
+
+00:03:27.220 --> 00:03:31.840
+stalled. It’s not actually rotating but
+it is exerting a torque and we refer to this
+
+00:03:31.840 --> 00:03:36.049
+as the stall torque.
+Power is a quadratic function of speed has
+
+00:03:36.049 --> 00:03:40.920
+a maximum somewhere in the middle of the operating
+speed range of the motor and the motor cannot
+
+00:03:40.920 --> 00:03:45.409
+be operated for a sustained period of time
+above its maximum power rating or else it
+
+00:03:45.409 --> 00:03:47.119
+will be damaged through overheating.
+

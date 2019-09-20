@@ -1,0 +1,377 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.820 --> 00:00:07.790
+We’ve talked about how we can describe the
+position and orientation, the pose of one
+
+00:00:07.790 --> 00:00:12.499
+coordinate frame with respect to another.
+Here, we have two coordinate frames labeled
+
+00:00:12.499 --> 00:00:19.590
+A and B, and we use this symbol here to denote
+the pose of B with respect to A. I've introduced
+
+00:00:19.590 --> 00:00:24.859
+a point P and I can describe it by two vectors.
+I can describe it with respect to coordinate
+
+00:00:24.859 --> 00:00:30.640
+frame A; that's the blue arrow, or with respect
+to coordinate frame B; that the red arrow.
+
+00:00:30.640 --> 00:00:37.660
+I can relate the vector with respect to frame
+A to the vector with respect to frame B using
+
+00:00:37.660 --> 00:00:40.620
+the pose and this operator, the dot.
+
+00:00:40.620 --> 00:00:45.809
+Now, let's consider that I introduce another
+coordinate frame, coordinate frame C and I
+
+00:00:45.809 --> 00:00:51.829
+have a relative pose that describes C with
+respect to B. And I can describe the point
+
+00:00:51.829 --> 00:00:59.449
+P in terms of a vector with respect to coordinate
+frame C. So, these relative poses can be compounded
+
+00:00:59.449 --> 00:01:07.290
+or composed, so I can get to the pose C by
+first of all getting to the pose B and then
+
+00:01:07.290 --> 00:01:12.890
+getting to the pose C. So, there's some way
+that I can add these two poses together, but
+
+00:01:12.890 --> 00:01:17.710
+we haven't described yet exactly what a pose
+is. I'm going to introduce another abstract
+
+00:01:17.710 --> 00:01:24.890
+operator. It is a plus sign inside a circle,
+I'm going to call that O+. So, the O+ operator
+
+00:01:24.890 --> 00:01:31.310
+allows us to join or add these two poses.
+So, the relative pose from frame A to frame
+
+00:01:31.310 --> 00:01:40.170
+B, O+ the relative pose from frame B to frame
+C gives us the relative pose of C with respect
+
+00:01:40.170 --> 00:01:47.990
+to A. This O+ operator performs what is called
+composition. It allows us to compose, to compound,
+
+00:01:47.990 --> 00:01:55.570
+to add, in inverted commas, two poses together.
+Then, I can use my dot operator to transform
+
+00:01:55.570 --> 00:02:02.979
+the vector from frame C to frame A, and we
+can extend this approach indefinitely. I can
+
+00:02:02.979 --> 00:02:07.100
+compound as many relative poses as I wish.
+
+00:02:07.100 --> 00:02:11.470
+When we talk about things like relative motions,
+it's really important to keep in mind that
+
+00:02:11.470 --> 00:02:16.720
+the order in which you apply them is critically
+important. Now, consider the example where
+
+00:02:16.720 --> 00:02:23.140
+I move from the reference frame and I move
+a coordinate frame 30 centimetres in the x
+
+00:02:23.140 --> 00:02:28.800
+direction and then I rotate it by 45 degrees,
+and we defined the convention for rotation;
+
+00:02:28.800 --> 00:02:35.090
+this is a positive rotation of 45 degrees.
+Now, imagine that I do these operations in
+
+00:02:35.090 --> 00:02:41.440
+the reverse order. So, I take my reference
+coordinate frame and I rotate it by 45 degrees
+
+00:02:41.440 --> 00:02:47.020
+and then I translate it by 30 centimetres
+in the x direction. So, now I end up with
+
+00:02:47.020 --> 00:02:52.730
+a coordinate frame over here. So, you see
+that by changing the order in which I apply
+
+00:02:52.730 --> 00:02:58.050
+these elementary motions, the translation
+and the rotation, I end up with very different
+
+00:02:58.050 --> 00:03:01.670
+coordinate frames. Ordering is really important.
+
+00:03:01.670 --> 00:03:06.460
+Let's look at a more complex example, and
+I've introduced here a world coordinate frame.
+
+00:03:06.460 --> 00:03:11.780
+Now, I introduce a coordinate frame which
+represents the pose of my robot on the table.
+
+00:03:11.780 --> 00:03:16.670
+And here's a coordinate frame which represents
+the pose of the little robot. And here is
+
+00:03:16.670 --> 00:03:21.010
+another coordinate frame which represents
+the hand of the big robot. And I can describe
+
+00:03:21.010 --> 00:03:26.430
+the pose of the hand of the robot with respect
+to the robot itself. I can introduce another
+
+00:03:26.430 --> 00:03:32.230
+coordinate frame which describes the pose
+of a camera which is looking at both of these
+
+00:03:32.230 --> 00:03:37.910
+robots. And, I can perhaps describe the pose
+of the camera with respect to my world coordinate
+
+00:03:37.910 --> 00:03:42.930
+frame. And perhaps the camera is able to tell
+where the robot is, with respect to the camera's
+
+00:03:42.930 --> 00:03:48.310
+coordinate frame. And, perhaps the camera
+can also tell me the pose of the little robot
+
+00:03:48.310 --> 00:03:52.970
+with respect to the camera's coordinate frame.
+And now, I might be interested in knowing,
+
+00:03:52.970 --> 00:03:57.790
+what's the pose of the little robot with respect
+to the big robot? Or I might want to know
+
+00:03:57.790 --> 00:04:02.870
+is, what's the relative pose from the hand
+of the big robot to the little robot, in case
+
+00:04:02.870 --> 00:04:07.340
+the big robot wanted to touch the little robot?
+Or, perhaps I might want to know, what's the
+
+00:04:07.340 --> 00:04:12.660
+pose of the hand of the big robot with respect
+to the world coordinate frame? I've introduced
+
+00:04:12.660 --> 00:04:19.410
+rather a lot of coordinate frames and relative
+poses. We can simplify this by introducing
+
+00:04:19.410 --> 00:04:23.980
+what I call a pose graph. So, I’ve kept
+the same colour coding and I kept the same
+
+00:04:23.980 --> 00:04:24.590
+labeling.
+
+00:04:24.590 --> 00:04:30.540
+Now, instead of representing a pose by a two-dimensional coordinate frame, I represent it simply by
+
+00:04:30.540 --> 00:04:37.620
+a disc. The lines that join the discs represent
+the relative poses and notice that they are
+
+00:04:37.620 --> 00:04:45.160
+lines with an arrow so this thing is a directed
+graph. The solid lines represent relative
+
+00:04:45.160 --> 00:04:51.440
+poses that we know and the dashed lines represent
+poses that we don't know, but perhaps we can
+
+00:04:51.440 --> 00:04:52.320
+compute them.
+
+00:04:52.320 --> 00:04:57.530
+So, let's highlight this particular relative
+pose here and say I want to determine the
+
+00:04:57.530 --> 00:05:02.290
+value of this particular relative pose. How
+do I do that? Well, what we’re going to
+
+00:05:02.290 --> 00:05:07.970
+do is to follow a path through the graph that's
+got the same starting point and the same ending
+
+00:05:07.970 --> 00:05:14.510
+point. The first leg of the journey is this
+arrow here, and then I go from pose C to pose
+
+00:05:14.510 --> 00:05:22.660
+R and then go to pose H. We can say then that
+this relative pose is equal to the composition
+
+00:05:22.660 --> 00:05:29.420
+of these other 3 relative poses. If I join
+this, this, and this together it gets me to
+
+00:05:29.420 --> 00:05:34.850
+the same place in the pose graph as this.
+So, this is a way I can compute an unknown
+
+00:05:34.850 --> 00:05:38.500
+relative pose in terms of relative poses that
+I know.
+
+00:05:38.500 --> 00:05:43.940
+Let's have a look at a more complex example.
+Now, I want to know this relative pose: where
+
+00:05:43.940 --> 00:05:49.990
+is the little robot with respect to the hand
+of the big robot. Same rule again. I want
+
+00:05:49.990 --> 00:05:55.570
+to find another path through this graph that
+takes me from H to L. The first leg of the
+
+00:05:55.570 --> 00:06:00.720
+journey is going to be this one. But in this
+case we need to go backwards along this arrow,
+
+00:06:00.720 --> 00:06:05.430
+so I've coloured it in red to indicate that
+I'm going backwards along this particular
+
+00:06:05.430 --> 00:06:09.930
+part of the graph. Then I'm going to go backwards
+along this part of the graph and then I'm
+
+00:06:09.930 --> 00:06:14.860
+going to go in the forward direction along
+this part of the graph. And now, when I write
+
+00:06:14.860 --> 00:06:22.090
+the pose expression, I've introduced two new
+symbols. It's a minus sign inside a circle
+
+00:06:22.090 --> 00:06:27.800
+and I'm going to refer to this operator as
+O-. So, for the case of the relative poses
+
+00:06:27.800 --> 00:06:33.550
+that are coded in red, where we went backwards
+along the arrow, I've prefixed that pose by
+
+00:06:33.550 --> 00:06:38.960
+a minus sign because I've gone in the reverse
+direction. Whereas this one here, I've used
+
+00:06:38.960 --> 00:06:44.560
+the O+ operator because I'm going in the forward
+direction along the arrow. So, here is a way
+
+00:06:44.560 --> 00:06:49.810
+that I can define an unknown pose in terms
+of previously known poses.
+
+00:06:49.810 --> 00:06:55.680
+What we’ve got now is some kind of pose
+algebra and there are just a few simple rules
+
+00:06:55.680 --> 00:07:03.460
+with a pose algebra. The first rule is concerned
+with the O+ operator. I can combine two relative
+
+00:07:03.460 --> 00:07:08.630
+poses to get another relative pose but there
+are some really important rules associated
+
+00:07:08.630 --> 00:07:13.340
+with all the subscripts here. The first rule
+is that these two subscripts, the one on the
+
+00:07:13.340 --> 00:07:18.110
+either side of the O+ operator, must be the
+same. And you can think of them as cancelling
+
+00:07:18.110 --> 00:07:25.150
+out. Then, this leading subscript is the same
+on both sides of the expression and this subscript
+
+00:07:25.150 --> 00:07:31.650
+is the same on both sides of the expression.
+The O+ operator is not commutative and that
+
+00:07:31.650 --> 00:07:39.070
+means that if I have a relative pose 1, and
+an O+ with relative pose 2, that is, in general,
+
+00:07:39.070 --> 00:07:45.490
+different to relative pose 2 O+ relative pose
+1. You have to be really careful about the
+
+00:07:45.490 --> 00:07:52.889
+order and you can’t arbitrarily switch them
+around. Another rule is that O- operator applied
+
+00:07:52.889 --> 00:07:58.510
+to the relative pose is the same as swapping
+the leading and trailing labels. Another rule
+
+00:07:58.510 --> 00:08:05.780
+is that I have pose O- the same pose, the
+result is zero. It corresponds to no motion,
+
+00:08:05.780 --> 00:08:12.660
+no pose change and we use symbol zero to represent
+that. And, another way I can express that
+
+00:08:12.660 --> 00:08:18.960
+is to negate the pose and then add it to the
+pose, the result is zero. These two expressions
+
+00:08:18.960 --> 00:08:25.169
+are equivalent. Finally, if I add the zero
+relative pose to a pose, it makes no change.
+
+00:08:25.169 --> 00:08:31.169
+And, if I subtract the zero relative pose
+from a pose, it makes no change.
+
+00:08:31.169 --> 00:08:36.539
+These are just a few simple algebraic rules
+that we can apply to these complex pose expressions
+
+00:08:36.539 --> 00:08:41.839
+which allows us to rearrange them to determine
+the things that we want in terms of the things
+
+00:08:41.839 --> 00:08:48.140
+that we know. There are a few rules also that
+apply to this dot operator where we combine
+
+00:08:48.140 --> 00:08:54.839
+a pose with a vector. And again, we have some
+rules that apply to the labels here. And once
+
+00:08:54.839 --> 00:09:00.760
+again, the innermost labels must be the same.
+And then, we can think of them as cancelling
+
+00:09:00.760 --> 00:09:03.520
+out and the leading labels are the same.
+

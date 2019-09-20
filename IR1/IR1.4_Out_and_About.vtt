@@ -1,0 +1,554 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:43.640 --> 00:00:49.020
+Like most people I’ve grown up with images
+of robots like this one from Lost in Space,
+
+00:00:49.020 --> 00:00:53.900
+but real robots are not like this. The real
+robots and the ones we are going to see in
+
+00:00:53.900 --> 00:00:59.400
+the next few minutes have got a great diversity
+of form and function. We are going to see
+
+00:00:59.400 --> 00:01:03.220
+robots that can move through corridors, we
+are going to see robots that can swim under
+
+00:01:03.220 --> 00:01:08.580
+water, robots that can fly, robots that can
+do assembly work. They all look very different
+
+00:01:08.580 --> 00:01:13.710
+and they are nothing like the robots that
+we have grown up with on TV and in the movies.
+
+00:01:13.710 --> 00:01:18.290
+What’s common to all these robots although
+they are different, the common feature is
+
+00:01:18.290 --> 00:01:23.600
+that they perform fundamentally three actions.
+They sense the world and we are going to look
+
+00:01:23.600 --> 00:01:28.690
+at a variety of sensors that robots use to
+sense the world and then they make some plan,
+
+00:01:28.690 --> 00:01:32.540
+they take what they perceive about the world
+through their senses and they have got a goal
+
+00:01:32.540 --> 00:01:37.470
+that they are trying to achieve. So they plan
+on how to move a bit closer towards the goal.
+
+00:01:37.470 --> 00:01:41.910
+And then they perform an action. It might
+be to swim forward, it might be to fly, it
+
+00:01:41.910 --> 00:01:46.330
+might be to move down the corridor. And then
+it repeats; it senses again how the world’s
+
+00:01:46.330 --> 00:01:51.280
+changed, it updates its plan and moves some
+more. So robots are continually doing sensing
+
+00:01:51.280 --> 00:01:55.600
+planning and acting in a continuous loop.
+So let’s go and look at some real robots.
+
+00:02:08.420 --> 00:02:10.680
+This is an example of an industrial robot.
+
+00:02:11.900 --> 00:02:13.900
+Machines like this are direct descendants
+
+00:02:13.910 --> 00:02:19.590
+of the first robots that went into service
+in the 1950's. This is a very big industrial
+
+00:02:19.590 --> 00:02:23.830
+robot. Robots like these you will typically
+find in a car factory doing jobs like spray
+
+00:02:23.830 --> 00:02:28.060
+painting, welding, or lifting parts of car
+bodies. This particular robot can lift up
+
+00:02:28.060 --> 00:02:34.260
+to 60kgs. It's driven by 6 electric motors
+and they rotate the machine around different
+
+00:02:34.260 --> 00:02:39.730
+axes. So, the first motor rotates the robot
+about an axis like this; the next motor rotates
+
+00:02:39.730 --> 00:02:45.580
+it about an axis like this; next motor rotates
+it about an axis like this. Down here we have
+
+00:02:45.580 --> 00:02:50.380
+what we call the wrist mechanism. This assembly
+here; and that contains three motors and they
+
+00:02:50.380 --> 00:02:55.540
+rotate the end effector of the robot; the
+bit that does the work; they rotate it about
+
+00:02:55.540 --> 00:03:02.389
+an axis like this, like this and another one
+like this. So these six motors allow the end
+
+00:03:02.389 --> 00:03:08.299
+effector of the robot to move independently
+in the X direction, the Y direction and the
+
+00:03:08.299 --> 00:03:14.139
+Z direction. And also to rotate independently
+about the X axis like that; about the Y axis
+
+00:03:14.139 --> 00:03:18.939
+which is motion like that; and about the Z
+axis which is motion like that.
+
+00:03:38.310 --> 00:03:42.820
+This is the Guiabot. This is a mobile robot.
+Unlike the last robot that we looked at this
+
+00:03:42.820 --> 00:03:48.579
+robot has the ability to autonomously move
+through an environment. To enable it to do
+
+00:03:48.579 --> 00:03:52.880
+that, it has a rich collection of sensors.
+This sensor is probably familiar to you, it’s
+
+00:03:52.880 --> 00:03:58.840
+a Kinect camera. We call it a 3D camera. It
+outputs the three dimensional structure of
+
+00:03:58.840 --> 00:04:02.989
+the world around the robot. And it needs that
+three dimensional structure so that it can
+
+00:04:02.989 --> 00:04:07.209
+determine what's an obstacle - a place that
+it shouldn't drive - and what's free space
+
+00:04:07.209 --> 00:04:12.169
+– that’s space where it is okay for it
+to drive. The robot also has got this pair
+
+00:04:12.169 --> 00:04:16.660
+of cameras here, we call this a stereo camera
+pair, and it mimics the function of our own
+
+00:04:16.660 --> 00:04:21.820
+two eyes. We use our two eyes to determine
+the 3D structure of the world. So the robot
+
+00:04:21.820 --> 00:04:27.660
+uses this to provide augmented 3D information
+about its world. The robot’s also got a
+
+00:04:27.660 --> 00:04:32.010
+very interesting camera on the top. We call
+this an omnidirectional camera. It's actually
+
+00:04:32.010 --> 00:04:36.760
+made up of six individual cameras which look
+in all these different directions as well
+
+00:04:36.760 --> 00:04:41.530
+as vertically. It integrates that together
+to give almost a hemispherical view of the
+
+00:04:41.530 --> 00:04:45.250
+world. A very, very wide angle view.
+
+00:04:45.250 --> 00:04:49.030
+Other features of this robot are also interesting.
+Down here we have a sensor that we call a
+
+00:04:49.030 --> 00:04:54.870
+laser scanner. This is essentially an optical
+bumper bar. It is the sensor of last resort
+
+00:04:54.870 --> 00:04:59.190
+to stop the robot bumping into something that
+it shouldn't bump into. The robot has also
+
+00:04:59.190 --> 00:05:03.230
+got a lot of computing power onboard. We see
+here we have got two Mac Minis in addition
+
+00:05:03.230 --> 00:05:08.190
+to a computer which is in the base and that
+provides the computational power to process
+
+00:05:08.190 --> 00:05:13.540
+the information from all the sensors to plan
+how it should move and to control the motion
+
+00:05:13.540 --> 00:05:19.100
+of the wheels. This robot has got a very strong
+sense of where it is; it actually builds up
+
+00:05:19.100 --> 00:05:24.100
+a map of its world; a two dimensional and
+a 3 dimensional map. It knows where it is
+
+00:05:24.100 --> 00:05:28.570
+within that world and the fundamental information
+it needs in order to be able to achieve a
+
+00:05:28.570 --> 00:05:33.690
+goal. So it can sense, it's got planning computers
+here and that sends actions through to the
+
+00:05:33.690 --> 00:05:38.650
+motors and it continually repeats this sensing,
+planning, acting paradigm.
+
+00:05:46.240 --> 00:05:50.640
+Here we have another mobile robot and this
+is a giant one. Machines like these are called
+
+00:05:50.680 --> 00:05:55.210
+hot metal carriers. They are a relative of
+the forklift truck. They are typically found
+
+00:05:55.210 --> 00:05:59.870
+in aluminium smelting facilities and their
+job is to pick up very large buckets like
+
+00:05:59.870 --> 00:06:03.690
+this one you can see in the foreground here
+which will be filled with molten aluminium
+
+00:06:03.690 --> 00:06:09.020
+- 8 tonnes of molten aluminium. Their job is
+to pick up this bucket, lift it and carry
+
+00:06:09.020 --> 00:06:13.340
+it along a road network to another place within
+this smelting complex.
+
+00:06:20.240 --> 00:06:24.470
+This machine was originally driven by a person
+who would sit in a cab here and manipulate
+
+00:06:24.470 --> 00:06:29.710
+the controls, but this particular machine
+has been turned into a robot. In order for
+
+00:06:29.710 --> 00:06:34.560
+it to be an effective robot, it needs to use
+a number of different sensors so that it avoids
+
+00:06:34.560 --> 00:06:39.030
+hitting things or people that it shouldn't
+hit, that it can determine where it is within
+
+00:06:39.030 --> 00:06:43.610
+the smelter complex, and also to be able to
+successfully pick up the crucible.
+
+00:06:43.610 --> 00:06:48.240
+Now, let's look at the pick up process. The
+vehicle itself has got this hook which it
+
+00:06:48.240 --> 00:06:53.890
+needs to put in through this handle. So it's
+a relatively precise positioning problem that
+
+00:06:53.890 --> 00:06:58.250
+the robot needs to solve. Now it does that
+by using a camera which is up here on the
+
+00:06:58.250 --> 00:07:03.510
+mast of the robot, which looks down and works
+out where this bucket is with respect to the
+
+00:07:03.510 --> 00:07:07.990
+robot, and the robot moves so as to bring
+this hook in through this handle.
+
+00:07:19.360 --> 00:07:23.520
+Another really important sensor on this robot
+is this yellow laser scanning device, and
+
+00:07:23.520 --> 00:07:27.070
+there’s actually four of them, one on each
+corner of the robot so that it can see all
+
+00:07:27.070 --> 00:07:31.750
+the way around. This performs two functions.
+One is the laser beams can detect something
+
+00:07:31.750 --> 00:07:37.610
+like me, an obstacle, and it would then stop
+so it wouldn't collide with me. But it also
+
+00:07:37.610 --> 00:07:42.690
+performs a really important navigation task.
+This is how the robot knows where it is within
+
+00:07:42.690 --> 00:07:46.750
+the complex. So to understand how that works
+we are going to go outside and look at one
+
+00:07:46.750 --> 00:07:49.310
+of the navigation markers that this sensor
+picks up.
+
+00:07:56.900 --> 00:08:01.120
+The robot works out where it is in the environment
+using a system of markers. In this particular
+
+00:08:01.120 --> 00:08:06.730
+case these strips of reflective tape which
+give really bright returns on the laser scanners
+
+00:08:06.730 --> 00:08:12.090
+those yellow devices that we saw on the corners
+of the hot metal carrier. Now the robot has
+
+00:08:12.090 --> 00:08:17.660
+got a map that tells it whereabouts all these
+markers are within the complex. And then it
+
+00:08:17.660 --> 00:08:23.200
+uses the information about where the robot
+perceives these markers to be and it combines
+
+00:08:23.200 --> 00:08:27.680
+both of those together to determine where
+the robot is with respect to the map.
+
+00:08:41.120 --> 00:08:45.520
+Here we have another kind of mobile robot.
+This one is mobile in the air. It's a small
+
+00:08:45.529 --> 00:08:49.899
+scale helicopter - it's a sort of thing that
+a hobbyist would own. Sort of thing that they
+
+00:08:49.899 --> 00:08:55.839
+might fly on the weekend and they fly it using
+joystick controls that requires quite a lot
+
+00:08:55.839 --> 00:09:00.709
+of skill on their part in order to keep it
+in the air and go where they want it to go.
+
+00:09:00.709 --> 00:09:04.540
+This particular machine has been converted
+into a robot but before we talk about the
+
+00:09:04.540 --> 00:09:08.709
+robotic part, let’s just talk a little bit
+about the helicopter machine itself because
+
+00:09:08.709 --> 00:09:10.639
+they are fascinating things.
+
+00:09:10.639 --> 00:09:14.370
+This is powered by a small petrol engine;
+there is a fuel tank down here that carries
+
+00:09:14.370 --> 00:09:20.670
+the fuel. And the main lift force comes from
+the main rotor that provides a force vector
+
+00:09:20.670 --> 00:09:25.910
+vertically upwards, which counteracts the
+weight of the vehicle - counteracts gravity.
+
+00:09:25.910 --> 00:09:29.899
+The amazing thing with the helicopter is it
+can point the force vector in different directions.
+
+00:09:29.899 --> 00:09:34.120
+It can point it forward, it can point it backwards,
+it can point it sideways and that's all done
+
+00:09:34.120 --> 00:09:39.339
+by this mechanism here called the swash plate
+and what that does is every time the blades
+
+00:09:39.339 --> 00:09:44.809
+rotate, they also rotate this way about their
+axis so that allows this force vector to be
+
+00:09:44.809 --> 00:09:50.360
+controlled and that gives it the ability to
+move forward, backwards, sideways and hover.
+
+00:09:50.360 --> 00:09:55.100
+There is another propeller on the back here
+and that provides a force to stop the whole
+
+00:09:55.100 --> 00:09:58.639
+body of the helicopter rotating around.
+
+00:09:58.639 --> 00:10:03.970
+In order to turn it into a robot, we need
+to add some sensors to it. So in this box
+
+00:10:03.970 --> 00:10:08.769
+down here, there are some sensors such as
+GPS which tells it where it is with respect
+
+00:10:08.769 --> 00:10:13.410
+to the world. There are some accelerometers
+and gyroscopes that tell it its orientation
+
+00:10:13.410 --> 00:10:18.779
+in space. There is a laser altimeter here
+which tells it its height above the ground
+
+00:10:18.779 --> 00:10:23.579
+and in the front is a radar which detects
+obstacles that it might fly into.
+
+00:10:23.680 --> 00:10:30.880
+So, a robotic helicopter like this is useful for many kinds of tasks. It's useful for automated inspection:
+
+00:10:30.910 --> 00:10:36.120
+perhaps on a farm it could inspect the quality
+of crops, it could fly along creeks and waterways,
+
+00:10:36.120 --> 00:10:39.400
+it could fly along electricity lines or along
+fence lines.
+
+00:10:45.680 --> 00:10:49.200
+Here we have another type of mobile robot
+but this robot is mobile through water.
+
+00:10:50.720 --> 00:10:55.840
+We use robots like this to make scientific measurements about large volumes of water like lakes
+
+00:10:55.860 --> 00:11:01.780
+or coastal zones. It looks quite simple but is actually quite a complex and sophisticated machine.
+
+00:11:03.600 --> 00:11:07.589
+Let’s walk through it. Down at
+this end we have a propeller that pushes the
+
+00:11:07.589 --> 00:11:12.240
+whole robot through the water. It's got some
+control fins, rudder is here to steer it through
+
+00:11:12.240 --> 00:11:17.319
+the water body and these planes here make
+it move up and down in the water column. This
+
+00:11:17.319 --> 00:11:21.329
+antenna stack here has got a GPS receiver
+so when it's on the water surface it knows
+
+00:11:21.329 --> 00:11:25.069
+where it is, and it has got some other antennas
+that allow us to communicate with it when
+
+00:11:25.069 --> 00:11:30.079
+it is out at sea. Here we have sonar sensors
+- side scan sonar - which uses sound waves
+
+00:11:30.079 --> 00:11:35.860
+to build up a three dimensional map of the
+sea bed as the robot passes over it. Up here
+
+00:11:35.860 --> 00:11:40.079
+we have some sensors that measure the speed
+of the ocean current. Even though the robot
+
+00:11:40.079 --> 00:11:43.759
+is moving, they can measure the speed of the
+water column. Underneath there is another
+
+00:11:43.759 --> 00:11:49.470
+sensor that measures the speed of the robot
+with respect to the water column. Up the front
+
+00:11:49.470 --> 00:11:54.389
+here is the scientific payload and this is
+the instrumentation that we want to push through
+
+00:11:54.389 --> 00:11:59.339
+the water to make measurements about what's
+going on. So here we have sensors that measure
+
+00:11:59.339 --> 00:12:03.639
+the conductivity and pH of the water; that
+measure the amount of dissolved oxygen; that
+
+00:12:03.639 --> 00:12:08.439
+measure the amount of chlorophyll; measures
+the amount of blue green algae. So this scientific
+
+00:12:08.439 --> 00:12:12.949
+data is merged with navigational data which
+comes from the other sensors on board the
+
+00:12:12.960 --> 00:12:15.920
+robot, so we know where these measurements
+have been taken.
+
+00:12:18.960 --> 00:12:23.840
+This particular robot has got a runtime of up to 8 hours, moves about 2 meters per second,
+
+00:12:24.000 --> 00:12:28.000
+so we can survey about 30 kilometres in water in a single run.
+
+00:12:33.730 --> 00:12:39.559
+So what we have just seen are a number of
+really interesting, exciting and clearly useful
+
+00:12:39.559 --> 00:12:44.839
+robots. These robots differ in their form
+and in their function, but inside these robots
+
+00:12:44.839 --> 00:12:49.470
+are all doing the same thing. They are sensing
+their world, they are making plans and then
+
+00:12:49.470 --> 00:12:54.490
+they are they are carrying out actions in
+order to achieve their goals. Some of the
+
+00:12:54.490 --> 00:12:59.779
+robots that we saw were clearly research prototypes,
+but others were commercial products. And this
+
+00:12:59.779 --> 00:13:04.959
+is really exciting because this is the beginning
+of a whole new technological wave and we have
+
+00:13:04.959 --> 00:13:10.290
+witnessed many technological waves in the
+past. The introduction of steam power, electricity,
+
+00:13:10.290 --> 00:13:16.089
+flying machines, automobiles, electricity,
+computers; all these things were surprising
+
+00:13:16.089 --> 00:13:21.740
+to our grandparents and to our parents. Robots
+are just going to be the next technological
+
+00:13:21.740 --> 00:13:26.850
+wave and in the near future, we are going
+to be quite unsurprised to see them in our
+
+00:13:26.850 --> 00:13:32.370
+workplaces and in our homes. So there are
+clearly really interesting times ahead.
+

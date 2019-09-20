@@ -1,0 +1,342 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.649 --> 00:00:08.750
+Let's have a look at determining the inverse
+kinematics of our simple two link robot using
+
+00:00:08.750 --> 00:00:10.940
+a numerical approach.
+
+00:00:10.940 --> 00:00:18.770
+We're going to load now, into the workspace
+a model of our two link robot. And that's
+
+00:00:18.770 --> 00:00:25.880
+the workspace variable P2, is this new robot
+and we can plot the configuration for the
+
+00:00:25.880 --> 00:00:30.820
+robot for zero joint angles, this function
+also defines a workspace variable QZ, which
+
+00:00:30.820 --> 00:00:38.020
+contains the value of zero zero and that's what the robot looks like in the zero angle configuration.
+
+00:00:39.180 --> 00:00:44.390
+Now I'm going to define a desired end effector
+position for this robot and I'm going to define
+
+00:00:44.390 --> 00:00:49.460
+simply the translation and it's going to be
+one in the X direction, one in the Y direction
+
+00:00:49.460 --> 00:00:52.180
+and zero in the Z direction.
+
+00:00:52.180 --> 00:00:58.210
+Remember that this robot has only got two
+joints and he can only move in the XY plane
+
+00:00:58.210 --> 00:01:02.790
+so it doesn’t make sense for me to put a
+value for the Z co-ordinate that's anything
+
+00:01:02.790 --> 00:01:10.650
+but zero. The robot is incapable of achieving
+any position where Z is not equal to zero.
+
+00:01:10.650 --> 00:01:17.120
+And here is the homogeneous transformation,
+representing the desired position.
+
+00:01:17.120 --> 00:01:24.150
+Now in order to determine the inverse kinematics
+numerically, I write down our object and I'm
+
+00:01:24.150 --> 00:01:30.080
+going to use the method ikine, it stands for
+Inverse Kinematics. And this particular method
+
+00:01:30.080 --> 00:01:36.180
+performs a numerical solution to determine
+the inverse kinematics. First argument I pass
+
+00:01:36.180 --> 00:01:43.390
+in is the desired end effector pose T that we've
+just defined and I'm going to put in the initial
+
+00:01:43.390 --> 00:01:50.250
+joint angles that I'm going to use in the search for the optimal joint angles to achieve that pose.
+
+00:01:50.720 --> 00:01:56.640
+The last argument is a little bit more complex.
+It's what I call a "Mask Matrix" and its axis
+
+00:01:56.640 --> 00:02:01.850
+element matrix and the first two elements
+are ones and the last four elements are zeros.
+
+00:02:01.850 --> 00:02:08.360
+And what this is telling the ikine function
+is only try and match the end effector X and
+
+00:02:08.360 --> 00:02:13.779
+Y position, don't bother trying to match the
+Z co-ordinate, don't bother trying to match
+
+00:02:13.779 --> 00:02:19.569
+the orientation. Because this robot's only
+got two degrees of freedom, it can only achieve
+
+00:02:19.569 --> 00:02:25.279
+two constraints in its end effector pose and
+I've chosen those constraints to be its X
+
+00:02:25.279 --> 00:02:31.650
+position and its Y position. I don't care
+about any other elements of the end effector
+
+00:02:31.650 --> 00:02:39.250
+pose. I hit enter and the solution has come
+back a Pi and minus Pi. Well let's plot that,
+
+00:02:41.200 --> 00:02:49.639
+plot Q and there we see the desired configuration
+of the robot to achieve the particular end effector
+
+00:02:49.639 --> 00:02:51.439
+position that I asked for.
+
+00:02:51.439 --> 00:02:55.120
+Let's just have a look at that robot from
+above and we can see very clearly, the end effector
+
+00:02:55.120 --> 00:03:01.829
+has moved to the position one in the X direction
+and one in the Y direction.
+
+00:03:01.829 --> 00:03:07.620
+Now let's see if we can find another configuration
+of the robot that has got the same end effector
+
+00:03:07.620 --> 00:03:12.349
+pose. What we're going to do is we're going
+to go back to our inverse kinematics and we're
+
+00:03:12.349 --> 00:03:18.659
+going to give a different initial condition.
+I'm going to start the search with Q1 equal
+
+00:03:18.659 --> 00:03:26.370
+to minus one radiance instead of zero radiance
+and run the solver and once again we come
+
+00:03:26.370 --> 00:03:30.319
+back to exactly the same solution that I had
+before.
+
+00:03:30.319 --> 00:03:37.419
+Let's try an different initial condition,
+let's try setting this one to minus one and
+
+00:03:37.419 --> 00:03:45.459
+hey, now we have a different solution and
+let's plot what that solution looks like,
+
+00:03:45.459 --> 00:03:52.329
+we can see that once again it has achieved
+the desired end effector position, one in the
+
+00:03:52.329 --> 00:03:56.239
+X direction one in the Y direction, but the
+configuration of the robot is now different.
+
+00:03:56.239 --> 00:04:02.139
+You see that determining the initial joint
+angles that would achieve that second configuration
+
+00:04:02.139 --> 00:04:07.480
+was not straight forward, it required a little
+bit of trial and error in order to guide the
+
+00:04:07.480 --> 00:04:13.139
+algorithm, to finding this alternative solution.
+
+00:04:13.139 --> 00:04:18.329
+Now let's look at performing numerical inverse
+kinematics for this six degree of freedom
+
+00:04:18.329 --> 00:04:21.259
+robot, which moves in three dimensions.
+
+00:04:21.259 --> 00:04:27.490
+The first thing we're going to do is to load
+a model of the Puma robot, we now have a variable
+
+00:04:27.490 --> 00:04:33.729
+in our workspace and I'm going to plot the
+robot in its zero angle configuration, using
+
+00:04:33.729 --> 00:04:40.810
+the workspace variable QZ which was defined
+by the MDL Puma 560 script. And here we see
+
+00:04:40.810 --> 00:04:45.199
+the robot in it's zero angle pose. Next thing
+I'm going to do is define the pose that I
+
+00:04:45.199 --> 00:04:51.349
+want the end effector to adopt. And it's going
+to have a translational component of 0.6 in
+
+00:04:51.349 --> 00:04:57.090
+the X direction, 0.2 in the Y direction, zero
+in the Z direction and I'm going to change
+
+00:04:57.090 --> 00:05:03.430
+the orientation of the end effector. It's got
+a roll angle of zero, pitch angle of 180 degrees
+
+00:05:03.430 --> 00:05:09.830
+and a yaw angle of 180 degrees, specify degrees
+and this is the homogeneous transformation
+
+00:05:09.830 --> 00:05:13.870
+representing the pose I'd like the robot to
+adopt.
+
+00:05:13.870 --> 00:05:19.520
+I'm going to enable plot hold and now I'm
+going to plot that particular pose, so we
+
+00:05:19.520 --> 00:05:24.810
+can see whether the robot is right now and
+the pose that I would like it to adopt.
+
+00:05:24.810 --> 00:05:29.759
+Now I'm going to compute the inverse kinematics
+and this time I'm going to do it numerically.
+
+00:05:29.759 --> 00:05:36.979
+And I use a slightly different method on the
+P560 object, I use the method ikine, I pass
+
+00:05:36.979 --> 00:05:41.720
+in the pose I'd like the robot to adopt and
+I pass in the initial set of joint angles
+
+00:05:41.720 --> 00:05:47.080
+for the numerical algorithm and I'm just going
+to make them all zero. It's not particularly
+
+00:05:47.080 --> 00:05:51.900
+imaginative, but we'll see what happens. Okay
+the algorithm has completed and it's computed
+
+00:05:51.900 --> 00:05:59.780
+a set of joint angles. If I now plot the robot
+in that configuration, we can see that the
+
+00:05:59.780 --> 00:06:04.310
+position of the robot end effector is at the
+origin of the blue co-ordinate frame that
+
+00:06:04.310 --> 00:06:09.699
+I drew and that the X, Y and Z axis of the
+robot's end effector are parallel to the X,
+
+00:06:09.699 --> 00:06:13.979
+Y and Z axes of the co-ordinate frame that
+I desire.
+
+00:06:13.979 --> 00:06:18.560
+The robot's configuration looks a little bit
+awkward, that's because with the numerical
+
+00:06:18.560 --> 00:06:24.159
+technique, I cannot explicitly control the
+pose that it adopts. I need to try some different
+
+00:06:24.159 --> 00:06:28.569
+initial conditions in order to perhaps get
+a configuration where the robot's elbow is
+
+00:06:28.569 --> 00:06:33.849
+up. You'll notice an error message here in
+red, that's nothing to be worried about, it's
+
+00:06:33.849 --> 00:06:39.639
+because the initial set of joint angles that
+I chose, all zeros, results in a robot configuration
+
+00:06:39.639 --> 00:06:44.439
+that is singular and singular configurations
+is something that we're going to discuss along
+
+00:06:44.439 --> 00:06:48.699
+with Jacobians in the next two lectures.
+
+00:06:48.699 --> 00:06:52.909
+Solving the inverse kinematics numerically
+looks like a pretty easy thing to do, are
+
+00:06:52.909 --> 00:06:55.719
+there any drawbacks? Well there are a few.
+
+00:06:55.719 --> 00:07:00.229
+First of all it's important to choose a good
+initial set of joint co-ordinates. If the
+
+00:07:00.229 --> 00:07:05.300
+joint co-ordinates are too far away from the
+actual joint co-ordinates required to achieve
+
+00:07:05.300 --> 00:07:11.060
+the pose then the numerical solution may not
+in fact converge. Another problem is that
+
+00:07:11.060 --> 00:07:17.569
+we can't guarantee a particular robot configuration.
+The robot configuration that is found, depends
+
+00:07:17.569 --> 00:07:21.650
+on the initial joint co-ordinates that are
+chosen, so the numerical algorithm will start
+
+00:07:21.650 --> 00:07:26.110
+with a particular set of joint angles that
+you give it and it will perform the optimization
+
+00:07:26.110 --> 00:07:31.659
+until it matches the desired end effector pose.
+The particular configuration that it ends
+
+00:07:31.659 --> 00:07:36.990
+up with, depends on your initial choice of
+joint co-ordinates. Now importantly, you cannot
+
+00:07:36.990 --> 00:07:43.249
+control the robot configuration as you can
+with the analytic solution.
+
+00:07:43.249 --> 00:07:48.620
+And finally the numerical solution can be
+computationally expensive. It's an iterative
+
+00:07:48.620 --> 00:07:54.050
+algorithm and the number of iterations depends
+in some way on how good your initial joint
+
+00:07:54.050 --> 00:07:59.379
+co-ordinates are. So if you wanted this to
+run in real time, to be able to compute inverse
+
+00:07:59.379 --> 00:08:05.050
+kinematics say in a thousandth of a second,
+then a numerical algorithm may not be the
+
+00:08:05.050 --> 00:08:06.710
+most appropriate way to go.
+

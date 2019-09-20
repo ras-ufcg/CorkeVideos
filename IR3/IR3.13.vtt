@@ -1,0 +1,193 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.800 --> 00:00:08.540
+So, as we should well know by now, pose has
+got 2 components; a translational component
+
+00:00:08.540 --> 00:00:13.910
+and a rotational component. And there are
+several ways that we can represent a pose.
+
+00:00:13.910 --> 00:00:17.890
+We could represent the translational component
+as a vector, and then we could represent the
+
+00:00:17.890 --> 00:00:23.230
+rotational component by a set of 3 Euler angles.
+Alternatively, we could represent it by a
+
+00:00:23.230 --> 00:00:28.999
+vector plus a set of 3 roll, pitch, yaw angles.
+Or we could represent it as a vector plus
+
+00:00:28.999 --> 00:00:34.200
+a quaternion. The fourth option is to represent
+it as a homogeneous transformation and this
+
+00:00:34.200 --> 00:00:38.590
+is what we did for the 2-dimensional case.
+As we've done several times already in this
+
+00:00:38.590 --> 00:00:42.250
+lecture we've lifted concepts from 2-dimensions
+in to 3-dimensions and that's what we're going
+
+00:00:42.250 --> 00:00:47.969
+to do next. We are going to work out how we
+describe pose as a homogeneous transformation
+
+00:00:47.969 --> 00:00:50.510
+in 3-dimensions.
+
+00:00:50.510 --> 00:00:56.269
+Consider two 3-dimensional coordinate frames
+and a point P. Now, I'm going to introduce
+
+00:00:56.269 --> 00:01:02.989
+a frame {V}. It has the same origin as coordinate
+frame B but its axes are parallel to coordinate
+
+00:01:02.989 --> 00:01:11.240
+frame A. I can describe the point P with respect
+to the coordinate frame {V} by using a rotation,
+
+00:01:11.240 --> 00:01:16.770
+rotation from coordinate frame {V} to coordinate
+frame B. I can describe the origin of frame
+
+00:01:16.770 --> 00:01:22.940
+{V} by a vector with respect to frame A and
+I can describe the point P in terms of a vector
+
+00:01:22.940 --> 00:01:28.030
+with respect to coordinate frame A. I can
+write a simple vector relationship. I can
+
+00:01:28.030 --> 00:01:35.350
+add these 2 vectors because coordinate frame
+{V} has its axes parallel to those of coordinate frame A.
+
+00:01:35.400 --> 00:01:41.240
+Now, I can substitute the first relationship
+and I have now an expression for a point with
+
+00:01:41.240 --> 00:01:46.940
+respect to frame A in terms of a vector with
+respect to the original coordinate frame B
+
+00:01:46.940 --> 00:01:54.020
+and I can substitute A for {V} because the
+axis of frames {V} and A are parallel to each other.
+
+00:01:54.470 --> 00:02:00.630
+I can substitute in the elements of the rotation
+matrix and expand the vectors in terms of
+
+00:02:00.630 --> 00:02:07.420
+their elements and then, I can augment the
+vector by appending a 1 to it and move the
+
+00:02:07.420 --> 00:02:12.990
+translation between the origins of the coordinate
+frames into the matrix. And to keep things
+
+00:02:12.990 --> 00:02:17.310
+tidy, I'm going to augment the other vector
+as well which means I have to pack the matrix
+
+00:02:17.310 --> 00:02:23.250
+out with some zeroes and ones. So, what we
+have now is a homogeneous representation.
+
+00:02:23.250 --> 00:02:28.500
+We have a homogeneous transformation matrix
+and two homogeneous vectors. We can write
+
+00:02:28.500 --> 00:02:33.470
+it in compact form like this with the note
+that the homogeneous vectors by putting a
+
+00:02:33.470 --> 00:02:39.530
+tilde above them. We can see that this matrix
+comprises a rotation component, a translational
+
+00:02:39.530 --> 00:02:42.520
+component, 3 zeroes and a one.
+
+00:02:42.520 --> 00:02:48.970
+So, this single 4 x 4 matrix encapsulates
+rotation and translation and allows us to
+
+00:02:48.970 --> 00:02:55.440
+transform a vector describing a point from
+coordinate frame B to coordinate frame A.
+
+00:02:55.440 --> 00:03:00.510
+This 4 x 4 matrix here, we refer to as a
+homogeneous transformation and these 2 vectors
+
+00:03:00.510 --> 00:03:06.270
+here are homogeneous vectors. And just a reminder
+on homogeneous vectors, we denote them by
+
+00:03:06.270 --> 00:03:11.280
+tilde on top. We take the Cartesian vector,
+in this case because it's 3-dimensional space,
+
+00:03:11.280 --> 00:03:17.370
+it's got 3 elements A, B and C. The homogeneous
+version of that has got 4 elements A, B, C
+
+00:03:17.370 --> 00:03:22.800
+and 1. We append a 1 to it. Here it is in
+a very compact form. We have a point denoted
+
+00:03:22.800 --> 00:03:28.920
+by a homogeneous vector with respect to frame
+B and we can transform it to a point described
+
+00:03:28.920 --> 00:03:35.870
+by a homogeneous vector with respect to frame
+A. Relative pose is described by single 4
+
+00:03:35.870 --> 00:03:41.069
+x 4 matrix. A mathematician would say that
+this matrix belongs to the special Euclidean
+
+00:03:41.069 --> 00:03:48.150
+group of dimension 3 and the short hand is
+that T is an element of the set SE(3); 3 indicating
+
+00:03:48.150 --> 00:03:50.349
+the dimension in this case 3.
+
+00:03:50.349 --> 00:03:56.250
+Instead of the abstract symbol ksi, we can
+use a homogeneous transformation matrix, a
+
+00:03:56.250 --> 00:04:03.450
+4 x 4 matrix. Compounding or composition
+is simply a matrix-matrix product. To compound
+
+00:04:03.450 --> 00:04:10.500
+2 poses, I simply multiply their representation
+in terms of homogeneous transformations. Note
+
+00:04:10.500 --> 00:04:17.120
+well that the inverse of a homogeneous transformation
+is not equal to its transpose, that property
+
+00:04:17.120 --> 00:04:22.999
+only belongs to the rotational component of
+a matrix which is an orthogonal matrix. The
+
+00:04:22.999 --> 00:04:28.550
+homogeneous transformation matrix is not an
+orthogonal matrix. It's inverse is not equal
+
+00:04:28.550 --> 00:04:34.349
+to its transpose. Finally, vector transformation
+is simply a matrix-vector product.
+

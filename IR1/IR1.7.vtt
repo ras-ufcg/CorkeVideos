@@ -1,0 +1,300 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:04.710 --> 00:00:09.660
+In this section, I'd like to talk about why
+robots are useful. Why do we need robots?
+
+00:00:09.660 --> 00:00:14.519
+The first example I am going to give is what's
+called robotic surgery but that is a bit of
+
+00:00:14.519 --> 00:00:19.640
+a misnomer. It's actually robot-enabled surgery.
+And highly trained human surgeons are the
+
+00:00:19.640 --> 00:00:24.669
+key part of the system. The robot part of
+the system is shown over here and there are a
+
+00:00:24.669 --> 00:00:29.730
+number of tools which are inside the body
+of the patient. There are tools which carry
+
+00:00:29.730 --> 00:00:34.420
+very small cameras and the information from
+those cameras is presented to the surgeon
+
+00:00:34.420 --> 00:00:40.579
+in a stereoscopic or 3D display. The surgeon
+looks at this 3D imagery and adjusts what
+
+00:00:40.579 --> 00:00:45.839
+we could consider as some small joysticks.
+Those small joysticks control the motion of
+
+00:00:45.839 --> 00:00:49.249
+tools which are also inside the patient's
+body.
+
+00:00:49.249 --> 00:00:55.649
+So the surgeon is doing all the skilled work.
+He's using his eyes to interpret the 3D imagery.
+
+00:00:55.649 --> 00:01:00.309
+He's using everything he knows about medicine
+in order to control the tools inside the human
+
+00:01:00.309 --> 00:01:05.480
+body to do the job that needs to be done.
+The key innovation here is the surgeon is
+
+00:01:05.480 --> 00:01:10.790
+virtually inside the human body. In the old
+days, we needed to make very large openings
+
+00:01:10.790 --> 00:01:15.220
+in the human body so that the surgeon could
+get his very large hands in there to do the
+
+00:01:15.220 --> 00:01:16.659
+work that needed to be done.
+
+00:01:16.659 --> 00:01:22.200
+With this robot surgery technology, we are
+able to make a number of very very small incisions
+
+00:01:22.200 --> 00:01:28.030
+in the body of the patient into which we insert
+these very small tools and cameras so the
+
+00:01:28.030 --> 00:01:34.399
+outcomes for the patient are a whole lot better.
+So robotic surgery is really a misnomer. It's
+
+00:01:34.399 --> 00:01:40.649
+like the teleoperation system that we looked
+at earlier on which was used to perform manipulation
+
+00:01:40.649 --> 00:01:45.960
+of radioactive material. It's a very similar
+technology being used here to virtually place
+
+00:01:45.960 --> 00:01:50.469
+a surgeon inside the body of a patient.
+
+00:01:50.469 --> 00:01:56.270
+We can also use robot technology to make us
+stronger. This is a technology called an exoskeleton.
+
+00:01:56.270 --> 00:02:02.079
+It's a wearable robot. We strap ourselves
+into it. It straps onto our ankles, onto our
+
+00:02:02.079 --> 00:02:07.429
+knees, onto our thighs and onto our trunk.
+It monitors how we move. And it's made of
+
+00:02:07.429 --> 00:02:12.750
+very strong materials and it's got very strong
+motors. So as we move, it moves with us and
+
+00:02:12.750 --> 00:02:15.160
+its strength augments our own strength.
+
+00:02:15.160 --> 00:02:20.610
+Here is a video of an exoskeleton system at
+work. This is some video that I took at a
+
+00:02:20.610 --> 00:02:26.010
+robot exhibition recently. We can see the
+gentleman wearing the exoskeleton is able
+
+00:02:26.010 --> 00:02:29.350
+to handle this large weight quite effortlessly.
+
+00:02:37.280 --> 00:02:41.320
+There we go. So this is a way that limitations
+
+00:02:41.320 --> 00:02:47.110
+of human strength can be augmented by robot
+technology. The intelligence in performing
+
+00:02:47.110 --> 00:02:51.310
+the motion or performing the action comes
+from the human being but the raw strength,
+
+00:02:51.310 --> 00:02:54.890
+the brute strength comes from the robot that
+he is wearing.
+
+00:02:54.890 --> 00:03:00.770
+Another really important role for robots today
+is managing assets, as a society we have a massive
+
+00:03:00.770 --> 00:03:06.630
+investment in assets in terms of power lines,
+water pipe lines, gas pipe lines and sewer
+
+00:03:06.630 --> 00:03:11.080
+systems. And in order to maintain the health
+of those assets, they need to be periodically
+
+00:03:11.120 --> 00:03:17.100
+inspected and that's very labor-intensive. And some of these inspection jobs are fairly unpleasant.
+
+00:03:17.110 --> 00:03:22.380
+Imagine if it was your job to inspect sewer
+systems. It's dark, it's unpleasant, and actually
+
+00:03:22.380 --> 00:03:26.970
+a little dangerous. So people have been building
+robots that can be placed in the pipe lines
+
+00:03:26.970 --> 00:03:31.970
+to perform the inspection without sending
+human beings down there. So robotic researchers
+
+00:03:31.970 --> 00:03:37.070
+have been developing robot systems for performing
+this kind of inspection work. And here we
+
+00:03:37.070 --> 00:03:42.440
+see an example of a pipe inspection robot.
+It's got wheels to propel it through the pipe,
+
+00:03:42.440 --> 00:03:44.000
+it's got lights and cameras.
+
+00:03:44.000 --> 00:03:48.580
+A massive amount of money is spent each year
+on inspecting power lines and there's a couple
+
+00:03:48.580 --> 00:03:53.870
+of approaches to doing this. One is to fly
+a robot along the power line or else to build
+
+00:03:53.870 --> 00:03:59.720
+a robot that can crawl along the power lines.
+Flying helicopters near power lines is a dangerous
+
+00:03:59.720 --> 00:04:04.880
+business. And each year, a number of helicopter
+crashes are caused by the helicopter coming
+
+00:04:04.880 --> 00:04:10.140
+into too close proximity with the wires that
+it is inspecting. So this is exactly the sort
+
+00:04:10.140 --> 00:04:13.930
+of job, a dangerous job that a robot should
+do.
+
+00:04:13.930 --> 00:04:19.160
+Perhaps our most important asset is the planet
+on which we live and researchers are developing
+
+00:04:19.160 --> 00:04:24.930
+all manner of robots to inspect and monitor
+the health of our planet. A few of them are
+
+00:04:24.930 --> 00:04:30.090
+seen here. They are flying robots that could
+be flown into dangerous weather systems such
+
+00:04:30.090 --> 00:04:36.250
+as hurricanes or cyclones, robots that can
+explore the inside of volcanic craters, blimp-based
+
+00:04:36.250 --> 00:04:41.840
+robots for monitoring the health of the Amazon
+rain forest, underwater exploration robots
+
+00:04:41.840 --> 00:04:47.620
+and Antarctic exploration robots, and even robotic
+boats for monitoring the quality of water
+
+00:04:47.620 --> 00:04:51.280
+in the storages that provide drinking water
+for cities.
+
+00:04:51.280 --> 00:04:56.729
+It's a dangerous business sending humans beneath
+the surface of our oceans. Human divers are
+
+00:04:56.729 --> 00:05:01.360
+limited in the depths that they can dive to.
+They also require a support vessel on the
+
+00:05:01.360 --> 00:05:06.240
+surface from which they dive and for which
+they return. Because of this limitation on
+
+00:05:06.240 --> 00:05:11.069
+humans under the water, there's been an enormous
+amount of research over recent decades in
+
+00:05:11.069 --> 00:05:15.909
+building underwater robot systems. These are
+completely autonomous. They've got a number
+
+00:05:15.909 --> 00:05:20.659
+of sensors on board and we can send them off
+to do missions like photographic survey of
+
+00:05:20.659 --> 00:05:27.689
+wrecks, exploring for minerals and examining
+the health of assets such as coral reefs.
+
+00:05:27.689 --> 00:05:32.479
+Another place that humans cannot go is to
+other planets. And here is a collection of
+
+00:05:32.479 --> 00:05:37.659
+robots that have been sent to Mars. Here in
+the front we have the small robots. Sojourner,
+
+00:05:37.659 --> 00:05:43.620
+which was sent in 1997. Behind that is a robot
+which is a copy of Spirit and Opportunity
+
+00:05:43.620 --> 00:05:50.389
+which were sent to Mars in 2003. And over
+here, we have this giant robot, Curiosity,
+
+00:05:50.389 --> 00:05:55.879
+which was sent to Mars in 2012. Here is an
+example of some pictures of Mars taken from
+
+00:05:55.879 --> 00:06:01.740
+the Curiosity rover. And again, here we can
+see the size of the Curiosity rover with respect
+
+00:06:01.740 --> 00:06:03.300
+to a human engineer.
+
+00:06:03.300 --> 00:06:08.460
+The important message here is that there are
+environments that we want to go to learn information
+
+00:06:08.460 --> 00:06:14.999
+about the health or the state of the environment.
+The deep oceans, rain forest, volcanoes or
+
+00:06:14.999 --> 00:06:20.340
+other planets. But it's currently either too
+expensive or it's too dangerous to send human
+
+00:06:20.340 --> 00:06:25.330
+beings to those places. So we send robots
+there instead and they serve as our proxies
+
+00:06:25.330 --> 00:06:31.449
+or our agents and we use sensory information
+from those robots to learn about that environment
+
+00:06:31.449 --> 00:06:35.349
+rather than having to send human beings carrying
+instruments to those places.
+

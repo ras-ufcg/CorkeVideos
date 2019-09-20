@@ -1,0 +1,121 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:07.629 --> 00:00:12.619
+In the last lecture we talked about robot
+joint control and that’s the problem of
+
+00:00:12.619 --> 00:00:17.890
+how do we control the motor which is actuating
+the joint angle in a robot arm.
+
+00:00:17.890 --> 00:00:22.449
+Now in a real robot, this control problem
+is a little bit more complicated than we talked
+
+00:00:22.449 --> 00:00:27.810
+about in the last lecture and a pretty simple
+example can make that clear.
+
+00:00:27.810 --> 00:00:32.419
+If you consider in the problem of controlling
+my shoulder joint, then the weight of my arm,
+
+00:00:32.419 --> 00:00:37.440
+gravity acting on this arm is going to exert
+a torque on my shoulder and so the arm is
+
+00:00:37.440 --> 00:00:42.290
+going to want to fall down, so it’s the
+muscles in my arm, have to apply an opposite
+
+00:00:42.290 --> 00:00:49.100
+torque in order to keep my arm horizontal.
+So, a really important factor in robot arm control
+
+00:00:49.100 --> 00:00:54.920
+is the influence of gravity, the weight force
+that acts on the various links of a robot’s arm.
+
+00:00:54.920 --> 00:01:00.350
+Now, another problem is to do with the change
+in inertia. The motor, which is driving, for
+
+00:01:00.350 --> 00:01:05.740
+instance my shoulder joint sees the inertia
+of the motor itself, but it also sees the
+
+00:01:05.740 --> 00:01:10.590
+inertia of this link, so in order to accelerate
+this, going to have to accelerate all this
+
+00:01:10.590 --> 00:01:16.399
+part of my arm and that requires
+additional torque in the motor in order to
+
+00:01:16.399 --> 00:01:20.179
+achieve a particular acceleration; it’s
+a function of the inertia of my arm.
+
+00:01:20.179 --> 00:01:25.450
+Now, the inertia depends on the configuration
+of my arm. My arm here is got maximum inertia
+
+00:01:25.450 --> 00:01:28.969
+about the shoulder axis, but if the arm
+was in a configuration like this, it’s got
+
+00:01:28.969 --> 00:01:33.100
+less inertia. If it was in a configuration
+like this, it’s got less inertia still.
+
+00:01:33.100 --> 00:01:39.219
+So, the configuration of the links outwards
+from a particular joint are going to affect
+
+00:01:39.219 --> 00:01:44.569
+the inertia that that joint sees. So all of
+these sorts of effects, the gravity problem
+
+00:01:44.569 --> 00:01:49.780
+and the inertia problem are lumped together
+in what we call rigid body dynamic effects
+
+00:01:49.780 --> 00:01:53.240
+and that’s what we’re going to talk about
+in this particular lecture.
+
+00:01:53.240 --> 00:01:58.639
+Now, in the last lecture, we put up this block
+diagram and we worked our way through all
+
+00:01:58.639 --> 00:02:02.499
+the different blocks in the diagram. In this
+lecture, what we’re going to do is put the
+
+00:02:02.499 --> 00:02:10.739
+spotlight on the robot joint itself; this is where one joint interacts with the other joints in the robot arm.
+
+00:02:10.740 --> 00:02:16.230
+This is where the effects like changing gravity
+and changing inertia, these are mechanic effects,
+
+00:02:16.230 --> 00:02:22.010
+come from the robot joint, back through the gearbox and they influence the motor within the robot joint.
+
+00:02:22.010 --> 00:02:27.670
+So, that’s the purpose of this lecture,
+is to try and unpack some of these issues,
+
+00:02:27.670 --> 00:02:34.580
+see how these gravity problems and the inertia
+effects, impact on the individual motors that
+
+00:02:34.580 --> 00:02:36.470
+are driving the individual joints.
+
+00:02:36.470 --> 00:02:42.030
+We can’t ignore these effects if we want
+to do high quality control of robot joint motion.
+

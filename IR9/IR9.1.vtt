@@ -1,0 +1,150 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.379 --> 00:00:08.050
+In previous lectures, we talked a lot about
+the position and orientation of objects in
+
+00:00:08.050 --> 00:00:13.210
+the world. In this lecture, we're going to
+talk about the rate of change of position
+
+00:00:13.210 --> 00:00:18.170
+and the rate of change of orientation. We're
+going talk about velocities.
+
+00:00:18.170 --> 00:00:22.029
+In this picture, we can see a ball moving
+through the air. Before we can say anything
+
+00:00:22.029 --> 00:00:26.730
+meaningful about the velocity or position
+of the ball, we need to introduce a reference
+
+00:00:26.730 --> 00:00:32.640
+coordinate frame. By now this is a familiar
+concept to us.
+
+00:00:32.640 --> 00:00:37.040
+Now I can talk about the velocity of the ball
+and I describe that by this blue vector which
+
+00:00:37.040 --> 00:00:43.060
+I've labeled V. So V is the velocity vector
+and that describes the direction and the magnitude
+
+00:00:43.060 --> 00:00:49.320
+of the motion or the rate of change of position
+of the ball at this particular moment in time.
+
+00:00:49.320 --> 00:00:51.840
+The moment when this photograph was taken.
+
+00:00:51.840 --> 00:00:57.670
+Now velocity is a vector quantity. It's got
+3 components defined with respect to the coordinate
+
+00:00:57.670 --> 00:01:03.180
+frame and that is the rate of change of the
+X coordinate, that's x dot. The rate of change
+
+00:01:03.180 --> 00:01:07.409
+of the Y coordinate and the rate of change
+of the Z coordinate.
+
+00:01:07.409 --> 00:01:11.630
+Now we can consider the rather more complex
+motion of a Frisbee flying through the air
+
+00:01:11.630 --> 00:01:15.859
+and once again before we can say anything
+meaningful about the position or velocity
+
+00:01:15.859 --> 00:01:20.520
+of this object, we need to define a reference
+coordinate frame. Now the Frisbee has got
+
+00:01:20.520 --> 00:01:25.380
+a translational of velocity. It's moving through
+the air from the person who threw it to the
+
+00:01:25.380 --> 00:01:30.689
+place where its going to land but the Frisbee
+also spins and we say the Frisbee has got
+
+00:01:30.689 --> 00:01:36.469
+an angular velocity and that's denoted
+here by the red vector that I've called omega.
+
+00:01:36.469 --> 00:01:42.369
+Once again the translational velocity V
+and the angular velocity omega change continually
+
+00:01:42.369 --> 00:01:48.049
+as the object is moving. So these vectors
+represent translational and angular velocity
+
+00:01:48.049 --> 00:01:53.009
+at the instant that this picture was taken.
+The angular velocity, that's the red vector
+
+00:01:53.009 --> 00:01:58.999
+here, has got a direction and that is the
+axis about which the body is rotating at this
+
+00:01:58.999 --> 00:02:04.599
+particular instant in time and the magnitude
+of this vector is the rate of rotation around
+
+00:02:04.599 --> 00:02:08.960
+that axis. If the object was spinning very
+quickly, then the angular velocity vector
+
+00:02:08.960 --> 00:02:13.860
+would be very long. Once again, the angular
+velocity vector has got 3 components so we
+
+00:02:13.860 --> 00:02:20.000
+can take this red vector and we can describe
+components with respect to the X, Y, and Z
+
+00:02:20.000 --> 00:02:22.660
+axis of a reference coordinate frame.
+
+00:02:22.660 --> 00:02:27.840
+Now it's not just Frisbee and balls that have
+got translational and rotational velocity.
+
+00:02:27.840 --> 00:02:34.210
+The end effector of a robot arm has a translational
+velocity and an angular velocity and often
+
+00:02:34.210 --> 00:02:40.060
+we need to specify what these are and in fact
+command the robot joints so that we get the
+
+00:02:40.060 --> 00:02:44.980
+desired translational and angular velocity
+of the robot’s end effector.
+
+00:02:44.980 --> 00:02:51.420
+Typically we stack the elements of the translational
+velocity, the elements VX, VY and VZ and the
+
+00:02:51.420 --> 00:02:57.130
+elements of the angular velocity, omega x,
+omega y and omega z into one vector.
+
+00:02:57.130 --> 00:03:02.640
+That's six elements long and we refer to this
+as the spatial velocity or the twist of the
+
+00:03:02.640 --> 00:03:08.270
+object. We use the greek letter nu which looks
+a bit like a V to denote this special quantity,
+
+00:03:08.270 --> 00:03:13.510
+this spatial velocity or twist which has got
+6 elements. It's a six element vector.
+
