@@ -1,0 +1,324 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:04.060 --> 00:00:09.049
+This should be very familiar to us by now:
+a coordinate frame labeled A and a single
+
+00:00:09.049 --> 00:00:15.969
+point. We can describe the point by a vector
+with respect to frame A. The leading A in
+
+00:00:15.969 --> 00:00:22.160
+front of the P indicates that. I can write
+this vector in terms of its components - its
+
+00:00:22.160 --> 00:00:32.329
+distances along the XA axis and the YA axis
+and the unit vectors XA and YA hat. Now, let’s
+
+00:00:32.329 --> 00:00:38.000
+introduce a new coordinate frame, frame B,
+and it has got the same origin that’s rotated
+
+00:00:38.000 --> 00:00:44.940
+by the angle Theta. I can describe the point
+by a vector with respect to coordinate frame
+
+00:00:44.940 --> 00:00:52.620
+B and I can write that in terms of the unit
+vectors XB and YB hat and they’re indicated
+
+00:00:52.620 --> 00:01:00.440
+here in red. I can write expressions for XB
+hat in terms of cos Theta and sine Theta,
+
+00:01:00.440 --> 00:01:06.869
+and I can write an expression for YB hat in
+terms of minus sine Theta and cos Theta. If
+
+00:01:06.869 --> 00:01:14.210
+I substitute these two equations into here,
+I can write this expression. Then I can expand,
+
+00:01:14.210 --> 00:01:20.729
+rearrange and factor out XA hat and YA hat.
+The next thing to observe is because these
+
+00:01:20.729 --> 00:01:27.689
+two coordinate frames share an origin, then
+the vector AP and BP are in fact exactly the
+
+00:01:27.689 --> 00:01:35.770
+same. The coefficients of XA hat must be the
+same, so we can write this. And, the coefficients
+
+00:01:35.770 --> 00:01:41.909
+of YA hat must be the same, so we can write
+this. Let’s take those two expressions.
+
+00:01:41.909 --> 00:01:47.039
+Simplify things a little bit and we can now
+write this in matrix form. If you’re a little
+
+00:01:47.039 --> 00:01:50.770
+unsure about this step, then just multiply
+it out and you’ll find that you get the
+
+00:01:50.770 --> 00:01:56.229
+expressions above. Now, we write the vector
+part more concisely. Instead of in terms of
+
+00:01:56.229 --> 00:02:01.749
+its individual elements, we write it as the
+symbol P with respect to a particular coordinate
+
+00:02:01.749 --> 00:02:08.400
+frame. So, this expression relates the vector
+with respect to frame B to the vector with
+
+00:02:08.400 --> 00:02:16.689
+respect to frame A. It is achieved by multiplying
+the components of vector B by this 2 x 2
+
+00:02:16.689 --> 00:02:19.709
+matrix.
+We can make the expression even more concise
+
+00:02:19.709 --> 00:02:25.709
+and write it like this. And, we introduce
+the symbol R to represent a rotation matrix.
+
+00:02:25.709 --> 00:02:32.170
+This is a very concise way of representing
+the relationship between two vectors in different
+
+00:02:32.170 --> 00:02:38.140
+coordinate frames, and they are related by
+a rotation matrix R. Here we have the same
+
+00:02:38.140 --> 00:02:44.069
+expression as before, and to be a bit more
+precise, a bit more careful, we will add some
+
+00:02:44.069 --> 00:02:51.110
+labels to the matrix R and we will put a leading
+A and a trailing B. And, this indicates that
+
+00:02:51.110 --> 00:02:57.170
+R is a rotation matrix that rotates a vector
+from frame B to frame A. It’s important
+
+00:02:57.170 --> 00:03:03.519
+to note and not be confused by this: the matrix
+R depends on the rotation angle from frame
+
+00:03:03.519 --> 00:03:08.840
+A to frame B. The order of these two things
+is different and don’t get tripped up by
+
+00:03:08.840 --> 00:03:12.250
+that.
+Let’s have a look at the rotation matrix.
+
+00:03:12.250 --> 00:03:19.110
+A matrix like this is referred to as an orthogonal
+matrix or sometimes an orthonormal matrix.
+
+00:03:19.110 --> 00:03:24.020
+Each column in this matrix is a unit vector
+and you can show that for yourself pretty
+
+00:03:24.020 --> 00:03:29.890
+easily. Each column in the matrix is orthogonal
+to the other columns. In this case, there
+
+00:03:29.890 --> 00:03:35.050
+are only two columns and you can show, again
+very easily, that a vector formed by the first
+
+00:03:35.050 --> 00:03:40.530
+column is orthogonal to the vector formed
+by the second column. The dot product of the
+
+00:03:40.530 --> 00:03:46.030
+two columns will be equal to zero. A really
+useful property of an orthogonal matrix is
+
+00:03:46.030 --> 00:03:52.670
+that its inverse is the same as its transpose.
+Computing the inverse of a matrix is rather
+
+00:03:52.670 --> 00:03:57.110
+complex, whereas computing its transpose is
+really very simple. So, it’s great that
+
+00:03:57.110 --> 00:04:03.280
+we have a matrix whose inverse can be computed
+very simply by transposing the elements of
+
+00:04:03.280 --> 00:04:06.859
+the matrix.
+Another property of the rotation matrix is
+
+00:04:06.859 --> 00:04:13.060
+that its determinant is always equal to 1.
+And this means that, if I multiply any vector
+
+00:04:13.060 --> 00:04:17.870
+by this matrix, the length of the vector is
+unchanged. That’s an important property
+
+00:04:17.870 --> 00:04:22.620
+of a rotation matrix. When I rotate a vector
+from one coordinate frame to another, its
+
+00:04:22.620 --> 00:04:28.060
+length is not changed. A mathematician would
+say that a rotation matrix like this belongs
+
+00:04:28.060 --> 00:04:33.840
+to the special orthogonal group of dimension
+two. And, symbolically, we’d write that
+
+00:04:33.840 --> 00:04:41.180
+as R is an element of - belongs to - the set
+SO(2), special orthogonal group of dimension
+
+00:04:41.180 --> 00:04:47.200
+2. Here’s the expression from above. And,
+if I take the rotation matrix across the other
+
+00:04:47.200 --> 00:04:52.330
+side of the equal sign, I can write this.
+This indicates that if I want to rotate a
+
+00:04:52.330 --> 00:04:58.759
+vector from coordinate frame A into coordinate
+frame B, I use the inverse of the rotation
+
+00:04:58.759 --> 00:05:05.700
+matrix from coordinate frame A to coordinate
+frame B. And, remember, that the inverse of
+
+00:05:05.700 --> 00:05:11.419
+a rotation matrix is simply its transpose.
+The labels A and B in this first expression
+
+00:05:11.419 --> 00:05:16.270
+are completely general and it’s completely
+proper for me to swap the A and the B and
+
+00:05:16.270 --> 00:05:21.340
+now I can write this. These two equations
+are equivalent. So, now I can write this and
+
+00:05:21.340 --> 00:05:26.479
+this is really important. What it says is
+the rotation matrix from coordinate frame
+
+00:05:26.479 --> 00:05:31.610
+B to coordinate frame A is the inverse of
+the rotation matrix from coordinate frame
+
+00:05:31.610 --> 00:05:37.960
+A to coordinate frame B. Let’s have a look
+at some concrete examples of this in MATLAB.
+
+00:05:37.960 --> 00:05:43.800
+First of all, I’m going to create a two-dimensional
+rotation matrix using the Toolbox command
+
+00:05:43.800 --> 00:05:49.819
+rot2 for rotation matrix in two dimensions.
+And, I’m going to ask for a rotation angle
+
+00:05:49.819 --> 00:05:55.699
+of 0 radians. And, here is the 2 x 2 rotation
+matrix and it is the identity matrix. It’s
+
+00:05:55.699 --> 00:06:01.289
+got 1s on the diagonal and 0s on the off diagonal.
+I can ask for a rotation that corresponds
+
+00:06:01.289 --> 00:06:06.550
+to an angle say of nought point 2 radians
+and this is that rotation matrix. I can also
+
+00:06:06.550 --> 00:06:13.020
+specify the angle in degrees. So, for instance,
+I could ask for the angle R of 30 degrees
+
+00:06:13.020 --> 00:06:17.490
+and this is the corresponding rotation matrix.
+What I’m going to do is to put that result
+
+00:06:17.490 --> 00:06:24.270
+in to the workspace variable R and here is
+the rotation matrix again for a rotation of
+
+00:06:24.270 --> 00:06:29.560
+positive 30 degrees. Now, we talked a moment
+ago about this rotation matrix having a number
+
+00:06:29.560 --> 00:06:33.979
+of properties, and one of the properties was
+that the columns are orthogonal. So, I’m
+
+00:06:33.979 --> 00:06:39.479
+going to create a variable which represents
+the first column of a matrix, another variable
+
+00:06:39.479 --> 00:06:44.400
+which corresponds to the second column of
+the matrix. And, if I look at the dot product
+
+00:06:44.400 --> 00:06:49.110
+of those two vectors, we can see that it is
+equal to 0. Another property that we mentioned
+
+00:06:49.110 --> 00:06:54.490
+is that the determinant of the matrix is equal
+to positive 1 and we can quite easily verify
+
+00:06:54.490 --> 00:06:58.870
+that. Another property we talked about is
+that the inverse of the matrix is the same
+
+00:06:58.870 --> 00:07:03.660
+as its transpose. So, the inverse of the matrix
+is computed using the MATLAB built in function
+
+00:07:03.660 --> 00:07:08.770
+inv, and the transpose is computed using the
+quote operator just like that and we can see
+
+00:07:08.770 --> 00:07:12.629
+quite clearly that the inverse is equal to
+the transpose.
+
+00:07:12.629 --> 00:07:18.680
+Finally, we can visualize this rotation matrix
+as a rotated coordinate frame. To do that,
+
+00:07:18.680 --> 00:07:23.760
+I use the Toolbox function, trplot2. It’s
+a short for transform plot in two dimensions.
+
+00:07:23.760 --> 00:07:28.950
+I pass in the rotation matrix that I’m interested
+in and there is a representation of the coordinate
+
+00:07:28.950 --> 00:07:35.830
+frame. Now, it looks a little bit odd because
+I need to set the axis scaling to equal and
+
+00:07:35.830 --> 00:07:41.550
+here we see a right angled coordinate frame
+shown here in blue and we can see that it
+
+00:07:41.550 --> 00:07:44.669
+is rotated with respect to the world coordinate
+frame.
+

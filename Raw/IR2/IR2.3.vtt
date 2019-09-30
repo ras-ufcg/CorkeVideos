@@ -1,0 +1,176 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.800 --> 00:00:06.700
+Let's have a look at a slightly more realistic example.
+
+00:00:07.600 --> 00:00:10.400
+Here I have a 2-dimensional car and
+
+00:00:10.410 --> 00:00:15.480
+a 2-dimensional coordinate frame. I've labeled
+this coordinate frame W and that stands for
+
+00:00:15.480 --> 00:00:21.589
+the world coordinate frame and this is quite
+a common thing in robotics to have one reference
+
+00:00:21.589 --> 00:00:27.230
+frame that all other reference frames are
+described with respect to. And to indicate
+
+00:00:27.230 --> 00:00:33.260
+that very, very clearly, I've labeled the
+x and y axis with the subscript W, so it's
+
+00:00:33.260 --> 00:00:40.170
+very, very clear that this is the x-axis of
+the W frame and the y-axis of the W frame.
+
+00:00:40.170 --> 00:00:45.309
+Now let's indicate some points of interest
+in this car, the left seat: the right seat,
+
+00:00:45.309 --> 00:00:50.210
+one of the mirrors, door handles, and perhaps
+where we refuel it. I can describe each of
+
+00:00:50.210 --> 00:00:55.489
+these points by a vector, with respect to
+the world coordinate frame.
+
+00:00:55.489 --> 00:01:00.730
+Now let's imagine that a car has moved, now
+it's over here, I could now describe all these
+
+00:01:00.730 --> 00:01:06.900
+points again in terms of vectors with respect
+to the origin of the world coordinate frame.
+
+00:01:06.900 --> 00:01:10.790
+But it's a little bit tedious because the
+points haven't actually moved with respect
+
+00:01:10.790 --> 00:01:15.580
+to the car, the whole car has moved and now
+I have to redefine all the vectors again.
+
+00:01:15.580 --> 00:01:20.160
+Perhaps, there's a better way. And there it
+is, we are going to use the coordinate frame
+
+00:01:20.160 --> 00:01:24.120
+idea again and we are going to create a new
+coordinate frame and I'm going to attach it
+
+00:01:24.120 --> 00:01:30.120
+to the car. I labeled this frame C - C for
+car. And just to be clear, I labeled the
+
+00:01:30.120 --> 00:01:37.110
+axis XC and YC: X and Y axis are the coordinate
+frame that are attached to the car. Now it's
+
+00:01:37.110 --> 00:01:42.710
+a simple matter to describe all these points
+of interest on the car in terms of vectors
+
+00:01:42.710 --> 00:01:49.030
+with respect to the car's coordinate frame.
+Now if I moved the car, the vectors have changed
+
+00:01:49.030 --> 00:01:54.270
+with respect to the world but they haven't
+changed with respect to the car's coordinate frame.
+
+00:01:54.850 --> 00:02:00.930
+Let's simplify things a bit and introduce
+a pose here. So introduce another one of these
+
+00:02:00.930 --> 00:02:05.880
+fat arrows which represents a pose, and this
+is the pose from the world coordinate frame
+
+00:02:05.880 --> 00:02:12.410
+to the car's coordinate frame so it's W ksi Z.
+Now let's look at just a single point, one
+
+00:02:12.410 --> 00:02:16.690
+of the points on the door of the car. I'm
+going to label that point d and we created
+
+00:02:16.690 --> 00:02:23.560
+vector from frame C to this point d, and we
+denote that in the way we've already discussed
+
+00:02:23.560 --> 00:02:29.020
+we use a symbol P to denote that we're talking
+about a vector. C is the reference frame so
+
+00:02:29.020 --> 00:02:34.850
+this is a vector with respect to frame C,
+so it begins at the origin of frame C and
+
+00:02:34.850 --> 00:02:41.610
+it goes to the point d. Now let's consider
+that I want to know what is this vector: the
+
+00:02:41.610 --> 00:02:46.830
+point D with respect to the world coordinate
+frame. In some sort of simplistic way, what
+
+00:02:46.830 --> 00:02:52.100
+I want to do is to add these 2 arrows. I want
+to move along here, and I want to move along
+
+00:02:52.100 --> 00:02:59.370
+here. But it's not quite that simple, we can't
+add a pose and a vector. We can't add a fat
+
+00:02:59.370 --> 00:03:03.990
+arrow to a thin arrow. Poses and vectors are
+different mathematical objects so we need
+
+00:03:03.990 --> 00:03:06.030
+to do this a little bit carefully.
+
+00:03:06.030 --> 00:03:11.900
+The way we do it is to introduce a new operator,
+and it's the dot. In this formalism, we have
+
+00:03:11.900 --> 00:03:17.600
+a pose and it operates on a vector in order
+to transform it to a different coordinate
+
+00:03:17.600 --> 00:03:23.180
+frame. That's what this operator dot does:
+it transforms this vector which describes
+
+00:03:23.180 --> 00:03:29.110
+the point d with respect to the coordinate
+frame C, to a vector that describes the point
+
+00:03:29.110 --> 00:03:34.709
+d with respect to the coordinate frame W.
+It performs a transformation between coordinate
+
+00:03:34.709 --> 00:03:39.819
+frames. All of this is rather abstract. I’ve
+introduced this operator dot, but I haven't
+
+00:03:39.819 --> 00:03:45.130
+told you actually what it is - how would you
+code it? And, we introduced this abstract
+
+00:03:45.130 --> 00:03:50.170
+pose thing described by the Greek letter ksi
+- and I haven't said exactly what that is
+
+00:03:50.170 --> 00:03:54.830
+or how you could code that or implement that.
+These are things would get to in the following
+
+00:03:54.830 --> 00:03:56.370
+sections in this lecture.
+

@@ -1,0 +1,310 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.480 --> 00:00:07.480
+Now that I have my robot and a coordinate
+frame, I can measure the position of the robot
+
+00:00:07.480 --> 00:00:11.230
+with respect to the coordinate frame. So,
+with my tape measure, I can see that the robot
+
+00:00:11.230 --> 00:00:18.960
+has got an x coordinate of 18 centimetres
+and it has got a y coordinate of 16 centimetres.
+
+00:00:18.960 --> 00:00:24.650
+So I can describe the position of the robot
+in terms of a vector and the elements of the
+
+00:00:24.650 --> 00:00:30.039
+vector are 18 and 16 in units of centimetres.
+Now, I can introduce other objects in the
+
+00:00:30.039 --> 00:00:33.640
+environment. A robot can have a little friend.
+His little friend can sit over there, and
+
+00:00:33.640 --> 00:00:39.570
+I can measure the position of the little friend
+as well. And, he is sitting at about 38 centimetres
+
+00:00:39.570 --> 00:00:45.010
+in the x direction, that’s his x coordinate.
+And, the y coordinate, not so easy to measure,
+
+00:00:45.010 --> 00:00:50.760
+but I could say perhaps it’s 6 centimetres
+in the y direction. So, any object within
+
+00:00:50.760 --> 00:00:56.519
+this environment I can describe their position
+in terms of two coordinates with respect to
+
+00:00:56.519 --> 00:00:59.969
+the coordinate frame that I laid down at the
+beginning.
+
+00:00:59.969 --> 00:01:03.269
+Describing the position of the robot is an
+important part of the problem, but it’s
+
+00:01:03.269 --> 00:01:07.770
+not quite enough. We need to be able to say
+something about which way this robot is facing.
+
+00:01:07.770 --> 00:01:12.030
+So, if this robot wanted to move towards this
+robot, we need to know whether it’s going
+
+00:01:12.030 --> 00:01:17.000
+to move forwards, to the left, to the right,
+backwards. So, this robot is very different
+
+00:01:17.000 --> 00:01:22.890
+to this robot, to this robot, to this robot.
+It’s important to be able to describe which
+
+00:01:22.890 --> 00:01:27.610
+way it’s facing. And, in order to describe
+which way it’s facing, we can use the tools
+
+00:01:27.610 --> 00:01:32.320
+that we've already been discussing. And, what
+we can do is we can attach another coordinate
+
+00:01:32.320 --> 00:01:35.910
+frame to our robot. In this case, I’m going
+to use a green coordinate frame and I’m
+
+00:01:35.910 --> 00:01:39.560
+going to stick it on to the bottom of the
+robot with some, with some blue tack. Now
+
+00:01:39.560 --> 00:01:44.890
+with the robots here, we can describe its
+orientation - the way it’s facing in the
+
+00:01:44.890 --> 00:01:52.350
+world - by the orientation of this coordinate
+frame with respect to this coordinate frame.
+
+00:01:52.350 --> 00:01:58.100
+So, we can describe then the position of this
+new coordinate frame that we've attached to
+
+00:01:58.100 --> 00:02:06.290
+the robot in terms of a motion. We do a motion
+from the original coordinate frame, our reference
+
+00:02:06.290 --> 00:02:10.729
+coordinate frame, sometimes called the world
+coordinate frame, that we move the origin
+
+00:02:10.729 --> 00:02:17.290
+of this frame to here and then we rotate.
+We can do the same thing for the little robot.
+
+00:02:17.290 --> 00:02:21.469
+We can describe its pose with respect to the
+world coordinate frame. To do that, I’m
+
+00:02:21.469 --> 00:02:27.400
+going to attach a blue coordinate frame to
+this little robot, and, I’m going to orient
+
+00:02:27.400 --> 00:02:31.859
+it so that the x-axis is pointing forward.
+And this is a pretty common convention for
+
+00:02:31.859 --> 00:02:39.039
+airplane, ships, cars, robots. We make the
+x-axis the direction of normal motion for the machine.
+
+00:02:40.360 --> 00:02:42.760
+Now, we have a very simple representation
+
+00:02:42.769 --> 00:02:48.420
+of the original environment where it’s described
+now entirely in terms of a number of coordinate
+
+00:02:48.420 --> 00:02:52.930
+frames which represent the pose of the important
+entities in that environment with respect
+
+00:02:52.930 --> 00:02:58.349
+to the world coordinate frame. Now, just as
+we did for the big robot, we can consider
+
+00:02:58.349 --> 00:03:03.569
+the pose of the little robot in terms of a
+motion. So, imagine that we move the coordinate
+
+00:03:03.569 --> 00:03:09.489
+frame from where it lies on top of the reference
+coordinate frame. We make a translational
+
+00:03:09.489 --> 00:03:15.099
+motion, move it horizontally, we move it vertically,
+and then we rotate it and rotate it quite
+
+00:03:15.099 --> 00:03:19.530
+a bit until it lies on top of that coordinate
+frame. So, that is the pose of the little
+
+00:03:19.530 --> 00:03:25.269
+robot with respect to the world coordinate
+frame described in terms of a positional component
+
+00:03:25.269 --> 00:03:30.529
+and a rotational component.
+So, now we have described the pose of the
+
+00:03:30.529 --> 00:03:34.700
+little robot with respect to the world coordinate
+frame. We previously described the pose of
+
+00:03:34.700 --> 00:03:39.120
+the big robot with respect to the world coordinate
+frame. But, we can also describe the pose
+
+00:03:39.120 --> 00:03:44.689
+of the little robot with respect to the big
+robot, and we can do that by picking up the
+
+00:03:44.689 --> 00:03:50.099
+big robot’s coordinate frame and we make
+a translation in the world x direction, and
+
+00:03:50.099 --> 00:03:55.209
+then in the world y direction, and then we
+rotate it until the axis line up. And, that
+
+00:03:55.209 --> 00:04:01.439
+then is a relative motion or relative pose
+from this coordinate frame to this one.
+
+00:04:01.439 --> 00:04:07.870
+I’m going to use this Greek letter which
+is pronounced as ksi to represent pose. In
+
+00:04:07.870 --> 00:04:13.480
+a two-dimensional world, pose has got three
+parameters: x and y which represent the offset
+
+00:04:13.480 --> 00:04:18.880
+from the origin of one coordinate frame to
+the origin of the next coordinate frame, and
+
+00:04:18.880 --> 00:04:26.000
+the angle Theta which represents the rotation
+from one coordinate frame to the next. There
+
+00:04:26.000 --> 00:04:30.620
+is an important convention when we talk about
+the rotation of one coordinate frame with
+
+00:04:30.620 --> 00:04:36.110
+respect to another, and that is that angles
+increase positively in the anticlockwise direction.
+
+00:04:36.110 --> 00:04:41.840
+So, if this is my original coordinate frame,
+if I rotate that by the angle Theta, it looks
+
+00:04:41.840 --> 00:04:47.530
+like this. Importantly, positive rotation
+is in the anticlockwise direction.
+
+00:04:47.530 --> 00:04:55.000
+We can also think about pose as a move, a
+motion in the x direction and in the y direction,
+
+00:04:55.000 --> 00:04:59.280
+and then a rotation or twist by the amount Theta.
+
+00:04:59.280 --> 00:05:04.810
+So, we can describe that the position of this
+new coordinate frame that we have attached
+
+00:05:04.810 --> 00:05:12.380
+to the robot in terms of a motion. We do a
+motion from the original coordinate frame,
+
+00:05:12.380 --> 00:05:16.440
+our reference coordinate frame, sometimes
+called the world coordinate frame, that we
+
+00:05:16.440 --> 00:05:21.540
+move the origin of this frame to here, and
+then we rotate.
+
+00:05:21.540 --> 00:05:28.090
+So, let’s summarise what we've covered in
+this section. A point can be described by
+
+00:05:28.090 --> 00:05:34.090
+a vector with respect to a particular coordinate
+frame, and, when we do that, we introduce
+
+00:05:34.090 --> 00:05:40.310
+some additional notation. We use the symbol
+lower case p to represent a vector. The A
+
+00:05:40.310 --> 00:05:46.520
+in front denotes the coordinate frame from
+which the vector starts. So, this vector begins
+
+00:05:46.520 --> 00:05:52.660
+from the origin of coordinate frame A. The
+trailing B is the destination. It’s the
+
+00:05:52.660 --> 00:05:57.580
+name of the point that the vector points to.
+The pose of a coordinate frame can be described
+
+00:05:57.580 --> 00:06:03.610
+with respect to another coordinate frame.
+I used this fat arrow to represent the pose
+
+00:06:03.610 --> 00:06:09.580
+- the motion from coordinate frame A to coordinate
+frame B. Now, the motion is more complex than
+
+00:06:09.580 --> 00:06:15.640
+just a translation like an ordinary vector.
+It includes a translation and a rotation,
+
+00:06:15.640 --> 00:06:19.020
+so that’s why I used a different kind of
+arrow. You know that it’s fatter and it’s
+
+00:06:19.020 --> 00:06:23.920
+got a different kind of head.
+Symbolically, I describe it like this. I use
+
+00:06:23.920 --> 00:06:28.980
+the Greek letter ksi to denote that we’re
+talking about a pose. The leading A is the
+
+00:06:28.980 --> 00:06:34.360
+frame of reference. That’s where I start
+from. The trailing B is where I want to end
+
+00:06:34.360 --> 00:06:40.290
+up. This symbol describes a relative motion,
+a relative pose from the coordinate frame
+
+00:06:40.290 --> 00:06:46.670
+A to the coordinate frame B. We can consider
+a pose as a motion. We can consider it as
+
+00:06:46.670 --> 00:06:52.560
+a translation and a rotation. And, for the
+two-dimensional case, the pose is described
+
+00:06:52.560 --> 00:06:57.360
+by three numbers: two translational components
+and one rotational component.
+

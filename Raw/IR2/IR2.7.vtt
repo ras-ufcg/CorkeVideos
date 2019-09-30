@@ -1,0 +1,434 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.620 --> 00:00:09.280
+Now let's bring translation into the picture.
+Coordinate frame A, Coordinate frame B which
+
+00:00:09.280 --> 00:00:14.969
+is translated and rotated with respect to
+coordinate frame A and a point P. We can represent
+
+00:00:14.969 --> 00:00:20.410
+the point P by a vector with respect to frame
+B and that vector can be described in terms
+
+00:00:20.410 --> 00:00:25.059
+of its components along the XB and YB axis.
+
+00:00:25.059 --> 00:00:30.989
+Now we can rotate that vector into a new frame,
+coordinate frame V, and coordinate frame V
+
+00:00:30.989 --> 00:00:36.010
+has axes which are parallel to coordinate
+frame A. We've already talked about how to
+
+00:00:36.010 --> 00:00:42.280
+rotate a vector from one coordinate frame
+to another using a rotation matrix. And as
+
+00:00:42.280 --> 00:00:46.710
+a sanity check that we've written this expression
+correctly, we noticed that these two Bs are
+
+00:00:46.710 --> 00:00:49.649
+next to each other. That's a good thing.
+
+00:00:49.649 --> 00:00:55.569
+Now let's describe the origin of coordinate
+frame V with respect to coordinate frame A
+
+00:00:55.569 --> 00:01:03.019
+and we do that with a vector. That's a vector
+from A to V. Now we're allowed to add vectors
+
+00:01:03.019 --> 00:01:09.650
+so we can add this vector ATV to the vector
+VP to obtain the vector that describes the
+
+00:01:09.650 --> 00:01:15.510
+point P with respect to coordinate frame A.
+We can do that because these two vectors are
+
+00:01:15.510 --> 00:01:20.970
+described with respect to coordinate frames
+whose axes are parallel to one another. I
+
+00:01:20.970 --> 00:01:26.470
+can substitute one equation into the other
+and write this. And again because these two
+
+00:01:26.470 --> 00:01:30.700
+coordinate frames are parallel I can write
+this.
+
+00:01:30.700 --> 00:01:35.220
+Let's expand the vectors and matrix in this
+expression and write them in terms of their
+
+00:01:35.220 --> 00:01:40.230
+elements. Now I can pull a little bit of a
+trick and now write it like this. If you're
+
+00:01:40.230 --> 00:01:45.470
+unsure about this step, expand out the matrix
+and convince yourself that they are exactly the same.
+
+00:01:46.310 --> 00:01:53.200
+Now this expression has got a two-element
+vector and a three-element vector over here.
+
+00:01:53.200 --> 00:01:57.650
+Let's make things a little bit more symmetric
+and write it like this. What we've done now
+
+00:01:57.650 --> 00:02:05.720
+is added some zeros and some ones to the bottom
+row of the matrix. Previously we had a 2x2
+
+00:02:05.720 --> 00:02:12.659
+rotation matrix. Now we see that that's embedded
+into the top left corner of a 3x3 matrix.
+
+00:02:12.659 --> 00:02:17.980
+And our vectors which used to have 2 elements
+now have three elements. We can write this
+
+00:02:17.980 --> 00:02:24.129
+even more succinctly in this form. The notation,
+the tilde, above the little p indicates that
+
+00:02:24.129 --> 00:02:28.650
+it is a homogeneous vector. It has got three
+elements not two, and we'll talk about that
+
+00:02:28.650 --> 00:02:33.709
+in just a moment. The point is described with
+respect to coordinate frame A by a homogeneous
+
+00:02:33.709 --> 00:02:39.079
+vector which we can obtain from the homogeneous
+vector of the point with respect to coordinate
+
+00:02:39.079 --> 00:02:43.139
+frame B multiplied by this matrix.
+
+00:02:43.139 --> 00:02:48.819
+The elements of the matrix include the rotation
+matrix, which is the function of the orientation;
+
+00:02:48.819 --> 00:02:54.859
+Theta, and the translation between the origin
+of coordinate frame A and coordinate frame
+
+00:02:54.859 --> 00:03:01.249
+B. We have the familiar representation of
+a vector in a 2-dimensional plane, two numbers
+
+00:03:01.249 --> 00:03:07.439
+A and B. The homogeneous vector has got three
+elements in it. It's got A and B and an additional
+
+00:03:07.439 --> 00:03:15.040
+element which is set to 1. This we refer to
+as a homogeneous transformation. It is a 3x3
+
+00:03:15.040 --> 00:03:22.459
+matrix. The homogeneous transformation matrix
+T comprises a rotation matrix which is 2x2
+
+00:03:22.459 --> 00:03:27.989
+and a translation vector which is a 2x1 matrix
+padded out with a couple of zeros and a one.
+
+00:03:27.989 --> 00:03:33.579
+This matrix describes a relative pose. It
+describes the pose B with respect to the pose
+
+00:03:33.579 --> 00:03:39.499
+of A. All of that is encoded in this single
+3x3 matrix. A mathematician would say that
+
+00:03:39.499 --> 00:03:46.079
+homogeneous transformation belongs to the
+special Euclidian group of dimension 2. Symbolically
+
+00:03:46.079 --> 00:03:51.419
+we would say matrix T belongs to the set SE(2).
+
+00:03:51.419 --> 00:03:58.209
+Finally it's time to start making these abstract
+concepts real. Pose is just a matrix. Where
+
+00:03:58.209 --> 00:04:04.809
+we had the symbol ksi before we can substitute
+this 3x3 homogeneous transformation matrix.
+
+00:04:04.809 --> 00:04:11.129
+When we talk about compounding or joining
+two poses together using the O+ operator,
+
+00:04:11.129 --> 00:04:17.139
+that is exactly the same as multiplying these
+two homogeneous transformations. We use the
+
+00:04:17.139 --> 00:04:23.780
+O- operator to indicate the negation of a
+relative pose, and that is simply the inverse
+
+00:04:23.780 --> 00:04:29.449
+of a homogeneous transformation matrix. I
+mentioned earlier that the inverse of a rotation
+
+00:04:29.449 --> 00:04:34.550
+matrix is equal to its transpose. That is
+not the case for a homogeneous transformation
+
+00:04:34.550 --> 00:04:41.389
+matrix. You need to perform a proper matrix
+inverse: invert a 3x3 matrix.
+
+00:04:41.389 --> 00:04:47.780
+We introduced a dot operator which transforms
+a vector from one coordinate frame to another.
+
+00:04:47.780 --> 00:04:55.550
+And that is simply the product of the homogeneous
+transformation matrix and the vector represented
+
+00:04:55.550 --> 00:05:01.970
+in homogeneous form. Remember that the homogeneous
+vector is obtained from the original vector
+
+00:05:01.970 --> 00:05:08.550
+P, the two vector and we augment or append
+a one element to that to form a three element
+
+00:05:08.550 --> 00:05:08.979
+vector.
+
+00:05:08.979 --> 00:05:14.289
+Here we are in MATLAB and we're going to experiment
+with these 2-dimensional homogeneous transformation
+
+00:05:14.289 --> 00:05:19.879
+matrices. So what I’m going to do is introduce
+a function called transl2 which creates a
+
+00:05:19.879 --> 00:05:25.860
+homogeneous transformation representing a
+pure translation, that is a translation of
+
+00:05:25.860 --> 00:05:30.919
+1 in the x direction and 2 in the y direction.
+
+00:05:30.919 --> 00:05:36.849
+Previously we saw how to create a 2-dimensional
+rotation matrix, for instance a rotation of
+
+00:05:36.849 --> 00:05:45.669
+30 degrees is created like this. We see that
+this rotation matrix is only 2x2 compared
+
+00:05:45.669 --> 00:05:52.840
+to the 3x3 homogeneous transformation matrix.
+So I can create a homogeneous transformation
+
+00:05:52.840 --> 00:06:00.490
+matrix equivalent of this rotation by prefixing
+with the letter T. This function returns a
+
+00:06:00.490 --> 00:06:06.000
+3x3 homogeneous transformation matrix. We
+can see the rotation matrix part up in the
+
+00:06:06.000 --> 00:06:12.120
+top left corner. We can see that the translation
+part of this matrix is equal to zero. This
+
+00:06:12.120 --> 00:06:16.820
+homogeneous transformation matrix represents
+a pure rotation.
+
+00:06:17.400 --> 00:06:31.420
+Now we can multiply these two together. transl2, Multiply it by the rotation part - 30 degrees.
+
+00:06:31.420 --> 00:06:38.100
+And now what I have is a homogeneous transformation which represents a pose.
+
+00:06:38.110 --> 00:06:41.790
+It's got a rotational component and it's got a translational component.
+
+00:06:41.790 --> 00:06:45.470
+Now the toolbox has got a shorthand function to achieve this.
+
+00:06:45.600 --> 00:06:50.539
+I pass in the x and y translational
+parts; the rotational part and the option
+
+00:06:50.539 --> 00:06:55.739
+to say that that angle is specified in units
+of degrees. We have exactly the same matrix here.
+
+00:06:56.720 --> 00:07:02.840
+Now let's plot this particular pose and see
+what it looks like. And to do that I'm going
+
+00:07:02.849 --> 00:07:09.219
+to create an axis in which to plot, and x
+is going to vary from 0-5 and y is going to
+
+00:07:09.219 --> 00:07:16.129
+vary from 0-5. I need to set the aspect ratio
+so that everything looks reasonable, so I'm
+
+00:07:16.129 --> 00:07:24.039
+going to set the axis so that the aspect ratio
+is square. I'm going to put a hold on because
+
+00:07:24.039 --> 00:07:29.250
+I'm going to plot a few poses. The first pose
+I'm going to plot I'm going to put into workspace
+
+00:07:29.250 --> 00:07:34.919
+variable T1 and it is the pose that I looked
+at just a moment ago: 1 in the x direction,
+
+00:07:34.919 --> 00:07:40.680
+2 in the y direction and the rotation of 30
+degrees. There is a homogeneous transformation
+
+00:07:40.680 --> 00:07:43.669
+matrix. Now I'm going to plot that.
+
+00:07:43.669 --> 00:07:50.009
+To plot that I use the function trplot2. The
+2 suffix means that it's for 2-dimensional
+
+00:07:50.009 --> 00:07:57.039
+poses. Pass in the pose represented by the
+homogeneous transformation. I'm going to plot
+
+00:07:57.039 --> 00:08:03.960
+it as a frame named 1, and I'm going to plot
+it in the color blue. There are quite a few
+
+00:08:03.960 --> 00:08:11.539
+options there. And there we see the pose plotted.
+We can see that it does indeed have a translational
+
+00:08:11.539 --> 00:08:17.090
+component; 1 in the x direction, 2 in the
+y direction. And it is rotated with respect
+
+00:08:17.090 --> 00:08:19.719
+to the world coordinate frame.
+
+00:08:19.719 --> 00:08:26.229
+I can create another pose quite easily. I
+can create a pose that has got an offset of
+
+00:08:26.229 --> 00:08:32.469
+2 in the x direction. 1 in the y direction
+and no rotation. That's what the homogeneous
+
+00:08:32.469 --> 00:08:37.469
+transformation looks like. Now I'm going to
+plot that. I'm going to use the function trplot2
+
+00:08:37.469 --> 00:08:42.649
+again, pass in the homogeneous transformation
+matrix, and I’m going to plot it as a frame
+
+00:08:42.649 --> 00:08:49.440
+labeled 2. To be different I'm going to plot
+it as a red colored frame, and here we see
+
+00:08:49.440 --> 00:08:56.950
+the second pose. It's got no rotation. It
+has got a translational component.
+
+00:08:56.950 --> 00:09:03.600
+Now I can compose 2 of these poses. I’m
+going to say pose 3 is equal to pose 1 compounded
+
+00:09:03.600 --> 00:09:10.450
+with pose 2. That's what the transformation
+matrix looks like. I can plot that. I'm going
+
+00:09:10.450 --> 00:09:20.160
+to plot that one, trplot2, pass in the matrix,
+there's going to be a frame, called 3 and
+
+00:09:20.160 --> 00:09:26.000
+I'm going to color that one green. So if
+I compound those 2 poses I end up with the
+
+00:09:26.000 --> 00:09:31.230
+pose shown here as 3. The way we can think
+about this is we moved from the world frame
+
+00:09:31.230 --> 00:09:38.700
+2 from frame 1 which is rotated, and then
+in frame 1 we then moved 2 in the x direction
+
+00:09:38.700 --> 00:09:45.320
+and 1 in the y direction. But X and Y direction
+are frame 1, not on the world frame, and that
+
+00:09:45.320 --> 00:09:50.160
+gets us to the frame labeled as frame 3.
+
+00:09:50.160 --> 00:09:56.740
+I could compound the poses in the opposite
+order. I'm going to create a new pose T4 and
+
+00:09:56.740 --> 00:10:05.420
+it's going to be pose 2 compounded with pose
+1. We can see that's what the homogeneous
+
+00:10:05.420 --> 00:10:12.110
+transformation matrix looks like and it's
+different to T3. I can plot this. I can pass
+
+00:10:12.110 --> 00:10:21.130
+in T4. I can plot it as a frame labeled 4
+and I'm going to plot it in the color cyan.
+
+00:10:21.130 --> 00:10:31.260
+Here we can see the frame 4 which has resulted
+from compounding pose 2 with post 1. Now I'm
+
+00:10:31.260 --> 00:10:36.570
+going to introduce a point into the plot.
+I'm going to introduce a point at a coordinate
+
+00:10:36.570 --> 00:10:44.360
+3, 2. I need to transpose that so that it
+becomes a column vector. There it is. I can
+
+00:10:44.360 --> 00:10:53.040
+plot that. Plot point P, and I'm going to
+plot it as an asterisk. There we see it in
+
+00:10:53.040 --> 00:10:59.360
+our figure. If I want to determine the coordinate
+of the point with respect to frame 1 then
+
+00:10:59.360 --> 00:11:08.990
+what I need to do is to use the inverse of
+the relative pose 1, which is that, and multiply
+
+00:11:08.990 --> 00:11:14.910
+it by the points coordinate in homogeneous
+form. I'll take point P and I'm going to append
+
+00:11:14.910 --> 00:11:22.649
+a 1 to it. What I have now is the homogeneous
+coordinate of the asterisk with respect to
+
+00:11:22.649 --> 00:11:24.260
+the coordinate frame 1.
+
