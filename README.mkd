@@ -12,19 +12,34 @@ Translation Team
 The translation was coordinated by Yuri Loia, and the team was composed by: 
 
 Alysson Hyago, 
+
 Andhré Carvalho, 
+
 Caio Porto, 
+
 Debora Nunes, 
+
 Felipe Nascimento, 
-Giovana Oliveira , 
+
+Giovana Oliveira, 
+
 João Pedro Melquiades, 
+
 Lara Sobral, 
+
 Lucas Fernando,
+
 Maysa Freire, 
+
 Natã Macedo, 
+
 Vinicius França, 
-Pyettra Feitosa, 
+
+Pyettra Feitosa,
+
 Victor Marinho, 
+
 Vinicius Formiga, 
+
 Vitor Araujo
 
