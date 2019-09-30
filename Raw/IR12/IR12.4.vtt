@@ -1,0 +1,189 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.820 --> 00:00:08.670
+Let’s look in a bit more detail at food,
+a fundamental requirement for human life.
+
+00:00:08.670 --> 00:00:14.320
+The United Nations predicts that by the year
+2050, we will need a 70% increase in food
+
+00:00:14.320 --> 00:00:21.240
+production. Not all of this is due to increase
+population. A lot of it is due to the requirements
+
+00:00:21.240 --> 00:00:25.039
+of many of the people on our planet to have
+more food than they’re currently getting
+
+00:00:25.039 --> 00:00:30.869
+and perhaps higher quality food, higher calorific
+value food. So, a big requirement to increase
+
+00:00:30.869 --> 00:00:37.710
+food production and 70% is a massive increase
+to be achieved in something like 30 years.
+
+00:00:37.710 --> 00:00:42.739
+It’s pretty obvious that we need food for
+people to eat. We also need food for animals
+
+00:00:42.739 --> 00:00:47.210
+to eat. They are part of our food chain. So,
+a lot of the food that we produce is eaten
+
+00:00:47.210 --> 00:00:50.800
+by animals and in turn, many of us eat those
+animals.
+
+00:00:50.800 --> 00:00:55.910
+A somewhat surprising use for food is putting
+it in cars. There’s quite a movement to
+
+00:00:55.910 --> 00:01:01.719
+turn food product, particularly corn into
+ethanol and we put the ethanol into the gas
+
+00:01:01.719 --> 00:01:06.550
+tanks of our cars. So, there’s a lot of
+competition for the food that we produce.
+
+00:01:06.550 --> 00:01:10.390
+Absolutely, we want food for people to eat
+but there’s also food that’s required
+
+00:01:10.390 --> 00:01:14.299
+to feed animals and there’s also food that’s
+required to feed cars.
+
+00:01:14.299 --> 00:01:18.860
+As our population grows, so too does the size
+of our cities. The cities get larger; they
+
+00:01:18.860 --> 00:01:23.960
+encroach on productive farmland. They take
+that land out of food production because we
+
+00:01:23.960 --> 00:01:29.130
+build houses and apartments on it, so that
+means we have less land on which to grow food.
+
+00:01:29.130 --> 00:01:33.470
+Now, this is a problem because overall we
+need to grow more food and we’re removing
+
+00:01:33.470 --> 00:01:37.810
+land which is the essential resource when
+it comes to food production.
+
+00:01:37.810 --> 00:01:43.100
+Another issue is that farmers as a population
+are getting older. This statistic is from
+
+00:01:43.100 --> 00:01:47.719
+my country, Australia, and we look at this
+histogram here and it shows that the average
+
+00:01:47.719 --> 00:01:53.740
+age of farmers is well above 50. There's not
+young people moving into farming as a profession
+
+00:01:53.740 --> 00:01:58.860
+or as a lifestyle. A very scary statistic
+in my country, Australia, is that in the next
+
+00:01:58.860 --> 00:02:04.340
+decade, half of the farmers are going to retire.
+So, who’s going to do the work on the land
+
+00:02:04.340 --> 00:02:06.310
+to produce the food that we need?
+
+00:02:06.310 --> 00:02:11.670
+So, one of the opportunities for robotics
+is to help and solve this food production
+
+00:02:11.670 --> 00:02:17.990
+problem. One application is to convert these
+large machines which are used in industrial
+
+00:02:17.990 --> 00:02:22.830
+scale food production. Instead of having a
+human being on board the machine driving it,
+
+00:02:22.830 --> 00:02:29.580
+we turn it into a robotic vehicle so it can
+drive all by itself, 24 hours a day, seven days a week.
+
+00:02:29.580 --> 00:02:34.500
+Another thing we can do is to replace human-driven
+machines which are used to spray crops in
+
+00:02:34.500 --> 00:02:41.800
+the field and we spray the crops to eliminate
+insect and weed pests. Rather than doing indiscriminate
+
+00:02:41.800 --> 00:02:46.390
+spraying as you see here, we can have much
+more intelligent, robotic systems which move
+
+00:02:46.390 --> 00:02:51.270
+perhaps more slowly through the crop and use
+vision sensors which identify insects pests
+
+00:02:51.270 --> 00:02:56.670
+or undesirable plants which we call weeds
+and apply the appropriate chemical to just
+
+00:02:56.670 --> 00:03:02.050
+where that occurrence is, not indiscriminately,
+not everywhere. That’s got huge environmental
+
+00:03:02.050 --> 00:03:07.150
+benefits and it’s also got huge cost benefits
+because we can reduce the amount of chemical
+
+00:03:07.150 --> 00:03:09.390
+that needs to be applied.
+
+00:03:09.390 --> 00:03:15.040
+The use of chemical herbicides to control
+weeds has led to an unexpected outcome and
+
+00:03:15.040 --> 00:03:20.810
+that is that many weed species have now evolved
+a resistance to these standard herbicides.
+
+00:03:20.810 --> 00:03:24.940
+That presents a particular challenge to an
+agricultural system which has developed over
+
+00:03:24.940 --> 00:03:31.040
+decades and become incredibly reliant on the
+use of herbicides for weed control. So, perhaps
+
+00:03:31.040 --> 00:03:36.970
+smart robots could identify weeds in the soil
+and destroy them mechanically as shown here,
+
+00:03:36.970 --> 00:03:40.620
+actually disturb the soil around the weed
+to destroy the weed.
+
+00:03:40.620 --> 00:03:45.630
+Here’s a video of a robot we’ve developed
+in a research project in my lab here at QUT.
+
+00:03:45.630 --> 00:03:51.270
+This is an early prototype of our weed spraying
+robot. It’s a very small machine. It’s
+
+00:03:51.270 --> 00:03:56.720
+guided by cameras and other sorts of sensors.
+It can navigate along crop rows and apply
+
+00:03:56.720 --> 00:03:59.000
+herbicide only where it’s required.
+

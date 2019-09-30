@@ -1,0 +1,359 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.810 --> 00:00:08.620
+We're going to talk now about the shape of
+the Jacobian matrix. A robot manipulator has
+
+00:00:08.620 --> 00:00:12.959
+in general got N joints, N could be a small
+number, the robot might have only two
+
+00:00:12.959 --> 00:00:17.150
+joints. The robots might have 100 joints.
+I want to understand what's the effect of
+
+00:00:17.150 --> 00:00:22.230
+the number of joints on the shape of the robot
+manipulator Jacobian matrix, because the Jacobian
+
+00:00:22.230 --> 00:00:28.849
+has one column per joint. So, an N joint robot
+has a manipulator Jacobian matrix with N columns.
+
+00:00:28.849 --> 00:00:34.090
+The Jacobian has one row for each element
+of the spatial velocity vector. So, for motion
+
+00:00:34.090 --> 00:00:39.080
+in three dimensions, the spatial velocity
+vector has got 6 elements – 3 for translational
+
+00:00:39.080 --> 00:00:43.800
+velocity and 3 for angular velocity. And,
+that means the Jacobian matrix always has
+
+00:00:43.800 --> 00:00:48.970
+six rows. So, the robot manipulator Jacobian
+matrix is a 6 x N matrix.
+
+00:00:48.970 --> 00:00:53.980
+This robot only has 4 joints and we call it
+an under actuated robot. And, that means that
+
+00:00:53.980 --> 00:00:59.530
+its task space doesn't cover all of the set
+SE3. Although the end effector can achieve
+
+00:00:59.530 --> 00:01:05.800
+all positions within the limits of its works
+space, it's not able to achieve all possible orientations.
+
+00:01:05.800 --> 00:01:10.359
+So, for example, when the robot in a configuration
+like this, it can adjust the orientation of
+
+00:01:10.359 --> 00:01:14.229
+the gripper like that. But, it's impossible
+for it to adjust the orientation of the gripper
+
+00:01:14.229 --> 00:01:17.869
+in that direction or in that direction.
+
+00:01:18.640 --> 00:01:23.740
+Let's consider the case of a robot with only
+4 joints. This is often referred to as an
+
+00:01:23.740 --> 00:01:29.890
+under-actuated robotic system. In this case,
+the robot Jacobian has got 6 rows and 4 columns.
+
+00:01:29.890 --> 00:01:35.060
+The Jacobian is not square, and therefore,
+we cannot invert it. But that's not necessarily
+
+00:01:35.060 --> 00:01:40.689
+a problem. A robot like this is unable to
+rotate the tool about the x or y axis. It's
+
+00:01:40.689 --> 00:01:45.880
+just the way it's constructed. It cannot rotate
+the tool in that way. So, we can strike out
+
+00:01:45.880 --> 00:01:51.679
+these elements of the robot’s spatial velocity.
+Since we can't control velocity around these
+
+00:01:51.679 --> 00:01:53.209
+axes, let's just remove them.
+
+00:01:53.209 --> 00:01:58.469
+If I do that, then I should also remove the
+corresponding rows in the Jacobian matrix.
+
+00:01:58.469 --> 00:02:04.969
+And, the result now is a 4 x 4 system. And
+now, the Jacobian matrix is invertible. Given
+
+00:02:04.969 --> 00:02:09.850
+a desired spatial velocity, it's a smaller
+spatial velocity vector now. We can compute
+
+00:02:09.850 --> 00:02:14.319
+the robot joint angle velocities. We need
+to obtain that spatial velocity.
+
+00:02:14.319 --> 00:02:19.840
+Here's a robot that has perhaps 100 joints.
+In this case, the manipulator Jacobian is
+
+00:02:19.840 --> 00:02:26.530
+a 6 x 100 matrix. It's not square and we
+cannot invert it. We can compute something
+
+00:02:26.530 --> 00:02:31.260
+called the pseudo-inverse and that's often
+denoted by the symbol plus.
+
+00:02:31.260 --> 00:02:36.239
+The pseudo-inverse is computed in this way.
+This looks quite straight forward until you
+
+00:02:36.239 --> 00:02:41.790
+remind yourself that the term inside here
+is in fact a 100 x 100 matrix and we need to
+
+00:02:41.790 --> 00:02:47.750
+invert that. And computationally, that's not
+a simple thing to do. However, if we use this
+
+00:02:47.750 --> 00:02:52.769
+pseudo-inverse, we can write an expression
+that relates the desired spatial velocity
+
+00:02:52.769 --> 00:03:00.549
+of the robots end effector to the required
+velocity of each of its 100 joints.
+
+00:03:00.549 --> 00:03:04.819
+But we can do an extra thing as well in the case
+of a robot like this – a robot with more
+
+00:03:04.819 --> 00:03:11.349
+than 6 joints. We can add this term here and
+we refer to this as the null-space motion.
+
+00:03:11.349 --> 00:03:16.599
+It's pre-multiplied by this matrix expression
+here, which effectively filters it, so that
+
+00:03:16.599 --> 00:03:21.980
+this motion does not affect the pose of the
+robot end effector. We can use this motion,
+
+00:03:21.980 --> 00:03:25.730
+which doesn't affect the end effector pose
+to do things like change the shape of the
+
+00:03:25.730 --> 00:03:31.239
+arm. We can also use it to do things like
+move a robot joint away from its limit towards
+
+00:03:31.239 --> 00:03:33.560
+the middle part of its working range.
+
+00:03:33.560 --> 00:03:39.019
+So, we use this extra joint velocity motion
+to change the shape of the arm, move joints
+
+00:03:39.019 --> 00:03:44.299
+away from their limits. At the same time not
+affecting the end effector pose. It's a pretty
+
+00:03:44.299 --> 00:03:50.879
+neat trick. This matrix N is referred to as
+the null space of the Jacobian matrix. It
+
+00:03:50.879 --> 00:03:55.700
+is the set of vectors that pre-multiplied
+by the manipulator Jacobian matrix, give a
+
+00:03:55.700 --> 00:04:02.219
+result of zero. In this particular case, if
+the robot had 100 joints, then the null space
+
+00:04:02.219 --> 00:04:11.260
+would be of dimension 94. That's 100 minus
+6. So, N would be a 6 x 94 element matrix.
+
+00:04:11.260 --> 00:04:16.420
+I'm going to import the model of a redundant
+robot that moves in 3D and that's the model
+
+00:04:16.420 --> 00:04:21.940
+hyper 3D. And, I'm going to ask for a robot
+with 20 joints. To illustrate, for example,
+
+00:04:21.940 --> 00:04:26.190
+I need to choose a set of joint angles. I
+need to choose 20 numbers. I know that if
+
+00:04:26.190 --> 00:04:29.340
+they're all equal to zero, the robot will
+be at a singularity.
+
+00:04:29.340 --> 00:04:34.370
+So, what I'm going to do is to choose 20 random
+numbers. I'm going to use the MATLAB built-in
+
+00:04:34.370 --> 00:04:39.650
+function rand. So, this is my joint angle
+vector – 20 random numbers in the range
+
+00:04:39.650 --> 00:04:46.039
+0 to 1. And, I can plot this particular joint
+angle configuration for a robot and this is
+
+00:04:46.039 --> 00:04:50.630
+what it looks like. If I can just have a bit
+of a look around and we can see that it's
+
+00:04:50.630 --> 00:04:55.139
+pointing slightly upwards and it's got a few
+bends and twists in it.
+
+00:04:55.139 --> 00:05:00.520
+Now that I have the set of joint angles and
+I have a robot model, I can compute a Jacobian
+
+00:05:00.520 --> 00:05:05.830
+matrix. And, we've seen how to do that for
+many other types of robots. I used the Jacobian
+
+00:05:05.830 --> 00:05:11.430
+method and I pass in the set of joint angles.
+And, this is the Jacobian matrix. We can see
+
+00:05:11.430 --> 00:05:16.250
+that it's got 6 rows and it's got 20 columns
+because there are 20 joints.
+
+00:05:16.250 --> 00:05:20.639
+If I tried to invert this matrix, I'm going
+to get an error because the matrix is not
+
+00:05:20.639 --> 00:05:24.910
+square. MATLAB is telling me I can't do that
+but I can compute the pseudo-inverse. And,
+
+00:05:24.910 --> 00:05:31.000
+that's computed using the MATLAB built-in
+function pinv, and pass in the Jacobian matrix.
+
+00:05:31.000 --> 00:05:36.789
+And, this is the result of the pseudo-inverse.
+And, we can see that we have here in the workspace
+
+00:05:36.789 --> 00:05:41.660
+now a 20 x 6 matrix, the pseudo-inverse of
+the Jacobian matrix.
+
+00:05:41.660 --> 00:05:46.889
+Now, we talked about the null space motion.
+And, in order to compute the null space motion,
+
+00:05:46.889 --> 00:05:52.749
+we need to compute the null space of the Jacobian
+matrix itself and MATLAB has the function to do that.
+
+00:05:52.750 --> 00:05:58.620
+It's the function null and I pass in the Jacobian
+matrix and here is the null space matrix.
+
+00:05:58.620 --> 00:06:04.669
+The null space matrix has 20 rows and only
+14 columns. 14 comes from 20, which is the
+
+00:06:04.669 --> 00:06:09.879
+number of columns in the original Jacobian
+minus 6. And 6 is the rank of that original
+
+00:06:09.879 --> 00:06:15.520
+Jacobian. That's the number of unique columns
+in the Jacobian matrix. So, there were 6 unique
+
+00:06:15.520 --> 00:06:21.699
+columns and there were 14 columns that exist
+in the null space of that Jacobian. 14 plus
+
+00:06:21.699 --> 00:06:25.610
+6 equals 20, the original number of columns.
+
+00:06:25.610 --> 00:06:29.400
+Let's summarize some of the different shapes
+that a robot Jacobian matrix can have. For
+
+00:06:29.400 --> 00:06:33.780
+the case of a robot with 6 joints, we say
+that the robot is fully actuated. The Jacobian
+
+00:06:33.780 --> 00:06:39.270
+will be a square 6 x 6 matrix. And a robot
+with 6 joints is able to fully access all
+
+00:06:39.270 --> 00:06:44.210
+poses within SE3.
+That means, any position and any arbitrary
+
+00:06:44.210 --> 00:06:50.090
+orientation. For the case of a robot with
+less than 6 joints, which we refer to as an
+
+00:06:50.090 --> 00:06:56.990
+under-actuated robot, the Jacobian will be a 6 x N matrix. It will have more rows than it has columns.
+
+00:06:56.990 --> 00:07:02.460
+This means that the robot cannot access all
+possible poses within a SE3. And, in order
+
+00:07:02.470 --> 00:07:07.509
+to use the Jacobian for control purposes,
+we need to square it up and we do that by
+
+00:07:07.509 --> 00:07:12.509
+removing some spatial degrees of freedom.
+We eliminate some rows in the Jacobian matrix
+
+00:07:12.509 --> 00:07:19.210
+so that it becomes a 5 x 5 or 4 x 4 Jacobian
+matrix which is then invertible. In the case
+
+00:07:19.210 --> 00:07:24.550
+of a robot with more than 6 joints, which
+we refer to as an over actuated robot, the
+
+00:07:24.550 --> 00:07:29.819
+Jacobian matrix has more columns than it has
+rows. It's a 6 x N matrix.
+
+00:07:29.819 --> 00:07:34.930
+In order to use the Jacobian matrix for control
+purposes, we take its pseudo-inverse. The
+
+00:07:34.930 --> 00:07:39.190
+great advantage of a robot like this is that
+we can think about having spare joints and
+
+00:07:39.190 --> 00:07:43.629
+we can use some of these spare joints to do
+what we call null space motion. And, while
+
+00:07:43.629 --> 00:07:47.780
+we hold the ineffective pose constant, we
+can adjust all of the joints to change the
+
+00:07:47.780 --> 00:07:51.619
+shape of the arm or move the joints away from
+motion limits.
+

@@ -1,0 +1,120 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.639 --> 00:00:07.799
+The simplest and most common model of friction
+is called linear friction, sometimes also
+
+00:00:07.799 --> 00:00:13.350
+called viscous friction or viscous damping.
+Then, the force or the torque is proportional
+
+00:00:13.350 --> 00:00:18.750
+to velocity. So, there are two cases. We can
+consider a linear case where we have friction
+
+00:00:18.750 --> 00:00:24.060
+force proportional to velocity, v, or we
+can have the rotational case where a frictional
+
+00:00:24.060 --> 00:00:31.070
+torque, tau, is proportional to the rotational
+speed, omega. If we plot force against velocity,
+
+00:00:31.070 --> 00:00:36.430
+we can represent the characteristic of friction
+by a straight line of slope B and refer to
+
+00:00:36.430 --> 00:00:41.090
+B as the friction coefficient.
+Typically, the slope of the line for positive
+
+00:00:41.090 --> 00:00:45.850
+and negative velocities is the same. Here
+is the model for a current controlled electric
+
+00:00:45.850 --> 00:00:50.879
+motor that we introduced earlier. It relates
+the rotation acceleration to the applied current.
+
+00:00:50.879 --> 00:00:55.769
+And, I’m going to add a frictional torque
+term here. And, friction is a real issue in
+
+00:00:55.769 --> 00:01:00.609
+most electric motors. The friction is due
+to the bearings that the shaft rotates within.
+
+00:01:00.609 --> 00:01:05.320
+And, for motors with brushes this represents the
+frictional force of the brushes rubbing on
+
+00:01:05.320 --> 00:01:09.100
+the motor’s Commutator.
+I can rearrange the equation to look like
+
+00:01:09.100 --> 00:01:14.450
+this and then I can transform it and put it
+into transfer function form. So, here we
+
+00:01:14.450 --> 00:01:20.240
+have the transfer function for an electric
+motor and it incorporates the motor torque
+
+00:01:20.240 --> 00:01:25.479
+constant, the inertia of the motor and the
+friction of the motor. Some systems exhibit
+
+00:01:25.479 --> 00:01:29.840
+a nonlinear friction and the most classic
+case of this is known as Coulomb friction
+
+00:01:29.840 --> 00:01:34.990
+and this is named after a famous French physicist
+who also did a lot of work in electrostatics
+
+00:01:34.990 --> 00:01:39.140
+and the unit of electric charge is named after
+this same gentleman.
+
+00:01:39.140 --> 00:01:43.860
+Like the linear friction we looked at before,
+the nonlinear friction force always opposes
+
+00:01:43.860 --> 00:01:48.299
+the direction of motion.
+Interestingly, Coulomb friction is not defined
+
+00:01:48.299 --> 00:01:53.080
+for the case of zero velocity. We define the
+amount of friction when the mechanism is moving
+
+00:01:53.080 --> 00:01:57.600
+in the positive direction and when the mechanism
+is moving in the negative direction, and these
+
+00:01:57.600 --> 00:02:01.850
+values may be the same or they may be different.
+It depends on the mechanism.
+
+00:02:01.850 --> 00:02:06.450
+For a real machine, friction is actually a
+combination of both these two effects, the
+
+00:02:06.450 --> 00:02:11.150
+nonlinear Coulomb friction and the linear
+friction. Once again, this friction curve
+
+00:02:11.150 --> 00:02:16.599
+is not defined for the case of zero velocity.
+These two terms may be the same or different
+
+00:02:16.599 --> 00:02:21.080
+and the slope of the line for positive and
+negative velocities may be the same or it
+
+00:02:21.080 --> 00:02:24.870
+may be different. Once again, it depends on
+the particular machine.
+

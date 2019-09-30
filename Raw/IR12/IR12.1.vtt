@@ -1,0 +1,266 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.470 --> 00:00:08.540
+Often when I give a public talk, somebody
+in the audience asks me about artificial intelligence
+
+00:00:08.540 --> 00:00:13.040
+and it's not a subject I feel particularly
+comfortable to talk about. I consider myself
+
+00:00:13.040 --> 00:00:17.430
+a roboticist, that is, somebody that builds
+machines, whereas artificial intelligence
+
+00:00:17.430 --> 00:00:22.769
+to me is a completely separate discipline,
+a sub-discipline within computer science.
+
+00:00:22.769 --> 00:00:29.509
+Intelligence, of course, is also a very difficult
+concept to understand and I think it also
+
+00:00:29.509 --> 00:00:35.320
+has something to do with the historical context.
+Way back in lecture number one, we looked
+
+00:00:35.320 --> 00:00:40.660
+at this picture of the famous digesting duck.
+And at that time, people considered that this
+
+00:00:40.660 --> 00:00:46.010
+machine had life-like properties. Whether
+it was intelligent or not, I'm not sure, but
+
+00:00:46.010 --> 00:00:49.340
+people considered it to be very life-like.
+
+00:00:49.340 --> 00:00:55.460
+Later on came these automata, incredibly intricate
+machines that could do seemingly intelligent
+
+00:00:55.460 --> 00:01:00.190
+things. And perhaps at that time, people would
+look at these machines and consider them to
+
+00:01:00.190 --> 00:01:05.140
+be intelligent because they did the sorts
+of things that intelligent beings or entities,
+
+00:01:05.140 --> 00:01:09.080
+such as humans, are able to do quite readily.
+
+00:01:09.080 --> 00:01:15.220
+In the late 40's and early 50's, William Grey
+Walter built a number of cybernetic devices,
+
+00:01:15.220 --> 00:01:20.940
+most famously his cybernetic tortoise. And
+this was a machine that contained relays and
+
+00:01:20.940 --> 00:01:22.820
+vacuum tube technology.
+
+00:01:22.820 --> 00:01:28.120
+It was able to exhibit light-seeking behavior.
+So if you put a light on the floor, this tortoise
+
+00:01:28.120 --> 00:01:33.830
+would move towards the light and stop when
+it got there. So again, this was a seemingly
+
+00:01:33.830 --> 00:01:40.549
+intelligent behavior. This light-seeking behavior
+is seen in many very simple organisms.
+
+00:01:40.549 --> 00:01:47.810
+So at the time, late 40's, early 50's, something
+like this was perceived as being intelligent.
+
+00:01:47.810 --> 00:01:52.049
+Looking at it from our current viewpoint,
+it looks rather primitive and sad but at that
+
+00:01:52.049 --> 00:01:54.960
+time, I think it was a significant breakthrough.
+
+00:01:54.960 --> 00:01:59.939
+The term artificial intelligence was probably
+first introduced in this research proposal
+
+00:01:59.939 --> 00:02:06.409
+from 1955 by a bunch of very imminent people,
+amongst them John McCarthy and Marvin Minsky,
+
+00:02:06.409 --> 00:02:11.430
+who are very very well known names in the
+artificial intelligence community.
+
+00:02:11.430 --> 00:02:16.870
+By 1955, digital computers had become a reality
+and this group of scientists were interested
+
+00:02:16.870 --> 00:02:22.599
+in trying to explore what could they do beyond
+straightforward numerical calculation. So
+
+00:02:22.599 --> 00:02:27.069
+they were interested in things like neural
+networks, theories of computation, could we
+
+00:02:27.069 --> 00:02:33.660
+use computers to do natural language processing,
+could they perform acts of creativity?
+
+00:02:33.660 --> 00:02:37.380
+What you'll notice from looking at the list
+of topics that they proposed to investigate
+
+00:02:37.380 --> 00:02:43.190
+in their summer project was there's no mention
+of robotics and there is no mention of computer
+
+00:02:43.190 --> 00:02:48.520
+vision. The reason for that is that those
+two things had not yet been invented.
+
+00:02:48.520 --> 00:02:53.020
+The first industrial robot as we know it today was developed by Unimation Inc.
+
+00:02:53.020 --> 00:02:56.380
+and that company wasn't even formed until 1956,
+
+00:02:56.380 --> 00:03:03.280
+one year after the artificial intelligence project and Unimation delivered its first robot in 1961.
+
+00:03:03.280 --> 00:03:07.280
+But thereafter, a number other robots appeared in quite rapid succession.
+
+00:03:07.280 --> 00:03:12.160
+They were all developed within artificial
+intelligence laboratories at Stanford and
+
+00:03:12.160 --> 00:03:18.239
+at MIT and chief amongst these robot designers
+was Victor Scheinman who designed the ORM
+
+00:03:18.239 --> 00:03:25.819
+and ORM I believe, is Norwegian for snake and he also designed the very famous Stanford arm in 1968.
+
+00:03:26.580 --> 00:03:33.160
+Computer vision really got its start in 1964
+with the PhD work of Larry Roberts at MIT.
+
+00:03:33.170 --> 00:03:38.610
+He was interested in understanding how computers
+could interpret a blocks world. So a camera
+
+00:03:38.610 --> 00:03:43.660
+attached to a computer would take a gray-scale
+image of a scene and with various sorts of
+
+00:03:43.660 --> 00:03:49.110
+early image processing algorithms, could find
+the edges and then fit a model to that. Larry
+
+00:03:49.110 --> 00:03:53.450
+Roberts went on to do really great things
+in the creation of the Internet.
+
+00:03:53.450 --> 00:03:58.550
+So then, what is intelligence? I can look
+in the dictionary and get a definition of
+
+00:03:58.550 --> 00:04:04.180
+intelligence, but to me, this is not particularly
+helpful. I think we assume that human beings
+
+00:04:04.180 --> 00:04:09.920
+are intelligent so therefore, the behaviors
+manifest by human beings count as intelligence.
+
+00:04:09.920 --> 00:04:15.129
+But we know that there are many animals that
+can exhibit intelligent behavior and it's
+
+00:04:15.129 --> 00:04:19.859
+been found in more and more simple animals.
+Once upon a time, we believed it was perhaps
+
+00:04:19.859 --> 00:04:24.199
+only the great apes that could exhibit some
+sort of intelligence but now scientists have
+
+00:04:24.199 --> 00:04:29.070
+found quite intelligent behaviors in all manner
+of species. Even birds are able to fashion
+
+00:04:29.070 --> 00:04:32.240
+simple tools to help them to achieve particular
+tasks.
+
+00:04:32.240 --> 00:04:37.040
+A definition I particularly like comes from
+Rodney Brooks and that is that intelligence
+
+00:04:37.040 --> 00:04:41.580
+is in the eye of the beholder. So if you're
+looking at a machine doing some task and you
+
+00:04:41.580 --> 00:04:44.620
+think it's intelligent, then it is intelligent.
+
+00:04:44.620 --> 00:04:49.130
+Perhaps the best known definition of intelligence
+is the Turing test and it was proposed by
+
+00:04:49.130 --> 00:04:55.410
+the English mathematician, Alan Turing, in
+a 1950 paper called Computing Machinery and
+
+00:04:55.410 --> 00:04:59.449
+Intelligence. In that particular paper, he
+proposed something called the imitation game,
+
+00:04:59.449 --> 00:05:05.180
+and of course that's the name of the recent
+movie about the life of Alan Turing.
+
+00:05:05.180 --> 00:05:10.310
+The game has three players: A is a computer
+which is being tested for intelligence, B
+
+00:05:10.310 --> 00:05:15.990
+is a real human being, and C is the judge.
+The judge doesn't know which of A or B is
+
+00:05:15.990 --> 00:05:21.550
+the computer and so asks questions of A and
+B to try and determine which is which.
+
+00:05:21.550 --> 00:05:26.340
+In order to mask the really obvious cues about
+which one of A or B is the computer, the game
+
+00:05:26.340 --> 00:05:32.000
+is generally played with keyboard and screen
+communication, so there's no verbal communications.
+
+00:05:32.000 --> 00:05:39.060
+The judge types commands on a keyboard, A
+or B respond with information displayed on a screen.
+
+00:05:39.160 --> 00:05:43.820
+Now if the judge, after asking sufficient
+questions, is unable to determine which of
+
+00:05:43.820 --> 00:05:48.490
+A or B is the computer, then the computer
+is deemed to be intelligent because the judge,
+
+00:05:48.490 --> 00:05:53.490
+who is intelligent, is unable to tell the
+difference between it and a real human being.
+

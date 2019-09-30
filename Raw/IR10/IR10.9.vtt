@@ -1,0 +1,251 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.689 --> 00:00:08.900
+Here again is the block diagram of a robot
+joint control system. What we're going to
+
+00:00:08.900 --> 00:00:14.049
+do now is to actually build a model for joint
+2 of the PUMA 560 robot.
+
+00:00:14.049 --> 00:00:20.330
+One of the advantages of the PUMA 560 robot
+is that it's a very well-studied robot, and
+
+00:00:20.330 --> 00:00:26.870
+many of the parameters of its controller and
+of its mechanism are very well understood.
+
+00:00:26.870 --> 00:00:33.260
+Here are listed a few of the important parameters
+of joint 2 for this robot. We have the inertia
+
+00:00:33.260 --> 00:00:38.350
+of the motor; we have the friction of the
+motor, the motor torque constant, the amplifying
+
+00:00:38.350 --> 00:00:43.679
+gain. That's the number of amps into the motor
+for every volt applied to the amplifier. Finally,
+
+00:00:43.679 --> 00:00:46.550
+the gear ratio for the second joint of the
+PUMA robot.
+
+00:00:46.550 --> 00:00:52.399
+I have just been entering the parameters for
+our robot dynamic model into the MATLAB Workspace,
+
+00:00:52.399 --> 00:00:56.780
+creating a number of variables. The last one
+that I need to create is the gear ratio which
+
+00:00:56.780 --> 00:01:02.319
+is 107.815 for this particular joint of the
+PUMA robot.
+
+00:01:02.319 --> 00:01:07.910
+Next thing I'm going to do is to invoke Simulink,
+which is the MATLAB tool for creating and
+
+00:01:07.910 --> 00:01:14.280
+simulating dynamical models. Invoked Simulink,
+and here is the window which gives us all
+
+00:01:14.280 --> 00:01:21.640
+the rest of the components of the models that we
+need. I'm going to create a new model, and
+
+00:01:21.640 --> 00:01:24.830
+here's the window in which I can create my
+new graphical model.
+
+00:01:24.830 --> 00:01:30.080
+Now, the first thing I'm going to do is to
+add some continuous time dynamic blocks. The
+
+00:01:30.080 --> 00:01:35.880
+first thing I'm going to do is to drag in the transfer function which is going to be our motor model.
+
+00:01:35.880 --> 00:01:42.900
+Here is the block which is going to be our
+motor, and I'm going to change the parameters.
+
+00:01:42.910 --> 00:01:49.770
+The numerator in this particular case is the
+variable 'km,' that's the motor torque constant,
+
+00:01:49.770 --> 00:01:56.170
+and the denominator is a polynomial, and the
+highest order coefficient is 'jm,' that's
+
+00:01:56.170 --> 00:02:03.000
+the motor inertia followed by the motor friction
+and followed by a zero. It is a second-order
+
+00:02:03.000 --> 00:02:04.760
+polynomial. There we go.
+
+00:02:04.760 --> 00:02:10.979
+Here, we have a block which represents the
+dynamics of our motor. I'm also going to draw
+
+00:02:10.979 --> 00:02:19.000
+in a PID controller, and that's it there.
+I'm going to create a source. This is the
+
+00:02:19.000 --> 00:02:25.890
+signal that I want the robot joint to follow.
+I'm going to drag in a signal generator and
+
+00:02:25.890 --> 00:02:30.590
+I'm going to set it to have a frequency of
+0.5 Hertz.
+
+00:02:30.590 --> 00:02:36.480
+That's one cycle every two seconds, and it’s
+going to be a square wave and I'm going to
+
+00:02:36.480 --> 00:02:43.310
+connect that to the reference input of my
+controller. I'm going to set the controller
+
+00:02:43.310 --> 00:02:49.810
+parameters a proportional gain of 1, integral
+gain of 0, and so on.
+
+00:03:14.540 --> 00:03:18.610
+Now we're ready to simulate the system. I'm
+going to apply a square wave to the reference
+
+00:03:18.610 --> 00:03:20.940
+input of my controller.
+
+00:03:20.940 --> 00:03:24.990
+In the real robot, the output of the controller
+is a voltage which goes to the motor drive,
+
+00:03:24.990 --> 00:03:28.770
+which is effectively a big power amplifier,
+and the output of that is a current which
+
+00:03:28.770 --> 00:03:33.400
+flows into the motor. This block here represents
+the dynamics of the motor, and the output
+
+00:03:33.400 --> 00:03:38.420
+is the position of the motor. We can see the
+feedback path. What I'm going to do is hit
+
+00:03:38.420 --> 00:03:43.010
+the 'Play' button here, and Simulink is going
+to simulate this dynamic model.
+
+00:03:43.010 --> 00:03:48.720
+Here we see the output response. We can see
+that the motor is responding in some way to
+
+00:03:48.720 --> 00:03:52.870
+the square wave, which is being injected,
+but we can see that it's very very oscillatory,
+
+00:03:52.870 --> 00:03:56.330
+there's a lot of overshoot there which
+is very undesirable.
+
+00:03:56.330 --> 00:04:01.140
+We can adjust the parameters of the controller.
+What I’m going to do is to add a little
+
+00:04:01.140 --> 00:04:05.050
+bit of derivative gain, otherwise known as
+damping.
+
+00:04:05.050 --> 00:04:11.440
+If I simulated now, that's where the derivative
+gain is set to a value of 0.1. Here we see
+
+00:04:11.440 --> 00:04:16.379
+the response is much more desirable. We see
+that the motor position is changing between
+
+00:04:16.379 --> 00:04:20.980
+-1 and +1. That's exactly what this signal
+generator is demanding. We see that there's
+
+00:04:20.980 --> 00:04:25.930
+only a very small amount of overshoot. This
+is not a bad robot joint controller.
+
+00:04:25.930 --> 00:04:31.660
+We use a little bit of trial and error to
+make this controller work well. Although it's
+
+00:04:31.660 --> 00:04:36.280
+quite common practice to do this, a much better
+approach is to design the controller that
+
+00:04:36.280 --> 00:04:40.960
+requires we have a model of the system to
+be controlled. In the case of the PUMA robot,
+
+00:04:40.960 --> 00:04:46.760
+we do have a very, very good model of that robot, of its mechanical and its electrical components.
+
+00:04:46.760 --> 00:04:51.660
+Then we need to have a specification for the
+quality of control. How much overshoot are
+
+00:04:51.660 --> 00:04:57.000
+we willing to tolerate? How quickly do we
+want the robot joint to get to the desired joint angle?
+
+00:04:57.010 --> 00:05:01.750
+Then we use well-known techniques from control
+theory such as, 'Root locus method,' or
+
+00:05:01.750 --> 00:05:03.840
+'pole placement' or 'LQR synthesis'.
+
+00:05:03.840 --> 00:05:09.070
+There are lots of techniques in control theory.
+Pick the one that you prefer, and you apply
+
+00:05:09.070 --> 00:05:14.000
+that to design a controller. Perhaps it needs
+a little bit of tweaking, perhaps because
+
+00:05:14.000 --> 00:05:18.570
+the model that you're using doesn't exactly
+reflect the reality of the particular robot
+
+00:05:18.570 --> 00:05:24.440
+that you're working on, but you'll get a very
+very good first approximation to a decent controller.
+
+00:05:24.440 --> 00:05:30.130
+For a multi-joint robot like the PUMA 560,
+a common strategy is what's called, 'Independent
+
+00:05:30.130 --> 00:05:36.000
+Joint Control.' We design and build a controller
+for each of these separate joints.
+
+00:05:36.000 --> 00:05:40.740
+For economies of scale, it's common to use
+the same design for the controller for each
+
+00:05:40.740 --> 00:05:45.240
+of the joints. All that's different is some
+parameters in the joint control algorithm
+
+00:05:45.240 --> 00:05:49.720
+to reflect the fact that the joints have got
+different dynamics. Perhaps they have different
+
+00:05:49.720 --> 00:05:53.690
+size motors` with different inertia, different
+friction characteristics, and so on.
+

@@ -1,0 +1,338 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.600 --> 00:00:08.510
+In this section I'd like to talk about robots
+and jobs. Whenever I go and give a public
+
+00:00:08.510 --> 00:00:13.869
+talk about robotics, somebody in the audience
+always ask me about robots and jobs. Arn’t
+
+00:00:13.869 --> 00:00:18.770
+robots going to take jobs away from people?
+And it's true, robots will take jobs away
+
+00:00:18.770 --> 00:00:23.420
+from people. But there are jobs that I believe
+people shouldn't do. And that's because those
+
+00:00:23.420 --> 00:00:25.240
+jobs are dangerous.
+
+00:00:25.240 --> 00:00:30.140
+So if we look at the data shown here, we look
+at the number of fatalities per a 100,000
+
+00:00:30.140 --> 00:00:35.510
+workers in a number of different occupational
+areas recorded at 2 points in time. And we
+
+00:00:35.510 --> 00:00:39.890
+can see that there are some industries, which
+are really quite dangerous. People can go
+
+00:00:39.890 --> 00:00:44.489
+to work in one of these industries and not
+come home at night because they've been killed
+
+00:00:44.489 --> 00:00:49.319
+on the job. And to me that's non-acceptable.
+If there are dangerous jobs, then it should
+
+00:00:49.319 --> 00:00:52.979
+be machines doing work instead of humans.
+
+00:00:52.979 --> 00:00:57.249
+I'm going to focus a bit on the mining industry
+because that's an area where I spent more
+
+00:00:57.249 --> 00:01:03.019
+than 10 years developing various robotic technologies
+for underground and surface mining.
+
+00:01:03.019 --> 00:01:07.500
+Let's first of all look at some fatality data
+from the United States mining industry compiled
+
+00:01:07.500 --> 00:01:09.409
+over a period of about 100 years.
+
+00:01:09.409 --> 00:01:16.320
+The line graph show the fatality rate normalized
+to production. Then we see a very happy reduction
+
+00:01:16.320 --> 00:01:21.950
+in that fatality rate. The black line is for
+the coal industry and the red line is for
+
+00:01:21.950 --> 00:01:26.880
+non-coal industry which is generally service
+mining operations. They tend to be safer than
+
+00:01:26.880 --> 00:01:29.229
+underground coal mining.
+
+00:01:29.229 --> 00:01:33.990
+So while there has been a very considerable
+improvement over time. We observe just as
+
+00:01:33.990 --> 00:01:39.200
+we did for road accident fatalities that the
+rate of improvement is plateauing and it's
+
+00:01:39.200 --> 00:01:44.770
+not plateauing to zero. It's plateauing to
+a value above zero. So there is some residual
+
+00:01:44.770 --> 00:01:48.979
+rate of fatality that will occur in mining
+operations.
+
+00:01:48.979 --> 00:01:54.049
+Despite 100 years of continuous improvement,
+we are really struggling to get this rate
+
+00:01:54.049 --> 00:01:59.340
+down to zero. If we look at the types of accidents
+that occur in mines today, we see that the
+
+00:01:59.340 --> 00:02:05.009
+courses are really quite varied. Some of them
+are unfortunate encounters between human beings
+
+00:02:05.009 --> 00:02:10.340
+and machines, conveyer belts and trucks and
+so on. Some of them are electrocutions, people
+
+00:02:10.340 --> 00:02:15.940
+slipping and falling, relatively few of them
+involved people being killed by falling rocks,
+
+00:02:15.940 --> 00:02:21.600
+which is perhaps what most people would consider
+to be leading cause of death in an underground mine.
+
+00:02:21.600 --> 00:02:28.280
+So what can we do about this? Well the important
+thing is to remove the human beings from hazardous
+
+00:02:28.290 --> 00:02:32.520
+situations. Here is a type of vehicle called
+a load haul dump unit or a scoop tram if you
+
+00:02:32.520 --> 00:02:38.000
+come from Canada. And it's used to carry ore
+in an underground mine. Now once upon a time
+
+00:02:38.000 --> 00:02:43.310
+these machines were all driven by a driver
+who sat here. The problem is that these machines
+
+00:02:43.310 --> 00:02:48.800
+go in to dangerous parts of the mine. So what
+some mining companies do now is to remove
+
+00:02:48.800 --> 00:02:51.450
+the operator to a safe remote location.
+
+00:02:51.450 --> 00:02:56.800
+Here the operator is able to control the machine
+with the joystick and she can see the status
+
+00:02:56.800 --> 00:03:02.010
+of the machine through a view of the camera
+and the position of the vehicle superimpose
+
+00:03:02.010 --> 00:03:06.440
+on a map of the mine. And that situational
+awareness information is coming from various
+
+00:03:06.440 --> 00:03:09.130
+senses fitted to the machine.
+
+00:03:09.130 --> 00:03:13.900
+So what we're seeing now is a separation between
+the person doing the work and the place where
+
+00:03:13.900 --> 00:03:19.400
+the work is occurring. And this happens in
+many other situations as well. An underwater
+
+00:03:19.400 --> 00:03:24.290
+vehicle which is doing some task deep beneath
+the ocean. The operator is at some comfortable
+
+00:03:24.290 --> 00:03:30.250
+workstation on board a ship. Consider the
+case of a Mars robot. It's doing the work
+
+00:03:30.250 --> 00:03:35.410
+of geologist and chemist on the surface of
+Mars whereas the actual geologist and chemist
+
+00:03:35.410 --> 00:03:39.090
+are sitting at workstations on earth.
+
+00:03:39.090 --> 00:03:43.370
+Consider the case of robotic surgery that
+we look at earlier. The surgeons are doing
+
+00:03:43.370 --> 00:03:47.570
+their work at workstations on the left hand
+side of the picture where the actual work,
+
+00:03:47.570 --> 00:03:51.070
+the actual surgery is occurring inside of
+the body of the patient. And that's being
+
+00:03:51.070 --> 00:03:57.010
+done by the robots here. Now the robots are
+connected to the workstations by cables. So
+
+00:03:57.010 --> 00:04:00.630
+there's no reason in fact that those cables
+couldn't be longer. They could in fact be
+
+00:04:00.630 --> 00:04:05.270
+an intercontinental telecommunications link.
+And this is actually being demonstrated. We've
+
+00:04:05.270 --> 00:04:10.650
+had surgeons on one continent performing an
+operation on a patient in another continent.
+
+00:04:10.650 --> 00:04:15.120
+So the worker and the place of work are now
+quite distinct.
+
+00:04:15.120 --> 00:04:20.620
+So traditionally, the work has been at the
+workplace. The worker has been on the machine
+
+00:04:20.620 --> 00:04:26.440
+or controlling the machine directly. Right
+now with remote control technology, it's possible
+
+00:04:26.440 --> 00:04:32.060
+that the worker can be remote from the machine.
+But in the future I think what's going to
+
+00:04:32.060 --> 00:04:37.620
+happen is that the machine will be smarter and they'll be able to a lot of the work all by themselves.
+
+00:04:38.100 --> 00:04:44.080
+So we will move to a situation where one worker
+will be remotely managing many machines. That
+
+00:04:44.090 --> 00:04:48.220
+means that the worker who is not joy sticking
+the machine in the traditional sense they
+
+00:04:48.220 --> 00:04:52.620
+giving a high level command to the machine.
+They are saying machine A go off and do this
+
+00:04:52.620 --> 00:04:58.680
+task. Machine B go off and do this task. Machine
+C go and do this task. And if one of the machines
+
+00:04:58.680 --> 00:05:01.030
+has encountered a problem then it would come
+back to the operator.
+
+00:05:01.030 --> 00:05:04.490
+Machine B may come back to the operator and
+say, "I don't know how to do this thing that
+
+00:05:04.490 --> 00:05:09.070
+you've asked me to do." So the operator can
+give machine B some more detailed instructions.
+
+00:05:09.070 --> 00:05:14.420
+So it's like the way a human manager manages
+a number of human workers. But now we have
+
+00:05:14.420 --> 00:05:19.970
+a human manager managing a number of intelligent
+machines.
+
+00:05:19.970 --> 00:05:24.150
+Perhaps sometime in the medium future, the
+machines will be smart enough not to need
+
+00:05:24.150 --> 00:05:30.460
+human managers. But right now we need a combination of human intuition, intelligence and experience
+
+00:05:30.460 --> 00:05:36.920
+combined with the relentless work ethic, the
+tirelessness and the reliability of robotic workers.
+
+00:05:36.920 --> 00:05:41.530
+So in the future I believe work will be a
+partnership between human managers and robot
+
+00:05:41.530 --> 00:05:46.690
+workers. And what this enables is the same
+or greater level of productivity perhaps with
+
+00:05:46.690 --> 00:05:52.570
+lower operator skill levels. Because the skill
+is going to be encapsulated in the robot worker.
+
+00:05:52.570 --> 00:05:56.740
+The robot worker is going to do the detailed
+skilful work and the human manager is going
+
+00:05:56.740 --> 00:06:02.419
+to tell the robot where it should be deploying
+its particular skill.
+
+00:06:02.419 --> 00:06:06.669
+Machines are going to suffer much less damage
+because they're going to be driven by computers
+
+00:06:06.669 --> 00:06:10.630
+rather than by human beings. The computers
+are going to ensure that the machines are
+
+00:06:10.630 --> 00:06:15.000
+driven safely and within their operational
+envelopes.
+
+00:06:15.000 --> 00:06:19.270
+And finally we'll be able to achieve force
+multiplication. That means that more work
+
+00:06:19.270 --> 00:06:24.290
+will be able to be done by fewer people because
+they're going to be assisted by robots.
+
+00:06:25.620 --> 00:06:29.940
+In order to achieve this, we're going to need
+high communications bandwidth between where
+
+00:06:29.940 --> 00:06:34.810
+the robots are doing their work and where
+the human managers are sitting at their workstations.
+
+00:06:34.810 --> 00:06:41.590
+We're going to need the machines to have some level of local autonomy, some level of local automation.
+
+00:06:41.960 --> 00:06:46.300
+We're going to have to take a system's approach
+to the way we do task; where do we situate
+
+00:06:46.300 --> 00:06:51.210
+the people, where do we situate the robot,
+how much intelligence should we embed in the
+
+00:06:51.210 --> 00:06:55.340
+robot, how much communications do we need.
+So it's going to be a new way of thinking
+
+00:06:55.340 --> 00:06:58.730
+about work places and how humans and robots
+interact.
+

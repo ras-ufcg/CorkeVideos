@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.730 --> 00:00:09.100
+Almost all electric motors are used in conjunction
+with gearboxes. The reason for this is the
+
+00:00:09.100 --> 00:00:14.330
+electric motors produce relatively low torque.
+They not particularly strong. However, they are
+
+00:00:14.330 --> 00:00:19.690
+capable of rotating very very quickly. So
+we can use a gearbox to trade off speed for
+
+00:00:19.690 --> 00:00:24.759
+torque. Of course, there is no such thing
+as a free lunch and a gearbox introduces some
+
+00:00:24.759 --> 00:00:31.459
+inefficiency, there is some loss of power.
+That power lost is in terms of heat and acoustic noise.
+
+00:00:31.460 --> 00:00:36.340
+If you use a bicycle you are probably quite familiar
+with the concept of gearing. Electric motors
+
+00:00:36.350 --> 00:00:41.539
+are capable of spinning very very quickly but they don't produce very much torque they are kind of weak.
+
+00:00:41.539 --> 00:00:47.320
+Now it's a bit like the problem of riding
+your bicycle uphill. You want to trade off
+
+00:00:47.320 --> 00:00:53.699
+a large number of rotations of the pedals
+in order to reduce the load that you have
+
+00:00:53.699 --> 00:00:59.550
+to exert on those pedals. You are trading
+off a lot of speed for a large amount of torque.
+
+00:00:59.550 --> 00:01:04.320
+For an electric motor it's the same thing
+and as with the bicycle you have a small sprocket
+
+00:01:04.320 --> 00:01:09.080
+at the front on the pedals, and you have a
+larger sprocket on the back wheel. So for
+
+00:01:09.080 --> 00:01:15.800
+every rotation of the electric motor, we only
+have half a rotation of the output shaft of
+
+00:01:15.800 --> 00:01:20.830
+the motor's gearbox. So the motor is spinning
+quite quickly, the output shaft is rotating
+
+00:01:20.830 --> 00:01:26.990
+rather slowly but the torque of the motor
+is amplified by the gear ratio.
+
+00:01:26.990 --> 00:01:32.790
+Here we have a motor with a single stage reduction
+gearbox. We call it a reduction gearbox because
+
+00:01:32.790 --> 00:01:38.940
+for every rotation of the motor, the output
+shaft rotates less than once. When we refer
+
+00:01:38.940 --> 00:01:44.950
+to the two sides of the gearbox we refer to
+as the motor side which indicated by the subscript
+
+00:01:44.950 --> 00:01:52.090
+M and the load side indicated the subscript
+L. The ratio of the gearbox is capital G and
+
+00:01:52.090 --> 00:01:57.010
+that's the ratio of the number teeth on the
+big wheel to the number teeth on the little
+
+00:01:57.010 --> 00:02:00.910
+wheel. And for a reduction gearbox G is greater
+than one.
+
+00:02:00.910 --> 00:02:06.630
+The output speed omega L is equal to 1 on
+G times omega N. So the output shaft speed
+
+00:02:06.630 --> 00:02:13.209
+is lower than the motor speed. The output
+torque tau L is equal to G times the motor
+
+00:02:13.209 --> 00:02:18.500
+torque tau M so the output torque is greater
+than the motor torque. These are the fundamental
+
+00:02:18.500 --> 00:02:23.099
+equations that describe the characteristics
+of a gearbox. It reduces the speed and it
+
+00:02:23.099 --> 00:02:24.099
+increases the torque.
+

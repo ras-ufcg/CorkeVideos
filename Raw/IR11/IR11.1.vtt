@@ -1,0 +1,684 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.220 --> 00:00:07.720
+Now, we are going to talk about joint control
+with disturbances. And the most obvious disturbance,
+
+00:00:07.720 --> 00:00:13.451
+the most common disturbance on a robotic arm
+is the disturbance due to gravity. Imagine
+
+00:00:13.451 --> 00:00:18.359
+a PUMA robot manipulator in this particular
+configuration. It’s got its arm stretched
+
+00:00:18.359 --> 00:00:23.519
+out horizontally and can you imagine that
+arm weighs quite a lot. So, there is a large
+
+00:00:23.519 --> 00:00:28.359
+torque on the shoulder joint and there’s
+also a large torque on the elbow joint that
+
+00:00:28.359 --> 00:00:32.980
+are required in order to keep the arm in that
+horizontal pose.
+
+00:00:32.980 --> 00:00:37.510
+We can look at a more simplified version of
+that particular scenario. Consider here we
+
+00:00:37.510 --> 00:00:42.480
+have an electric motor which is connected
+to a horizontal bar. The bar has a centre
+
+00:00:42.480 --> 00:00:48.080
+of mass and the centre of mass is a distance
+r from the axis of the motor. And the bar
+
+00:00:48.080 --> 00:00:55.010
+has got a mass of m and the bar has a weight
+force, that’s the force due to gravity acting
+
+00:00:55.010 --> 00:01:00.770
+on the centre of mass and that is a force
+of mg acting in the downward direction.
+
+00:01:00.770 --> 00:01:07.770
+Now, a force of mg with a lever arm length
+of r results in a torque acting on the motor
+
+00:01:07.770 --> 00:01:11.960
+shaft and the magnitude of that torque is
+given by the mass times the gravitational
+
+00:01:11.960 --> 00:01:17.810
+acceleration times the distance of the centre
+of mass from the axis of the motor. In this
+
+00:01:17.810 --> 00:01:21.800
+particular case, the torque is acting in a
+counter clockwise direction. The centre of
+
+00:01:21.800 --> 00:01:27.320
+mass wants to move vertically downward. If
+we actually do the maths for the case we looked
+
+00:01:27.320 --> 00:01:32.520
+at a moment ago, the PUMA robot with its arm
+in a horizontal configuration, the torque
+
+00:01:32.520 --> 00:01:37.790
+on the shoulder joint is 14 Newton meters.
+If I assume that my arm is one meter long,
+
+00:01:37.790 --> 00:01:42.450
+that’s equivalent to holding four kilograms
+with my arm outstretched; that’s a pretty
+
+00:01:42.450 --> 00:01:46.810
+difficult thing to do, though there’s a
+lot of torque acting on the shoulder joint
+
+00:01:46.810 --> 00:01:52.260
+of the PUMA robot. And clearly, this is going
+to have an effect on the control of the shoulder
+
+00:01:52.260 --> 00:01:58.010
+joint. So, let’s look now in some more detail
+at our robot joint controller. And this is
+
+00:01:58.010 --> 00:02:02.920
+a block diagram we introduced in the last
+lecture. It’s a feedback controller. The
+
+00:02:02.920 --> 00:02:07.980
+input to the robot joint controller is the
+desired position, theta star. And the output
+
+00:02:07.980 --> 00:02:13.640
+of the joint controller is the actual joint
+position denoted by theta. And as we discussed
+
+00:02:13.640 --> 00:02:18.430
+in the last lecture, I’m using the Laplace
+transform of many of these variables; so not
+
+00:02:18.430 --> 00:02:23.730
+their response in the time domain but their
+response in the Laplace domain. And I denote
+
+00:02:23.730 --> 00:02:28.050
+the Laplace domain by using capital letters.
+So, that’s why I’ve used capital theta
+
+00:02:28.050 --> 00:02:34.310
+here and here. Now within this control loop,
+we have a control law, it might be a proportional
+
+00:02:34.310 --> 00:02:38.790
+derivative controller, it might be a proportional
+integral derivative controller known as a
+
+00:02:38.790 --> 00:02:44.200
+PID controller and we have the gain of the
+motor driver and we have the gain of the sensor
+
+00:02:44.200 --> 00:02:49.810
+and we have the transfer function of the actuator,
+that’s the electric motor which is driving
+
+00:02:49.810 --> 00:02:55.370
+the joint. And that has parameters such as
+the motor torque constant, KM; the inertia,
+
+00:02:55.370 --> 00:03:01.410
+J; and the viscous friction, B; and S is of
+course the Laplace operator. Now this is a
+
+00:03:01.410 --> 00:03:08.150
+very idealistic representation. There is no
+disturbance such as the force of gravity represented
+
+00:03:08.150 --> 00:03:11.410
+in this block diagram. So, let’s do something
+about that.
+
+00:03:11.410 --> 00:03:16.879
+What I’ve done is I’ve moved the motor
+torque constant out of the actuator transfer
+
+00:03:16.879 --> 00:03:22.160
+function and made it an explicit gain block
+which you can see here. The output of that
+
+00:03:22.160 --> 00:03:26.310
+gain block is the actual motor torque.
+Now what I’ve done is actually separated
+
+00:03:26.310 --> 00:03:31.260
+the motor into two components. I have a component
+which generates a torque and I have another
+
+00:03:31.260 --> 00:03:35.480
+component which represents the inertia and
+viscous friction of the motor.
+
+00:03:35.480 --> 00:03:40.270
+Now, I’m going to introduce another summing
+junction which is a where we inject the disturbance
+
+00:03:40.270 --> 00:03:45.410
+torque. So at this particular summing junction,
+we have the sum of the torque which the motor
+
+00:03:45.410 --> 00:03:50.319
+creates and I add to that the torque which
+is coming from the disturbance source. It
+
+00:03:50.319 --> 00:03:55.230
+might be due to gravity. It might be due to
+something like Coulomb friction which we talked
+
+00:03:55.230 --> 00:04:02.769
+about in the last lecture and TD is the Laplace
+transform of that disturbance torque.
+
+00:04:02.769 --> 00:04:07.099
+The introduction of a disturbance, even a
+constant disturbance, will cause an error
+
+00:04:07.099 --> 00:04:13.060
+in the. If we now look a gain at that simplified
+schematic, we have the actual angle of the
+
+00:04:13.060 --> 00:04:18.030
+robot link and we have the desired angle of
+the robot link. And we can see that the actual
+
+00:04:18.030 --> 00:04:22.550
+angle is a little bit different, it’s downwards
+because the force of gravity is pulling it
+
+00:04:22.550 --> 00:04:27.830
+downwards and the motor controller hasn’t
+fully opposed that force of gravity. The controller
+
+00:04:27.830 --> 00:04:32.660
+that we just used is a proportional-plus-derivative
+controller often known as a PD controller
+
+00:04:32.660 --> 00:04:38.010
+and it’s very very commonly used in robotic
+systems. So the torque produced by the PD
+
+00:04:38.010 --> 00:04:43.470
+controller is a gain P multiplied by the error
+between where I want the joint angle to be,
+
+00:04:43.470 --> 00:04:49.669
+theta star, and the actual joint angle theta
+plus another gain termed D multiplied by the
+
+00:04:49.669 --> 00:04:54.630
+velocity of the joint that’s theta dot.
+If we consider the steady state case where
+
+00:04:54.630 --> 00:04:58.729
+the joint is not moving, it’s deflected
+downwards by gravity; but it’s not moving
+
+00:04:58.729 --> 00:05:03.180
+any further downwards; it’s in equilibrium;
+then theta dot will be equal to zero. So,
+
+00:05:03.180 --> 00:05:08.030
+we can eliminate that term. And if the joint
+is in equilibrium, then the torque generated
+
+00:05:08.030 --> 00:05:13.370
+by the motor and its controller must be equal
+to the torque due to gravity. So, we can write
+
+00:05:13.370 --> 00:05:18.479
+this relationship. And if we do a little bit
+of rearrangement, we can see that the error
+
+00:05:18.479 --> 00:05:23.030
+between where we want the joint to be and
+where the joint actually is, is equal to MGR
+
+00:05:23.030 --> 00:05:28.030
+divided by P, our proportional gain.
+Now, there are some very interesting consequences
+
+00:05:28.030 --> 00:05:32.940
+of that. And one is it if we want to reduce
+this error, we need to increase the value
+
+00:05:32.940 --> 00:05:38.130
+of P. If P is bigger because it’s in the
+denominator, then it makes the error much
+
+00:05:38.130 --> 00:05:41.840
+much smaller.
+We are going to revisit the robot joint model
+
+00:05:41.840 --> 00:05:46.780
+that we built in Simulink in the last lecture.
+We’ve put the values of some of the parameters
+
+00:05:46.780 --> 00:05:53.009
+into the workspace and this is our model and
+we’re going to bring in my palette of useful
+
+00:05:53.009 --> 00:05:59.020
+Simulink objects as well. The first thing
+I’m going to do is to move all of this stuff
+
+00:05:59.020 --> 00:06:04.270
+across here and I’m going to introduce a
+new gain block which I’m going to drop in
+
+00:06:04.270 --> 00:06:11.419
+here. And what I’m going to do is to remove
+the gain termed KM from the numerator of the
+
+00:06:11.419 --> 00:06:17.840
+transfer function and I’m going to put it
+into this block here. So functionally, this
+
+00:06:17.840 --> 00:06:25.430
+is exactly the same. We have a gain KM multiplying
+this transfer function here. The output of
+
+00:06:25.430 --> 00:06:29.750
+this gain block is the torque that’s applied
+to the armature of the electric motor.
+
+00:06:29.750 --> 00:06:35.900
+Now what I’m going to do is to introduce
+a disturbance torque. To do that, I need to
+
+00:06:35.900 --> 00:06:43.169
+find a summing junction and there’s a summing
+junction and I’m going to edit this so that
+
+00:06:43.169 --> 00:06:49.550
+it has got a plus in the upward direction.
+I think that will do the trick and I’m going
+
+00:06:49.550 --> 00:06:58.120
+to remove that wire, put the summing junction
+in here, draw a wire from there to there.
+
+00:06:58.120 --> 00:07:09.990
+And the disturbance force is going to come
+from a step function, that’s the source.
+
+00:07:09.990 --> 00:07:18.110
+Here we go. And I want my step to occur at
+time five in the simulation. The simulation
+
+00:07:18.110 --> 00:07:22.860
+runs for 10 seconds, so the disturbance will
+occur at five seconds. Hence, it has got a
+
+00:07:22.860 --> 00:07:26.789
+value of one.
+So, I’m going to connect that into the summing
+
+00:07:26.789 --> 00:07:32.480
+junction. All right, so what we have now is
+a model like what we had before. But now,
+
+00:07:32.480 --> 00:07:38.770
+I can introduce a disturbance torque which
+also acts on the armature of the electric
+
+00:07:38.770 --> 00:07:43.350
+motor. There are now two torques acting on the
+armature. There is the torque generated by
+
+00:07:43.350 --> 00:07:48.449
+the controller and there is the torque by
+this external disturbance. Now let’s run
+
+00:07:48.449 --> 00:07:54.800
+that. I’ll bring the scope into view, so
+we can see that, just across a little bit,
+
+00:07:54.800 --> 00:08:00.889
+and run my simulation. And the result looks
+like this. Let’s zoom in a little bit, let's
+
+00:08:00.889 --> 00:08:05.789
+auto-scale that and we can see that the motor
+has been following the square wave moving
+
+00:08:05.789 --> 00:08:10.740
+between minus one and plus one. But when the
+external disturbance is applied, we see that
+
+00:08:10.740 --> 00:08:14.669
+that has got a really big influence on the
+position of the motor. We could see that it
+
+00:08:14.669 --> 00:08:20.460
+has moved up and is now moving between the
+3-1/2 and 5-1/2. So clearly this external
+
+00:08:20.460 --> 00:08:25.590
+force has had a really big impact on the performance
+of the motor controller and it’s not doing
+
+00:08:25.590 --> 00:08:29.880
+the job that we want it to do.
+So, we’ve seen that there are some consequences
+
+00:08:29.880 --> 00:08:35.300
+of increasing the proportional gain P. Another
+strategy that we can use is to add an integral
+
+00:08:35.300 --> 00:08:40.639
+term and that turns our controller into a
+proportional integral and derivative controller
+
+00:08:40.639 --> 00:08:46.170
+very commonly known as a PID controller and
+what we’ve added here is the integral term.
+
+00:08:46.170 --> 00:08:51.579
+We have another gain I which is the integral
+gain and that multiplies the time integral
+
+00:08:51.579 --> 00:08:57.290
+of the position error, theta star minus theta.
+What this means, in intuitive terms, is if there
+
+00:08:57.290 --> 00:09:02.350
+is a position error, the integral gradually
+increases over time and that increases the
+
+00:09:02.350 --> 00:09:07.550
+torque that’s applied to the joint so as
+to counter that particular error.
+
+00:09:07.550 --> 00:09:11.040
+Now what we are going to do is to increase
+the proportional gain of the system and see
+
+00:09:11.040 --> 00:09:16.550
+if we can improve things, so here are the
+parameters of our controller. The proportional
+
+00:09:16.550 --> 00:09:21.529
+gain is equal to one. I’m going to double
+that. I’m going to make it equal to two.
+
+00:09:21.529 --> 00:09:26.939
+Close that and we’ll run our simulation
+again and see what happens to the step response.
+
+00:09:26.939 --> 00:09:33.459
+And now we see that the effect of the disturbance
+has been attenuated. We can see now that the
+
+00:09:33.459 --> 00:09:37.790
+effect of the disturbance is less because
+we’ve increased the proportional gain.
+
+00:09:37.790 --> 00:09:44.559
+Let’s increase it some more. I’m going
+to increase it to a value of four, run that
+
+00:09:44.559 --> 00:09:50.879
+simulation again. Now we see that the effect
+of disturbance is even further reduced, but
+
+00:09:50.879 --> 00:09:55.959
+we’ve also noticed that the amount over
+shoot on our square wave response is much,
+
+00:09:55.959 --> 00:10:01.610
+much higher and this is a consequence of increasing
+the proportional gain and we can get around
+
+00:10:01.610 --> 00:10:06.720
+that to some extent by increasing the amount
+of derivative term, increase the amount of
+
+00:10:06.720 --> 00:10:11.100
+damping that will reduce the amount of overshoot.
+But there are other consequences besides.
+
+00:10:11.100 --> 00:10:18.549
+What I am going to do is to add another scope
+to this diagram. And bring in the scope here
+
+00:10:18.549 --> 00:10:26.050
+and what it’s going to do is to show the
+torque that’s generated by the motor and
+
+00:10:26.050 --> 00:10:33.031
+let’s run this.
+So, I have a new scope, let's open that up
+
+00:10:33.031 --> 00:10:40.529
+and what we see here is the torque that we're
+asking the motor to generate. Now, we can
+
+00:10:40.529 --> 00:10:46.399
+see that there is spikes in the torque between
+about plus five to minus five newton meters
+
+00:10:46.399 --> 00:10:51.230
+of torque for asking the motor to produce.
+As we increase the proportional gain, the
+
+00:10:51.230 --> 00:10:54.920
+maximum torque that we ask the motor to produce
+will keep increasing.
+
+00:10:54.920 --> 00:11:00.899
+Any real motor has got a finite torque capability.
+It can't produce an infinite amount of torque.
+
+00:11:00.899 --> 00:11:05.670
+Now, ultimately, this is where the strategy
+of increasing the proportional gain will come
+
+00:11:05.670 --> 00:11:10.839
+unstuck. So, increase the proportional gain
+we’re asking the motor provide more torque
+
+00:11:10.839 --> 00:11:14.910
+and eventually, we’re be asking it to produce
+more torque than it actually can do.
+
+00:11:14.910 --> 00:11:19.559
+So, we’ve seen the effects of increasing
+the proportional gain. We’ve seen the effect
+
+00:11:19.559 --> 00:11:25.399
+of adding an integral term. So, third strategy,
+that’s often use to eliminate this kind
+
+00:11:25.399 --> 00:11:29.259
+of error and that’s to introduce what’s
+called a feed forward term.
+
+00:11:29.259 --> 00:11:34.189
+Here's our block diagram from earlier and
+we are going to introduce a feed forward control
+
+00:11:34.189 --> 00:11:39.259
+term. And the key part of feed forward control,
+is that in many cases, we actually can compute
+
+00:11:39.259 --> 00:11:44.220
+what the disturbance force will be. So, in
+the case of gravity, if we know the joint
+
+00:11:44.220 --> 00:11:48.569
+angles, we can compute what the gravity force
+is on each of the joints.
+
+00:11:48.569 --> 00:11:53.179
+So, we can come up with an estimate of what
+the gravity disturbance is and this is got
+
+00:11:53.179 --> 00:11:57.290
+to be really helpful to us. This is extra
+knowledge about the disturbance in we should
+
+00:11:57.290 --> 00:12:01.999
+be able to use it to cancel the disturbance
+out. The way we do that is we add another
+
+00:12:01.999 --> 00:12:06.700
+summing junction into our control law and
+it's got a negative sign on it and so, this
+
+00:12:06.700 --> 00:12:12.429
+has got a negative gain or it's a subtraction.
+And then to make it to all work, to balance
+
+00:12:12.429 --> 00:12:17.720
+out, we have to add a gain in here. This is
+a gain of one on KdKm.
+
+00:12:17.720 --> 00:12:23.290
+If you think about it, if we have our estimated
+torque here, we divided by KD and KM here.
+
+00:12:23.290 --> 00:12:30.220
+We multiply by KD and KM here. So, the overall
+gain is now one and then we add that to the
+
+00:12:30.220 --> 00:12:35.519
+actual disturbance and because of the negative
+sign here, the disturbance is cancelled out.
+
+00:12:35.519 --> 00:12:41.209
+This is the essence of feed forward control.
+It is a really neat trick.
+
+00:12:41.209 --> 00:12:45.899
+Another strategy that we can adopt is to increase
+the integral gain at the moment is equal to
+
+00:12:45.899 --> 00:12:50.699
+zero. So, I’m going to put the proportional
+gain back to one and I’m going to increase
+
+00:12:50.699 --> 00:12:56.589
+the integral gain to a value of one. We are
+going to simulate that and see what happens.
+
+00:12:56.589 --> 00:13:01.121
+What we see is that the over shoot on the
+square wave response has been reduced. It's
+
+00:13:01.121 --> 00:13:05.139
+back to what it was previously when we had
+the proportional gain equal to one.
+
+00:13:05.139 --> 00:13:10.589
+And here we can see the effect of the integral
+term coming into play. When the external disturbance
+
+00:13:10.589 --> 00:13:16.899
+is applied at time five, the error in the
+control system increases. That is then integrated
+
+00:13:16.899 --> 00:13:22.779
+over time to produce a torque which increases
+over time so as to push the error towards
+
+00:13:22.779 --> 00:13:28.509
+zero. We can see here the effect of the integrated
+term ramping up. It’s pushing the error
+
+00:13:28.509 --> 00:13:32.769
+down. From what we can see is an after short
+amount of time, the upward of the integrated
+
+00:13:32.769 --> 00:13:38.639
+has become equal to the value of the external
+disturbance. And it has effectively cancelled
+
+00:13:38.639 --> 00:13:40.929
+it out.
+So, we can see towards the end of the trace
+
+00:13:40.929 --> 00:13:46.179
+that the square wave response is pretty much
+what we want it to be. The external disturbance
+
+00:13:46.179 --> 00:13:50.689
+has been rejected. Let’s summarize.
+We've looked at a number of different techniques
+
+00:13:50.689 --> 00:13:56.260
+to reduce the effect of disturbance on the
+position of a robot joint. We started off
+
+00:13:56.260 --> 00:14:01.369
+looking at a very standard proportional derivative
+typically known as a PD controller which got
+
+00:14:01.369 --> 00:14:06.699
+a control law like this, a proportional gain
+multiplied by the position error plus a derivative
+
+00:14:06.699 --> 00:14:12.239
+gain multiplied by the velocity which helps
+to control over shoot when the joint is moving.
+
+00:14:12.239 --> 00:14:17.509
+We saw that the amount of error is inversely
+proportional to the gain P. Now, we can increase
+
+00:14:17.509 --> 00:14:22.579
+P to reduce the error, but that has a number
+of adverse consequences such as increasing
+
+00:14:22.579 --> 00:14:27.549
+over shoot or providing signals to the motor
+that it cannot possibly achieve.
+
+00:14:27.549 --> 00:14:31.699
+We then looked at an adding an integral term.
+The intuition is that, with the constant error,
+
+00:14:31.699 --> 00:14:36.249
+the integral over time is a signal that ramps
+up which increases the torque so as to oppose
+
+00:14:36.249 --> 00:14:39.519
+the torque that’s causing the disturbance
+in the first place.
+
+00:14:39.519 --> 00:14:43.949
+The third approach, we looked at, is feed forward
+control which attempts to predict or estimate
+
+00:14:43.949 --> 00:14:48.129
+the disturbance and then cancel it out. A
+great advantage of feed forward control is
+
+00:14:48.129 --> 00:14:53.579
+even if you have a not perfect estimate of
+what the disturbance is, some cancellation
+
+00:14:53.579 --> 00:14:58.689
+is certainly better than no cancellation at
+all. In practice, we often use a mixture of
+
+00:14:58.689 --> 00:15:03.809
+feedback and feed forward control. They each
+have particular strengths and advantages.
+

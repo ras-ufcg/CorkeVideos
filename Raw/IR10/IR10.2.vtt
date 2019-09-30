@@ -1,0 +1,283 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.379 --> 00:00:08.710
+As I mentioned a moment ago, actuators are
+the devices that actually move the robot joints.
+
+00:00:08.710 --> 00:00:13.950
+And there are a number of different types
+of actuators in common use for robotics. A
+
+00:00:13.950 --> 00:00:18.199
+good definition of an actuator is it is a
+device that causes motion and it can cause
+
+00:00:18.199 --> 00:00:23.869
+linear motion or rotary motion. On the top
+here, we have a linear actuator and the shaft
+
+00:00:23.869 --> 00:00:28.609
+of that linear actuator moves backwards and
+forwards along a line. The more common form
+
+00:00:28.609 --> 00:00:33.430
+of electric motor has a rotary output. The
+output of an actuator could be considered
+
+00:00:33.430 --> 00:00:39.210
+as either a speed or a force. That is, for
+a particular input, the motor might adopt
+
+00:00:39.210 --> 00:00:46.280
+a particular speed or it might exert a particular
+force or torque in the rotational case.
+
+00:00:46.280 --> 00:00:50.830
+There are many different types of actuators
+and they vary in the types of underlying physics
+
+00:00:50.830 --> 00:00:55.400
+that’s used to cause the motion. The most
+common types of actuators are hydraulic which
+
+00:00:55.400 --> 00:01:00.970
+use compressed oil to cause the motion, pneumatic
+which use compressed air to cause the motion,
+
+00:01:00.970 --> 00:01:06.400
+and electric which use electric current and
+magnets to cause the motion.
+
+00:01:06.400 --> 00:01:10.659
+Hydraulic actuators are very common in heavy
+machineries such as used in construction and
+
+00:01:10.659 --> 00:01:15.229
+in the mining industry. They are very compact
+devices that are capable of generating very
+
+00:01:15.229 --> 00:01:20.150
+high forces and that’s important when I
+want to pull a bucket of an excavator through
+
+00:01:20.150 --> 00:01:25.150
+the ground or I want to lift up many, many
+tons of earth and stones.
+
+00:01:25.150 --> 00:01:29.859
+The hydraulic actuators are the cylindrical
+devices you see in this image. Up close, you
+
+00:01:29.859 --> 00:01:35.189
+can see a large cylinder with some hoses going
+to it and a shiny rod sticking out one end
+
+00:01:35.189 --> 00:01:40.870
+that moves backwards and forwards. A hydraulic
+actuator is really a very simple device. The
+
+00:01:40.870 --> 00:01:46.200
+cylindrical body has got two ports where compressed
+oil enters and leaves and then, there is the
+
+00:01:46.200 --> 00:01:50.729
+moving part, the rod which moves backwards
+and forwards and exerts a force on the machine
+
+00:01:50.729 --> 00:01:52.329
+or on the environment.
+
+00:01:52.329 --> 00:01:57.069
+A simple schematic of a hydraulic actuator
+looks something like this. Down the bottom,
+
+00:01:57.069 --> 00:02:01.000
+we have the cylinder itself. Inside that,
+there is a piston which is attached to the
+
+00:02:01.000 --> 00:02:04.469
+rod which is the piece that does the work.
+
+00:02:04.469 --> 00:02:09.080
+There is a valve assembly and high-pressure
+oil from the pump enters the valve and oil
+
+00:02:09.080 --> 00:02:14.030
+leaves the valve and returns to the pump.
+The hydraulic actuator converts oil pressure
+
+00:02:14.030 --> 00:02:19.930
+to a linear force. If I apply a positive signal
+to the valve and oil flows as shown by the
+
+00:02:19.930 --> 00:02:25.540
+black arrows, and the piston moves to the
+right. Oil enters the left port of the cylinder
+
+00:02:25.540 --> 00:02:29.320
+and it exits from the right hand port of the
+cylinder.
+
+00:02:29.320 --> 00:02:34.470
+If the area of the piston is A and if the
+pressure of the oil is P, then the force of
+
+00:02:34.470 --> 00:02:39.760
+the piston is P x A. And because the oil pressure
+is so high, the force that can be exerted
+
+00:02:39.760 --> 00:02:45.140
+by a hydraulic actuator is very, very large.
+If I apply negative signal to the valve, then
+
+00:02:45.140 --> 00:02:50.440
+the oil flows in the opposite direction and
+the piston moves to the left. If I apply a
+
+00:02:50.440 --> 00:02:55.090
+zero signal to the valve, then all the ports
+are blocked and this means that no oil can
+
+00:02:55.090 --> 00:02:59.780
+enter or leave the hydraulic cylinder. Because
+the oil is virtually incompressible, this
+
+00:02:59.780 --> 00:03:04.170
+means that the piston is effectively locked
+and it can’t move left or right.
+
+00:03:04.170 --> 00:03:08.980
+Although the linear hydraulic actuator is
+by far the most common, there are also rotary
+
+00:03:08.980 --> 00:03:13.380
+hydraulic motors such are shown here in the
+motor which is driving this caterpillar track.
+
+00:03:13.380 --> 00:03:17.980
+You can think of it essentially as an oil-driven
+turbine or paddle wheel.
+
+00:03:17.980 --> 00:03:22.250
+The hydraulic actuators are very compact and
+can exert a lot of force. But in order to
+
+00:03:22.250 --> 00:03:27.320
+use a hydraulic actuator, you need a lot of
+other kit. First of all, you need valves to
+
+00:03:27.320 --> 00:03:33.000
+control the direction of oil flow. You need
+a compressor to supply the high-pressure oil
+
+00:03:33.000 --> 00:03:37.710
+and for large systems, you need a chiller
+to cool the oil after it’s been compressed.
+
+00:03:37.710 --> 00:03:42.070
+Often you will have an accumulator that holds
+high-pressure oil and there is always an awful
+
+00:03:42.070 --> 00:03:48.010
+lot of hoses. Way back in 1984, I was involved
+in developing this flexible manufacturing
+
+00:03:48.010 --> 00:03:52.650
+cell and it contained two robots in addition
+to a lot of other equipment. There is the
+
+00:03:52.650 --> 00:03:57.710
+electric Puma 560 robot that we’ve met
+a number of times before in this course and
+
+00:03:57.710 --> 00:04:03.710
+in the foreground is this very large hydraulically-powered
+Cincinnati Milacron T3 robot.
+
+00:04:03.710 --> 00:04:08.350
+Back in the day, hydraulics was the only technology
+that could be used to create a robot that
+
+00:04:08.350 --> 00:04:12.850
+was able to lift very large payloads. Since
+then, there has been massive improvements
+
+00:04:12.850 --> 00:04:17.740
+in electric motor technology and there are
+virtually no hydraulically-powered manufacturing
+
+00:04:17.740 --> 00:04:20.040
+robots in existence today.
+
+00:04:20.040 --> 00:04:24.440
+Pneumatic actuators have a lot of similarity
+to hydraulic actuators. And here we see a
+
+00:04:24.440 --> 00:04:30.010
+linear pneumatic actuator. Instead of compressed
+oil, the pneumatic system uses compressed
+
+00:04:30.010 --> 00:04:35.330
+air. Just like the hydraulic system, you need
+a lot of other kit. You need to have valves,
+
+00:04:35.330 --> 00:04:38.680
+you need to have compressors, you need to
+have accumulators and of course, you need
+
+00:04:38.680 --> 00:04:45.340
+to have an awful lot of hoses. As an alternative
+to the linear pneumatic actuator, it’s possible
+
+00:04:45.340 --> 00:04:51.020
+to create an artificial muscle. These devices
+directly convert air pressure to a linear
+
+00:04:51.020 --> 00:04:52.700
+force. There’s no piston involved.
+
+00:04:52.700 --> 00:04:57.990
+And here we can see a large number of artificial
+muscles connected by tendons to the fingers
+
+00:04:57.990 --> 00:05:00.250
+on this robotic hand.
+
+00:05:00.250 --> 00:05:04.890
+The artificial muscle contains a flexible
+chamber or bag. As air is pumped into the
+
+00:05:04.890 --> 00:05:09.440
+chamber, the chamber gets wider and it also
+gets shorter. And we can see that the overall
+
+00:05:09.440 --> 00:05:14.710
+length of the muscle has reduced as it is
+inflated. One characteristic of these artificial
+
+00:05:14.710 --> 00:05:19.820
+muscles just like our own muscles is that
+they can only pull, they can’t push. In
+
+00:05:19.820 --> 00:05:24.940
+order to make an effective actuation system,
+we use them in what we called antagonistic
+
+00:05:24.940 --> 00:05:30.389
+pairs. You can see that illustrated here.
+As I pressurize one muscle, it gets shorter
+
+00:05:30.389 --> 00:05:37.330
+and the wheel at the top rotates to the right.
+As I depressurize that muscle and pressurize
+
+00:05:37.330 --> 00:05:42.780
+the other muscle, it gets shorter and the
+wheel at the top rotates towards the left.
+
+00:05:42.780 --> 00:05:45.020
+These artificial muscles have to be used in
+pairs.
+

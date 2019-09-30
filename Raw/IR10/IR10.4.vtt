@@ -1,0 +1,561 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.679 --> 00:00:07.910
+We're going to do a bit of a recap of simple
+dynamical systems and we're going to start
+
+00:00:07.910 --> 00:00:15.330
+with the very classical system which is a
+mass on wheels connected by a spring to a fixed point.
+
+00:00:16.280 --> 00:00:22.320
+The displacement of the cart with respect
+to some data is given by the variable X. And
+
+00:00:22.330 --> 00:00:28.640
+X increases positively to the right. If the
+spring is compressed then it's going to push
+
+00:00:28.640 --> 00:00:34.399
+the cart towards the left. And the direction
+indicated by the arrow and the symbol Fs.
+
+00:00:34.399 --> 00:00:39.780
+That's the force exerted by the spring. Now
+we can imagine the situation where this spring
+
+00:00:39.780 --> 00:00:44.550
+is stretched and that's the case when X is
+negative. And now the spring is trying to
+
+00:00:44.550 --> 00:00:50.579
+pull the cart towards the right. And so the
+arrow indicating the direction of Fs is now
+
+00:00:50.579 --> 00:00:55.920
+pointing towards the right. So the spring
+can either push or pull the cart and the spring
+
+00:00:55.920 --> 00:01:02.469
+force is equal to minus K times X, the way
+I've drawn this particular diagram.
+
+00:01:02.469 --> 00:01:08.030
+Now there's friction operating and friction
+is a force that opposes the direction of motion.
+
+00:01:08.030 --> 00:01:12.340
+So in the top figure, if the cart is moving
+towards the left, then the friction force
+
+00:01:12.340 --> 00:01:17.770
+is going to be towards the right and vice
+versa for the figure below that. And the friction
+
+00:01:17.770 --> 00:01:26.400
+force is proportional to the velocity, proportional
+to ẋ. And B is the friction coefficient.
+
+00:01:26.400 --> 00:01:30.560
+In order to understand this we're going to
+draw a free body diagram. So here I have a
+
+00:01:30.560 --> 00:01:35.380
+mass M and its displacement X. And there were
+two forces acting on the mass. There is the
+
+00:01:35.380 --> 00:01:40.080
+spring force Kx and the friction force Bẋ.
+
+00:01:40.080 --> 00:01:44.710
+The acceleration of the body is equal to the
+sum of the forces that are acting on it. And
+
+00:01:44.710 --> 00:01:50.640
+I can rearrange this expression into this
+form here. So this is a second order linear
+
+00:01:50.640 --> 00:01:55.140
+differential equation which describes the
+motion of the mass M.
+
+00:01:55.140 --> 00:01:59.000
+Now if you're a little bit rusty on solving
+your differential equation, let me give you
+
+00:01:59.000 --> 00:02:05.640
+a hint. We can propose that X is equal to
+E to the ST. That it is an exponential function
+
+00:02:05.640 --> 00:02:08.390
+of time. And S is the time constant.
+
+00:02:08.390 --> 00:02:13.469
+Now I could take the derivative of this, and
+I got an expression now for ẋ. And with
+
+00:02:13.469 --> 00:02:20.029
+some simplification I can see that ẋ is
+equal to S times X. And I can take the derivative
+
+00:02:20.029 --> 00:02:25.769
+again and get this expression here. Now I
+can make these substitutions into my original
+
+00:02:25.769 --> 00:02:31.019
+equation and I end up with this expression
+and I can cancel out the X's and I end up
+
+00:02:31.019 --> 00:02:36.069
+with this, which is called the characteristic
+equation. This is now a quadratic equation
+
+00:02:36.069 --> 00:02:41.049
+in the variable S. And we can solve for S
+quite easily.
+
+00:02:41.049 --> 00:02:46.239
+Here is the quadratic equation again and the
+well-known solution to the quadratic equation
+
+00:02:46.239 --> 00:02:54.209
+is here. These values of S are known as the
+poles of the system. And they define the response,
+
+00:02:54.209 --> 00:03:00.199
+the position response of the mass as a function
+of time. And remember X is an exponential
+
+00:03:00.199 --> 00:03:02.639
+function of time and S.
+
+00:03:02.639 --> 00:03:08.480
+If we consider the determinant of this equation,
+that's the expression inside the square root.
+
+00:03:08.480 --> 00:03:13.209
+It has three interesting sets of values. If
+the determinant is greater than zero then
+
+00:03:13.209 --> 00:03:19.529
+S has two real and different values. If the
+determinant is equal to zero then S has two
+
+00:03:19.529 --> 00:03:24.829
+real and equal values. Two values of S are
+the same. And if the determinant is less than
+
+00:03:24.829 --> 00:03:28.959
+zero, then S is a complex conjugate pair.
+
+00:03:28.959 --> 00:03:34.229
+In terms of the physical response of the system,
+this case is referred to as the damped response.
+
+00:03:34.229 --> 00:03:39.639
+This case is called critically damped. And
+this case is an oscillating response. The
+
+00:03:39.639 --> 00:03:44.629
+overall response, the position of our mass
+as the function of time is the superposition
+
+00:03:44.629 --> 00:03:49.669
+of the response due to each pole. So it's
+some constant, times the response of the first
+
+00:03:49.669 --> 00:03:54.040
+pole, plus some constant times the response
+due to the second pole.
+
+00:03:54.040 --> 00:03:58.999
+A very classical way to consider the response
+of a second order dynamical system such as
+
+00:03:58.999 --> 00:04:04.609
+we're studying here is to look at it's damping
+ratio and that's given by this expression
+
+00:04:04.609 --> 00:04:10.939
+here. And the graph shows the time response
+for different values of damping ratio. When
+
+00:04:10.939 --> 00:04:15.499
+the damping ratio is greater than one, we
+say that the response is over damped. We see
+
+00:04:15.499 --> 00:04:21.989
+that it responds very very slowly as a function
+of time. When the damping ratio is less than
+
+00:04:21.989 --> 00:04:26.770
+one, we see that the response is somewhat
+oscillatory. And as the damping ratio get's
+
+00:04:26.770 --> 00:04:31.400
+smaller and smaller we see that the system's
+response is more and more oscillatory. The
+
+00:04:31.400 --> 00:04:35.310
+over shoot is higher and there are more cycles
+of oscillation.
+
+00:04:35.310 --> 00:04:39.949
+When the damping ratio gets to zero there
+is no decay at all. And the system will continue
+
+00:04:39.949 --> 00:04:47.340
+to oscillate forever without any kind of decay.
+The damping ratio 1 corresponds to critical
+
+00:04:47.340 --> 00:04:55.979
+damping. It is the smallest value of the damping
+ratio for which there will be no overshoot.
+
+00:04:55.979 --> 00:05:01.800
+Consider now we want to simulate the response
+of this differential equation. I can rearrange
+
+00:05:01.800 --> 00:05:07.689
+it so that ẍ is isolated by itself on the
+left hand side. And now I am going to start
+
+00:05:07.689 --> 00:05:12.800
+to draw of block diagram of a system which
+has got the same dynamics as our differential
+
+00:05:12.800 --> 00:05:19.259
+equation. I'm going to draw an arrow and label
+it ẍ. And I'm going to add an integrator
+
+00:05:19.259 --> 00:05:24.099
+we integrate ẍ. And now I have ẋ. And
+I'm going to integrate it again and now I
+
+00:05:24.099 --> 00:05:31.199
+have X. The signal ẋ and multiply it by
+minus b then I have compute this term here.
+
+00:05:31.199 --> 00:05:36.939
+And the triangle indicates a gain block. It's
+output is equal to minus b times it's input.
+
+00:05:36.939 --> 00:05:43.710
+Then we introduce another gain block here
+with a gain of minus K. If I add these two
+
+00:05:43.710 --> 00:05:48.490
+signals together with a summing junction,
+the result now is this expression shown here
+
+00:05:48.490 --> 00:05:55.900
+in yellow. And if I divide that by M, that
+is by applying a gain of 1 on M, I have now computed
+
+00:05:55.900 --> 00:05:58.770
+an expression that is equivalent to ẍ.
+
+00:05:58.770 --> 00:06:04.400
+So I joined the output of this gain block
+to the signal that I started with. So this
+
+00:06:04.400 --> 00:06:09.539
+is a block diagram of a dynamic system. And
+if I built this in a simulation environment
+
+00:06:09.539 --> 00:06:15.289
+and simulated how it performed as a function
+of time, the signal X is going to give me
+
+00:06:15.289 --> 00:06:20.530
+the position response of the dynamic system
+that we looked at in the first place. The
+
+00:06:20.530 --> 00:06:23.819
+system with a cart and a spring and some friction.
+
+00:06:23.819 --> 00:06:29.030
+Well this is the system that I just described
+but I implemented it in the Simulink modelling
+
+00:06:29.030 --> 00:06:36.370
+package that's a part of MATLAB. Here are
+the two integrators; the integrator that integrates
+
+00:06:36.370 --> 00:06:44.670
+the ẍ into ẋ that is acceleration to velocity and this integrator which integrates velocity into position.
+
+00:06:45.560 --> 00:06:50.740
+This particular integrator has got an initial
+condition of 1. That's the initial value of
+
+00:06:50.749 --> 00:06:56.460
+the displacement X. That's the initial position
+of the cart. So the way we define our coordinate
+
+00:06:56.460 --> 00:07:01.860
+conventions means that for X=1, the spring
+is compressed. That means the first thing
+
+00:07:01.860 --> 00:07:05.889
+that the spring is going to do is to push
+the cart away. It's going to push the cart
+
+00:07:05.889 --> 00:07:08.539
+into -X direction.
+
+00:07:08.539 --> 00:07:14.979
+So let's simulate the model as we have it
+here. And here we see the position response
+
+00:07:14.979 --> 00:07:20.159
+of the cart. As I just said a moment ago,
+the cart is moving in the -X direction. It's
+
+00:07:20.159 --> 00:07:24.379
+oscillating a little bit but the energy is
+decaying from the system and it settles out
+
+00:07:24.379 --> 00:07:27.870
+at a position of X=0.
+
+00:07:27.870 --> 00:07:32.289
+Now I'm going to adjust some of the parameters.
+This gain block here represents the inverse
+
+00:07:32.289 --> 00:07:37.479
+mass so I can open up the parameter settings
+here and I'm going to change the mass from
+
+00:07:37.479 --> 00:07:44.460
+2 kg to 4 kg. And I'm going to apply that
+parameter. And now I am going to simulate
+
+00:07:44.460 --> 00:07:49.509
+the response. You'll note that it changes.
+We'll see that the oscillations are in fact
+
+00:07:49.509 --> 00:07:54.669
+more intense. And that's because our system
+starts with a greater amount of potential
+
+00:07:54.669 --> 00:07:59.099
+energy. That's the energy stored in that compressed
+spring.
+
+00:07:59.099 --> 00:08:04.520
+More mass is going to have more initial potential
+energy, which is going to take longer to be
+
+00:08:04.520 --> 00:08:12.539
+dissipated by the friction. If I increase
+the mass even more, turn it up to 2 kg, apply
+
+00:08:12.539 --> 00:08:20.289
+that, and here we see that the oscillation
+has become much slower and it's also the rate
+
+00:08:20.289 --> 00:08:22.199
+of decay is much much less.
+
+00:08:22.199 --> 00:08:28.340
+I'm going to do now is to put that back to
+the value I started with which was 2 kg, simulate
+
+00:08:28.340 --> 00:08:32.340
+the original system that looks like this.
+And now what I'm going to do is to increase
+
+00:08:32.340 --> 00:08:33.870
+the amount of friction.
+
+00:08:33.870 --> 00:08:38.539
+So originally we had a friction coefficient of
+2 and changed the friction coefficient to
+
+00:08:38.539 --> 00:08:43.659
+4 and what we should see is that the oscillation
+should die out more quickly because the energy
+
+00:08:43.659 --> 00:08:49.589
+is dissipated much more quickly because there
+is an increased amount of friction; increase
+
+00:08:49.589 --> 00:08:56.170
+it some more, increase it say to 8, and apply
+that parameter and simulate again and there
+
+00:08:56.170 --> 00:09:01.290
+we see. There’s absolutely no oscillation
+at all now. The system is over damped.
+
+00:09:01.290 --> 00:09:06.510
+So let's recap on how we convert differential
+equation to an algebraic equation. I make
+
+00:09:06.510 --> 00:09:14.310
+these substitutions for X and it's derivative
+ẋ and ẍ in terms of S and X. Now it's
+
+00:09:14.310 --> 00:09:19.610
+possible that we can consider S as an operator.
+That is it's an operator that converts differential
+
+00:09:19.610 --> 00:09:25.709
+equation to an algebraic equation. Once we've
+done this we can solve for S and we call these
+
+00:09:25.709 --> 00:09:30.920
+values of S the poles of this system. And
+they indicate the dynamic response of the
+
+00:09:30.920 --> 00:09:36.459
+system as a function of time. If a system
+has got more than one pole, the system we
+
+00:09:36.459 --> 00:09:42.120
+looked at has two poles, then the response is the
+superposition, the summation of the response
+
+00:09:42.120 --> 00:09:46.320
+due to each particular value of S.
+
+00:09:46.320 --> 00:09:50.959
+What we considered earlier was called the
+unforced response. There was no other force
+
+00:09:50.959 --> 00:09:55.680
+acting on the system apart from the spring
+and the friction. We position the cart at
+
+00:09:55.680 --> 00:10:02.120
+some initial value of X not equal to zero.
+And then let it go and watched what happens.
+
+00:10:02.120 --> 00:10:06.120
+Now what I'm interested in is what's called
+the forced response. Now I'm going to apply
+
+00:10:06.120 --> 00:10:13.000
+a force F to the cart and I want to understand
+how it moves. So I draw the free body diagram
+
+00:10:13.000 --> 00:10:17.060
+again but now it's got an extra force. It's
+got the force that I'm applying to the cart
+
+00:10:17.060 --> 00:10:22.860
+F as well as the spring force and the friction
+force. Now I consider the force balance acting
+
+00:10:22.860 --> 00:10:29.779
+on the mass in the free body diagram and rearrange
+it like this. Now I'm going to consider S
+
+00:10:29.779 --> 00:10:35.180
+as an operator. I'm replacing the derivatives
+of X with the operator S and now I'm going
+
+00:10:35.180 --> 00:10:37.870
+to write this. And you'll notice a few differences.
+
+00:10:37.870 --> 00:10:43.000
+Firstly the derivatives have gone and I've
+introduced my operator S. You'll also notice
+
+00:10:43.000 --> 00:10:48.620
+that I've changed the lower case x to a capital
+X and I've changed the lower case f to a capital
+
+00:10:48.620 --> 00:10:54.250
+F. What I've done is computed the Laplace
+transform of my differential equation. Capital
+
+00:10:54.250 --> 00:10:59.959
+X represents the Laplace transform of the
+position of the cart lower case x and capital
+
+00:10:59.959 --> 00:11:06.579
+F represents the Laplace transform of the
+applied force which is lower case f.
+
+00:11:06.579 --> 00:11:12.329
+Now I can rearrange my Laplace transform expression
+into a ratio which we call a transfer function.
+
+00:11:12.329 --> 00:11:19.649
+It is the ratio of the output of the system
+X to the input of the system F. And to make
+
+00:11:19.649 --> 00:11:24.720
+things very clear I've said that capital X
+is the function of the operator s and capital
+
+00:11:24.720 --> 00:11:28.940
+F is a function of the operator s.
+
+00:11:28.940 --> 00:11:34.079
+Let's consider a very general dynamic system
+as a black box. The input is a signal x which
+
+00:11:34.079 --> 00:11:39.660
+is a function of time and the output is another
+signal y which is a function of time. Then
+
+00:11:39.660 --> 00:11:45.940
+mathematically the output of the system y
+is related to the input to the system x, convolved
+
+00:11:45.940 --> 00:11:52.520
+with the impulse response of that dynamic
+system, which is denoted by g as a function of time.
+
+00:11:52.620 --> 00:11:57.259
+In the Laplace domain where we've just been
+operating, things are a little bit simpler.
+
+00:11:57.259 --> 00:12:02.500
+The Laplace transform of the input system
+is capital X. Laplace transform output is
+
+00:12:02.500 --> 00:12:07.290
+capital Y. And G is the transfer function
+of the system.
+
+00:12:07.290 --> 00:12:12.870
+So now the output Y is simply the product
+of the input X multiplied by the transfer
+
+00:12:12.870 --> 00:12:18.720
+function. The simple multiplication in the
+Laplace domain where it is a convolution in
+
+00:12:18.720 --> 00:12:19.899
+the time domain.
+
+00:12:19.899 --> 00:12:24.620
+I've covered a lot of territory in this section.
+And if you previously encountered these concepts,
+
+00:12:24.620 --> 00:12:30.319
+I hope that it served as a bit of a memory
+refresher for you. If you've never encountered
+
+00:12:30.319 --> 00:12:35.050
+these concepts before then what I've been
+talking about is probably a little bewildering.
+
+00:12:35.050 --> 00:12:39.279
+It might be worthwhile trying to go through
+the content again. Perhaps contact a friend
+
+00:12:39.279 --> 00:12:44.329
+or colleague who can talk you through some
+of this material or try and find an introductory
+
+00:12:44.329 --> 00:12:48.889
+control systems text which will cover this
+material in much much more detail.
+

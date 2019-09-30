@@ -1,0 +1,292 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.530 --> 00:00:07.310
+We've covered an awful lot of ground in this
+particular lecture, so let's summarise some
+
+00:00:07.310 --> 00:00:10.080
+of the most important points.
+
+00:00:10.080 --> 00:00:14.249
+In the last lecture, we considered a very
+simplistic control case. We called it independent
+
+00:00:14.249 --> 00:00:19.350
+joint control and we ignored facts like gravity,
+but in a real robot such as the PUMA robot,
+
+00:00:19.350 --> 00:00:23.770
+shown here in this particular configuration,
+we can imagine the torque that must be required
+
+00:00:23.770 --> 00:00:30.770
+at the shoulder joint and at the elbow joint in order to stop the robot collapsing under the effect of gravity.
+
+00:00:31.060 --> 00:00:36.780
+So this was the robot joint control we had
+for the independent control case and we modified
+
+00:00:36.780 --> 00:00:41.379
+that. We introduced the disturbance torque,
+and this might be due to non-linear friction
+
+00:00:41.379 --> 00:00:46.140
+or it might be due to gravity. This is the
+disturbance force TD.
+
+00:00:46.140 --> 00:00:50.210
+And then we looked at the effect that the
+disturbance torque has on the joint position
+
+00:00:50.210 --> 00:00:55.219
+and it can be significant, so it's something
+that we need to deal with.
+
+00:00:55.219 --> 00:01:00.519
+We then considered a very simple case: a single
+motor attached to a link, and the link has
+
+00:01:00.519 --> 00:01:05.350
+got mass. If a joint is controlled by a PD
+controller, a pretty typical sort of controller
+
+00:01:05.350 --> 00:01:11.130
+for a robot joint, then we saw that the effect
+of gravity is to deflect the joint, introducing
+
+00:01:11.130 --> 00:01:16.700
+a positioning error. The joint angle is not
+the desired joint angle. And the amount of
+
+00:01:16.700 --> 00:01:22.219
+that error is inversely proportional to the
+controller gain P, so if we want to make the
+
+00:01:22.219 --> 00:01:28.000
+error very small, we need to use a very high
+gain. But we saw that there is some consequences
+
+00:01:28.000 --> 00:01:33.979
+with increasing the gain, in particular, increased
+overshoot in our joint control system.
+
+00:01:33.979 --> 00:01:38.759
+So another strategy that we looked at then
+is to introduce an integral term. This is
+
+00:01:38.759 --> 00:01:43.479
+a term that ramps up while there is a positioning
+error, increasing the torque in the joint
+
+00:01:43.479 --> 00:01:46.770
+until the error is eliminated.
+
+00:01:46.770 --> 00:01:51.189
+Another strategy we looked at is feedforward
+control. And here, we assume that we can estimate
+
+00:01:51.189 --> 00:01:55.829
+the disturbance torque and in the case of
+gravity, that's most certainly the case. So,
+
+00:01:55.829 --> 00:02:01.289
+we estimate what gravity should be and multiply
+it by a gain and introduce it into the output
+
+00:02:01.289 --> 00:02:04.539
+of our controller, and that cancels out the
+actual disturbance.
+
+00:02:04.539 --> 00:02:10.310
+This is a technique that works well even if
+our estimate is not too precise. Partial cancellation
+
+00:02:10.310 --> 00:02:14.450
+of disturbance is better than no cancellation
+at all.
+
+00:02:14.450 --> 00:02:19.290
+Next we considered the dynamic parameters
+of a serial link manipulator.
+
+00:02:19.290 --> 00:02:22.530
+We've looked at this simple robot earlier when we were studying kinematics.
+
+00:02:22.530 --> 00:02:24.760
+Now we want to understand the dynamics of this.
+
+00:02:24.760 --> 00:02:29.040
+So we've indicated the center of mass of each
+of the links, and we described the position
+
+00:02:29.040 --> 00:02:34.040
+of the center of mass of each link with respect
+to the link coordinate frame and the inertia
+
+00:02:34.040 --> 00:02:40.599
+of each link. The mass is a scalar, the position
+of the center of mass is a three-element vector,
+
+00:02:40.599 --> 00:02:45.440
+and the inertia is a three by three matrix,
+it's a symmetric matrix, so it actually has
+
+00:02:45.440 --> 00:02:52.299
+only six unique elements. So each link is
+therefore described by ten dynamic parameters.
+
+00:02:52.299 --> 00:02:56.299
+The dynamics of moving bodies is described
+by a number of mathematical techniques. And
+
+00:02:56.299 --> 00:03:02.099
+we used a combination of Newton's second law,
+F equals MA and Euler's equation for rotational
+
+00:03:02.099 --> 00:03:05.620
+motion. Together, we call this a Newton-Euler
+method.
+
+00:03:05.620 --> 00:03:11.230
+And we then described a very efficient computer
+algorithm, the recursive Newton-Euler algorithm,
+
+00:03:11.230 --> 00:03:18.720
+which we can use in MATLAB to compute joint
+talks as a function of Q, Q dot, and Q double dot.
+
+00:03:18.720 --> 00:03:23.269
+We didn't go into the details of the recursive
+Newton-Euler method. You can find the details
+
+00:03:23.269 --> 00:03:28.360
+in many textbooks and you can look at the
+code provided with Toolbox.
+
+00:03:28.360 --> 00:03:34.360
+The expressions for robot joint talk as a
+function of Q, Q dot, and Q double dot are
+
+00:03:34.360 --> 00:03:39.000
+actually quite complicated but they can be
+factorised and expressed in a very concise
+
+00:03:39.000 --> 00:03:45.970
+matrix equation. So the torque applied to
+the joint comprises an inertial term, a Coriolis
+
+00:03:45.970 --> 00:03:51.459
+and centripetal term and gravity term. We
+then spend a little bit of time investigating
+
+00:03:51.459 --> 00:03:55.360
+in detail each of these terms.
+
+00:03:55.360 --> 00:04:00.040
+When it comes to control of a particular robot
+joint, things are much more complicated than
+
+00:04:00.040 --> 00:04:04.819
+they were in the independent joint control
+situation. Then, we had only to deal with
+
+00:04:04.819 --> 00:04:08.790
+the first two terms. Now we have to deal with
+torques that are due to acceleration of all
+
+00:04:08.790 --> 00:04:14.900
+the other robot's joints, the velocity of
+all the robot's other joints, and the influence of gravity.
+
+00:04:14.900 --> 00:04:20.000
+With some mathematical manipulation, we can
+get this down to a fairly concise equation,
+
+00:04:20.000 --> 00:04:24.570
+which looks like this. And the bottom line
+is that the inertia of the robot joint is
+
+00:04:24.570 --> 00:04:29.910
+a function of the configuration of the entire
+robot, it's no longer a constant.
+
+00:04:29.910 --> 00:04:34.810
+We have the viscous friction term and we have
+the disturbance torque term, which is due
+
+00:04:34.810 --> 00:04:40.560
+to acceleration and velocity of all the other
+robot's joints. Time varying inertia is a
+
+00:04:40.560 --> 00:04:44.340
+bit of a problem because it makes it hard
+to tune the control system to get the best
+
+00:04:44.340 --> 00:04:47.580
+possible settling time and overshoot.
+
+00:04:47.580 --> 00:04:51.220
+The disturbance torque means more work for
+the joint controller. It has to be very high
+
+00:04:51.220 --> 00:04:57.699
+performance so that it can reject the disturbance
+torque and perform accurate path following.
+
+00:04:57.699 --> 00:05:02.860
+Some techniques to help eliminate these rigid
+body dynamic effects other introduce a gearbox.
+
+00:05:02.860 --> 00:05:07.889
+It reduces the configuration-dependent inertia,
+which makes the inertia almost independent
+
+00:05:07.889 --> 00:05:13.880
+of robot configuration and it greatly attenuates
+the disturbance torque. A gearbox is a cheap
+
+00:05:13.880 --> 00:05:21.200
+trick and most robots include a gearbox anyway
+to amplify the torque of high-speed electric motors.
+
+00:05:21.800 --> 00:05:28.460
+We can also apply a computational technique
+called torque feedforward control or computed
+
+00:05:28.460 --> 00:05:33.169
+torque control. Effectively, what we're doing
+here is trading mechanical complexity and
+
+00:05:33.169 --> 00:05:37.410
+cost - for instance, the addition of a gear
+box - with computation. The computation is
+
+00:05:37.410 --> 00:05:41.050
+getting cheaper and cheaper year on year.
+
+00:05:41.050 --> 00:05:46.360
+We can rearrange the rigid body equations
+of motion into this form. We can get an expression
+
+00:05:46.360 --> 00:05:52.240
+for Q dot dot - the join acceleration - in
+terms of the torque that I applied to a robot.
+
+00:05:52.240 --> 00:05:56.800
+I can integrate the acceleration to get velocity,
+integrated again to get position, and now
+
+00:05:56.800 --> 00:06:01.370
+what I have is the forward dynamics of the
+robot manipulator. This is a function which
+
+00:06:01.370 --> 00:06:06.289
+gives me the motion of the robot as a function
+of torque. And this is really useful when
+
+00:06:06.289 --> 00:06:12.430
+I want to simulate the robot motion in a real
+world setting with a controller that I design.
+

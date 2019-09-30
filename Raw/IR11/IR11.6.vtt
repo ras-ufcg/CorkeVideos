@@ -1,0 +1,138 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.270 --> 00:00:09.110
+The last term we're going to look at is the
+term 'C' and it represents the Coriolis and
+
+00:00:09.110 --> 00:00:14.110
+Centripetal torques that exists within a serial
+link robot manipulator. It's often called
+
+00:00:14.110 --> 00:00:20.200
+the velocity term because the C matrix multiplies
+the vector Q dot, the vector of joint velocities.
+
+00:00:20.200 --> 00:00:26.380
+This is the torque that is due to gyroscopic
+effects due to rotating joints within the
+
+00:00:26.380 --> 00:00:30.910
+robot manipulator. There are actually two
+effects that are modelled by the matrix C and
+
+00:00:30.910 --> 00:00:35.750
+it's the Coriolis effect which is named after
+the French scientist, mathematician Coriolis
+
+00:00:35.750 --> 00:00:40.960
+and he did a lot of work on understanding
+what goes on in rotating reference frames
+
+00:00:40.960 --> 00:00:45.410
+and the other force represented by the matrix
+C are centripetal torques.
+
+00:00:45.410 --> 00:00:49.880
+Once again we have our two link robot represented
+symbolically and this time we're going to
+
+00:00:49.880 --> 00:00:55.790
+investigate the Coriolis and centripetal torques.
+And that's done using the method called coriolis
+
+00:00:55.790 --> 00:01:04.269
+and the arguments to that are the joint angles,
+there they are and the joint velocities; Q1D and Q2D.
+
+00:01:05.240 --> 00:01:11.340
+It takes a moment to compute and this is the
+Coriolis and centripetal matrix.
+
+00:01:11.340 --> 00:01:18.320
+It's a 2 x 2 matrix and we can see, once again that
+it comprises a number of kinematic and dynamic
+
+00:01:18.329 --> 00:01:22.749
+parameters of a robot and we can also see
+that it's a function of the configuration
+
+00:01:22.749 --> 00:01:27.459
+of a robot. Interestingly, in this case it’s
+only a function of Q2.
+
+00:01:27.459 --> 00:01:31.810
+For a simple 2 link robot manipulator, the
+C matrix looks something like this. We can
+
+00:01:31.810 --> 00:01:36.639
+see that the elements are a function of the
+joint angle, in this case just a single joint
+
+00:01:36.639 --> 00:01:43.560
+angle. Joint 2 angle Q2 and also the velocities
+of the two joints Q1 dot and Q2 dot.
+
+00:01:43.560 --> 00:01:50.009
+Now the torque, due to the Coriolis and centripetal
+effects can be derived by multiplying the
+
+00:01:50.009 --> 00:01:55.560
+matrix C by the vector of joint velocities
+and if we expand that out, we have the expression
+
+00:01:55.560 --> 00:02:02.529
+for the Coriolis and centripetal talks acting
+on Joint 1 and acting on Joint 2.
+
+00:02:02.529 --> 00:02:07.539
+Let's consider the case where Joint 1 is not
+moving that’s Q1 dot is equal to zero but
+
+00:02:07.539 --> 00:02:12.990
+let's say that Joint 2 is moving so Q2 dot
+is not equal to zero. Then although this term
+
+00:02:12.990 --> 00:02:19.200
+here is equal to zero. This term here will
+be finite, that is the motion of Joint 2 at
+
+00:02:19.200 --> 00:02:25.120
+constant velocity is going to induce a torque
+on Joint 1 and that's again something that
+
+00:02:25.120 --> 00:02:30.690
+the Joint 1 motion controller is going to
+have to fight against, going to have to oppose
+
+00:02:30.690 --> 00:02:33.940
+in order to keep Joint 1 stationary.
+
+00:02:33.940 --> 00:02:39.130
+And similarly we can see that for Joint 2
+constant velocity motion of Joint 1 is going
+
+00:02:39.130 --> 00:02:44.870
+to induce a Coriolis and centripetal effect
+on Joint 2. Now if we look at these terms,
+
+00:02:44.870 --> 00:02:50.140
+we can see that some of them are a function
+of a particular joint velocity squared and
+
+00:02:50.140 --> 00:02:56.280
+these are the centripetal talks and some of
+them are a product of one joint velocity multiplied
+
+00:02:56.280 --> 00:03:02.130
+by a different joint velocity and these are
+the Coriolis terms. So this matrix C has got
+
+00:03:02.130 --> 00:03:07.140
+some terms which are the products of velocities
+of different joints and some are joint velocity
+
+00:03:07.140 --> 00:03:10.069
+squared, Coriolis and centripetal effects.
+

@@ -1,0 +1,111 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:07.500 --> 00:00:11.470
+In this lecture, we're going to talk about
+Robot Joint Control. That's how do we actually
+
+00:00:11.470 --> 00:00:16.920
+make a robot move. It's a really important
+problem. So, using some of the principles
+
+00:00:16.920 --> 00:00:21.529
+that we've already learned about in this course,
+we have a robot here and we're going to say,
+
+00:00:21.529 --> 00:00:26.770
+"I want the robot end-effector to be at this
+particular pose." This is a constraint that
+
+00:00:26.770 --> 00:00:30.300
+comes from the particular task that I'm trying
+to do. I'm a robot arm and I want to pick
+
+00:00:30.300 --> 00:00:35.690
+up this particular object then I know the
+pose that the robot end-effector has to achieve.
+
+00:00:35.690 --> 00:00:40.640
+Now, I can use the inverse kinematics
+to tell me what should be the angles in the
+
+00:00:40.640 --> 00:00:45.960
+joints of the robot arm in order for the end
+of the arm to get to that particular pose.
+
+00:00:45.960 --> 00:00:50.850
+So, we’ve talked about how to do this. This
+is the inverse kinematic problem. The challenge
+
+00:00:50.850 --> 00:00:55.460
+that we’re going to talk about in this lecture
+is how do I actually make the joint adopt
+
+00:00:55.460 --> 00:01:00.050
+a particular angle. The joint’s got a motor
+in it. It’s got some sensors in it. So we’re
+
+00:01:00.050 --> 00:01:05.080
+going to talk about the control system that
+makes the joint have the particular angle
+
+00:01:05.080 --> 00:01:09.450
+that we want it to have. This is the joint
+control problem.
+
+00:01:09.450 --> 00:01:15.659
+Now, this business of trying to control the
+position of a motor to control the angle of
+
+00:01:15.659 --> 00:01:20.920
+a robot joint is a really common problem in
+mechatronics. There are many, many motion
+
+00:01:20.920 --> 00:01:25.049
+control systems in all sorts of things that
+we own that we probably don’t even know
+
+00:01:25.049 --> 00:01:29.470
+that they’re there. In an ink jet printer,
+there is a very precise motion control system
+
+00:01:29.470 --> 00:01:31.950
+that’s moving the printing print head across
+the paper.
+
+00:01:31.950 --> 00:01:37.490
+Another motion control system is moving the
+paper backwards and forwards through the printer.
+
+00:01:37.490 --> 00:01:41.890
+A robot vacuum cleaner has got a motion control
+system to control the speed of each of its
+
+00:01:41.890 --> 00:01:46.810
+wheels so that it moves with the appropriate
+velocity across the floor.
+
+00:01:46.810 --> 00:01:53.100
+Within a hard disk drive in your computer
+or within DVD drive, there is a head which
+
+00:01:53.100 --> 00:02:01.899
+reads the information off the spinning disk.
+It has to be positioned really precisely over
+
+00:02:01.899 --> 00:02:03.299
+the disk’s surface.
+
+00:02:03.299 --> 00:02:08.759
+This motion control systems are very, very
+pervasive pieces of technology in the modern
+
+00:02:08.759 --> 00:02:13.380
+world. So, what we’re going to learn about
+today is a very particular case of a motion
+
+00:02:13.380 --> 00:02:18.740
+control system. It’s a motion control system
+that’s controlling the angle of a robot’s joint.
+

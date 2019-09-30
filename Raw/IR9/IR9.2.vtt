@@ -1,0 +1,383 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.750 --> 00:00:08.799
+In the previous lecture, we looked at the
+tooltip velocity for a two-joint robot. The
+
+00:00:08.799 --> 00:00:14.740
+end-effector pose is described by the end-effector
+coordinates x and y, and we came up with expressions
+
+00:00:14.740 --> 00:00:19.890
+for the rate of change of the end-effector
+pose. That is the rate of change of x and
+
+00:00:19.890 --> 00:00:25.939
+the rate of change of y in terms of the rate
+of change of the robot joint angles. We did
+
+00:00:25.939 --> 00:00:31.390
+a similar thing for the three-joint robot
+where the end-effector pose is described by
+
+00:00:31.390 --> 00:00:38.420
+a coordinate x and y, and an orientation angle,
+theta. And, we again described x-dot, y-dot
+
+00:00:38.420 --> 00:00:42.829
+and theta-dot in terms of the rate of change
+of the robot’s joint angles.
+
+00:00:42.829 --> 00:00:48.840
+Now, we want to do the same thing for a six-axis
+robot like this Puma 560 robot. We found out
+
+00:00:48.840 --> 00:00:53.579
+that it is very, very difficult to do. The
+necessary differential calculus and algebra
+
+00:00:53.579 --> 00:00:58.370
+is going to take up pages and pages and pages
+in my notebook. It is a very difficult thing
+
+00:00:58.370 --> 00:01:02.140
+to do. So, we are going to look at an alternative
+way to crack this problem.
+
+00:01:02.140 --> 00:01:07.430
+So, what we want do now is to understand the
+relationship between the velocity of the joints
+
+00:01:07.430 --> 00:01:11.860
+of this multi-jointed robot and the velocity
+of the end-effector, which we described in
+
+00:01:11.860 --> 00:01:17.350
+terms of its rate of change of its x, y and
+z coordinates and rate of change of its orientation.
+
+00:01:17.350 --> 00:01:21.820
+If we look at just a single joint, which
+is the approach we are going to use here,
+
+00:01:21.820 --> 00:01:25.810
+we can see that as I adjust just the first
+joint of the robot, we can see that the end-effector
+
+00:01:25.810 --> 00:01:31.670
+moves in an arc. And so, as I adjust joint
+one by a small amount, we see that the x and
+
+00:01:31.670 --> 00:01:36.840
+y coordinates of the end-effector change.
+Now, if I adjust the second joint by a small
+
+00:01:36.840 --> 00:01:41.860
+amount, we can see that the end-effector changes
+in the vertical or z direction and its orientation
+
+00:01:41.860 --> 00:01:46.670
+also changes slightly. We can follow exactly
+the same argument for the third joint of the
+
+00:01:46.670 --> 00:01:52.259
+robot, fourth joint of the robot and so on.
+In your first calculus class, you would have
+
+00:01:52.259 --> 00:01:58.040
+come across this relationship. We can approximate
+the derivative of a function by taking a finite
+
+00:01:58.040 --> 00:02:04.150
+difference. In this case, we perturb the value
+of x by a small amount, delta x. And, as delta
+
+00:02:04.150 --> 00:02:10.229
+x gets smaller and smaller in the limit as
+it approaches zero, we have the true derivative.
+
+00:02:10.229 --> 00:02:15.620
+What we are going to do is to compute an approximate
+derivative of the forward kinematic function.
+
+00:02:15.620 --> 00:02:21.780
+Now, we have introduced previously the forward
+kinematics as a function K and function of
+
+00:02:21.780 --> 00:02:26.190
+the joint angles and it returns the end-effector
+pose. And, you will notice here that I have
+
+00:02:26.190 --> 00:02:31.590
+used the partial derivative notation because
+the kinematic function is a function of a
+
+00:02:31.590 --> 00:02:36.849
+vector Q. And, we are going to consider the
+partial derivative with respect to one particular
+
+00:02:36.849 --> 00:02:41.069
+joint angle. So, what we are trying to do
+is to come up with an approximation for the
+
+00:02:41.069 --> 00:02:46.910
+way in which the forward kinematics changes
+as a function of variation of a single joint
+
+00:02:46.910 --> 00:02:49.660
+angle.
+For the six-axis robot, we are going to treat
+
+00:02:49.660 --> 00:02:53.840
+the joints individually and we are going to
+start with joint number one. So, the first
+
+00:02:53.840 --> 00:02:58.260
+thing that we are interested in is, if I adjust
+joint number one, what effect does that have
+
+00:02:58.260 --> 00:03:03.660
+on the translational and angular velocity
+of the end-effector? In the animation on the
+
+00:03:03.660 --> 00:03:09.030
+right hand side, we can see the end-effector
+pose changing as we make small adjustments
+
+00:03:09.030 --> 00:03:15.310
+to the first joint angle. That is Q1.
+Let us look at how this works for the Puma
+
+00:03:15.310 --> 00:03:21.500
+560 robot. The first thing I am going to do
+is to load a model of the Puma 560 robot and
+
+00:03:21.500 --> 00:03:26.840
+we need to decide what joint angle configuration
+the robot is going to be in. You will notice
+
+00:03:26.840 --> 00:03:33.520
+in the workspace that there are a number of
+variables like Qn, Qr, Qs and Qz and these
+
+00:03:33.520 --> 00:03:38.530
+are just different robot poses.
+The one we are going to use is Qn. That is
+
+00:03:38.530 --> 00:03:44.790
+short hand for Q nominal. This is a pose of
+the Puma robot that is somewhat in the middle
+
+00:03:44.790 --> 00:03:49.670
+of its workspace and where it is very dexterous.
+It is able to move nicely in many different
+
+00:03:49.670 --> 00:03:53.409
+directions.
+Now, we are going to do is to compute the
+
+00:03:53.409 --> 00:03:59.720
+forward kinematics at that particular pose
+and we use the fkine method to do that. And,
+
+00:03:59.720 --> 00:04:04.159
+here is the end-effector pose expressed as
+a homogeneous transformation matrix. Now,
+
+00:04:04.159 --> 00:04:11.239
+what I am going to do is to compute the end-effector
+pose when I slightly disturb the joint angles.
+
+00:04:11.239 --> 00:04:18.060
+So, it is going to be about the pose Qn. What
+I am going to do is to add a vector to that
+
+00:04:18.060 --> 00:04:20.549
+and the first element in the vector is a small
+displacement.
+
+00:04:20.549 --> 00:04:26.170
+Now, I am going to displace joint one. So,
+I am going to add zero to the rest of the
+
+00:04:26.170 --> 00:04:32.449
+robot’s joints. What we have now is the
+end-effector pose for a very small change
+
+00:04:32.449 --> 00:04:38.500
+in the angle of joint number one. We have
+disturbed joint one by 0.01 radians. And
+
+00:04:38.500 --> 00:04:43.120
+here, we can see that the end-effector pose
+is slightly different.
+
+00:04:43.120 --> 00:04:48.190
+If we summarised the results that we have
+just obtained in MATLAB for the nominal joint
+
+00:04:48.190 --> 00:04:52.610
+angle given here by the vector Q, this is
+the robot’s end-effector pose expressed
+
+00:04:52.610 --> 00:04:59.300
+as a 4 x 4 homogenous transformation matrix.
+We adjusted Q by a very small amount. We adjusted
+
+00:04:59.300 --> 00:05:05.090
+it by 0.01 radians, which is around half
+a degree. When we did that, we obtained a
+
+00:05:05.090 --> 00:05:10.509
+slightly different value for the robot’s
+end-effector pose. We can see that the numbers
+
+00:05:10.509 --> 00:05:14.729
+in those two matrices are not exactly the
+same and that is, of course, what we expect
+
+00:05:14.729 --> 00:05:19.180
+because we have changed one of the joint angles.
+The challenge now is to understand how this
+
+00:05:19.180 --> 00:05:22.910
+change is related to the change in the joint
+angle.
+
+00:05:22.910 --> 00:05:26.880
+We are now going to use the expression we
+introduced a moment ago which relates the
+
+00:05:26.880 --> 00:05:32.169
+derivative of a function to a finite difference
+in a function. If I compute that finite difference,
+
+00:05:32.169 --> 00:05:37.350
+I get this matrix result here. And the question
+is, of course, what does this actually mean?
+
+00:05:37.350 --> 00:05:42.500
+If I write the symbolic expression for a homogeneous
+transformation matrix, which we recall has
+
+00:05:42.500 --> 00:05:48.880
+got a 3 x 3 rotational component and a 3 x
+1 translational component, and if I take the
+
+00:05:48.880 --> 00:05:55.210
+derivative of that matrix with respect to
+the joint variable Q1, I can write this expression
+
+00:05:55.210 --> 00:05:58.050
+here.
+Now, we can match the components in this symbolic
+
+00:05:58.050 --> 00:06:02.920
+expression with the components in the numeric
+expression. So, this is the expression - a
+
+00:06:02.920 --> 00:06:08.789
+partial derivative of T with respect to Q1
+and this bit here is the partial derivative
+
+00:06:08.789 --> 00:06:14.319
+of the rotation matrix with respect to Q1.
+Let us consider first the translational part.
+
+00:06:14.319 --> 00:06:19.370
+Here is the partial derivative of the robot’s
+end-effector position with respect to Q1.
+
+00:06:19.370 --> 00:06:24.660
+And, if I multiply that by the rate of change
+of Q1 with respect to time, I end up with
+
+00:06:24.660 --> 00:06:31.009
+the rate of change of translation with respect
+to time, which is in fact is the end-effector’s
+
+00:06:31.009 --> 00:06:35.789
+translational velocity. That is x-dot, y-dot
+and z-dot which I might also write sometimes
+
+00:06:35.789 --> 00:06:43.370
+as Vx, Vy or Vz. I can rearrange this expression
+and we have an expression for the end-effector
+
+00:06:43.370 --> 00:06:49.180
+velocity in terms of a constant vector multiplied
+by the velocity of joint one.
+
+00:06:49.180 --> 00:06:52.880
+You notice that there is an approximation
+sign in here. It is important to remember
+
+00:06:52.880 --> 00:06:58.100
+that we have computed a finite difference
+here. It is an approximation to the true derivative.
+
+00:06:58.100 --> 00:07:04.289
+We used a change in joint angle of 0.01 radians.
+And, as we make that change in joint angle
+
+00:07:04.289 --> 00:07:08.960
+smaller and smaller, we will get a better
+approximation to the true derivative. But,
+
+00:07:08.960 --> 00:07:13.860
+if we make it too small, we will encounter
+numerical errors because of the way arithmetic
+
+00:07:13.860 --> 00:07:18.979
+is done inside a digital computer and we need
+to find some sort of balance. So, keep in
+
+00:07:18.979 --> 00:07:24.319
+mind that what we have done here is an approximation
+to the true relationship.
+
+00:07:24.319 --> 00:07:28.520
+We have related end-effector translational
+velocity to rate of change of Q1 and we can
+
+00:07:28.520 --> 00:07:33.699
+do this for joint two and for joint three
+all the way up to joint six. Find the expressions
+
+00:07:33.699 --> 00:07:37.530
+that relate joint velocity to end-effector
+translational velocity.
+
+00:07:37.530 --> 00:07:41.880
+Let us now consider the rotational part. And,
+this is not quite as straightforward. Here,
+
+00:07:41.880 --> 00:07:47.860
+I have written the partial derivative of a
+rotation matrix with respect to joint angle
+
+00:07:47.860 --> 00:07:52.920
+one. And, if I multiply that by the rate of
+change of joint one with respect to time,
+
+00:07:52.920 --> 00:07:59.100
+I end up with the rate of change of the rotation
+matrix with respect to time. There is a well-known
+
+00:07:59.100 --> 00:08:03.419
+relationship between the rate of change of
+the rotation matrix, the angular velocity
+
+00:08:03.419 --> 00:08:09.099
+omega and the rotation matrix itself. And,
+we can substitute that in here. The matrix
+
+00:08:09.099 --> 00:08:14.240
+S is what we called a skew symmetric matrix
+and it is a function of the angular velocity
+
+00:08:14.240 --> 00:08:14.669
+vector omega.
+

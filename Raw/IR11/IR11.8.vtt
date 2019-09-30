@@ -1,0 +1,96 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.240 --> 00:00:07.170
+This expression should be pretty familiar
+to you by this point. This is the rigid body
+
+00:00:07.170 --> 00:00:12.910
+equations of motion of a serial link robot
+manipulator. We have an inertia term; Coriolis
+
+00:00:12.910 --> 00:00:18.110
+and centripetal term; gravity term; the torque
+applied the robot; joint acceleration; and
+
+00:00:18.110 --> 00:00:22.040
+joint velocity.
+This expression is also known as the inverse
+
+00:00:22.040 --> 00:00:28.039
+dynamics. We can think of it as a function
+that maps the motion of the robot Q, Q-dot
+
+00:00:28.039 --> 00:00:33.890
+and Q-dot-dot, to the torque that needs to
+be applied to the robots' joints. We take
+
+00:00:33.890 --> 00:00:39.500
+this expression and re-arrange it. We end
+up with an expression for Q-dot-dot, and we
+
+00:00:39.500 --> 00:00:44.320
+can integrate Q-dot-dot with respect to time
+to get Q-dot, the joint velocity and we can
+
+00:00:44.320 --> 00:00:50.290
+integrate it again to get the joint position.
+This set of equations is referred to as the
+
+00:00:50.290 --> 00:00:55.610
+forward dynamics. This is a function that
+maps the torque that we applied to the robot
+
+00:00:55.610 --> 00:01:02.440
+to the joint position, velocity and acceleration.
+So, these forward dynamics are used to simulate
+
+00:01:02.440 --> 00:01:06.940
+robot motion. If I know the torques and forces
+that I'm going to apply to the robot manipulator
+
+00:01:06.940 --> 00:01:13.450
+and then I can compute Q, Q-dot and Q-dot-dot
+as a function of time.
+
+00:01:13.450 --> 00:01:17.530
+Let's have a look at how we can use the forward
+dynamics to simulate the motion of a complex
+
+00:01:17.530 --> 00:01:23.850
+6-axis robot like the PUMA 560. I'm going
+to start by loading a model of the PUMA 560
+
+00:01:23.850 --> 00:01:29.749
+into my workspace as we've done a number of
+times before and I'm going to invoke a Simulink
+
+00:01:29.749 --> 00:01:36.429
+model that is provided with the Robotics Toolbox,
+and this is what it looks like. It's quite
+
+00:01:36.429 --> 00:01:43.609
+a simple model. It contains a robot with no
+Coulomb friction, and connected to an animation
+
+00:01:43.609 --> 00:01:48.200
+or plotting block. And the robot is driven
+by zero torques. So if you imagine a robot
+
+00:01:48.200 --> 00:01:52.900
+sitting in a normal configuration and I turn
+off all the joint torque, the robot is going
+
+00:01:52.900 --> 00:01:58.630
+to collapse under its own weight.
+So, I can run that simulator and here we see
+
+00:01:58.630 --> 00:02:04.080
+the PUMA robot and it's collapsing under gravity,
+and because of the joint friction, the energy
+
+00:02:04.080 --> 00:02:08.299
+is rapidly dissipated and the robot is left
+in a downward pointing configuration.
+

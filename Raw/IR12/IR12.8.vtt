@@ -1,0 +1,244 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.520 --> 00:00:08.670
+In this section, I would like to talk about
+fear of Robots. As roboticists we might have
+
+00:00:08.670 --> 00:00:13.959
+a different perception or view of robots to
+the general population. We believe that robots
+
+00:00:13.959 --> 00:00:19.440
+are fun and cool in the future but perhaps
+not everybody shares that view. I particularly
+
+00:00:19.440 --> 00:00:25.390
+like this advertisement, was for Dodge Charger
+and it came out in 2013. I can’t show you
+
+00:00:25.390 --> 00:00:31.420
+all of the video here but the advertisement
+is exploiting a general unease in the population
+
+00:00:31.420 --> 00:00:36.500
+about the future of robots and suggesting
+that we wouldn't want a self-driving car that
+
+00:00:36.500 --> 00:00:39.640
+is going to end very, very badly for human
+kind.
+
+00:00:39.640 --> 00:00:44.950
+But then, there are dancing robots and everybody
+seems to love dancing humanoid robots so here
+
+00:00:44.950 --> 00:00:51.360
+we see three simple humanoid robots doing
+some choreographed dancing. So this is a kind
+
+00:00:51.360 --> 00:00:56.680
+of robot that generally doesn't invoke fear
+and loathing in the general population.
+
+00:01:02.380 --> 00:01:06.960
+And then there are robotic movie characters
+such as Wall-e and Eve, which are quite non-threatening,
+
+00:01:06.969 --> 00:01:10.049
+and in fact, quite endearing.
+
+00:01:10.049 --> 00:01:15.229
+In contrast with robots like this from the
+Terminator franchise which are actually quite
+
+00:01:15.229 --> 00:01:20.770
+scary and intimidating. Here we have a scene
+with a large number of robots; these robots
+
+00:01:20.770 --> 00:01:25.529
+here individually look quite benign, they
+look quite human like, they have got nice
+
+00:01:25.529 --> 00:01:30.590
+gentle facial expressions but personally,
+I find this scene rather unsettling and I
+
+00:01:30.590 --> 00:01:34.189
+think it is the fact that it is not just one
+robot but it is the fact that there is row
+
+00:01:34.189 --> 00:01:40.319
+upon row upon row of robots, which I find
+unsettling. Perhaps, also because all these
+
+00:01:40.319 --> 00:01:43.499
+robots look exactly the same.
+
+00:01:43.499 --> 00:01:48.299
+Here is a very famous robotics researcher
+with his robotic clone. Some people may have
+
+00:01:48.299 --> 00:01:54.459
+absolutely no problem with an image like this
+but other people might find such a scene rather unsettling.
+
+00:01:54.460 --> 00:02:00.679
+That leads us to a phenomena which is called
+the Uncanny Valley. The Uncanny Valley is
+
+00:02:00.679 --> 00:02:05.889
+represented by this graph here and on the
+horizontal access we have an indication of
+
+00:02:05.889 --> 00:02:07.880
+how life-like the robot is.
+
+00:02:07.880 --> 00:02:12.520
+We can go from being not life-like at all
+to completely life-like
+
+00:02:12.520 --> 00:02:18.000
+and in the vertical axis we have upwards that we find the robot attractive
+
+00:02:18.000 --> 00:02:21.040
+and downwards we find the robots to be repulsive.
+
+00:02:21.060 --> 00:02:27.550
+Now, the notion of the Uncanny Valley was
+first hypothesized by Professor Mori and I
+
+00:02:27.550 --> 00:02:33.350
+had the delightful opportunity to meet him
+at IROS conference in 2013.
+
+00:02:33.350 --> 00:02:39.660
+So if we consider the Uncanny Valley hypothesis,
+what we see is that as the likeness to a human
+
+00:02:39.660 --> 00:02:45.910
+being increases, we find the robot to be more
+and more attractive. But at a certain point,
+
+00:02:45.910 --> 00:02:51.030
+we then find that as it becomes more life-like
+we find it to become less attractive, perhaps
+
+00:02:51.030 --> 00:02:57.710
+even to become repulsive. Now as it becomes
+more life-like still, it becomes, again, attractive to us.
+
+00:02:57.710 --> 00:03:03.620
+And this effect is exaggerated if the robot
+is moving. Here is a very simplistic humanoid
+
+00:03:03.630 --> 00:03:08.270
+robot. It doesn’t look much like a human
+at all. It’s got some sort of face, it’s
+
+00:03:08.270 --> 00:03:12.660
+got what look like eyes and a mouth and most
+people have no problem with a robot like this.
+
+00:03:12.660 --> 00:03:16.490
+It is kind of cute; it is a little bit retro.
+
+00:03:16.490 --> 00:03:21.150
+If we had a robot that looks like this, looks
+very, very life-like, most of us would find
+
+00:03:21.150 --> 00:03:28.030
+that quite attractive as well. But if we have
+a robot that looks not quite right, something
+
+00:03:28.030 --> 00:03:32.600
+a little bit off, maybe it is something in
+the eyes are not right, the facial expression
+
+00:03:32.600 --> 00:03:37.670
+is not quite right, we find a robot like this
+to be actually quite repellent. This is the
+
+00:03:37.670 --> 00:03:41.850
+interesting affect which is called the Uncanny
+Valley.
+
+00:03:41.850 --> 00:03:45.900
+So what I would like to do now, is to speculate
+a little bit about where this fear of robots
+
+00:03:45.900 --> 00:03:51.500
+might come from, particularly the fear of
+robots in human form. I believe a lot of it
+
+00:03:51.500 --> 00:03:57.940
+is down to cultural baggage and particularly
+in the western Judeo Christian culture; there
+
+00:03:57.940 --> 00:04:03.500
+are probably echoes of the ancient Jewish
+legend of the Golem. The Golem was a human-like
+
+00:04:03.500 --> 00:04:09.730
+creature fashioned from clay by a Holy man.
+The Golem would serve its creators and protect
+
+00:04:09.730 --> 00:04:16.160
+them but occasionally they would run amok
+and cause great havoc and damage. So the Golem
+
+00:04:16.160 --> 00:04:20.529
+was a mixed blessing, it could do good but
+it could also do bad.
+
+00:04:20.529 --> 00:04:26.460
+A more recent influence in western culture,
+I believe, comes from the story of Frankenstein,
+
+00:04:26.460 --> 00:04:33.439
+Mary Shelly’s 1818 novel, in which the creature
+turns on its creator Dr. Frankenstein and
+
+00:04:33.439 --> 00:04:39.830
+this story of the creation turning on the
+creator is the foundation for many, many of
+
+00:04:39.830 --> 00:04:46.569
+the robot stories that we read today in science
+fiction books and in science fiction movies.
+
+00:04:46.569 --> 00:04:51.370
+Talking to friends and colleagues in Japan,
+I get a sense that they are less fearful,
+
+00:04:51.370 --> 00:04:57.639
+less intimidated by machines built in human
+form. I am going out on a bit of a limb here,
+
+00:04:57.639 --> 00:05:03.229
+but I think the difference is in the cultural
+baggage; they haven't grown up with the cultural
+
+00:05:03.229 --> 00:05:10.279
+tradition of the Golem or the cultural tradition
+of the Frankenstein story. I think, in their
+
+00:05:10.279 --> 00:05:17.399
+religious beliefs they can see a life force in all sorts of objects whether they are animate or inanimate.
+
+00:05:17.409 --> 00:05:22.289
+So this is entirely speculation on my part,
+but I think it is the difference in the cultural
+
+00:05:22.289 --> 00:05:28.150
+heritage of the West and the East that perhaps
+makes people from Japan more accommodating
+
+00:05:28.150 --> 00:05:34.779
+of robots in humanoid form and at certainly
+where the technological push to create humanoid
+
+00:05:34.779 --> 00:05:41.139
+robots first came from. The West has really been playing catch up when it comes to humanoid robots.
+

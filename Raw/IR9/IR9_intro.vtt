@@ -1,0 +1,87 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:07.160 --> 00:00:12.680
+In the last lecture, we talked about the relationship
+between the velocity of a robot's joints and
+
+00:00:12.680 --> 00:00:18.940
+the velocity of the robot end-effector, the
+rate of change of the pose of the robot end-effector.
+
+00:00:18.940 --> 00:00:24.210
+And, we talked previously about these two
+robotic problems, the forward kinematic problem
+
+00:00:24.210 --> 00:00:29.670
+and the inverse kinematic problem and then
+we introduced this velocity transform problem.
+
+00:00:29.670 --> 00:00:34.019
+In our last lecture, we did everything in
+two-dimensional space. This we have seen a
+
+00:00:34.019 --> 00:00:38.230
+number of times through this course. Things
+are pretty easy in two dimensions. They get
+
+00:00:38.230 --> 00:00:43.350
+much more complex in three dimensions. In
+this lecture, we are going to do it in three
+
+00:00:43.350 --> 00:00:46.670
+dimensions.
+So now, we are going to define what does it
+
+00:00:46.670 --> 00:00:53.190
+mean, this psi dot, in terms of three-dimensional
+pose changing with time. So, first, we’re
+
+00:00:53.190 --> 00:00:57.880
+going to describe what mathematical object this
+psi dot is and then we’re going to work on
+
+00:00:57.880 --> 00:01:03.020
+the relationship between joint angle rates
+and pose rate.
+
+00:01:03.020 --> 00:01:08.610
+Now, as we do this, there are some advanced
+concepts and, if you are not particularly
+
+00:01:08.610 --> 00:01:13.050
+strong at maths, you don’t have background
+in differential calculus, your not too comfortable
+
+00:01:13.050 --> 00:01:17.500
+with linear algebra and we've done a bit of
+linear algebra already. We used matrices and
+
+00:01:17.500 --> 00:01:22.209
+vectors, but this is going to be perhaps matrix
+and vector used at a more advanced level.
+
+00:01:22.209 --> 00:01:26.830
+If you are not too comfortable with these
+concepts, you might struggle with this particular
+
+00:01:26.830 --> 00:01:30.950
+lecture. So, your options are just to try
+and skim through the lecture, observe the
+
+00:01:30.950 --> 00:01:35.920
+gist of what I’m trying to say even if you
+don’t get all of the details. Maybe look
+
+00:01:35.920 --> 00:01:42.110
+at some, some additional textbooks. Do some
+more reading to get the, the prerequisites
+
+00:01:42.110 --> 00:01:46.640
+that you are going need to understand that.
+So, just a little bit of a, of a warning before
+
+00:01:46.640 --> 00:01:48.360
+we get in to the details of it.
+

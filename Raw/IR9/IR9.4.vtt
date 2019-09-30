@@ -1,0 +1,213 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.340 --> 00:00:08.260
+We're going to go back to considering the
+rotational part of this matrix derivative.
+
+00:00:08.260 --> 00:00:12.519
+We're going to rearrange its expression and
+isolate the skew-symmetric matrix. That means
+
+00:00:12.519 --> 00:00:17.769
+we have to take the rotation matrix over to
+the other side of the equation. We need to
+
+00:00:17.769 --> 00:00:23.269
+compute its inverse but we know for a rotation
+metrics that the inverse is the same as its transpose.
+
+00:00:23.270 --> 00:00:28.730
+So now we have the skew-symmetric matrix in
+terms of the derivative of the rotation matrix
+
+00:00:28.730 --> 00:00:34.930
+with respect to Q1 and that's the approximation
+that we've got highlighted here in red. The
+
+00:00:34.930 --> 00:00:39.399
+rotation matrix transpose and the rate of
+change of the robot's joint angle. We can
+
+00:00:39.399 --> 00:00:45.059
+compute this numerically and we end up with this matrix which should be a skew-symmetric matrix.
+
+00:00:45.060 --> 00:00:49.460
+Let's have a look at it in a bit more detail.
+We know that a skew-symmetric matrix has got
+
+00:00:49.460 --> 00:00:54.700
+a form something like this so let's check
+whether this is a skew-symmetric matrix and
+
+00:00:54.700 --> 00:00:57.789
+if it is, what are the values of the angular
+velocity?
+
+00:00:57.789 --> 00:01:02.480
+At the start if we look at the diagonals we
+can see that they are either zero or very,
+
+00:01:02.480 --> 00:01:07.039
+very close to zero and remember that this
+is an approximation so I'm going to say hand
+
+00:01:07.039 --> 00:01:12.200
+on heart that these are zeroes on the diagonal.
+It's looking like a skew-symmetric matrix
+
+00:01:12.200 --> 00:01:17.329
+to me. Let's look at the elements that correspond
+to Omega X. In this case they're both zero
+
+00:01:17.329 --> 00:01:23.240
+so we can write that Omega X is approximately
+equal to zero times Q1dot. Let's look at the
+
+00:01:23.240 --> 00:01:27.880
+Omega Y elements and they are both identically
+equal to zero so I'm happy to say that Omega
+
+00:01:27.880 --> 00:01:30.409
+Y is approximately equal to zero times Q1dot.
+
+00:01:30.409 --> 00:01:36.169
+Let's look now at Omega Z and this is pretty
+consistent with Omega Z being approximately
+
+00:01:36.169 --> 00:01:42.689
+equal to 1 times Q1dot. So what we've done
+is match the elements in an exact skew-symmetric
+
+00:01:42.689 --> 00:01:48.139
+matrix and are approximate skew-symmetric
+matrix and written some relationships between
+
+00:01:48.139 --> 00:01:54.819
+the components of the robot end-effector angular
+velocity and the rate of change of the first
+
+00:01:54.819 --> 00:01:56.399
+joint angle that's Q1dot.
+
+00:01:56.399 --> 00:02:02.429
+So I can write it now in matrix form like
+this, and here's that expression again and
+
+00:02:02.429 --> 00:02:06.919
+to bring back the expression we computed earlier
+for the transitional velocity of the robot's
+
+00:02:06.919 --> 00:02:11.969
+end-effector. And I can combine these two
+by stacking up the two vectors and bringing
+
+00:02:11.969 --> 00:02:13.909
+out the common term Q1dot.
+
+00:02:13.909 --> 00:02:18.860
+And I now have this relationship between the
+spatial velocity of the robot's end-effector
+
+00:02:18.860 --> 00:02:23.650
+and the velocity of the robot's first joint
+angle. So here's the expression that we just
+
+00:02:23.650 --> 00:02:30.110
+computed and we can do the same thing for
+joint 2 and joint 3 all the way up to joint 6.
+
+00:02:30.300 --> 00:02:35.379
+You'll notice that the numbers in the vectors
+at the top and the columns of the matrix are
+
+00:02:35.379 --> 00:02:40.510
+slightly different and that's because the
+vectors at the top are an approximation to
+
+00:02:40.510 --> 00:02:43.989
+the true derivative while the columns with
+the matrix are the true derivative. Here's
+
+00:02:43.989 --> 00:02:49.379
+the matrix again and it relates the spatial
+velocity to the robot's joint velocity by
+
+00:02:49.379 --> 00:02:54.769
+this matrix in the middle which is another
+instance of a Jacobian matrix. It's a 6 x 6
+
+00:02:54.769 --> 00:03:00.319
+matrix and it’s referred to as the manipulator
+Jacobian matrix. We can write this expression
+
+00:03:00.319 --> 00:03:01.900
+much more succinctly.
+
+00:03:01.900 --> 00:03:06.900
+We use the Greek letter ‘nu’ as we have done
+previously to represent spatial velocity and
+
+00:03:06.900 --> 00:03:12.859
+we represent joint velocity by Qdot. I've
+used capital J to represent the manipulator
+
+00:03:12.859 --> 00:03:18.269
+Jacobian and I've indicated that it is a function
+of Q. The elements of the Jacobian matrix
+
+00:03:18.269 --> 00:03:21.170
+depend on the joint angles.
+
+00:03:21.170 --> 00:03:26.980
+Now we're going to compute the exact Jacobian
+for the Puma 560 robot and I've already loaded
+
+00:03:26.980 --> 00:03:31.459
+a model of the robot into my workspace. I'm
+going to put the Jacobian into the workspace
+
+00:03:31.459 --> 00:03:37.999
+for variable J and my robot object is called
+P560 and the method that I'm going to invoke
+
+00:03:37.999 --> 00:03:43.549
+is called Jacobian and the only argument that
+I've passed in is the set of joint angles.
+
+00:03:43.549 --> 00:03:48.499
+And here is the Jacobian matrix and that's
+being computed for the set of joint angles
+
+00:03:48.499 --> 00:03:54.450
+QN and this is what it looks like in radians
+and this is a robot configuration a set of
+
+00:03:54.450 --> 00:04:00.200
+robot joint angles that puts the robot’s end-effector
+somewhere in the middle of its useful workspace.
+
+00:04:00.200 --> 00:04:05.999
+A useful way to think about the Jacobian matrix
+is in terms of what the individual columns
+
+00:04:05.999 --> 00:04:11.519
+mean. The first column of the Jacobian matrix
+multiplied by the rate of change of the first
+
+00:04:11.519 --> 00:04:16.400
+joint gives me a contribution to the end-effector’s
+spatial velocity.
+
+00:04:16.400 --> 00:04:22.550
+And this column gives me a component of end-effector
+velocity due to Q2. This is the component
+
+00:04:22.550 --> 00:04:31.590
+due to Q3, Q4, Q5 and Q6. And we add the components
+due to each of these joints to get the sum
+
+00:04:31.590 --> 00:04:34.290
+total end-effector spatial velocity.
+

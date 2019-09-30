@@ -1,0 +1,248 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.470 --> 00:00:08.550
+We've covered a lot of territory in this lecture,
+let's recap some of the more important points.
+
+00:00:08.550 --> 00:00:12.580
+Actuators is a device that causes motion that
+can cause linear or rotary motion, and they
+
+00:00:12.580 --> 00:00:17.439
+can generate either a speed or a force. They
+can be based on a number of different physical
+
+00:00:17.439 --> 00:00:20.439
+principles; they can be hydraulic, pneumatic,
+or electric.
+
+00:00:20.439 --> 00:00:25.769
+In most robots, electric is the most common
+type of actuator that's used. Most robots
+
+00:00:25.769 --> 00:00:30.609
+driven by electric motors employ a reduction
+gear box. Electric motors are capable of spinning
+
+00:00:30.609 --> 00:00:35.990
+very very quickly, but they tend to have relatively
+low torque. A reduction gearbox amplifies
+
+00:00:35.990 --> 00:00:42.270
+the motor's torque at the expense of the motor's
+speed. We introduced "S" as an operator to
+
+00:00:42.270 --> 00:00:47.960
+convert a differential equation into an algebraic
+equation, a characteristic equation, which
+
+00:00:47.960 --> 00:00:53.440
+represents the dynamics of an underlying mechanical
+or electrical system. The roots of the characteristic
+
+00:00:53.440 --> 00:00:58.710
+equation are referred to as the poles of the
+system. And they describe the response of
+
+00:00:58.710 --> 00:01:01.590
+the system as a function of time.
+
+00:01:01.590 --> 00:01:06.560
+For a system with multiple poles, the overall
+response is the super position of the response,
+
+00:01:06.560 --> 00:01:12.640
+due to each of the individual poles.
+We introduced the notion of a transfer function.
+
+00:01:12.640 --> 00:01:17.230
+And in the laplace domain it is the ratio
+of resistance output to it's input.
+
+00:01:17.230 --> 00:01:21.900
+Most mechanical systems incorporate friction.
+There are two important classes of friction:
+
+00:01:21.900 --> 00:01:26.860
+linear friction, and non-linear friction which
+is sometimes referred to as coulomb friction.
+
+00:01:26.860 --> 00:01:31.310
+A realistic friction model looks something
+like this. It has a positive and negative
+
+00:01:31.310 --> 00:01:34.870
+coulomb friction value and a linear slope
+"B".
+
+00:01:34.870 --> 00:01:38.950
+The friction force always opposes the direction
+of motion. And a friction characteristic like
+
+00:01:38.950 --> 00:01:45.010
+this is not defined for the case of zero velocity.
+For a current controlled electrical motor,
+
+00:01:45.010 --> 00:01:50.060
+we can write its transfer function in terms
+of the motor constant, it's inertia, and it's
+
+00:01:50.060 --> 00:01:51.150
+friction.
+
+00:01:51.150 --> 00:01:56.220
+A motor control system needs a means of measuring
+the angle of the motor shaft. And the most
+
+00:01:56.220 --> 00:02:01.159
+common way this is done is with an incremental
+encoder with two light beams shine through
+
+00:02:01.159 --> 00:02:03.540
+slots in a disk attached to the motor shaft.
+
+00:02:03.540 --> 00:02:07.720
+We can analyze these signals to determine
+the velocity of the motor and the direction
+
+00:02:07.720 --> 00:02:12.770
+of rotation. And by counting the pulses and
+knowing the direction, we can determine the
+
+00:02:12.770 --> 00:02:17.840
+angle of the motor shaft. We bring a number
+of these components together to create a robot
+
+00:02:17.840 --> 00:02:19.290
+joint controller.
+
+00:02:19.290 --> 00:02:23.860
+The joint controller itself is typically an
+algorithm running in an embedded controller.
+
+00:02:23.860 --> 00:02:29.020
+The motor drive is typically an H-bridge circuit
+comprising four electronic switches. The switches
+
+00:02:29.020 --> 00:02:33.260
+can be turned on and off very quickly which
+allows us to control not only the direction
+
+00:02:33.260 --> 00:02:38.190
+the current flows through the motor, but the
+average voltage that the motor experiences.
+
+00:02:38.190 --> 00:02:42.099
+The output of the motor is connected through
+the robot joint by a mechanical transmission,
+
+00:02:42.099 --> 00:02:46.730
+a reduction gearbox which amplifies the torque
+of the motor.
+
+00:02:46.730 --> 00:02:51.380
+The position of the motor is measured with
+a position sensor. Typically, that's an optical
+
+00:02:51.380 --> 00:02:56.170
+incremental encoder. That information is fed
+back to the joint controller compared with
+
+00:02:56.170 --> 00:03:00.930
+the desired position. And the error between
+those two is used to drive the motor either
+
+00:03:00.930 --> 00:03:05.300
+forwards or backwards to minimize the error.
+
+00:03:05.300 --> 00:03:09.810
+We can create a dynamic model of this robot
+joint control system.
+
+00:03:09.810 --> 00:03:14.260
+We have a block which represents the joint
+controller, and the negative feedback summing
+
+00:03:14.260 --> 00:03:20.430
+junction. The output of the motor driver is
+current which goes into our model of the actuator.
+
+00:03:20.430 --> 00:03:25.290
+The output of that block is the position of
+the motor. We model the sensor as a gain of
+
+00:03:25.290 --> 00:03:30.060
+one, which provides the negative feedback
+signal to the joint controller.
+
+00:03:30.060 --> 00:03:35.920
+The maximum acceleration of a robot joint
+is a function of the maximum torque that the
+
+00:03:35.920 --> 00:03:40.790
+motor can generate and that's a function of
+the motor torque constant and the maximum
+
+00:03:40.790 --> 00:03:46.319
+current that can be fed into the motor. And
+it's also a function of the inertia that the
+
+00:03:46.319 --> 00:03:49.170
+motor experiences.
+
+00:03:49.170 --> 00:03:54.349
+That inertia has got two components: one component
+is the motor's own armature inertia and that's
+
+00:03:54.349 --> 00:03:57.870
+a constant. The other component is the inertia
+of the link.
+
+00:03:57.870 --> 00:04:03.300
+In a real robot, the link inertia is highly
+variable. And that's because in a serial link
+
+00:04:03.300 --> 00:04:08.459
+manipulator, each link has to hold up all
+of the subsequent links. As the joint angles
+
+00:04:08.459 --> 00:04:14.739
+of all of those out board links varies with
+time, so will the inertia that this motor experiences.
+
+00:04:14.739 --> 00:04:19.699
+However, typically there is a gearbox between
+the motor and the link and that is the effect
+
+00:04:19.699 --> 00:04:25.540
+of reducing the inertia of the link by a factor
+of "G" squared. Typically, "G" is a big number,
+
+00:04:25.540 --> 00:04:30.280
+could be ten, could be a hundred; and that
+dramatically reduces this variable inertia
+
+00:04:30.280 --> 00:04:32.630
+due to the link configuration.
+
+00:04:32.630 --> 00:04:36.810
+Multi-joint robots typically employ what's
+called independent joint control so there
+
+00:04:36.810 --> 00:04:41.699
+is a separate robot joint controller for each
+individual joint. Typically these controllers
+
+00:04:41.699 --> 00:04:47.229
+have a common electronic and software design.
+And typically, only a few parameters in the
+
+00:04:47.229 --> 00:04:51.810
+joint controller need to be changed to accommodate
+the different sized motors that are fitted
+
+00:04:51.810 --> 00:04:53.830
+to different joints of the robot.
+

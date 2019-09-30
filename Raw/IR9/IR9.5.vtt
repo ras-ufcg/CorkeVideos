@@ -1,0 +1,248 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.889 --> 00:00:07.839
+We have just worked out a way to describe
+the relationship between the rate of change
+
+00:00:07.839 --> 00:00:13.520
+of its joint angles and the translational
+and angular velocity of the robot’s end-effector.
+
+00:00:13.520 --> 00:00:19.340
+Spatial velocity is a six-vector that comprises
+the translational velocity, v, and the angular
+
+00:00:19.340 --> 00:00:24.730
+velocity, omega. And, we wrote a relationship
+between spatial velocity of the end-effector
+
+00:00:24.730 --> 00:00:28.039
+and the velocity of the joint angles.
+
+00:00:28.039 --> 00:00:33.360
+For a robot like this, the Jacobian matrix,
+J, is a 6 x 6 matrix. It’s square. So, we
+
+00:00:33.360 --> 00:00:39.300
+can rearrange this expression to obtain the
+robot joint angle velocity that we need in
+
+00:00:39.300 --> 00:00:45.510
+order to achieve a desired robot end-effector
+spatial velocity and we can do this unless
+
+00:00:45.510 --> 00:00:49.920
+the Jacobian is singular. That is its determinant
+is equal to zero.
+
+00:00:49.920 --> 00:00:54.680
+Unfortunately, there are some circumstances
+where the Jacobian will be singular and one
+
+00:00:54.680 --> 00:01:01.140
+of the singularities occurs when joint angle
+five is equal to zero as shown here. If we
+
+00:01:01.140 --> 00:01:08.110
+rotate joint 4, we can see how the robot end-effector
+moves. If I move joint 6, we see that the
+
+00:01:08.110 --> 00:01:13.630
+end-effector motion is exactly the same; it’s
+that due to joint 4. So, if I rotate joints
+
+00:01:13.630 --> 00:01:18.060
+4 and 6 in opposite directions, they cancel
+each other out. They are both moving, but
+
+00:01:18.060 --> 00:01:21.390
+the end-effector is not moving at all.
+
+00:01:21.390 --> 00:01:26.200
+Following on from the earlier example, we
+can test the determinant of the Jacobian matrix
+
+00:01:26.200 --> 00:01:31.270
+for the joint angle configuration QN. And,
+here we can see the determinant, and it’s
+
+00:01:31.270 --> 00:01:36.430
+not equal to zero. It means I can then invert
+the Jacobian matrix and this is what the inverse
+
+00:01:36.430 --> 00:01:41.540
+Jacobian looks like. If we consider a different
+joint angle configuration, I’m going to
+
+00:01:41.540 --> 00:01:46.140
+look at the joint configuration Q0 which is
+where all the joint angles equal to zero.
+
+00:01:46.140 --> 00:01:53.040
+If I compute the Jacobian here and pass in
+QZ, we can see this is what the Jacobian looks
+
+00:01:53.040 --> 00:01:57.040
+like and the determinant in this particular
+case is equal to zero.
+
+00:01:57.040 --> 00:02:01.859
+So, let’s say, I’ve got a robot control problem
+and I want the robot end-effector to have
+
+00:02:01.859 --> 00:02:07.119
+a very specific spatial velocity denoted by
+the Greek letter nu, then I can work out what
+
+00:02:07.119 --> 00:02:11.050
+joint velocity I need in order to achieve
+that. If I know the joint angles, and then
+
+00:02:11.050 --> 00:02:15.710
+I can compute the Jacobian matrix and invert
+it. And then, I move all the joints at that
+
+00:02:15.710 --> 00:02:20.170
+particular speed and the robot end-effector
+will move with the desired spatial velocity,
+
+00:02:20.170 --> 00:02:25.890
+nu. Now, the problem is that because the robot
+joint angles are changing, after a short while,
+
+00:02:25.890 --> 00:02:30.630
+the Jacobian will be no longer appropriate
+because the Jacobian is a function of the
+
+00:02:30.630 --> 00:02:35.160
+joint angles. So, I will need to recompute
+the Jacobian matrix.
+
+00:02:35.160 --> 00:02:39.120
+If I was to write a computer algorithm to
+do this, it would be a type of discrete time
+
+00:02:39.120 --> 00:02:44.569
+algorithm. It would be computed at a number
+of discrete time steps, time step 1, time
+
+00:02:44.569 --> 00:02:50.060
+step 2, time step 3, and I’ll generalize
+that to time step k. And, the interval between
+
+00:02:50.060 --> 00:02:56.320
+time steps is given by the symbol delta T.
+So, at time step, k, I will take the joint angles
+
+00:02:56.320 --> 00:03:01.530
+that’s measured at time, k. I compute the
+Jacobian, invert it, multiply it by the desired
+
+00:03:01.530 --> 00:03:06.970
+spatial velocity and determine the joint angle
+velocity that I need to achieve. If I multiply
+
+00:03:06.970 --> 00:03:12.500
+the joint velocity by the time interval, delta
+T, then I obtain the change in joint angles
+
+00:03:12.500 --> 00:03:17.090
+over that time step. I add it to the current
+set of joint angles and I end up with the
+
+00:03:17.090 --> 00:03:22.849
+set of joint angles that I need to have at
+the next time step, at time k+1. And, then
+
+00:03:22.849 --> 00:03:30.230
+I tell my robot to move to that new set of
+joint angles and I repeat the process.
+
+00:03:30.230 --> 00:03:34.299
+We are now going to look at resolved-rate motion
+control. And, I have already computed the
+
+00:03:34.299 --> 00:03:39.340
+Jacobian matrix for the set of joint angles
+which I call QN. Now, what I want to do is
+
+00:03:39.340 --> 00:03:43.980
+to specify the spatial velocity that I want
+my robot to have. I’m going to put that
+
+00:03:43.980 --> 00:03:49.220
+in to a variable called, nu, which is the Greek
+letter that I used to denote spatial velocity
+
+00:03:49.220 --> 00:03:55.190
+and I am going to ask for a spatial velocity
+of zero in x, zero in the y, one unit per
+
+00:03:55.190 --> 00:04:00.769
+second in the z direction and no angular velocity.
+And, I’m going to put that in to a column
+
+00:04:00.769 --> 00:04:06.470
+vector. So, there we have it. If I now multiply
+the inverse of the Jacobian by the desired
+
+00:04:06.470 --> 00:04:12.210
+spatial velocity, and what I have here is
+the joint angle velocity vector. This is the
+
+00:04:12.210 --> 00:04:17.570
+set of joint angle velocities that will give
+me the desired spatial velocity vector that’s
+
+00:04:17.570 --> 00:04:22.920
+a motion of one unit per second in the vertical
+or z direction.
+
+00:04:22.920 --> 00:04:27.720
+We can see that it involves no motion at all
+for joints 1 and 4 and it does require motion
+
+00:04:27.720 --> 00:04:33.150
+of joints 2 and 3. That’s the shoulder and
+the elbow joint and also joint 5, one of the
+
+00:04:33.150 --> 00:04:37.870
+wrist joints. And, we can see that of all
+the joints, it is the elbow joint, joint 3
+
+00:04:37.870 --> 00:04:42.210
+that has to move the fastest in order to achieve
+the desired motion.
+
+00:04:42.210 --> 00:04:48.620
+Here is an animation that shows this in practice.
+I have commanded the robot to move vertically
+
+00:04:48.620 --> 00:04:55.150
+with a velocity of positive 1 in the world
+z direction. We observed that the robot end-effector
+
+00:04:55.150 --> 00:04:59.480
+moved that in constant velocity. But, if we
+look at how the joint angles change as a function
+
+00:04:59.480 --> 00:05:02.370
+of time, we see that they are not moving linearly.
+
+00:05:02.370 --> 00:05:06.370
+We also know that some of the joint angles
+are increasing in velocity. And, you notice
+
+00:05:06.370 --> 00:05:10.471
+that as the robot got to the end of that motion,
+it started to look a little bit awkward. It
+
+00:05:10.471 --> 00:05:14.810
+can only move in the z direction for so long.
+Eventually, it’s not going to be able to
+
+00:05:14.810 --> 00:05:17.250
+reach the position that it needs to move to.
+

@@ -1,0 +1,345 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:06.930 --> 00:00:12.600
+Welcome to the very last lecture in our online
+course, Introduction to Robotics. Congratulations
+
+00:00:12.600 --> 00:00:15.219
+to those of you who have made it this far.
+
+00:00:15.219 --> 00:00:19.689
+I want to do something a bit different in
+this particular lecture and talk perhaps less
+
+00:00:19.689 --> 00:00:26.090
+about technology and algorithms, and software
+and so on, and get into some perhaps bigger
+
+00:00:26.090 --> 00:00:32.360
+picture ideas about robots and where they
+fit into society. Why robots are important.
+
+00:00:32.360 --> 00:00:37.039
+Now, It's been, as I say, quite a journey.
+We've talked about the history of robots,
+
+00:00:37.039 --> 00:00:43.850
+mankind's fascination with building things
+in the image of living organisms, in this
+
+00:00:43.850 --> 00:00:48.420
+case, the famous digesting duck from many
+hundreds of years ago. We've talked about
+
+00:00:48.420 --> 00:00:54.700
+fascination with automata. These lifelike
+machines which were able to do reasonably
+
+00:00:54.700 --> 00:01:00.450
+complex tasks by the standards of the day.
+For instance, a figurine of a person with
+
+00:01:00.450 --> 00:01:04.540
+mechanical innards that was able to do quite
+complex drawings. For instance, the drawing
+
+00:01:04.540 --> 00:01:08.719
+here of a ship. And this is from the 1800's.
+
+00:01:08.719 --> 00:01:14.420
+And then, around the Second World War technology
+started to evolve at a very rapid rate, and
+
+00:01:14.420 --> 00:01:21.270
+this sort of technology - really the precursor
+of robots. Manipulation system allowed scientists
+
+00:01:21.270 --> 00:01:27.740
+and engineers to manipulate radioactive material
+at the distance. And this is really, in my
+
+00:01:27.740 --> 00:01:32.299
+belief, the sort of precursor technology to
+modern industrial robots.
+
+00:01:32.299 --> 00:01:37.320
+And the first industrial robots were developed
+by this company Unimation Inc. which was founded
+
+00:01:37.320 --> 00:01:44.280
+in 1956, first products went into service
+in the very early 1960's. So, this sort of
+
+00:01:44.280 --> 00:01:48.439
+manufacturing robot, the arm robot, builds
+stuff, very, very important to our society.
+
+00:01:48.439 --> 00:01:52.470
+It's a very old technology now. It's getting
+on towards 60 years.
+
+00:01:52.470 --> 00:01:58.259
+So, we've talked about this evolution of robotic
+technology, and we've also talked about what
+
+00:01:58.259 --> 00:02:02.820
+makes this technology tick. We've talked about
+how to build robots. We've talked about how
+
+00:02:02.820 --> 00:02:07.299
+we represent the pose of objects in the work
+space. We've talked about forward kinematics,
+
+00:02:07.299 --> 00:02:12.510
+inverse kinematics, and Jacobians and joint
+control and rigid body dynamics. These are
+
+00:02:12.510 --> 00:02:17.430
+all the fundamental principles that are really
+important if you are building an arm type
+
+00:02:17.430 --> 00:02:22.189
+robot. These are the things that we've learnt
+in this 60 years since this technology was
+
+00:02:22.189 --> 00:02:27.650
+first conceived. The technology came first
+and the theory, the mathematics that we've
+
+00:02:27.650 --> 00:02:31.540
+learned about, came later.
+
+00:02:31.540 --> 00:02:35.489
+These robots are really important to modern
+industry. Here’s a picture of this kind
+
+00:02:35.489 --> 00:02:41.040
+of robot, building motor cars and they also
+build computers and move packages around in
+
+00:02:41.040 --> 00:02:47.540
+factories and so on. There's more than a million of these arm type robot and work on planet Earth today.
+
+00:02:48.200 --> 00:02:52.819
+More recently there is this new class of robots.
+We call them service robots or field robots.
+
+00:02:52.819 --> 00:02:57.409
+And, this is an example of a service robot.
+It's a robot that performs a service to a
+
+00:02:57.409 --> 00:03:02.439
+human being. And this service in this particular
+case is cleaning my floor. And these robots
+
+00:03:02.439 --> 00:03:07.299
+have become phenomenally popular, more than
+10 million of these robots sold. These only
+
+00:03:07.299 --> 00:03:11.489
+have been around for only about a decade.
+Manufacturing robot had been around for nearly
+
+00:03:11.489 --> 00:03:16.489
+60 years. There's only a million of them.
+In just 10 over years, we have 10 millions
+
+00:03:16.489 --> 00:03:21.109
+of these. And the reasons are that these robots
+are much cheaper than the manufacturing robots.
+
+00:03:21.109 --> 00:03:25.769
+The sort of thing that a person can afford,
+a person would like to have, because it provides
+
+00:03:25.769 --> 00:03:32.169
+real value. It performs a greatly useful task
+around the house.
+
+00:03:32.169 --> 00:03:36.389
+So, this is very much the future of robots.
+There's going to be robots that work with
+
+00:03:36.389 --> 00:03:42.659
+us that are low cost and useful. Of course
+in the future, there's going to be many other
+
+00:03:42.659 --> 00:03:47.219
+sorts of robot. Perhaps the next sort of robot
+that we are going to encounter en masse, I
+
+00:03:47.219 --> 00:03:51.889
+think it's going to be the self driving car.
+The Google self driving car project has got
+
+00:03:51.889 --> 00:03:57.839
+a lot of press, and all of the major automotive
+companies are working on self driving cars.
+
+00:03:57.839 --> 00:04:03.650
+And this is a technology some people believe
+it might be with this by the year 2020. Time
+
+00:04:03.650 --> 00:04:10.690
+will tell. But I believe, this is the next robot technology we all encounter on an everyday basis.
+
+00:04:12.420 --> 00:04:20.400
+So, why robots? What's the big picture reason
+for having robots in the world? And I think
+
+00:04:20.410 --> 00:04:26.939
+if you look at the big problems that our planet
+faces right now, come primarily from population
+
+00:04:26.939 --> 00:04:32.319
+growth. If we look what population growth
+is going to do over the coming decades, what
+
+00:04:32.319 --> 00:04:37.449
+you can see on this slide here is a prediction
+of robot population. And by the year 2020,
+
+00:04:37.449 --> 00:04:42.340
+its believed that there will be a hundred
+million robots at work on the planet.
+
+00:04:42.340 --> 00:04:46.710
+Now, not all of these are going to be the
+classic manufacturing robots. Many of them
+
+00:04:46.710 --> 00:04:52.699
+are going to be for instance robot cars, or
+robot vacuum cleaners, perhaps robot gardeners,
+
+00:04:52.699 --> 00:04:57.879
+robot maids, who knows what. But this is the
+sort of new class of robot that's emerging
+
+00:04:57.879 --> 00:05:02.030
+and the number of these is just going to increase,
+perhaps exponentially.
+
+00:05:02.030 --> 00:05:08.500
+What I want to do now is talk about the big
+picture reasons why I believe that we need
+
+00:05:08.500 --> 00:05:17.199
+robots. This picture illustrates some of the
+big problems that are facing society now,
+
+00:05:17.199 --> 00:05:23.889
+and increasingly in coming decades. The problems
+that we face are due to increased human population
+
+00:05:23.889 --> 00:05:28.020
+on the planet. There are more people in the
+planet. It means, we need to provide more
+
+00:05:28.020 --> 00:05:32.210
+food. This is going to require more transport
+requirement. There's going to be more cars
+
+00:05:32.210 --> 00:05:37.460
+on the road, more people, more things going
+from one place to another. And this population
+
+00:05:37.460 --> 00:05:42.039
+of ours gets older there's going to be a need
+for more health care.
+
+00:05:42.039 --> 00:05:49.479
+As the population get's older, we are going
+to have an imbalance in the age ratios. There's
+
+00:05:49.479 --> 00:05:55.520
+going to be more older people and less younger
+people to support them. And this is a problem
+
+00:05:55.520 --> 00:06:01.409
+that is confronting almost country on the
+planet today. And it is very profound problem.
+
+00:06:01.409 --> 00:06:06.430
+I think we don't really have handle, a good
+solution, on what we are going to do about
+
+00:06:06.430 --> 00:06:10.819
+that. But I believe the robots can play an
+important role here.
+
+00:06:10.819 --> 00:06:16.180
+The other problem that we are facing is climate
+change. As the climate of our planet changes,
+
+00:06:16.180 --> 00:06:21.669
+it's going to have real impacts on where people
+are able to live where the amount of water
+
+00:06:21.669 --> 00:06:27.599
+that would be available, and the amount of
+food that we can produce. So, very big picture
+
+00:06:27.599 --> 00:06:34.280
+problems, very complex and all interrelated.
+And I believe that robots can play a very
+
+00:06:34.280 --> 00:06:38.979
+positive role in ameliorating some of these
+problems. And that's what I want to talk about
+
+00:06:38.979 --> 00:06:42.110
+in this particular lecture.
+
+00:06:42.110 --> 00:06:44.849
+The other thing that I want to talk about
+in this lecture, and I think it's an important
+
+00:06:44.849 --> 00:06:50.360
+one, is the ethical considerations around
+robotics. Now, I'm not an ethicist, I'm a
+
+00:06:50.360 --> 00:06:55.330
+roboticist. And I’m going to talk to an
+ethicist later in this lecture and just try
+
+00:06:55.330 --> 00:06:59.939
+and unpack what are some of the issues about
+ethics that apply to robotics.
+
+00:06:59.939 --> 00:07:04.080
+We are going to have a discussion, we’re
+going to do a bit of an ethics 101, learn
+
+00:07:04.080 --> 00:07:08.620
+some fundamental principles of ethics, and
+then look at issues such as; is it appropriate
+
+00:07:08.620 --> 00:07:13.039
+for robots to look after elderly people or
+young people; what are the ethical issues
+
+00:07:13.039 --> 00:07:19.999
+with robots driving cars on our roads; what
+are the issues around invasion of privacy;
+
+00:07:19.999 --> 00:07:24.770
+what about robots in jobs. Every time I give
+a talk about robots, somebody asks the question,
+
+00:07:24.770 --> 00:07:28.770
+"Aren’t robots going to take away jobs?"
+I don't think it’s that simple.
+
+00:07:28.770 --> 00:07:33.270
+And in this lecture, we’d like to unpack
+some of these issues, talk about them at length.
+
+00:07:33.270 --> 00:07:38.240
+At least give you something to think about,
+argue about. I think it's important that we
+
+00:07:38.240 --> 00:07:40.169
+have this particular conversation.
+

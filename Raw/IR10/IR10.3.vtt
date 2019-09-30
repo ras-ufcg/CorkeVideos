@@ -1,0 +1,241 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.330 --> 00:00:07.970
+The fundamental physical principle underlying
+all electric motors is magnetism. So, let’s
+
+00:00:07.970 --> 00:00:11.090
+quickly review what it is we know about magnets.
+
+00:00:11.090 --> 00:00:15.910
+Every magnet has a south pole and a north
+pole, so called because the north pole is attracted
+
+00:00:15.910 --> 00:00:21.590
+to the north pole of our planet. If I put
+two magnets together like this, we know that
+
+00:00:21.590 --> 00:00:27.590
+opposite poles attract and like poles repel
+each other. Now, let’s imagine we take two
+
+00:00:27.590 --> 00:00:32.269
+magnets and lay one on top of the other and
+pin them so that the top magnet is free to
+
+00:00:32.269 --> 00:00:38.879
+rotate. Then, what happens is that the similar
+poles repel and the top magnet tends to rotate
+
+00:00:38.879 --> 00:00:44.099
+so that the north pole in the top magnet is
+lying over the south pole of the bottom magnet.
+
+00:00:44.280 --> 00:00:49.320
+This is the underlying principle of rotary
+electric motors. Let’s re-run the previous
+
+00:00:49.320 --> 00:00:54.440
+example and the top magnet, once again, rotates.
+And, when it’s nearly at rest, what we do
+
+00:00:54.440 --> 00:00:57.619
+is we pull a trick and we reverse the bottom
+magnet.
+
+00:00:57.619 --> 00:01:02.530
+So, now it looks like this. And now, the top
+magnet is going to keep rotating so that its
+
+00:01:02.530 --> 00:01:06.510
+north pole is attracted to the south pole
+and then we pull the same trick again.
+
+00:01:06.510 --> 00:01:11.690
+So, in this way, we can keep the top magnet
+rotating endlessly and this trick is referred
+
+00:01:11.690 --> 00:01:17.280
+to as commutation. It’s a fundamental principle
+of all electric rotary motors. So, it’s
+
+00:01:17.280 --> 00:01:21.920
+a lot like a dog chasing its tail. It’s
+never ever going to get to the destination.
+
+00:01:21.920 --> 00:01:26.220
+When the top magnet gets close to its destination,
+we change the destination and we keep doing
+
+00:01:26.220 --> 00:01:28.290
+this over and over again.
+
+00:01:28.290 --> 00:01:33.290
+Here is a picture of the first ever electric
+motor. It was invented in 1827 in Hungary.
+
+00:01:33.290 --> 00:01:39.480
+That’s nearly 200 years ago. Now, the principal
+components of this electric motor are, firstly,
+
+00:01:39.480 --> 00:01:44.270
+the Stator. That’s the stationary electromagnet
+that’s highlighted here and it has got the
+
+00:01:44.270 --> 00:01:46.570
+magnetic field vector indicated in red.
+
+00:01:46.570 --> 00:01:51.670
+Now, there is another electromagnet and this
+one rotates. We call it the rotor and it has
+
+00:01:51.670 --> 00:01:58.310
+a magnetic field indicated by the blue vector.
+The laws of magnetic attraction and repulsion
+
+00:01:58.310 --> 00:02:03.560
+cause the rotor to rotate so that the magnetic
+fields are aligned. When the magnetic fields
+
+00:02:03.560 --> 00:02:08.159
+are almost aligned, the Commutator reverses
+the direction of current flowing through the
+
+00:02:08.159 --> 00:02:13.910
+rotor electromagnet that reverses the direction
+of the magnetic field so the rotor keeps rotating
+
+00:02:13.910 --> 00:02:19.350
+to, again, try and align its magnetic field
+with that of the Stator and this process is
+
+00:02:19.350 --> 00:02:24.620
+repeated indefinitely. So, the Commutator
+is the key innovation that allows a rotary
+
+00:02:24.620 --> 00:02:26.230
+electric motor to operate.
+
+00:02:26.230 --> 00:02:30.630
+If we look at a modern electric motor, we
+see that it has exactly the same components.
+
+00:02:30.630 --> 00:02:36.050
+It has the stationary electromagnet which
+we call the Stator. It has the rotary electromagnet
+
+00:02:36.050 --> 00:02:41.480
+which we call the rotor. And, at this end
+of the motor, we have the Commutator. Modern
+
+00:02:41.480 --> 00:02:47.060
+electric motors are low cost, compact and
+reliable. We can consider them as a device
+
+00:02:47.060 --> 00:02:52.180
+that converts a current flowing in to the
+motor in to a torque applied to the output
+
+00:02:52.180 --> 00:02:57.450
+shaft of the motor and this relationship is
+linear. An alternative way to consider an
+
+00:02:57.450 --> 00:03:02.250
+electric motor is that it is a device that
+converts an input voltage to a rotational
+
+00:03:02.250 --> 00:03:08.349
+velocity omega that is the speed of rotation
+of the output shaft of the motor.
+
+00:03:08.349 --> 00:03:12.770
+The motors that we have discussed so far are
+rotary motors. That is the output is rotary
+
+00:03:12.770 --> 00:03:17.880
+motion. But, frequently, in real applications,
+we require linear motion, not rotary motion.
+
+00:03:17.880 --> 00:03:23.430
+There is a couple of ways we can achieve this.
+One is to convert rotary motion from a rotary
+
+00:03:23.430 --> 00:03:28.129
+electric motor to linear motion using a rack
+and pinion mechanism. An alternative is a
+
+00:03:28.129 --> 00:03:33.620
+linear electric motor or linear actuator.
+And, in this type of device, the shaft moves
+
+00:03:33.620 --> 00:03:38.489
+in and out of the body of the actuator, somewhat
+like the hydraulic and pneumatic actuators
+
+00:03:38.489 --> 00:03:39.800
+that we looked at earlier.
+
+00:03:39.800 --> 00:03:45.660
+Here is an example of a modern electric motor.
+These devices are very effective, very reliable
+
+00:03:45.660 --> 00:03:50.940
+and very, very cheap. This is a rotary motor.
+So, as I pass current in to these wires here,
+
+00:03:50.940 --> 00:03:55.940
+the output shaft rotates in either the clockwise
+or the anti-clockwise direction.
+
+00:03:55.940 --> 00:04:02.030
+Here is an example of an integrated motor
+and encoder assembly. So, there is a DC motor
+
+00:04:02.030 --> 00:04:06.060
+in the front part and this is the output shaft
+here. And, on the back is the incremental
+
+00:04:06.060 --> 00:04:11.440
+encoder which gives the signal to the controller
+about which direction and how fast the motor
+
+00:04:11.440 --> 00:04:16.609
+is turning. Here we have an even more integrated
+assembly. This has got an electric motor here.
+
+00:04:16.609 --> 00:04:21.900
+There is a gearbox and here is the incremental
+encoder on this end of the assembly. So, this
+
+00:04:21.900 --> 00:04:26.930
+is quite a common device in many robots in
+mechatronics systems, in integrated motor
+
+00:04:26.930 --> 00:04:28.770
+gearbox and encoder assembly.
+
+00:04:28.770 --> 00:04:32.949
+Finally, here, we have an example of a hobby
+class servo motor and this is one of the wheel
+
+00:04:32.949 --> 00:04:37.409
+drives from the small robot that I have been
+building. This is an even more integrated
+
+00:04:37.409 --> 00:04:42.099
+assembly than the last one we looked at. It
+contains an electric motor, a gearbox, an
+
+00:04:42.099 --> 00:04:46.689
+encoder and a small computer which actually
+controls the motor and the motor controls
+
+00:04:46.689 --> 00:04:52.419
+signals coming through this, three wire cable
+which provides power and also the velocity
+
+00:04:52.419 --> 00:04:53.330
+command signal.
+

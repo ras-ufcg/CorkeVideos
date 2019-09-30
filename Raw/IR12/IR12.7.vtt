@@ -1,0 +1,231 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.189 --> 00:00:08.259
+The biggest asset that we have as a species
+is our planet and we know that it’s under
+
+00:00:08.259 --> 00:00:13.490
+some stress. This very famous graph here shows
+the variation in carbon dioxide levels in
+
+00:00:13.490 --> 00:00:19.010
+the atmosphere as a function of time. And
+we can see that there is an inexorable upward
+
+00:00:19.010 --> 00:00:24.730
+trend and that’s going to have all sorts
+of consequences for life on this planet. So
+
+00:00:24.730 --> 00:00:30.090
+we need to understand how the planet is responding
+to all the different stresses that the growing
+
+00:00:30.090 --> 00:00:33.300
+human population is placing on it.
+
+00:00:33.300 --> 00:00:38.190
+During recent times, we become very good at
+studying other planets. This is a lovely picture
+
+00:00:38.190 --> 00:00:43.969
+that shows a number of the rover vehicles
+that NASA has sent to Mars and these rovers
+
+00:00:43.969 --> 00:00:48.929
+have made wonderful discoveries about what's
+happened on that planet. In particular, they’ve
+
+00:00:48.929 --> 00:00:54.170
+pretty much proven the fact that water once
+existed on that planet. But what about our
+
+00:00:54.170 --> 00:00:58.690
+own planet? Well, on our own planet we have
+lots of scientists who spend a lot of their
+
+00:00:58.690 --> 00:01:04.519
+time collecting data to try and get an update
+on the health of the planet. But collecting
+
+00:01:04.519 --> 00:01:10.080
+this kind of data is very, very labour intensive.
+And here are some images of scientists collecting
+
+00:01:10.080 --> 00:01:13.140
+specimens under water.
+
+00:01:13.140 --> 00:01:18.120
+One of the problems with the expense of this
+manual collection of data is that we can't
+
+00:01:18.120 --> 00:01:23.030
+collect very much data. It’s not possible
+to collect specimens or make measurements
+
+00:01:23.030 --> 00:01:28.810
+at every point on the planet and nor can we
+visit those points very often. So the sampling
+
+00:01:28.810 --> 00:01:33.480
+that we do, the measurements that we make
+are very sparse. We do not visit very many
+
+00:01:33.480 --> 00:01:38.770
+places and we do not visit them very often.
+The bottom line is that we are under sampling
+
+00:01:38.770 --> 00:01:44.070
+the planet and that makes it difficult to
+understand some of the underlying biological
+
+00:01:44.070 --> 00:01:47.500
+and ecological processes that are occurring.
+
+00:01:47.500 --> 00:01:52.660
+But what if it wasn't people collecting the
+data? What if we sent robots out to do that
+
+00:01:52.660 --> 00:01:59.280
+instead? And over the years many roboticists
+have built robots for exactly this purpose,
+
+00:01:59.280 --> 00:02:04.340
+for environmental data collection. Here we
+have a robotic flying vehicle which can make
+
+00:02:04.340 --> 00:02:10.269
+meteorological observations inside extreme
+weather systems like cyclones or hurricanes.
+
+00:02:10.269 --> 00:02:14.870
+This robot here was develop by Carnegie Mellon
+University and has legs and the rapelling
+
+00:02:14.870 --> 00:02:20.330
+cable which allows it to descend into the
+crater of a volcano to make measurements of
+
+00:02:20.330 --> 00:02:25.710
+liquids and gases there. Blimps have been
+developed to make autonomous environmental
+
+00:02:25.710 --> 00:02:30.680
+surveys of large areas of rainforest such
+as in the Amazon basin.
+
+00:02:30.680 --> 00:02:36.090
+This pretty spacey looking underwater vehicle
+is use to explore sinkholes in Mexico. The
+
+00:02:36.090 --> 00:02:41.660
+Nomad rover was also develop by Carnegie Mellon
+University and was used to perform Antarctic
+
+00:02:41.660 --> 00:02:46.900
+survey, in particular searching for fallen
+meteorites. And the robotic boat here was
+
+00:02:46.900 --> 00:02:52.810
+develop by colleagues of mine at CSIRO and
+performed measurements of water quality over
+
+00:02:52.810 --> 00:02:55.290
+the surface of a very large water storage.
+
+00:02:55.290 --> 00:03:01.360
+A really interesting development is the Argo
+float. And this map shows a snapshot of the
+
+00:03:01.360 --> 00:03:07.050
+Argo floats around the world. These floats
+are really very simple robots. They move up
+
+00:03:07.050 --> 00:03:11.330
+and down the water column by controlling their
+buoyancy. And as they move up and down in
+
+00:03:11.330 --> 00:03:17.040
+the water column they measure temperature
+and salinity and other physical parameters.
+
+00:03:17.040 --> 00:03:21.830
+They drift in the currents of the ocean. So
+they allow us to explore in three dimensions
+
+00:03:21.830 --> 00:03:27.190
+what's going on in our oceans. If you're interested
+in more information about the floats have
+
+00:03:27.190 --> 00:03:29.020
+a look at this URL here. [Note:Replace URL
+in Video]
+
+00:03:29.020 --> 00:03:34.610
+Here is an example from colleagues at my University
+who interested in the population of these
+
+00:03:34.610 --> 00:03:38.950
+gentle creatures called dugongs. Dugongs can
+be found all around the world but there's
+
+00:03:38.950 --> 00:03:45.099
+a large population of them in Moreton Bay
+which is the port just outside my city of Brisbane.
+
+00:03:45.099 --> 00:03:49.190
+They used an unmanned aerial vehicle with
+downward looking cameras to take pictures
+
+00:03:49.190 --> 00:03:54.569
+from the air. And then some image processing
+techniques to detect and count dugongs within
+
+00:03:54.569 --> 00:03:59.420
+the bay. We don't have to send divers down
+to find and count the dugongs. We can fly
+
+00:03:59.420 --> 00:04:04.129
+over the bay to get automatic measurements
+of how many dugongs there are and whereabouts
+
+00:04:04.129 --> 00:04:05.700
+in the bay they are.
+
+00:04:05.700 --> 00:04:10.410
+Now, an unmanned aerial vehicle or flying
+robot that does this kind of survey has got
+
+00:04:10.410 --> 00:04:14.879
+a limited endurance. It can only be in the
+air for a certain amount of time before it
+
+00:04:14.879 --> 00:04:19.129
+runs out of fuel. But a lot of researchers
+are now starting to look at solar powered
+
+00:04:19.129 --> 00:04:24.560
+robots. This is a picture of a solar powered
+robot, again developed at my University, which
+
+00:04:24.560 --> 00:04:29.600
+can stay in the air forever. And people are
+looking at solar powered boats and solar powered
+
+00:04:29.600 --> 00:04:34.750
+underwater vehicles and solar powered land
+robots as well. So this is a technology which
+
+00:04:34.750 --> 00:04:40.370
+allows us to put intelligent machines into
+the environment where they can persistently
+
+00:04:40.370 --> 00:04:46.130
+monitor the state of the planet and send back
+lots of measurements taken at frequent intervals
+
+00:04:46.130 --> 00:04:49.379
+and covering a large expanse of our planet's
+surface.
+

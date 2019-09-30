@@ -1,0 +1,95 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.399 --> 00:00:08.870
+Let’s do a quick introduction to skew symmetric
+matrices. These matrices are sometimes called
+
+00:00:08.870 --> 00:00:13.160
+anti-symmetric matrices and they have this
+interesting property that the transpose is
+
+00:00:13.160 --> 00:00:18.410
+equal to the negative of the original matrix.
+These matrices are always singular. Their
+
+00:00:18.410 --> 00:00:23.650
+determinant is always equal to zero.
+Any matrix is the sum of a symmetric matrix
+
+00:00:23.650 --> 00:00:30.099
+and a skew symmetric matrix. In three dimensions,
+we can write the skew symmetric matrix which
+
+00:00:30.099 --> 00:00:35.300
+is a function of a three element vector in
+this fashion. So, we have a vector whose elements
+
+00:00:35.300 --> 00:00:40.460
+are X, Y, and Z. The skew symmetric matrix
+looks like this. The obvious features are
+
+00:00:40.460 --> 00:00:45.320
+a diagonal of zeros. There are two X's in
+there. Two Y's and two Z's. One of them has
+
+00:00:45.320 --> 00:00:49.170
+a positive sign and one of them has a negative
+sign.
+
+00:00:49.170 --> 00:00:54.510
+We can also write a vector cross product as
+a matrix vector product. One of the matrices
+
+00:00:54.510 --> 00:00:58.410
+is a skew symmetric matrix computed from the
+first vector.
+
+00:00:58.410 --> 00:01:02.710
+Here’s a skew symmetric matrix and I am
+going share with you some rules of thumb for
+
+00:01:02.710 --> 00:01:07.390
+how you work out which elements are where
+when you write this matrix down. To start
+
+00:01:07.390 --> 00:01:11.970
+with, there is a zero diagonal. So, that’s
+pretty easy. You write three zeros down the
+
+00:01:11.970 --> 00:01:15.000
+diagonal.
+There is also what I think of as an exclusion
+
+00:01:15.000 --> 00:01:21.920
+rule. So, in row X and in column Y, that element
+will not be an extra Y. It will be the other
+
+00:01:21.920 --> 00:01:26.740
+thing. And in this case, it will be a Z.
+If we consider a cyclic rotation sequence.
+
+00:01:26.740 --> 00:01:33.020
+So, we have an endless sequence - X, Y, Z,
+X, Y, Z and so on. If I consider the element
+
+00:01:33.020 --> 00:01:40.020
+in column Y and in row X, moving from Y to
+X, it is going backwards in that cyclic rotation
+
+00:01:40.020 --> 00:01:44.010
+sequence. Because we are going backwards in
+the sequence, I am going to put a minus sign
+
+00:01:44.010 --> 00:01:48.090
+on that particular element.
+If we look at this one over here, we are going
+
+00:01:48.090 --> 00:01:53.909
+from Z to X. And, that’s a forward in the
+cyclic rotation sequence. So, we give this
+
+00:01:53.909 --> 00:01:55.140
+element a positive sign.
+
