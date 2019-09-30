@@ -1,0 +1,404 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.439 --> 00:00:07.500
+We talked about how we can linearly interpolate
+position.
+
+00:00:07.500 --> 00:00:10.660
+What do we do for the case of rotations?
+
+00:00:10.660 --> 00:00:16.580
+We could naively rewrite our expression like
+this where we have the initial rotation, the
+
+00:00:16.580 --> 00:00:19.380
+final rotation and the intermediate rotation.
+
+00:00:19.380 --> 00:00:21.960
+But, there’s a problem with this scheme.
+
+00:00:21.960 --> 00:00:25.620
+A rotation matrix is not just any old 3 x 3
+matrix.
+
+00:00:25.620 --> 00:00:27.100
+It’s a special matrix.
+
+00:00:27.100 --> 00:00:32.990
+It’s an orthogonal matrix and that means
+that each column in the matrix is a unit vector.
+
+00:00:32.990 --> 00:00:39.519
+So if I add two orthogonal matrices, the result
+will never be an orthogonal matrix because
+
+00:00:39.519 --> 00:00:44.480
+if I can see that each column, the sum of
+two unit vectors, can never ever be a unit
+
+00:00:44.480 --> 00:00:45.480
+vector.
+
+00:00:45.480 --> 00:00:50.269
+So this is not a strategy we can use to interpolate
+rotations.
+
+00:00:50.269 --> 00:00:54.819
+We need to consider other ways of representing
+rotation that we can interpolate.
+
+00:00:54.819 --> 00:01:00.679
+So, one way to achieve this is to recall that
+this interpolation formula works for vectors
+
+00:01:00.679 --> 00:01:05.640
+and we can represent a rotation in terms of
+a vector of angles.
+
+00:01:05.640 --> 00:01:10.500
+It can be three Euler angles or it could be
+three roll, pitch, yaw angles.
+
+00:01:10.500 --> 00:01:16.740
+So if we consider this vector of angles as
+the symbol Gamma, then we can introduce the
+
+00:01:16.740 --> 00:01:22.440
+initial angles, the final angles, and then
+we can interpolate the intermediate angles.
+
+00:01:22.440 --> 00:01:26.490
+If our initial and final orientations are
+given in terms of rotation matrices, then
+
+00:01:26.490 --> 00:01:31.850
+we convert those two into initial set of angles
+and a final set of angles.
+
+00:01:31.850 --> 00:01:37.820
+We interpolate the intermediate angles and
+we can convert those back to a rotation matrix
+
+00:01:37.820 --> 00:01:39.240
+if we so desire.
+
+00:01:39.240 --> 00:01:44.420
+We’re going to use the function jtraj that
+we looked at a moment ago to interpolate roll,
+
+00:01:44.420 --> 00:01:45.580
+pitch, yaw angles.
+
+00:01:45.580 --> 00:01:52.280
+I’m going to put the result into the workspace
+variable X. Invoke the jtraj function.
+
+00:01:52.280 --> 00:01:57.500
+I’m going to interpolate between a set of
+roll, pitch, yaw angles and roll equal to
+
+00:01:57.500 --> 00:02:06.480
+0 and the final set of roll, pitch, yaw angles
+which are equal to minus pi on 2, plus pi
+
+00:02:06.480 --> 00:02:09.410
+on 2 and pi on 4.
+
+00:02:09.410 --> 00:02:15.620
+And, I’m going to do this interpolation
+over a hundred time steps.
+
+00:02:15.620 --> 00:02:20.420
+The result is a new variable in our workspace
+that’s got 100 rows, each row corresponds
+
+00:02:20.420 --> 00:02:21.420
+to a time step.
+
+00:02:21.420 --> 00:02:28.810
+And, it has got three columns and the columns
+correspond to the roll, pitch and yaw angles.
+
+00:02:28.810 --> 00:02:32.600
+I can plot this roll, pitch, yaw angles versus
+time.
+
+00:02:32.600 --> 00:02:37.370
+Here we can see what they look like, moving
+smoothly from the initial value to the final
+
+00:02:37.370 --> 00:02:38.370
+value.
+
+00:02:38.370 --> 00:02:44.569
+Now, we want to convert the roll, pitch, yaw
+angle in each row of the matrix X in to a
+
+00:02:44.569 --> 00:02:45.750
+rotation matrix.
+
+00:02:45.750 --> 00:02:51.400
+And to do that, I’m going to use the rpy2r
+function that we looked at previously and
+
+00:02:51.400 --> 00:02:52.569
+I’m going to pass in X.
+
+00:02:52.569 --> 00:02:58.819
+And what the function will do in this case
+is it will convert every row of this matrix
+
+00:02:58.819 --> 00:03:02.020
+into a rotation matrix.
+
+00:03:02.020 --> 00:03:08.530
+The result is a rotation matrix, but the matrix
+has got dimensions of 3 x 3 x 100.
+
+00:03:08.530 --> 00:03:11.600
+So we can think of it as a stack of rotation
+matrices.
+
+00:03:11.600 --> 00:03:16.260
+So we could look at the first one in that
+stack and it’s a rotation matrix.
+
+00:03:16.260 --> 00:03:17.260
+It looks like this.
+
+00:03:17.260 --> 00:03:18.900
+It’s null rotation.
+
+00:03:18.900 --> 00:03:20.430
+It’s a unit matrix.
+
+00:03:20.430 --> 00:03:25.580
+I could look at the 10th one in the stack
+and it looks something like this.
+
+00:03:25.580 --> 00:03:29.390
+So R is a sequence of rotation matrices.
+
+00:03:29.390 --> 00:03:37.670
+Now I can pass a sequence of rotation matrices
+like that to the function tranimate.
+
+00:03:37.670 --> 00:03:42.510
+What we will see is an animation showing the
+orientation of the coordinate frame changing
+
+00:03:42.510 --> 00:03:48.849
+smoothly from the initial orientation specified
+in terms of roll, pitch, yaw angles to a final
+
+00:03:48.849 --> 00:03:54.990
+orientation also specified in terms of roll,
+pitch, yaw angles.
+
+00:03:54.990 --> 00:04:01.090
+Euler angles and roll, pitch, yaw angles are
+represented as a vector of three angles.
+
+00:04:01.090 --> 00:04:05.930
+Each element of these vectors we can consider
+as a point on a circle and the path from the
+
+00:04:05.930 --> 00:04:11.290
+initial angle to the final angle is an arc
+on the unit circle.
+
+00:04:11.290 --> 00:04:15.460
+Consider now the case where we have this initial
+angle and this final angle.
+
+00:04:15.460 --> 00:04:21.239
+And a naive interpolation would move us from
+the initial angle to the final angle the long
+
+00:04:21.239 --> 00:04:23.470
+way around the circle.
+
+00:04:23.470 --> 00:04:27.350
+What we need to remember with angles is that
+there are always two ways to get from A to
+
+00:04:27.350 --> 00:04:28.350
+B.
+
+00:04:28.350 --> 00:04:31.990
+There is potentially the long way and there
+is potentially the short way.
+
+00:04:31.990 --> 00:04:37.070
+So when we are interpolating each element
+in our angle sequence vector, it’s important
+
+00:04:37.070 --> 00:04:40.720
+that we choose the shortest path.
+
+00:04:40.720 --> 00:04:46.350
+If we look at the angle as a function of time,
+the long path is given here in blue.
+
+00:04:46.350 --> 00:04:50.500
+We see we’re moving from 2 radians to -2
+radians.
+
+00:04:50.500 --> 00:04:55.970
+Whereas the short path which is shown in red
+moves through an angle of pi radians, pops
+
+00:04:55.970 --> 00:05:03.120
+back at minus pi radians and then moves quickly
+to the destination point B of a value of -2
+
+00:05:03.120 --> 00:05:04.120
+radians.
+
+00:05:04.120 --> 00:05:09.290
+Earlier, we introduce quaternions and this
+is the equation we used to interpolate between
+
+00:05:09.290 --> 00:05:10.290
+two quaternions.
+
+00:05:10.290 --> 00:05:15.780
+Once again, it’s a function of S and S varies
+from 0 to 1.
+
+00:05:15.780 --> 00:05:20.810
+And the important element in this equation
+is Theta and Theta is derived from the elements
+
+00:05:20.810 --> 00:05:24.590
+of the initial and final quaternion.
+
+00:05:24.590 --> 00:05:31.260
+This is referred to as spherical linear interpolation
+and it is the shortest and most direct path
+
+00:05:31.260 --> 00:05:34.120
+between any two orientations.
+
+00:05:34.120 --> 00:05:40.650
+And it corresponds to a constant angular velocity
+about a fixed axis in space.
+
+00:05:40.650 --> 00:05:45.370
+Let’s create a pair of quaternions that
+we will interpolate between.
+
+00:05:45.370 --> 00:05:49.410
+The first one corresponds to a null rotation.
+
+00:05:49.410 --> 00:05:52.540
+We see that it’s got a vector component
+of 0.
+
+00:05:52.540 --> 00:05:59.261
+The second quaternion is a representation
+of a rotation about the x-axis by pi on 2.
+
+00:05:59.261 --> 00:06:01.680
+So, we’re going to pass in a rotation matrix.
+
+00:06:01.680 --> 00:06:05.200
+The quaternion class is going to turn that
+into a quaternion.
+
+00:06:05.200 --> 00:06:11.270
+Now, there are two quaternions in our workspace,
+one corresponding to no rotation, one corresponding
+
+00:06:11.270 --> 00:06:15.490
+to rotation of 90 degrees about the x-axis.
+
+00:06:15.490 --> 00:06:18.820
+To interpolate quaternions, we use the interp
+method.
+
+00:06:18.820 --> 00:06:21.350
+We apply that to the initial quaternion.
+
+00:06:21.350 --> 00:06:28.970
+And, the first argument is the final quaternion
+and the second argument is the position along
+
+00:06:28.970 --> 00:06:29.970
+a trajectory.
+
+00:06:29.970 --> 00:06:32.400
+So 0 is the first point on the trajectory.
+
+00:06:32.400 --> 00:06:38.690
+That’s the initial condition, the initial
+quaternion which is the null rotation.
+
+00:06:38.690 --> 00:06:44.639
+I can repeat that and ask for the final point
+in the interpolation and that is equal to
+
+00:06:44.639 --> 00:06:47.100
+the second quaternion.
+
+00:06:47.100 --> 00:06:53.540
+I can ask now for a point that’s midway
+between 0.5 and this is the interpolated quaternion.
+
+00:06:53.540 --> 00:06:59.419
+And of course, I can turn that back in to
+a rotation matrix using the R method.
+
+00:06:59.419 --> 00:07:05.870
+Now, we might like to compare the effect of
+the different types of rotational interpolation
+
+00:07:05.870 --> 00:07:07.130
+and that’s a little bit difficult.
+
+00:07:07.130 --> 00:07:10.669
+It’s hard to visualize a particular rotation.
+
+00:07:10.669 --> 00:07:16.270
+But, one way we can do it is to consider the
+effect of a rotation on a particular vector.
+
+00:07:16.270 --> 00:07:22.199
+So here, I have chosen the x-axis which I
+can represent by a vector 1, 0, 0.
+
+00:07:22.199 --> 00:07:28.100
+And I can apply these three different rotation
+sequences to that vector.
+
+00:07:28.100 --> 00:07:34.240
+I can interpolate the initial and final Euler
+angles, the initial and final roll, pitch,
+
+00:07:34.240 --> 00:07:40.000
+yaw angles or the initial and final quaternions
+and they are shown by the different colored
+
+00:07:40.000 --> 00:07:42.490
+parts plotted here on the sphere.
+
+00:07:42.490 --> 00:07:47.080
+The quaternion path shown in white is the
+shortest and most direct path.
+
+00:07:47.080 --> 00:07:51.780
+We can see that the roll, pitch, yaw interpolation
+path has deviated significantly from it.
+
+00:07:51.780 --> 00:07:57.199
+It has taken a more indirect and longer path
+to get from the initial orientation to the
+
+00:07:57.199 --> 00:07:58.840
+final orientation.
+
+00:07:58.840 --> 00:08:01.750
+Quaternion interpolation is the gold standard.
+

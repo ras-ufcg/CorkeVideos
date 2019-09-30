@@ -1,0 +1,128 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.780 --> 00:00:07.970
+Here we have the same two link robot as we
+just looked at but this time we're going to
+
+00:00:07.970 --> 00:00:12.639
+solve it using an analytical approach, that
+is we're going to rely much more on algebra,
+
+00:00:12.639 --> 00:00:19.220
+particular linear algebra rather than geometry.
+We have an expression E, which is the homogeneous
+
+00:00:19.220 --> 00:00:24.460
+transformation which represents the pose of
+the robots endefector and we looked at this
+
+00:00:24.460 --> 00:00:31.500
+in the last lecture, we can write the endefector
+pose as a sequence of elementary homogeneous
+
+00:00:31.500 --> 00:00:38.809
+transformations. A rotation by Q1, a translation
+along the X direction by A1, a rotation by
+
+00:00:38.809 --> 00:00:45.859
+Q2 and then a translation in the X direction
+by A2. If I expand this out, multiply all
+
+00:00:45.859 --> 00:00:51.870
+the transformations together, I get the expression
+shown here; a three by three homogeneous transformation
+
+00:00:51.870 --> 00:00:56.069
+matrix representing the pose of the robot's
+endefector.
+
+00:00:56.069 --> 00:01:00.949
+Now for this particular two link robot, we
+are only interested in the position of its
+
+00:01:00.949 --> 00:01:06.159
+endefector, it's X and Y co-ordinate and they
+are these two elements within the homogeneous
+
+00:01:06.159 --> 00:01:11.780
+transformation matrix, so I'm going to copy
+those out. So here again is our expression
+
+00:01:11.780 --> 00:01:16.990
+for X and Y and what we're going to do is
+a fairly common trick, we're going to square
+
+00:01:16.990 --> 00:01:23.610
+and add these two equations and I get a relationship
+that looks like this. Now I can solve for
+
+00:01:23.610 --> 00:01:31.750
+the joint angle Q2 in terms of the endefector
+pose X and Y and the robot's constants A1 and A2.
+
+00:01:31.750 --> 00:01:36.140
+Now what I'm going to do is apply the sum
+of angles identity. I'm going to expand these
+
+00:01:36.140 --> 00:01:43.289
+terms, sine of Q1 plus Q2 or cos of Q1 plus
+Q2 and to make life a little bit easier, I'm
+
+00:01:43.289 --> 00:01:48.409
+going to make some substations, so where ever
+I had cos Q2, I'm going to write C2 and where
+
+00:01:48.409 --> 00:01:54.240
+ever I had sine Q2, I’m going to write S2.
+It's a fairly common shorthand when people
+
+00:01:54.240 --> 00:01:58.969
+are looking at robot kinematic equations.
+And here are the equations after making those
+
+00:01:58.969 --> 00:02:04.119
+substitutions. Looking at these two equations,
+I can see that they fall into a very well
+
+00:02:04.119 --> 00:02:10.280
+known form and for that form there is a very
+well known solution. So I'm going to consider
+
+00:02:10.280 --> 00:02:15.930
+just one of the equations, the equation for
+Y and using our well known identity and it's
+
+00:02:15.930 --> 00:02:21.870
+solution, I can determine the values for the
+variables little a, little b and little c
+
+00:02:21.870 --> 00:02:27.390
+and once I've determined those, then I can
+just write down the solution for Q1, which
+
+00:02:27.390 --> 00:02:31.209
+is the equivalent of theta in this particular
+case.
+
+00:02:31.209 --> 00:02:36.530
+Here again is our expression for Q1, copied
+over from the previous slide and we may remember
+
+00:02:36.530 --> 00:02:41.799
+from earlier in our workings that we determined
+this particular relationship; X squared plus
+
+00:02:41.799 --> 00:02:47.390
+Y squared is equal to this particular complex
+expression. So I can substitute that in and
+
+00:02:47.390 --> 00:02:53.830
+do some simplification and I end up with this
+slightly less complex expression for Q1. And
+
+00:02:53.830 --> 00:02:58.760
+it is the same expression that I got following
+the geometric approach in the previous section.
+

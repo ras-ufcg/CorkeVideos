@@ -1,0 +1,395 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.800 --> 00:00:07.899
+As we just mentioned, the key elements of
+an inertial measurement unit are sensors that
+
+00:00:07.899 --> 00:00:12.950
+measure acceleration, magnetic field and angular
+velocity. Now, we’re going to talk about
+
+00:00:12.950 --> 00:00:15.140
+how we measure acceleration.
+
+00:00:15.140 --> 00:00:19.699
+What I have in front of me here is what’s
+called a quadrotor. It is a flying robot.
+
+00:00:19.699 --> 00:00:24.939
+It’s got four propellers. And, by controlling
+the speed of the individual propellers, I
+
+00:00:24.939 --> 00:00:30.470
+can make the machine go up, down, left, right
+and so on. Really critically important to
+
+00:00:30.470 --> 00:00:35.940
+control a machine like this in the air is
+a sense of balance knowing its orientation
+
+00:00:35.940 --> 00:00:42.079
+in 3D space. So, it has an inertial measurement
+unit on board. So, somewhere inside this large
+
+00:00:42.079 --> 00:00:48.010
+stack of electronics, there is a board that
+looks something like this. This board contains
+
+00:00:48.010 --> 00:00:53.660
+three accelerometers, which allow it to determine
+its roll and pitch angle in space. It contains
+
+00:00:53.660 --> 00:00:58.789
+three gyroscopes which measure its rotational
+velocity around three orthogonal axis. And,
+
+00:00:58.789 --> 00:01:04.640
+it contains a three-axis magnetometer, so it
+can determine its orientation where it’s
+
+00:01:04.640 --> 00:01:07.950
+heading with respect to the Earth’s magnetic
+field.
+
+00:01:07.950 --> 00:01:14.270
+Now, this little board is customised for this
+particular quadrotor. A commercial product
+
+00:01:14.270 --> 00:01:20.510
+that performs exactly the same function is
+a device like this. It's got a USB port that plugs
+
+00:01:20.510 --> 00:01:25.010
+in to a computer, but internally, it contains
+three accelerometers, three gyroscopes, and
+
+00:01:25.010 --> 00:01:31.950
+three magnetometers. Now, this same functionality
+exists in very compact form inside almost
+
+00:01:31.950 --> 00:01:37.290
+all modern smartphones. And, this enables
+the smartphone compass application so it can
+
+00:01:37.290 --> 00:01:43.170
+find north, it can determine roll and pitch
+angles. It’s sometimes used for game control and so on.
+
+00:01:44.460 --> 00:01:48.240
+Imagine now that I’m standing in a lift
+or an elevator, and I’ve got a very simple
+
+00:01:48.240 --> 00:01:53.960
+dynamical model for my body. It consists
+of a mass sitting on a spring. The mass represents
+
+00:01:53.960 --> 00:01:59.130
+the mass of my body situated at a point at
+my centre mass and it’s sitting on a spring
+
+00:01:59.130 --> 00:02:05.270
+which represents the softness of my lower
+body and my legs. Now, as the lift starts
+
+00:02:05.270 --> 00:02:10.610
+to move upwards, we feel momentarily heavier,
+that is the weight pushes down on the spring.
+
+00:02:10.610 --> 00:02:15.940
+And, as the lift comes to a stop, we feel
+momentarily lighter and this is because of
+
+00:02:15.940 --> 00:02:20.530
+inertial effect. It means that it wants to
+maintain its current velocity. So, when we
+
+00:02:20.530 --> 00:02:26.220
+start off, it wants to maintain its original
+0 velocity and that’s what causes it to
+
+00:02:26.220 --> 00:02:30.910
+lag behind the person moving up in a lift.
+And, that compresses the spring, it make them
+
+00:02:30.910 --> 00:02:32.810
+feel heavier.
+
+00:02:32.810 --> 00:02:37.420
+As the lift slows down, the weight wants to
+keep going at the vertical velocity of the
+
+00:02:37.420 --> 00:02:42.210
+lift and that causes that spring to extend
+and causes us to feel a little bit lighter.
+
+00:02:42.210 --> 00:02:47.090
+Here is a small modern inertial measurement
+unit, the type that’s quite commonly used
+
+00:02:47.090 --> 00:02:53.230
+in a variety of robot systems. Inside the
+little box are a number of sensors including
+
+00:02:53.230 --> 00:03:00.290
+accelerometers. So, let’s look inside the
+box and see how an accelerometer works. And,
+
+00:03:00.290 --> 00:03:05.990
+it looks just like the example we studied
+before. It contains a mass and a spring. As
+
+00:03:05.990 --> 00:03:11.500
+the body of the accelerometer accelerates
+upwards, the weight extends the spring. And,
+
+00:03:11.500 --> 00:03:17.510
+as the accelerometer decelerates, the spring
+pulls the weight upwards. So, the extension
+
+00:03:17.510 --> 00:03:23.170
+of the spring is linearly related to the acceleration
+of the body of the accelerometer. This is
+
+00:03:23.170 --> 00:03:28.330
+the fundamental principle underpinning all
+acceleration sensing devices.
+
+00:03:28.330 --> 00:03:34.230
+Let’s look inside the box and, once again,
+we see a spring and a mass. The mass is often
+
+00:03:34.230 --> 00:03:39.520
+referred to as the proof mass. And, in this
+example, it’s got a mass of m and the extension
+
+00:03:39.520 --> 00:03:44.740
+of the spring is denoted by the symbol x.
+Now, I’m going to mark the center of mass
+
+00:03:44.740 --> 00:03:49.800
+of the proof mass and its displacement with
+respect to the ground, I’m going to denote it
+
+00:03:49.800 --> 00:03:54.790
+by xm. And, the displacement of the body of
+the accelerometer, I’m going to denote by
+
+00:03:54.790 --> 00:04:00.860
+the symbol xb. And, so the acceleration of
+the body is equal to xb double dot and I can
+
+00:04:00.860 --> 00:04:07.150
+write a relationship between xm, xb and x.
+The spring force acting on the proof mass,
+
+00:04:07.150 --> 00:04:12.459
+I’m going to call fs, and the gravity force
+acting on the proof mass is the mass multiplied
+
+00:04:12.459 --> 00:04:18.870
+by gravitational acceleration g. I can write
+Newton’s second law which relates the acceleration
+
+00:04:18.870 --> 00:04:25.009
+of the mass to the two forces acting on at the spring force upwards and gravity acting downwards.
+
+00:04:25.009 --> 00:04:29.090
+And, for a spring, we know that the force is
+proportional to the extension of the spring,
+
+00:04:29.090 --> 00:04:33.919
+and we can imagine that as x increases, I’m
+extending the spring and it is pulling upwards
+
+00:04:33.919 --> 00:04:38.930
+with a greater and greater force. Now, we
+can combine these equations and do a little
+
+00:04:38.930 --> 00:04:43.669
+bit of rearrangement and simplification. And
+now, I’m able to write an expression that
+
+00:04:43.669 --> 00:04:49.939
+relates the extension of the spring, x, to
+the acceleration of the body, a, and the gravitational
+
+00:04:49.939 --> 00:04:55.249
+acceleration, g. It’s really important to
+note that it cannot tell the difference between
+
+00:04:55.249 --> 00:05:00.889
+acceleration of the body, a, or gravitational
+acceleration, g, and this is something we’ll
+
+00:05:00.889 --> 00:05:03.680
+return to in just a moment.
+
+00:05:03.680 --> 00:05:08.279
+Every accelerometer has a sensitive direction
+and, typically, that’s marked on the body
+
+00:05:08.279 --> 00:05:12.809
+of the accelerometer package. Now, in this
+particular example, the accelerometer measures
+
+00:05:12.809 --> 00:05:18.009
+acceleration in the vertical direction, but
+it is insensitive to acceleration in the horizontal
+
+00:05:18.009 --> 00:05:23.180
+direction or in the direction out of the screen.
+If I place an accelerometer at rest somewhere
+
+00:05:23.180 --> 00:05:29.050
+on the surface of the Earth, the accelerometer
+records an acceleration of 1g in the vertical
+
+00:05:29.050 --> 00:05:34.279
+or upward direction and this is a little bit
+unintuitive. If I drop something, it’s going
+
+00:05:34.279 --> 00:05:39.949
+to accelerate in the downward direction that
+the accelerometer measures 1g in the vertical
+
+00:05:39.949 --> 00:05:46.270
+or upward direction. And, this is a consequence
+of Einstein’s Equivalence Principle.
+
+00:05:46.270 --> 00:05:51.680
+And, these two examples are exactly the same
+as far as an accelerometer is concerned. The
+
+00:05:51.680 --> 00:05:56.249
+accelerometer is sitting on the surface of
+planet Earth, or if it is sitting in a rocket
+
+00:05:56.249 --> 00:06:01.860
+which is accelerating upwards at 1g. In both
+these cases, the accelerometer will register
+
+00:06:01.860 --> 00:06:08.889
+an acceleration of 1g in the vertical direction.
+Gravitational acceleration varies across the
+
+00:06:08.889 --> 00:06:14.430
+surface of the Earth. The Earth is not a perfect
+sphere. It’s slightly squashed, so the diameter
+
+00:06:14.430 --> 00:06:19.460
+at the equator is greater than the diameter
+measured through the poles. Because of this,
+
+00:06:19.460 --> 00:06:23.479
+somebody who is standing at the equator is
+further away from the center of the Earth.
+
+00:06:23.479 --> 00:06:28.749
+So, therefore, they experience a lower gravitational
+acceleration. So, we can see quite clearly
+
+00:06:28.749 --> 00:06:34.680
+in this figure here, the gravitational acceleration
+in the equatorial band is significantly lower
+
+00:06:34.680 --> 00:06:39.839
+than gravitational acceleration in the temperate
+and Polar Regions of the Earth.
+
+00:06:39.839 --> 00:06:47.520
+The standard gravity value is taken as 9.80665
+meters per second squared, but note the significant
+
+00:06:47.520 --> 00:06:52.430
+variation depending on where you are. The
+low cost accelerometers that you have in your
+
+00:06:52.430 --> 00:06:57.139
+phone and perhaps in the navigation system
+in your car are based on micro-electromechanical
+
+00:06:57.139 --> 00:07:02.509
+system technology and the whole device is
+etched out of silicon. The inertial mass or
+
+00:07:02.509 --> 00:07:08.309
+proof mass is supported by flexible spring
+legs. In the case of horizontal acceleration,
+
+00:07:08.309 --> 00:07:14.110
+the inertial mass will move sideways. And,
+the change in position is measured capacititively
+
+00:07:14.110 --> 00:07:20.029
+using these sensors here. It’s really useful
+to be able to measure acceleration in three
+
+00:07:20.029 --> 00:07:25.229
+orthogonal directions aligned with the x,
+y and z-axis of a right-handed coordinate
+
+00:07:25.229 --> 00:07:32.319
+frame. Today, you can buy tri-axial accelerometers
+as a single chip. It contains three MEMS accelerometer
+
+00:07:32.319 --> 00:07:38.419
+sensors, electronics, analog to digital converters,
+filters and a serial IO capability so that
+
+00:07:38.419 --> 00:07:42.369
+you can very easily connect it to a microcontroller.
+
+00:07:42.369 --> 00:07:47.509
+You may not be aware that you have accelerometers
+in your head. In the inner ear assembly in
+
+00:07:47.509 --> 00:07:52.949
+each of our ears, there are a pair of accelerometers.
+And, the physical principles underlying these
+
+00:07:52.949 --> 00:07:57.339
+biological accelerometers are just the same
+as those we’ve already been talking about.
+
+00:07:57.339 --> 00:08:02.559
+The proof mass is a bunch of calcium carbonate
+crystals and they are referred to as otoliths,
+
+00:08:02.559 --> 00:08:07.559
+which means literally ear stones. They are
+sitting on a gelatinous membrane which serves
+
+00:08:07.559 --> 00:08:12.319
+as the spring. And, embedded in that gelatinous
+membrane are a bunch of hair cells and they
+
+00:08:12.319 --> 00:08:17.589
+measure the displacement of the otoliths with
+respect to the inner ear. We have two of these
+
+00:08:17.589 --> 00:08:21.349
+accelerometers in each ear, one is called
+the utricle and one is called the saccule.
+
+00:08:21.349 --> 00:08:25.960
+And, they are oriented almost orthogonally,
+so one senses the acceleration in the horizontal
+
+00:08:25.960 --> 00:08:29.789
+direction, and one senses the acceleration
+in the vertical direction.
+
+00:08:29.789 --> 00:08:34.680
+As you change the orientation of your head,
+the acceleration signals from the utricle
+
+00:08:34.680 --> 00:08:39.589
+and the saccule vary and allows your brain
+to determine something about the orientation
+
+00:08:39.589 --> 00:08:43.190
+of your head with respect to the world coordinate
+frame.
+

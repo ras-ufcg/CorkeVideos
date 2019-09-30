@@ -1,0 +1,100 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.750 --> 00:00:09.740
+Finally, we come to the problem of interpolating
+between two poses. Poses have got a translational
+
+00:00:09.740 --> 00:00:16.059
+and a rotational component. We need to interpolate
+them separately. We refer to this as Cartesian
+
+00:00:16.059 --> 00:00:22.770
+interpolation. Let’s consider two poses;
+pose 0 and pose 1, each can be represented
+
+00:00:22.770 --> 00:00:29.460
+by a rotation matrix and a vector. We can
+convert the rotation matrix of each pose into
+
+00:00:29.460 --> 00:00:34.500
+a unique quaternion and we can interpolate
+the translation using the linear interpolation
+
+00:00:34.500 --> 00:00:39.870
+formula that we introduced earlier. S is a
+function of time, varies smoothly from 0 to
+
+00:00:39.870 --> 00:00:46.510
+1 over the duration of the trajectory. And,
+we interpolate the rotation using the quaternion
+
+00:00:46.510 --> 00:00:51.739
+interpolation formula that we introduced in
+the last section. If we want, we can convert
+
+00:00:51.739 --> 00:00:57.570
+the interpolated quaternion back to a rotation
+matrix, combine it with the interpolated translation
+
+00:00:57.570 --> 00:01:04.890
+and rebuild a homogeneous transformation matrix.
+Let’s now interpolate between two poses
+
+00:01:04.890 --> 00:01:10.990
+described in terms of homogeneous transformation
+matrices. The first pose is a null pose. It
+
+00:01:10.990 --> 00:01:18.920
+just got 0 orientation and a translational
+component of 0. The second pose has a finite
+
+00:01:18.920 --> 00:01:25.110
+translational component and a finite rotational
+component and is defined by this homogeneous
+
+00:01:25.110 --> 00:01:32.790
+transformation matrix here. Now, I can create
+a smooth trajectory between these two poses
+
+00:01:32.790 --> 00:01:38.780
+using the Toolbox function, ctraj which stands
+for Cartesian trajectory. And, the arguments
+
+00:01:38.780 --> 00:01:45.880
+are the initial pose, the final pose and the
+number of time steps. The result is a matrix
+
+00:01:45.880 --> 00:01:53.579
+that’s 4 x 4 x 50. Once again, this is
+a stack of homogeneous transformation matrices.
+
+00:01:53.579 --> 00:01:58.740
+The first element in the stack, look at all
+the rows and all the columns and the first
+
+00:01:58.740 --> 00:02:04.079
+in the stack looks like this. But, the 10th
+one in the stack, look at all the rows and
+
+00:02:04.079 --> 00:02:08.369
+all the columns and the 10th in the stack
+looks like this.
+
+00:02:08.369 --> 00:02:15.400
+Each homogeneous transformation in this stack
+represents a pose along a trajectory and pose
+
+00:02:15.400 --> 00:02:20.790
+varies smoothly along this trajectory, smoothly
+in terms of translation and smoothly in terms
+
+00:02:20.790 --> 00:02:27.599
+of orientation. I can plot this using the
+tranimate function and we see here that the
+
+00:02:27.599 --> 00:02:34.199
+pose is changing from the initial pose to
+the final pose smoothly in position and in orientation.
+

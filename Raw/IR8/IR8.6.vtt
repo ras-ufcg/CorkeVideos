@@ -1,0 +1,174 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.860 --> 00:00:09.250
+Let's now consider a slightly more complex
+example; this is a three link planar robot.
+
+00:00:09.250 --> 00:00:13.379
+As you will remember from the lecture about
+forward kinematics, a robot with three joints
+
+00:00:13.379 --> 00:00:18.460
+or three degrees of freedom, allows us to
+control the end effector pose, not just its
+
+00:00:18.460 --> 00:00:23.710
+position, it's X and it's Y, but also the
+orientation of the end effector.
+
+00:00:23.710 --> 00:00:28.270
+We're going to label the link lengths of this
+robot and we're going to indicate the joint
+
+00:00:28.270 --> 00:00:36.680
+angles, Q1, Q2, and Q3. We're going to indicate
+the end effector pose which comprises an X
+
+00:00:36.680 --> 00:00:43.250
+and a Y component and an orientation theta.
+We've previously described how to write down
+
+00:00:43.250 --> 00:00:49.940
+an expression for the pose of the end effector
+in terms of two dimensional homogeneous transformations
+
+00:00:49.940 --> 00:00:56.649
+and it is a chain of transformations, rotation
+about Q1, translation along the link by an
+
+00:00:56.649 --> 00:01:03.130
+amount A1, rotation about Q2, translation
+along the second link by a distance to A2,
+
+00:01:03.130 --> 00:01:09.260
+rotation by join angle three and then a translation
+along link three by the distance A3. It's
+
+00:01:09.260 --> 00:01:14.110
+a little bit tedious but relatively straightforward
+to multiply all of the matrices together and
+
+00:01:14.110 --> 00:01:19.040
+I end up with a homogeneous transformation
+matrix, which represents the pose of the robot
+
+00:01:19.040 --> 00:01:25.360
+end effector and this is a three by three, homogeneous transformation matrix, in two dimensions.
+
+00:01:25.440 --> 00:01:30.100
+You will recall that there are some parts
+of the matrix which represent the translational
+
+00:01:30.100 --> 00:01:35.619
+component of the pose and there are other
+parts of the matrix which represent the rotational
+
+00:01:35.619 --> 00:01:41.549
+part of the pose. Let's look first at the
+translational part that is these are two elements
+
+00:01:41.549 --> 00:01:47.250
+in the matrix up here and I can pull those
+out and they represent the X and Y co-ordinate
+
+00:01:47.250 --> 00:01:49.280
+of the end effector pose.
+
+00:01:49.280 --> 00:01:55.020
+It's relatively simple to compute the derivate
+of these with respect to time and as we did
+
+00:01:55.020 --> 00:02:01.270
+earlier, I can write this in matrix form,
+so we have an expression for X dot and Y dot,
+
+00:02:01.270 --> 00:02:06.119
+in terms of a Jacobian Matrix and this time
+our Jacobian Matrix has got two rows and three
+
+00:02:06.119 --> 00:02:12.220
+columns and that is multiplied by a vector
+of joint angle velocities, Q1 dot, Q2 dot
+
+00:02:12.220 --> 00:02:18.050
+and Q3 dot. This is pretty straightforward.
+Let's look now at the rotational part and
+
+00:02:18.050 --> 00:02:23.610
+I'm going to pull that out. This is the rotational
+part of our pose, describes the orientation
+
+00:02:23.610 --> 00:02:25.290
+of the robot end effector.
+
+00:02:25.290 --> 00:02:30.660
+We learnt very early on that the general form
+for a rotation matrix in two dimensions looks
+
+00:02:30.660 --> 00:02:35.470
+like this. By equating the arguments of the
+cos sign and sin functions here, it's pretty
+
+00:02:35.470 --> 00:02:40.260
+clear that we can write this for theta is
+equal to Q1 plus Q2 plus Q3.
+
+00:02:40.260 --> 00:02:44.230
+If you think about the geometry of the problem
+then this result is actually not particularly
+
+00:02:44.230 --> 00:02:48.690
+surprising. Now I can take the derivative
+of theta with respect to time, so Q dot is
+
+00:02:48.690 --> 00:02:56.950
+equal to Q1 dot, plus Q2 dot, plus Q3 dot and once again I can factorize this and write it in matrix form.
+
+00:02:57.760 --> 00:03:03.520
+Here is the expression for X dot and Y dot
+and here is the expression for theta dot.
+
+00:03:03.530 --> 00:03:09.910
+Now both of them are a matrix multiplied by
+a vector of joint angle velocities. I can
+
+00:03:09.910 --> 00:03:14.629
+combine these together basically I stack two
+matrices and I end up with a Jacobian Matrix
+
+00:03:14.629 --> 00:03:20.269
+which is three by three. Here I have the joint
+velocity and over here I have the spatial
+
+00:03:20.269 --> 00:03:25.680
+velocity of the robot end effector, but once
+again a linear relationship between joint
+
+00:03:25.680 --> 00:03:30.190
+velocity and spatial velocity of the end effector.
+
+00:03:30.190 --> 00:03:35.739
+So for this three link, planar manipulator
+with joint angles Q1, Q2 and Q3, I can define
+
+00:03:35.739 --> 00:03:41.340
+and end effector velocity in terms of its
+translational velocity, that's it's X dot
+
+00:03:41.340 --> 00:03:48.019
+and Y dot component and also in terms of its
+rotational velocity; theta dot. So if I specify
+
+00:03:48.019 --> 00:03:52.500
+that, that’s what I want in my particular
+robot control problem, then computing the
+
+00:03:52.500 --> 00:03:57.950
+Jacobian and taking its inverse, I can compute
+the velocity of the joint angles that I need
+
+00:03:57.950 --> 00:04:00.459
+in order to achieve that end effector velocity.
+

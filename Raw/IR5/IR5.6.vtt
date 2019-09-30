@@ -1,0 +1,170 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.280 --> 00:00:06.390
+We've studied a number of inertial sensors.
+
+00:00:06.390 --> 00:00:10.330
+The first sensor that we looked at was the
+accelerometer and that measures the total
+
+00:00:10.330 --> 00:00:12.509
+acceleration of a body.
+
+00:00:12.509 --> 00:00:16.590
+That acceleration might be due to forces acting
+on the body or the acceleration might be due
+
+00:00:16.590 --> 00:00:19.280
+to gravity acting on the body.
+
+00:00:19.280 --> 00:00:24.020
+If the only force acting on a body is gravity,
+then we can use the acceleration measured
+
+00:00:24.020 --> 00:00:29.710
+on the body to determine the roll and pitch
+angles with respect to the gravity vector
+
+00:00:29.710 --> 00:00:32.230
+or the downward direction.
+
+00:00:32.230 --> 00:00:37.149
+We looked at gyroscopes which are able to
+measure components of the angular velocity
+
+00:00:37.149 --> 00:00:38.149
+of the body.
+
+00:00:38.149 --> 00:00:42.100
+And, we looked at magnetometers which can
+sense components of the Earth’s magnetic
+
+00:00:42.100 --> 00:00:47.589
+field with respect to the coordinate frame
+attached to the body of the object.
+
+00:00:47.589 --> 00:00:52.219
+We can combine information from accelerometers
+and magnetometers to determine the orientation
+
+00:00:52.219 --> 00:00:55.359
+of the body with respect to magnetic north.
+
+00:00:55.359 --> 00:01:00.079
+The earliest types of inertial navigation
+systems were referred to as gimballed and
+
+00:01:00.079 --> 00:01:03.949
+they are very large instruments that I showed
+very early on in this lecture.
+
+00:01:03.949 --> 00:01:09.340
+It contains a free floating gyro-stabilized
+platform referred to as the stable element
+
+00:01:09.340 --> 00:01:12.350
+and it’s shown here by the coordinate frame
+I.
+
+00:01:12.350 --> 00:01:17.310
+That platform is connected to the vehicle
+by a gimbal mechanism.
+
+00:01:17.310 --> 00:01:22.710
+As the orientation of the vehicle changes,
+the body frame which is attached to the vehicle
+
+00:01:22.710 --> 00:01:28.460
+changes, but the inertial coordinate frame
+I remains fixed in space.
+
+00:01:28.460 --> 00:01:33.039
+We can, therefore, determine the orientation
+of a vehicle by measuring the angles of the
+
+00:01:33.039 --> 00:01:38.079
+gimbals between the inertial frame which is
+fixed in space and the body frame which is
+
+00:01:38.079 --> 00:01:40.520
+attached to the vehicle.
+
+00:01:40.520 --> 00:01:45.770
+The accelerometers are mounted on the gyro-
+stabilized platform, so they measure acceleration
+
+00:01:45.770 --> 00:01:48.060
+of the vehicle in the inertial frame.
+
+00:01:48.060 --> 00:01:53.080
+But if we want to, and we know the orientation
+of the vehicle with respect to the inertial
+
+00:01:53.080 --> 00:01:59.420
+frame, we can rotate the acceleration vector
+in to the vehicles body frame.
+
+00:01:59.420 --> 00:02:05.310
+This is a schematic of the gimballed inertial
+measurement unit used on the Apollo spacecraft.
+
+00:02:05.310 --> 00:02:10.810
+The stable element is shown here and it contains
+three spinning gyroscopes and they maintain
+
+00:02:10.810 --> 00:02:14.690
+the orientation of that platform constant
+with respect to the stars.
+
+00:02:14.690 --> 00:02:21.709
+That platform also contains three accelerometers
+indicated here, XA, YA and ZA.
+
+00:02:21.709 --> 00:02:26.760
+The gimbal mechanism effectively allows the
+spacecraft to rotate about the stable platform
+
+00:02:26.760 --> 00:02:30.980
+and the gimbal angles are measured by rather
+old fashioned sensors by today’s standard
+
+00:02:30.980 --> 00:02:32.410
+called resolvers.
+
+00:02:32.410 --> 00:02:38.090
+Today, almost all inertial measurement units
+use what’s called the strap-down configuration.
+
+00:02:38.090 --> 00:02:43.510
+We have a body frame B attached to the vehicle
+and the accelerometers and gyroscopes measure
+
+00:02:43.510 --> 00:02:48.769
+acceleration along each of the body frame
+axis and the gyroscopes measure the angular
+
+00:02:48.769 --> 00:02:53.099
+velocity components about each of the body
+frame coordinate axes.
+
+00:02:53.099 --> 00:02:59.290
+As the vehicle orientation changes, so does
+the body frame B, we measure the angular velocity
+
+00:02:59.290 --> 00:03:05.060
+in the coordinate frame B and we integrate
+that over time to determine the orientation
+
+00:03:05.060 --> 00:03:06.549
+of the vehicle.
+
+00:03:06.549 --> 00:03:11.180
+Once we know the orientation of the vehicle
+in the body frame, we can rotate it back to
+
+00:03:11.180 --> 00:03:15.719
+the inertial frame to determine our acceleration
+with respect to the stars.
+

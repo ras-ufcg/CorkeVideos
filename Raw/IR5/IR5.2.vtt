@@ -1,0 +1,328 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.590 --> 00:00:07.120
+To make it tangible, we are going to consider
+the example of my mobile phone.
+
+00:00:07.120 --> 00:00:11.990
+First thing I am going to do is to attach
+a right handed coordinate frame to it and
+
+00:00:11.990 --> 00:00:14.880
+I am going to have the z-axis out of the face
+of the screen.
+
+00:00:14.880 --> 00:00:20.850
+The y-axis is vertically upwards on the phone
+and the x-axis is horizontal from left to
+
+00:00:20.850 --> 00:00:21.850
+right.
+
+00:00:21.850 --> 00:00:26.710
+I am going to call this frame B and that stands
+for the body frame or the body-fixed frame.
+
+00:00:26.710 --> 00:00:31.570
+This is a very common notation in aerospace
+and also in robotics.
+
+00:00:31.570 --> 00:00:36.960
+Now we are going to place one accelerometer
+aligned with each of the axes that we have
+
+00:00:36.960 --> 00:00:37.960
+attached to the phone.
+
+00:00:37.960 --> 00:00:43.360
+So, one accelerometer would be in XB direction
+and one in the YB direction and one in the
+
+00:00:43.360 --> 00:00:44.860
+ZB direction.
+
+00:00:44.860 --> 00:00:48.180
+Modern mobile phones, are packed full of inertial
+sensors.
+
+00:00:48.180 --> 00:00:53.540
+They contained three accelerometers, three
+gyros and three magnetometers.
+
+00:00:53.540 --> 00:00:57.739
+Like everything else that we've talked about
+in this lecture series, we are going to attach
+
+00:00:57.739 --> 00:00:59.430
+a coordinate frame to the phone.
+
+00:00:59.430 --> 00:01:03.761
+You have to look reasonably deeply into the
+documentation to find the coordinate frame
+
+00:01:03.761 --> 00:01:09.049
+conventions for the phone, but for an iPhone
+like this, the convention is the x-axis is
+
+00:01:09.049 --> 00:01:14.310
+to the right and the y-axis is to the top
+of the phone and the z-axis is out of the
+
+00:01:14.310 --> 00:01:15.310
+screen.
+
+00:01:15.310 --> 00:01:19.909
+So, I am going to fix one of my standard coordinate
+frames to the phone, so we understand what's
+
+00:01:19.909 --> 00:01:22.409
+what.
+
+00:01:22.409 --> 00:01:26.319
+There are many apps that you can get for your
+phone, that report the acceleration measurement
+
+00:01:26.319 --> 00:01:29.250
+recorded by the sensors built into the phone
+itself.
+
+00:01:29.250 --> 00:01:33.529
+Unfortunately, many of these apps introduce
+a negative sign.
+
+00:01:33.529 --> 00:01:38.350
+That means that if the phone is sitting flat
+on the table, it reports a value of minus
+
+00:01:38.350 --> 00:01:44.520
+1G in the negative z or down with the direction
+but as we discussed in the previous section,
+
+00:01:44.520 --> 00:01:49.799
+acceleration of a device sitting flat on a
+table should be 1G in the positive upward
+
+00:01:49.799 --> 00:01:50.799
+x direction.
+
+00:01:50.799 --> 00:01:56.989
+So, here we have the plumb bob, which is hanging
+down under the force of gravity, so it is
+
+00:01:56.989 --> 00:02:02.560
+aligned parallel to the gravitational acceleration
+with the same gravitational acceleration is
+
+00:02:02.560 --> 00:02:04.999
+parallel to the z-axis.
+
+00:02:04.999 --> 00:02:09.179
+If I rotate the phone like this, so now, the
+gravitational acceleration is parallel to
+
+00:02:09.179 --> 00:02:14.230
+the y-axis and now I can rotate the phone,
+so the gravitational acceleration is parallel
+
+00:02:14.230 --> 00:02:15.540
+to the x-axis.
+
+00:02:15.540 --> 00:02:20.650
+Let us consider now the problem of determining
+the orientation of the phone with respect
+
+00:02:20.650 --> 00:02:22.920
+to a world coordinate frame.
+
+00:02:22.920 --> 00:02:27.080
+The world coordinate frame is shown here in
+blue and its origin shows that the z-axis
+
+00:02:27.080 --> 00:02:31.140
+is upwards and parallel to the gravity vector.
+
+00:02:31.140 --> 00:02:35.459
+Frame B, the body frame is attached rigidly
+to the phone.
+
+00:02:35.459 --> 00:02:41.730
+Now I can write an expression for the orientation
+of the phone with respect to the world coordinate
+
+00:02:41.730 --> 00:02:46.920
+frame and I will do that in terms of yaw,
+pitch and roll angles which are successive
+
+00:02:46.920 --> 00:02:52.030
+rotations about the z-axis, the y-axis and
+then the x-axis.
+
+00:02:52.030 --> 00:02:56.740
+This is the gravitational acceleration in
+the world frame because the world z-axis is
+
+00:02:56.740 --> 00:03:00.560
+parallel to the gravitational acceleration
+vector.
+
+00:03:00.560 --> 00:03:02.640
+We note here that G is positive.
+
+00:03:02.640 --> 00:03:07.739
+We are talking about acceleration in the world
+frame is G in the upward direction.
+
+00:03:07.739 --> 00:03:14.019
+It is very easy to rotate this gravitational
+acceleration with respect to the world frame
+
+00:03:14.019 --> 00:03:16.200
+into the body frame.
+
+00:03:16.200 --> 00:03:18.900
+This is what the sensors in the phone actually
+measure.
+
+00:03:18.900 --> 00:03:24.150
+They are measuring gravity with respect to
+frame B. It is really important to note that
+
+00:03:24.150 --> 00:03:26.950
+this assumes that the phone is not accelerating.
+
+00:03:26.950 --> 00:03:30.310
+The only acceleration on the body is that
+due to gravity.
+
+00:03:30.310 --> 00:03:34.709
+Now, I can expand out the right hand side
+and I can replace the left hand side with
+
+00:03:34.709 --> 00:03:37.909
+the gravity actually measured by the sensors
+in the phone.
+
+00:03:37.909 --> 00:03:40.870
+I have a very simple vector equation.
+
+00:03:40.870 --> 00:03:43.340
+If I take the first row in this vector equation.
+
+00:03:43.340 --> 00:03:49.140
+I can rearrange it to get a solution for the
+pitch angle theta.
+
+00:03:49.140 --> 00:03:53.760
+If I take the quotient of the last two rows
+in the vector equation, I get this expression
+
+00:03:53.760 --> 00:03:56.379
+for the roll angle of the phone.
+
+00:03:56.379 --> 00:04:01.879
+Two very simple equations based on the measured
+acceleration give me the roll and pitch angle
+
+00:04:01.879 --> 00:04:05.590
+of the phone with respect to the world coordinate
+frame.
+
+00:04:05.590 --> 00:04:09.560
+Then you note in this equation that yaw angle
+does not appear.
+
+00:04:09.560 --> 00:04:14.040
+A simple way to think about why this is the
+case, is that the gravity vector has got three
+
+00:04:14.040 --> 00:04:20.370
+elements but its length is fixed therefore
+we can define it by only two pieces of information.
+
+00:04:20.370 --> 00:04:24.729
+The third element of the gravity vector is
+redundant.
+
+00:04:24.729 --> 00:04:28.289
+In this case, the two pieces of information
+that we need are the roll angle and the pitch
+
+00:04:28.289 --> 00:04:29.289
+angle.
+
+00:04:29.289 --> 00:04:30.699
+We do not need the yaw angle.
+
+00:04:30.699 --> 00:04:35.000
+To measure the yaw angle, we need to use a
+different sensor and that sensor is actually
+
+00:04:35.000 --> 00:04:38.050
+a compass and that is the topic of our next
+section.
+
+00:04:38.050 --> 00:04:43.639
+An important consideration when we use three
+accelerometers, is that it measures only two
+
+00:04:43.639 --> 00:04:45.139
+independent variables.
+
+00:04:45.139 --> 00:04:50.250
+The length of the vector is fixed, so therefore,
+we can describe that vector just in terms
+
+00:04:50.250 --> 00:04:51.250
+of two angles.
+
+00:04:51.250 --> 00:04:55.950
+We can see that very clearly when the phone
+is configured like this.
+
+00:04:55.950 --> 00:04:59.020
+Zero acceleration in the Z and the X directions.
+
+00:04:59.020 --> 00:05:02.370
+The acceleration is all in the Y direction.
+
+00:05:02.370 --> 00:05:07.130
+So the accelerometer measurements are exactly
+the same with the phone orientated like this,
+
+00:05:07.130 --> 00:05:09.150
+or like this or like this.
+
+00:05:09.150 --> 00:05:13.860
+It makes absolutely no difference.
+
+00:05:13.860 --> 00:05:17.039
+Accelerometers today have very low cost but
+very, very high in performance.
+
+00:05:17.039 --> 00:05:21.889
+Part of the reason for this is that they are
+manufactured in enormous quantities.
+
+00:05:21.889 --> 00:05:24.500
+They're use to trigger airbags in cars.
+
+00:05:24.500 --> 00:05:28.730
+They're used in digital cameras to work out
+whether the camera is in landscape or portrait
+
+00:05:28.730 --> 00:05:29.730
+mode.
+
+00:05:29.730 --> 00:05:33.669
+They're used in your phone for all sorts of
+different applications and they're use the
+
+00:05:33.669 --> 00:05:39.129
+stabilization of unmanned area of vehicles
+from low cost toys like this to much more
+
+00:05:39.129 --> 00:05:40.580
+sophisticated systems.
+

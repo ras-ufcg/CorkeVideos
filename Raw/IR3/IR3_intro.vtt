@@ -1,0 +1,106 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:07.609 --> 00:00:12.869
+In the last lecture we talked about how we
+described the position of objects in a two
+
+00:00:12.869 --> 00:00:14.050
+dimensional world.
+
+00:00:14.050 --> 00:00:18.380
+We used the example, for instance, a robot
+and we created a two dimensional coordinate
+
+00:00:18.380 --> 00:00:19.380
+frame.
+
+00:00:19.380 --> 00:00:23.210
+We placed the coordinate frame at a reference
+location and we can describe the position
+
+00:00:23.210 --> 00:00:26.520
+of the robot with respect to that co-ordinate
+frame.
+
+00:00:26.520 --> 00:00:31.140
+We also talked about how we describe the orientation
+of the object; that is which way the robot
+
+00:00:31.140 --> 00:00:35.469
+is pointing with respect to the axes on this
+co-ordinate frame.
+
+00:00:35.469 --> 00:00:39.489
+Now what we are going to do is to kick it
+up a level of complexity and introduce the
+
+00:00:39.489 --> 00:00:40.570
+third dimension.
+
+00:00:40.570 --> 00:00:44.910
+So for most robotics the third dimension is
+really important.
+
+00:00:44.910 --> 00:00:48.350
+The robots hand for instance, in any sort
+of real robot, the hand is going to move in
+
+00:00:48.350 --> 00:00:51.460
+a plane, but it is also going to be able to
+move up and down.
+
+00:00:51.460 --> 00:00:56.720
+So we need to be able to describe the position
+and orientation of bodies in three-dimensional
+
+00:00:56.720 --> 00:00:57.720
+space.
+
+00:00:57.720 --> 00:01:01.329
+But there are also a lot of robots that move
+in three-dimensional space.
+
+00:01:01.329 --> 00:01:05.110
+So here I have a model airplane, or course
+an airplane flies through the air.
+
+00:01:05.110 --> 00:01:06.409
+It goes up and it goes down.
+
+00:01:06.409 --> 00:01:11.130
+It can move left and right, and it can also
+rotate in a number of interesting ways.
+
+00:01:11.130 --> 00:01:18.200
+It can pitch up and down, it can yaw like
+this, and it can roll like this.
+
+00:01:18.200 --> 00:01:23.280
+So underwater robots are another example,
+they are a bit like this but instead of flying
+
+00:01:23.280 --> 00:01:25.390
+through the air, they are flying through the
+water.
+
+00:01:25.390 --> 00:01:29.690
+So these are two really important classes
+of robots today, robots that fly and robots
+
+00:01:29.690 --> 00:01:34.700
+that swim under the water and their motion
+is described in terms of three-dimensional
+
+00:01:34.700 --> 00:01:35.700
+space.
+
+00:01:35.700 --> 00:01:39.619
+Where perhaps a simple wheeled robot like this,
+we could get by with just describing it’s
+
+00:01:39.619 --> 00:01:43.380
+position and it’s orientation in terms of
+two-dimensional space.
+

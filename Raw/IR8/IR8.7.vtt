@@ -1,0 +1,65 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.620 --> 00:00:07.180
+Here we have something that should be quite
+familiar to us by now. We have a coordinate
+
+00:00:07.180 --> 00:00:13.380
+frame denoted A and we have a point. Now that
+point is moving. It’s got a spacial velocity,
+
+00:00:13.380 --> 00:00:19.000
+nu, with respect to frame A and I denote it
+this way. It’s got translational velocity
+
+00:00:19.000 --> 00:00:24.290
+component, X dot and Y dot and a rotational
+velocity component theta dot but I represent
+
+00:00:24.290 --> 00:00:25.399
+that by a single arrow.
+
+00:00:25.399 --> 00:00:31.340
+Now I am going to introduce another coordinate
+frame, a red coordinated frame denoted B and
+
+00:00:31.340 --> 00:00:36.890
+we have a relative pose that describes the
+pose of frame B with respect to the pose of
+
+00:00:36.890 --> 00:00:43.010
+frame A. Now I can also describe the velocity
+of the point with respect to coordinate frame
+
+00:00:43.010 --> 00:00:46.890
+B and I do that by using a leading super script
+B instead of A.
+
+00:00:46.890 --> 00:00:53.280
+Now, the velocity of the point with respect
+to frame B is related to the velocity with
+
+00:00:53.280 --> 00:00:59.420
+respect to frame A and it’s related by a
+Jacobian matrix, a Jacobian that maps velocity
+
+00:00:59.420 --> 00:01:02.339
+from one frame to another.
+
+00:01:02.339 --> 00:01:08.090
+This particular Jacobian is a function of
+the relative pose between the two frames.
+
+00:01:08.090 --> 00:01:14.110
+It’s a three by three matrix that comprises
+the rotational part of the relative pose and
+
+00:01:14.110 --> 00:01:19.790
+a bunch of zeros and ones. In fact, it is
+only a function of the relative orientation
+
+00:01:19.790 --> 00:01:26.130
+between the frames. It doesn't depend at all on the distance between the origins of these two frames.
+

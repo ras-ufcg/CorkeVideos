@@ -1,0 +1,331 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.180 --> 00:00:08.770
+In high school or Engineering Maths, you’ve
+probably come across the concept of a complex
+
+00:00:08.770 --> 00:00:09.770
+number.
+
+00:00:09.770 --> 00:00:14.350
+A number has got two components, a real component
+and an imaginary component.
+
+00:00:14.350 --> 00:00:20.650
+The imaginary component is a real scalar B
+multiplied by the imaginary number i, i being
+
+00:00:20.650 --> 00:00:23.360
+the square root of -1.
+
+00:00:23.360 --> 00:00:27.140
+We can extend this concept to what’s called
+a hypercomplex number.
+
+00:00:27.140 --> 00:00:32.870
+Now, instead of having just one imaginary
+number i, we have imaginary numbers i, j,
+
+00:00:32.870 --> 00:00:33.870
+and k.
+
+00:00:33.870 --> 00:00:39.350
+They are each the square root of -1 and their
+product is equal to -1.
+
+00:00:39.350 --> 00:00:45.780
+So, the hypercomplex number has got one real
+part and three imaginary parts.
+
+00:00:45.780 --> 00:00:50.850
+Hypercomplex numbers are typically written
+as a scalar plus a vector, s plus v.
+
+00:00:50.850 --> 00:00:57.640
+The concept of hypercomplex numbers can be
+traced back to the Irish mathematician, William
+
+00:00:57.640 --> 00:00:58.890
+Hamilton.
+
+00:00:58.890 --> 00:01:03.500
+The story goes that one day, he was walking
+along the Canal in Dublin and the key equation,
+
+00:01:03.500 --> 00:01:09.380
+i2 = j2 = k2 = ijk = -1 came in to his brain.
+
+00:01:09.380 --> 00:01:14.550
+And, he carved the equation in to a stone
+on the wall of the bridge.
+
+00:01:14.550 --> 00:01:20.450
+And, there is today a plaque on this particular
+bridge which commemorates this flash of genius
+
+00:01:20.450 --> 00:01:22.980
+and inspiration.
+
+00:01:22.980 --> 00:01:28.590
+The hypercomplex number is the basis of a
+mathematical object that we call a quaternion.
+
+00:01:28.590 --> 00:01:32.590
+I denote a quaternion as a Q with a little
+circle above it.
+
+00:01:32.590 --> 00:01:39.460
+So, we write it at s + v. S is a real scalar
+and v is a vector representing the complex
+
+00:01:39.460 --> 00:01:41.660
+part of this number.
+
+00:01:41.660 --> 00:01:46.810
+Quaternions are often written in this form
+as well where we have s and then inside angle
+
+00:01:46.810 --> 00:01:51.869
+brackets, we have the three elements of the
+vector part, the three imaginary parts of
+
+00:01:51.869 --> 00:01:52.869
+the quaternion.
+
+00:01:52.869 --> 00:01:55.740
+There are quite a few different ways of writing
+quaternions.
+
+00:01:55.740 --> 00:02:01.420
+This is the way that I will use in this lecture
+and also the way that the robotics Toolbox
+
+00:02:01.420 --> 00:02:03.899
+represents a quaternion in MATLAB.
+
+00:02:03.899 --> 00:02:08.739
+Just as we can determine the magnitude or
+length of a vector, we can determine the magnitude
+
+00:02:08.739 --> 00:02:15.079
+or length of a quaternion and it’s the square
+root of the sum of the four numeric elements
+
+00:02:15.079 --> 00:02:18.959
+of the quaternion, it’s real part and the
+three imaginary parts.
+
+00:02:18.959 --> 00:02:24.400
+Now, we get to what’s called a unit quaternion
+and this is a quaternion whose magnitude is
+
+00:02:24.400 --> 00:02:26.090
+equal to 1.
+
+00:02:26.090 --> 00:02:31.440
+Unit quaternions are particularly useful because
+we can use them to encode rotation in three
+
+00:02:31.440 --> 00:02:33.120
+dimensional space.
+
+00:02:33.120 --> 00:02:37.810
+A unit quaternion has a lot of similarities
+to the angle and axis representation that
+
+00:02:37.810 --> 00:02:40.150
+we discussed in the last section.
+
+00:02:40.150 --> 00:02:45.400
+The real part of the unit quaternion is equal
+to the cosine of half the rotation angle and
+
+00:02:45.400 --> 00:02:51.310
+the rotation axis which I have denoted here
+by n-hat is related to the vector part of
+
+00:02:51.310 --> 00:02:57.269
+the quaternion by this relationship which
+involve sine of half the rotation angle.
+
+00:02:57.269 --> 00:02:59.840
+I can compound two unit quaternions.
+
+00:02:59.840 --> 00:03:06.390
+Just as we can compound two rotation matrices,
+I can compound two quaternions and it’s
+
+00:03:06.390 --> 00:03:10.500
+done by using this, what’s called the Hamiltonian
+product rule.
+
+00:03:10.500 --> 00:03:16.650
+So, quaternion 1 rotates me from frame A to
+frame B. Quaternion 2 rotates me from frame
+
+00:03:16.650 --> 00:03:22.709
+B to frame C, then, the product is the rotation
+from frame A to frame C. And, I can compute
+
+00:03:22.709 --> 00:03:24.829
+the inverse of a quaternion.
+
+00:03:24.829 --> 00:03:29.130
+So if I use a quaternion to rotate me from
+frame A to frame B, the inverse is quite simple.
+
+00:03:29.130 --> 00:03:33.780
+It’s just the negation of the vector part
+of the quaternion.
+
+00:03:33.780 --> 00:03:37.390
+Once again, I’m going to create a fairly
+arbitrary rotation matrix.
+
+00:03:37.390 --> 00:03:45.331
+Going to start with some Euler angles, convert
+them to rotation matrix 0.1, 0.2, 0.3, just
+
+00:03:45.331 --> 00:03:46.370
+for the purpose of illustration.
+
+00:03:46.370 --> 00:03:48.120
+Here we have a rotation matrix.
+
+00:03:48.120 --> 00:03:54.130
+Now, I’m going to create a quaternion and
+I use the quaternion class and I pass in as
+
+00:03:54.130 --> 00:03:55.770
+an argument a rotation matrix.
+
+00:03:55.770 --> 00:04:00.410
+And, the result is a quaternion object which
+we can see in our workspace.
+
+00:04:00.410 --> 00:04:06.140
+Now, the quaternion has got a real part and
+an imaginary part, which is indicated inside
+
+00:04:06.140 --> 00:04:07.480
+the angle brackets.
+
+00:04:07.480 --> 00:04:14.540
+I’m going to park the quaternion into a
+permanent variable called Q and let’s look
+
+00:04:14.540 --> 00:04:18.790
+at what we can do with this quaternion object
+in MATLAB.
+
+00:04:18.790 --> 00:04:24.189
+One of the things that I can do is I can plot
+this quaternion and look at the orientation
+
+00:04:24.189 --> 00:04:29.820
+and it behaves just like the trplot function
+that we looked at earlier.
+
+00:04:29.820 --> 00:04:34.870
+I can compute the inverse of the quaternion,
+and here it is here, and we can see that the
+
+00:04:34.870 --> 00:04:40.180
+real part of the quaternion remains unchanged,
+but the vector part is negated.
+
+00:04:40.180 --> 00:04:47.530
+If I multiply the quaternion by its inverse,
+the result is the null quaternion.
+
+00:04:47.530 --> 00:04:51.060
+This has got a vector component equal to 0.
+
+00:04:51.060 --> 00:04:55.270
+So this indicates a 0 rotation.
+
+00:04:55.270 --> 00:04:58.500
+I can also compute that using the division
+operator in MATLAB.
+
+00:04:58.500 --> 00:05:03.789
+So, if I take a quaternion and effectively
+divide it by the quaternion, it’s the same
+
+00:05:03.789 --> 00:05:05.250
+as multiplying by its inverse.
+
+00:05:05.250 --> 00:05:07.650
+I once again get the zero rotation.
+
+00:05:07.650 --> 00:05:14.610
+If I have a quaternion and I multiply it by
+a vector, let’s say a vector is a unit vector
+
+00:05:14.610 --> 00:05:20.750
+in the x direction and I turn it to a column
+vector by transposing it, then what this notation
+
+00:05:20.750 --> 00:05:24.969
+in MATLAB does is to multiply the vector by
+the quaternion.
+
+00:05:24.969 --> 00:05:27.520
+Effectively, it rotates the vector.
+
+00:05:27.520 --> 00:05:31.880
+Finally, I can do an example to illustrate
+interpolation.
+
+00:05:31.880 --> 00:05:37.120
+If I call quaternion with no arguments, it
+returns a quaternion corresponding to the
+
+00:05:37.120 --> 00:05:38.910
+null rotation.
+
+00:05:38.910 --> 00:05:47.129
+So, if I use MATLAB syntax like this, I take
+my null quaternion, interpolate it with the
+
+00:05:47.129 --> 00:05:53.539
+other quaternion I have, Q, and I pass in
+an argument which tells me the interpolation
+
+00:05:53.539 --> 00:05:54.539
+fraction.
+
+00:05:54.539 --> 00:06:00.340
+So, this is interpolating between the quaternion
+Q0, the null rotation, and the quaternion
+
+00:06:00.340 --> 00:06:04.199
+Q.
+The last argument is the interpolation distance.
+
+00:06:04.199 --> 00:06:06.530
+0 corresponds to the initial quaternion.
+
+00:06:06.530 --> 00:06:08.710
+1 corresponds to the final quaternion.
+
+00:06:08.710 --> 00:06:13.660
+If I pass in 0, the result should be our initial
+quaternion.
+
+00:06:13.660 --> 00:06:16.860
+Make it 1, the result will be our final quaternion.
+
+00:06:16.860 --> 00:06:22.940
+And if I put in something like 0.5, this is
+an interpolation halfway between the initial
+
+00:06:22.940 --> 00:06:25.419
+quaternion and the final quaternion.
+
+00:06:25.419 --> 00:06:30.669
+So this is a way to interpolate rotations
+that are represented as quaternions.
+

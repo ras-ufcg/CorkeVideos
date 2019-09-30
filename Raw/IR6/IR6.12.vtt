@@ -1,0 +1,475 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.280 --> 00:00:07.160
+Let’s summarize what we’ve learned in
+this lecture and this lecture has been all
+
+00:00:07.160 --> 00:00:08.740
+about forward kinematics.
+
+00:00:08.740 --> 00:00:13.990
+That’s the problem of determining the pose
+of the robot tip or the robot’s end effector
+
+00:00:13.990 --> 00:00:20.040
+given a set of the joint coordinates, the
+things that vary as the robot moves.
+
+00:00:20.040 --> 00:00:26.290
+For a robot within joints, we denote the end
+effector pose as Ksi N and it is a function
+
+00:00:26.290 --> 00:00:31.980
+of the joint coordinates, which are vector
+of length N. And, we typically denote the
+
+00:00:31.980 --> 00:00:38.309
+vector of joint coordinates by the symbol
+Q and this function which maps the joint angles
+
+00:00:38.309 --> 00:00:44.870
+to the end effector pose, we denote by the
+symbol K, K for kinematic, the forward kinematic
+
+00:00:44.870 --> 00:00:45.960
+function.
+
+00:00:45.960 --> 00:00:52.170
+We looked at a number of examples about how
+to determine the robot tooltip pose.
+
+00:00:52.170 --> 00:00:57.129
+We did that by drawing the robot, by taking
+a reference coordinate frame attached to the
+
+00:00:57.129 --> 00:01:01.129
+base of the robot and then walking it through
+the robot mechanism.
+
+00:01:01.129 --> 00:01:06.350
+We would rotate it and translate it from the
+base of the robot through to the end effector.
+
+00:01:06.350 --> 00:01:12.530
+We could then write down a sequence of elementary
+transformations, which we could expand and
+
+00:01:12.530 --> 00:01:18.680
+multiply out to come up with an expression
+for a homogeneous transformation which represents
+
+00:01:18.680 --> 00:01:21.250
+the pose of the robot’s end effector.
+
+00:01:21.250 --> 00:01:26.759
+So, we did it for a simple planar robot with
+just two joints and we also did it for a robot
+
+00:01:26.759 --> 00:01:31.270
+with four joints whose end effector moves
+in three-dimensional space.
+
+00:01:31.270 --> 00:01:35.539
+We did this for a number of robots that move
+in two dimensions and in three dimensions,
+
+00:01:35.539 --> 00:01:40.350
+and hope you got the idea about how you can
+write down this transformation expression
+
+00:01:40.350 --> 00:01:46.240
+almost by inspection, just by looking at the
+robot and, in your mind, walking a coordinate
+
+00:01:46.240 --> 00:01:50.509
+frame from the base of the robot through each
+of the links and each of the joints until
+
+00:01:50.509 --> 00:01:51.950
+it get to the end effector.
+
+00:01:51.950 --> 00:01:58.490
+It’s a very simple and very intuitive way
+of writing the expression for robot end effector
+
+00:01:58.490 --> 00:01:59.680
+pose.
+
+00:01:59.680 --> 00:02:05.130
+We introduced the rather formal concept of
+a configuration space.
+
+00:02:05.130 --> 00:02:10.550
+As just mentioned, the configuration of a
+robot with N joints is the joint configuration
+
+00:02:10.550 --> 00:02:11.610
+vector.
+
+00:02:11.610 --> 00:02:17.129
+The elements in that vector or an angle if
+the joint is rotational, revolute, and it
+
+00:02:17.129 --> 00:02:21.710
+is a link if the joint is prismatic or sliding.
+
+00:02:21.710 --> 00:02:27.569
+The set of all of these vectors is referred
+to as the configuration space of the robot.
+
+00:02:27.569 --> 00:02:33.069
+It’s a subset of the N dimensional space
+of real numbers where N is the number of joints
+
+00:02:33.069 --> 00:02:34.370
+in the robot.
+
+00:02:34.370 --> 00:02:38.709
+The other concept that we introduced is the
+task space of the robot and this is the space
+
+00:02:38.709 --> 00:02:41.459
+of all possible end effector poses.
+
+00:02:41.459 --> 00:02:46.709
+For a two-dimensional robot, the task space
+is a subset of SE2 which is the set of all
+
+00:02:46.709 --> 00:02:50.739
+possible positions and orientations in the
+plane.
+
+00:02:50.739 --> 00:02:56.129
+For a three-dimensional robot, the task space
+is a subset of SE3, the set of all possible
+
+00:02:56.129 --> 00:02:59.830
+positions and orientations in three-dimensional
+space.
+
+00:02:59.830 --> 00:03:05.410
+For this 2-degree of freedom planar robot
+arm, its configuration space is a subset of
+
+00:03:05.410 --> 00:03:10.080
+the space of two-dimensional real numbers
+because the configuration can be described
+
+00:03:10.080 --> 00:03:12.610
+by two real numbers, Q1 and Q2.
+
+00:03:12.610 --> 00:03:18.500
+Its task space is also a subset of the two-dimensional
+space of real numbers and that’s because
+
+00:03:18.500 --> 00:03:23.689
+its end effector pose can be described by
+two real numbers, X and Y.
+
+00:03:23.689 --> 00:03:28.099
+We can describe the configuration and task
+space for a 3-degree of freedom Cartesian
+
+00:03:28.099 --> 00:03:33.579
+Gantry robot and we can also describe it for
+a 4-degree of freedom SCARA robot whose end
+
+00:03:33.579 --> 00:03:36.709
+effector moves in three dimensions.
+
+00:03:36.709 --> 00:03:41.200
+Most functional real world robots, for example
+industrial robots, have got six joints.
+
+00:03:41.200 --> 00:03:44.640
+So, their configuration space is six dimensional.
+
+00:03:44.640 --> 00:03:49.860
+The task space is also six dimensional which
+means that the end effector can adopt an arbitrary
+
+00:03:49.860 --> 00:03:56.410
+position and an arbitrary orientation within
+the limits of the working volume of that particular
+
+00:03:56.410 --> 00:03:57.410
+robot.
+
+00:03:57.410 --> 00:04:00.989
+There is an important constraint that the
+dimension of the configuration space must
+
+00:04:00.989 --> 00:04:05.120
+be greater than or equal to the dimension
+of the task space.
+
+00:04:05.120 --> 00:04:10.489
+Here’s an example of a robot where the dimension
+of the configuration space is much bigger
+
+00:04:10.489 --> 00:04:12.450
+than the dimension of the task space.
+
+00:04:12.450 --> 00:04:16.920
+We refer to a robot like this as a redundant
+robot.
+
+00:04:16.920 --> 00:04:22.079
+So, although its task space is the same as
+that of a 6-degree of freedom robot like the
+
+00:04:22.079 --> 00:04:27.090
+Puma robot we looked at previously, it’s
+able to adopt any pose in three-dimensional
+
+00:04:27.090 --> 00:04:28.090
+space.
+
+00:04:28.090 --> 00:04:30.890
+Its configuration space is much bigger.
+
+00:04:30.890 --> 00:04:35.620
+It uses this logic configuration space so
+that it can control not only the end effector
+
+00:04:35.620 --> 00:04:41.530
+pose, but also the shape of the arm leading
+from the base to the end effector.
+
+00:04:41.530 --> 00:04:44.430
+We introduced Denavit-Hartenberg notation.
+
+00:04:44.430 --> 00:04:49.550
+This involves attaching a coordinate frame
+to the far end of each link in the robot.
+
+00:04:49.550 --> 00:04:55.430
+And then, we can write an expression for the
+relative pose between consecutive link reference
+
+00:04:55.430 --> 00:04:56.430
+frames.
+
+00:04:56.430 --> 00:04:59.210
+The Denavit-Hartenberg notation is very concise.
+
+00:04:59.210 --> 00:05:04.750
+We can describe the relationship between frames
+using simply four parameters.
+
+00:05:04.750 --> 00:05:09.300
+This imposes a number of constraints though
+on where we place the link coordinate frames.
+
+00:05:09.300 --> 00:05:15.130
+And, the link coordinate frames do not necessarily
+physically lie on the links of the robots
+
+00:05:15.130 --> 00:05:16.130
+itself.
+
+00:05:16.130 --> 00:05:21.160
+A Denavit-Hartenberg notation allows us to
+very concisely describe any serial link mechanism.
+
+00:05:21.160 --> 00:05:27.420
+So, here is a very concise table which describes
+the kinematics of the two-link manipulator
+
+00:05:27.420 --> 00:05:28.420
+arm.
+
+00:05:28.420 --> 00:05:33.759
+The table has got two rows, one per joint,
+and it has got four columns, one column for
+
+00:05:33.759 --> 00:05:36.740
+each of the Denavit-Hartenberg parameters.
+
+00:05:36.740 --> 00:05:41.430
+Because this robot is all revolute, that means
+all of its joints are rotational.
+
+00:05:41.430 --> 00:05:45.150
+The joint coordinates fall in the Theta column.
+
+00:05:45.150 --> 00:05:49.070
+We use a very similar table for a more complex
+robot like the Puma 560.
+
+00:05:49.070 --> 00:05:54.800
+The table still has four columns, but now
+it has got six rows, one row per joint of
+
+00:05:54.800 --> 00:05:55.800
+the robot.
+
+00:05:55.800 --> 00:06:01.090
+So, the most general way we can describe the
+kinematics of a robot arm is in terms of the
+
+00:06:01.090 --> 00:06:05.610
+kinematic function K and the parameters of
+this function are the joint configuration
+
+00:06:05.610 --> 00:06:06.610
+vector.
+
+00:06:06.610 --> 00:06:11.280
+And remember, that is a vector that contains
+either joint angles or joint offsets in the
+
+00:06:11.280 --> 00:06:14.570
+case of a prismatic joint, and a number of
+other vectors.
+
+00:06:14.570 --> 00:06:19.560
+We have a vector of joint angles, a vector
+of link offsets, a vector of link lengths,
+
+00:06:19.560 --> 00:06:24.580
+and a vector of link twists, and a vector
+of joint types whose elements describe whether
+
+00:06:24.580 --> 00:06:28.480
+the corresponding joint is revolute or prismatic.
+
+00:06:28.480 --> 00:06:33.169
+Most of the elements of Theta, D, A and alpha
+are constant.
+
+00:06:33.169 --> 00:06:38.840
+The joint configuration vector Q contains
+the variables in the system and we substitute
+
+00:06:38.840 --> 00:06:45.770
+elements of Q in to elements of Theta, or
+elements of D according to the joint type
+
+00:06:45.770 --> 00:06:50.260
+which is given by the corresponding of the
+vector sigma.
+
+00:06:50.260 --> 00:06:57.160
+Denavit-Hartenberg notation allows us to describe
+links and joints by a group of four elementary
+
+00:06:57.160 --> 00:07:03.039
+homogeneous transformations and we stack them
+in end on end, one group per joint of the
+
+00:07:03.039 --> 00:07:04.039
+robot.
+
+00:07:04.039 --> 00:07:08.419
+In the case of a robot where all the joints
+are revolute, we substitute the elements of
+
+00:07:08.419 --> 00:07:14.410
+the joint configuration vector, the vector
+Q in to the corresponding Theta elements.
+
+00:07:14.410 --> 00:07:19.490
+For the case of a robot that has got a prismatic
+joint as shown here.
+
+00:07:19.490 --> 00:07:25.810
+We substitute the corresponding joint configuration
+element in to the corresponding link of set
+
+00:07:25.810 --> 00:07:28.449
+element, in this case, D2.
+
+00:07:28.449 --> 00:07:32.970
+The robot kinematic function tells us the
+relationship between the frame 0 and frame
+
+00:07:32.970 --> 00:07:33.970
+6.
+
+00:07:33.970 --> 00:07:39.650
+And frequently, we might want to relate frame
+0 to some sort of factory or world reference
+
+00:07:39.650 --> 00:07:40.650
+frame.
+
+00:07:40.650 --> 00:07:45.129
+So, we introduce a base transform that tells
+where link 0 is with respect to our world
+
+00:07:45.129 --> 00:07:50.629
+reference frame, and we denote that by Psi
+B. The forward kinematic function gives us
+
+00:07:50.629 --> 00:07:56.169
+the pose of frame 6 and frame 6 is typically
+attached to some sort of mounting plate or
+
+00:07:56.169 --> 00:07:59.009
+flange on the end of the robot.
+
+00:07:59.009 --> 00:08:03.289
+The actual tool, the thing that does the work,
+is attached to that particular flange.
+
+00:08:03.289 --> 00:08:08.570
+So, if we want to know the pose of the end
+of a tool, the end of the thing that’s doing
+
+00:08:08.570 --> 00:08:14.539
+the work which I’ve denoted here by frame
+E, then we introduce another relative pose.
+
+00:08:14.539 --> 00:08:18.550
+I call this KsiT and that stands for tool
+transform.
+
+00:08:18.550 --> 00:08:23.120
+We can write a pose expression for the pose
+of the end effector with respect to the world
+
+00:08:23.120 --> 00:08:29.850
+frame in terms of the base transform, the
+forward kinematic function, and the tool transform.
+
+00:08:29.850 --> 00:08:32.169
+All robots have got a finite workspace.
+
+00:08:32.169 --> 00:08:36.090
+That’s the set of all reachable end point
+positions.
+
+00:08:36.090 --> 00:08:40.820
+All industrial robots come with a diagram
+like this in their data sheet which shows
+
+00:08:40.820 --> 00:08:45.400
+quite clearly the parts of the workspace that
+they can and cannot reach.
+
+00:08:45.400 --> 00:08:48.340
+In robotics, we’re interested in two kinematic
+problems.
+
+00:08:48.340 --> 00:08:52.710
+The forward kinematic problem has been the
+subject of this lecture, and that is given
+
+00:08:52.710 --> 00:08:58.590
+the joint angles, what is the pose of the
+robot's end effector, the robot’s tooltip.
+
+00:08:58.590 --> 00:09:02.270
+The subject of our next lecture is the inverse
+kinematic problem.
+
+00:09:02.270 --> 00:09:06.790
+That is given, when I have to design pose
+of the robot’s end effector, what joint
+
+00:09:06.790 --> 00:09:08.230
+angles do I require?
+

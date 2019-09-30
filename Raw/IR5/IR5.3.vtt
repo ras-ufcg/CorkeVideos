@@ -1,0 +1,174 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.850 --> 00:00:08.420
+In this section, we’re going to talk about
+measuring the magnetic field. A simple and
+
+00:00:08.420 --> 00:00:14.010
+familiar type of magnetic field sensor is
+the magnetic compass. The compass was discovered
+
+00:00:14.010 --> 00:00:19.740
+by the Chinese over 2,000 years ago. It contains
+a magnetized needle that aligns with the
+
+00:00:19.740 --> 00:00:24.990
+Earth’s magnetic field. The Earth rotates
+about an axis that passes through the North
+
+00:00:24.990 --> 00:00:31.070
+and South geographic poles. The Earth itself
+is a gigantic magnet and the North and South
+
+00:00:31.070 --> 00:00:37.149
+poles of the magnet do not correspond to the
+North and South geographic poles of the Earth.
+
+00:00:37.149 --> 00:00:42.319
+We can imagine the magnetic field lines from
+this giant internal magnet passing out of
+
+00:00:42.319 --> 00:00:46.449
+the surface of the planet, arcing through
+space, and then diving back in to the ground
+
+00:00:46.449 --> 00:00:51.069
+at the North magnetic pole.
+The red arrow that I’m holding represents
+
+00:00:51.069 --> 00:00:55.510
+approximately one of the Earth’s magnetic
+field lines. We can think of these as imaginary
+
+00:00:55.510 --> 00:01:01.049
+lines which come out of the Earth, arc through
+the sky and land again at the North Pole of
+
+00:01:01.049 --> 00:01:07.299
+the planet. Now, I have aligned this arrow
+by measuring the three components of the Earth’s
+
+00:01:07.299 --> 00:01:11.860
+magnetic field using my phone. And, at the
+moment, the way I have this arrow and the phone
+
+00:01:11.860 --> 00:01:17.930
+oriented, the only component of magnetic field
+that’s non zero is in the Y direction, that’s
+
+00:01:17.930 --> 00:01:24.740
+the, this direction on my, on my phone.
+The magnetic poles of the Earth are constantly
+
+00:01:24.740 --> 00:01:29.880
+moving and that’s a bit problematic for
+a sensor like a compass which points at the
+
+00:01:29.880 --> 00:01:34.140
+magnetic poles. We need to understand something
+about where the magnetic poles are with respect
+
+00:01:34.140 --> 00:01:39.340
+to the geographic poles and how they are moving.
+The needle of a compass points towards the
+
+00:01:39.340 --> 00:01:44.979
+Magnetic North Pole of the planet. But, true
+North or geographic North is in a different
+
+00:01:44.979 --> 00:01:50.729
+direction. Here, we have a right-handed coordinate
+frame where the axes are pointing to geographic
+
+00:01:50.729 --> 00:01:57.229
+North, geographic East and vertically down
+toward the center of the planet. Imagine now
+
+00:01:57.229 --> 00:02:03.289
+a plane that contains the magnetic field vector
+which is denoted by a red arrow and the symbol B.
+
+00:02:04.680 --> 00:02:11.180
+Angle between this plane and the geographic
+North direction is the magnetic declination angle D.
+
+00:02:12.020 --> 00:02:14.720
+This diagram shows magnetic declination for
+
+00:02:14.720 --> 00:02:20.000
+the year 2010 and we can see that it varies
+quite significantly across the planet. Magnetic
+
+00:02:20.000 --> 00:02:25.920
+North can be up to plus or minus 20 degrees
+away from true North. These values become
+
+00:02:25.920 --> 00:02:30.050
+quite extreme in the vicinity of the South
+Magnetic Pole which we can see very clearly
+
+00:02:30.050 --> 00:02:34.630
+here. If you’re sailing a boat and you’re
+using a nautical chart, the appropriate magnetic
+
+00:02:34.630 --> 00:02:40.050
+declination is typically marked somewhere
+on that chart. Magnetic declination varies
+
+00:02:40.050 --> 00:02:45.420
+over time and this fascinating video shows the contour lines of magnetic declination
+
+00:02:45.420 --> 00:02:48.280
+varying over periods of hundreds of years.
+
+00:02:52.740 --> 00:02:56.800
+The magnetic field lines are generally not parallel to the surface of the Earth.
+
+00:02:56.800 --> 00:02:58.860
+In the Southern Hemisphere, the magnetic field lines
+
+00:02:58.870 --> 00:03:03.370
+come out of the ground. And, in the Northern
+Hemisphere, the magnetic field lines disappear
+
+00:03:03.370 --> 00:03:08.910
+into the ground. So, we can introduce another
+angle which is referred to as magnetic inclination
+
+00:03:08.910 --> 00:03:14.560
+denoted typically by the symbol I and that
+represents the angle of the magnetic field
+
+00:03:14.560 --> 00:03:20.090
+line with respect to the surface of the Earth.
+And, this is a map of magnetic inclination
+
+00:03:20.090 --> 00:03:25.760
+over the surface of the planet. The sign convention
+used is Northern Hemisphere centric. So, if
+
+00:03:25.760 --> 00:03:30.140
+the magnetic field line is descending in to
+the ground, the inclination angle is considered
+
+00:03:30.140 --> 00:03:34.730
+to be positive. Here is another chart and
+this one shows the strength of the magnetic
+
+00:03:34.730 --> 00:03:40.470
+field, the magnitude of the magnetic field
+vector and this is units of nano teslas. That’s
+
+00:03:40.470 --> 00:03:46.280
+10 to the minus 9 Tesla. For comparison, a
+modern MRI machine has a magnetic field strength
+
+00:03:46.280 --> 00:03:51.370
+of around 4 to 8 Tesla. That’s a hundred
+thousand times stronger than the magnetic
+
+00:03:51.370 --> 00:03:52.760
+field strength of the Earth.
+

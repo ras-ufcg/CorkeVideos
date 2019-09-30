@@ -1,0 +1,47 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:07.120 --> 00:00:11.290
+In the last lecture, we talked about robot
+forward kinematics, and forward kinematics
+
+00:00:11.290 --> 00:00:16.380
+is the relationship between the robot joint
+angles, which we represent by a vector I call
+
+00:00:16.380 --> 00:00:19.770
+'Q, and the pose of the robot end effector.
+
+00:00:19.770 --> 00:00:24.730
+We can describe this in terms of a mathematical
+function. We can describe forward kinematics
+
+00:00:24.730 --> 00:00:31.119
+as the function curly K of the robot joint
+angles, and the return value of that function
+
+00:00:31.119 --> 00:00:37.270
+is the pose of the end effector. This is very
+very useful in robotics, but more useful is
+
+00:00:37.270 --> 00:00:39.940
+what's called the 'Inverse Kinematics.'
+
+00:00:39.940 --> 00:00:44.980
+This is the function that tells us that joint
+angles that we need in order to achieve a
+
+00:00:44.980 --> 00:00:47.870
+particular robot end effector pose.
+
+00:00:47.870 --> 00:00:51.769
+So say we want the robots end effector to
+be at this particular pose in space, then
+
+00:00:51.769 --> 00:00:58.300
+what should the joint angles be set to in order for the robot end effector to get to that particular pose?
+
+00:00:58.300 --> 00:01:03.600
+This is called the 'Inverse Kinematics Problem' that's really key to arm type robots.
+

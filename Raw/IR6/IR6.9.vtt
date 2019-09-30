@@ -1,0 +1,204 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.429 --> 00:00:08.900
+Consider a fairly standard industrial robot
+with 6 rotational joints. Trying to add a
+
+00:00:08.900 --> 00:00:15.609
+coordinate frame on link zero and going to
+add a coordinate frame on link 6 which is
+
+00:00:15.609 --> 00:00:20.570
+the end-effector frame the bit of the robot
+that actually does the work. And we talked
+
+00:00:20.570 --> 00:00:27.260
+about kinematic models which relate the pose
+of frame 6 with respect to frame zero and
+
+00:00:27.260 --> 00:00:32.940
+it's a function of the 6th joint angles of
+the robot. Let's say now that this robot exists
+
+00:00:32.940 --> 00:00:38.620
+in a factory and the factory is got its own
+world coordinate frame indicated over here.
+
+00:00:38.620 --> 00:00:43.910
+And we know the pose of the robot link zero
+with respect to the world coordinate frame.
+
+00:00:43.910 --> 00:00:50.329
+We called this the base transform of the robot.
+The pose of the robots end effector in the
+
+00:00:50.329 --> 00:00:55.170
+world coordinate frame can be attained for
+it's simply by compounding the base transform
+
+00:00:55.170 --> 00:01:01.930
+with the forward kinematic transform of the
+robot which is a function of the robot's joint angles.
+
+00:01:02.440 --> 00:01:07.420
+Imagine now that I introduced another robot,
+this one's hanging upside down from the roof
+
+00:01:07.420 --> 00:01:11.770
+and we know its pose with respect to the
+world coordinate frame then we can write an
+
+00:01:11.770 --> 00:01:17.850
+expression for the end-effector pose of the
+second robot with respect to the world.
+
+00:01:17.850 --> 00:01:24.260
+Now, let's look at the tool end of the robot.
+The kinematics give us the pose of the robots
+
+00:01:24.260 --> 00:01:29.060
+end effector but typically it actually does
+gives us the pose of some mounting flange
+
+00:01:29.060 --> 00:01:33.560
+on the end of the robot and we would like
+to affix some sort of tool to that. So, we
+
+00:01:33.560 --> 00:01:37.420
+are going to introduce the tool here, this
+is some kind of grinding tool that the robot
+
+00:01:37.420 --> 00:01:43.470
+is carrying. And of course, we're interested
+in the business end of this particular tool.
+
+00:01:43.470 --> 00:01:48.820
+We want to know the pose of this coordinate
+frame here. In with some careful measurement,
+
+00:01:48.820 --> 00:01:56.020
+we can determine the relative pose from the frame 6 to frame E and this would be constant relative pose.
+
+00:01:56.020 --> 00:02:01.530
+So, now the pose of the end-effector, with
+respect to the world coordinate frame, can
+
+00:02:01.530 --> 00:02:08.179
+be written by this set of compounded poses.
+It's the base transform compounded with the
+
+00:02:08.179 --> 00:02:14.879
+kinematic model of the arm compounded with
+the constant tool transform from the mounting
+
+00:02:14.879 --> 00:02:18.459
+point to the business end of the tool.
+
+00:02:18.459 --> 00:02:21.529
+Here's one of our previous MATLAB sessions
+where we were working with a model of the
+
+00:02:21.529 --> 00:02:28.349
+Puma-560 robot. We can see here under the
+table of the Denavit-Hartenberg parameters
+
+00:02:28.349 --> 00:02:33.689
+that there is a base transform matrix and
+a tool transform matrix and each of them corresponds
+
+00:02:33.689 --> 00:02:40.659
+to zero rotation and zero translation. But
+we can easily change the base transform of
+
+00:02:40.659 --> 00:02:47.919
+the robot for instance by adjusting the base
+property of the serial link robot object.
+
+00:02:47.919 --> 00:02:54.290
+So, I might change the translational path
+of the base transform. Perhaps, I will place
+
+00:02:54.290 --> 00:03:00.900
+the robot at 10 meters in the X direction
+and 15 meters in the Y direction and maybe
+
+00:03:00.900 --> 00:03:05.969
+I will put it up a little bit higher or move
+it up two meters in the Z direction. So, now
+
+00:03:05.969 --> 00:03:10.969
+the robot object has got a different base
+transform that we find.
+
+00:03:10.969 --> 00:03:15.709
+Now, compute the forward kinematics of the
+robot, this is taken into account and we can
+
+00:03:15.709 --> 00:03:21.299
+see that the end-effector position now is
+quite different. The base transform is a very
+
+00:03:21.299 --> 00:03:27.180
+powerful function and I could set a more complex
+base transform. For instance, I could actually
+
+00:03:27.180 --> 00:03:32.029
+turn the robot upside down and I am going
+to rotate it around the x-axis by pi radians
+
+00:03:32.029 --> 00:03:37.629
+so this is what the robot base transform looks
+like now and if I again compute the forward
+
+00:03:37.629 --> 00:03:43.180
+kinematics for that same set joint angles,
+we'll see that the position of the robot end-effector
+
+00:03:43.180 --> 00:03:48.019
+is different and we can see that the orientation
+of the end-effector is very different the
+
+00:03:48.019 --> 00:03:51.949
+positive and minus signs in the rotations
+sub matrix are in different locations. So,
+
+00:03:51.949 --> 00:03:57.569
+I have effectively moved the robot and turn
+it upside down and that's very very easy to
+
+00:03:57.569 --> 00:04:01.719
+do with this concept of a base transform.
+
+00:04:01.719 --> 00:04:05.499
+The other thing that I might want to do to
+the robot is to add a tool transform to it
+
+00:04:05.499 --> 00:04:11.680
+and do that by adjusting the tool property
+and I might declare that the tool has got
+
+00:04:11.680 --> 00:04:17.739
+an offset of zero in the x direction, zero
+in the Y direction and perhaps it's 0.2 meters
+
+00:04:17.739 --> 00:04:23.169
+in the Z direction which is pointing out of
+the mounting plate on the end of the robot.
+
+00:04:23.169 --> 00:04:28.590
+And now, you can see that the tool transform
+represents a finite displacement. And now,
+
+00:04:28.590 --> 00:04:33.199
+if I'm going to compute the forward kinematics
+for that particular set of joint angles, we'll
+
+00:04:33.199 --> 00:04:39.800
+see that the end-effector position is slightly
+different because now it's taking this tool
+
+00:04:39.800 --> 00:04:41.559
+transform into a count.
+

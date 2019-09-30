@@ -1,0 +1,153 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:05.049 --> 00:00:10.990
+In this section we're going to look at computing
+the derivative of an orthogonal rotation matrix.
+
+00:00:10.990 --> 00:00:15.600
+One of the properties of an orthogonal matrix
+is that it's inverse is equal to its transpose
+
+00:00:15.600 --> 00:00:22.200
+so we can write this simple relationship R times it's transpose must be equal to the identity matrix.
+
+00:00:22.600 --> 00:00:27.200
+First off I'm going to consider the simple
+case of a rotation by the angle theta about
+
+00:00:27.210 --> 00:00:32.649
+the X-axis. I can take the derivative with
+respect to theta and using the chain rule
+
+00:00:32.649 --> 00:00:38.920
+I can write this. Applying this identity I
+can rewrite it in this particular form and
+
+00:00:38.920 --> 00:00:44.649
+I can simplify it by introducing the symbol
+S to represent this expression here.
+
+00:00:44.649 --> 00:00:49.679
+The matrix S has an interesting property. If
+I add it to its transpose the result will
+
+00:00:49.679 --> 00:00:55.480
+be equal to zero. And this kind of matrix
+is referred to as a skew-symmetric matrix.
+
+00:00:55.480 --> 00:00:59.730
+That property of the skew-symmetric matrix
+can also be written like this. So this kind
+
+00:00:59.730 --> 00:01:04.320
+of matrix is also sometimes referred to as
+an anti-symmetric matrix.
+
+00:01:04.320 --> 00:01:09.430
+These matrices are always singular that is
+that it determines is always equal to zero.
+
+00:01:09.430 --> 00:01:15.070
+Any matrix can be written as the sum of a
+symmetric matrix and a skew-symmetric matrix.
+
+00:01:15.070 --> 00:01:19.390
+In three dimensions the skew-symmetric matrix
+has this form. It's got a very distinctive
+
+00:01:19.390 --> 00:01:26.190
+zero diagonal and there are only three unique
+elements in this matrix x, y, z and each of
+
+00:01:26.190 --> 00:01:31.060
+them appears with a positive sign and a negative
+sign. Now the interesting characteristic of
+
+00:01:31.060 --> 00:01:36.060
+the skew-symmetric matrix is it’s a way to
+write the vector cross product relationship
+
+00:01:36.060 --> 00:01:41.840
+as the product of a skew-symmetric matrix
+computed from the vector A multiplied by the
+
+00:01:41.840 --> 00:01:46.660
+vector B. So cross product can be turned into
+a matrix vector product.
+
+00:01:46.660 --> 00:01:51.080
+Here's our earlier expression for S and I
+can write down an expression for a matrix
+
+00:01:51.080 --> 00:01:56.230
+which represents rotation about the X axis
+by the angle theta. If I substitute these
+
+00:01:56.230 --> 00:02:00.960
+values in, and simplify I end up with a very
+simple matrix containing a lot of zeroes one
+
+00:02:00.960 --> 00:02:07.040
+and a minus one. Recalling our earlier expression
+for a skew-symmetric matrix this matrix that
+
+00:02:07.040 --> 00:02:14.100
+I've just written down I can write as a skew-
+symmetric matrix of the vector [1 0 0]. So the
+
+00:02:14.100 --> 00:02:19.390
+derivative of a rotation matrix with respect
+to theta is given by the product of a skew-
+
+00:02:19.390 --> 00:02:24.730
+symmetric matrix multiplied by the original
+rotation matrix.
+
+00:02:24.730 --> 00:02:29.700
+I can perform the algebraic manipulation for
+a rotation around the Y axis and also for
+
+00:02:29.700 --> 00:02:34.640
+a rotation around the Z axis and I get these
+expressions here and you can clearly see some
+
+00:02:34.640 --> 00:02:40.640
+kind of pattern. Now let's consider the general
+case. A rotation about the vector L by an
+
+00:02:40.640 --> 00:02:45.830
+angle theta and it can be shown that this
+is equal to the product of a skew-symmetric
+
+00:02:45.830 --> 00:02:52.260
+matrix computed from the vector L multiplied
+by the original rotation matrix.
+
+00:02:52.260 --> 00:02:58.330
+If I now multiply both sides of the expression
+by dee theta dee T, that's the rate of change of theta,
+
+00:03:00.280 --> 00:03:02.580
+I can write an expression like this.
+
+00:03:03.520 --> 00:03:07.240
+What this is, is a time derivative of a general rotation matrix.
+
+00:03:07.240 --> 00:03:13.569
+A rotation of theta about the vector L is
+equal to a skew-symmetric matrix computed
+
+00:03:13.569 --> 00:03:18.819
+on the vector Omega multiplied by the original
+rotational matrix.
+
+00:03:18.819 --> 00:03:23.850
+Omega in this case is the angular velocity
+vector. It is the rate of change of angle
+
+00:03:23.850 --> 00:03:28.939
+multiplied by the vector direction about which
+the rotation is occurring.
+

@@ -1,0 +1,511 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.170 --> 00:00:09.090
+We’re now going to describe some slightly
+mathematical concepts but they’re very useful,
+
+00:00:09.090 --> 00:00:11.650
+so bear with me.
+
+00:00:11.650 --> 00:00:15.080
+So far, when we’ve been talking about robots,
+we’ve been talking a lot about the joint
+
+00:00:15.080 --> 00:00:16.080
+angles.
+
+00:00:16.080 --> 00:00:21.480
+What we’re going to do now is to generalize
+that concept and we’re going to refer to
+
+00:00:21.480 --> 00:00:23.869
+generalize joint coordinates.
+
+00:00:23.869 --> 00:00:29.779
+Now, for most robots where the joints are
+revolute, that is their rotating time joints,
+
+00:00:29.779 --> 00:00:33.900
+then their generalize joint coordinate is
+simply the joint angle.
+
+00:00:33.900 --> 00:00:40.030
+But, for those small number of robots that
+have got a sliding joint also known as a prismatic
+
+00:00:40.030 --> 00:00:44.949
+joint, then the generalize joint coordinate
+then would be a length, the length of that
+
+00:00:44.949 --> 00:00:46.400
+sliding joint.
+
+00:00:46.400 --> 00:00:52.309
+So, generalize joint coordinate is simply
+a way that we can deal with robot joints that
+
+00:00:52.309 --> 00:00:54.299
+either rotate or slide.
+
+00:00:54.299 --> 00:01:00.670
+So, the set of all joint coordinates for the
+robot we referred to as the joint configuration.
+
+00:01:00.670 --> 00:01:06.590
+It’s a vector and typically denoted by the
+symbol Q. And, the length of the vector is
+
+00:01:06.590 --> 00:01:09.270
+N and N is the number of joints.
+
+00:01:09.270 --> 00:01:15.490
+So, joint configuration Q is a vector of length
+N and the elements of that vector are either
+
+00:01:15.490 --> 00:01:18.409
+an angle or a length.
+
+00:01:18.409 --> 00:01:23.479
+The joint angle vector belongs to a space,
+the space C.
+
+00:01:23.479 --> 00:01:26.329
+We refer to this as the configuration space.
+
+00:01:26.329 --> 00:01:34.659
+The joint configurations belong to the set
+C and C is the set of all possible joint configurations.
+
+00:01:34.659 --> 00:01:40.420
+Now, C is a subset of the N dimensional real
+number space.
+
+00:01:40.420 --> 00:01:44.950
+The other space that’s really important
+when we’re talking about robots is the space
+
+00:01:44.950 --> 00:01:52.390
+of all possible end effector poses and we
+refer to this by the symbol T. We say that
+
+00:01:52.390 --> 00:01:59.150
+the end effector pose ksi E belongs to the
+set T, the set of all possible end effector
+
+00:01:59.150 --> 00:02:00.150
+poses.
+
+00:02:00.150 --> 00:02:06.350
+In two dimensions, T is a subset of all possible
+translations and rotations.
+
+00:02:06.350 --> 00:02:11.240
+And, the reason that it’s a subset is that
+the robot has only got finite reach.
+
+00:02:11.240 --> 00:02:12.879
+It can’t reach out to the horizon.
+
+00:02:12.879 --> 00:02:21.220
+For example, so T is a subset of all possible
+positions and orientations in two dimensions.
+
+00:02:21.220 --> 00:02:25.110
+For example, we’ve looked at robots where
+the end effector pose is simply described
+
+00:02:25.110 --> 00:02:27.420
+by the coordinates X and Y.
+
+00:02:27.420 --> 00:02:32.530
+We’ve also looked at some robots where the
+end effector pose is described by the position
+
+00:02:32.530 --> 00:02:36.170
+X and Y and by the orientation Theta.
+
+00:02:36.170 --> 00:02:43.090
+In three dimensions, we would say that T is
+a subset of SE3, the set of all possible positions
+
+00:02:43.090 --> 00:02:46.030
+and orientations in three dimensional space.
+
+00:02:46.030 --> 00:02:52.299
+And, we’ve, again, look at some specific
+examples where the end effector pose is described
+
+00:02:52.299 --> 00:02:57.239
+just in terms of its position, X, Y and Z,
+some robots where the end effector pose is
+
+00:02:57.239 --> 00:03:01.650
+described by position X, Y and Z and a single
+pitch angle.
+
+00:03:01.650 --> 00:03:05.760
+We’ve also looked at some robots whose end
+effector can be described in terms of the
+
+00:03:05.760 --> 00:03:13.120
+position X, Y and Z and orientation roll,
+pitch and yaw angles for example.
+
+00:03:13.120 --> 00:03:15.239
+These are all subsets of SE3.
+
+00:03:15.239 --> 00:03:20.879
+The next important consideration then is the
+dimensions of these different spaces, the
+
+00:03:20.879 --> 00:03:26.390
+task space, the space in which we describe
+the pose of the end effector, and the configuration
+
+00:03:26.390 --> 00:03:30.950
+space in which we describe the joint coordinates
+of the robot.
+
+00:03:30.950 --> 00:03:35.410
+We say that a robot has got so many degrees
+of freedom and that’s equal to the number
+
+00:03:35.410 --> 00:03:40.189
+of joints the robot has and that’s the dimension
+of its configuration space.
+
+00:03:40.189 --> 00:03:46.230
+So, if a robot has got three joints, then
+we say that its configuration space has got
+
+00:03:46.230 --> 00:03:47.730
+three dimensions.
+
+00:03:47.730 --> 00:03:52.440
+Similarly, we could talk about the degrees
+of freedom in the task space and that’s
+
+00:03:52.440 --> 00:03:59.790
+equal to the dimension of the task space T.
+Consider the pose of a simple planar robot.
+
+00:03:59.790 --> 00:04:05.120
+Its end effector pose is described simply
+by the two coordinates X and Y.
+
+00:04:05.120 --> 00:04:08.209
+In this case, the dimension of a task space
+is 2.
+
+00:04:08.209 --> 00:04:12.830
+If it’s a planar robot with three joints,
+then the end effector pose can be described
+
+00:04:12.830 --> 00:04:17.079
+by the X and Y position and the orientation
+Theta.
+
+00:04:17.079 --> 00:04:21.310
+In this case, we would say that the dimension
+of a task space is 3.
+
+00:04:21.310 --> 00:04:24.450
+It’s described by a three-dimensional vector.
+
+00:04:24.450 --> 00:04:29.720
+For a three-dimensional robot whose end effector
+pose is described by the position, coordinates
+
+00:04:29.720 --> 00:04:35.160
+X, Y and Z, the dimension of its task space
+is also 3.
+
+00:04:35.160 --> 00:04:40.060
+The robot that has got X, Y, Z position and
+also a pitch angle, dimension of its task
+
+00:04:40.060 --> 00:04:41.360
+space is 4.
+
+00:04:41.360 --> 00:04:46.650
+And, for something like an industrial robot
+whose end effector pose is described by position
+
+00:04:46.650 --> 00:04:52.110
+X, Y, Z and orientation which could be described
+by three angles, for instance, roll, pitch,
+
+00:04:52.110 --> 00:04:55.710
+yaw angles, the dimension of its task space
+is 6.
+
+00:04:55.710 --> 00:04:59.320
+In the three-dimensional world in which we
+live and which the robots live, it’s not
+
+00:04:59.320 --> 00:05:03.740
+possible to have a task space dimension be
+given 6.
+
+00:05:03.740 --> 00:05:09.880
+Now, the really important constraint is that
+in order to reach all of the task space, the
+
+00:05:09.880 --> 00:05:14.940
+dimension of the configuration space should
+be greater than or equal to the dimension
+
+00:05:14.940 --> 00:05:17.050
+of the task space.
+
+00:05:17.050 --> 00:05:20.550
+To make this concrete, let’s look again
+at the 2-degree freedom arm which we should
+
+00:05:20.550 --> 00:05:22.390
+be quite familiar with by now.
+
+00:05:22.390 --> 00:05:28.100
+The end effector pose is an element of the
+task space and the task space is a subset
+
+00:05:28.100 --> 00:05:31.380
+of the two-dimensional space of real numbers.
+
+00:05:31.380 --> 00:05:35.680
+End effector pose can be described by a pair
+of two real numbers.
+
+00:05:35.680 --> 00:05:41.580
+The configuration space for this robot is
+a vector that comprises Q1 and Q2, the two
+
+00:05:41.580 --> 00:05:43.030
+joint angles.
+
+00:05:43.030 --> 00:05:48.470
+The configuration space is also a subset of
+the two-dimensional space of real numbers
+
+00:05:48.470 --> 00:05:54.030
+because the joint configuration can be described
+by a pair of real numbers, that is Q1 and
+
+00:05:54.030 --> 00:05:55.390
+Q2.
+
+00:05:55.390 --> 00:06:01.590
+For the 3-degree of freedom arm, the end effector
+pose is described by three numbers, X, Y and
+
+00:06:01.590 --> 00:06:02.590
+Theta.
+
+00:06:02.590 --> 00:06:07.970
+So, we say now that the task space is a subset
+of the set of all possible positions and the
+
+00:06:07.970 --> 00:06:13.690
+subset of all possible orientations which
+we denote by S. The configuration space is
+
+00:06:13.690 --> 00:06:20.110
+a vector comprising Q1, Q2 and Q3 and that
+is a subset of the three dimensional space
+
+00:06:20.110 --> 00:06:21.540
+of real numbers.
+
+00:06:21.540 --> 00:06:23.530
+By now, I’m sure you’re getting the hang
+of this.
+
+00:06:23.530 --> 00:06:29.150
+In this case, the task space is a subset of
+r cubed, the set of three-dimensional real
+
+00:06:29.150 --> 00:06:30.150
+numbers.
+
+00:06:30.150 --> 00:06:35.910
+And, the configuration space is also a subset
+of three-dimensional space of real numbers.
+
+00:06:35.910 --> 00:06:41.760
+A Cartesian Gantry robot is a special case
+because the joint coordinates directly map
+
+00:06:41.760 --> 00:06:44.680
+on to the end effector pose.
+
+00:06:44.680 --> 00:06:48.890
+The joint coordinates are in fact the lengths
+X, Y and Z.
+
+00:06:48.890 --> 00:06:55.630
+A 4-degree of freedom SCARA robot arm has
+an end effector pose described by a position
+
+00:06:55.630 --> 00:06:58.340
+X, Y and Z and a yaw angle.
+
+00:06:58.340 --> 00:07:04.160
+So, we would say that its task space is a
+subset of r cubed, the set of all possible
+
+00:07:04.160 --> 00:07:08.290
+positions, and the set of all possible orientations.
+
+00:07:08.290 --> 00:07:15.130
+Its configuration space is a four-dimensional
+quantity and it comprises the three rotational
+
+00:07:15.130 --> 00:07:19.060
+joint angles and a vertical displacement of
+the tool.
+
+00:07:19.060 --> 00:07:24.700
+A 4-degree of freedom parallel link robot,
+again, has a four-dimensional task space.
+
+00:07:24.700 --> 00:07:31.110
+It’s able to control the position and orientation
+of the end effector and it has a four-dimensional
+
+00:07:31.110 --> 00:07:32.600
+configuration space.
+
+00:07:32.600 --> 00:07:38.540
+There are four motors located at the base
+connected by links to the end effector.
+
+00:07:38.540 --> 00:07:44.620
+The four joint educational robot that we looked
+at before has a four-dimensional task space
+
+00:07:44.620 --> 00:07:49.920
+which can be described by a position X, Y,
+Z and a pitch angle, and its configuration
+
+00:07:49.920 --> 00:07:55.340
+is also four-dimensional because there are
+four rotational joints in this robot.
+
+00:07:55.340 --> 00:07:59.560
+The same thing applies for an arm of the NAO
+robot.
+
+00:07:59.560 --> 00:08:06.260
+For a 6-degree of freedom arm such as shown
+here, the task space is a subset of SE3, the
+
+00:08:06.260 --> 00:08:12.190
+set of all possible positions in three-dimensional
+space and the set of all possible orientations
+
+00:08:12.190 --> 00:08:14.170
+in three-dimensional space.
+
+00:08:14.170 --> 00:08:18.260
+The configuration space of all these robots
+is also six-dimensional.
+
+00:08:18.260 --> 00:08:21.470
+They all have six joints or 6 degrees of freedom.
+
+00:08:21.470 --> 00:08:26.650
+The industrial robot and the space shuttle
+arm have got six rotational joints.
+
+00:08:26.650 --> 00:08:32.330
+Whereas, the Stanford arm has got five rotational
+joints and one sliding joint.
+
+00:08:32.330 --> 00:08:33.390
+This is a very special case.
+
+00:08:33.390 --> 00:08:37.830
+This is a robot with a very large number of
+rotational joints.
+
+00:08:37.830 --> 00:08:43.240
+The task space of this robot is exactly the
+same as the robots on the previous slide.
+
+00:08:43.240 --> 00:08:47.279
+The end effector pose is described by its
+position and by its orientation.
+
+00:08:47.279 --> 00:08:49.199
+It’s got six dimensions.
+
+00:08:49.199 --> 00:08:53.459
+But, the configuration space for a robot like
+this could be quite massive.
+
+00:08:53.459 --> 00:08:57.700
+I don’t actually know how many joints this
+robot’s got, but I’m guessing that it’s
+
+00:08:57.700 --> 00:08:58.769
+got a hundred joints.
+
+00:08:58.769 --> 00:09:04.540
+So, I’m going to say that its configuration
+space is a subset of the 100-dimensional space
+
+00:09:04.540 --> 00:09:05.839
+of real numbers.
+
+00:09:05.839 --> 00:09:12.350
+So, in this case, the dimension of the configuration
+space is greater than the dimension of the
+
+00:09:12.350 --> 00:09:13.920
+task space.
+
+00:09:13.920 --> 00:09:16.330
+We call this a redundant robot.
+
+00:09:16.330 --> 00:09:21.370
+An advantage of the redundant robot is that
+the tool-tip can achieve any position and
+
+00:09:21.370 --> 00:09:26.580
+orientation just like a 6-degree of freedom
+industrial robot does, but with its additional
+
+00:09:26.580 --> 00:09:30.800
+degrees of freedom, it can also control the
+shape of the arm.
+
+00:09:30.800 --> 00:09:35.709
+So, it can control the pose of the end effector
+and the shape of the arm.
+
+00:09:35.709 --> 00:09:41.740
+An industrial robot with only six joints can
+only control the pose of the end effector.
+
+00:09:41.740 --> 00:09:46.579
+It can’t choose an arbitrary configurational
+shape of its arm.
+
+00:09:46.579 --> 00:09:52.279
+Another way that we describe robot arms is
+in terms of a configuration string and this
+
+00:09:52.279 --> 00:09:58.040
+is a string of characters, one character per
+joint and the character is either an R for
+
+00:09:58.040 --> 00:10:02.259
+a rotational joint or P for a prismatic or
+sliding joint.
+
+00:10:02.259 --> 00:10:07.860
+So, here we can see the configuration strings
+for three quite different sorts of robot.
+

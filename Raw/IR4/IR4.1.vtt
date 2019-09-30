@@ -1,0 +1,111 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.639 --> 00:00:06.980
+We all have a pretty intuitive idea of what
+a path is.
+
+00:00:06.980 --> 00:00:12.610
+We consider it as a way of getting from place
+A to place B.
+
+00:00:12.610 --> 00:00:17.400
+We can consider it as a set of points that
+link A to B; a set of small steps that we
+
+00:00:17.400 --> 00:00:18.960
+take along the way.
+
+00:00:18.960 --> 00:00:21.679
+A path is a spatial construct.
+
+00:00:21.679 --> 00:00:25.829
+It says something about how we get from A
+to B through the world but it doesn't say
+
+00:00:25.829 --> 00:00:29.400
+anything about how quickly we should move
+along it.
+
+00:00:29.400 --> 00:00:31.230
+There's no notion of time.
+
+00:00:31.230 --> 00:00:36.590
+A trajectory on the other hand comprises a
+path and a schedule for getting from A to
+
+00:00:36.590 --> 00:00:40.520
+B. So there is a notion of time or speed along
+the path.
+
+00:00:40.520 --> 00:00:45.750
+It's a set of points that I need to be at
+by a particular time.
+
+00:00:45.750 --> 00:00:52.530
+In my MATLAB work space, I have got two poses
+represented as 4x4 homogeneous transformation
+
+00:00:52.530 --> 00:00:53.809
+matrices.
+
+00:00:53.809 --> 00:00:59.829
+The first pose represented by the workspace
+variable T0, has got no rotation and has its
+
+00:00:59.829 --> 00:01:03.989
+origin at the origin of the world coordinate
+frame.
+
+00:01:03.989 --> 00:01:09.520
+The second post represented by the work space
+variable T1, comprises set of 1 in the x direction
+
+00:01:09.520 --> 00:01:15.250
+2 in the y direction and 3 in the z direction
+and an orientation described by roll pitch
+
+00:01:15.250 --> 00:01:20.840
+yaw angles 0.6, 0.8 and 1.4 radians respectively.
+
+00:01:20.840 --> 00:01:24.210
+And we can visualize each of these poses.
+
+00:01:24.210 --> 00:01:30.880
+I can plot the pose T0 and we can see there
+its origin is at the origin of the world
+
+00:01:30.880 --> 00:01:31.880
+frame.
+
+00:01:31.880 --> 00:01:36.000
+And its axes are aligned with the world frame.
+
+00:01:36.000 --> 00:01:43.690
+I can plot the other pose T1 and we can see
+that its origin is not at the origin of the
+
+00:01:43.690 --> 00:01:49.100
+world reference frame and its axes are not
+parallel to the reference axes.
+
+00:01:49.100 --> 00:01:56.939
+Now I can animate the motion that goes from
+pose T0 to pose T1 and we can see our coordinate
+
+00:01:56.939 --> 00:02:03.990
+frame is translating and rotating in order
+to move from pose T0 to pose T1. So this
+
+00:02:03.990 --> 00:02:10.259
+is what I mean when I talked about a trajectory
+which is smooth motion from one pose to the
+
+00:02:10.259 --> 00:02:11.259
+next.
+
+00:02:11.259 --> 00:02:13.900
+Figuring out how to do this is the subject
+of this lecture.
+

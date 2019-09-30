@@ -1,0 +1,172 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.679 --> 00:00:08.599
+Another way we can think about the relationship
+between these two frames, frame A and frame B,
+
+00:00:08.600 --> 00:00:15.580
+is that they are related by a single rotation
+about some arbitrary axis in space. So, the
+
+00:00:15.590 --> 00:00:20.360
+challenge becomes to determine what is
+this axis of rotation, the vector we going
+
+00:00:20.360 --> 00:00:26.150
+to define is v and what is the amount of rotation
+around that vector, which we’re going to
+
+00:00:26.150 --> 00:00:30.510
+call Theta. So the problem is to discover
+what is v, and what is Theta, that allows
+
+00:00:30.510 --> 00:00:35.680
+us to rotate frame A into frame B.
+
+00:00:35.680 --> 00:00:40.410
+In order to find the axis around which we
+rotate there is a key observation, and that
+
+00:00:40.410 --> 00:00:46.610
+is that the axis around which we are going
+to rotate must be unchanged by the rotation.
+
+00:00:46.610 --> 00:00:53.059
+Any point that lies on the rotation axis will
+be unchanged by rotation. That implies that
+
+00:00:53.059 --> 00:01:00.149
+the rotation axis must be an eigenvector of
+the matrix R. A rotation matrix has got three
+
+00:01:00.149 --> 00:01:05.030
+eigenvectors. There is one eigenvector which
+is guaranteed to have elements that are real
+
+00:01:05.030 --> 00:01:12.970
+numbers and it corresponds to the eigenvalue
+of 1. There are two complex eigenvectors and
+
+00:01:12.970 --> 00:01:20.080
+they correspond to complex eigenvalues which
+are functions of the rotation angle Theta.
+
+00:01:20.080 --> 00:01:24.570
+To illustrate this, I am going to create a
+rotation matrix. It doesn't particularly matter
+
+00:01:24.570 --> 00:01:33.170
+what the value is. I am going to create it
+using Euler angles. 0.1, 0.2, 0.3. And there
+
+00:01:33.170 --> 00:01:41.340
+it is. And I can see what that orientation
+looks like by plotting it. There we see rotated
+
+00:01:41.340 --> 00:01:44.650
+coordinate frame corresponding to this rotation
+matrix.
+
+00:01:44.650 --> 00:01:50.970
+Now, I am going to look at the eigenvalues
+of this rotation matrix. We see that there
+
+00:01:50.970 --> 00:01:57.420
+are 3 eigenvalues, we'd expect that since it's a
+3x3 matrix and the last eigenvalue is equal
+
+00:01:57.420 --> 00:02:04.540
+to one. I can look at the eigenvectors as
+well by asking for two output arguments from
+
+00:02:04.540 --> 00:02:13.159
+the eig function. And now we see in the matrix
+v, each column of matrix v is an eigenvector
+
+00:02:13.159 --> 00:02:19.079
+and we're interested in the third eigenvector
+because the third eigenvalue was equal to
+
+00:02:19.079 --> 00:02:24.739
+one, and we can say that this third eigenvector
+is real. The imaginary part of all the elements
+
+00:02:24.739 --> 00:02:26.909
+are equal to zero.
+
+00:02:26.909 --> 00:02:32.090
+In order to find the amount of rotation as
+well as the axis of rotation, we would use
+
+00:02:32.090 --> 00:02:39.480
+the Toolbox function tr2angvec and pass in
+the rotation matrix we're interested in, and
+
+00:02:39.480 --> 00:02:46.010
+it tells it that we need a rotation of 0.44
+radians around this particular vector. Now,
+
+00:02:46.010 --> 00:02:56.249
+I can get it to put those into variables by
+providing two output arguments; tr2angvec,
+
+00:02:56.249 --> 00:03:01.969
+and the outward variable Theta has been set
+to 0.4466 and the output variable v has being
+
+00:03:01.969 --> 00:03:08.079
+set to the vector around which that rotation
+would occur.
+
+00:03:08.079 --> 00:03:15.400
+So the problem comes down to finding the eigenvalues
+and eigenvectors of the matrix R. The eigenvector
+
+00:03:15.400 --> 00:03:22.040
+corresponding to the eigenvalue of one is
+a rotation axis V and from the complex eigenvectors,
+
+00:03:22.040 --> 00:03:27.169
+which are a function of Theta, we can determine
+the rotation angle that we require.
+
+00:03:27.169 --> 00:03:32.579
+Now, let's consider we want to do the inverse;
+that we have the rotation angle Theta and
+
+00:03:32.579 --> 00:03:38.599
+we have the vector about which we rotate called
+v, and we want to find the rotation matrix.
+
+00:03:39.220 --> 00:03:46.400
+And the equation we need is the so-called
+Rodriguez Equation and it relates R to v and Theta.
+
+00:03:47.320 --> 00:03:53.420
+The inverse operation is performed by the
+function angvec2r, converts an angle and vector
+
+00:03:53.430 --> 00:04:00.400
+representation to a rotation matrix. I pass
+in the rotation amount and I pass in the vector
+
+00:04:00.400 --> 00:04:05.699
+and here is the rotation matrix, and it's
+exactly the same as the rotation matrix that
+
+00:04:05.699 --> 00:04:08.019
+I started with.
+
+00:04:08.019 --> 00:04:13.229
+You’ll notice that the matrix in here is
+a skew symmetric matrix and this is the type
+
+00:04:13.229 --> 00:04:17.530
+of matrix that we've encountered already,
+and we will encounter a few other times in
+
+00:04:17.530 --> 00:04:18.840
+this course of lectures.
+

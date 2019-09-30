@@ -1,0 +1,178 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.590 --> 00:00:07.910
+A commonly used alternative velocity profile looks like this.
+
+00:00:08.820 --> 00:00:13.080
+We accelerate. We move at constant velocity for as long as we need to
+
+00:00:13.080 --> 00:00:16.139
+and then we slow down as quickly as we can.
+
+00:00:16.139 --> 00:00:21.910
+An advantage of a trajectory like this is
+that we get to our destination much more quickly.
+
+00:00:21.910 --> 00:00:26.369
+The area under the two curves is the distance
+travelled, and that's the same in the two
+
+00:00:26.369 --> 00:00:32.009
+cases. It’s just that the red curve is much
+more compact. It only takes 35 time units
+
+00:00:32.009 --> 00:00:34.620
+instead of 50 time units.
+
+00:00:34.620 --> 00:00:40.120
+This kind of motion is referred to as a trapezoidal
+profile. It's named after the shape of the
+
+00:00:40.120 --> 00:00:47.040
+velocity profile. It’s a trapezoid. It comprises
+an acceleration phase, a coasting phase - where
+
+00:00:47.040 --> 00:00:53.280
+we move at a constant velocity - and then a
+deceleration phase. During acceleration and
+
+00:00:53.280 --> 00:01:00.110
+deceleration, the velocity is a linear function
+of time. Which means, that position is a parabolic
+
+00:01:00.110 --> 00:01:06.200
+function of time. During the coasting phase,
+the velocity is constant. That means that
+
+00:01:06.200 --> 00:01:12.520
+the position profile is a straight line. So,
+this kind of motion profile, the trapezoidal
+
+00:01:12.520 --> 00:01:18.659
+profile, is also sometimes referred to as
+a linear segment with parabolic blend. In
+
+00:01:18.659 --> 00:01:23.969
+that robotics toolbox, it's the function LSPB
+which is a contraction of a linear segment
+
+00:01:23.969 --> 00:01:25.810
+with parabolic blend.
+
+00:01:25.810 --> 00:01:30.959
+A disadvantage of the trapezoidal profile
+is that acceleration is not continuous and
+
+00:01:30.959 --> 00:01:36.880
+you can see it when we change from acceleration
+phase to coasting phase and coasting to deceleration
+
+00:01:36.880 --> 00:01:42.899
+phase, there is a step discontinuity in acceleration.
+This is potentially problematic for some robots
+
+00:01:42.899 --> 00:01:47.090
+but in general, we rely on the fact that the
+bandwidth of the motion control systems is
+
+00:01:47.090 --> 00:01:52.770
+relatively low and it smooths out this discontinuity
+in acceleration.
+
+00:01:52.770 --> 00:01:58.969
+Let's look at this type of trajectory using
+the MATLAB tools, I am going to create a trapezoidal
+
+00:01:58.969 --> 00:02:04.979
+trajectory using the MATLAB function LSPB
+which is an acronym for Linear Segment with
+
+00:02:04.979 --> 00:02:09.929
+Parabolic Blend. It's going to start with
+the value of zero. It's going to finish at
+
+00:02:09.929 --> 00:02:16.980
+one. We're going to do it in 50 times steps.
+And, here we see the trajectory. We can clearly
+
+00:02:16.980 --> 00:02:22.810
+see that the velocity profile is trapezoidal.
+We can see the acceleration phase, the constant
+
+00:02:22.810 --> 00:02:27.980
+velocity phase and the deceleration phase.
+And, these different phases are color coded
+
+00:02:27.980 --> 00:02:33.989
+in the plot of S versus time step. I can change
+the trajectory. So, instead of going from
+
+00:02:33.989 --> 00:02:39.980
+zero to one, it goes from zero to minus one.
+And, the trajectory now looks like this. So,
+
+00:02:39.980 --> 00:02:49.269
+then, I can ask for the values of S, from
+zero to one in 50 times steps. And it creates
+
+00:02:49.269 --> 00:02:56.049
+a vector in the workspace code S which has
+50 rows. Each row corresponds to a time step.
+
+00:02:56.049 --> 00:03:01.819
+And just like the tpoly function, I can also
+ask for the velocity and the acceleration
+
+00:03:01.819 --> 00:03:08.290
+which in turn, we put into the workspace SD
+and STD and here they are also in the workspace
+
+00:03:08.290 --> 00:03:12.340
+as 50 element vectors, one row per time step.
+
+00:03:12.340 --> 00:03:19.510
+I'm going to return to my first example. A
+trajectory from zero to one. We can see that
+
+00:03:19.510 --> 00:03:25.849
+the velocity of the linear segment is a little
+bit above 0.03. What we are going to do now
+
+00:03:25.849 --> 00:03:32.120
+is to override the automatic choice of the
+velocity of the linear segment. And, I'm going
+
+00:03:32.120 --> 00:03:41.329
+to suggest that it use a value of 0.025 instead.
+And, here we can see the trajectory is being
+
+00:03:41.329 --> 00:03:45.959
+computed. You see that the linear segment
+now is much longer and the parabolic blends
+
+00:03:45.959 --> 00:03:53.159
+are much shorter. I am going to suggest that
+it uses a slightly larger value of velocity
+
+00:03:53.159 --> 00:03:58.040
+for the linear segment. And, now we can see
+linear segment's quite short and the parabolic
+
+00:03:58.040 --> 00:04:04.029
+blends are longer. The range of feasible values
+for the velocity of the linear segment are
+
+00:04:04.029 --> 00:04:10.689
+actually quite limited. And, if I suggest
+a value of 0.02, it is returning an error indicating
+
+00:04:10.689 --> 00:04:16.570
+that the velocity that I specified is too
+small. It's not possible to compute a trapezoidal
+
+00:04:16.570 --> 00:04:21.239
+profile with that value of velocity for the
+linear segment.
+

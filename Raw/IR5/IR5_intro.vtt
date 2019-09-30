@@ -1,0 +1,262 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:08.099 --> 00:00:13.059
+Today we take it completely for granted that
+we know where we are at all possible times
+
+00:00:13.059 --> 00:00:17.970
+and that's thanks to GPS technology that's
+embedded into all sorts of devices; it's in
+
+00:00:17.970 --> 00:00:23.590
+my phone, it's in navigation systems in cars
+and so on, but it wasn’t always like this.
+
+00:00:23.590 --> 00:00:27.460
+GPS is actually a fairly recent phenomenon.
+
+00:00:27.460 --> 00:00:33.460
+GPS works by a large constellation of satellites,
+24 satellites in space, sending down radio
+
+00:00:33.460 --> 00:00:39.640
+signals which are received by the little GPS
+receiver chips embedded into all these devices.
+
+00:00:39.640 --> 00:00:45.260
+Now, these satellites are very, very complex
+they contain atomic clocks and they are absolutely
+
+00:00:45.260 --> 00:00:50.539
+massive. Now, this technology was originally
+developed by the US military to help them
+
+00:00:50.539 --> 00:00:55.219
+work out where all their assets and where
+all their soldiers were at any particular
+
+00:00:55.219 --> 00:01:01.289
+point in time, really key ability in the business
+of war fighting to know where everything is.
+
+00:01:01.289 --> 00:01:05.880
+It’s also particularly useful for civilians
+and driving and so on, but it was not the
+
+00:01:05.880 --> 00:01:09.580
+first application of GPS; it was strictly
+military.
+
+00:01:09.580 --> 00:01:17.380
+Now, in the year 2000, President Clinton signed
+an order which made the high accuracy GPS
+
+00:01:17.380 --> 00:01:23.259
+capability available to everybody on the planet.
+Previously, the high accuracy was only available
+
+00:01:23.259 --> 00:01:28.579
+to military users and for everybody else the
+service was deliberately degraded, so it told
+
+00:01:28.579 --> 00:01:33.820
+you roughly where you were, but with an accuracy
+of 100 meters or something like that.
+
+00:01:33.820 --> 00:01:39.990
+So, this was a revolution and the fact that
+he made this order, turned off this deliberate
+
+00:01:39.990 --> 00:01:46.780
+dilution of GPS accuracy is what’s enabled
+this great revolution in location based services
+
+00:01:46.780 --> 00:01:52.649
+that today we take for granted. So, it is
+a fairly recent phenomenon, important to keep
+
+00:01:52.649 --> 00:01:53.780
+that in mind.
+
+00:01:53.780 --> 00:01:59.310
+Now, other countries who don’t want to be
+reliant on the US-based GPS system, create
+
+00:01:59.310 --> 00:02:06.039
+their own satellite based navigation systems
+and Europe, Russia, and China are all putting
+
+00:02:06.039 --> 00:02:11.900
+in place or have in place alternatives to
+the GPS system. So, there are lots of satellites
+
+00:02:11.900 --> 00:02:16.810
+up there providing navigation signals that
+allow receivers on the ground to know exactly
+
+00:02:16.810 --> 00:02:18.100
+where they are.
+
+00:02:18.100 --> 00:02:22.690
+Now, a long time ago before there was GPS
+was the problem with how did you know where
+
+00:02:22.690 --> 00:02:27.670
+you were and this was a particularly important
+problem during the Cold War. How do you send
+
+00:02:27.670 --> 00:02:32.330
+your nuclear bombers to another country to
+deliver pay loads if you can’t work out
+
+00:02:32.330 --> 00:02:36.800
+where they are, particularly accurately, and
+it’s also a real problem under water because
+
+00:02:36.800 --> 00:02:39.230
+these GPS signals don’t penetrate water.
+
+00:02:39.230 --> 00:02:44.220
+So, if you’re a submarine under the water
+surface, working out where you are is quite
+
+00:02:44.220 --> 00:02:50.880
+complex; you certainly can’t rely on GPS
+navigation. If you want to go to the moon
+
+00:02:50.880 --> 00:02:56.010
+and we did go to the moon, sent men to the
+moon a long time ago, how do you navigate
+
+00:02:56.010 --> 00:03:00.970
+around the moon where there is no GPS system?
+And back then, there was no GPS system around
+
+00:03:00.970 --> 00:03:06.380
+planet Earth and certainly there was no GPS
+navigation system around the moon.
+
+00:03:06.380 --> 00:03:12.040
+So, the way you do that is what’s called
+inertial navigation, and this is a technique
+
+00:03:12.040 --> 00:03:18.900
+that was pioneered by this gentleman, Charles
+Stark Draper, back in the 1950s and the 1960s,
+
+00:03:18.900 --> 00:03:25.700
+and he was in fact declared Time Man of the
+Year in 1961 for his contributions to engineering
+
+00:03:25.700 --> 00:03:28.820
+knowledge, particularly this inertial navigation
+technology.
+
+00:03:28.820 --> 00:03:34.980
+So, inertial navigation technology relies
+on measuring continuously the acceleration
+
+00:03:34.980 --> 00:03:39.660
+of the body, so if I had the sensors on me
+that measured my acceleration and other sensors
+
+00:03:39.660 --> 00:03:45.090
+called gyroscopes which measure my rotation.
+By processing the accelerating signal and
+
+00:03:45.090 --> 00:03:50.060
+the rotation signal, combining them with some
+pretty clever algorithms, I can work out at
+
+00:03:50.060 --> 00:03:56.250
+any point in time where I am. This technology
+was pioneered, was driven by the Cold War
+
+00:03:56.250 --> 00:04:01.030
+that existed at that particular point in time.
+
+00:04:01.030 --> 00:04:05.720
+This is the first inertial navigation system;
+it was a massive piece of kit and it was able
+
+00:04:05.720 --> 00:04:12.140
+to a guide bomber from the east coast to the
+west coast of the United States, very, very
+
+00:04:12.140 --> 00:04:18.259
+big piece of equipment, and there was an underwater
+version of this which was used to accurately
+
+00:04:18.259 --> 00:04:23.199
+navigate submarines for long periods of time
+underwater, so they could accurately get from
+
+00:04:23.199 --> 00:04:27.719
+one place to another just using this navigation
+technology.
+
+00:04:30.000 --> 00:04:34.760
+Another instance of this inertial navigation
+technology is what got the Apollo space craft
+
+00:04:34.760 --> 00:04:39.470
+to the moon, so that they’re able to miniaturize
+this massive inertial navigation system and
+
+00:04:39.470 --> 00:04:44.820
+shrink it down to a box that was about one
+foot, cubed, and that’s what got the vehicle
+
+00:04:44.820 --> 00:04:49.530
+to the orbit around the moon and also got
+the vehicle then from the lunar orbit down
+
+00:04:49.530 --> 00:04:54.670
+on to the surface of the moon and back up
+again, and this was in 1968.
+
+00:04:54.670 --> 00:05:02.380
+So, phenomenal technological progress from
+an idea to a massive sensor through to a relatively
+
+00:05:02.380 --> 00:05:07.690
+small sensor that could be used for landing
+men on the moon.
+
+00:05:07.690 --> 00:05:13.050
+Today inertial navigation system is almost
+a commodity. It’s reduced to the size of
+
+00:05:13.050 --> 00:05:18.300
+a single chip, and these inertial navigation
+chips, which contain accelerometers and gyroscopes
+
+00:05:18.300 --> 00:05:22.530
+are embedded into devices like our phones;
+this is how our phone knows whether it’s
+
+00:05:22.530 --> 00:05:28.260
+in portrait mode or in landscape mode. It’s
+how we use it to play games just by moving
+
+00:05:28.260 --> 00:05:33.900
+the phone around, these are all done with
+inertial navigation technology. Smart toys,
+
+00:05:33.900 --> 00:05:39.889
+like this quadrotor here, use inertial navigation
+sensors to keep the vehicle balanced in space
+
+00:05:39.889 --> 00:05:41.450
+and to keep it stable.
+
+00:05:41.450 --> 00:05:48.240
+They’re used in many, many, many, many technologies
+and many, many applications. So, in this particular
+
+00:05:48.240 --> 00:05:51.810
+lecture, we’re going to talk about how inertial
+measurement systems work.
+

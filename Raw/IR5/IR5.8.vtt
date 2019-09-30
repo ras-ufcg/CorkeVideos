@@ -1,0 +1,253 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.959 --> 00:00:08.330
+Let's summarize some of the points that we’ve
+talked about in this lecture.
+
+00:00:08.330 --> 00:00:12.410
+Today we take for granted that we can use
+GPS to determine our position anywhere on
+
+00:00:12.410 --> 00:00:18.179
+the surface of the planet, but it is a relatively
+recent technology. It only became operational
+
+00:00:18.179 --> 00:00:25.439
+in 1994, and only became available at reasonable
+accuracy for the general public in the year 2000.
+
+00:00:26.300 --> 00:00:31.359
+Before the advent of GPS, navigating precisely
+on the surface of the planet or in outer space
+
+00:00:31.359 --> 00:00:36.679
+was very very difficult, and the technology
+that was used was called inertial navigation,
+
+00:00:36.679 --> 00:00:41.489
+and that involved measuring the acceleration
+and angular velocity of a vehicle, and integrating
+
+00:00:41.489 --> 00:00:44.510
+that over time to determine the position.
+
+00:00:44.510 --> 00:00:49.350
+The key components of an Inertial Navigation
+System are: an inertial measurement unit;
+
+00:00:49.350 --> 00:00:54.260
+which contains the sensors that measure acceleration,
+magnetic field, and angular velocity, and
+
+00:00:54.260 --> 00:00:58.320
+what’s called dead reckoning software; that
+takes those signals and integrates them over
+
+00:00:58.320 --> 00:01:02.309
+time to continually update the pose of the
+vehicle.
+
+00:01:02.309 --> 00:01:07.360
+At a simplistic level we can consider that
+an accelerometer is a mass on a spring inside
+
+00:01:07.360 --> 00:01:12.299
+a little box. If we do the algebra we can
+show that the extension of the spring is linearly
+
+00:01:12.299 --> 00:01:17.770
+proportional to the acceleration of the device
+and the gravitational acceleration. An accelerometer
+
+00:01:17.770 --> 00:01:24.680
+at rest on earth indicates an acceleration
+of 1g in the vertical or upward direction.
+
+00:01:24.680 --> 00:01:28.759
+This is a little bit counter-intuitive, because
+when we drop something it is going to accelerate
+
+00:01:28.759 --> 00:01:34.159
+in the downward direction. The accelerometer
+at rest measures 1g upwards. And this is a
+
+00:01:34.159 --> 00:01:39.259
+consequence of the equivalence principle.
+An accelerometer on the surface of the earth
+
+00:01:39.259 --> 00:01:45.610
+or an accelerometer mounted in a rocket accelerating
+upwards at 1g, both of them indicate an acceleration
+
+00:01:45.610 --> 00:01:47.180
+of 1g.
+
+00:01:47.180 --> 00:01:52.369
+Many devices, for example my phone, contain
+three accelerometers which measure acceleration
+
+00:01:52.369 --> 00:01:58.890
+in the x, y and z directions of a coordinate
+frame B attached to my phone. I can use the
+
+00:01:58.890 --> 00:02:03.960
+components of acceleration measured in the
+phone in coordinate frame B to determine the
+
+00:02:03.960 --> 00:02:09.030
+roll and pitch of the phone with respect to
+the blue coordinate frame 0.
+
+00:02:09.030 --> 00:02:13.940
+The earth contains a gigantic but fairly weak
+magnet, but the poles of that magnet are not
+
+00:02:13.940 --> 00:02:18.700
+constant. They change with time. A compass
+has a needle which points towards the north
+
+00:02:18.700 --> 00:02:23.800
+magnetic pole, but the north magnetic pole
+is different to the north geographic pole.
+
+00:02:23.800 --> 00:02:27.480
+At any particular point on the surface of
+the earth we can establish a right-handed
+
+00:02:27.480 --> 00:02:32.920
+coordinate frame where one axis points towards
+the north geographic pole, another axis points
+
+00:02:32.920 --> 00:02:37.000
+vertically downwards towards the centre of
+the planet, and the other axis points in the
+
+00:02:37.000 --> 00:02:42.690
+geographic east direction. The earth’s magnetic
+field vector is shown here by a red arrow,
+
+00:02:42.690 --> 00:02:47.660
+and it can be described with respect to this
+coordinate frame by two angles. Magnetic declination
+
+00:02:47.660 --> 00:02:51.800
+is the difference between two directions;
+the direction of true north and the direction
+
+00:02:51.800 --> 00:02:56.880
+of magnetic north - the direction that the
+compass points in. The other angle is magnetic
+
+00:02:56.880 --> 00:03:01.620
+inclination, and that’s the angle that the
+magnetic field vector makes with respect to
+
+00:03:01.620 --> 00:03:07.260
+a local horizontal surface. It’s also referred
+to as magnetic dip.
+
+00:03:07.260 --> 00:03:11.130
+In order to determine the yaw angle - that’s
+the direction that the body is facing with
+
+00:03:11.130 --> 00:03:16.150
+respect to magnetic north - we need to combine
+information from two sensors. We determine
+
+00:03:16.150 --> 00:03:21.350
+the roll and pitch angle of the body using
+the accelerometers, and then we use the components
+
+00:03:21.350 --> 00:03:27.080
+of the magnetic field sensed onboard the body,
+combine that with what we know about the local
+
+00:03:27.080 --> 00:03:32.440
+magnetic inclination angle, and the local
+magnetic field strength to determine the yaw
+
+00:03:32.440 --> 00:03:33.270
+angle.
+
+00:03:33.270 --> 00:03:38.170
+A spinning disc has some interesting dynamic
+properties. One of these is that we can use
+
+00:03:38.170 --> 00:03:44.490
+it to convert an angular velocity - omega
+- about the blue axis, into a torque - tau
+
+00:03:44.490 --> 00:03:46.770
+- about the red axis.
+
+00:03:46.770 --> 00:03:51.160
+We can measure that torque by measuring the
+forces that are exerted on the axle that supports
+
+00:03:51.160 --> 00:03:56.210
+the rotating disc. If we know the parameters
+such as the rotational inertia of the disc
+
+00:03:56.210 --> 00:04:01.040
+and the rotational velocity of the disc, then
+we can determine omega, the rotational velocity
+
+00:04:01.040 --> 00:04:04.080
+of this gyroscopic sensor.
+
+00:04:04.080 --> 00:04:09.160
+Interestingly there are biological equivalents
+of accelerometers and gyroscopes in our bodies.
+
+00:04:09.160 --> 00:04:14.660
+In each of our ears we have two accelerometers
+and three gyroscopes which measure the motion
+
+00:04:14.660 --> 00:04:19.410
+of our body, and that’s integrated with
+visual information in our brain to understand
+
+00:04:19.410 --> 00:04:22.090
+how we are moving with respect to the world.
+
+00:04:22.090 --> 00:04:27.080
+Finally we looked at how to compute the derivative
+of a rotation matrix. It’s the product of
+
+00:04:27.080 --> 00:04:33.120
+two matrices: it’s a skew-symmetric matrix
+multiplied by the original rotation matrix.
+
+00:04:33.120 --> 00:04:37.860
+The skew-symmetric matrix is computed on the
+angular velocity of the body; that’s the
+
+00:04:37.860 --> 00:04:43.930
+vector L about which the body is instantaneously
+rotating multiplied by the rate of rotation
+
+00:04:43.930 --> 00:04:45.629
+about that axis.
+
+00:04:45.629 --> 00:04:50.120
+The skew-symmetric matrix has got a number
+of interesting properties. In particular it’s
+
+00:04:50.120 --> 00:04:54.909
+singular. That is, its determinate is always
+equal to 0, and its transpose is the negative
+
+00:04:54.909 --> 00:05:01.110
+value of itself. In the case of three dimensions,
+as shown here, we can clearly see a zero diagonal,
+
+00:05:01.110 --> 00:05:06.199
+and the fact that the matrix only contains
+three unique elements, x, y and z, Each of
+
+00:05:06.199 --> 00:05:09.120
+which appear once with a positive sign, and
+once with a negative sign.
+

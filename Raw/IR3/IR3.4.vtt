@@ -1,0 +1,282 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.550 --> 00:00:08.599
+In the previous lecture we introduced the
+notion of pose and poses; a way of describing
+
+00:00:08.599 --> 00:00:14.990
+both the translation and the orientation of
+one coordinate frame with respect to another.
+
+00:00:14.990 --> 00:00:20.449
+And the notation we used is based on the Greek
+letter ksi and we used that to represent pose
+
+00:00:20.449 --> 00:00:24.949
+and we used the letter B the subscript to
+indicate that we're talking about the pose
+
+00:00:24.949 --> 00:00:29.890
+of the coordinate frame B and the leading
+index, in this case A, to indicate that the
+
+00:00:29.890 --> 00:00:37.670
+pose is with respect to coordinate frame A. So we read this symbol as the pose of B with respect to A.
+
+00:00:38.260 --> 00:00:43.460
+Things are not much different in 3-dimensions,
+once again we use this abstract notion of
+
+00:00:43.460 --> 00:00:49.010
+pose represented by Greek letter ksi, and
+now we represent the translation and orientation
+
+00:00:49.010 --> 00:00:54.320
+of one three-dimensional coordinate frame
+with respect to another. Later in this lecture
+
+00:00:54.320 --> 00:00:59.390
+we’ll talk about concrete implementations
+of ksi, what it actually means in terms of
+
+00:00:59.390 --> 00:01:05.220
+things that you can compute with, but for
+now just consider that as an abstract symbol.
+
+00:01:05.220 --> 00:01:09.890
+The notation is the same as it is for the
+2-dimensional case and we read this symbol
+
+00:01:09.890 --> 00:01:15.790
+here as being the pose of coordinate frame
+B with respect to coordinate frame A. And
+
+00:01:15.790 --> 00:01:20.940
+remembering that pose has got two components,
+a translational component; that's the distance
+
+00:01:20.940 --> 00:01:26.710
+between the origins of frame A and frame B,
+and a rotational component; how do I rotate
+
+00:01:26.710 --> 00:01:33.790
+coordinate frame A so that its axes are parallel
+to the axes of coordinate frame B.
+
+00:01:33.790 --> 00:01:39.630
+In 3-dimensions it is not as simple to describe
+the orientation of an object. Consider this
+
+00:01:39.630 --> 00:01:45.780
+airplane. There are a number of ways in which
+it can move. It can pitch up and down, it
+
+00:01:45.780 --> 00:01:51.510
+can roll to the right or it can roll to the
+left, and it can yaw to the right or to the
+
+00:01:51.510 --> 00:01:58.930
+left. So there are number of parameters that
+describe the orientation of this body in space.
+
+00:01:58.930 --> 00:02:04.340
+So the way that we are going to formalise
+this is again similar to what we did for the
+
+00:02:04.340 --> 00:02:08.979
+2-dimensional case, and again we attach a
+coordinate frame to the aircraft.
+
+00:02:08.979 --> 00:02:12.980
+Another coordinate frame here, a blue one
+and I'm going to fix it to the aircraft with
+
+00:02:12.980 --> 00:02:17.860
+the x-axis pointing forward and that means
+that the y-axis points over the wing and the
+
+00:02:17.860 --> 00:02:23.700
+z-axis points upward. So now when it comes
+to describing the pose of this aircraft it's
+
+00:02:23.700 --> 00:02:28.200
+got a translational component, that's the
+position of the origin of this coordinate
+
+00:02:28.200 --> 00:02:33.600
+frame with respect to the origin of this coordinate
+frame, and then there is the orientation of
+
+00:02:33.600 --> 00:02:38.660
+this coordinate frame with respect to this
+coordinate frame.
+
+00:02:38.660 --> 00:02:43.970
+The direction of the positive rotation is
+an important concept, and in a 2-dimensional
+
+00:02:43.970 --> 00:02:49.870
+case rotation was defined as being positive
+in this direction. If we consider a 2-dimensional
+
+00:02:49.870 --> 00:02:54.950
+coordinate frame, then if we grow a z-axis
+out of the screen, that is the equivalent
+
+00:02:54.950 --> 00:03:01.600
+right handed 3-dimensional coordinate frame.
+So this positive angle convention in two dimensions
+
+00:03:01.600 --> 00:03:08.010
+corresponds to a positive rotation about the
+z-axis which is coming at us out of the screen.
+
+00:03:08.010 --> 00:03:14.240
+When we are talking about rotations around
+axes we define the direction of positive rotation
+
+00:03:14.240 --> 00:03:19.630
+again using a right hand rule. So I take my
+right hand and I point my thumb along the
+
+00:03:19.630 --> 00:03:24.250
+axis - in this case it's the z-axis, and I
+curl my fingers around, and the direction
+
+00:03:24.250 --> 00:03:29.330
+of the curl, the direction of the tip of my
+fingers is the positive direction. So this
+
+00:03:29.330 --> 00:03:36.190
+is a positive rotation around the z-axis.
+Similarly a rotation around the x-axis - this
+
+00:03:36.190 --> 00:03:43.250
+a positive rotation around the x-axis and
+this is a positive rotation around the y-axis.
+
+00:03:43.250 --> 00:03:49.819
+When we looked previously at the 2-dimensional
+coordinate frame we also had a rule for the
+
+00:03:49.819 --> 00:03:54.980
+direction of positive rotation in two dimensions.
+Here's our 2-dimensional coordinate frame
+
+00:03:54.980 --> 00:04:01.430
+again, here is our x and y-axis lying on top.
+So what we defined as a positive rotation
+
+00:04:01.430 --> 00:04:09.319
+for a 2-dimensional coordinate frame is actually
+a positive rotation around the z-axis, if
+
+00:04:09.319 --> 00:04:15.770
+you could imagine a z-axis being there.
+In robotics, as in many other areas of engineering,
+
+00:04:15.770 --> 00:04:20.370
+it's really useful and important to attach
+coordinate frames to objects. Now here is
+
+00:04:20.370 --> 00:04:26.090
+an example of a helicopter in flight and where
+we can attach a right-handed coordinate frame;
+
+00:04:26.090 --> 00:04:32.129
+x-axis pointing forward, a y-axis out to the
+right, and a z-axis going straight down. Once
+
+00:04:32.129 --> 00:04:36.990
+we have a coordinate frame attached to the
+vehicle, we can then describe its orientation
+
+00:04:36.990 --> 00:04:41.900
+with respect to another coordinate frame.
+We can also describe its motion with respect
+
+00:04:41.900 --> 00:04:48.069
+to this particular coordinate frame. Forward
+is in the x direction, down is in its z direction
+
+00:04:48.069 --> 00:04:54.330
+and so on. In the example of an industrial
+arm type robot, we might have a 3-dimensional
+
+00:04:54.330 --> 00:04:58.490
+coordinate frame attached to the base of the
+robot to indicate where it is with respect
+
+00:04:58.490 --> 00:05:03.650
+to the world coordinate frame of the factory
+and we will attach another 3D coordinate frame
+
+00:05:03.650 --> 00:05:08.270
+to the gripper, and by convention the z-axis
+points outward in the directions of the fingers,
+
+00:05:08.270 --> 00:05:12.509
+the direction that it might approach an object
+for describing a pick up. The y-axis by convention
+
+00:05:12.509 --> 00:05:17.949
+is the direction between the finger tips, then
+we draw in the x-axis so as to create a proper
+
+00:05:17.949 --> 00:05:20.900
+right-handed 3-dimensional coordinate frame.
+
+00:05:20.900 --> 00:05:25.969
+If we look into the details of very famous
+engineering projects like the Apollo Lunar
+
+00:05:25.969 --> 00:05:29.759
+Missions, and we look at some of the documentations
+which are all available online and here we
+
+00:05:29.759 --> 00:05:35.889
+can see the x, y and z axis for the Apollo
+command module. And similarly for the Lunar
+
+00:05:35.889 --> 00:05:42.240
+module the documentation shows that the x-axis
+is vertically upwards and the z axis is forward
+
+00:05:42.240 --> 00:05:47.879
+in the direction of the front door. This is
+a picture of the massive Saturn V rocket which
+
+00:05:47.879 --> 00:05:52.620
+got the astronauts to the moon and back, and again
+if we look at the documentation carefully,
+
+00:05:52.620 --> 00:05:57.539
+we can see that the axes for the early stages
+of the rocket are clearly indicated. Some of the
+
+00:05:57.539 --> 00:06:01.400
+coordinate frame conventions are actually
+painted on the outside of the rocket, and
+
+00:06:01.400 --> 00:06:07.029
+if we look closely at this black ring up here
+what's called the instrumentation module,
+
+00:06:07.029 --> 00:06:11.089
+which in the flesh is actually quite a massive
+device, we can see quite clearly here is painted
+
+00:06:11.089 --> 00:06:15.839
+the direction of the positive z direction
+and the one at the back we can see the direction
+
+00:06:15.839 --> 00:06:22.490
+of its negative y-axis. This module is effectively
+the inertial measurement unit for the Saturn
+
+00:06:22.490 --> 00:06:28.109
+V rocket, functionality now is probably equivalent
+to what you have in the phone in your pocket.
+

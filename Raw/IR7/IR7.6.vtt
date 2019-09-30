@@ -1,0 +1,271 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.889 --> 00:00:09.000
+Let's recap what we've learnt about solving
+the inverse Kinematic problem for particular
+
+00:00:09.000 --> 00:00:14.529
+robot arms. So far we've looked at the analytic
+solution and that involved us creating a model
+
+00:00:14.529 --> 00:00:20.249
+of the robot's joints and links. We write
+down the equations for the forward kinematics
+
+00:00:20.249 --> 00:00:25.169
+of the robot arm and that's relatively a straightforward
+thing to do.
+
+00:00:25.169 --> 00:00:29.369
+Next comes the hard part, where we need to
+write down a lot of equations in attempt to
+
+00:00:29.369 --> 00:00:35.110
+solve for the unknown joint variables and
+that requires some human insight. Often when
+
+00:00:35.110 --> 00:00:38.770
+you're trying to do this, you'll find yourself
+going down some blind alleys before you come
+
+00:00:38.770 --> 00:00:42.989
+back out and determine the right way to get
+to the solution.
+
+00:00:42.989 --> 00:00:48.730
+This process can be automated, using a computer
+algebra package; you can write software that
+
+00:00:48.730 --> 00:00:54.949
+will solve the inverse kinematics for certain
+classes of robot arms. The great advantage
+
+00:00:54.949 --> 00:01:00.190
+of the analytic solution is that it explicitly
+shows the multiple configurations that the
+
+00:01:00.190 --> 00:01:06.380
+robot arm can be in. So for our two link manipulator,
+we showed two configurations with the middle
+
+00:01:06.380 --> 00:01:10.590
+joint either below the diagonal line or above
+the diagonal line.
+
+00:01:10.590 --> 00:01:15.750
+For the Puma 560 robot, we showed configurations
+where it's like a left handed person or a
+
+00:01:15.750 --> 00:01:22.780
+right handed person and so on. The multiple
+configurations come out explicitly when you
+
+00:01:22.780 --> 00:01:26.119
+solve the analytic equations.
+
+00:01:26.119 --> 00:01:30.119
+Another advantage of the analytic solution
+is you end up writing expressions for the
+
+00:01:30.119 --> 00:01:35.350
+joint angles in terms of the end effector
+pose and they are quite compact and that means
+
+00:01:35.350 --> 00:01:38.040
+that they are very fast to execute.
+
+00:01:38.040 --> 00:01:42.619
+The problem becomes increasingly difficult
+as the number of joints in the robot increases.
+
+00:01:42.619 --> 00:01:48.219
+In an earlier section we derived the solution
+for a simple two joint robot and already that
+
+00:01:48.219 --> 00:01:53.189
+took quite a number of slides in order to
+come up with the solution. What comes to our
+
+00:01:53.189 --> 00:01:59.350
+rescue is that over many decades, smart people
+have determined the inverse kinematic solutions
+
+00:01:59.350 --> 00:02:04.590
+for particular robots or for particular classes
+of robots, so they've done the hard work of
+
+00:02:04.590 --> 00:02:08.310
+deriving the solutions and these have been
+published in the literature.
+
+00:02:08.310 --> 00:02:11.900
+So if you've got a particular robot and you're
+looking for a solution, go and hit up the
+
+00:02:11.900 --> 00:02:16.569
+literature and see if somebody has already
+solved this problem for you.
+
+00:02:16.569 --> 00:02:20.629
+When you're trying to determine the inverse
+kinematics for a six degree of freedom robot,
+
+00:02:20.629 --> 00:02:25.260
+it's really, really useful to have what's
+called a "Spherical Wrist." Now a spherical
+
+00:02:25.260 --> 00:02:31.459
+wrist is one in which the three wrist joint
+axes all intersect at a common point, as shown
+
+00:02:31.459 --> 00:02:37.519
+in this sketch here. Almost all industrial
+robots have a spherical wrist. It's quite
+
+00:02:37.519 --> 00:02:42.940
+a complex mechanism but it leads to great
+simplicity when it comes to determining the
+
+00:02:42.940 --> 00:02:44.739
+inverse kinematics of the robot.
+
+00:02:44.739 --> 00:02:49.620
+In fact what it does is allow us to partition
+the problem into two. It allows us to solve
+
+00:02:49.620 --> 00:02:55.930
+for the position of the robot’s end effector,
+the XYZ co-ordinate and then separately to
+
+00:02:55.930 --> 00:03:01.190
+solve for the orientation of the robot's end
+effector, that is the orientation that could
+
+00:03:01.190 --> 00:03:07.170
+be expressed in terms roll, pitch, yaw angles
+or in terms of Euler angles. But what happens
+
+00:03:07.170 --> 00:03:10.650
+if it's not possible to determine the analytic
+solution?
+
+00:03:10.650 --> 00:03:14.930
+Perhaps the robot doesn't have a spherical
+wrist or what if it's just too hard to figure
+
+00:03:14.930 --> 00:03:20.049
+out or you can't be bothered to go through
+the pages of algebra required to determine
+
+00:03:20.049 --> 00:03:25.610
+the solution? Well there is an alternative
+and that is to find a numerical solution to
+
+00:03:25.610 --> 00:03:30.980
+the problem. We can always determine the forward
+kinematics of a robot, that's relatively straight
+
+00:03:30.980 --> 00:03:36.590
+forward to do as we showed in the previous
+lecture. If we know the desired pose of our
+
+00:03:36.590 --> 00:03:42.480
+robot, which I'm going to call Ksi star, then
+all we have to do is adjust the joint angles
+
+00:03:42.480 --> 00:03:48.319
+until the pose given to us by the forward
+kinematics Ksi equals the desired value Ksi
+
+00:03:48.319 --> 00:03:53.909
+star. So you could think of it perhaps as
+having a large number of dials, each dial
+
+00:03:53.909 --> 00:03:59.209
+represents a particular joint angle and I’m
+just going to adjust all of those dials until
+
+00:03:59.209 --> 00:04:05.049
+the robot's end effector pose equals the pose
+that I want. A more formal way of describing
+
+00:04:05.049 --> 00:04:09.010
+a problem like this is to represent it as
+an optimization problem.
+
+00:04:09.010 --> 00:04:13.840
+What I want to do is minimize the relative
+pose which is given by the forward kinematics
+
+00:04:13.840 --> 00:04:20.250
+of the robot compounded with the inverse of
+the desired pose and I want to know the joint
+
+00:04:20.250 --> 00:04:23.720
+angles that cause this minimum.
+
+00:04:23.720 --> 00:04:28.480
+We've mostly talked about serial linked robots
+and these are robots formed by a chain of
+
+00:04:28.480 --> 00:04:33.000
+links, starting at the base of the robot we
+have a link, that link holds up the second
+
+00:04:33.000 --> 00:04:36.530
+link, which holds up the third link and so on.
+
+00:04:36.530 --> 00:04:40.630
+An alternative structure for a robot is what's
+called a parallel link robot and that's shown
+
+00:04:40.630 --> 00:04:46.220
+here on the right. They have the advantage
+that all the motors are placed in the base.
+
+00:04:46.220 --> 00:04:51.260
+This has advantages over a serial link robot
+where each motor has to hold up not only the
+
+00:04:51.260 --> 00:04:55.700
+next link but also the motor that drives the
+link beyond that.
+
+00:04:55.700 --> 00:04:59.960
+Parallel link robots are also very, very ridged
+and they're capable of very high speed motion.
+
+00:04:59.960 --> 00:05:05.350
+They're used for high speed, very precise,
+pick and place operations. So for a serial
+
+00:05:05.350 --> 00:05:10.670
+link robot, the kinematics - the forward kinematics
+is very easy to determine, very easy to write
+
+00:05:10.670 --> 00:05:16.410
+down. However for a parallel link robot, the
+forward kinematics is very, very complex and
+
+00:05:16.410 --> 00:05:21.720
+an analytical form may not even exist. For
+a serial link robot, the inverse kinematics
+
+00:05:21.720 --> 00:05:28.530
+is typically complex and analytic form may
+not exist. However for most parallel link
+
+00:05:28.530 --> 00:05:33.210
+robots, the inverse kinematics is actually
+very easy to determine and an analytic form
+
+00:05:33.210 --> 00:05:39.600
+always exists. So there is some complementarity
+between serial and parallel link robots; one
+
+00:05:39.600 --> 00:05:43.820
+has an easy forward kinematics, the other
+has an easy inverse kinematics.
+

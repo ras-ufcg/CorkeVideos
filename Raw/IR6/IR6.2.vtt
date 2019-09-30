@@ -1,0 +1,219 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.980 --> 00:00:08.850
+Here I have created a very simple robot out
+of Lego. It's got simply one rotational joint
+
+00:00:08.850 --> 00:00:14.309
+or one revolute joint. And the end effector
+position of the robot can follow any point
+
+00:00:14.309 --> 00:00:18.550
+around a circle if not particularly interesting
+or particularly useful.
+
+00:00:18.550 --> 00:00:25.390
+What we are interested in now is to describe
+the pose of the end effector of this one joint
+
+00:00:25.390 --> 00:00:30.829
+robot. The end effector is indicated by this
+symbol here. We will recall from the earlier
+
+00:00:30.829 --> 00:00:35.600
+lecture that when we want to describe the
+pose of an object in two dimensions, we attach
+
+00:00:35.600 --> 00:00:40.370
+a coordinate frame to it and the position
+of the object is described by the position
+
+00:00:40.370 --> 00:00:45.090
+of the origin of the coordinate frame and
+the orientation of the object is described
+
+00:00:45.090 --> 00:00:51.309
+by the angle between that coordinate frame
+and the reference coordinate frame. I've indicated
+
+00:00:51.309 --> 00:00:56.109
+here a reference coordinate frame with the
+axis x and y.
+
+00:00:56.109 --> 00:01:01.820
+The first thing we're going to do is to rotate
+that coordinate frame by the angle Q1. That's
+
+00:01:01.820 --> 00:01:10.410
+the joint angle of our 1 degree freedom robot.
+So I'm going to apply a homogeneous transformation,
+
+00:01:10.410 --> 00:01:17.040
+a rotation, by the angle Q1. And now I'm going
+to translate the coordinate frame along the
+
+00:01:17.040 --> 00:01:23.500
+link of the robot. So I'm now going to apply
+a translation in the x direction. So the gray
+
+00:01:23.500 --> 00:01:29.440
+coordinate frame shown here represents the
+pose of the robot. We get to the end effector
+
+00:01:29.440 --> 00:01:35.580
+coordinate frame by rotating and then translating
+the reference coordinate frame. All these
+
+00:01:35.580 --> 00:01:42.160
+transforms are in two dimensions. So we say
+that they belong the set SE2. That's the set
+
+00:01:42.160 --> 00:01:47.490
+of all translations and rotations in two dimensions.
+
+00:01:47.490 --> 00:01:52.470
+Using what we learned in an earlier lecture,
+I can expand this out. Then I can multiply
+
+00:01:52.470 --> 00:01:57.570
+the two matrices together and I come up with
+a single homogeneous transformation matrix
+
+00:01:57.570 --> 00:02:03.210
+which describes the pose of the end effector.
+The position of the end effector is given
+
+00:02:03.210 --> 00:02:07.430
+by these two elements in three homogeneous
+transformation matrix and I've written them
+
+00:02:07.430 --> 00:02:13.310
+out here. And we can see that they describe
+a set of points which lie on a circle of radius
+
+00:02:13.310 --> 00:02:14.019
+A1.
+
+00:02:14.019 --> 00:02:20.500
+So the position of the end effector is a function
+of the joint angle Q1 and the orientation
+
+00:02:20.500 --> 00:02:26.920
+of the end effector which is given by this
+matrix here is also a function of Q1. So its
+
+00:02:26.920 --> 00:02:32.560
+not possible for us to independently set the
+position and the orientation of the robot.
+
+00:02:32.560 --> 00:02:39.879
+There are just not enough joints or degrees
+of freedom in a simple robot like this.
+
+00:02:39.879 --> 00:02:43.989
+Let's look at doing this in MATLAB. I'm going
+to define a couple of workspace variables
+
+00:02:43.989 --> 00:02:51.489
+A1 which represents a length of the first
+link and Q1 which represents the joint angle.
+
+00:02:51.489 --> 00:02:56.730
+Now in order to determine the end effector
+pose, I need to multiply together a couple
+
+00:02:56.730 --> 00:02:58.560
+of elementary transformations.
+
+00:02:58.560 --> 00:03:05.150
+An easier way to do this using the robot toolbox
+is with the function called trchain2. It computes
+
+00:03:05.150 --> 00:03:08.620
+the result of the chain of homogeneous transformations.
+
+00:03:08.620 --> 00:03:14.780
+The first one in the chain rotation by Q1
+and that's followed by a translation in the
+
+00:03:14.780 --> 00:03:21.510
+x direction, that's along the link by a distance
+A1. I just represent that as a string in MATLAB
+
+00:03:21.510 --> 00:03:29.310
+and then I pass in the joint angle that I'm
+interested in which is Q1 and here is the result.
+
+00:03:29.720 --> 00:03:36.739
+What this is done is when the trchain2 is
+executing, it looks of the variable A1 in
+
+00:03:36.739 --> 00:03:43.150
+the workspace and it looks for the variable
+Q1 as being the first element of the vector
+
+00:03:43.150 --> 00:03:49.939
+that I passed in. A1 from the workspace. Q1
+comes from the passed vector. Here is in numeric
+
+00:03:49.939 --> 00:03:57.079
+form the 3x3 homogeneous transformation matrix
+representing the pose of the end effector
+
+00:03:57.079 --> 00:04:00.459
+of our simple one link robot.
+
+00:04:00.459 --> 00:04:07.120
+Now I can do it using symbols instead of numbers.
+And to do that invoke some functions from
+
+00:04:07.120 --> 00:04:13.689
+MATLAB’s symbolic toolbox and I’m going
+to say Q1 is a symbol and A1 is a symbol.
+
+00:04:13.689 --> 00:04:17.470
+Now what I'm going to do is just repeat the
+command that I did previously.
+
+00:04:17.470 --> 00:04:22.200
+And what we had here is a symbolic representation
+of the pose of the end effector; the same
+
+00:04:22.200 --> 00:04:28.180
+as we worked out a slide ago. Another I can
+do using the robotic's toolbox is to import
+
+00:04:28.180 --> 00:04:37.380
+a model of a plainer one joint robot. I do
+that with this function mdl_planar1 and we
+
+00:04:37.380 --> 00:04:41.820
+created a new variable in that workspace;
+variable called P1. You can see that it's
+
+00:04:41.820 --> 00:04:46.720
+of a serial link of type. It's a robot manipulator
+type object.
+
+00:04:46.720 --> 00:04:51.760
+Now with this particular type object, it's
+got a number of methods. An interesting method
+
+00:04:51.760 --> 00:04:57.480
+is to teach method and if I invoke that, all
+you see here is a graphical representation
+
+00:04:57.480 --> 00:05:03.480
+of a one link robot and a simple teach pendant,
+a single slider here. And as I adjust the
+
+00:05:03.480 --> 00:05:10.850
+slider we see the robot move. I'm adjusting
+the value of the first joint angle. What we
+
+00:05:10.850 --> 00:05:19.170
+see here is the xy coordinate of the end effector
+of the robot changing as I adjust each joint angle.
+

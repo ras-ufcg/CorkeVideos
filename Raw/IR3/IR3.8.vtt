@@ -1,0 +1,481 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.280 --> 00:00:08.320
+Consider these two coordinate frames, frame
+A and frame B. They are both right-handed
+
+00:00:08.320 --> 00:00:09.920
+coordinate frames.
+
+00:00:09.920 --> 00:00:13.589
+And the problem we’re trying to solve is
+how do we describe the rotation of frame B
+
+00:00:13.589 --> 00:00:19.200
+with respect to frame A. Imagine we could
+pick up frame A and rotate it in space so
+
+00:00:19.200 --> 00:00:23.870
+that its axes were parallel to those of frame
+B. How do we do that?
+
+00:00:23.870 --> 00:00:29.560
+Well, a very famous Swiss mathematician, Leonhard
+Euler, came up with what’s called the Rotation
+
+00:00:29.560 --> 00:00:30.560
+Theorem.
+
+00:00:30.560 --> 00:00:36.280
+It states that two three-dimensional coordinate
+frames are related by a sequence of elementary
+
+00:00:36.280 --> 00:00:40.550
+rotations such as those about the x-axis,
+the y-axis, the z-axis.
+
+00:00:40.550 --> 00:00:45.460
+We need to apply no more than three of those,
+but the rotations in this sequence need to
+
+00:00:45.460 --> 00:00:50.719
+be about different axes; that is we’d rotate
+about x-axis, then the y-axis, then maybe
+
+00:00:50.719 --> 00:00:53.260
+the x-axis again or maybe about the z-axis.
+
+00:00:53.260 --> 00:00:59.370
+So any rotation can be expressed in terms
+of no more than three rotations as long as
+
+00:00:59.370 --> 00:01:04.780
+those three rotations are consecutively about
+different axes.
+
+00:01:04.780 --> 00:01:07.530
+Let’s demonstrate this Rotation Theorem.
+
+00:01:07.530 --> 00:01:12.460
+Here, I have my world reference frame and
+here I have a coordinate frame that has got
+
+00:01:12.460 --> 00:01:14.310
+an arbitrary orientation in space.
+
+00:01:14.310 --> 00:01:19.270
+And so, the Rotation Theorem says that I should
+be able to take this coordinate frame and
+
+00:01:19.270 --> 00:01:23.640
+with simply three elementary rotations achieve
+an orientation like this.
+
+00:01:23.640 --> 00:01:27.039
+So, I’m going to take a copy of that world
+reference frame.
+
+00:01:27.039 --> 00:01:30.290
+And, first thing I’m going to do is to rotate
+it a little bit around the x-axis.
+
+00:01:30.290 --> 00:01:34.350
+Then, I’m going to rotate it a little bit
+around the y-axis, and then I’m going to
+
+00:01:34.350 --> 00:01:36.549
+rotate it a bit around the z-axis.
+
+00:01:36.549 --> 00:01:40.770
+And if I pick this axis up and put it in here,
+we’ll see that it now has a roughly the
+
+00:01:40.770 --> 00:01:44.200
+same orientation as the blue frame that I
+started with.
+
+00:01:44.200 --> 00:01:51.039
+So, let’s write down all the possible sequences
+of rotation, where we apply this caveat that
+
+00:01:51.039 --> 00:01:55.340
+no two successive rotations are about the
+same axis.
+
+00:01:55.340 --> 00:01:58.700
+In fact, there are two of them and I’ve
+written them all down here.
+
+00:01:58.700 --> 00:02:03.590
+These rotations fall into two groups and the
+group shown here are referred to as Euler
+
+00:02:03.590 --> 00:02:04.590
+angles.
+
+00:02:04.590 --> 00:02:08.869
+And, they are the ones where there are two
+rotations about the same axis.
+
+00:02:08.869 --> 00:02:12.530
+The first one is rotation about X, then Y,
+then X again.
+
+00:02:12.530 --> 00:02:16.890
+Well, this one over here is Y, then Z, then
+Y again.
+
+00:02:16.890 --> 00:02:24.030
+So, in the Euler angle group, a particular
+axis will appear twice, but not twice consecutively.
+
+00:02:24.030 --> 00:02:29.250
+This particular group; rotation around Z,
+then around Y, and then around Z is quite
+
+00:02:29.250 --> 00:02:34.250
+commonly called Euler angles, but in fact
+there are six Euler angles.
+
+00:02:34.250 --> 00:02:38.470
+So, we need to be very, very careful when
+we talk about an angle sequence.
+
+00:02:38.470 --> 00:02:41.010
+It’s in fact not good enough just to say
+Euler angles.
+
+00:02:41.010 --> 00:02:46.299
+We should be very specific and say ZYZ Euler
+angles.
+
+00:02:46.299 --> 00:02:51.040
+Different engineering communities use different
+conventions, and the ZYZ convention is pretty
+
+00:02:51.040 --> 00:02:55.269
+common in robotics and in aerospace, but there
+are other engineering disciplines where they
+
+00:02:55.269 --> 00:02:57.110
+use different conventions.
+
+00:02:57.110 --> 00:03:00.810
+Be very, very careful when you just talk about
+Euler angles.
+
+00:03:00.810 --> 00:03:05.870
+Let’s experiment and here we’re talking
+about ZYZ sequence Euler angles.
+
+00:03:05.870 --> 00:03:13.989
+I’m going to use the Toolbox function eul2r,
+which takes three angular arguments, the three
+
+00:03:13.989 --> 00:03:14.989
+Euler angles.
+
+00:03:14.989 --> 00:03:17.459
+And, I’m just going to give them simple
+values: 0.1, 0.
+
+00:03:17.459 --> 00:03:20.430
+2 and 0.3 radians respectively.
+
+00:03:20.430 --> 00:03:25.780
+And, here is the resulting rotation matrix
+that corresponds to the three Euler angles.
+
+00:03:25.780 --> 00:03:31.590
+So you can think of this as two alternative
+representations for orientation of the coordinate
+
+00:03:31.590 --> 00:03:32.590
+frame.
+
+00:03:32.590 --> 00:03:37.549
+We can represent it as a 3 by 3 orthogonal
+matrix or we can represent it by three numbers
+
+00:03:37.549 --> 00:03:40.129
+which are the Euler angles.
+
+00:03:40.129 --> 00:03:41.909
+I can perform the inverse operation.
+
+00:03:41.909 --> 00:03:45.180
+I can convert a rotation matrix to Euler angles.
+
+00:03:45.180 --> 00:03:53.930
+To do that, I use the function tr2eul and
+I pass in the rotation matrix which we’ve
+
+00:03:53.930 --> 00:03:55.010
+just computed.
+
+00:03:55.010 --> 00:03:57.790
+And here we have the Euler angles.
+
+00:03:57.790 --> 00:04:02.959
+So I can convert Euler angles to a rotation
+matrix, a rotation matrix back to Euler angles.
+
+00:04:02.959 --> 00:04:08.790
+Let’s have a look at a slightly different
+case where the middle Euler angle is a negative
+
+00:04:08.790 --> 00:04:11.590
+number and the result is rotation matrix.
+
+00:04:11.590 --> 00:04:15.550
+It’s a different rotation matrix to the
+one we had before because it’s a different
+
+00:04:15.550 --> 00:04:16.750
+set of Euler angles.
+
+00:04:16.750 --> 00:04:21.160
+Now I’ll convert this rotation matrix back
+to Euler angles.
+
+00:04:21.160 --> 00:04:26.389
+And we’ll see that the Euler angles that
+we end up with are not the Euler angles that
+
+00:04:26.389 --> 00:04:27.840
+we started with.
+
+00:04:27.840 --> 00:04:32.830
+So this is another important consideration
+when we look at representing orientation in
+
+00:04:32.830 --> 00:04:38.940
+terms of these three-angle sequences: that
+they are not unique, but they are two different
+
+00:04:38.940 --> 00:04:43.870
+sets of Euler angles which result in exactly
+the same rotation matrix.
+
+00:04:43.870 --> 00:04:48.470
+And just to verify that that is the case,
+I’m going to convert this different set
+
+00:04:48.470 --> 00:04:51.840
+of Euler angles to a rotation matrix.
+
+00:04:51.840 --> 00:04:57.520
+I’m going to pass that answer in and we
+can see the resulting rotation matrix.
+
+00:04:57.520 --> 00:05:01.620
+And we can see that it is exactly the same
+as this one here.
+
+00:05:01.620 --> 00:05:06.780
+So there are two sets of Euler angles which
+result in exactly the same orientation in
+
+00:05:06.780 --> 00:05:12.240
+space, the same rotation matrix.
+
+00:05:12.240 --> 00:05:16.700
+The other group of rotation sequences are
+commonly called Cardan angles.
+
+00:05:16.700 --> 00:05:21.840
+These are named after a very famous, or infamous,
+Italian character who was a doctor, an astrologer
+
+00:05:21.840 --> 00:05:25.350
+and a gambler and spent some time in jail
+for heresy.
+
+00:05:25.350 --> 00:05:30.610
+But a very, very inventive person, he invented
+the combination lock and he invented the universal
+
+00:05:30.610 --> 00:05:35.160
+joint, the thing that transmits torque from
+an engine in the front of the car to the wheels
+
+00:05:35.160 --> 00:05:36.770
+at the back of the car.
+
+00:05:36.770 --> 00:05:41.600
+He also published widely on probability and
+was one of the first people to solve cubic
+
+00:05:41.600 --> 00:05:43.289
+and quartic polynomial equations.
+
+00:05:43.289 --> 00:05:45.789
+So a very, very bright person.
+
+00:05:45.789 --> 00:05:50.199
+The Cardan angles involve rotations around
+different axes.
+
+00:05:50.199 --> 00:05:54.440
+So no letter is repeated in the rotation sequence.
+
+00:05:54.440 --> 00:05:58.680
+The two of them are often referred to as roll,
+pitch and yaw angles.
+
+00:05:58.680 --> 00:06:03.680
+That’s the sequence XYZ or the sequence
+ZYX.
+
+00:06:03.680 --> 00:06:08.479
+And which particular one is used as roll,
+pitch, yaw angles depends a bit on the context
+
+00:06:08.479 --> 00:06:09.479
+of the problem.
+
+00:06:09.479 --> 00:06:16.319
+Roll, pitch, yaw angles are a really common
+convention for orientation of bodies in three-dimensional
+
+00:06:16.319 --> 00:06:17.319
+space.
+
+00:06:17.319 --> 00:06:22.520
+We have the x-axis pointing forward and so
+the roll angle is rotation around the x-axis.
+
+00:06:22.520 --> 00:06:24.960
+So that’s the first rotation that we do.
+
+00:06:24.960 --> 00:06:29.380
+Now we perform a rotation around the y-axis
+and that’s referred to as pitch.
+
+00:06:29.380 --> 00:06:31.069
+So that’s this sort of motion.
+
+00:06:31.069 --> 00:06:36.069
+And then after that rotation, we do a rotation
+around the z-axis and we refer to that as
+
+00:06:36.069 --> 00:06:37.069
+yaw motion.
+
+00:06:37.069 --> 00:06:42.470
+So roll, pitch, yaw description of attitude
+is a rotation around the x-axis, then around
+
+00:06:42.470 --> 00:06:45.700
+the y-axis, and then around the z-axis.
+
+00:06:45.700 --> 00:06:50.319
+A way to demonstrate this principle of three
+consecutive rotations is with this mechanism,
+
+00:06:50.319 --> 00:06:52.550
+a thing called a Gimbal mechanism.
+
+00:06:52.550 --> 00:06:54.410
+So, there are two coordinate frames here.
+
+00:06:54.410 --> 00:06:57.720
+We have the world reference coordinate frame
+here, the big red frame.
+
+00:06:57.720 --> 00:07:00.620
+And, we have a smaller coordinate frame in
+the middle here.
+
+00:07:00.620 --> 00:07:07.520
+Now, we can make a rotation around the x-axis,
+which is a motion like this.
+
+00:07:07.520 --> 00:07:11.600
+We can rotate around the y-axis, which is
+a rotation like this.
+
+00:07:11.600 --> 00:07:14.110
+And, we can rotate around the z-axis.
+
+00:07:14.110 --> 00:07:19.860
+So, I can put this inner coordinate frame
+at any orientation that I like and the gimbals
+
+00:07:19.860 --> 00:07:23.330
+will find the appropriate angles to allow
+that to happen.
+
+00:07:23.330 --> 00:07:28.849
+So this demonstrates very clearly shows that any
+orientation of this inner frame can be achieved
+
+00:07:28.849 --> 00:07:35.160
+by arbitrary choice of three rotation angles
+around the x, y, and z-axis.
+
+00:07:35.160 --> 00:07:39.449
+Let’s have a look at some roll, pitch, yaw
+angles in practice.
+
+00:07:39.449 --> 00:07:46.699
+This is a schematic diagram of NASA’s lunar
+module from the late ’60s and early ’70s.
+
+00:07:46.699 --> 00:07:49.440
+We can see the coordinate frames indicated
+on here.
+
+00:07:49.440 --> 00:07:55.009
+We can see that they define roll as rotation
+around the z-axis which is toward the front
+
+00:07:55.009 --> 00:08:00.870
+of the vehicle and they have defined yaw as
+being around the x-axis which is the vertical
+
+00:08:00.870 --> 00:08:04.130
+axis for this particular vehicle.
+
+00:08:04.130 --> 00:08:08.620
+The MATLAB functions for roll, pitch, yaw
+angles are very similar to those for Euler
+
+00:08:08.620 --> 00:08:09.620
+angles.
+
+00:08:09.620 --> 00:08:14.430
+We used the function rpy2r and we pass in
+the roll, pitch, yaw angles.
+
+00:08:14.430 --> 00:08:16.550
+I’ve just made up some simple numbers here.
+
+00:08:16.550 --> 00:08:17.660
+The roll angle is 0.1
+
+00:08:17.660 --> 00:08:18.660
+radians.
+
+00:08:18.660 --> 00:08:20.690
+The pitch angle is 0.2 radians.
+
+00:08:20.690 --> 00:08:23.700
+And the yaw angle is 0.3 radians.
+
+00:08:23.700 --> 00:08:27.480
+And this is the resulting orthogonal rotation
+matrix.
+
+00:08:27.480 --> 00:08:31.340
+Once again, there is an inverse function.
+
+00:08:31.340 --> 00:08:39.150
+So tr2rpy, and I pass in the rotation matrix
+and the result are roll, pitch, yaw angles,
+
+00:08:39.150 --> 00:08:41.010
+the same as those that I started with.
+

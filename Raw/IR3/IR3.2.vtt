@@ -1,0 +1,145 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.540 --> 00:00:07.900
+In the previous lecture when we were discussing
+2-dimensional worlds, we introduced the concept
+
+00:00:07.900 --> 00:00:09.980
+of a right-handed coordinate frame.
+
+00:00:09.980 --> 00:00:14.100
+And, just to remind you, the right-handed
+coordinate frame is constructed like this.
+
+00:00:14.100 --> 00:00:19.200
+We draw the x-axis and then we swing the y-axis
+up by 90 degrees.
+
+00:00:19.200 --> 00:00:24.050
+A three-dimensional coordinate frame is actually
+very similar to the two-dimensional coordinate
+
+00:00:24.050 --> 00:00:25.050
+frame.
+
+00:00:25.050 --> 00:00:28.370
+So, here is the two-dimensional right-handed
+coordinate frame that we just introduced.
+
+00:00:28.370 --> 00:00:32.560
+And, what I’m going to do do now is to rotate
+that in three dimensions.
+
+00:00:32.560 --> 00:00:35.790
+And, what we see is that the z-axis was previously
+hidden.
+
+00:00:35.790 --> 00:00:38.980
+Previously, it was sticking up at us out of
+the screen.
+
+00:00:38.980 --> 00:00:42.680
+To create a 3-dimensional right-handed coordinate
+frame, we start in a similar way.
+
+00:00:42.680 --> 00:00:44.470
+We draw the x-axis.
+
+00:00:44.470 --> 00:00:50.370
+We swing the y-axis so that it makes an angle
+of 90 degrees to the x-axis.
+
+00:00:50.370 --> 00:00:56.420
+And then, we swing the z-axis upwards and
+it also makes an angle of 90 degrees to the
+
+00:00:56.420 --> 00:01:00.160
+x-axis and also makes an angle of 90 degrees
+to the y-axis.
+
+00:01:00.160 --> 00:01:06.250
+There’s a very close relationship between
+the 2-dimensional and the 3-dimensional coordinate
+
+00:01:06.250 --> 00:01:07.250
+frames.
+
+00:01:07.250 --> 00:01:11.680
+Let me put down the two-dimensional coordinate
+frame and here is three-dimensional coordinate
+
+00:01:11.680 --> 00:01:12.680
+frame.
+
+00:01:12.680 --> 00:01:18.560
+And, I can overlay the x-axis and the y-axis
+and we see that the z-axis points upwards.
+
+00:01:18.560 --> 00:01:22.150
+We refer to this as a right-handed coordinate
+frame.
+
+00:01:22.150 --> 00:01:26.460
+And, the reason we call it a right-handed
+frame is the orientation of the axes can be
+
+00:01:26.460 --> 00:01:29.140
+defined very simply using my right hand.
+
+00:01:29.140 --> 00:01:31.030
+So, this is the x-axis.
+
+00:01:31.030 --> 00:01:32.030
+This is the y-axis.
+
+00:01:32.030 --> 00:01:34.710
+And, this is the z-axis pointing upwards.
+
+00:01:34.710 --> 00:01:40.280
+So, whenever we’re doing work with 3-dimensional
+coordinate frames, they are always right-handed
+
+00:01:40.280 --> 00:01:43.119
+coordinate frames.
+
+00:01:43.119 --> 00:01:47.530
+This particular coordinate frame that I built,
+we have an x-axis and a y-axis and this one,
+
+00:01:47.530 --> 00:01:49.619
+the z-axis pointing downwards.
+
+00:01:49.619 --> 00:01:51.520
+This is a left-handed coordinate frame.
+
+00:01:51.520 --> 00:01:55.650
+So it’s best not to use these, they are
+going to cause you all sorts of grief.
+
+00:01:55.650 --> 00:01:57.880
+So, don’t use left-handed coordinate frames.
+
+00:01:57.880 --> 00:02:00.409
+Go with the right-handed coordinate frame.
+
+00:02:00.409 --> 00:02:02.550
+So, just to recap.
+
+00:02:02.550 --> 00:02:07.280
+When we create a right-handed coordinate frame,
+we use this rule what’s called the right-handed
+
+00:02:07.280 --> 00:02:09.420
+rule, and I take my right hand.
+
+00:02:09.420 --> 00:02:11.810
+The x-axis is parallel to my thumb.
+
+00:02:11.810 --> 00:02:14.170
+The y-axis is parallel to my index finger.
+
+00:02:14.170 --> 00:02:17.739
+And, the z-axis is parallel to my middle finger.
+

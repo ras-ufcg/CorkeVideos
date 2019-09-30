@@ -1,0 +1,70 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.669 --> 00:00:07.569
+I've used the term kinematics a number of
+times in this lecture and I haven't really
+
+00:00:07.569 --> 00:00:13.950
+been very clear about what it means. Kinematics
+is a branch of mathematics that studies the
+
+00:00:13.950 --> 00:00:20.500
+motion of a body or a system of bodies. Kinematics
+is concerned with the positions of things
+
+00:00:20.500 --> 00:00:25.789
+or the angles between things and is concerned
+with velocities. These can be translational
+
+00:00:25.789 --> 00:00:29.890
+velocities or they could be angular velocities.
+
+00:00:29.890 --> 00:00:34.219
+Kinematics is not concerned with forces and
+moments. That's the business of dynamics.
+
+00:00:34.219 --> 00:00:40.550
+So in kinematics people study mechanisms such
+as the ones shown here and try to understand
+
+00:00:40.550 --> 00:00:45.280
+how the motion of one body is related to the
+motion of another body.
+
+00:00:45.280 --> 00:00:50.219
+I have shown here examples of a number of
+quite complex mechanisms. In kinematics, is
+
+00:00:50.219 --> 00:00:57.499
+the study of the motion of the various components
+of these mechanisms. In robotics, we consider
+
+00:00:57.499 --> 00:00:59.429
+two kinematic problems.
+
+00:00:59.429 --> 00:01:04.190
+First one, in what we discuss in this particular
+lecture is what's called the forward kinematic
+
+00:01:04.190 --> 00:01:10.690
+problem. And that is given the robot joint
+angles, what's the pose of the robot's tool tip?
+
+00:01:11.080 --> 00:01:16.079
+The second problem is called the inverse kinematics.
+And we're going to discuss that in the next
+
+00:01:16.079 --> 00:01:21.640
+lecture. Given that I know the pose that I
+want the robot in-defector to have, the problem
+
+00:01:21.640 --> 00:01:27.240
+is to determine what are the joint angles
+required in order to achieve that. Let me
+
+00:01:27.240 --> 00:01:30.210
+leave you with this quote I really like. It's
+about kinematics.
+

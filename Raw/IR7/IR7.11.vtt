@@ -1,0 +1,193 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.520 --> 00:00:08.960
+Let's restate the problem. We want to move
+the end effector pose smoothly from pose A
+
+00:00:08.960 --> 00:00:14.949
+to pose B. What we're going to do now is to
+determine the pose of the end effector at
+
+00:00:14.949 --> 00:00:21.110
+each intermediate point. We have an interpolation
+function, its arguments are the initial pose,
+
+00:00:21.110 --> 00:00:28.280
+the final pose and a scalar variable S which
+vary smoothly from 0 to 1. The result of this
+
+00:00:28.280 --> 00:00:35.540
+function is the intermediate pose of the robot's
+end effector. For each of these intermediate
+
+00:00:35.540 --> 00:00:40.079
+poses we're going to apply the inverse kinematic
+function to determine the joint angles that
+
+00:00:40.079 --> 00:00:44.250
+corresponds to that particular value of S.
+
+00:00:44.250 --> 00:00:48.070
+So in summary what we're doing is that in
+every time step we're going to interpolate
+
+00:00:48.070 --> 00:00:53.760
+the post using the top equation. Then we're
+going to perform inverse kinematics. This
+
+00:00:53.760 --> 00:00:58.910
+is a different algorithm than what we used
+in the previous case. Previously we interpolated
+
+00:00:58.910 --> 00:01:05.100
+the joint angles. In this case we're actually
+interpolating the Cartesian pose. We're going
+
+00:01:05.100 --> 00:01:09.969
+to carry on from where we left off from the
+previous example. What we're going to do now
+
+00:01:09.969 --> 00:01:16.359
+is Cartesian interpolated motion. I am going
+to create a new workspace variable TS. This
+
+00:01:16.359 --> 00:01:22.389
+is the interpolated Cartesian pose. I'm going
+to use the function ctraj for Cartesian trajectory
+
+00:01:22.389 --> 00:01:29.229
+I am going to phase in the initial pose, the
+final pose and the number of time steps, create
+
+00:01:29.229 --> 00:01:34.219
+a new variable in our workspace called TS.
+We can see that this is a three dimensional
+
+00:01:34.219 --> 00:01:42.889
+matrix, four rows, four columns and 50 planes.
+So we can imagine as a set of 4x4 matrices
+
+00:01:42.889 --> 00:01:50.209
+stacked one above the other. The final dimension indicates which particular time step we're talking about.
+
+00:01:50.209 --> 00:01:56.829
+Let's have a look at the, all the rows and
+all the columns of the first element. That's
+
+00:01:56.829 --> 00:02:08.369
+the initial pose. We can look at the second
+pose and the third pose and so on. Now I can
+
+00:02:08.369 --> 00:02:16.260
+actually phase this three dimensional matrix
+into the inverse kinematic function. Inverse
+
+00:02:16.260 --> 00:02:20.940
+kinematics for a robot with 6 joints and a
+spherical wrist. I'm going to pass in TS.
+
+00:02:20.940 --> 00:02:29.010
+What it's going to do is to compute the joint
+angles for every pose in this matrix. So the
+
+00:02:29.010 --> 00:02:37.000
+result now QS, we can see is a matrix with
+50 rows and 6 columns. It's computed, the
+
+00:02:37.000 --> 00:02:44.670
+inverse kinematics, for every single pose
+in the matrix TS. And we can go back to figure
+
+00:02:44.670 --> 00:02:54.030
+1 and we can plot that. See what it looks
+like. This is the Cartesian interpolated motion.
+
+00:02:58.180 --> 00:03:05.190
+And coming back to figure 2 we can plot the
+joint angles corresponding to that Cartesian
+
+00:03:05.190 --> 00:03:12.550
+motion. We can see that they are broadly similar
+to the trajectory that we got from joint interpolated
+
+00:03:12.550 --> 00:03:17.420
+motion. They certainly start and end at the
+same values but the path along the middle
+
+00:03:17.420 --> 00:03:22.130
+of the trajectory, they follow is slightly
+different. That difference is enough to change
+
+00:03:22.130 --> 00:03:29.450
+the motion from being slightly curved in 3D
+space to being a straight line in 3D space.
+
+00:03:29.450 --> 00:03:35.170
+This is the result of the Cartesian interpolation
+strategy. Here we can see the robot joint
+
+00:03:35.170 --> 00:03:42.160
+angles varying smoothly from the initial pose
+to the final pose over a period of two seconds.
+
+00:03:42.160 --> 00:03:47.620
+If I compute the forward kinematics from each
+of the intermediate set of joint angles and
+
+00:03:47.620 --> 00:03:52.530
+plot the x coordinate versus the y coordinate.
+I can see now that the robot end effector
+
+00:03:52.530 --> 00:03:56.880
+is moving in a perfectly straight line from
+A to B.
+
+00:03:56.880 --> 00:04:02.520
+If I now apply forward kinematic function
+to all the intermediate sets of joint angles,
+
+00:04:02.520 --> 00:04:08.540
+I can determine the pose of the robot end
+effector. If I plot the end effector x coordinate
+
+00:04:08.540 --> 00:04:13.130
+against its y coordinate, I can see that the
+end effector has now moved in a perfectly
+
+00:04:13.130 --> 00:04:16.819
+straight line from pose A to pose B.
+
+00:04:16.819 --> 00:04:21.189
+Similarly when I look at the orientation of
+the end effector I can see that the pitch
+
+00:04:21.189 --> 00:04:27.810
+and yew angles are equal to 0 for the entire
+duration of the trajectory. So the tool orientation
+
+00:04:27.810 --> 00:04:32.120
+remains constant and the tool tip has moved
+in a straight line.
+
+00:04:32.120 --> 00:04:37.849
+We achieved this just by changing the way
+we do the interpolation or interpolating Cartesian
+
+00:04:37.849 --> 00:04:44.520
+poses rather than robot joint angles. If we
+compare the two sets of joint angle trajectories,
+
+00:04:44.520 --> 00:04:49.409
+we can see that they're actually quite similar.
+There is actually not very much variation
+
+00:04:49.409 --> 00:04:54.189
+in the joint angles as a function of time
+necessary to achieve this straight line end
+
+00:04:54.189 --> 00:04:57.810
+effector motion versus the curbed end effector
+motion.
+

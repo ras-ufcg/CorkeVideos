@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:07.960 --> 00:00:11.100
+In this lecture, we are going to talk about
+robot arms.
+
+00:00:11.100 --> 00:00:14.900
+In particular, we are going to talk about
+the relationship between the joints in a robot's
+
+00:00:14.900 --> 00:00:18.250
+arm and the pose of the robot end effector.
+
+00:00:18.250 --> 00:00:22.550
+So as I've moved the various joints in my
+own arm we can say that the pose of the end
+
+00:00:22.550 --> 00:00:24.169
+of my arm changes, right?
+
+00:00:24.169 --> 00:00:28.710
+So what we're going to do is how this works
+for a robot arm which typically comprises
+
+00:00:28.710 --> 00:00:30.520
+a number of joints.
+
+00:00:30.520 --> 00:00:35.489
+In a robot's arm, they vary, they have different
+numbers of joints, some robot arms might have
+
+00:00:35.489 --> 00:00:40.120
+only 3 joints, some robot arms might have
+6 joints and some might have 10 joints, could have
+
+00:00:40.120 --> 00:00:41.449
+a 100 joints.
+
+00:00:41.449 --> 00:00:44.800
+There are also two different sorts of joints
+that robot arms have.
+
+00:00:44.800 --> 00:00:47.410
+There are joints that are called Prismatic
+joints.
+
+00:00:47.410 --> 00:00:49.980
+These are joints that slide or elongate.
+
+00:00:49.980 --> 00:00:54.920
+And there are joints that are rotating joints,
+like the joints that I have in my own arm.
+
+00:00:54.920 --> 00:00:59.260
+So we call these sort of rotating joints
+Revolute joints and the sliding or telescoping
+
+00:00:59.260 --> 00:01:01.510
+joints we called Prismatic joints.
+
+00:01:01.510 --> 00:01:06.130
+So here are some pictures of a number of different
+types of robot arms that exist.
+
+00:01:06.130 --> 00:01:11.330
+This is just a very small sample of a very very
+large number of robot arms that exist within
+
+00:01:11.330 --> 00:01:12.330
+the world.
+
+00:01:12.330 --> 00:01:16.000
+We are going to work through some of these
+examples, look at them, look at the number
+
+00:01:16.000 --> 00:01:20.549
+of joints that they have, the different types
+of joints that they have and then work on
+
+00:01:20.549 --> 00:01:26.100
+the mathematical description, the mathematical
+relationship between the joint angles and
+
+00:01:26.100 --> 00:01:28.120
+the robot end effector pose.
+

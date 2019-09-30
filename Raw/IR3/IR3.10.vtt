@@ -1,0 +1,127 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.520 --> 00:00:08.670
+When we're discussing industrial type robots,
+it's important to describe the orientation
+
+00:00:08.670 --> 00:00:12.420
+of the end effector, the gripper - the piece
+of the robot that does the work by picking
+
+00:00:12.420 --> 00:00:18.090
+objects up and putting them down. The common
+convention in this type of robotics is what's
+
+00:00:18.090 --> 00:00:24.200
+called the 2-axis representation. We start
+off by defining a vector which is called the
+
+00:00:24.200 --> 00:00:28.670
+approach vector and that's the vector that's
+parallel to the fingers of the robot. We define
+
+00:00:28.670 --> 00:00:32.980
+another vector which we call the orientation
+vector and that's the vector that joins the
+
+00:00:32.980 --> 00:00:39.220
+tips of two fingers. So that says something
+about the twist of the robot fingers around
+
+00:00:39.220 --> 00:00:45.800
+the approach vector. And for a lot of robotic
+manipulation tasks, just knowing the approach
+
+00:00:45.800 --> 00:00:51.360
+vector and the orientation vector is sufficient
+to be able to describe the orientation of the gripper.
+
+00:00:51.800 --> 00:00:57.020
+In order to create a right-handed coordinate
+frame we introduce a third vector just called
+
+00:00:57.020 --> 00:01:01.850
+the normal vector. Now we can express the
+orientation of the gripper as an orthonormal
+
+00:01:01.850 --> 00:01:08.359
+rotation matrix. We do that by stacking up
+as columns the N vector, the O vector and
+
+00:01:08.359 --> 00:01:14.659
+the A vector. We're can expand this out as
+a 3 x 3 matrix and each column are the elements
+
+00:01:14.659 --> 00:01:21.969
+of the N, O and A vectors. All of these columns
+must be orthogonal. So if we know the A and
+
+00:01:21.969 --> 00:01:28.799
+the O vector, we can compute the N vector
+as the cross product of the O and the A vector.
+
+00:01:28.799 --> 00:01:35.389
+Here's a quick recap on the rules that relate
+the columns of an orthogonal matrix. A little
+
+00:01:35.389 --> 00:01:42.319
+trick that I use to aid my memory is to consider
+that N, O and A are written on a circular
+
+00:01:42.319 --> 00:01:46.340
+strip of paper. We start with the symbol that
+we want to know, and is equal to the cross
+
+00:01:46.340 --> 00:01:49.389
+product of the next two around the circle.
+
+00:01:49.389 --> 00:01:54.340
+Here I have a very simple robot and we have
+our world coordinate frame here, which is
+
+00:01:54.340 --> 00:02:00.729
+our reference for both position and for orientation.
+And this robot is going to pick up this battery.
+
+00:02:00.729 --> 00:02:05.669
+In order to do that, we need to describe both
+the position and the orientation of the gripper.
+
+00:02:05.669 --> 00:02:09.170
+It might be that we want to pick up the battery
+with a gripper orientation like this or we
+
+00:02:09.170 --> 00:02:13.760
+might want to pick up the battery with a gripper
+orientation like this. Either way we need
+
+00:02:13.760 --> 00:02:17.660
+to be able to describe the orientation of
+the gripper. So we do what we've done before,
+
+00:02:17.660 --> 00:02:23.890
+with other objects. We attach a coordinate
+frame to the gripper of the robot. We orient
+
+00:02:23.890 --> 00:02:28.620
+it so that the z-axis is pointing outwards.
+We refer to this as the approach vector. It's
+
+00:02:28.620 --> 00:02:33.130
+generally the direction in which the gripper
+approaches the object. We have another vector
+
+00:02:33.130 --> 00:02:37.590
+which we call the orientation vector and is
+parallel to the y-axis of the gripper's coordinate
+
+00:02:37.590 --> 00:02:42.620
+frame and that is the orientation of the gripper.
+Do we want the gripper's fingers like this
+
+00:02:42.620 --> 00:02:47.950
+or like this. And the third vector, the x-axis
+we refer to as the normal vector.
+
