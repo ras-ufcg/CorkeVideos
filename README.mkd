@@ -1,0 +1,30 @@
+CorkeVideos
+=============
+
+
+This repository stores the translation file of the youtube videos from the Robot Academy of Peter Corke.
+We will translate it to Portuguese (Brasil). There is also the raw files on the "Raw" Folder, anyone that want to help translate to another language can fork it and use it on another git.
+
+
+Translation Team
+--------------
+
+The translation was coordinated by Yuri Loia, and the team was composed by: 
+
+Alysson Hyago, 
+Andhré Carvalho, 
+Caio Porto, 
+Debora Nunes, 
+Felipe Nascimento, 
+Giovana Oliveira , 
+João Pedro Melquiades, 
+Lara Sobral, 
+Lucas Fernando,
+Maysa Freire, 
+Natã Macedo, 
+Vinicius França, 
+Pyettra Feitosa, 
+Victor Marinho, 
+Vinicius Formiga, 
+Vitor Araujo
+
