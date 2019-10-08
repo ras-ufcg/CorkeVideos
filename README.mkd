@@ -9,7 +9,7 @@ We will translate it to Portuguese (Brasil). There is also the raw files on the 
 Translation Team
 --------------
 
-The translation was coordinated by Yuri Loia, and the team was composed by: 
+The translation was coordinated by Yuri Loia(github.com/yuriloia), and the team was composed by: 
 
 Alysson Hyago, 
 
