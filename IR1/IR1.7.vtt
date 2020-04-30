@@ -149,152 +149,116 @@ Imagine if it was your job to inspect sewer
 systems. It's dark, it's unpleasant, and actually
 
 00:03:22.380 --> 00:03:26.970
-a little dangerous. So people have been building
-robots that can be placed in the pipe lines
+um pouco perigoso. Então, as pessoas estão construindo robôs que podem ser colocados nas tubulações
 
 00:03:26.970 --> 00:03:31.970
-to perform the inspection without sending
-human beings down there. So robotic researchers
+para realizar a inspeção sem o auxílio de seres humanos. Então, os pesquisadores de robótica
 
 00:03:31.970 --> 00:03:37.070
-have been developing robot systems for performing
-this kind of inspection work. And here we
+têm desenvolvido sistemas robóticos para realizar esse tipo de trabalho de inspeção. E aqui
 
 00:03:37.070 --> 00:03:42.440
-see an example of a pipe inspection robot.
-It's got wheels to propel it through the pipe,
+vemos um exemplo de robô de inspeção de tubos.
+Tem rodas para impulsioná-lo através do tubo,
 
 00:03:42.440 --> 00:03:44.000
-it's got lights and cameras.
+tem luzes e câmeras.
 
 00:03:44.000 --> 00:03:48.580
-A massive amount of money is spent each year
-on inspecting power lines and there's a couple
+Uma quantia enorme de dinheiro é gasta todos os anos na inspeção de linhas de energia e existem algumas
 
 00:03:48.580 --> 00:03:53.870
-of approaches to doing this. One is to fly
-a robot along the power line or else to build
+formas de fazer isso. Uma delas é pilotar um robô ao longo da linha de energia ou então construir
 
 00:03:53.870 --> 00:03:59.720
-a robot that can crawl along the power lines.
-Flying helicopters near power lines is a dangerous
+um robô que possa rastejar ao longo das linhas de energia. Helicópteros voando perto de linhas de energia é um negócio
 
 00:03:59.720 --> 00:04:04.880
-business. And each year, a number of helicopter
-crashes are caused by the helicopter coming
+perigoso. E a cada ano várias colisões de helicópteros são causadas
 
 00:04:04.880 --> 00:04:10.140
-into too close proximity with the wires that
-it is inspecting. So this is exactly the sort
+pela proximidade com os fios que estão sendo inspecionados. Portanto, esse é exatamente o tipo
 
 00:04:10.140 --> 00:04:13.930
-of job, a dangerous job that a robot should
-do.
+de trabalho, um trabalho perigoso que um robô deve fazer.
 
 00:04:13.930 --> 00:04:19.160
-Perhaps our most important asset is the planet
-on which we live and researchers are developing
+Talvez nosso ativo mais importante seja o planeta em que vivemos e os pesquisadores estão desenvolvendo
 
 00:04:19.160 --> 00:04:24.930
-all manner of robots to inspect and monitor
-the health of our planet. A few of them are
+todos os tipos de robôs para inspecionar e monitorar a saúde de nosso planeta. Alguns deles serão
 
 00:04:24.930 --> 00:04:30.090
-seen here. They are flying robots that could
-be flown into dangerous weather systems such
+vistos aqui. Eles são robôs voadores que podem ser transportados para sistemas climáticos perigosos, como
 
 00:04:30.090 --> 00:04:36.250
-as hurricanes or cyclones, robots that can
-explore the inside of volcanic craters, blimp-based
+como furacões ou ciclones, robôs que podem explore o interior de crateras vulcânicas, baseadas em dirigíveis
 
 00:04:36.250 --> 00:04:41.840
-robots for monitoring the health of the Amazon
-rain forest, underwater exploration robots
+robôs para monitorar a saúde da floresta amazônica, robôs de exploração subaquática,
 
 00:04:41.840 --> 00:04:47.620
-and Antarctic exploration robots, and even robotic
-boats for monitoring the quality of water
+robôs de exploração para Antártica, e até barcos robôs para monitorar a qualidade da água
 
 00:04:47.620 --> 00:04:51.280
-in the storages that provide drinking water
-for cities.
+nos armazéns que fornecem água potável para as cidades.
 
 00:04:51.280 --> 00:04:56.729
-It's a dangerous business sending humans beneath
-the surface of our oceans. Human divers are
+É um negócio perigoso enviar humanos para as profundezas dos nossos oceanos. Os mergulhadores humanos
 
 00:04:56.729 --> 00:05:01.360
-limited in the depths that they can dive to.
-They also require a support vessel on the
+são limitados nas profundezas em que podem mergulhar. Eles também exigem uma embarcação de apoio na
 
 00:05:01.360 --> 00:05:06.240
-surface from which they dive and for which
-they return. Because of this limitation on
+superfície da qual mergulham e para a qual retornam. Por causa dessas limitações
 
 00:05:06.240 --> 00:05:11.069
-humans under the water, there's been an enormous
-amount of research over recent decades in
+humanas abaixo da água, houve uma enorme quantidade de pesquisas nas últimas décadas na
 
 00:05:11.069 --> 00:05:15.909
-building underwater robot systems. These are
-completely autonomous. They've got a number
+construção de sistemas robóticos subaquáticos. Estes são completamente autônomos. Eles têm vários
 
 00:05:15.909 --> 00:05:20.659
-of sensors on board and we can send them off
-to do missions like photographic survey of
+sensores a bordo e podemos enviá-los para fazer missões como levantamento fotográfico de
 
 00:05:20.659 --> 00:05:27.689
-wrecks, exploring for minerals and examining
-the health of assets such as coral reefs.
+destroços, explorar minerais e examinar a saúde de ativos como os recifes de coral.
 
 00:05:27.689 --> 00:05:32.479
-Another place that humans cannot go is to
-other planets. And here is a collection of
+Outro lugar que os humanos não podem ir é para outros planetas. And here is a collection of
 
 00:05:32.479 --> 00:05:37.659
-robots that have been sent to Mars. Here in
-the front we have the small robots. Sojourner,
+E aqui está uma coleção de robôs que foram enviados para Marte. Aqui na frente temos os pequenos robôs. Sojourner,
 
 00:05:37.659 --> 00:05:43.620
-which was sent in 1997. Behind that is a robot
-which is a copy of Spirit and Opportunity
+que foi enviado em 1997. Por trás é um robô que é uma cópia do Spirit e Opportunity
 
 00:05:43.620 --> 00:05:50.389
-which were sent to Mars in 2003. And over
-here, we have this giant robot, Curiosity,
+que foram enviados para Marte em 2003. E aqui, temos esse robô gigante, Curiosity,
 
 00:05:50.389 --> 00:05:55.879
-which was sent to Mars in 2012. Here is an
-example of some pictures of Mars taken from
+que foi enviado para Marte em 2012. Aqui está um exemplo de algumas fotos de Marte tiradas pelo
 
 00:05:55.879 --> 00:06:01.740
-the Curiosity rover. And again, here we can
-see the size of the Curiosity rover with respect
+Curiosity. E, novamente, aqui podemos ver o tamanho do Curiosity em relação
 
 00:06:01.740 --> 00:06:03.300
-to a human engineer.
+a um engenheiro humano.
 
 00:06:03.300 --> 00:06:08.460
-The important message here is that there are
-environments that we want to go to learn information
+A mensagem importante aqui é que existem ambientes que queremos ir para obter informações
 
 00:06:08.460 --> 00:06:14.999
-about the health or the state of the environment.
-The deep oceans, rain forest, volcanoes or
+sobre a saúde ou o estado do meio ambiente. As profundezas dos oceanos, floresta tropical, vulcões
 
 00:06:14.999 --> 00:06:20.340
-other planets. But it's currently either too
-expensive or it's too dangerous to send human
+ou outros planetas. Mas atualmente é muito caro ou é muito perigoso enviar recursos humanos
 
 00:06:20.340 --> 00:06:25.330
-beings to those places. So we send robots
-there instead and they serve as our proxies
+para esses lugares. Em vez disso, enviamos robôs para lá e eles servem como nossos procuradores
 
 00:06:25.330 --> 00:06:31.449
-or our agents and we use sensory information
-from those robots to learn about that environment
+ou nossos agentes e usamos informações sensoriais desses robôs para aprender sobre esse ambiente
 
 00:06:31.449 --> 00:06:35.349
-rather than having to send human beings carrying
-instruments to those places.
-
+em vez de ter que enviar seres humanos carregando instrumentos para esses lugares.
