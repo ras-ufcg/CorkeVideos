@@ -183,93 +183,93 @@ the work with the master arm so they can see
 what’s happening on a TV monitor. They move
 
 00:04:08.510 --> 00:04:14.970
-the master arms, the slave arms move in synchronism
-and perform the task remotely. This is a technique
+os braços mestres, os braços escravos movem em sincronia
+e realizam a tarefa remotamente. Essa técnica é
 
 00:04:14.970 --> 00:04:19.919
-called teleoperation. It’s not really robotic.
-In some ways, you can think of it as a very-sophisticated,
+chamada teleoperação. Ela não é de fato robótica. 
+De certa forma, você pode considerar ela como uma sofisticada
 
 00:04:19.919 --> 00:04:25.869
-remote-controlled technology. It was really
-important to achieve this specific task at
+tecnologia de controle remoto. Foi bastante
+importante completar essa tarefa especial
 
 00:04:25.869 --> 00:04:27.860
-the Argonne National Laboratory.
+no Laboratório Nacional de Argonne.
 
 00:04:27.860 --> 00:04:33.259
-This technology is an important precursor
-to modern manufacturing robots. What we do
+Essa tecnologia é uma importante precursora
+da produção moderna de robôs. O que nós fazemos
 
 00:04:33.259 --> 00:04:38.059
-is we cut the wire between the master arm
-and the slave arm and instead of the master
+é cortar o fio entre o braço mestre
+e o braço escravo e, ao invés do braço
 
 00:04:38.059 --> 00:04:43.400
-arm sending the commands to the slave arm,
-we put a computer there instead. So, the computer
+mestre mandar os comandos para o braço escravo,
+colocamos um computador no lugar. Então, o computador
 
 00:04:43.400 --> 00:04:48.199
-is sending commands to the slave arm which
-is going to move in accordance to the signals
+está enviando comandos para o braço escravo,
+o qual está se movendo conforme esses sinais
 
 00:04:48.199 --> 00:04:53.909
-coming out of the computer. Of course, the
-computer is an infinitely reprogrammable device
+provenientes do computador. Obviamente, o computador 
+é um dispositivo infinitamente reprogramável
 
 00:04:53.909 --> 00:04:58.740
-so therefore we can make the slave arm do
-anything that we like at all and now, there
+por isso nós podemos ordenar o braço escravo
+fazer qualquer coisa que quisermos e agora,
 
 00:04:58.740 --> 00:05:03.059
-are no longer any human beings involved. We've
-created a robot.
+não há nenhum ser humano envolvido.
+Nós criamos um robô.
 
 00:05:03.059 --> 00:05:07.589
-And perhaps the person that this idea first
-occurred to is George Devol, the gentleman shown
+E talvez a primeira pessoa que teve
+essa ideia foi George Devol, esse homem 
 
 00:05:07.589 --> 00:05:14.050
-here, a prolific American inventor who died
-only recently. He had the idea of creating
+aqui, um grande inventor americano que 
+faleceu recentemente. Ele teve a ideia de criar
 
 00:05:14.050 --> 00:05:19.039
-what he called universal automation which
-was contracted to Unimation. That was the
+o que ele chamou de automação universal 
+que foi encurtada para Unimation. Esse foi o
 
 00:05:19.039 --> 00:05:24.930
-name of the company that he founded in 1956
-with Joseph Engelberger. They founded the
+nome da empresa que ele fundou em 1956
+com Joseph Engelberger. Eles fundaram a
 
 00:05:24.930 --> 00:05:30.199
-company to produce industrial robots that
-would eventually go to work in General Motors
+empresa para produzir robôs industriais que
+iriam eventualmente trabalhar na planta da
 
 00:05:30.199 --> 00:05:35.719
-plants. The first of their robots which was
-installed in 1961 is shown here. What this
+General Motors. O primeiro dos seus robôs que foi
+instalado em 1961 está mostrado aqui. O que
 
 00:05:35.719 --> 00:05:40.369
-robot did was to unload castings from a die-casting
-machine.
+esse robô fazia era descarregar as peças 
+de uma máquina de fundição em moldes.
 
 00:05:40.369 --> 00:05:46.300
-This was the start of the revolution of robots
-working in the manufacturing industry. Unimation,
+Esse foi o início da revolução de robôs
+trabalhando na indústria manufatureira. Unimation,
 
 00:05:46.300 --> 00:05:51.369
-Inc. was the first company to build manufacturing
-robots. They were the pioneers. They’re
+Inc. foi a primeira empresa que construiu robôs
+para a manufatura. Eles foram os pioneiros. Eles
 
 00:05:51.369 --> 00:05:56.080
-no longer in business and today, there are
-many, many companies that build manufacturing
+não estão mais em atividade e hoje, há
+muitas, muitas empresas que constroem robôs para
 
 00:05:56.080 --> 00:06:01.389
-robots, but most of them can trace their ancestry,
-their ideas or perhaps even the people back
+manufatura, mas a maior parte delas podem rastrear sua
+descendência, suas ideias o até mesmo suas pessoas
 
 00:06:01.389 --> 00:06:06.749
-to this little company founded in 1956 in
-Connecticut in the United States.
+para essa pequena firma fundada em 1956 em
+Connecticut nos Estados Unidos.
 
