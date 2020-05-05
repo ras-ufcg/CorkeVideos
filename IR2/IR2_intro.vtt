@@ -1,131 +1,131 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:08.330 --> 00:00:12.670
-In this lecture, we want to talk about how
-we describe the position of things in the
+Nesta aula, vamos falar sobre como
+descrevemos a posição das coisas
 
 00:00:12.670 --> 00:00:15.620
-world. In robotics, this is really, really
-important.
+no mundo. Na robótica, isso é realmente 
+muito, muito importante.
 
 00:00:15.620 --> 00:00:21.110
-For instance, in our robotics problem, we
-might want to describe the position of a robot.
+Por exemplo, em nosso problema de robótica,
+podemos querer descrever a posição de um robô.
 
 00:00:21.110 --> 00:00:24.650
-We might also want to describe the position
-of something that the robot wants to interact
+Podemos ainda desejar descrever a posição
+de algo com o qual o robô queira
 
 00:00:24.650 --> 00:00:29.210
-with. For instance, it might want to interact
-with my water bottle. So I need to describe
+interagir. Por exemplo, talvez ele queira interagir
+com minha garrafa de água. Logo, eu preciso descrever
 
 00:00:29.210 --> 00:00:32.950
-the position of the robot, the position of
-the water bottle and I’m also interested
+a posição do robô, a posição da
+garrafa e eu ainda estou interessado
 
 00:00:32.950 --> 00:00:35.260
-in describing the relative position.
+em descrever a posição relativa.
 
 00:00:35.260 --> 00:00:38.860
-Where is the water bottle with respect to
-the robot? And that's clearly something that
+Onde está a garrafa de água em relação ao
+robô? E isso é, claramente, algo que
 
 00:00:38.860 --> 00:00:44.330
-the robot would like to know if it wanted
-to go and pick up the water bottle.
+o robô gostaria de saber, caso desejasse
+ir e pegar a garrafa.
 
 00:00:44.330 --> 00:00:49.860
-When it comes to describing the position of
-things, we need some kind of frame of reference.
+Quando se trata de descrever a posição das coisas,
+precisamos de um tipo de quadro de referência.
 
 00:00:49.860 --> 00:00:55.350
-This is a pretty important aspect of describing
-the position of things in the world. Here
+Esse é um aspecto bem importante em descrever
+a posição das coisas no mundo. Aqui
 
 00:00:55.350 --> 00:00:59.040
-is a picture of our world. And one of the
-things we need to keep in mind of course is
+está uma imagem do nosso mundo. E uma das
+coisas que precisamos ter em mente é
 
 00:00:59.040 --> 00:01:03.930
-that our world, the surface of our world is
-moving. A point on the surface at the earth
+que nosso mundo, a superfície do nosso mundo
+está se movendo. Um ponto na superfície da Terra
 
 00:01:03.930 --> 00:01:11.860
-– the equator is moving nearly 500 meters
-per second in space. The earth itself is moving
+– o equador está se movendo perto de 500 metros
+por segundo no espaço. A Terra em si, se move
 
 00:01:11.860 --> 00:01:17.180
-at quite a high speed around the sun. And
-then our solar system is moving at very high
+numa velocidade tão alta quanto ao redor do sol.
+E ainda, nosso sistema solar se move numa velocidade
 
 00:01:17.180 --> 00:01:23.020
-speed around the centre of the galaxy. And
-the galaxy itself is moving at incredible
+altíssima ao redor do centro da galáxia.
+E a galáxia em si, se move incrivelmente
 
 00:01:23.020 --> 00:01:27.610
-speed towards the constellation Leo. So, everything
-is in motion.
+rápido em direção à constelação Leo. 
+Portanto, tudo está em movimento.
 
 00:01:27.610 --> 00:01:32.610
-If we're trying to describe where things are,
-it's really important that we consider the
+Se estamos tentando descrever onde as coisas
+estão, é bem importante que consideremos o
 
 00:01:32.610 --> 00:01:34.470
-frame of reference.
+quadro de referência.
 
 00:01:34.470 --> 00:01:38.310
-Everything is moving so we just have to put
-effectively a stake in the ground and say,
+Tudo está se movendo, logo nós apenas temos que
+fincar, efetivamente, uma estaca no chão e dizer,
 
 00:01:38.310 --> 00:01:44.150
-"This is the reference point and we'll decide
-all positions with respect to that reference
+"Este é o ponto de referência e decidiremos
+todas as posições relacionando-se a este
 
 00:01:44.150 --> 00:01:47.880
-point". That's exactly what we do. We're going
-to put a stake in the ground. For instance,
+ponto". Isso é exatamente o que fazemos. Vamos
+fincar uma estaca no chão. Por exemplo,
 
 00:01:47.880 --> 00:01:52.700
-like this sign post here and say, "This is
-the origin. This is the coordinate, zero zero
+pego esta placa aqui e digo, "Esta é a
+origem. Esta é a coordenada zero zero
 
 00:01:52.700 --> 00:01:55.800
-and we're going to measure all distances from
-that.
+e vamos medir todas as distâncias a partir
+daqui.
 
 00:01:55.800 --> 00:02:00.909
-And we're going to create a coordinate frame.
-Effectively two orthogonal axes. An x-axis,
+E vamos criar um quadro de coordenadas.
+Efetivamente, dois eixos ortogonais. Um eixo x,
 
 00:02:00.909 --> 00:02:05.530
-and a y-axis, sorts of things that you learn
-at school. And we're going to use those two
+e um eixo y, os tipos de coisas que você
+aprende na escola. E vamos usar essas duas
 
 00:02:05.530 --> 00:02:11.319
-distances, the distance along the x-axis, the
-distance along the y-axis, in order to describe
+distâncias, a distância sobre o eixo x, e a
+distância sobre o eixo y, para assim descrever
 
 00:02:11.319 --> 00:02:14.990
-the position of an object in two-dimensional
-space.
+a posição de um objeto num espaço
+bidimensional.
 
 00:02:14.990 --> 00:02:18.760
-In this lecture, we're going to keep things
-simple. We're only going to consider the position
+Nesta aula, Nós vamos manter as coisas
+simples. Vamos apenas considerar a posição
 
 00:02:18.760 --> 00:02:23.790
-in two dimensions. In the next lecture, I
-will kick it up a notch and talk about position
+em duas dimensões. Na próxima aula, eu vou
+intensificar um pouco mais e falar sobre posição
 
 00:02:23.790 --> 00:02:26.870
-in 3 dimensions.
+em 3 dimensões.
 
 00:02:26.870 --> 00:02:33.360
-Now, reference points are entirely arbitrary.
-So, let's talk for a moment about the reference
+Prosseguindo, pontos de referências são arbitrários.
+Então, vamos falar, por um momento, sobre o sistema de
 
 00:02:33.360 --> 00:02:38.960
 system that we use on our own planet. So,
