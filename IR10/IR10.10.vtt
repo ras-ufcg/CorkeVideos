@@ -1,187 +1,192 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Idioma: pt-BR
 
 00:00:03.530 --> 00:00:07.770
-Modern electric motors are wonderful devices,
-but there are limits to their performance.
+Motores elétricos modernos são equipamentos 
+incríveis, porém existem limitações a sua
+performance.
 
 00:00:07.770 --> 00:00:12.759
-There is a maximum acceleration, a maximum
-velocity and a maximum power.
+Existe uma aceleração máxima, uma velocidade
+máxima e uma potência máxima.
 
 00:00:12.759 --> 00:00:18.380
-So, let’s look first at what limits the
-acceleration of a motor. We have rearranged
+Então, vamos primeiramente olhar para os
+limites de aceleração do motor. Nós ajustamos
 
 00:00:18.380 --> 00:00:23.410
-an earlier equation in to this form here,
-the ratio of the motor torque to the motor
+uma equação preliminar para esta forma aqui, 
+a razão entre o torque do motor e
 
 00:00:23.410 --> 00:00:28.290
-inertia. Clearly because inertia is in the
-denominator, if we increase inertia, we are
+a inércia do motor. Devido a inércia estar no
+denominador, se a aumentarmos, 
 
 00:00:28.290 --> 00:00:34.050
-going to reduce the acceleration. The inertia
-that the motor experiences has got two components.
+nós teremos uma redução na aceleração. A
+inércia que o motor enfrenta possui duas
+componentes.
 
 00:00:34.050 --> 00:00:38.160
-One of those components is the inertia of
-the motor’s armature. That’s the rotating
+Uma destas componentes é a inércia da
+armadura do motor. Esta é a parte 
 
 00:00:38.160 --> 00:00:43.890
-part of electric motor that I denote by J
-sub m. The other inertia that the motor experiences
+girante do motor elétrico que denoto por J
+sobre m. A outra inércia que o motor enfrenta
 
 00:00:43.890 --> 00:00:48.360
-is due to the link itself.
-In this case, I have drawn a very simple rectangular
+é devido à própria conexão. Neste caso, eu 
+desenhei um cubóide bem simples
 
 00:00:48.360 --> 00:00:54.230
-prism for the link and the inertia of that
-is M times R squared. The R squared is problematic
+para a conexão e sua inércia é M vezes R ao
+quadrado. R ao quadrado é problemático 
 
 00:00:54.230 --> 00:00:58.320
-because it means that the inertia grows very
-quickly with the size of the link.
+pois significa que a inércia cresce
+rapidamente com o tamanho da ligação.
 
 00:00:58.320 --> 00:01:03.440
-So, we can write the total inertia that the
-motor experiences in terms of these two components,
+Assim, podemos escrever que a inércia total
+enfrentada pelo motor em termos de duas
+componentes,
 
 00:01:03.440 --> 00:01:08.000
-the motor armature inertia which is a constant
-and the inertia of the link. And, in this
+a inércia da armadura do motor, que é
+constante, e a inércia da ligação. E, neste
 
 00:01:08.000 --> 00:01:12.180
-simple case, the inertia of the link is a
-constant. But, for a real robot, the inertia
+caso simples, a inércia da ligação é uma
+constante. Mas, para um robô real, a inércia
 
 00:01:12.180 --> 00:01:17.110
-is going to depend on the configuration of
-all the links that are attached to the end
+irá depender da configuração de todas as ligações
+conectadas ao fim 
 
 00:01:17.110 --> 00:01:22.470
-of this particular link and also to the payload
-which is held by the last link in the chain.
+desta ligação em particular e também a carga, que é
+segurada pelo última ligação da corrente.
 
 00:01:22.470 --> 00:01:27.360
-So, the link inertia is going to be highly
-variable. However, in a real robot, there's
+Assim, a inércia da ligação será altamente
+variável. Porém, em um robô real, existe
 
 00:01:27.360 --> 00:01:31.950
-typically a gearbox between the motor and
-the link and this is another advantage of
+normalmente uma transmissão entre o motor e a ligação,
+esta é outra vantagem de
 
 00:01:31.950 --> 00:01:36.759
-the gearbox because it allows me to write
-the expression for inertia like this.
+uma transmissão, pois me permite escrever a
+expressão para inércia assim.
 
 00:01:36.759 --> 00:01:41.829
-The inertia of the link is reduced by a factor
-of G squared. And, for a robot like the Puma,
+A inércia da ligação é reduzida por um fator G ao
+quadrado. Em um robô como o Puma,
 
 00:01:41.829 --> 00:01:47.859
-G is a number anywhere between say 10 and
-a 100. So, the link inertia is going to be
+G é um número entre, digamos, 10 e 100.
+Assim, a inércia da ligação será
 
 00:01:47.859 --> 00:01:52.880
-greatly reduced. It means that the inertia
-that the motor control system is going to
+grandemente reduzida. Isto significa que a inércia
+que o sistema de controle do motor
 
 00:01:52.880 --> 00:01:58.109
-“see” is dominated by the constant motor armature
-inertia.
+irá “enxergar” é dominada pela inércia constante
+da armadura do motor.  
 
 00:01:58.109 --> 00:02:04.181
-Variation in inertia due to link configuration
-change is going to be very, very small. If
+Variação na inércia devido à mudança da
+configuração das ligações, será muito pequena.
 
 00:02:04.181 --> 00:02:09.229
-we consider now the numerator of the expression
-at the top, we know that the maximum torque
+Se considerarmos agora o numerador da expressão no
+topo, sabemos que o torque máximo
 
 00:02:09.229 --> 00:02:14.120
-depends on the maximum current. The maximum
-possible current is a function of the power
+depende da corrente máxima. A máxima corrente
+possível é função do amplificador
 
 00:02:14.120 --> 00:02:18.720
-amplifier which supplies current to the motor.
-If we apply too much current to the motor,
+de potência que fornece a corrente ao motor.
+Se aplicarmos corrente demais ao motor, 
 
 00:02:18.720 --> 00:02:21.709
-the armature and the brushes will overheat
-and be damaged.
+a armadura e as escovas irão superaquecer e se
+tornarem danificadas.
 
 00:02:21.709 --> 00:02:27.390
-Also, remember that some of the torque generated
-by the motor is used to oppose friction and
+Além disso, lembre que parte do torque gerado pelo
+motor é usado para se opor à fricção
 
 00:02:27.390 --> 00:02:32.920
-also to oppose gravity in the motor. So, less
-of it is actually available for acceleration.
+e também se opor à gravidade dentro do motor.
+Assim, ainda menos está disponível para
+aceleração.
 
 00:02:32.920 --> 00:02:39.290
-What we have defined here is an upper bound
-on the maximum acceleration of the robot joint.
+O que temos definido aqui é um limite superior
+para a aceleração máxima da junta do robô.  
 
 00:02:39.290 --> 00:02:43.849
-Turning now to the maximum velocity
-the electrical model for the motor contains
+Indo para a velocidade máxima o modelo elétrico
+para o motor possui 
 
 00:02:43.849 --> 00:02:48.849
-a generator, the circle is the back EMF source, and
-as the motor rotates faster and faster, the
+um gerador, o círculo é fonte de EMF contrário, e
+a medida que o motor aumenta sua rotação, 
 
 00:02:48.849 --> 00:02:54.269
-back EMF rises. And, when the back EMF equals
-the applied voltage, then no further current
+o EMF contrário se eleva. Assim, quando o EMF
+contrário se iguala à tensão aplicada, a corrente  
 
 00:02:54.269 --> 00:03:00.430
-can flow in to motor. It will stop accelerating
-and that will define the maximum speed of
+não pode fluir dentro do motor. Ele parará de
+acelerar e isso definirá a velocidade máxima 
 
 00:03:00.430 --> 00:03:05.549
-the motor given by an equation like this.
-The electrical power in to the motor is given
+do motor, dada por uma equação como esta.
+A potência elétrica no motor é dado
 
 00:03:05.549 --> 00:03:09.659
-by the product of the applied voltage and
-current. The mechanical power out of the motor
+pelo produto da tensão aplicada e a corrente.
+A potência mecânica externa ao motor
 
 00:03:09.659 --> 00:03:15.049
-is the product of speed and the torque. We
-can plot motor torque against motor speed
+é o produto da velocidade e do torque. Podemos
+plotar o torque do motor versus sua
 
 00:03:15.049 --> 00:03:18.390
-and there are other two critical points on
-this curve.
+velocidade e existem dois pontos críticos nesta
+curva.
 
 00:03:18.390 --> 00:03:22.519
-One point is when the motor has got no load
-at all and it’s spinning as fast as it possibly
+Um ponto é quando o motor não possui carga alguma
+e está girando o mais rápido possível.
 
 00:03:22.519 --> 00:03:27.220
-can. We refer to this as the no load speed.
-At the other end of the line, the motor is
+Podemos nos referir a isto como velocidade em 
+vazio. Na outra extremidade da linha, o motor
 
 00:03:27.220 --> 00:03:31.840
-stalled. It’s not actually rotating but
-it is exerting a torque and we refer to this
+está em estol. Não está girando porém exerce um
+torque e nos referimos a isto 
 
 00:03:31.840 --> 00:03:36.049
-as the stall torque.
-Power is a quadratic function of speed has
+como torque de estol. Potência é uma função
+quadrática da velocidade e possui 
 
 00:03:36.049 --> 00:03:40.920
-a maximum somewhere in the middle of the operating
-speed range of the motor and the motor cannot
+um máximo, próximo ao meio da escala de velocidade
+de operação do motor, e ele 
 
 00:03:40.920 --> 00:03:45.409
-be operated for a sustained period of time
-above its maximum power rating or else it
+não pode ser operado por um período de tempo
+prolongado acima de sua potência máxima ou 
 
 00:03:45.409 --> 00:03:47.119
-will be damaged through overheating.
+então será danificado por superaquecimento.
+
 
