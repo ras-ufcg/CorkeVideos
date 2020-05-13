@@ -174,200 +174,196 @@ over very rough and uneven terrain.
 00:03:39.980 --> 00:03:44.370
 Here we see the big brother of little dog,
 logically called big dog, and this is a robot
+ 
+00:03:44.370 --> 00:03:49.620 
+que é capaz de transportar uma carga consideravelmente pesada
+por terrenos bem desgastados em ambientes externos realísticos. 
+ 
+00:03:49.620 --> 00:03:55.400 
+Aqui, vemos uma demonstração 
+da estabilidade deste robô que caminha sobre 
+ 
+00:03:55.400 --> 00:04:01.440 
+o gelo, é chutado em sua lateral e é capaz 
+de recuperar o equilíbrio e de continuar andando.  
+ 
+00:04:04.960 --> 00:04:10.980 
+Mais uma vez, podemos ver uma maravilhosa demonstração de sua habilidade de se recuperar de situações extremamente difíceis. 
+ 
+00:04:20.889 --> 00:04:26.139 
+Agregando a rodas e pernas, robôs também 
+podem voar e muitos já demonstraram 
+ 
+00:04:26.139 --> 00:04:32.060 
+robôs voadores de grande escala como o Global 
+Hawk aqui à esquerda, bem como robôs voadores bem, bem pequenos 
+ 
+00:04:32.060 --> 00:04:38.840 
+são mostrados aqui à direita. 
+Então, qual a definição de um robô? Uma definição 
+ 
+00:04:38.840 --> 00:04:42.240 
+que eu gosto muito e que penso que na verdade 
+é muito, muito útil, mesmo
 
-00:03:44.370 --> 00:03:49.620
-that's able to carry quite a large payload
-over very rough terrain in realistic outdoor
+00:04:42.240 --> 00:04:47.250 
+que seja um pouco simplista, é que é uma máquina que move
+coisas de A para B. No entanto, é uma máquina programável 
+ 
+00:04:47.250 --> 00:04:53.250 
+em que podemos controlar o local A e
+o local B, e que talvez o local A 
+ 
+00:04:53.250 --> 00:04:58.900 
+seja uma função de uma informação que o robô
+identifica pelos seus sensores. Mas, no caso mais simples, 
+ 
+00:04:58.900 --> 00:05:03.470 
+um robô é uma máquina que move coisas 
+de A para B 
+ 
+00:05:03.470 --> 00:05:08.389 
+Considerando robôs móveis como os que
+possuem rodas e pernas ou propulsores e podem voar, 
 
-00:03:49.620 --> 00:03:55.400
-environments. Here we see a demonstration
-of the stability of this robot walking over
+00:05:08.389 --> 00:05:14.020 
+podemos pensar neles como sendo máquinas que se movem
+automaticamente de locais A para locais 
 
-00:03:55.400 --> 00:04:01.440
-ice and being kicked in the side and able
-to recover its balance and keep on walking.
+00:05:14.020 --> 00:05:20.289 
+B. Uma definição de robô avançada, mais complexa,
+que eu gosto é que ele é uma máquina orientada por objetivos 
 
-00:04:04.960 --> 00:04:10.980
-Once again we can see a wonderful demonstration of its ability to recover from very very difficult situations.
+00:05:20.289 --> 00:05:26.449 
+que pode detectar, planejar e agir, e
+essa frase engloba, creio que os quatro verdadeiros 
 
-00:04:20.889 --> 00:04:26.139
-In addition to wheels and legs, robots can
-also fly and people have demonstrated very
+00:05:26.449 --> 00:05:30.860 
+elementos-chave de um robô.
+A principal coisa: é uma máquina que possui 
 
-00:04:26.139 --> 00:04:32.060
-large scale flying robots like the Global
-Hawk here on the left and really, really small
+00:05:30.860 --> 00:05:35.509 
+um objetivo. Existe algo que ela quer
+cumprir, ela quer se transportar de um 
 
-00:04:32.060 --> 00:04:38.840
-flying robots are shown here on the right.
-So what's the definition of a robot? A definition
+00:05:35.509 --> 00:05:40.590 
+lugar para outro, ou ela quer mover algo
+de um lugar para outro, de forma que esse é seu 
 
-00:04:38.840 --> 00:04:42.240
-that I like a lot and I think is actually
-very very useful, even though it's perhaps
+00:05:40.590 --> 00:05:41.560 
+objetivo. 
 
-00:04:42.240 --> 00:04:47.250
-a little simple is it's a machine that moves
-things from A to B. Now, it's a programmable
+00:05:41.560 --> 00:05:45.500 
+No exemplo do robô de fabricação,
+nós vimos que ele era capaz de detectar onde estavam os 
 
-00:04:47.250 --> 00:04:53.250
-machine so we can control the location A and
-the location B and perhaps the location A
+00:05:45.500 --> 00:05:51.090 
+objetos que ele queria pegar.
+Nós vimos com o pequeno cão robô andante, ele 
 
-00:04:53.250 --> 00:04:58.900
-is a function of information that the robot
-picks up from its sensors. But in the simplest
+00:05:51.090 --> 00:05:56.030 
+foi capaz de detectar o formato do seu ambiente
+com o propósito de determinar onde suas patas deveriam 
 
-00:04:58.900 --> 00:05:03.470
-case, a robot is a machine that moves things
-from A to B.
+00:05:56.030 --> 00:06:01.080 
+ir e isso nos leva, então, para a próxima parte,
+que é o planejamento. Logo, uma vez que o robô detectou 
 
-00:05:03.470 --> 00:05:08.389
-From mobile robots such as those that have
-got wheels or legs or propellers and can fly,
+00:06:01.080 --> 00:06:05.590 
+onde ele está e que detectou algo acerca do
+ambiente no qual ele se move, então ele 
 
-00:05:08.389 --> 00:05:14.020
-we can think of it as a machine that moves
-automatically from location A to location
+00:06:05.590 --> 00:06:11.849 
+faz um plano que o aproxima de
+seu objetivo, e uma vez que ele criou o plano que 
 
-00:05:14.020 --> 00:05:20.289
-B. A high level, a more complex definition
-of a robot that I like is it is a goal-oriented
+00:06:11.849 --> 00:06:15.270 
+o aproxima de seu objetivo, aí que ele age. 
 
-00:05:20.289 --> 00:05:26.449
-machine that can sense, plan and act, and
-this phrase catches, I think the four really
+00:06:15.270 --> 00:06:20.560 
+Ele move suas rodas, move suas pernas, 
+muda a velocidade de seus propulsores, a fim  
 
-00:05:26.449 --> 00:05:30.860
-key elements of a robot.
-The first thing is, it's a machine that has
+00:06:20.560 --> 00:06:26.310 
+que o robô se aproxime de seu objetivo. 
+E ele repete essas três ações continuamente. 
 
-00:05:30.860 --> 00:05:35.509
-a goal. There's something that it wants to
-achieve, it wants to deliver itself from one
+00:06:26.310 --> 00:06:32.289 
+Ele detecta, planeja e age. Ele detecta a
+situação seu mundo novamente e atualiza seu 
 
-00:05:35.509 --> 00:05:40.590
-place to another or it wants to move something
-from one place to another, so that is its
+00:06:32.289 --> 00:06:37.800 
+plano e daí age um pouco mais e por aí vai,
+até que ele atinja seu objetivo. Quais são as características 
 
-00:05:40.590 --> 00:05:41.560
-goal.
+00:06:37.800 --> 00:06:43.110 
+dos robôs? Por que os robôs são úteis para nós? Bom,
+eles têm seus méritos. Antes de tudo 
 
-00:05:41.560 --> 00:05:45.500
-In the example of the manufacturing robot,
-we saw that it was able to sense where are
+00:06:43.110 --> 00:06:49.860 
+robôs são bastante consistentes, eles estão atentos
+o tempo todo, ao contrário dos seres humanos. 
 
-00:05:45.500 --> 00:05:51.090
-the white objects that it wanted to pick-up.
-We saw with a little dog walking robot, it
+00:06:49.860 --> 00:06:54.750 
+Robôs também são muito precisos. Os robôs de fabricação
+que vimos mais cedo são capazes de delimitar 
 
-00:05:51.090 --> 00:05:56.030
-was able to sense the shape of its environment
-in order to determine where its feet should
+00:06:54.750 --> 00:07:00.849 a extremidade de um robô com a precisão de uma fração
+de um milímetro, todas as vezes que eles realizam 
 
-00:05:56.030 --> 00:06:01.080
-go and that brings us then to the next part,
-that is to plan. So once the robot has sensed
+00:07:00.849 --> 00:07:06.569 a operação, e eles também são muito, muito
+confiáveis. Eles podem trabalhar 24 horas por dia, 7 dias por semana. Eles não 
 
-00:06:01.080 --> 00:06:05.590
-where it is and sensed something about the
-environment in which it's moving, then it
+00:07:06.569 --> 00:07:11.039 precisam nem das luzes acesas para realizarem seu
+trabalho. Portanto, isso significa que robôs são capazes de 
+ 
+00:07:06.569 --> 00:07:11.039 
+fazer uma boa quantidade de coisas que pessoas não conseguem fazer.,
+Eles podem ir ao espaço, podem adentrar nas profundezas 
 
-00:06:05.590 --> 00:06:11.849
-makes a plan to bring the robot closer to
-its goal and once it's created a plan in order
+00:07:16.289 --> 00:07:22.039 
+dos oceanos, onde os seres humanos simplesmente são
+capazes de sobreviver. Eles também fazem coisas que 
 
-00:06:11.849 --> 00:06:15.270
-to move closer to its goal, then it acts.
+00:07:22.039 --> 00:07:26.189 
+humanos não fariam. Por exemplo trabalhos que
+são entediantes ou maçantes. 
 
-00:06:15.270 --> 00:06:20.560
-It moves the wheels, it moves the legs, it
-changes the speed on the propellers, in order
+00:07:26.189 --> 00:07:32.319 
+E cada vez mais existem um monte de trabalhos rudimentares
+na agricultura e na fabricação nos quais 
 
-00:06:20.560 --> 00:06:26.310
-for the robot to get closer towards the goal.
-And it repeats these three actions continuously.
+00:07:32.319 --> 00:07:37.250 
+é muito difícil achar humanos dispostos
+a realizar essa atividade. Esses são trabalhos que humanos 
 
-00:06:26.310 --> 00:06:32.289
-It senses, it plans, it acts. It senses the
-state of the world again and it updates its
+00:07:37.250 --> 00:07:43.280 
+hoje consideram inferiores a eles, e que não realizariam.
+Agora robôs irão se mover para esse vácuo de trabalho. 
+ 
+00:07:43.280 --> 00:07:48.360 
+E, finalmente, robôs fazem coisas que
+pessoas não devem fazer. Eles podem realizar trabalhos 
 
-00:06:32.289 --> 00:06:37.800
-plan and then it acts a bit more and so on
-until it reaches the goal. What are the characteristics
+00:07:48.360 --> 00:07:54.530 
+que são perigosos, insalubres ou arriscados, ou
+seja, os robôs pões pessoas para fora do perigo. 
 
-00:06:37.800 --> 00:06:43.110
-of robots? Why are robots useful to us? Well,
-they have a number of merits. First of all
+00:07:54.530 --> 00:07:58.169 
+e eu acho que essa é uma ótima coisa que
+os robôs podem fazer. 
 
-00:06:43.110 --> 00:06:49.860
-robots are very consistent, they pay attention
-all the time, unlike human beings.
+00:07:58.169 --> 00:08:03.069 
+As pessoas às vezes usam a expressão “sujo, maçante
+e perigoso” para refletir as três classes 
 
-00:06:49.860 --> 00:06:54.750
-Robots are also very accurate. The manufacturing
-robots that we saw earlier are able to position
+00:08:03.069 --> 00:08:08.669 
+de trabalho nas quais os robôs possuem uma considerável vantagem
+sobre os seres humanos. Os trabalhos sujos e perigosos 
+ 
+00:08:08.669 --> 00:08:13.000 
+são aqueles que os humanos não deveriam
+fazer, e os trabalhos maçantes são aqueles que os humanos 
 
-00:06:54.750 --> 00:07:00.849
-the end of the robot to an accuracy of a fraction
-of a millimeter, every single time they perform
-
-00:07:00.849 --> 00:07:06.569
-the operation and they're also very, very
-reliable. They can work 24 by 7. They don't
-
-00:07:06.569 --> 00:07:11.039
-even need the lights on in order to do their
-job. So this means that robots are able to
-
-00:07:11.039 --> 00:07:16.289
-do a number of things that people can't do.
-They can go into space, they can go deep into
-
-00:07:16.289 --> 00:07:22.039
-the oceans where human beings are just not
-able to survive. They also do things that
-
-00:07:22.039 --> 00:07:26.189
-human beings won't do. These are jobs that
-are boring or dull.
-
-00:07:26.189 --> 00:07:32.319
-And increasingly there are a lot of low-skill
-jobs in agriculture and in manufacturing where
-
-00:07:32.319 --> 00:07:37.250
-it's very difficult to find human beings willing
-to do that work. These are jobs human beings
-
-00:07:37.250 --> 00:07:43.280
-now consider are beneath them and won't do.
-Now robots are going to move into that job
-
-00:07:43.280 --> 00:07:48.360
-vacuum. And finally, robots do things that
-people shouldn't do. They can perform jobs
-
-00:07:48.360 --> 00:07:54.530
-that are dangerous, unhealthy or risky, that
-is, the robots take people out of harm's way
-
-00:07:54.530 --> 00:07:58.169
-and I think that's a very great thing that
-robots can do.
-
-00:07:58.169 --> 00:08:03.069
-People often use the expression, 'dirty, dull
-and dangerous' to reflect the three classes
-
-00:08:03.069 --> 00:08:08.669
-of jobs where robots have considerable advantage
-over human beings. The dirty and dangerous
-
-00:08:08.669 --> 00:08:13.000
-jobs are the ones that human beings shouldn't
-do and the dull jobs are the ones that human
-
-00:08:13.009 --> 00:08:14.529
-beings don't want to do.
-
+00:08:13.009 --> 00:08:14.529 
+não querem fazer. 
