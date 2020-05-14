@@ -1,183 +1,183 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:43.640 --> 00:00:49.020
-Like most people I’ve grown up with images
-of robots like this one from Lost in Space,
+Como a maioria das pessoas, eu cresci com imagens
+de robôs como aqueles de Perdidos no Espaço,
 
 00:00:49.020 --> 00:00:53.900
-but real robots are not like this. The real
-robots and the ones we are going to see in
+mas robôs de verdade não são daquela forma. Os robôs
+reais assim como os que veremos nos
 
 00:00:53.900 --> 00:00:59.400
-the next few minutes have got a great diversity
-of form and function. We are going to see
+próximos minutos são muito diversos
+em forma e função. Nós veremos
 
 00:00:59.400 --> 00:01:03.220
-robots that can move through corridors, we
-are going to see robots that can swim under
+robôs que podem se mover pelos corredores, nós
+veremos robôs que podem nadar debaixo
 
 00:01:03.220 --> 00:01:08.580
-water, robots that can fly, robots that can
-do assembly work. They all look very different
+d'água, robôs que podem voar, robôs que podem
+realizar montagens. Eles são muito diferentes entre si
 
 00:01:08.580 --> 00:01:13.710
-and they are nothing like the robots that
-we have grown up with on TV and in the movies.
+e não são nada parecidos com os robôs que
+nós crescemos vendo na TV e nos filmes.
 
 00:01:13.710 --> 00:01:18.290
-What’s common to all these robots although
-they are different, the common feature is
+O que é comum a todos esses robôs, apesar
+de serem diferentes? O ponto em comum é
 
 00:01:18.290 --> 00:01:23.600
-that they perform fundamentally three actions.
-They sense the world and we are going to look
+que eles executam fundamentalmente três ações.
+Eles sentem o mundo, e nós veremos
 
 00:01:23.600 --> 00:01:28.690
-at a variety of sensors that robots use to
-sense the world and then they make some plan,
+a variedade de sensores que robôs usam para
+sentir o mundo e então fazer algum plano,
 
 00:01:28.690 --> 00:01:32.540
-they take what they perceive about the world
-through their senses and they have got a goal
+eles captam o que percebem do mundo
+através dos seus sentidos e eles têm um objetivo
 
 00:01:32.540 --> 00:01:37.470
-that they are trying to achieve. So they plan
-on how to move a bit closer towards the goal.
+que estão tentando alcançar. Então eles planejam
+como se aproximar desses objetivos.
 
 00:01:37.470 --> 00:01:41.910
-And then they perform an action. It might
-be to swim forward, it might be to fly, it
+E então eles executam uma ação. Pode ser
+nadar pra frente, pode ser voar, pode
 
 00:01:41.910 --> 00:01:46.330
-might be to move down the corridor. And then
-it repeats; it senses again how the world’s
+ser descer pelo corredor. E então
+repete; ele sente de novo como o mundo
 
 00:01:46.330 --> 00:01:51.280
-changed, it updates its plan and moves some
-more. So robots are continually doing sensing
+mudou, se atualiza, planeja, e se movimenta
+um pouco mais. Então robôs estão continuamente fazendo planos
 
 00:01:51.280 --> 00:01:55.600
-planning and acting in a continuous loop.
-So let’s go and look at some real robots.
+com base nos seus sentidos e agindo num ciclo contínuo.
+Então vamos ver alguns robôs reais.
 
 00:02:08.420 --> 00:02:10.680
-This is an example of an industrial robot.
+Esse é um exemplo de um robô industrial.
 
 00:02:11.900 --> 00:02:13.900
-Machines like this are direct descendants
+Máquinas como essa são descendentes diretos
 
 00:02:13.910 --> 00:02:19.590
-of the first robots that went into service
-in the 1950's. This is a very big industrial
+dos primeiros robôs que entraram em serviço
+na década de 1950. Esse é um grande robô
 
 00:02:19.590 --> 00:02:23.830
-robot. Robots like these you will typically
-find in a car factory doing jobs like spray
+industrial. Robôs como esses são tipicamente
+encontrados em fábricas de automóveis fazendo trabalhos como
 
 00:02:23.830 --> 00:02:28.060
-painting, welding, or lifting parts of car
-bodies. This particular robot can lift up
+pintura com spray, soldagem, ou levantar partes de
+carroceria. Este robô em particular pode levantar
 
 00:02:28.060 --> 00:02:34.260
-to 60kgs. It's driven by 6 electric motors
-and they rotate the machine around different
+até 60 kgs. É acionado por 6 motores elétricos
+e eles giram a máquina em torno de diferentes
 
 00:02:34.260 --> 00:02:39.730
-axes. So, the first motor rotates the robot
-about an axis like this; the next motor rotates
+eixos. Então, o primeiro motor gira o robô
+sobre um eixo como este; o próximo motor o gira
 
 00:02:39.730 --> 00:02:45.580
-it about an axis like this; next motor rotates
-it about an axis like this. Down here we have
+sobre um eixo como este; o próximo motor o gira
+sobre um eixo como este. Aqui em baixo nós temos
 
 00:02:45.580 --> 00:02:50.380
-what we call the wrist mechanism. This assembly
-here; and that contains three motors and they
+o que nós chamamos de mecanismo de pulso. Esta montagem
+aqui; e que contém três motores e eles
 
 00:02:50.380 --> 00:02:55.540
-rotate the end effector of the robot; the
-bit that does the work; they rotate it about
+rotacionam o efetuador do robô; a
+parte que faz o trabalho; eles o rotacionam sobre
 
 00:02:55.540 --> 00:03:02.389
-an axis like this, like this and another one
-like this. So these six motors allow the end
+um eixo como este, como este e outro
+como este. Então esses seis motores permitem que o
 
 00:03:02.389 --> 00:03:08.299
-effector of the robot to move independently
-in the X direction, the Y direction and the
+efetuador do robô se mova independentemente
+na direção X, na direção Y e na
 
 00:03:08.299 --> 00:03:14.139
-Z direction. And also to rotate independently
-about the X axis like that; about the Y axis
+direção Z. E também rotacionar independentemente
+sobre o eixo X dessa forma; sobre o eixo Y
 
 00:03:14.139 --> 00:03:18.939
-which is motion like that; and about the Z
-axis which is motion like that.
+se movimentano dessa forma; e sobre o eixo Z
+se movimentando dessa forma.
 
 00:03:38.310 --> 00:03:42.820
-This is the Guiabot. This is a mobile robot.
-Unlike the last robot that we looked at this
+Esse é o Guiabot. Ele é um robô móvel.
+Diferente do último robô que vimos, este
 
 00:03:42.820 --> 00:03:48.579
-robot has the ability to autonomously move
-through an environment. To enable it to do
+robô tem a habilidade de se mover de maneira autônoma
+em um ambiente. Para possibilitar que ele faça
 
 00:03:48.579 --> 00:03:52.880
-that, it has a rich collection of sensors.
-This sensor is probably familiar to you, it’s
+isso, ele possui uma rica coleção de sensores.
+Esse sensor é provavelmente familiar para você, é
 
 00:03:52.880 --> 00:03:58.840
-a Kinect camera. We call it a 3D camera. It
-outputs the three dimensional structure of
+uma câmera Kinect. Nós chamamos de câmera 3D. Ela
+retorna a estrutura tridimensional do
 
 00:03:58.840 --> 00:04:02.989
-the world around the robot. And it needs that
-three dimensional structure so that it can
+mundo ao redor do robô. E ele precisa dessa
+estrutura tridimensional pois ela que pode
 
 00:04:02.989 --> 00:04:07.209
-determine what's an obstacle - a place that
-it shouldn't drive - and what's free space
+determinar o que é um obstáculo - um lugar que
+ele não deveria ir - e o que é um lugar livre
 
 00:04:07.209 --> 00:04:12.169
-– that’s space where it is okay for it
-to drive. The robot also has got this pair
+– que é um espaço onde ele
+pode ir. O robô também tem esse par
 
 00:04:12.169 --> 00:04:16.660
-of cameras here, we call this a stereo camera
-pair, and it mimics the function of our own
+de câmeras aqui, nós podemos chamá-las de um par de câmeras
+estéreo, que imita a funão dos nossos próprios
 
 00:04:16.660 --> 00:04:21.820
-two eyes. We use our two eyes to determine
-the 3D structure of the world. So the robot
+dois olhos. Nós usamos nossos dois olhos para determinar
+a estrutura 3D do mundo. E o robô
 
 00:04:21.820 --> 00:04:27.660
-uses this to provide augmented 3D information
-about its world. The robot’s also got a
+os usa para fornecer informações 3D aumentadas
+sobre seu mundo. O robô também tem uma
 
 00:04:27.660 --> 00:04:32.010
-very interesting camera on the top. We call
-this an omnidirectional camera. It's actually
+câmera muito interessante no topo. Nós a chamamos
+de câmera omnidirecional. É, na verdade,
 
 00:04:32.010 --> 00:04:36.760
-made up of six individual cameras which look
-in all these different directions as well
+composta por seis câmeras individuais que olham
+em todas essas direções diferentes assim como
 
 00:04:36.760 --> 00:04:41.530
-as vertically. It integrates that together
-to give almost a hemispherical view of the
+verticalmente. Ele as intregra em conjunto
+para fornecer uma visão quase hemisférica do
 
 00:04:41.530 --> 00:04:45.250
-world. A very, very wide angle view.
+mundo. Uma visão muito, muito ampla.
 
 00:04:45.250 --> 00:04:49.030
-Other features of this robot are also interesting.
-Down here we have a sensor that we call a
+Outras características desse robô também são interessantes.
+Aqui em baixo nós temos um sensor que chamamos de
 
 00:04:49.030 --> 00:04:54.870
-laser scanner. This is essentially an optical
-bumper bar. It is the sensor of last resort
+scanner a laser. Este é essencialmente uma barra de
+pára-choques óticos. Esse sensor é o último recurso
 
 00:04:54.870 --> 00:04:59.190
 feito para impedir que o robô colida com algo
