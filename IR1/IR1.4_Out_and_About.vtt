@@ -180,215 +180,218 @@ laser scanner. This is essentially an optical
 bumper bar. It is the sensor of last resort
 
 00:04:54.870 --> 00:04:59.190
-to stop the robot bumping into something that
-it shouldn't bump into. The robot has also
+feito para impedir que o robô colida com algo
+que ele não deveria. Além disso, o robô
 
 00:04:59.190 --> 00:05:03.230
-got a lot of computing power onboard. We see
-here we have got two Mac Minis in addition
+tem muito poder computacional imbutido. Vemos aqui
+que temos dois Mac Minis juntamente com
 
 00:05:03.230 --> 00:05:08.190
-to a computer which is in the base and that
-provides the computational power to process
+um computador que está na base, que
+fornece o poder computacional para processar
 
 00:05:08.190 --> 00:05:13.540
-the information from all the sensors to plan
-how it should move and to control the motion
+as informações de todos os sensores a fim de planejar
+como ele deve se mover e controlar o movimento
 
 00:05:13.540 --> 00:05:19.100
-of the wheels. This robot has got a very strong
-sense of where it is; it actually builds up
+das rodas. Esse robô tem uma noção muito forte
+de onde ele está; ele na verdade constrói
 
 00:05:19.100 --> 00:05:24.100
-a map of its world; a two dimensional and
-a 3 dimensional map. It knows where it is
+um mapa desse mundo; um bidimensional e
+um tridimensional.Ele sabe onde ele está
 
 00:05:24.100 --> 00:05:28.570
-within that world and the fundamental information
-it needs in order to be able to achieve a
+dentro desse mundo e as informações fundamentais
+necessárias afim de conseguir alcançar um
 
 00:05:28.570 --> 00:05:33.690
-goal. So it can sense, it's got planning computers
-here and that sends actions through to the
+objetivo. Para que possa sentir, ele tem computadores de
+planejamento aqui e que enviam ações através dos
 
 00:05:33.690 --> 00:05:38.650
-motors and it continually repeats this sensing,
-planning, acting paradigm.
+motores e continuamente repete esse sensoreamento,
+planejamento, paradigma de atuação.
 
 00:05:46.240 --> 00:05:50.640
-Here we have another mobile robot and this
-is a giant one. Machines like these are called
+Aqui temos outro robô móvel e esse é um dos 
+gigantes. Máquinas assim são chamadas de 
+
+---------------------------------------------------------------
+
 
 00:05:50.680 --> 00:05:55.210
-hot metal carriers. They are a relative of
-the forklift truck. They are typically found
+hot metal carriers. Eles são parentes das
+empilhadeiras. São tipicamente encontradas
 
 00:05:55.210 --> 00:05:59.870
-in aluminium smelting facilities and their
-job is to pick up very large buckets like
+em instalações de fundição de alumínio, com o 
+trabalho de pegar baldes muito grandes como
 
 00:05:59.870 --> 00:06:03.690
-this one you can see in the foreground here
-which will be filled with molten aluminium
+esse que vocês podem ver em primeiro plano,
+o qual será cheio com alumínio fundido
 
 00:06:03.690 --> 00:06:09.020
-- 8 tonnes of molten aluminium. Their job is
-to pick up this bucket, lift it and carry
+- 8 toneladas de alumínio fundido. O trabalho
+delas é pegar esse balde, levantar e carregar
 
 00:06:09.020 --> 00:06:13.340
-it along a road network to another place within
-this smelting complex.
+ao longo de uma rede de estradas rumo a outro 
+lugar dentro desse complexo de fundição.
 
 00:06:20.240 --> 00:06:24.470
-This machine was originally driven by a person
-who would sit in a cab here and manipulate
+Essa máquina foi originalmente dirigida por uma 
+pessoa que sentava na cabine aqui e manipulava
 
 00:06:24.470 --> 00:06:29.710
-the controls, but this particular machine
-has been turned into a robot. In order for
+os controles, mas essa em particular 
+foi transformada em um robô. A fim de
 
 00:06:29.710 --> 00:06:34.560
-it to be an effective robot, it needs to use
-a number of different sensors so that it avoids
+ser um robô efetivo, ela precisa usar um 
+número de diferentes sensores para que evite
 
 00:06:34.560 --> 00:06:39.030
-hitting things or people that it shouldn't
-hit, that it can determine where it is within
+de bater em coisas ou pessoas que ela não deveria
+bater, e que possa determinar onde é dentro
 
 00:06:39.030 --> 00:06:43.610
-the smelter complex, and also to be able to
-successfully pick up the crucible.
+do complexo de fundição, além de ser capaz de
+pegar com sucesso o cadinho.
 
 00:06:43.610 --> 00:06:48.240
-Now, let's look at the pick up process. The
-vehicle itself has got this hook which it
+Agora, vamos dar uma olhada no processo de "pegar".
+O veículo em si tem esse gancho que ele
 
 00:06:48.240 --> 00:06:53.890
-needs to put in through this handle. So it's
-a relatively precise positioning problem that
+precisa colocar através desse cabo. Então é um
+problema de posicionamento relaticamente preciso
 
 00:06:53.890 --> 00:06:58.250
-the robot needs to solve. Now it does that
-by using a camera which is up here on the
+que o robô precisa resolver. Agora ele faz isso
+usando uma câmera que está aqui em cima no
 
 00:06:58.250 --> 00:07:03.510
-mast of the robot, which looks down and works
-out where this bucket is with respect to the
+mastro do robô, que olha para baixo e computa
+onde esse balde está em relação ao
 
 00:07:03.510 --> 00:07:07.990
-robot, and the robot moves so as to bring
-this hook in through this handle.
+robô, e o robô se move para trazer 
+o gancho por esse cabo.
 
 00:07:19.360 --> 00:07:23.520
-Another really important sensor on this robot
-is this yellow laser scanning device, and
+Outro sensor realmente importante nesse robô
+é esse dispositivo de digitalização a laser amarelo, e
 
 00:07:23.520 --> 00:07:27.070
-there’s actually four of them, one on each
-corner of the robot so that it can see all
+há na verdade quatro deles, um em cada
+canto do robô para que ele possa ver todo
 
 00:07:27.070 --> 00:07:31.750
-the way around. This performs two functions.
-One is the laser beams can detect something
+o caminho ao redor. Ele executa duas funções.
+Uma é que os raios laser podem detectar algo
 
 00:07:31.750 --> 00:07:37.610
-like me, an obstacle, and it would then stop
-so it wouldn't collide with me. But it also
+como eu, um obstáculo, e ele deve então parar
+para que não colida comigo. Mas também
 
 00:07:37.610 --> 00:07:42.690
-performs a really important navigation task.
-This is how the robot knows where it is within
+executa uma tarefa de navegação realmente importante.
+É assim que o robô sabe onde é dentro do 
 
 00:07:42.690 --> 00:07:46.750
-the complex. So to understand how that works
-we are going to go outside and look at one
+complexo. Então para entender como isso funciona
+nós vamos ir para fora e dar uma olhada em um
 
 00:07:46.750 --> 00:07:49.310
-of the navigation markers that this sensor
-picks up.
+dos indicadores de navegação que esse sensor
+capta.
 
 00:07:56.900 --> 00:08:01.120
-The robot works out where it is in the environment
-using a system of markers. In this particular
+O robô computa onde ele está no ambiente usando 
+um sistema de identificadores. Nesse caso em
 
 00:08:01.120 --> 00:08:06.730
-case these strips of reflective tape which
-give really bright returns on the laser scanners
+particular, são essas tiras de fita reflexiva que
+dão um retorno realmente brilhante nos scanners a laser
 
 00:08:06.730 --> 00:08:12.090
-those yellow devices that we saw on the corners
-of the hot metal carrier. Now the robot has
+desses dispositivos amarelos que vimos nos cantos
+do hot metal carrier. Agora o robô tem
 
 00:08:12.090 --> 00:08:17.660
-got a map that tells it whereabouts all these
-markers are within the complex. And then it
+um mapa que diz o paradeiro de todos esses
+identificadores dentro do complexo. E então ele
 
 00:08:17.660 --> 00:08:23.200
-uses the information about where the robot
-perceives these markers to be and it combines
+usa a informação sobre onde o robô entende 
+que esses idenditifacodores estão e combina
 
 00:08:23.200 --> 00:08:27.680
-both of those together to determine where
-the robot is with respect to the map.
+os dois para determinar onde o
+robô está em relação ao mapa.
 
 00:08:41.120 --> 00:08:45.520
-Here we have another kind of mobile robot.
-This one is mobile in the air. It's a small
+Aqui nós temos outro tipo de robô móvel.
+Esse aqui se movimenta no ar. É um helicóptero
 
 00:08:45.529 --> 00:08:49.899
-scale helicopter - it's a sort of thing that
-a hobbyist would own. Sort of thing that they
+de pequena escala - é um tipo de coisa que um
+amador possuiria. O tipo de coisa que eles
 
 00:08:49.899 --> 00:08:55.839
-might fly on the weekend and they fly it using
-joystick controls that requires quite a lot
+podem voar no fim de semana e eles voam usando
+controles de joystick que preciasm de muita
 
 00:08:55.839 --> 00:09:00.709
-of skill on their part in order to keep it
-in the air and go where they want it to go.
+habilidade da parte deles a fim de mantê-lo of skill on their part in order to keep it
+no ar e ir aonde eles querem que ele vá.
 
 00:09:00.709 --> 00:09:04.540
-This particular machine has been converted
-into a robot but before we talk about the
+Essa máquina em particular foi transformada 
+em um robô. mas antes de falarmos sobre a
 
 00:09:04.540 --> 00:09:08.709
-robotic part, let’s just talk a little bit
-about the helicopter machine itself because
+parte robótica, vamos apenas falar um pouco
+sobre o helicóptero como máquina mesmo porque
 
 00:09:08.709 --> 00:09:10.639
-they are fascinating things.
+eles são coisas fascinantes.
 
 00:09:10.639 --> 00:09:14.370
-This is powered by a small petrol engine;
-there is a fuel tank down here that carries
+Esse é movido por um pequeno motor a gasolina;
+há um tanque de combustível aqui embaixo que carrega
 
 00:09:14.370 --> 00:09:20.670
-the fuel. And the main lift force comes from
-the main rotor that provides a force vector
+o combustível. E a força de levante principal vem
+do motor pincipal que fornece um vetor força
 
 00:09:20.670 --> 00:09:25.910
-vertically upwards, which counteracts the
-weight of the vehicle - counteracts gravity.
+vertical para cima, que se opõe ao
+peso do veículo - se opõe à gravidade.
 
 00:09:25.910 --> 00:09:29.899
-The amazing thing with the helicopter is it
-can point the force vector in different directions.
+O íncrivel sobre o helicóptero é que ele
+pode apontar o vetor força em diferentes direções.
 
 00:09:29.899 --> 00:09:34.120
-It can point it forward, it can point it backwards,
-it can point it sideways and that's all done
+Pode apontar para frente, pode apontar para trás,
+pode apontar para os lador e isso tudo é feito
 
 00:09:34.120 --> 00:09:39.339
-by this mechanism here called the swash plate
-and what that does is every time the blades
+por esse mecanismo aqui chamado de swash plate
+e o que ele faz é que toda vez que as lâminas
 
 00:09:39.339 --> 00:09:44.809
-rotate, they also rotate this way about their
-axis so that allows this force vector to be
+giram, eles também giram dess jeito em torno dos
+seus eixos para permitir que esse vetor força seja
 
 00:09:44.809 --> 00:09:50.360
-controlled and that gives it the ability to
-move forward, backwards, sideways and hover.
+controlado e assim dar a habilidade de se mover
+para frente, para trás, para os lados e para cima.
 
 00:09:50.360 --> 00:09:55.100
 There is another propeller on the back here
