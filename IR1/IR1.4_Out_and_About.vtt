@@ -219,9 +219,6 @@ planejamento, paradigma de atuação.
 Aqui temos outro robô móvel e esse é um dos 
 gigantes. Máquinas assim são chamadas de 
 
----------------------------------------------------------------
-
-
 00:05:50.680 --> 00:05:55.210
 hot metal carriers. Eles são parentes das
 empilhadeiras. São tipicamente encontradas
@@ -394,164 +391,176 @@ controlado e assim dar a habilidade de se mover
 para frente, para trás, para os lados e para cima.
 
 00:09:50.360 --> 00:09:55.100
-There is another propeller on the back here
-and that provides a force to stop the whole
+Aqui há uma outra hélice na parte de trás
+que gera uma força capaz de parar o corpo
 
 00:09:55.100 --> 00:09:58.639
-body of the helicopter rotating around.
+do helicóptero de girar
 
 00:09:58.639 --> 00:10:03.970
-In order to turn it into a robot, we need
-to add some sensors to it. So in this box
+Para trasnformá-lo em um robô, nós precisamos
+adicionar alguns sensores. Nesta caixa aqui
+
 
 00:10:03.970 --> 00:10:08.769
-down here, there are some sensors such as
-GPS which tells it where it is with respect
+embaixo, há alguns sensores como o GPS
+que informa aonde nós estamos em relação 
 
 00:10:08.769 --> 00:10:13.410
-to the world. There are some accelerometers
-and gyroscopes that tell it its orientation
+ao mundo. Temos aqui alguns acelerômetros
+e giroscópios que nos informam a orientação
 
 00:10:13.410 --> 00:10:18.779
-in space. There is a laser altimeter here
-which tells it its height above the ground
+no espaço. Aqui há também um altímetro a laser 
+que mede a sua altura em relação ao chão.
 
 00:10:18.779 --> 00:10:23.579
-and in the front is a radar which detects
-obstacles that it might fly into.
+e aqui na frente temos um radar que detecta obstáculos
+que ele pode encontrar.
 
 00:10:23.680 --> 00:10:30.880
-So, a robotic helicopter like this is useful for many kinds of tasks. It's useful for automated inspection:
+Então, um robô helicóptero como esse pode ser usado 
+em vários tipos de tarefas. Ele é útil em inspeções automáticas:
 
 00:10:30.910 --> 00:10:36.120
-perhaps on a farm it could inspect the quality
-of crops, it could fly along creeks and waterways,
+talvez em uma fazenda ele pode inspecionar a qualidade 
+das plantas, ele poderá voar sobre rios ou porções de água,
+
 
 00:10:36.120 --> 00:10:39.400
-it could fly along electricity lines or along
-fence lines.
+ele poderia voar ao longo de linhas de distribuição 
+elétrica ou cercas.
 
 00:10:45.680 --> 00:10:49.200
-Here we have another type of mobile robot
-but this robot is mobile through water.
+Aqui temos outro tipo de robô móvel. 
+Mas este robô é móvel na água.
 
 00:10:50.720 --> 00:10:55.840
-We use robots like this to make scientific measurements about large volumes of water like lakes
+Usamos robôs como este para criar medições 
+científicas sobre grandes volumes de água como lagos
 
 00:10:55.860 --> 00:11:01.780
-or coastal zones. It looks quite simple but is actually quite a complex and sophisticated machine.
+ou zonas costeiras. Parace simples, mas na verdade 
+é uma máquina bem complexa e sofisticada.
 
 00:11:03.600 --> 00:11:07.589
-Let’s walk through it. Down at
-this end we have a propeller that pushes the
+Vamos dar uma olhada nele. Aqui no final
+há uma hélice que empurra 
 
 00:11:07.589 --> 00:11:12.240
-whole robot through the water. It's got some
-control fins, rudder is here to steer it through
+o robô pela água. Ela possui aletas de controle, 
+O leme tem o papel de conduzi-lo pelo 
 
 00:11:12.240 --> 00:11:17.319
-the water body and these planes here make
-it move up and down in the water column. This
+corpo de água e essas outras servem para direcioná-lo 
+para cima e para baixo na coluna de água. Esse 
 
 00:11:17.319 --> 00:11:21.329
-antenna stack here has got a GPS receiver
-so when it's on the water surface it knows
+conjunto de antenas possui um receptor de GPS, 
+então quando ele está na superfície da água ele sabe
 
 00:11:21.329 --> 00:11:25.069
-where it is, and it has got some other antennas
-that allow us to communicate with it when
+aonde ele está, e nele há outras antenas que nos  
+permite se comunicar com ele quando
 
 00:11:25.069 --> 00:11:30.079
-it is out at sea. Here we have sonar sensors
-- side scan sonar - which uses sound waves
+ele está em alto mar. Aqui termos sensores sonares
+- sonar de varredura lateral - que utiliza ondas sonoras
+
 
 00:11:30.079 --> 00:11:35.860
-to build up a three dimensional map of the
-sea bed as the robot passes over it. Up here
+para criar um mapa tridimensional do mar
+a medida que o robô passa por ele. Aqui em cima
+
 
 00:11:35.860 --> 00:11:40.079
-we have some sensors that measure the speed
-of the ocean current. Even though the robot
+nós temos sensores que medem a velocidade da
+corrente marítima do oceando. Apesar do robô
+
 
 00:11:40.079 --> 00:11:43.759
-is moving, they can measure the speed of the
-water column. Underneath there is another
+estar se movendo, ele pode medir a velocidade 
+da coluna de água. Aqui embaixo há outro 
 
 00:11:43.759 --> 00:11:49.470
-sensor that measures the speed of the robot
-with respect to the water column. Up the front
+que mede a velocidade que do robô em relação
+a coluna de água. Aqui na frente 
 
 00:11:49.470 --> 00:11:54.389
-here is the scientific payload and this is
-the instrumentation that we want to push through
+há o aparato científico e este é a 
+instrumentação que nós queremos levar pela
 
 00:11:54.389 --> 00:11:59.339
-the water to make measurements about what's
-going on. So here we have sensors that measure
+água para fazer medições sobre o que está 
+acontecendo. Temos aqui sensores que medem
 
 00:11:59.339 --> 00:12:03.639
-the conductivity and pH of the water; that
-measure the amount of dissolved oxygen; that
+a condutividade e o pH da água, que medem o 
+total de oxigênio dissolvido, que medem
 
 00:12:03.639 --> 00:12:08.439
-measure the amount of chlorophyll; measures
-the amount of blue green algae. So this scientific
+a quantidade de clorofila , que medem a quantidae
+de alga azul e verde. Logo, estes dados
 
 00:12:08.439 --> 00:12:12.949
-data is merged with navigational data which
-comes from the other sensors on board the
+científicos são unidos aos dados de navegação 
+que vem de outros sensores a bordo do
 
 00:12:12.960 --> 00:12:15.920
-robot, so we know where these measurements
-have been taken.
+robô, desta forma nós sabemos aonde 
+estas medições foram feitas
 
 00:12:18.960 --> 00:12:23.840
-This particular robot has got a runtime of up to 8 hours, moves about 2 meters per second,
+Este robô em particular tem um tempo de execução
+de até 8 horas, move em torno de 2 metros por segundo
 
 00:12:24.000 --> 00:12:28.000
-so we can survey about 30 kilometres in water in a single run.
+Logo podemos pesquisar até 30 quilômetros em água 
+numa única missão.
 
 00:12:33.730 --> 00:12:39.559
-So what we have just seen are a number of
-really interesting, exciting and clearly useful
+Então o que vimos foi um número de interessantes robôs 
+que são claramente bem 
 
 00:12:39.559 --> 00:12:44.839
-robots. These robots differ in their form
-and in their function, but inside these robots
+úteis. Estes robôs diferem em forma e na sua 
+funcionalidade, mas a rigor eles estão 
 
 00:12:44.839 --> 00:12:49.470
-are all doing the same thing. They are sensing
-their world, they are making plans and then
+todos fazendo a mesma coisa. Eles estão sensoriando 
+o mundo, para então fazer planos e no final
 
 00:12:49.470 --> 00:12:54.490
-they are they are carrying out actions in
-order to achieve their goals. Some of the
+eles realizam ações para alcançar 
+as suas metas. Alguns robôs são
 
 00:12:54.490 --> 00:12:59.779
-robots that we saw were clearly research prototypes,
-but others were commercial products. And this
+claramente protótipos de pesquisa, mas outros 
+são modelos comerciais. Isto é muito
 
 00:12:59.779 --> 00:13:04.959
-is really exciting because this is the beginning
-of a whole new technological wave and we have
+emocionante, pois é o começo de 
+toda uma nova onda tecnológica
 
 00:13:04.959 --> 00:13:10.290
-witnessed many technological waves in the
-past. The introduction of steam power, electricity,
+e já presenciamos outras ondas no passado.
+A introdução da máquina a vapor, eletricidade
 
 00:13:10.290 --> 00:13:16.089
-flying machines, automobiles, electricity,
-computers; all these things were surprising
+aviões, automóveis, computadores elétricos. 
+Todas essas coisas foram supreendentes 
 
 00:13:16.089 --> 00:13:21.740
-to our grandparents and to our parents. Robots
-are just going to be the next technological
+para os nossos avós e para os nossos pais. Robôs
+serão a nova onda tecnológica
 
 00:13:21.740 --> 00:13:26.850
-wave and in the near future, we are going
-to be quite unsurprised to see them in our
+num futuro próximo e nós ficaremos muito surpresos
+de vê-los nos nossos
 
 00:13:26.850 --> 00:13:32.370
-workplaces and in our homes. So there are
-clearly really interesting times ahead.
+ambientes de trabalho e nas nossas casas. 
+
+workplaces and in our homes. Portanto, 
+há realmente tempos interessantes pela frente.
 
