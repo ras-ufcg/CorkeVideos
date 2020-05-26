@@ -150,161 +150,161 @@ motion, move it horizontally, we move it vertically,
 and then we rotate it and rotate it quite
 
 00:03:15.099 --> 00:03:19.530
-a bit until it lies on top of that coordinate
-frame. So, that is the pose of the little
+um pouco até que ele esteja sobre aquele sistema
+de coordenadas. Então, essa é a pose do pequeno
 
 00:03:19.530 --> 00:03:25.269
-robot with respect to the world coordinate
-frame described in terms of a positional component
+robô em relação ao sistema de coordenadas do mundo
+descrito em termos de uma componente de posição
 
 00:03:25.269 --> 00:03:30.529
-and a rotational component.
-So, now we have described the pose of the
+e uma componente de rotação. Logo, 
+agora nós teremos descrito a pose do 
 
 00:03:30.529 --> 00:03:34.700
-little robot with respect to the world coordinate
-frame. We previously described the pose of
+pequeno robô em relação ao sistema de coordenadas
+do mundo. Nós já descrevemos a pose do
 
 00:03:34.700 --> 00:03:39.120
-the big robot with respect to the world coordinate
-frame. But, we can also describe the pose
+robô grande em relação ao sistema de coordenadas
+do mundo. Mas nós podemos também descrever a pose
 
 00:03:39.120 --> 00:03:44.689
-of the little robot with respect to the big
-robot, and we can do that by picking up the
+do robô pequeno com relação ao robô grande,
+e nós podemos fazer isso pegando o 
 
 00:03:44.689 --> 00:03:50.099
-big robot’s coordinate frame and we make
-a translation in the world x direction, and
+sistema de coordenadas do robô grande e fazendo
+a translação na direção x do mundo, e
 
 00:03:50.099 --> 00:03:55.209
-then in the world y direction, and then we
-rotate it until the axis line up. And, that
+depois na direção y do mundo, e após, nós
+rotacionamos até os eixos se alinharem. Assim 
 
 00:03:55.209 --> 00:04:01.439
-then is a relative motion or relative pose
-from this coordinate frame to this one.
+é o movimento relativo ou posição relativa
+desse sistema de coordenadas para esse.
 
 00:04:01.439 --> 00:04:07.870
-I’m going to use this Greek letter which
-is pronounced as ksi to represent pose. In
+Eu irei usar essa letra grega que é pronunciada
+como ksi para representar a pose. Em
 
 00:04:07.870 --> 00:04:13.480
-a two-dimensional world, pose has got three
-parameters: x and y which represent the offset
+um mundo bidimensional, a pose possui três
+parâmetros: x e y que representam a distância
 
 00:04:13.480 --> 00:04:18.880
-from the origin of one coordinate frame to
-the origin of the next coordinate frame, and
+da origem do sistema de coordenadas para
+a origem do próximo sistema de coordenadas, e
 
 00:04:18.880 --> 00:04:26.000
-the angle Theta which represents the rotation
-from one coordinate frame to the next. There
+o ângulo teta, que representa a rotação de um
+sistema de coordenadas para o outro. Há
 
 00:04:26.000 --> 00:04:30.620
-is an important convention when we talk about
-the rotation of one coordinate frame with
+uma convenção importante quando nós conversamos sobre
+a rotação de um sistema de coordenadas em
 
 00:04:30.620 --> 00:04:36.110
-respect to another, and that is that angles
-increase positively in the anticlockwise direction.
+relação a outro, que é que o ângulo cresce
+positivamente no sentido anti-horário.
 
 00:04:36.110 --> 00:04:41.840
-So, if this is my original coordinate frame,
-if I rotate that by the angle Theta, it looks
+Então, se esse é o meu sistema de coordenadas original,
+se eu rotacionar ele em um ângulo teta, ficará
 
 00:04:41.840 --> 00:04:47.530
-like this. Importantly, positive rotation
-is in the anticlockwise direction.
+desse jeito. Destacando, a rotação é 
+positiva no sentido anti-horário.
 
 00:04:47.530 --> 00:04:55.000
-We can also think about pose as a move, a
-motion in the x direction and in the y direction,
+Nós podemos também pensar a pose como uma mudança, um
+movimento na direção x e na direção y,
 
 00:04:55.000 --> 00:04:59.280
-and then a rotation or twist by the amount Theta.
+e depois uma rotação ou giro de um ângulo teta.
 
 00:04:59.280 --> 00:05:04.810
-So, we can describe that the position of this
-new coordinate frame that we have attached
+Então, nós podemos descrever a posição desse
+novo sistema de coordenadas que nós anexamos
 
 00:05:04.810 --> 00:05:12.380
-to the robot in terms of a motion. We do a
-motion from the original coordinate frame,
+ao robô em termos de movimento. Nós fazemos um
+movimento do sistema de coordenadas original, nosso sistema 
 
 00:05:12.380 --> 00:05:16.440
-our reference coordinate frame, sometimes
-called the world coordinate frame, that we
+de coordenadas referencial, às vezes
+chamado sistema de coordenadas do mundo, nós
 
 00:05:16.440 --> 00:05:21.540
-move the origin of this frame to here, and
-then we rotate.
+movemos a origem desse sistema até aqui, e
+depois nós rotacionamos.
 
 00:05:21.540 --> 00:05:28.090
-So, let’s summarise what we've covered in
-this section. A point can be described by
+Logo, vamos resumir o que nós aprendemos nessa
+seção. Um ponto pode ser descrito como
 
 00:05:28.090 --> 00:05:34.090
-a vector with respect to a particular coordinate
-frame, and, when we do that, we introduce
+um vetor em relação a um sistema de coordenadas 
+específico, e, quando nós fazemos isso, nós introduzimos
 
 00:05:34.090 --> 00:05:40.310
-some additional notation. We use the symbol
-lower case p to represent a vector. The A
+algumas notações adicionais. Nós usamos o símbolo
+em letra minúscula p para representar um vetor. O A
 
 00:05:40.310 --> 00:05:46.520
-in front denotes the coordinate frame from
-which the vector starts. So, this vector begins
+na frente denota o sistema de coordenadas
+do qual o vetor começa. Então, esse vetor inicia
 
 00:05:46.520 --> 00:05:52.660
-from the origin of coordinate frame A. The
-trailing B is the destination. It’s the
+da origem do sistema de coordenadas A. O B
+poterior é o destino. Ele é o 
 
 00:05:52.660 --> 00:05:57.580
-name of the point that the vector points to.
-The pose of a coordinate frame can be described
+nome do ponto para o qual o vetor aponta.
+A pose do sistema de coordenadas pode ser descrito
 
 00:05:57.580 --> 00:06:03.610
-with respect to another coordinate frame.
-I used this fat arrow to represent the pose
+em relação a outro sistema de coordenadas.
+Eu usei essa seta grossa para representar a pose
 
 00:06:03.610 --> 00:06:09.580
-- the motion from coordinate frame A to coordinate
-frame B. Now, the motion is more complex than
+- o movimento do sistema de coordenadas A para o sistema
+de coordenadas B. Agora, o movimento é mais complexo que
 
 00:06:09.580 --> 00:06:15.640
-just a translation like an ordinary vector.
-It includes a translation and a rotation,
+apenas uma translação como um vetor ordinário.
+Ele inclui a translação e a rotação,
 
 00:06:15.640 --> 00:06:19.020
-so that’s why I used a different kind of
-arrow. You know that it’s fatter and it’s
+por isso eu usei um estilo diferente de
+seta. Você sabe que ela é mais grossa e 
 
 00:06:19.020 --> 00:06:23.920
-got a different kind of head.
-Symbolically, I describe it like this. I use
+possui uma ponta diferente.
+Simbolicamente, eu a descrevo assim. Eu uso
 
 00:06:23.920 --> 00:06:28.980
-the Greek letter ksi to denote that we’re
-talking about a pose. The leading A is the
+a letra grega ksi para denotar que nós estamos
+falando sobre pose. O A adiante é o 
 
 00:06:28.980 --> 00:06:34.360
-frame of reference. That’s where I start
-from. The trailing B is where I want to end
+sistema de referência. É de onde eu vou
+começar. O B posterior é onde eu quero terminar.
 
 00:06:34.360 --> 00:06:40.290
-up. This symbol describes a relative motion,
-a relative pose from the coordinate frame
+Esse símbolo descreve o movimento relativo,
+a posição relativa do sistema de coordenadas
 
 00:06:40.290 --> 00:06:46.670
-A to the coordinate frame B. We can consider
-a pose as a motion. We can consider it as
+A para o sistema de coordenadas B. Nós podemos considerar
+a pose como um movimento. Nós podemos considerar ele como
 
 00:06:46.670 --> 00:06:52.560
-a translation and a rotation. And, for the
-two-dimensional case, the pose is described
+translacional ou rotacional. E, para o caso
+bidimensional, a pose é descrita
 
 00:06:52.560 --> 00:06:57.360
-by three numbers: two translational components
-and one rotational component.
+por três números: dois componentes translacionais
+e um componente rotacional.
 
