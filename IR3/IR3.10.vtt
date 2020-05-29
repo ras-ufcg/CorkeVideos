@@ -1,127 +1,127 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt_br
 
 00:00:03.520 --> 00:00:08.670
-When we're discussing industrial type robots,
-it's important to describe the orientation
+Quando nós falamos sobre robôs industriais,
+é importante descrever a orientação
 
 00:00:08.670 --> 00:00:12.420
-of the end effector, the gripper - the piece
-of the robot that does the work by picking
+do efetuador, a garra - a peça
+do robô responsável por pegar
 
 00:00:12.420 --> 00:00:18.090
-objects up and putting them down. The common
-convention in this type of robotics is what's
+objetos e posicioná-los. A convenção
+nesse tipo de robótica é o que
 
 00:00:18.090 --> 00:00:24.200
-called the 2-axis representation. We start
-off by defining a vector which is called the
+chamamos de representação em dois eixos.
+Nós começamos definindo um vetor, chamado de
 
 00:00:24.200 --> 00:00:28.670
-approach vector and that's the vector that's
-parallel to the fingers of the robot. We define
+vetor de aproximação, e esse vetor é
+correspondente aos dedos do robô. Definimos
 
 00:00:28.670 --> 00:00:32.980
-another vector which we call the orientation
-vector and that's the vector that joins the
+outro vetor que chamamos de vetor de
+orientação, e esse é o vetor que une as
 
 00:00:32.980 --> 00:00:39.220
-tips of two fingers. So that says something
-about the twist of the robot fingers around
+pontas de dois dedos. Logo, ele nos diz algo
+sobre a torção dos dedos do robô em volta
 
 00:00:39.220 --> 00:00:45.800
-the approach vector. And for a lot of robotic
-manipulation tasks, just knowing the approach
+do vetor de aproximação. E para muitas tarefas
+de manipulação robótica, apenas conhecer os vetores
 
 00:00:45.800 --> 00:00:51.360
-vector and the orientation vector is sufficient
-to be able to describe the orientation of the gripper.
+de aproximação e o de orientação é suficiente
+para ser capaz de descrever a direção da garra.
 
 00:00:51.800 --> 00:00:57.020
-In order to create a right-handed coordinate
-frame we introduce a third vector just called
+Para criar uma representação de uma mão direita
+coordenada, introduzimos um terceiro vetor chamado
 
 00:00:57.020 --> 00:01:01.850
-the normal vector. Now we can express the
-orientation of the gripper as an orthonormal
+vetor normal. Agora, podemos expressar a
+orientação da garra como uma matriz de
 
 00:01:01.850 --> 00:01:08.359
-rotation matrix. We do that by stacking up
-as columns the N vector, the O vector and
+rotação ortonormal. Fazemos isso organizando
+em colunas o vetor N, o vetor O e
 
 00:01:08.359 --> 00:01:14.659
-the A vector. We're can expand this out as
-a 3 x 3 matrix and each column are the elements
+o vetor A. Nós podemos expandir isso como
+uma matriz 3 x 3 e cada coluna são os elementos
 
 00:01:14.659 --> 00:01:21.969
-of the N, O and A vectors. All of these columns
-must be orthogonal. So if we know the A and
+dos vetores N, O e A. Todas essas colunas
+devem ser ortogonais. Assim, se sabemos os vetores
 
 00:01:21.969 --> 00:01:28.799
-the O vector, we can compute the N vector
-as the cross product of the O and the A vector.
+A e O, podemos computar o vetor N
+como o produto vetorial desses vetores.
 
 00:01:28.799 --> 00:01:35.389
-Here's a quick recap on the rules that relate
-the columns of an orthogonal matrix. A little
+Aqui está uma rápida revisão das regras relacionadas
+às colunas de uma matriz ortogonal. Um pequeno
 
 00:01:35.389 --> 00:01:42.319
-trick that I use to aid my memory is to consider
-that N, O and A are written on a circular
+truque que eu uso para ajudar minha memória é
+considerar que N, O e A estão escritos numa tira
 
 00:01:42.319 --> 00:01:46.340
-strip of paper. We start with the symbol that
-we want to know, and is equal to the cross
+circular de papel. Começamos com o símbolo que
+queremos encontrar, e ele é igual ao produto
 
 00:01:46.340 --> 00:01:49.389
-product of the next two around the circle.
+vetorial dos dois próximos ao longo do círculo.
 
 00:01:49.389 --> 00:01:54.340
-Here I have a very simple robot and we have
-our world coordinate frame here, which is
+Aqui eu tenho um robô muito simples e temos
+nosso quadro de coordenadas do mundo aqui, que é
 
 00:01:54.340 --> 00:02:00.729
-our reference for both position and for orientation.
-And this robot is going to pick up this battery.
+nossa referência tanto para posição como
+orientação. E este robô vai pegar esta bateria.
 
 00:02:00.729 --> 00:02:05.669
-In order to do that, we need to describe both
-the position and the orientation of the gripper.
+Para isso, precisamos descrever
+a posição e a orientação da garra.
 
 00:02:05.669 --> 00:02:09.170
-It might be that we want to pick up the battery
-with a gripper orientation like this or we
+Pode ser isso que queremos para pegar a bateria
+com a orientação da garra desta forma ou nós
 
 00:02:09.170 --> 00:02:13.760
-might want to pick up the battery with a gripper
-orientation like this. Either way we need
+poderíamos querer pegar a bateria com a orientação
+da garra desta forma. Em ambos os casos, precisamos
 
 00:02:13.760 --> 00:02:17.660
-to be able to describe the orientation of
-the gripper. So we do what we've done before,
+ser capazes de descrever a orientação da
+garra. Logo, faremos o que fizemos antes,
 
 00:02:17.660 --> 00:02:23.890
-with other objects. We attach a coordinate
-frame to the gripper of the robot. We orient
+com outros objetos. Nós anexamos um quadro
+de coordenadas à garra do robô. Nós o orientamos
 
 00:02:23.890 --> 00:02:28.620
-it so that the z-axis is pointing outwards.
-We refer to this as the approach vector. It's
+de modo que o eixo z aponta para fora.
+Nos referimos a isso como o vetor de aproximação.
 
 00:02:28.620 --> 00:02:33.130
-generally the direction in which the gripper
-approaches the object. We have another vector
+De modo geral, ele é a direção na qual a garra
+se aproxima do objeto. Temos outro vetor
 
 00:02:33.130 --> 00:02:37.590
-which we call the orientation vector and is
-parallel to the y-axis of the gripper's coordinate
+que chamamos de vetor de orientação e
+corresponde ao eixo y do quadro de coordenadas
 
 00:02:37.590 --> 00:02:42.620
-frame and that is the orientation of the gripper.
-Do we want the gripper's fingers like this
+da garra e isso é a orientação da garra.
+Nós queremos os dedos do robô assim
 
 00:02:42.620 --> 00:02:47.950
-or like this. And the third vector, the x-axis
-we refer to as the normal vector.
+ou assim. E o terceiro vetor, o eixo x,
+nos referimos a ele como o vetor normal.
 
