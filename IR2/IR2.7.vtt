@@ -152,153 +152,153 @@ of A. All of that is encoded in this single
 3x3 matrix. A mathematician would say that
 
 00:03:39.499 --> 00:03:46.079
-homogeneous transformation belongs to the
-special Euclidian group of dimension 2. Symbolically
+transformação homogênea pertence ao grupo 
+Euclidiano especial da dimensão 2. Simbolicamente,
 
 00:03:46.079 --> 00:03:51.419
-we would say matrix T belongs to the set SE(2).
+diríamos que a matriz T pertence ao conjunto SE (2).
 
 00:03:51.419 --> 00:03:58.209
-Finally it's time to start making these abstract
-concepts real. Pose is just a matrix. Where
+Finalmente, é hora de começar a tornar reais esses 
+conceitos abstratos. Pose é apenas uma matriz. Onde
 
 00:03:58.209 --> 00:04:04.809
-we had the symbol ksi before we can substitute
-this 3x3 homogeneous transformation matrix.
+tínhamos o símbolo ksi antes de podermos substituir
+essa matriz de transformação homogênea 3x3.
 
 00:04:04.809 --> 00:04:11.129
-When we talk about compounding or joining
-two poses together using the O+ operator,
+Quando falamos em compor ou unir 
+duas poses usando o operador O +,
 
 00:04:11.129 --> 00:04:17.139
-that is exactly the same as multiplying these
-two homogeneous transformations. We use the
+isso é exatamente o mesmo que multiplicar essas
+duas transformações homogêneas. Nós usamos o 
 
 00:04:17.139 --> 00:04:23.780
-O- operator to indicate the negation of a
-relative pose, and that is simply the inverse
+operador O- para indicar a negação de uma pose relativa 
+ou seja, simplesmente o inverso
 
 00:04:23.780 --> 00:04:29.449
-of a homogeneous transformation matrix. I
-mentioned earlier that the inverse of a rotation
+de uma matriz de transformação homogênea. Eu
+Mencionei anteriormente que o inverso de uma matriz 
 
 00:04:29.449 --> 00:04:34.550
-matrix is equal to its transpose. That is
-not the case for a homogeneous transformation
+de rotação é igual à sua transposta. Isso não
+é o caso de uma matriz de transformação homogênea
 
 00:04:34.550 --> 00:04:41.389
-matrix. You need to perform a proper matrix
-inverse: invert a 3x3 matrix.
+homogênea. Você precisa calcular uma matriz inversa 
+adequada: inverta uma matriz 3x3.
 
 00:04:41.389 --> 00:04:47.780
-We introduced a dot operator which transforms
-a vector from one coordinate frame to another.
+Introduzimos um operador de ponto que transforma 
+um vetor de um quadro de coordenadas em outro.
 
 00:04:47.780 --> 00:04:55.550
-And that is simply the product of the homogeneous
-transformation matrix and the vector represented
+E isso é simplesmente o produto da matriz de 
+transformação homogênea e o vetor representado 
 
 00:04:55.550 --> 00:05:01.970
-in homogeneous form. Remember that the homogeneous
-vector is obtained from the original vector
+na forma homogênea. Lembre-se de que o vetor homogêneo 
+é obtido do vetor original
 
 00:05:01.970 --> 00:05:08.550
-P, the two vector and we augment or append
-a one element to that to form a three element
+P, para o vetor dois pode ser aumento ou anexamos
+a ele um elemento para que tenhamos uma vetor de três
 
 00:05:08.550 --> 00:05:08.979
-vector.
+componentes.
 
 00:05:08.979 --> 00:05:14.289
-Here we are in MATLAB and we're going to experiment
-with these 2-dimensional homogeneous transformation
+Aqui estamos no MATLAB e vamos experimentar
+essas matrizes de transformação homogêneas
 
 00:05:14.289 --> 00:05:19.879
-matrices. So what I’m going to do is introduce
-a function called transl2 which creates a
+bidimencionais. Então, o que eu vou fazer é introduzir
+uma função chamada transl2, que cria uma
 
 00:05:19.879 --> 00:05:25.860
-homogeneous transformation representing a
-pure translation, that is a translation of
+transformação homogênea representando uma
+rotação pura, que é uma rotação 
 
 00:05:25.860 --> 00:05:30.919
-1 in the x direction and 2 in the y direction.
+de 1 na direção x e 2 na direção y.
 
 00:05:30.919 --> 00:05:36.849
-Previously we saw how to create a 2-dimensional
-rotation matrix, for instance a rotation of
+Anteriormente, vimos como criar uma matriz de rotação
+bidimensional, por exemplo, um giro
 
 00:05:36.849 --> 00:05:45.669
-30 degrees is created like this. We see that
-this rotation matrix is only 2x2 compared
+de 30 graus é criado. Vemos que 
+essa matriz de rotação é apenas 2x2 em comparação
 
 00:05:45.669 --> 00:05:52.840
-to the 3x3 homogeneous transformation matrix.
-So I can create a homogeneous transformation
+com a matriz de transformação homogênea 3x3.
+Para que eu possa criar uma matriz de transformação
 
 00:05:52.840 --> 00:06:00.490
-matrix equivalent of this rotation by prefixing
-with the letter T. This function returns a
+homogênea equivalente a essa rotação fixamos 
+a letra T. Esta função retorna uma
 
 00:06:00.490 --> 00:06:06.000
-3x3 homogeneous transformation matrix. We
-can see the rotation matrix part up in the
+matriz de transformação homogênea 3x3. Podemos 
+ver a parte da matriz de rotação no
 
 00:06:06.000 --> 00:06:12.120
-top left corner. We can see that the translation
-part of this matrix is equal to zero. This
+canto superior esquerdo. Podemos ver que a parte da 
+rotação dessa matriz é igual a zero. Essa 
 
 00:06:12.120 --> 00:06:16.820
-homogeneous transformation matrix represents
-a pure rotation.
+matriz de transformação homogênea representa uma
+uma rotação pura.
 
 00:06:17.400 --> 00:06:31.420
-Now we can multiply these two together. transl2, Multiply it by the rotation part - 30 degrees.
+Agora podemos multiplicar os dois juntos. transl2, multiplique pela parte de rotação - 30 graus.
 
 00:06:31.420 --> 00:06:38.100
-And now what I have is a homogeneous transformation which represents a pose.
+E agora o que tenho é uma transformação homogênea que representa uma pose.
 
 00:06:38.110 --> 00:06:41.790
-It's got a rotational component and it's got a translational component.
+Tem um componente rotacional e um componente translacional.
 
 00:06:41.790 --> 00:06:45.470
-Now the toolbox has got a shorthand function to achieve this.
+Agora, a caixa de ferramentas possui uma função abreviada para conseguir isso.
 
 00:06:45.600 --> 00:06:50.539
-I pass in the x and y translational
-parts; the rotational part and the option
+Passo nas partes translacionais x e y;
+a parte rotacional nos dá a opção
 
 00:06:50.539 --> 00:06:55.739
-to say that that angle is specified in units
-of degrees. We have exactly the same matrix here.
+de dizer que esse ângulo é especificado em unidades
+de graus. Temos exatamente a mesma matriz aqui.
 
 00:06:56.720 --> 00:07:02.840
-Now let's plot this particular pose and see
-what it looks like. And to do that I'm going
+Agora vamos traçar essa pose em particular e ver
+como ela se parece. E para fazer isso, 
 
 00:07:02.849 --> 00:07:09.219
-to create an axis in which to plot, and x
-is going to vary from 0-5 and y is going to
+criarei um eixo para plotar, onde x
+x vai variar de 0-5 e y
 
 00:07:09.219 --> 00:07:16.129
-vary from 0-5. I need to set the aspect ratio
-so that everything looks reasonable, so I'm
+da mesma forma. Eu preciso definir a proporção para 
+que tudo pareça razoável, então
 
 00:07:16.129 --> 00:07:24.039
-going to set the axis so that the aspect ratio
-is square. I'm going to put a hold on because
+vou definir o eixo para que a proporção
+seja quadrada. Vou adiar porque
 
 00:07:24.039 --> 00:07:29.250
-I'm going to plot a few poses. The first pose
-I'm going to plot I'm going to put into workspace
+preciso traçar algumas poses. A primeira pose
+que vou plotar vou colocar na variável de espaço de 
 
 00:07:29.250 --> 00:07:34.919
-variable T1 and it is the pose that I looked
-at just a moment ago: 1 in the x direction,
+trabalho T1 e é a pose que olhei 
+há pouco: 1 na direção x,
 
 00:07:34.919 --> 00:07:40.680
-2 in the y direction and the rotation of 30
-degrees. There is a homogeneous transformation
+2 na direção y e rotação de 30 
+graus. Aqui está uma transformação homogênea 
 
 00:07:40.680 --> 00:07:43.669
 matrix. Now I'm going to plot that.
