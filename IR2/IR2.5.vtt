@@ -1,32 +1,29 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.340 --> 00:00:09.520
-Now it's time to start making these concepts
-real. What is this thing? What is this letter ksi?
+Agora é o momento de transformar esses conceitos
+em realidade. O que é isso? o que é a letra ksi
 
 00:00:10.060 --> 00:00:14.480
-We're going to do this by separating
-rotation and translation.
+Nós vamos fazer isso separando rotação e translação
 
 00:00:14.490 --> 00:00:19.390
-Here we have the car at two different poses.
-And we can describe the second pose in terms
+Aqui temos o carro em duas poses diferentes.
+Dáí, nós podemos descrever a segunda pose como
 
 00:00:19.390 --> 00:00:27.609
-of a relative pose from here to there. Now
-in order to aid our understanding and development
+uma pose relativa daqui até lá. Agora para ajudar
+nossa compreensão e desenvolvimento 
 
 00:00:27.609 --> 00:00:34.160
-of the concept, we're going to split this
-into two parts. A translation followed by
+do conceito, nós vamos seperar isso em duas partes.
+A translação seguida da
 
 00:00:34.160 --> 00:00:39.730
-a rotation. We're going to deal with the rotational
-part first because it's actually more complex
+rotação. Nós vamos lidar primeiro com a rotação,
+pois ela é um pouco mais complexa
 
 00:00:39.730 --> 00:00:43.859
-than translation and conceptually more difficult
-to understand.
-
+que a translação e conceitualmente mais difícil de entender
