@@ -1,144 +1,144 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:02.399 --> 00:00:06.490
-Let's summarize some of the big ideas from
-this lecture. The first thing that I want
+Vamos resumir algumas das grandes ideias
+dessa aula. A primeira coisa que eu quero
 
 00:00:06.490 --> 00:00:11.160
-to say, and I can't say this strongly enough,
-is that coordinate frames are your friend.
+dizer, e eu não posso dizer isso fortemente,
+é que os sistemas de coordenadas são seus amigos.
 
 00:00:11.160 --> 00:00:16.800
-They make it very easy to decompose and understand
-complex problems. So we assign coordinate
+Eles tornam muito fácil decompor e entender
+problemas complexos. Então, atribuímos sistemas
 
 00:00:16.800 --> 00:00:21.070
-frames to everything in the robot's environment
-and write down the relationships between the
+de coordenadas a tudo no ambiente dos robores,
+e anotamos as relações entre os
 
 00:00:21.070 --> 00:00:25.730
-coordinate frames. It’s a very rigorous
-approach and will ultimately save you a lot
+sistemas de coordenadas. É uma abordagem
+rigorosa e, no fim das contas, irá salvar muito
 
 00:00:25.730 --> 00:00:30.169
-of time. Don't be afraid to use lots of coordinate
-frames.
+de seu tempo. Não sinta medo de usar muitos
+sistemas de coordenadas.
 
 00:00:30.169 --> 00:00:35.380
-Coordinate frames follow the right-handed
-convention, the X axis and the Y axis are
+Sistemas de coordenadas seguem a conversão 
+da mão direita, o eixo X e o eixo Y estão
 
 00:00:35.380 --> 00:00:40.990
-related like this. If we have 2 coordinate
-frames the relative rotation between them
+relacionados assim. Se tivermos 2 sistemas de 
+coordenadas, a rotação relativa entre eles
 
 00:00:40.990 --> 00:00:48.050
-is defined like this, angle increases positively
-in the anti-clockwise direction. Points can
+é definida assim, o ângulo aumenta positivamente
+no sentido anti-horário. Pontos podem
 
 00:00:48.050 --> 00:00:53.970
-be represented as vectors with respect to
-particular coordinate frames and in our notation
+ser representados como vetores em relação aos sistemas
+de coordenadas específicos e em nossa notação
 
 00:00:53.970 --> 00:00:59.630
-we denote a vector by lower case p, and the
-preceding label indicates the frame that the
+denotaremos um vetor em minúsculo p,
+e o rótulo anterior indica o sistema que o
 
 00:00:59.630 --> 00:01:06.340
-vector is with respect to, and the trailing
-label indicates the destination of that vector.
+vetor está relacionado, e o rótulo à direita
+indica o destino do vetor.
 
 00:01:06.340 --> 00:01:11.770
-So in this case the A denotes the fact that
-the vector starts at the origin of frame A
+Portanto, neste caso, o A denota que o vetor
+começa na origem do sistema A
 
 00:01:11.770 --> 00:01:14.520
-and it goes to the point B.
+e vai até o ponto B.
 
 00:01:14.520 --> 00:01:19.790
-We can describe the relationship between two
-coordinate frames in terms of pose. And pose
+Nós podemos descrever a relação entre dois sistemas 
+de coordenadas em termos de posição. E posição 
 
 00:01:19.790 --> 00:01:25.600
-is something that has got three parameters:
-it's got a translation, the X and Y component
+é algo que possui três parâmetros:
+tem uma translação, as componentes X e Y
 
 00:01:25.600 --> 00:01:31.900
-and the rotation which is the theta component.
-We can consider it as a simple motion, a translation
+e a rotação que é a componente teta. Podemos 
+considerá-lo um movimento simples, uma translação 
 
 00:01:31.900 --> 00:01:39.220
-and a rotation. Graphically we denote pose
-by a thick vector with a triangular head.
+e uma rotação. Graficamente simbolizamos a posição
+por um vetor negrito com um triângulo em cima.
 
 00:01:39.220 --> 00:01:43.940
-Symbolically we represent it by the Greek
-letter ksi. The left-hand label indicates
+Simbolicamente representamos pela letra
+grega ksi. O rótulo à esquerda indica
 
 00:01:43.940 --> 00:01:50.070
-the frame of reference and the right-hand
-label indicates the destination pose. So in
+o sistema de referência e o rótulo à direita
+indica a posição destino. Portanto,
 
 00:01:50.070 --> 00:01:56.810
-this case this is saying this is the relative
-pose from coordinate frame A to coordinate frame B.
+neste caso, isso significa a posição relativa do
+sistema de coordenada A para o sistema de coordenada B.
 
 00:01:57.330 --> 00:02:02.860
-We can describe a point in terms of vectors
-with respect to different coordinate frames.
+Podemos descrever um ponto em termos de vetores
+no que se refere à diferentes sistemas de coordenadas.
 
 00:02:02.860 --> 00:02:07.180
-In this case the point D, we can describe
-with a vector in coordinate frame C attached
+Neste caso, o ponto D, podemos descrever com 
+um vetor no sistema de coordenada C fixado
 
 00:02:07.180 --> 00:02:12.249
-to the car or coordinate frame W which is
-fixed within the world. We can transform a
+no carro ou no sistema de coordenada W que é fixado 
+dentro do universo. Nós podemos transformar um
 
 00:02:12.249 --> 00:02:19.549
-vector from one coordinate frame to another
-by applying the dot operator and the pose,
+vetor de um sistema de coordenada para outro
+aplicando o operador de ponto e a posição,
 
 00:02:19.549 --> 00:02:24.359
-which describes the relationship between the
-two coordinate frames. We can't simply add
+no qual descreve a relação entre os dois sistemas de 
+coordenadas. Não podemos simplesmente adicionar
 
 00:02:24.359 --> 00:02:28.519
-vectors and poses because they are different
-mathematical objects.
+vetores e posições por que eles são
+diferentes objetos matemáticos
 
 00:02:28.519 --> 00:02:34.079
-We can combine poses. So if we know the pose
-from frame A to frame B and the pose from
+Podemos combinar posições. Se nós sabemos a 
+posição do sistema A para o sistema B e a posição do
 
 00:02:34.079 --> 00:02:41.109
-frame B to frame C then we use the O+ operator
-to compose them into the relative pose from
+sistema B para o sistema C então usamos o operador O+ 
+para compor eles em uma posição relativa do
 
 00:02:41.109 --> 00:02:47.299
-frame A to frame C, and we can extend this
-approach indefinitely. This process is sometimes
+sistema A para o sistema C, e podemos estender esta 
+abordagem indefinitivamente. Este processo é algumas vezes
 
 00:02:47.299 --> 00:02:50.040
-called compounding or composition.
+chamado de combinado ou composto.
 
 00:02:50.040 --> 00:02:56.370
-We can rewrite a complex set of spatial relationships
-defined in terms of coordinate frames, in
+Podemos reescrever um conjunto complexo de relações
+espaciais definidas em termos de sistemas de coordenadas, em
 
 00:02:56.370 --> 00:03:02.249
-terms of a bit tidier, a pose graph. And
-we can use the pose graph to write spatial
+termos de um pouco mais organizado, gráfico de posição. E
+nós podemos usar o gráfico de posição para escrever
 
 00:03:02.249 --> 00:03:07.790
-relationships that describe relative poses
-in terms of other relative poses.
+relações espaciais que descrevem a posição relativa
+em termos de outras posições relativas.
 
 00:03:07.790 --> 00:03:13.739
-We introduced a spatial algebra. The important
-things to note are that we can compose or
+Nós introduziremos álgebra espacial. O 
+importante é notar que podemos compor ou
 
 00:03:13.739 --> 00:03:21.319
 compound two relative poses using the O+ operator.
