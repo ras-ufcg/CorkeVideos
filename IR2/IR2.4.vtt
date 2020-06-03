@@ -1,193 +1,194 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.820 --> 00:00:07.790
-We’ve talked about how we can describe the
-position and orientation, the pose of one
+Nós falamos sobre como podemos descrever
+posição e orientação, o posicionamento de um
 
 00:00:07.790 --> 00:00:12.499
-coordinate frame with respect to another.
-Here, we have two coordinate frames labeled
+sistema de coordenadas em relação a outro.
+Aqui, temos dois sistemas de coordenadas nomeados
 
 00:00:12.499 --> 00:00:19.590
-A and B, and we use this symbol here to denote
-the pose of B with respect to A. I've introduced
+A e B, e nós usamos este símbolo aqui para denotar
+o posicionamento de B em relação a A. Eu introduzi
 
 00:00:19.590 --> 00:00:24.859
-a point P and I can describe it by two vectors.
-I can describe it with respect to coordinate
+um ponto P e posso descrevê-lo em dois vetores.
+Eu posso descrevê-lo em relação ao sistema
 
 00:00:24.859 --> 00:00:30.640
-frame A; that's the blue arrow, or with respect
-to coordinate frame B; that the red arrow.
+de coordenadas A; esse é o eixo azul, ou em relação
+ao sistema de coordenadas B; esse é o eixo vermelho.
 
 00:00:30.640 --> 00:00:37.660
-I can relate the vector with respect to frame
-A to the vector with respect to frame B using
+Eu posso relacionar o vetor relativo ao sistema
+A ao vetor relativo ao sistema B usando
 
 00:00:37.660 --> 00:00:40.620
-the pose and this operator, the dot.
+o posicionamento e este operador, o "ponto".
 
 00:00:40.620 --> 00:00:45.809
-Now, let's consider that I introduce another
-coordinate frame, coordinate frame C and I
+Agora, vamos considerar que eu introduza outro
+sistema de coordenadas, os sistemas de coordenadas C e I
 
 00:00:45.809 --> 00:00:51.829
-have a relative pose that describes C with
-respect to B. And I can describe the point
+têm um posicionamento relativo que descreve C em
+relação a B. E eu posso descrever o ponto
 
 00:00:51.829 --> 00:00:59.449
-P in terms of a vector with respect to coordinate
-frame C. So, these relative poses can be compounded
+P em termos de um vetor relativo ao sistema C. Então,
+esses posicionamentos relativos pode ser combinados
 
 00:00:59.449 --> 00:01:07.290
-or composed, so I can get to the pose C by
-first of all getting to the pose B and then
+ou compostos, então posso chegar ao posicionamento de C
+chegando antes disso ao posicionamento de B e daí
 
 00:01:07.290 --> 00:01:12.890
-getting to the pose C. So, there's some way
-that I can add these two poses together, but
+chegando até C. Então, existe um jeito
+em que eu posso juntar esses dois posicionamentos, mas
 
 00:01:12.890 --> 00:01:17.710
-we haven't described yet exactly what a pose
-is. I'm going to introduce another abstract
+nós ainda não descrevemos exatamente o que é um
+posicionamento. Vou introduzir outro operador
 
 00:01:17.710 --> 00:01:24.890
-operator. It is a plus sign inside a circle,
-I'm going to call that O+. So, the O+ operator
+abstrato. Ele é um "mais" dentro de um círculo,
+E vou chamá-lo de O+. Então, o operador O+
 
 00:01:24.890 --> 00:01:31.310
-allows us to join or add these two poses.
-So, the relative pose from frame A to frame
+nos permite juntar ou unir esses dois posicionamentos.
+Daí, o posicionamento relativo do sistema A ao sistema
 
 00:01:31.310 --> 00:01:40.170
-B, O+ the relative pose from frame B to frame
-C gives us the relative pose of C with respect
+B, O+ o posicionamento relativo do sistema B ao sistema
+C nos dá o posicionamento relativo de C em relação
 
 00:01:40.170 --> 00:01:47.990
-to A. This O+ operator performs what is called
-composition. It allows us to compose, to compound,
+a A. Esse operador O+ realiza o que é chamado de
+composição. Ele nos permite compôr, combinar,
 
 00:01:47.990 --> 00:01:55.570
-to add, in inverted commas, two poses together.
-Then, I can use my dot operator to transform
+adicionar, entre aspas, dois posicionamentos unidos.
+Depois, posso usar meu operador "ponto" para transformar
 
 00:01:55.570 --> 00:02:02.979
-the vector from frame C to frame A, and we
-can extend this approach indefinitely. I can
+o vetor do sistema C para o sistema A, e podemos
+repetir esse processo indefinidamente. Eu posso
 
 00:02:02.979 --> 00:02:07.100
-compound as many relative poses as I wish.
+combinar quantos posicionamentos relativos eu quiser.
 
 00:02:07.100 --> 00:02:11.470
-When we talk about things like relative motions,
-it's really important to keep in mind that
+Quando falamos sobre coisas como movimentos 
+relativos, é muito importante lembrar que
 
 00:02:11.470 --> 00:02:16.720
-the order in which you apply them is critically
-important. Now, consider the example where
+a ordem que você aciona eles é extremamente
+importante. Agora, considere o exemplo em que
 
 00:02:16.720 --> 00:02:23.140
-I move from the reference frame and I move
-a coordinate frame 30 centimetres in the x
+Eu movo do sistema-referência e eu movo
+um sistema de coordenadas 30 centímetros na
 
 00:02:23.140 --> 00:02:28.800
-direction and then I rotate it by 45 degrees,
-and we defined the convention for rotation;
+direção x e que depois eu rotaciono ele em 45 graus,
+e que nós definimos uma convenção para "rotação";
 
 00:02:28.800 --> 00:02:35.090
-this is a positive rotation of 45 degrees.
-Now, imagine that I do these operations in
+essa é uma rotação positiva de 45 graus.
+Agora, imagine que eu faço essas operações
 
 00:02:35.090 --> 00:02:41.440
-the reverse order. So, I take my reference
-coordinate frame and I rotate it by 45 degrees
+na ordem inversa. Então, eu pego meu sistema de
+coordenadas referência e rotaciono ele em 45 graus
 
 00:02:41.440 --> 00:02:47.020
-and then I translate it by 30 centimetres
-in the x direction. So, now I end up with
+e depois eu translaciono ele por 30 centímetros 
+na direção x. Então, agora eu tenho 
 
 00:02:47.020 --> 00:02:52.730
-a coordinate frame over here. So, you see
-that by changing the order in which I apply
+um sistema de coordenadas aqui. Então, veja
+que ao mudar a ordem em que eu aciono
 
 00:02:52.730 --> 00:02:58.050
-these elementary motions, the translation
-and the rotation, I end up with very different
+esses movimentos elementares, a translação
+e a rotação, eu obtenho sistemas de coordenadas
 
 00:02:58.050 --> 00:03:01.670
-coordinate frames. Ordering is really important.
+bem diferentes. Ordenamento é muito importante.
 
 00:03:01.670 --> 00:03:06.460
-Let's look at a more complex example, and
-I've introduced here a world coordinate frame.
+Vejamos um exemplo mais complexo, e
+introduzi aqui um sistema de coordenadas universal.
 
 00:03:06.460 --> 00:03:11.780
-Now, I introduce a coordinate frame which
-represents the pose of my robot on the table.
+Agora, introduzi um sistema de coordenadas que
+representa o posicionamento de meu robô na mesa.
 
 00:03:11.780 --> 00:03:16.670
-And here's a coordinate frame which represents
-the pose of the little robot. And here is
+E aqui está um sistema de coordenadas que representa
+o posicionamento do pequeno robô. E aqui está
 
 00:03:16.670 --> 00:03:21.010
-another coordinate frame which represents
-the hand of the big robot. And I can describe
+outro sistema de coordenadas que representa
+a mão do grande robô. E eu posso descrever
 
 00:03:21.010 --> 00:03:26.430
-the pose of the hand of the robot with respect
-to the robot itself. I can introduce another
+o posicionamento da mão do robô em relação
+ao próprio robô. Eu posso introduzir outro
 
 00:03:26.430 --> 00:03:32.230
-coordinate frame which describes the pose
-of a camera which is looking at both of these
+sistema de coordenadas que descreve o posicionamento
+de uma câmera que está apontada para esses dois
 
 00:03:32.230 --> 00:03:37.910
-robots. And, I can perhaps describe the pose
-of the camera with respect to my world coordinate
+robôs. E, eu talvez possa descrever o posicionamento
+da camera em relação ao meu sistema de coordenadas
 
 00:03:37.910 --> 00:03:42.930
-frame. And perhaps the camera is able to tell
-where the robot is, with respect to the camera's
+universal. E a camera talvez possa até dizer
+onde o robô está, em relação ao sistema de coordenadas
 
 00:03:42.930 --> 00:03:48.310
-coordinate frame. And, perhaps the camera
-can also tell me the pose of the little robot
+dela. E, a camera talvez possa me dizer
+também o posicionamento do pequeno robô
 
 00:03:48.310 --> 00:03:52.970
-with respect to the camera's coordinate frame.
-And now, I might be interested in knowing,
+em relação ao sistema de coordenadas da camera.
+E agora, eu poderia me interessar em descobrir,
 
 00:03:52.970 --> 00:03:57.790
-what's the pose of the little robot with respect
-to the big robot? Or I might want to know
+qual o posicionamento do pequeno robô em relação
+ao grande robô? Ou o que eu poderia querer saber
 
 00:03:57.790 --> 00:04:02.870
-is, what's the relative pose from the hand
-of the big robot to the little robot, in case
+seria, qual o posicionamento relativo da mão
+do grande robô até ao pequeno robô, caso
 
 00:04:02.870 --> 00:04:07.340
-the big robot wanted to touch the little robot?
-Or, perhaps I might want to know, what's the
+o grande robô quisesse tocar o pequeno robô?
+Ou, talvez eu queria saber, qual o 
 
 00:04:07.340 --> 00:04:12.660
-pose of the hand of the big robot with respect
-to the world coordinate frame? I've introduced
+posicionamento da mão do grande robô em relação
+ao sistema de coordenadas universal? Eu introduzi
 
 00:04:12.660 --> 00:04:19.410
-rather a lot of coordinate frames and relative
-poses. We can simplify this by introducing
+uma boa quantidade de sistemas de coordenadas e
+de posicionamentos relativos. Podemos simplificar isso
 
 00:04:19.410 --> 00:04:23.980
-what I call a pose graph. So, I’ve kept
-the same colour coding and I kept the same
+ao introduzirmos o que eu chamo de grafo de posicionamento. 
+Bom, eu mantive o mesmo código de cores e mantive a mesma
 
 00:04:23.980 --> 00:04:24.590
-labeling.
+marcação.
 
 00:04:24.590 --> 00:04:30.540
-Now, instead of representing a pose by a two-dimensional coordinate frame, I represent it simply by
+Dessa vez, em vez de representar o posicionamento através de um 
+sistema de coordenadas bidimensional, eu simplesmente represento ele por 
 
 00:04:30.540 --> 00:04:37.620
 a disc. The lines that join the discs represent
