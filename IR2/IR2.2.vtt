@@ -154,7 +154,7 @@ um pouco até que ele esteja sobre aquele sistema
 de coordenadas. Então, essa é a pose do pequeno
 
 00:03:19.530 --> 00:03:25.269
-robô em relação ao sistema de coordenadas do mundo
+robô em relação ao sistema de coordenadas universal
 descrito em termos de uma componente de posição
 
 00:03:25.269 --> 00:03:30.529
@@ -163,11 +163,11 @@ agora nós teremos descrito a pose do
 
 00:03:30.529 --> 00:03:34.700
 pequeno robô em relação ao sistema de coordenadas
-do mundo. Nós já descrevemos a pose do
+universal. Nós já descrevemos a pose do
 
 00:03:34.700 --> 00:03:39.120
 robô grande em relação ao sistema de coordenadas
-do mundo. Mas nós podemos também descrever a pose
+universal. Mas nós podemos também descrever a pose
 
 00:03:39.120 --> 00:03:44.689
 do robô pequeno com relação ao robô grande,
@@ -175,10 +175,10 @@ e nós podemos fazer isso pegando o
 
 00:03:44.689 --> 00:03:50.099
 sistema de coordenadas do robô grande e fazendo
-a translação na direção x do mundo, e
+a translação na direção x universal, e
 
 00:03:50.099 --> 00:03:55.209
-depois na direção y do mundo, e após, nós
+depois na direção y universal, e após, nós
 rotacionamos até os eixos se alinharem. Assim 
 
 00:03:55.209 --> 00:04:01.439
@@ -234,7 +234,7 @@ movimento do sistema de coordenadas original, nosso sistema
 
 00:05:12.380 --> 00:05:16.440
 de coordenadas referencial, às vezes
-chamado sistema de coordenadas do mundo, nós
+chamado sistema de coordenadas universal, nós
 
 00:05:16.440 --> 00:05:21.540
 movemos a origem desse sistema até aqui, e
