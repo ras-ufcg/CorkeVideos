@@ -277,7 +277,7 @@ Agora vamos traçar essa pose em particular e ver
 como ela se parece. E para fazer isso, 
 
 00:07:02.849 --> 00:07:09.219
-criarei um eixo para plotar, onde x
+criarei um eixo para plotar, onde
 x vai variar de 0-5 e y
 
 00:07:09.219 --> 00:07:16.129
@@ -298,137 +298,140 @@ há pouco: 1 na direção x,
 
 00:07:34.919 --> 00:07:40.680
 2 na direção y e rotação de 30 
-graus. Aqui está uma transformação homogênea 
+graus. Aqui está uma matriz de transformação  
 
 00:07:40.680 --> 00:07:43.669
-matrix. Now I'm going to plot that.
+homogênea. Agora eu vou plotar isso.
 
 00:07:43.669 --> 00:07:50.009
-To plot that I use the function trplot2. The
-2 suffix means that it's for 2-dimensional
+Para plotar eu uso a função trplot2. O
+sufixo 2 significa que é para poses
 
 00:07:50.009 --> 00:07:57.039
-poses. Pass in the pose represented by the
-homogeneous transformation. I'm going to plot
+bidimensionais. Passe a pose representada 
+pela transformação homogênea. Eu vou plotar
 
 00:07:57.039 --> 00:08:03.960
-it as a frame named 1, and I'm going to plot
-it in the color blue. There are quite a few
+como um sistema chamado 1, e eu vou plotar
+na cor azul. Existem algumas opções
 
 00:08:03.960 --> 00:08:11.539
-options there. And there we see the pose plotted.
-We can see that it does indeed have a translational
+.Aqui vemos a pose plotada. Nós podemos
+ver que de fato há uma componente de translação; 
 
 00:08:11.539 --> 00:08:17.090
-component; 1 in the x direction, 2 in the
-y direction. And it is rotated with respect
+1 na direção x, 2 na direção y. E é 
+rotacionada em relação 
 
 00:08:17.090 --> 00:08:19.719
-to the world coordinate frame.
+ao sistema de coordenadas universal.
 
 00:08:19.719 --> 00:08:26.229
-I can create another pose quite easily. I
-can create a pose that has got an offset of
+Eu posso criar outra pose facilmente. Eu
+posso criar uma pose que tenha um descolamento
 
 00:08:26.229 --> 00:08:32.469
-2 in the x direction. 1 in the y direction
-and no rotation. That's what the homogeneous
+de 2 na direção x. 1 na direção y e com
+nenhuma rotação. É assim que uma transformação
 
 00:08:32.469 --> 00:08:37.469
-transformation looks like. Now I'm going to
-plot that. I'm going to use the function trplot2
+homogênea se parece. Agora eu vou
+plotar isso. Eu vou usar a função trplot2 
 
 00:08:37.469 --> 00:08:42.649
-again, pass in the homogeneous transformation
-matrix, and I’m going to plot it as a frame
+de novo, passo a matrix de transformação
+homogênea,e eu vou plotar como um sistema de 
+coordenadas
 
 00:08:42.649 --> 00:08:49.440
-labeled 2. To be different I'm going to plot
-it as a red colored frame, and here we see
+chamando-o de 2. Para diferenciar, eu vou plotar
+como um sistema de cor vermelha, e aqui vemos
 
 00:08:49.440 --> 00:08:56.950
-the second pose. It's got no rotation. It
-has got a translational component.
+a segunda pose. Não há rotação. E tem uma 
+componente translacional. 
 
 00:08:56.950 --> 00:09:03.600
-Now I can compose 2 of these poses. I’m
-going to say pose 3 is equal to pose 1 compounded
+Agora eu posso compor 2 dessas poses. Eu
+vou dizer que a pose 3 é igual a pose 1 composta
 
 00:09:03.600 --> 00:09:10.450
-with pose 2. That's what the transformation
-matrix looks like. I can plot that. I'm going
+com a pose 2. É assim que a matrix de transformação
+se parece. Eu posso plotar isso. Eu vou
 
 00:09:10.450 --> 00:09:20.160
-to plot that one, trplot2, pass in the matrix,
-there's going to be a frame, called 3 and
+plotar essa, trplot2, passo a matrix, vai ter
+um sistema, chamado de 3 e
 
 00:09:20.160 --> 00:09:26.000
-I'm going to color that one green. So if
-I compound those 2 poses I end up with the
+eu vou colorir com verde. Então se eu
+componho estas duas poses eu resulto com
 
 00:09:26.000 --> 00:09:31.230
-pose shown here as 3. The way we can think
-about this is we moved from the world frame
+a pose 3 mostrada aqui. Um modo como podemos 
+pensar sobre isso é que nós movemos 
+do sistema de coordenadas universal
+
 
 00:09:31.230 --> 00:09:38.700
-2 from frame 1 which is rotated, and then
-in frame 1 we then moved 2 in the x direction
+2 para o sistema 1 que é rotacionado, e então
+no sistema 1 nós movemos 2 na direção x
 
 00:09:38.700 --> 00:09:45.320
-and 1 in the y direction. But X and Y direction
-are frame 1, not on the world frame, and that
+e 1 na direção y. Mas as direções X e Y
+são do sistema 1, não do sistema universal, e
 
 00:09:45.320 --> 00:09:50.160
-gets us to the frame labeled as frame 3.
+nos leva ao sistema chamado 3.
 
 00:09:50.160 --> 00:09:56.740
-I could compound the poses in the opposite
-order. I'm going to create a new pose T4 and
+Eu poderia compor as poses na ordem 
+contrária. Eu vou criar uma nova pose T4 e 
 
 00:09:56.740 --> 00:10:05.420
-it's going to be pose 2 compounded with pose
-1. We can see that's what the homogeneous
+será a pose 2 composta com a pose 1. Nós
+podemos ver como a matrix de transformação
 
 00:10:05.420 --> 00:10:12.110
-transformation matrix looks like and it's
-different to T3. I can plot this. I can pass
+homogênea se parece e é diferente de T3.
+Eu posso plotar isso. Eu posso passar 
 
 00:10:12.110 --> 00:10:21.130
-in T4. I can plot it as a frame labeled 4
-and I'm going to plot it in the color cyan.
+T4. Eu posso plotar um sistema chamado 4 e 
+eu vou plotar na cor ciano. 
 
 00:10:21.130 --> 00:10:31.260
-Here we can see the frame 4 which has resulted
-from compounding pose 2 with post 1. Now I'm
+Aqui podemos ver que o sistema 4 é resultado
+da composição da pose 2 com a pose 1. Agora eu
 
 00:10:31.260 --> 00:10:36.570
-going to introduce a point into the plot.
-I'm going to introduce a point at a coordinate
+vou introduzir um ponto dentro do plote. 
+Eu vou introduzir um ponto na coordenada 
 
 00:10:36.570 --> 00:10:44.360
-3, 2. I need to transpose that so that it
-becomes a column vector. There it is. I can
+3, 2. Eu preciso transpor para que se torne
+um vetor coluna. Aqui está. Eu posso
 
 00:10:44.360 --> 00:10:53.040
-plot that. Plot point P, and I'm going to
-plot it as an asterisk. There we see it in
+plotar isso. Plote o ponto P, e eu vou plotar 
+isso como um asterisco. Aqui nós o vemos na 
 
 00:10:53.040 --> 00:10:59.360
-our figure. If I want to determine the coordinate
-of the point with respect to frame 1 then
+nossa figura. Se eu quiser determinar a coordenada 
+desse ponto em relação ao sistema 1, então
 
 00:10:59.360 --> 00:11:08.990
-what I need to do is to use the inverse of
-the relative pose 1, which is that, and multiply
+o que eu preciso fazer é usar a inversa
+da pose relativa 1, que é essa, e multiplicá-la
 
 00:11:08.990 --> 00:11:14.910
-it by the points coordinate in homogeneous
-form. I'll take point P and I'm going to append
+pelos pontos de coordenada na forma homogênea.
+Eu vou pegar o ponto P e vou acrescentar 
 
 00:11:14.910 --> 00:11:22.649
-a 1 to it. What I have now is the homogeneous
-coordinate of the asterisk with respect to
+1 a ele. O que eu tenho agora é a coordenada 
+homogênea do asterisco em relação ao
 
 00:11:22.649 --> 00:11:24.260
-the coordinate frame 1.
+sistema de coordenadas 1.
 
