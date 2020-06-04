@@ -190,188 +190,188 @@ labeling.
 Now, instead of representing a pose by a two-dimensional coordinate frame, I represent it simply by
 
 00:04:30.540 --> 00:04:37.620
-a disc. The lines that join the discs represent
-the relative poses and notice that they are
+um disco. As linhas que unem os discos representam
+os posicionamentos relativos e perceba que são
 
 00:04:37.620 --> 00:04:45.160
-lines with an arrow so this thing is a directed
-graph. The solid lines represent relative
+linhas com setas então esse é um gráfico direcionado.
+As linhas sólidas representam posicionamentos que nós
 
 00:04:45.160 --> 00:04:51.440
-poses that we know and the dashed lines represent
-poses that we don't know, but perhaps we can
+conhecemos e as linhas tracejadas representam
+posicionamentos que não conhecemos, mas que talvez
 
 00:04:51.440 --> 00:04:52.320
-compute them.
+possamos calculá-los.
 
 00:04:52.320 --> 00:04:57.530
-So, let's highlight this particular relative
-pose here and say I want to determine the
+Então, vamos destacar esse posicionamento relativo
+em particular aqui e dizer que quero determinar
 
 00:04:57.530 --> 00:05:02.290
-value of this particular relative pose. How
-do I do that? Well, what we’re going to
+o valor desse posicionamento relativo em particular.
+Como eu faço isso? Bem, o que vamos fazer é
 
 00:05:02.290 --> 00:05:07.970
-do is to follow a path through the graph that's
-got the same starting point and the same ending
+seguir um caminho através do gráfico que 
+tenha o mesmo ponto inicial e o mesmo ponto
 
 00:05:07.970 --> 00:05:14.510
-point. The first leg of the journey is this
-arrow here, and then I go from pose C to pose
+final. O primeiro passo da jornada é essa seta
+aqui, e então eu vou do posicionamento C para o
 
 00:05:14.510 --> 00:05:22.660
-R and then go to pose H. We can say then that
-this relative pose is equal to the composition
+R e depois para o H. Então nós podemos dizer que
+esse posicionamento relativo é igual a composição
 
 00:05:22.660 --> 00:05:29.420
-of these other 3 relative poses. If I join
-this, this, and this together it gets me to
+desses outros três posicionamentos relativos.
+Se eu juntar esse, esse, e esse me levará ao mesmo
 
 00:05:29.420 --> 00:05:34.850
-the same place in the pose graph as this.
-So, this is a way I can compute an unknown
+lugar no gráfico posicionado que esse.
+Então, desta forma posso calcular um posicionamento
 
 00:05:34.850 --> 00:05:38.500
-relative pose in terms of relative poses that
-I know.
+relativo desconhecido em termos de um posicionamento
+relativo que eu conheço.
 
 00:05:38.500 --> 00:05:43.940
-Let's have a look at a more complex example.
-Now, I want to know this relative pose: where
+Vamos dar uma olhada em um exemplo mais complexo.
+Agora, eu quero saber esse posicionamento relativo: onde
 
 00:05:43.940 --> 00:05:49.990
-is the little robot with respect to the hand
-of the big robot. Same rule again. I want
+está o pequeno robô em relação à mão
+do grande robô. Mesma regra de novo. Eu quero
 
 00:05:49.990 --> 00:05:55.570
-to find another path through this graph that
-takes me from H to L. The first leg of the
+encontrar outro caminho através do gráfico que
+me leve de H para L. O primeiro passo da
 
 00:05:55.570 --> 00:06:00.720
-journey is going to be this one. But in this
-case we need to go backwards along this arrow,
+jornada será esse. Mas, neste caso,
+precisamos recuar ao longo desta seta,
 
 00:06:00.720 --> 00:06:05.430
-so I've coloured it in red to indicate that
-I'm going backwards along this particular
+então eu pintei de vermelho pra indicar que
+eu estou voltando ao longo desta parte
 
 00:06:05.430 --> 00:06:09.930
-part of the graph. Then I'm going to go backwards
-along this part of the graph and then I'm
+em particular do gráfico. Depois vou recuar
+ao longo desta parte do grafico e depois eu
 
 00:06:09.930 --> 00:06:14.860
-going to go in the forward direction along
-this part of the graph. And now, when I write
+irei em frente ao longo
+desta parte do gráfico. E agora, quando escrevo
 
 00:06:14.860 --> 00:06:22.090
-the pose expression, I've introduced two new
-symbols. It's a minus sign inside a circle
+a expressão da posição, eu introduzo dois novos
+símbolos. Um sinal de negativo dentro de um círculo
 
 00:06:22.090 --> 00:06:27.800
-and I'm going to refer to this operator as
-O-. So, for the case of the relative poses
+e vou me referir a esse operador como O-.
+Então, no caso dos posicionamentos relativos
 
 00:06:27.800 --> 00:06:33.550
-that are coded in red, where we went backwards
-along the arrow, I've prefixed that pose by
+que estão codificados em vermelho, onde retrocedemos
+ao longo da seta, prefixionei esse posicionamento com
 
 00:06:33.550 --> 00:06:38.960
-a minus sign because I've gone in the reverse
-direction. Whereas this one here, I've used
+um sinal de menos porque segui na direção
+inversa. Enquanto neste aqui, eu usei
 
 00:06:38.960 --> 00:06:44.560
-the O+ operator because I'm going in the forward
-direction along the arrow. So, here is a way
+o operador O+ porque eu segui em frente
+ao longo da seta. Então, aqui está um jeito
 
 00:06:44.560 --> 00:06:49.810
-that I can define an unknown pose in terms
-of previously known poses.
+que posso definir um posicionamento desconhecido em termos
+de posicionamentos previamente conhecidos.
 
 00:06:49.810 --> 00:06:55.680
-What we’ve got now is some kind of pose
-algebra and there are just a few simple rules
+O que nós temos agora é algum tipo de álgebra
+posicional e há apenas alguma regras simples
 
 00:06:55.680 --> 00:07:03.460
-with a pose algebra. The first rule is concerned
-with the O+ operator. I can combine two relative
+nesta álgebra. A primeira regra diz respeito
+ao operador O+. Posso combinar dois posicionamentos
 
 00:07:03.460 --> 00:07:08.630
-poses to get another relative pose but there
-are some really important rules associated
+relativos para obter outro posicionamento relativo, mas
+existem algumas regras realmente importantes
 
 00:07:08.630 --> 00:07:13.340
-with all the subscripts here. The first rule
-is that these two subscripts, the one on the
+associadas com todos os índices aqui. A primeira regra
+é que esses dois índices, que ficam
 
 00:07:13.340 --> 00:07:18.110
-either side of the O+ operator, must be the
-same. And you can think of them as cancelling
+ao lado do operador O+, devem ser o
+mesmo. E você pode pensar neles como cancelamento.
 
 00:07:18.110 --> 00:07:25.150
-out. Then, this leading subscript is the same
-on both sides of the expression and this subscript
+Então, essen índice inicial é o mesmo
+nos dois lados da expressão e esse íncice
 
 00:07:25.150 --> 00:07:31.650
-is the same on both sides of the expression.
-The O+ operator is not commutative and that
+é o mesmo dos dois lados da expressão.
+O operador O+ não é comutativo e isso
 
 00:07:31.650 --> 00:07:39.070
-means that if I have a relative pose 1, and
-an O+ with relative pose 2, that is, in general,
+significa que se eu tenho um posicionamento relativo 1,
+e um O+ com posicionamento relativo 2, isso é, em geral,
 
 00:07:39.070 --> 00:07:45.490
-different to relative pose 2 O+ relative pose
-1. You have to be really careful about the
+diferente de posicionamento relativo 2, O+, posicionamento
+relatio 1. Você tem que ser realmente cuidadoso sobre a
 
 00:07:45.490 --> 00:07:52.889
-order and you can’t arbitrarily switch them
-around. Another rule is that O- operator applied
+ordem e você não pode trocá-los arbitrariamente
+por aí. Outra regra é que o operador O- aplicado
 
 00:07:52.889 --> 00:07:58.510
-to the relative pose is the same as swapping
-the leading and trailing labels. Another rule
+no posicionamento relativo é o mesmo que trocar
+os rótulos à esquerda e à direita. Outra regra
 
 00:07:58.510 --> 00:08:05.780
-is that I have pose O- the same pose, the
-result is zero. It corresponds to no motion,
+é que se eu tenho posicionamento, O-, o mesmo posicionamento,
+o resultado é zero. Isso corresponde a nenhum movimento,
 
 00:08:05.780 --> 00:08:12.660
-no pose change and we use symbol zero to represent
-that. And, another way I can express that
+nenhuma mudança de posicionamento e usamos o símbolo zero
+para representar. E, outra forma de fazer isso
 
 00:08:12.660 --> 00:08:18.960
-is to negate the pose and then add it to the
-pose, the result is zero. These two expressions
+é negar o posicionamento e então adicioná-lo
+ao posicionamento, o resultado é zero. Essas duas expressões
 
 00:08:18.960 --> 00:08:25.169
-are equivalent. Finally, if I add the zero
-relative pose to a pose, it makes no change.
+são equivalentes. Finalmente, se eu adiciono zero
+posicionamento relativo ao posicionamento, nada muda.
 
 00:08:25.169 --> 00:08:31.169
-And, if I subtract the zero relative pose
-from a pose, it makes no change.
+E, se eu subtraio zero posicionamento relativo
+do posicionamento, nada muda.
 
 00:08:31.169 --> 00:08:36.539
-These are just a few simple algebraic rules
-that we can apply to these complex pose expressions
+Essas são apenas algumas regras algébricas simples
+que podemos aplicar a essas expressões complexas
 
 00:08:36.539 --> 00:08:41.839
-which allows us to rearrange them to determine
-the things that we want in terms of the things
+o que nos permite reorganizá-las para determinar
+o que queremos em termos de o que sabemos.
 
 00:08:41.839 --> 00:08:48.140
-that we know. There are a few rules also that
-apply to this dot operator where we combine
+Existem também algumas regras que
+se aplicam a esse operador de ponto onde combinamos
 
 00:08:48.140 --> 00:08:54.839
-a pose with a vector. And again, we have some
-rules that apply to the labels here. And once
+um posicionamento com um vetor. E de novo, temos algumas
+regras que se aplicam aos rótulos aqui. E mais uma
 
 00:08:54.839 --> 00:09:00.760
-again, the innermost labels must be the same.
-And then, we can think of them as cancelling
+vez, os rótulos mais internos devem ser os mesmos.
+E então, podemos pensá-los como cancelamentos
 
 00:09:00.760 --> 00:09:03.520
-out and the leading labels are the same.
+E os rótulos principais são os mesmos.
 
