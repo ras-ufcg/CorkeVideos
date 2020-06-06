@@ -301,145 +301,145 @@ Importantly, points and vectors are different
 things. A point defines a location. We can’t
 
 00:06:48.129 --> 00:06:53.759
-add two points together. It makes no sense.
-And, neither can we multiply two points. It’s
+adicionar dois pontos juntos. Não faz sentido.
+E, nem podemos multiplicar dois pontos. É
 
 00:06:53.759 --> 00:06:59.680
-a meaningless concept. Vectors don’t define
-a location. They specify how to get from one
+um conceito sem sentido. Vetores não definem uma
+localização. Eles especificam como sair de uma
 
 00:06:59.680 --> 00:07:05.879
-location to another. Vectors are things that
-we can add and we can subtract. And, we can
+localização para outra. Vetores são objetos que 
+nós podemos adicionar e subtrair. E, podemos
 
 00:07:05.879 --> 00:07:11.259
-multiply a vector by a scalar. I can have
-a vector; I could multiply it by 2. Now, I
+multiplicar um vetor por um escalar. Eu posso
+ter um vetor e multiplica-lo por 2. Agora, eu
 
 00:07:11.259 --> 00:07:15.789
-have an arrow that’s twice as long but in
-the same direction and with the same beginning
+tenho uma seta que é duas vezes maior, mas na
+mesma direção e com o mesmo começo
 
 00:07:15.789 --> 00:07:21.319
-as the vector that I had before. The difference
-between two points is a vector. So, I can
+do vetor que eu tinha antes. A diferença
+entre dois pontos é um vetor. Então, eu posso
 
 00:07:21.319 --> 00:07:25.710
-take the difference between two points and
-the result is no longer a point, the result
+pegar a diferença entre dois pontos e 
+o resultado não é mais um ponto e sim
 
 00:07:25.710 --> 00:07:32.339
-is now a vector. And, similarly, I can define
-a point in terms of a vector displacement
+um vetor. Da mesma forma, eu posso definir um
+ponto em termos de um deslocamento de um vetor
 
 00:07:32.339 --> 00:07:38.029
-from an initial point. So for the two-dimensional
-case, a point is represented by two real numbers
+do ponto inicial. Então, para o caso bidimensional,
+um ponto é representado por dois números reais
 
 00:07:38.029 --> 00:07:43.339
-and a vector is also represented by two real
-numbers. But, points and vectors are different
+e um vetor é também representado pelos dois
+números reais. Mas, pontos e vetores são coisas
 
 00:07:43.339 --> 00:07:47.539
-things.
-We need to be careful when we create a coordinate
+diferentes.
+Precisamos ser cuidadosos quando criamos um sistema
 
 00:07:47.539 --> 00:07:52.300
-frame. This is the standard way. It’s referred
-to as a right-handed coordinate frame. And,
+de coordenadas. Essa é a forma padrão. É
+referido como sistema de coordenadas destro.
 
 00:07:52.300 --> 00:07:58.449
-we swing from the x-axis through 90 degrees
-up to the y-axis. And, here is another example
+nós giramos do eixo x em 90° até o eixo y.
+E, aqui está um outro exemplo
 
 00:07:58.449 --> 00:08:03.960
-of a right-handed coordinate frame. If we
-were to flip the frame upside down, we now
+de um sistema de coordenadas destro. Se nós
+virássemos o quadro de cabeça para baixo
 
 00:08:03.960 --> 00:08:09.249
-have the x-axis in this direction and the
-y-axis down. So, we would swing this in 90
+agora teríamos o eixo x nessa direção e o
+eixo y para baixo. Então, nós giraríamos isso
 
 00:08:09.249 --> 00:08:16.169
-degrees downwards in order to define the y-axis.
-Now, we need to be very consistent in the
+em 90° para baixo a fim de definir o eixo y.
+Agora, nós precisamos ser bem consistentes na
 
 00:08:16.169 --> 00:08:20.830
-way we define the coordinate frames and we’re
-always going to use a right-handed coordinate
+forma de definir o sistema de coordenadas e nós
+sempre usaremos o sistema destro.
 
 00:08:20.830 --> 00:08:25.599
-frame. We will never use a coordinate frame
-like this, only frames that look like this.
+Nós nunca usaremos um sistema de coordenadas 
+assim, apenas sistemas que se parecem com isso.
 
 00:08:25.599 --> 00:08:30.639
-When we construct a two-dimensional coordinate
-frame from two axes, there are in fact two
+Quando nós construímos um sistema de coordenadas
+bidimensional de dois eixos, de fato, há duas
 
 00:08:30.639 --> 00:08:34.979
-different ways that we can construct that
-coordinate frame. A so called left-handed
+formas diferentes de construirmos esse
+sistema de coordenadas. Um sistema 
 
 00:08:34.979 --> 00:08:40.050
-coordinate frame and a right-handed coordinate
-frame. Now, in this course, we’re only going
+canhoto e um destro. 
+Agora, nesse curso, nós vamos apenas
 
 00:08:40.050 --> 00:08:45.240
-to deal with right-handed coordinate frames.
-So, how do we construct a right-handed coordinate
+lidar com o sistema de coordenadas destro.
+Então, como construímos um sistema destro?
 
 00:08:45.240 --> 00:08:51.529
-frame? Well, we start by drawing the x-axis
-first and the y-axis is created by swinging
+Bem, nós começamos desenhando o eixo x
+primeiro e o eixo y é criado ao girarmos
 
 00:08:51.529 --> 00:08:58.339
-the x-axis 90 degrees in the counterclockwise
-direction. That gives us a right-handed coordinate
+o eixo x em 90° no sentido anti-horário.
+Isso nos dá um sistema de coordenadas
 
 00:08:58.339 --> 00:09:02.949
-frame. So, no matter what the orientation
-of the coordinate frame, the relative orientation
+destro. Então, não importa a orientação do 
+do sistema, a orientação relativa dos eixos
 
 00:09:02.949 --> 00:09:08.829
-of the x and y axes is really critical and
-it must follow this convention. Another important
+x e y é muito crítica e deve seguir
+essa convenção. Outra coisa importante
 
 00:09:08.829 --> 00:09:15.040
-thing to keep in mind is that Euclidean Geometry
-only applies to planes. And, one of Euclid’s
+a se manter na mente é que a geometria euclidiana
+se aplica apenas na superfície plana. E, um dos
 
 00:09:15.040 --> 00:09:19.949
-postulates or axioms is very, very clear about
-this, and that is that parallel lines never
+postulados e axiomas é muito claro sobre
+isso, diz que linhas paralelas nunca
 
 00:09:19.949 --> 00:09:23.180
-intersect and that is, of course, the case
-on a plane.
+se cruzam e esse é, é claro, o caso
+em um plano.
 
 00:09:23.180 --> 00:09:28.910
-However, on something like sphere, for instance,
-the surface of our planet, this no longer
+No entanto, em algo como uma esfera, por
+exemplo, a superfície do nosso planeta, isso
 
 00:09:28.910 --> 00:09:34.440
-holds true. Parallel lines at the equator
-will intersect at the poles. The rules of
+não se aplica mais. As linhas paralelas no 
+equador irão se cruzar nos polos. As regras
 
 00:09:34.440 --> 00:09:39.959
-Euclidean Geometry do not apply on such a
-surface, but we would say that the surface
+da geometria euclidiana não se aplicam a tal
+superfície, mas diríamos que a superfície
 
 00:09:39.959 --> 00:09:46.959
-of the Earth leads to a non-Euclidean Geometry.
-However, over a small area, the Euclidean
+da Terra leva a uma geometria não-euclidiana.
+No Entanto, numa pequena área, a geometria
 
 00:09:46.959 --> 00:09:51.959
-Geometry is a very good approximation. So,
-over the scale of a room, maybe even over
+euclidiana é uma aproximação muito boa.
+Então, na escala de uma sala, talvez até na
 
 00:09:51.959 --> 00:09:56.689
-the scale of a city, Euclidean Geometry - the
-fact that parallel lines don’t intersect
+escala de uma cidade, a geometria euclidiana 
+– o fato de linhas paralelas não se cruzarem
 
 00:09:56.689 --> 00:09:59.509
-- is a pretty good assumption to make.
+- é uma suposição muito boa a ser feita.
 
