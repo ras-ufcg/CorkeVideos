@@ -16,7 +16,7 @@ esse vetor em termos de suas componentes - suas
 
 00:00:22.160 --> 00:00:32.329
 distâncias ao longo do eixo XA e do eixo YA
-e os vetores unitários XA e YA com chapéu. Agora, vamos
+e os vetores unitários XA e YA chapéu. Agora, vamos
 
 00:00:32.329 --> 00:00:38.000
 introduzir um novo sistema de coordenads, o sistema B,
@@ -28,15 +28,15 @@ por um vetor em relação ao sistema de coordenadas
 
 00:00:44.940 --> 00:00:52.620
 B e eu posso escrevê-lo em termos dos vetores
-unitários XB e YB de chapéu, e eles estão indicados
+unitários XB e YB chapéu, e eles estão indicados
 
 
 00:00:52.620 --> 00:01:00.440
 aqui em vermelho. Eu posso escrever expressões para XB
-de chapéu em termos do cosseno de Theta e do seno de Theta,
+chapéu em termos do cosseno de Theta e do seno de Theta,
 
 00:01:00.440 --> 00:01:06.869
-e eu possso escrever uma expressão para YB de chapéu
+e eu possso escrever uma expressão para YB chapéu
 em termos de menos o seno de Theta e o cosseno de Theta. Se
 
 00:01:06.869 --> 00:01:14.210
@@ -44,7 +44,7 @@ Eu substituo essas duas equações aqui, eu posso
 escrever essa expressão. Então eu posso expandir,
 
 00:01:14.210 --> 00:01:20.729
-rearranjar e fatorar XA de chapéu e YA de chapéu.
+rearranjar e fatorar XA chapéu e YA chapéu.
 A próxima coisa a se observar é que pelo fato desses
 
 00:01:20.729 --> 00:01:27.689
@@ -52,11 +52,11 @@ dois sistemas de coordenadas compartilharem uma origem,
 então o vetor AP e BP são de fato exatamente o
 
 00:01:27.689 --> 00:01:35.770
-mesmo. Os coeficientes de XA de chapéu devem ser os
+mesmo. Os coeficientes de XA chapéu devem ser os
 mesmos, para que nós possamos escrever isso. E, os coeficientes
 
 00:01:35.770 --> 00:01:41.909
-de YA de chapéu devem ser os mesmos, para que nós 
+de YA chapéu devem ser os mesmos, para que nós 
 possamos escrever isso. Vamos pegar essas duas expressões.
 
 00:01:41.909 --> 00:01:47.039
