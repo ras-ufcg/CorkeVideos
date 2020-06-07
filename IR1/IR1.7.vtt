@@ -1,152 +1,151 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:04.710 --> 00:00:09.660
-In this section, I'd like to talk about why
-robots are useful. Why do we need robots?
+Nesta seção, Eu gostaria de falar sobre o porquê
+robôs são úteis. Porque nós precisamos de robôs?
 
 00:00:09.660 --> 00:00:14.519
-The first example I am going to give is what's
-called robotic surgery but that is a bit of
+O primeiro exemplo que eu vou dar é o que 
+chamo de cirurgia robótica mas isso é um pouco
 
 00:00:14.519 --> 00:00:19.640
-a misnomer. It's actually robot-enabled surgery.
-And highly trained human surgeons are the
+impróprio. Na verdade cirurgia habilitada por robô.
+E cirurgiões humanos altamente treinados são a
 
 00:00:19.640 --> 00:00:24.669
-key part of the system. The robot part of
-the system is shown over here and there are a
+parte chave do sistema. A parte robô do
+sistema é apresentado aqui e existe um
 
 00:00:24.669 --> 00:00:29.730
-number of tools which are inside the body
-of the patient. There are tools which carry
+número de ferramentas que estão dentro do corpo
+do paciente. Existem ferramentas que carregam
 
 00:00:29.730 --> 00:00:34.420
-very small cameras and the information from
-those cameras is presented to the surgeon
+câmeras muito pequenas e a informação destas
+câmeras são mostradas ao cirurgião 
 
 00:00:34.420 --> 00:00:40.579
-in a stereoscopic or 3D display. The surgeon
-looks at this 3D imagery and adjusts what
+em uma tela estereoscópica ou 3D. O cirurgião
+olha para essas imagens 3D e ajusta o que
 
 00:00:40.579 --> 00:00:45.839
-we could consider as some small joysticks.
-Those small joysticks control the motion of
+nós poderíamos considerar alguns pequenos joysticks.
+Esses pequenos joysticks controlam o movimento de
 
 00:00:45.839 --> 00:00:49.249
-tools which are also inside the patient's
-body.
+ferramentas que estão também dentro do corpo do paciente.
 
 00:00:49.249 --> 00:00:55.649
-So the surgeon is doing all the skilled work.
-He's using his eyes to interpret the 3D imagery.
+Então o cirurgião está fazendo todo o trabalho qualificado.
+Ele está usando os olhos para interpretar a imagem 3D.
 
 00:00:55.649 --> 00:01:00.309
-He's using everything he knows about medicine
-in order to control the tools inside the human
+Ele está usando tudo que ele sabe sobre medicina
+afim de controlar as ferramentas dentro do corpo humano 
 
 00:01:00.309 --> 00:01:05.480
-body to do the job that needs to be done.
-The key innovation here is the surgeon is
+e fazer o trabalho que precisa ser feito.
+A principal inovação aqui é o cirurgião que está
 
 00:01:05.480 --> 00:01:10.790
-virtually inside the human body. In the old
-days, we needed to make very large openings
+virtualmente dentro do corpo humano. Nos velhos
+tempos, nós precisávamos fazer aberturas muito grandes
 
 00:01:10.790 --> 00:01:15.220
-in the human body so that the surgeon could
-get his very large hands in there to do the
+no corpo humano para que o cirurgião pudesse
+colocar suas mãos enormes lá para fazer o
 
 00:01:15.220 --> 00:01:16.659
-work that needed to be done.
+trabalho que precisava ser feito.
 
 00:01:16.659 --> 00:01:22.200
-With this robot surgery technology, we are
-able to make a number of very very small incisions
+Com essa tecnologia de cirurgia robótica, nós estamos
+habilitados para fazer diversas incisões muito muito pequenas
 
 00:01:22.200 --> 00:01:28.030
-in the body of the patient into which we insert
-these very small tools and cameras so the
+no corpo do paciente no qual inserimos
+essas pequenas ferramentas e câmeras então os
 
 00:01:28.030 --> 00:01:34.399
-outcomes for the patient are a whole lot better.
-So robotic surgery is really a misnomer. It's
+resultados para o paciente são muito melhores.
+Então cirurgia robótica é realmente um nome impróprio. É
 
 00:01:34.399 --> 00:01:40.649
-like the teleoperation system that we looked
-at earlier on which was used to perform manipulation
+como a sistema de teleoperação que nós vimos
+no início em que foi usado para realizar manipulação
 
 00:01:40.649 --> 00:01:45.960
-of radioactive material. It's a very similar
-technology being used here to virtually place
+de material radioativo. É uma tecnologia muito parecida
+ao que vem sendo usada aqui para colcocar virtualmente
 
 00:01:45.960 --> 00:01:50.469
-a surgeon inside the body of a patient.
+um cirurgião dentro do corpo do paciente.
 
 00:01:50.469 --> 00:01:56.270
-We can also use robot technology to make us
-stronger. This is a technology called an exoskeleton.
+Nós também podemos usar tecnologia robótica para nos fazer
+mais forte. Existe uma tecnologia chamada exoesqueleto.
 
 00:01:56.270 --> 00:02:02.079
-It's a wearable robot. We strap ourselves
-into it. It straps onto our ankles, onto our
+É um robô vestível. Nós nos amarramos
+nele. Prendemos nos nossos tornozelos, nos nossos
 
 00:02:02.079 --> 00:02:07.429
-knees, onto our thighs and onto our trunk.
-It monitors how we move. And it's made of
+joelhos, nas nossas coxas e no nosso tronco.
+Ele monitora como nos movemos. E é feito de
 
 00:02:07.429 --> 00:02:12.750
-very strong materials and it's got very strong
-motors. So as we move, it moves with us and
+materiais muito fortes e tem motores muito fortes.
+Então a medida que nos movemos, ele se move conosco e
 
 00:02:12.750 --> 00:02:15.160
-its strength augments our own strength.
+a força dele aumenta nossa própria força.
 
 00:02:15.160 --> 00:02:20.610
-Here is a video of an exoskeleton system at
-work. This is some video that I took at a
+Aqui está um video de um sistema exoesquelético em
+trabalho. Esse é um dos videos que Eu recebi em uma
 
 00:02:20.610 --> 00:02:26.010
-robot exhibition recently. We can see the
-gentleman wearing the exoskeleton is able
+exibição robótica recentemente. Nós podemos ver que o
+cavalheiro vestindo o exoesqueleto é capaz
 
 00:02:26.010 --> 00:02:29.350
-to handle this large weight quite effortlessly.
+de lidar com esse grande peso sem esforço.
 
 00:02:37.280 --> 00:02:41.320
-There we go. So this is a way that limitations
+Aqui vamos nós. Então essa é uma maneira que as limitações
 
 00:02:41.320 --> 00:02:47.110
-of human strength can be augmented by robot
-technology. The intelligence in performing
+de força humana pode ser aumentada por tecnologia robótica.
+A inteligência na execução
 
 00:02:47.110 --> 00:02:51.310
-the motion or performing the action comes
-from the human being but the raw strength,
+de movimento ou a execução de ação vem
+do ser humano, mas
 
 00:02:51.310 --> 00:02:54.890
-the brute strength comes from the robot that
-he is wearing.
+a força bruta vem do robô que
+ele está vestindo.
 
 00:02:54.890 --> 00:03:00.770
-Another really important role for robots today
-is managing assets, as a society we have a massive
+Outro papel realmente importante para os robôs hoje
+é o gerenciamento de ativos, como uma sociedade nós temos maçicos
 
 00:03:00.770 --> 00:03:06.630
-investment in assets in terms of power lines,
-water pipe lines, gas pipe lines and sewer
+investimentos em ativos em termos de linhas de energia,
+tubulações de água, tubulações de gás e sistemas de esgotos.
 
 00:03:06.630 --> 00:03:11.080
-systems. And in order to maintain the health
-of those assets, they need to be periodically
+E afim de manter a saúde
+destes ativos, eles precisam ser periodicamente
 
 00:03:11.120 --> 00:03:17.100
-inspected and that's very labor-intensive. And some of these inspection jobs are fairly unpleasant.
+inspecionados e isso exige muito trabalho. E alguns destes trabalhos de inspeção são bastante desagradáveis.
 
 00:03:17.110 --> 00:03:22.380
-Imagine if it was your job to inspect sewer
-systems. It's dark, it's unpleasant, and actually
+Imagine se seja seu trabalho inspecionar sistemas de esgoto.
+É escuro, é desagradável, e geralmente
 
 00:03:22.380 --> 00:03:26.970
 um pouco perigoso. Então, as pessoas estão construindo robôs que podem ser colocados nas tubulações

@@ -1,170 +1,171 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:04.060 --> 00:00:09.049
-This should be very familiar to us by now:
-a coordinate frame labeled A and a single
+Isso aqui deveria ser bem familiar para nós agora:
+Um sistema de coordenadas rotulado A e um único
 
 00:00:09.049 --> 00:00:15.969
-point. We can describe the point by a vector
-with respect to frame A. The leading A in
+ponto. Nós podemos descrever o ponto por um vetor
+em relação ao sistema A. A letra A em
 
 00:00:15.969 --> 00:00:22.160
-front of the P indicates that. I can write
-this vector in terms of its components - its
+cima do P indica isso. Eu posso escrever
+esse vetor em termos de suas componentes - suas
 
 00:00:22.160 --> 00:00:32.329
-distances along the XA axis and the YA axis
-and the unit vectors XA and YA hat. Now, let’s
+distâncias ao longo do eixo XA e do eixo YA
+e os vetores unitários XA e YA chapéu. Agora, vamos
 
 00:00:32.329 --> 00:00:38.000
-introduce a new coordinate frame, frame B,
-and it has got the same origin that’s rotated
+introduzir um novo sistema de coordenads, o sistema B,
+e ele tem a mesma origem que é rotacionada
 
 00:00:38.000 --> 00:00:44.940
-by the angle Theta. I can describe the point
-by a vector with respect to coordinate frame
+pelo ângulo Theta. Eu posso descrever o ponto
+por um vetor em relação ao sistema de coordenadas
 
 00:00:44.940 --> 00:00:52.620
-B and I can write that in terms of the unit
-vectors XB and YB hat and they’re indicated
+B e eu posso escrevê-lo em termos dos vetores
+unitários XB e YB chapéu, e eles estão indicados
+
 
 00:00:52.620 --> 00:01:00.440
-here in red. I can write expressions for XB
-hat in terms of cos Theta and sine Theta,
+aqui em vermelho. Eu posso escrever expressões para XB
+chapéu em termos do cosseno de Theta e do seno de Theta,
 
 00:01:00.440 --> 00:01:06.869
-and I can write an expression for YB hat in
-terms of minus sine Theta and cos Theta. If
+e eu possso escrever uma expressão para YB chapéu
+em termos de menos o seno de Theta e o cosseno de Theta. Se
 
 00:01:06.869 --> 00:01:14.210
-I substitute these two equations into here,
-I can write this expression. Then I can expand,
+Eu substituo essas duas equações aqui, eu posso
+escrever essa expressão. Então eu posso expandir,
 
 00:01:14.210 --> 00:01:20.729
-rearrange and factor out XA hat and YA hat.
-The next thing to observe is because these
+rearranjar e fatorar XA chapéu e YA chapéu.
+A próxima coisa a se observar é que pelo fato desses
 
 00:01:20.729 --> 00:01:27.689
-two coordinate frames share an origin, then
-the vector AP and BP are in fact exactly the
+dois sistemas de coordenadas compartilharem uma origem,
+então o vetor AP e BP são de fato exatamente o
 
 00:01:27.689 --> 00:01:35.770
-same. The coefficients of XA hat must be the
-same, so we can write this. And, the coefficients
+mesmo. Os coeficientes de XA chapéu devem ser os
+mesmos, para que nós possamos escrever isso. E, os coeficientes
 
 00:01:35.770 --> 00:01:41.909
-of YA hat must be the same, so we can write
-this. Let’s take those two expressions.
+de YA chapéu devem ser os mesmos, para que nós 
+possamos escrever isso. Vamos pegar essas duas expressões.
 
 00:01:41.909 --> 00:01:47.039
-Simplify things a little bit and we can now
-write this in matrix form. If you’re a little
+Simplifique as coisas um pouco e nós podemos agora
+escrever isto na forma matricial. Se você está um pouco
 
 00:01:47.039 --> 00:01:50.770
-unsure about this step, then just multiply
-it out and you’ll find that you get the
+em dúvida sobre esse passo, então apenas multiplique
+e você irá descobrir que chegou às
 
 00:01:50.770 --> 00:01:56.229
-expressions above. Now, we write the vector
-part more concisely. Instead of in terms of
+expressões acima. Agora, vamos escrever a parte
+vetorial de forma mais concosa. Ao invés de em termos de
 
 00:01:56.229 --> 00:02:01.749
-its individual elements, we write it as the
-symbol P with respect to a particular coordinate
+seus elementos individuais, nós escrevemos como o 
+símbolo P em relação a um sistema de coordenadas 
 
 00:02:01.749 --> 00:02:08.400
-frame. So, this expression relates the vector
-with respect to frame B to the vector with
+particular. Então, essa expressão relaciona o vetor
+em relação ao sistema B com o vetor em 
 
 00:02:08.400 --> 00:02:16.689
-respect to frame A. It is achieved by multiplying
-the components of vector B by this 2 x 2
+relação ao sistema A. Isso é alcanado multiplicando
+os componentes do vetor B por essa matriz
 
 00:02:16.689 --> 00:02:19.709
-matrix.
-We can make the expression even more concise
+2x2.
+Podemos tornar essa expressão ainda mais concisa
 
 00:02:19.709 --> 00:02:25.709
-and write it like this. And, we introduce
-the symbol R to represent a rotation matrix.
+e escrevê-la assim. e, nós introduzimos 
+o símbolo T para representar uma matriz de rotação.
 
 00:02:25.709 --> 00:02:32.170
-This is a very concise way of representing
-the relationship between two vectors in different
+Essa é uma forma bem concisa de representar
+a relação entre dois vetores em diferentes 
 
 00:02:32.170 --> 00:02:38.140
-coordinate frames, and they are related by
-a rotation matrix R. Here we have the same
+sistemas de coordenadas, e eles estão relacionados
+por uma matriz de rotação R. Aqui nós temos a mesma
 
 00:02:38.140 --> 00:02:44.069
-expression as before, and to be a bit more
-precise, a bit more careful, we will add some
+expressão de antes, e para ser mais preciso, 
+um pouco mais cuidadosamente, nós vamos adicionar alguns
 
 00:02:44.069 --> 00:02:51.110
-labels to the matrix R and we will put a leading
-A and a trailing B. And, this indicates that
+rótulos para a matriz R e vamos colocar um A
+em cima e um B embaixo. Em isso indica que
 
 00:02:51.110 --> 00:02:57.170
-R is a rotation matrix that rotates a vector
-from frame B to frame A. It’s important
+R é uma matriz de rotação que rotaciona um vetor
+do sistema B para o sistema A. É importante
 
 00:02:57.170 --> 00:03:03.519
-to note and not be confused by this: the matrix
-R depends on the rotation angle from frame
+notar e não se confundir com isso: a matriz
+R depende do ângulo de rotação do sistema
 
 00:03:03.519 --> 00:03:08.840
-A to frame B. The order of these two things
-is different and don’t get tripped up by
+A para o sistema B. A ordem dessas duas coisas
+é diferente então não se engane com 
 
 00:03:08.840 --> 00:03:12.250
-that.
-Let’s have a look at the rotation matrix.
+isso.
+Vamos dar uma olhada na matriz de rotação.
 
 00:03:12.250 --> 00:03:19.110
-A matrix like this is referred to as an orthogonal
-matrix or sometimes an orthonormal matrix.
+Uma matriz assim é referda como uma matriz ortogonal 
+ou algumas vezes como uma matriz ortonormal.
 
 00:03:19.110 --> 00:03:24.020
-Each column in this matrix is a unit vector
-and you can show that for yourself pretty
+Cada coluna nessa matriz é um vetor unitário
+e você pode mostrar isso por conta própria bem
 
 00:03:24.020 --> 00:03:29.890
-easily. Each column in the matrix is orthogonal
-to the other columns. In this case, there
+facilmente. Cada coluna na matriz é ortogonal 
+às outras colunas. Nesse caso, há
 
 00:03:29.890 --> 00:03:35.050
-are only two columns and you can show, again
-very easily, that a vector formed by the first
+somente duas colunas e você pode mostrar, de novo
+muito facilmente, que o vetor formado pela primeira
 
 00:03:35.050 --> 00:03:40.530
-column is orthogonal to the vector formed
-by the second column. The dot product of the
+coluna é ortogonal ao vetor formado 
+pela segunda coluna. O produto escalar dessas
 
 00:03:40.530 --> 00:03:46.030
-two columns will be equal to zero. A really
-useful property of an orthogonal matrix is
+duas colunas vap ser igual a zero. Uma propriedade
+realmente útil de uma matriz ortogonal é 
 
 00:03:46.030 --> 00:03:52.670
-that its inverse is the same as its transpose.
-Computing the inverse of a matrix is rather
+que sua inversa é igual a sua transposta.
+Calcular a inversa de uma matriz é bastante
 
 00:03:52.670 --> 00:03:57.110
-complex, whereas computing its transpose is
-really very simple. So, it’s great that
+complexo, enquanto que calcular sua transposta
+é realmente muito simples. Então, é ótimo que
 
 00:03:57.110 --> 00:04:03.280
-we have a matrix whose inverse can be computed
-very simply by transposing the elements of
+temos uma matriz cuja inversa pode ser calculada
+de forma muito simples transpondo os elementos
 
 00:04:03.280 --> 00:04:06.859
-the matrix.
-Another property of the rotation matrix is
+da matriz.
+Outra propriedade da matriz de rotação é 
 
 00:04:06.859 --> 00:04:13.060
-that its determinant is always equal to 1.
-And this means that, if I multiply any vector
+que seu determinante é sempre igual a 1.
+E isso significa que, se eu multiplicar qualquer vetor
 
 00:04:13.060 --> 00:04:17.870
 by this matrix, the length of the vector is

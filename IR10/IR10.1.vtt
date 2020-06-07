@@ -1,147 +1,147 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.510 --> 00:00:07.630
-Here's an image that we've seen many times
-before. We want this robot to do something
+Aqui está uma imagem que já vimos muitas vezes
+antes. Nós queremos que esse robô faça algo
 
 00:00:07.630 --> 00:00:12.850
-useful, so we're interested in where the end
-effector is positioned in 3 dimensional space.
+útil, então nós estamos interessados em onde o
+efetuador está posicionado no espaço tridimensional.
 
 00:00:12.850 --> 00:00:16.620
-We require the robot tool moves to a particular
-pose.
+Nós precisamos que a ferramenta se mova para uma
+determinada pose.
 
 00:00:16.620 --> 00:00:20.400
-We've talked about how we can use inverse
-kinematics to work out what are the joint
+Nós falamos sobre como podemos usar a cinemática
+inversa para descobrir quais são os angulos
 
 00:00:20.400 --> 00:00:25.680
-angles required in order for the robots end
-effector to be at the pose we require to do
+de articulação necessários para que os efetuadores 
+dos robôs estejam na pose requerida para fazer
 
 00:00:25.680 --> 00:00:30.980
-the useful task. What we haven't discussed
-so far is how we control the robot so that
+a tarefa útil. O que não discutimos
+até agora é como controlamos o robô para que
 
 00:00:30.980 --> 00:00:37.999
-the joints move to the desired joint angles.
-The control of any one joint of a robot arm,
+as juntas se movam para os ângulos de articulação desejados.
+O controle de uma junta qualquer de um braço robótico,
 
 00:00:37.999 --> 00:00:42.559
-typically has a structure that looks something
-like this. In this diagram we can see that
+geralmente tem uma estrutura que se assemelha
+a isso. Neste diagrama podemos ver que 
 
 00:00:42.559 --> 00:00:47.239
-there's a loop and that's a very important
-part of the architecture. We're going to walk
+há realimentação e essa é uma parte muito
+importante da arquitetura. Nós vamos
 
 00:00:47.239 --> 00:00:50.489
-through this system and we're going to start
-with the actuator.
+percorrer esse sistema e começaremos com
+o atuador.
 
 00:00:50.489 --> 00:00:55.469
-The actuator is the device that actually makes
-the robot joint move, it's the motor. The
+O atuador é o dispositivo que realmente faz
+a articulação do robô se mover, ele é o motor. A
 
 00:00:55.469 --> 00:01:00.159
-output of the motor is some position and we
-have a mechanical transmission which connects
+saída do motor é alguma posição e nós
+temos uma transmissão mecânica que conecta
 
 00:01:00.159 --> 00:01:05.920
-the output of the motor to the robot joint
-itself. The mechanical transmission itself
+a saída do motor com a própria articulação
+do robô. A própria transmissão mecânica
 
 00:01:05.920 --> 00:01:11.920
-is commonly a gearbox and in some types of robot
-it might be a cable drive.
+é geralmente uma caixa de velocidades e em alguns 
+tipos de robô pode ser um acionador a cabo.
 
 00:01:11.920 --> 00:01:16.230
-The position of the motor is monitored by
-a position senor and that gives a signal that
+A posição do motor é monitorada por
+um sensor de posição que emite um sinal que
 
 00:01:16.230 --> 00:01:22.900
-says what is the actual position of the robot
-joint motor. An input to the system is the
+indica qual é a posição real do motor da junta 
+do robô. Entradas para o sistema são a
 
 00:01:22.900 --> 00:01:27.710
-desired position and what we want to do is
-to move the motor until the actual position
+posição desejada e o que queremos fazer é
+mover o motor até a posição atual
 
 00:01:27.710 --> 00:01:32.650
-is equal to the desired position and that's
-the job of the joint controller and typically
+ser igual a posição desejada e esse é
+o trabalho de controlador de junta e geralmente
 
 00:01:32.650 --> 00:01:38.170
-that's an embedded micro controller. It's
-a piece of code running on a micro processor
+isto é um microcontrolador embarcado. Se trata
+um trecho de código rodando em um microprocessador
 
 00:01:38.170 --> 00:01:43.290
-that provides the appropriate commands to
-the motor so that the actual position matches
+que fornece os comandos apropriados para
+o motor de modo que a posição atual corresponda
 
 00:01:43.290 --> 00:01:47.310
-the desired position.
-The output of the joint controller is typically
+a posição desejada.
+A saída do controlador de junta é tipicamente
 
 00:01:47.310 --> 00:01:53.220
-some electronic signal. It might be a voltage
-or it might be a pulse-width-modulated waveform.
+algum sinal eletrônico. Pode ser uma tensão
+ou uma forma de onda modulada por largura de pulso.
 
 00:01:53.220 --> 00:01:57.700
-This is input to the motor drive which is
-a lot of power electronics which controls
+Isso é entrada para o acionador do motor que é
+um monte de eletrônica de potência que controla
 
 00:01:57.700 --> 00:02:01.810
-the current or the voltage that's applied
-to the actuator.
+a corrente ou a tensão aplicada
+ao atuador.
 
 00:02:01.810 --> 00:02:06.370
-The most important part of this robot joint
-control system is this feedback loop. It's
+A parte mais importante deste sistema de controle
+de junta robótico é essa realimentação. É aí
 
 00:02:06.370 --> 00:02:12.359
-where we compare the actual position of the
-motor with the desired position and compute
+onde comparamos a posição atual do motor
+com a posição desejada e calculamos
 
 00:02:12.359 --> 00:02:16.250
-a control signal to the actuator to make those
-two things equal.
+um sinal de controle para o atuador para
+tornar essas duas coisas iguais.
 
 00:02:16.250 --> 00:02:20.980
-In the rest of this lecture, we're going to
-look at each of the individual elements in
+No restante desta aula, veremos cada
+um dos elementos individuais
 
 00:02:20.980 --> 00:02:25.599
-this diagram one by one. If you're going to
-get the most out of this lecture, then it's
+neste diagrama um por um. Se você vai tirar
+o máximo proveito desta aula, então é
 
 00:02:25.599 --> 00:02:30.780
-important that you've got some necessary pre-requisites.
-It will be most useful if you've completed
+importante que você tenha alguns pré-requisitos
+necessários. Será mais útil se você tiver concluído
 
 00:02:30.780 --> 00:02:35.719
-a first undergraduate course on control theory.
-If you've done that, then you'll be familiar
+um primeiro curso de graduação em teoria de controle.
+Se você fez isso, então estará familiarizado
 
 00:02:35.719 --> 00:02:39.819
-with concepts such as the Laplace transform
-and you'd be familiar with concepts such as
+com conceitos como a transformação de Laplace
+e você estaria familiarizado com conceitos como
 
 00:02:39.819 --> 00:02:44.810
-the poles of a dynamic system.
-It would also be really useful if you are
+os polos de um sistema dinâmico.
+Também seria realmente útil se você estiver
 
 00:02:44.810 --> 00:02:49.250
-familiar with some fundamentals of mechatronic
-systems that is you know what is a motor,
+familiarizado com alguns fundamentos dos sistemas
+mecatrônicos que é você saber o que é um motor,
 
 00:02:49.250 --> 00:02:53.629
-you know what a gearbox is, you know what
-an encoder is and some familiarity with the
+saber o que é uma caixa de velocidades, saber o
+que é um codificador e alguma familiaridade com a
 
 00:02:53.629 --> 00:02:55.980
-idea of embedded controllers.
+idéia de controladores embarcados.
 

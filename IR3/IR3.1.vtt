@@ -1,158 +1,158 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.530 --> 00:00:07.750
-We are now going to consider an object which
-moves in three-dimensional space, for instance
+Agora vamos considerar um objeto no qual 
+se movimenta nas três dimensões do espaço, por exemplo,
 
 00:00:07.750 --> 00:00:12.240
-this airplane but it could be a flying robot,
-it could be an underwater robot.
+este avião, mas poderia ser um robô voador,
+poderia ser um robô subaquático.
 
 00:00:12.240 --> 00:00:14.809
-I want to describe its position within the
-world.
+Eu quero descrever sua posição dentro do
+universo.
 
 00:00:14.809 --> 00:00:18.480
-And we are going to use the same process that
-we did for two dimensions.
+E nós vamos usar o mesmo processo que
+fizemos para duas dimensões.
 
 00:00:18.480 --> 00:00:21.820
-We’re going to introduce a reference coordinate
-frame.
+Nós vamos introduzir um sistema
+de coordenadas de referência.
 
 00:00:21.820 --> 00:00:25.270
-Now, for the three-dimensional case, this
-is a three-dimensional coordinate frame.
+Agora, para o caso de três dimensões, este
+é um sistema de coordenadas tridimensional
 
 00:00:25.270 --> 00:00:28.470
-It’s got an x-axis, a y-axis and a z-axis.
+Possui um eixo x, eixo y e um eixo z.
 
 00:00:28.470 --> 00:00:32.750
-And, I’m going to put it at an arbitrary
-place in the world and that is going to be
+E, eu vou colocá-lo em um lugar arbitrário 
+no universo e este será 
 
 00:00:32.750 --> 00:00:34.570
-our reference coordinate frame.
+nosso sistema de coordenadas de referência.
 
 00:00:34.570 --> 00:00:38.739
-In three dimensions, we used a coordinate
-frame that looks like this and there are a
+Em três dimensões, nós usamos um sistema de
+coordenadas que parece como isto e há 
 
 00:00:38.739 --> 00:00:42.489
-lot of similarities to the 2D coordinate frame
-we looked at in the last lecture.
+muita similaridade com o sistema de 
+coordenadas 2D que vimos na última aula
 
 00:00:42.489 --> 00:00:44.079
-There are three axes.
+Há três eixos.
 
 00:00:44.079 --> 00:00:50.110
-They are x, y and z and they meet at angles
-of 90 degrees to each other.
+Eles são o eixo x, y e z que 
+fazem um ângulo de 90° entre eles.
 
 00:00:50.110 --> 00:00:53.780
-The point where they all intersect is referred
-to as the origin.
+O ponto onde eles se cruzam 
+é referenciado como a origem.
 
 00:00:53.780 --> 00:00:59.409
-So, these three axes together form what we
-call a three-dimensional coordinate frame.
+Então, os três eixos juntos formam o que nós 
+chamamos de sistemas de coordenadas tridimensional
 
 00:00:59.409 --> 00:01:04.400
-Let’s introduce a point now and we want
-to describe the point with respect to the
+Vamos introduzir um ponto agora e 
+queremos descrever o ponto em relação ao
 
 00:01:04.400 --> 00:01:06.450
-3D coordinate frame.
+sistema de coordenadas 3D.
 
 00:01:06.450 --> 00:01:11.460
-We do this by dropping a line down to the
-XY plane and measuring the displacement A
+Vamos fazer isto descendo uma linha 
+até o plano XY e medindo o deslocamento A
 
 00:01:11.460 --> 00:01:18.469
-along the x-axis, the displacement B along
-the y-axis and the displacement C along the
+ao longo do eixo X, o deslocamento B ao longo
+do eixo y e o deslocamento C ao longo do
 
 00:01:18.469 --> 00:01:19.469
-z-axis.
+eixo z.
 
 00:01:19.469 --> 00:01:22.250
-So, we can represent the point by three numbers.
+Portanto, podemos representar 
+o ponto por três números.
 
 00:01:22.250 --> 00:01:26.979
-We call this a tuple, a 3-tuple, and that’s
-basically a group of three numbers, the numbers
+Nós chamamos isso de tupla, uma 3-tupla, que é
+basicamente um grupo de três números, os números
 
 00:01:26.979 --> 00:01:30.110
-A, B and C and they are the coordinates of
-the point.
+A, B e C são as coordenadas do ponto.
 
 00:01:30.110 --> 00:01:34.930
-So, we can consider a point is a location
-in an n-dimensional space.
+Então, podemos considerar um ponto como
+uma localização no espaço de n dimensões.
 
 00:01:34.930 --> 00:01:39.119
-A mathematician would write that as P belonging
-to the set of real numbers to the power of
+Um matemático diria que P pertence
+ao conjunto dos números reais de ordem
 
 00:01:39.119 --> 00:01:40.119
 n.
 
 00:01:40.119 --> 00:01:42.890
-And in this particular case, n is equal to
-three.
+E neste caso em particular, n é igual
+à três.
 
 00:01:42.890 --> 00:01:47.759
-In the most general sense, we can represent
-the coordinate as a group or a tuple of n
+No sentido geral, representamos as coordenadas
+como um grupo ou uma tupla de n
 
 00:01:47.759 --> 00:01:48.759
-numbers.
+números.
 
 00:01:48.759 --> 00:01:53.409
-Again, in this case, n equals three, so it
-represents a point by a coordinate which comprises
+Novamente, neste caso, n é três, portanto representamos
+um ponto por uma coordenada que compreende
 
 00:01:53.409 --> 00:01:55.720
-three numbers.
+três números.
 
 00:01:55.720 --> 00:02:00.880
-We can describe a vector in terms of three
-components: a component A parallel to the
+Podemos descrever um vetor em termos de 
+três componentes: uma componente A paralela ao
 
 00:02:00.880 --> 00:02:06.399
-x-axis, component B parallel to the y-axis,
-and a component C parallel to the z-axis.
+eixo x, componente B paralela ao eixo y 
+e uma componente C paralela ao eixo z.
 
 00:02:06.399 --> 00:02:12.360
-And, we represent the vector P using the lower
-case symbol p and a column vector.
+E, podemos representar um vetor P usando a
+letra minúscula p e um vetor coluna.
 
 00:02:12.360 --> 00:02:16.700
-That’s a stack of numbers one above the
-other: the distance A, the distance B and
+Isto é uma pilha de números acima dos 
+outros: a distância A, a distância B e
 
 00:02:16.700 --> 00:02:21.239
-the distance C. A vector is an element of
-an n-dimensional vector space.
+a distância C. Um vetor é um elemento de
+um espaço vetorial de n dimensões.
 
 00:02:21.239 --> 00:02:26.480
-A mathematician would say that lower case
-p belongs to the set of real numbers to the
+Um matemático diria que a letra minúscula 
+p pertence ao conjunto dos números reais
 
 00:02:26.480 --> 00:02:27.610
-power of n.
+de ordem n.
 
 00:02:27.610 --> 00:02:30.800
-Again, in this case, n equals 3.
+Novamente, neste caso, n igual à 3.
 
 00:02:30.800 --> 00:02:34.590
-We can also represent a vector by an n element
-column vector.
+Nós também podemos representar um vetor
+por vetor coluna de n elementos.
 
 00:02:34.590 --> 00:02:38.500
-That’s n numbers stacked one above the other.
+São n números empilhados um acima do outro.
 
 00:02:38.500 --> 00:02:41.319
 We can consider a vector as a relative displacement.

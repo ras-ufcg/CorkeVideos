@@ -1,250 +1,249 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:08.330 --> 00:00:12.670
-In this lecture, we want to talk about how
-we describe the position of things in the
+Nesta aula, vamos falar sobre como
+descrevemos a posição das coisas
 
 00:00:12.670 --> 00:00:15.620
-world. In robotics, this is really, really
-important.
+no mundo. Na robótica, isso é realmente 
+muito, muito importante.
 
 00:00:15.620 --> 00:00:21.110
-For instance, in our robotics problem, we
-might want to describe the position of a robot.
+Por exemplo, em nosso problema de robótica,
+podemos querer descrever a posição de um robô.
 
 00:00:21.110 --> 00:00:24.650
-We might also want to describe the position
-of something that the robot wants to interact
+Podemos ainda desejar descrever a posição
+de algo com o qual o robô queira
 
 00:00:24.650 --> 00:00:29.210
-with. For instance, it might want to interact
-with my water bottle. So I need to describe
+interagir. Por exemplo, talvez ele queira interagir
+com minha garrafa de água. Logo, eu preciso descrever
 
 00:00:29.210 --> 00:00:32.950
-the position of the robot, the position of
-the water bottle and I’m also interested
+a posição do robô, a posição da
+garrafa e eu ainda estou interessado
 
 00:00:32.950 --> 00:00:35.260
-in describing the relative position.
+em descrever a posição relativa.
 
 00:00:35.260 --> 00:00:38.860
-Where is the water bottle with respect to
-the robot? And that's clearly something that
+Onde está a garrafa de água em relação ao
+robô? E isso é, claramente, algo que
 
 00:00:38.860 --> 00:00:44.330
-the robot would like to know if it wanted
-to go and pick up the water bottle.
+o robô gostaria de saber, caso desejasse
+ir e pegar a garrafa.
 
 00:00:44.330 --> 00:00:49.860
-When it comes to describing the position of
-things, we need some kind of frame of reference.
+Quando se trata de descrever a posição das coisas,
+precisamos de um tipo de quadro de referência.
 
 00:00:49.860 --> 00:00:55.350
-This is a pretty important aspect of describing
-the position of things in the world. Here
+Esse é um aspecto bem importante em descrever
+a posição das coisas no mundo. Aqui
 
 00:00:55.350 --> 00:00:59.040
-is a picture of our world. And one of the
-things we need to keep in mind of course is
+está uma imagem do nosso mundo. E uma das
+coisas que precisamos ter em mente é
 
 00:00:59.040 --> 00:01:03.930
-that our world, the surface of our world is
-moving. A point on the surface at the earth
+que nosso mundo, a superfície do nosso mundo
+está se movendo. Um ponto na superfície da Terra
 
 00:01:03.930 --> 00:01:11.860
-– the equator is moving nearly 500 meters
-per second in space. The earth itself is moving
+– o equador está se movendo perto de 500 metros
+por segundo no espaço. A Terra em si, se move
 
 00:01:11.860 --> 00:01:17.180
-at quite a high speed around the sun. And
-then our solar system is moving at very high
+numa velocidade tão alta quanto ao redor do sol.
+E ainda, nosso sistema solar se move numa velocidade
 
 00:01:17.180 --> 00:01:23.020
-speed around the centre of the galaxy. And
-the galaxy itself is moving at incredible
+altíssima ao redor do centro da galáxia.
+E a galáxia em si, se move incrivelmente
 
 00:01:23.020 --> 00:01:27.610
-speed towards the constellation Leo. So, everything
-is in motion.
+rápido em direção à constelação Leo. 
+Portanto, tudo está em movimento.
 
 00:01:27.610 --> 00:01:32.610
-If we're trying to describe where things are,
-it's really important that we consider the
+Se estamos tentando descrever onde as coisas
+estão, é bem importante que consideremos o
 
 00:01:32.610 --> 00:01:34.470
-frame of reference.
+quadro de referência.
 
 00:01:34.470 --> 00:01:38.310
-Everything is moving so we just have to put
-effectively a stake in the ground and say,
+Tudo está se movendo, logo nós apenas temos que
+fincar, efetivamente, uma estaca no chão e dizer,
 
 00:01:38.310 --> 00:01:44.150
-"This is the reference point and we'll decide
-all positions with respect to that reference
+"Este é o ponto de referência e decidiremos
+todas as posições relacionando-se a este
 
 00:01:44.150 --> 00:01:47.880
-point". That's exactly what we do. We're going
-to put a stake in the ground. For instance,
+ponto". Isso é exatamente o que fazemos. Vamos
+fincar uma estaca no chão. Por exemplo,
 
 00:01:47.880 --> 00:01:52.700
-like this sign post here and say, "This is
-the origin. This is the coordinate, zero zero
+pego esta placa aqui e digo, "Esta é a
+origem. Esta é a coordenada zero zero
 
 00:01:52.700 --> 00:01:55.800
-and we're going to measure all distances from
-that.
+e vamos medir todas as distâncias a partir
+daqui.
 
 00:01:55.800 --> 00:02:00.909
-And we're going to create a coordinate frame.
-Effectively two orthogonal axes. An x-axis,
+E vamos criar um quadro de coordenadas.
+Efetivamente, dois eixos ortogonais. Um eixo x,
 
 00:02:00.909 --> 00:02:05.530
-and a y-axis, sorts of things that you learn
-at school. And we're going to use those two
+e um eixo y, os tipos de coisas que você
+aprende na escola. E vamos usar essas duas
 
 00:02:05.530 --> 00:02:11.319
-distances, the distance along the x-axis, the
-distance along the y-axis, in order to describe
+distâncias, a distância sobre o eixo x, e a
+distância sobre o eixo y, para assim descrever
 
 00:02:11.319 --> 00:02:14.990
-the position of an object in two-dimensional
-space.
+a posição de um objeto num espaço
+bidimensional.
 
 00:02:14.990 --> 00:02:18.760
-In this lecture, we're going to keep things
-simple. We're only going to consider the position
+Nesta aula, Nós vamos manter as coisas
+simples. Vamos apenas considerar a posição
 
 00:02:18.760 --> 00:02:23.790
-in two dimensions. In the next lecture, I
-will kick it up a notch and talk about position
+em duas dimensões. Na próxima aula, eu vou
+intensificar um pouco mais e falar sobre posição
 
 00:02:23.790 --> 00:02:26.870
-in 3 dimensions.
+em 3 dimensões.
 
 00:02:26.870 --> 00:02:33.360
-Now, reference points are entirely arbitrary.
-So, let's talk for a moment about the reference
+Prosseguindo, pontos de referências são arbitrários.
+Então, vamos falar, por um momento, sobre o sistema de
 
 00:02:33.360 --> 00:02:38.960
-system that we use on our own planet. So,
-here we have a depiction of planet earth.
+sistema que usamos no nosso próprio planeta. 
+Então, temos a representação do planeta Terra
 
 00:02:38.960 --> 00:02:43.100
-And this is a projection, the earth of course
-is a sphere. And to make a rectangular map
+E isso é uma projeção. A Terra, é claro, é uma
+esfera. Para fazer um mapa retangular
 
 00:02:43.100 --> 00:02:47.450
-like this what we have to do is cut the sphere,
-unroll it, stretch it out so that it looks
+Como esse devemos fazer é cortar a esfera, 
+desenrolá-la e esticá-la, só então irá parecer
 
 00:02:47.450 --> 00:02:53.930
-like a rectangle. And we put a couple of reference
-lines on our globe. The most important one,
+Com um retângulo. Colocamos algumas linhas de
+referência no globo. A mais importante delas,
 
 00:02:53.930 --> 00:02:56.480
-perhaps the most obvious one, is the equator.
+Talvez a mais óbvia, é o equador.
 
 00:02:56.480 --> 00:03:01.260
-Because the earth is a sphere, we have an
-obvious axis which is that which the planet
+Visto que a Terra é uma esfera, temos um eixo
+óbvio que é o eixo de rotação que o planeta
 
 00:03:01.260 --> 00:03:06.890
-rotates around. And you may create a plane
-orthogonal to this rotational axis that cuts
+Gira em torno e deve-se criar um plano orthogonal
+a esse eixo rotacional que corta
 
 00:03:06.890 --> 00:03:11.910
-the sphere into two equal hemispheres, and
-we call that line the equator and it shown
+A esfera em dois hemisférios iguais e chamamos 
+essa linha de equador e está mostrada
 
 00:03:11.910 --> 00:03:15.900
-here in black. And you can go and visit the
-equator when you can stand with your leg one
+Aqui em preto. Você pode visitar o equador quando
+puder ficar com uma perna
 
 00:03:15.900 --> 00:03:20.270
-in the Northern Hemisphere and one in the
-Southern Hemisphere.
+No hemisfério norte e a outra perna no 
+hemisfério sul.
 
 00:03:20.270 --> 00:03:25.849
-Now there's another line, which we call the
-Prime meridian and it passes orthogonal to
+Agora existe outra linha, que chamamos de 
+meridiano primário e ela passa ortogonal ao
 
 00:03:25.849 --> 00:03:30.160
-the equator, and it passes through the Greenwich
-observatory in London.
+Equador e ela passa sobre o observatório de 
+Greenwich, em Londres.
 
 00:03:30.160 --> 00:03:34.770
-This line is completely arbitrary. It doesn't
-have to be through the Greenwich observatory
+Essa linha é completamente arbitrária. Ela não
+precisa estar sobre o observatório de Greenwich,
 
 00:03:34.770 --> 00:03:40.099
-but the convention on our planet is that
-we used the Greenwich observatory line as
+Mas a convenção no nosso planeta é que usamos
+a linha do observatório de Greenwich como
 
 00:03:40.099 --> 00:03:45.030
-the Prime meridian, and you can go visit Greenwich
-you can put your feet on either side
+O meridiano primário e você pode visitar Greenwich
+colocar seu pé em cada lado
 
 00:03:45.030 --> 00:03:52.250
-of the Prime meridian in the West and the
-Eastern Hemispheres of the planet.
+do meridiano primário nos hemisférios oeste e leste
+do planeta.
 
 00:03:52.250 --> 00:03:58.850
-The distance in the horizontal direction,
-we refer to as longitude. And the direction,
+A distância na direção horizontal é referenciada
+como longitude e a direção,
 
 00:03:58.850 --> 00:04:03.610
-the distance in the other direction, we refer
-to as latitude. So we have lines of longitude
+A distância na outra direção, nos referimos como
+latitude. Então temos linhas de longitude
 
 00:04:03.610 --> 00:04:08.790
-and lines of latitude that we inscribe onto
-the sphere. And those two numbers, longitude
+E linhas de latitude que registramos na esfera e
+esses dois números, longitude
 
 00:04:08.790 --> 00:04:14.640
-and latitude, are sufficient to describe the
-position of any point, any place on the surface
+E latitude, são suficientes para descrever a posição em
+qualquer ponto, qualquer lugar na superfície
 
 00:04:14.640 --> 00:04:16.570
-of our planet.
+Do nosso planeta.
 
 00:04:16.570 --> 00:04:21.720
-Now, we have this arbitrary line as I've mentioned
-before which we called the Prime meridian
+Agora temos essa linha arbitrária que eu
+mencionei antes que chamei de meridiano primário
 
 00:04:21.720 --> 00:04:26.099
-which goes through the Greenwich observatory.
-If history had been different, we would have
+Que passa pelo observatório de Greenwich. Se a
+história tivesse sido diferente, nós teríamos
 
 00:04:26.099 --> 00:04:31.509
-had a different Prime meridian. There was
-a proposal for the Prime meridian to go through
+um meridiano primário diferente. Existe um 
+propósito para que o meridiano primário passe sobre
 
 00:04:31.509 --> 00:04:36.409
-the Paris observatory. And if you visit Paris
-today, you can see a line referred to as the
+o observatório de Paris e se você visitar Paris
+hoje, você verá a referida linha como a
 
 00:04:36.409 --> 00:04:43.410
-Arago line which is where this non-existent
-Prime meridian passes through the city of
+Linha Arago na qual esse meridiano primário não 
+existente passa pela cidade de
 
 00:04:43.410 --> 00:04:49.050
-Paris. And it's named after a French astronomer
-and mathematician, Arago, who proposed that
+Paris e foi nomeada depois que o astrônomo e
+matemático francês, Arago, que propôs esse
+
 
 00:04:49.050 --> 00:04:50.409
-particular Prime meridian.
+Meridiano particular.
 
 00:04:50.409 --> 00:04:55.310
-So, the take home message here is that this
-Prime meridian is completely arbitrary. It
+Então, a mensagem pra levar pra casa de hoje é
+que o meridiano primário é completamente arbitrário. Isso
 
 00:04:55.310 --> 00:05:00.629
-is a convention that we've all agreed upon.
-It's useful to have this convention and that's
+É uma convenção em que todos concordamos. Isso útil
+ter essa convenção e é assim
 
 00:05:00.629 --> 00:05:03.679
-how we describe points on the planet of the
-earth.
-
+Como descrevemos os pontos no planeta Terra.
