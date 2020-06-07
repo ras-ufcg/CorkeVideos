@@ -155,147 +155,146 @@ por vetor coluna de n elementos.
 São n números empilhados um acima do outro.
 
 00:02:38.500 --> 00:02:41.319
-We can consider a vector as a relative displacement.
+Podemos considerar um vetor como um deslocamento relativo.
 
 00:02:41.319 --> 00:02:47.909
-That’s how we get from the origin, our reference
-point, to the point p in a straight line.
+É assim que chegamos da origem, nosso ponto
+de referência, ao ponto p em uma linha reta.
 
 00:02:47.909 --> 00:02:52.489
-All the vectors that we’re going to consider
-start at the origin, so we refer to these
+Todos os vetores que vamos considerar começam
+na origem, então nos referimos a esses
 
 00:02:52.489 --> 00:02:54.480
-as bound vectors.
+como vetores vinculados.
 
 00:02:54.480 --> 00:02:56.760
-They have a particular starting point.
+Eles têm um ponto de partida particular.
 
 00:02:56.760 --> 00:03:01.860
-And, that means that the vector shown here
-in red is different to this vector shown here
+E isso significa que o vetor mostrado aqui
+em vermelho é diferente do vetor mostrado aqui
 
 00:03:01.860 --> 00:03:07.600
-even though it has got the same length and
-the same orientation in space.
+mesmo que tenham o mesmo comprimento e
+a mesma orientação no espaço.
 
 00:03:07.600 --> 00:03:12.650
-Another way we can describe vectors is in
-terms of a set of orthogonal unit vectors.
+Outra maneira de descrever vetores é em termos
+de um conjunto de vetores ortogonais unitários.
 
 00:03:12.650 --> 00:03:16.840
-Let’s introduce the unit vectors, x-hat,
-y-hat and z-hat.
+Vamos apresentar os vetores unitários,
+x-chapéu, y-chapéu e z-chapéu.
 
 00:03:16.840 --> 00:03:22.240
-Now, each of these vectors has got a length
-of one and they are parallel to the coordinate
+Agora, cada um desses vetores tem um comprimento
+de um e eles são paralelos aos eixos 
 
 00:03:22.240 --> 00:03:24.780
-axes, x, y and z.
+de coordenadas, x, y e z.
 
 00:03:24.780 --> 00:03:28.739
-Now, we can represent our vector lower case
-p in terms of the unit vectors.
+Agora, podemos representar nosso vetor p
+minúsculo em termos de vetores unitários.
 
 00:03:28.739 --> 00:03:32.830
-A time x-hat, B times y-hat, plus C times
-z-hat.
+A vezes x-chapéu, B vezes y-chapéu,
+mais C vezes z-chapéu.
 
 00:03:32.830 --> 00:03:39.400
-There are some similarities, but some important
-differences between points and vectors.
+Existem algumas semelhanças, mas algumas
+diferenças importantes entre pontos e vetores.
 
 00:03:39.400 --> 00:03:40.439
-Points define a location.
+Pontos definem uma localização.
 
 00:03:40.439 --> 00:03:41.810
-It’s not possible.
+Não é possível.
 
 00:03:41.810 --> 00:03:45.989
-It doesn’t make any sense to add or multiply
-points.
+Não faz sentido adicionar ou multiplicar
+pontos.
 
 00:03:45.989 --> 00:03:47.349
-Vectors do not define location.
+Vetores não definem localização.
 
 00:03:47.349 --> 00:03:52.819
-They specify how to get from one location
-to another or from one point to another.
+Eles especificam como ir de um local
+para outro ou de um ponto para outro.
 
 00:03:52.819 --> 00:03:57.769
-Now, we can add and subtract vectors, that
-makes perfect sense and we can multiply a
+Agora, podemos adicionar e subtrair vetores, o
+que faz todo o sentido e podemos multiplicar um
 
 00:03:57.769 --> 00:03:58.800
-vector by a scalar.
+vetor por um escalar.
 
 00:03:58.800 --> 00:04:04.400
-We can make the vector longer or shorter while
-maintaining its direction.
+Podemos aumentar ou diminuir o vetor,
+mantendo sua direção.
 
 00:04:04.400 --> 00:04:07.829
-The difference between two points is a vector.
+A diferença entre dois pontos é um vetor.
 
 00:04:07.829 --> 00:04:13.170
-And a point can be defined as a vector with
-respect to another point and that point is
+E um ponto pode ser definido como um vetor com
+respeito a outro ponto e esse ponto é
 
 00:04:13.170 --> 00:04:16.730
-typically the origin of the coordinate frame.
+normalmente a origem do sistema de coordenadas.
 
 00:04:16.730 --> 00:04:20.989
-Points and vectors are both represented by
-a group of n real numbers.
+Pontos e vetores são representados
+por um grupo de n números reais.
 
 00:04:20.989 --> 00:04:25.800
-N, in our case, is three because we’re talking
-about three-dimensional space.
+N, no nosso caso, é três, porque estamos
+falando de espaço tridimensional
 
 00:04:25.800 --> 00:04:31.930
-A point is typically represented as a row
-vector, a list of numbers inside parenthesis,
+Um ponto é normalmente representado como um vetor
+linha, uma lista de números entre parênteses,
 
 00:04:31.930 --> 00:04:36.310
-whereas a vector is typically represented
-as a stack of the n numbers one above the
+enquanto um vetor é normalmente representado
+como uma linha dos n números um acima do
 
 00:04:36.310 --> 00:04:39.009
-other and typically in square brackets.
+outro e tipicamente entre colchetes.
 
 00:04:39.009 --> 00:04:45.199
-Now, I can describe the position of the airplane
-with respect to this coordinate system.
+Agora, eu posso descrever a posição do avião
+em relação a este sistema de coordenadas.
 
 00:04:45.199 --> 00:04:48.120
-I need to define a reference point on the
-airplane.
+Eu preciso definir um ponto de referência no
+avião.
 
 00:04:48.120 --> 00:04:50.289
-I need to describe one particular location.
+Eu preciso descrever um local específico.
 
 00:04:50.289 --> 00:04:53.040
-So, let’s say the tip of the airplane’s
-nose.
+Então, digamos que seja a ponta do nariz
+do avião.
 
 00:04:53.040 --> 00:04:55.350
-Now, I can measure that distance.
+Agora, eu posso medir essa distância.
 
 00:04:55.350 --> 00:05:02.330
-Roughly, I’d say it’s about 35 centimetres
-in the X direction and it might be something
+A grosso modo, eu diria que são cerca de 35
+centímetros na direção X e pode ser algo
 
 00:05:02.330 --> 00:05:09.310
-like 18 centimetres in the Y direction and
-it’s something like 13 centimetres in the
+como 18 centímetros na direção Y e
+é algo como 13 centímetros na
 
 00:05:09.310 --> 00:05:10.310
-Z direction.
+direção Z.
 
 00:05:10.310 --> 00:05:15.650
-So, I can describe the position of this particular
-point in the 3-dimensional world by those
+Então, eu posso descrever a posição desse ponto em
+particular no mundo tridimensional por aquelas
 
 00:05:15.650 --> 00:05:17.530
-three numerical coordinates.
-
+três coordenadas numéricas.
