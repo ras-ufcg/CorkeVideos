@@ -151,154 +151,156 @@ usando um par de números e nós escrevemos
 em parênteses assim.
 
 00:03:24.550 --> 00:03:29.840
-A mathematician would say that a point is
-a location in an n-dimensional space. We would
+Um matemático diria que um ponto é a localização 
+em um espaço de n-dimensões. Nós poderíamos 
 
 00:03:29.840 --> 00:03:36.020
-say that the point P is an element of, or belongs
-to, the set of real numbers to the power of
+dizer que um ponto P é um elemento de, ou pertence à,
+um conjunto de números reais elevados à potência n.
 
 00:03:36.020 --> 00:03:41.890
-n. In this case, it would be R squared. We
-can represent the point by a Cartesian coordinate.
+Neste caso, seria R ao quadrado. Nós podemos representar
+este ponto por uma coordenada cartesiana.
 
 00:03:41.890 --> 00:03:46.670
-We can also refer to it as an n-tuple. That’s
-a group of n numbers. We number them from
+Nós também podemos nos referir a isso como uma tupla n. 
+Isto é um grupo de n números. Nós enumeramos eles desde
 
 00:03:46.670 --> 00:03:52.840
-x1, x2, all the way up to xn. Again, in the
-simple two-dimensional case, n is simply equal
+x1, x2, até o limite xn. Novamente, no caso básico 
+de duas dimensões, n é simplesmente igual 
 
 00:03:52.840 --> 00:03:57.599
-to 2. We can think of a vector as an arrow
-from the origin of our coordinate frame to
+a 2. Podemos pensar no vetor como uma seta
+partindo da origem do nosso eixo de coordenadas
 
 00:03:57.599 --> 00:04:04.500
-the point of interest. And, we denote vectors
-by lower case letters. Points by upper case
+até o ponto de interesse. E, nós denotamos estes
+vetores por letras minúsculas. Pontos por
 
 00:04:04.500 --> 00:04:08.890
-letters, vectors by lower case letters. In
-this case, lower case p.
+letras maiúsculas, vetores por letras minúsculas. 
+Neste caso, p minúsculo.
 
 00:04:08.890 --> 00:04:14.580
-A vector has got two components. A horizontal
-component of length a, and a vertical component
+Um vetor possui dois componentes. Um componente
+horizontal de tamanho a, e um componente vertical
 
 00:04:14.580 --> 00:04:19.859
-of length b. We write the vector p differently
-to the way we write the point P. We write
+de tamanho b. Nós escrevemos o vetor p diferentemente 
+da maneira que escrevemos o ponto P. Nós escrevemos
 
 00:04:19.859 --> 00:04:24.490
-it as a vector. That’s a stack of numbers,
-one above the other. In this case, a above
+isto como uma vetor. Que é um grupo de números
+empilhados um acima do outro. Neste caso,
 
 00:04:24.490 --> 00:04:29.770
-b. So, it’s a two element vector. It’s
-also the same as a 2 by 1 matrix.
+a acima de b. Logo, é um vetor de dois elementos.
+Também é o mesmo que uma matriz 2 por 1.
 
 00:04:29.770 --> 00:04:33.010
-That’s a matrix with two rows and one column.
+Que é uma matriz com duas linhas e uma coluna.
 
 00:04:33.010 --> 00:04:36.330
-A mathematician would say that a vector is an element of an
+Um matemático diria que um vetor é um elemtno de
 
 00:04:36.330 --> 00:04:41.830
-n-dimensional vector space and we'd write
-that as lower case p is an element of or belongs
+um espaço vetorial de dimensão n e que nós escrevemos
+isto como um p minúsculo é um elemento ou pertence ao
 
 00:04:41.830 --> 00:04:47.749
-to the set of real numbers to the power of
-n. Once again, in this simple case, n is equal
+conjunto dos números reais elevados à potência n.
+Novamente, neste caso mais simples, n é igual 
 
 00:04:47.749 --> 00:04:52.620
+a 2 porque é um sistema de coordenadas bidimensional.
+Nós podemos representar nosso vetor, nossa seta
 to 2 because it’s a two-dimensional coordinate
 frame. We can represent our vector, our arrow
 
 00:04:52.620 --> 00:04:57.659
-on the coordinate frame, as a mathematical
-n vector, a vector with two elements. And
+no eixo de coordenadas, como um vetor n 
+matemático, um vetor com dois elementos.
 
 00:04:57.659 --> 00:05:03.669
-so, that’s the elements x1, x2, all the
-way up to xn and we apply the transpose operator.
+E assim, estes são os elementos x1, x2, até o limite xn
+e nós aplicamos o operador matricial de transposição.
 
 00:05:03.669 --> 00:05:09.909
-Here, I’ve written the vector as a row vector.
-The elements are next to each other horizontally.
+Aqui, eu representei o vetor como um vetor coluna.
+Os elementos estão próximos um dos outros horizontalmente.
 
 00:05:09.909 --> 00:05:14.650
-When I transpose it, it becomes a column vector,
-the elements one above the other, and this
+Quando a matriz é transposta, ela torna-se um vetor coluna,
+com os seus elementos um acima do outro, e isto
 
 00:05:14.650 --> 00:05:19.319
-will become important later, when we start
-to multiply matrices and vectors together.
+se tornará importante posteriormente, quando comerçarmos
+a multiplicar matrizes e vetores juntos.
 
 00:05:19.319 --> 00:05:24.759
-We can also consider that a vector is a relative
-displacement. It talks about a motion. How
+Nós também podemos considerar que um vetor é um
+deslocamento relativo. Ele representa movimento.
 
 00:05:24.759 --> 00:05:30.729
-do we get from the origin to the point P?
-How do we get there? Well, we follow the path
+Como nós chegamos da origem até o ponto P?
+Como nós chegamos lá? Bem, nós seguimos o caminho
 
 00:05:30.729 --> 00:05:35.080
-which is this vector, this arrow. Another
-important consideration is that this vector
+que é este vetor, esta seta. 
+Outra consideração impotante é que este vetor 
 
 00:05:35.080 --> 00:05:40.339
-has a particular starting point. And so, we
-refer to this as a bound vector. So, this
+possui um local de partida particular. E assim,
+nos referimos a ele como um vetor definido.
 
 00:05:40.339 --> 00:05:45.370
-vector here shown in red is different to this
-vector here. Although they’ve got the same
+Assim, este vetor mostrado aqui em vermelho é diferente
+deste vetor aqui. Apesar de possuirem
 
 00:05:45.370 --> 00:05:49.849
-length and they’ve got the same angle, they
-are different vectors. Important to keep in
+o mesmo comprimento e o mesmo ângulo, eles são 
+vetores diferentes. É importante manter isto em mente
 
 00:05:49.849 --> 00:05:54.710
-mind that in this course, all of our vectors
-are bound. They have a particular starting
+pois durante este curso, todos os nossos vetores são definidos.
+Eles possuem um ponto de partida particular. 
 
 00:05:54.710 --> 00:05:59.659
-point. They’re defined with respect to a
-particular coordinate frame.
+Eles são definidos respeitando um
+eixo de coordenadas particular.
 
 00:05:59.659 --> 00:06:04.819
-Another way we can express this vector, lower
-case p, is in terms of unit vectors. So, let’s
+Outra maneira que podemos expressar este vetor,
+p minúsculo, é em termos de vetores unitários.
 
 00:06:04.819 --> 00:06:10.360
-define two unit vectors. These are vectors
-with a length of 1 and I denote those with
+Então, vamos definir dois vetores unitários.
+Estes são vetores de comprimento 1 e eu denoto eles
 
 00:06:10.360 --> 00:06:16.909
-a hat symbol on top. So, we have the unit
-vector x hat and the unit vector y hat. Now,
+com um símbolo de chapéu no topo. Logo, teremos
+o vetor unitário x chapéu e o vetor unitário y chapéu. 
 
 00:06:16.909 --> 00:06:24.210
-I can express my vector in terms of two components.
-One component is the distance a multiplied
+Agora, eu posso expressar meu vetor em termos de dois componentes.
+Um componente é a distância a multiplicada
 
 00:06:24.210 --> 00:06:30.830
-by the unit vector x hat, plus another vector,
-a vertical vector, which is the distance b
+pelo vetor unitário x chapéu, mais outro vetor,
+um vetor vertical, que é a distância b
 
 00:06:30.830 --> 00:06:38.400
-multiplied by the unit vector y hat. So, this
-is a component representation of a vector
+multiplicada pelo vetor unitário y chapéu. 
+Assim, este é a representação composta de um vetor
 
 00:06:38.400 --> 00:06:42.270
-and we’ll be using this notation later on
-in this lecture.
+e nós estaremos usando esta notação 
+posteriormente neste curso.
 
 00:06:42.270 --> 00:06:48.129
-Importantly, points and vectors are different
-things. A point defines a location. We can’t
+Atente-se que pontos e vetores são coisas distintas.
+Um ponto determina um local. Nós não 
 
 00:06:48.129 --> 00:06:53.759
 adicionar dois pontos juntos. Não faz sentido.
