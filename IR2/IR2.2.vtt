@@ -1,153 +1,153 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.480 --> 00:00:07.480
-Now that I have my robot and a coordinate
-frame, I can measure the position of the robot
+Agora que eu tenho meu robô e um sistema de
+coordenadas, eu posso medir a posição do robô
 
 00:00:07.480 --> 00:00:11.230
-with respect to the coordinate frame. So,
-with my tape measure, I can see that the robot
+com relação ao sistema de coordenadas. Então,
+com minha fita métrica, posso ver que o robô
 
 00:00:11.230 --> 00:00:18.960
-has got an x coordinate of 18 centimetres
-and it has got a y coordinate of 16 centimetres.
+tem uma coordenada x de 18 centímetros
+e uma coordenada y de 16 centímetros.
 
 00:00:18.960 --> 00:00:24.650
-So I can describe the position of the robot
-in terms of a vector and the elements of the
+Assim eu posso descrever a posição do robô
+em termos de um vetor e os elementos desse
 
 00:00:24.650 --> 00:00:30.039
-vector are 18 and 16 in units of centimetres.
-Now, I can introduce other objects in the
+vetor são 18 e 16 em unidades de centímetros.
+Agora, eu posso introduzir outros objetos no
 
 00:00:30.039 --> 00:00:33.640
-environment. A robot can have a little friend.
-His little friend can sit over there, and
+ambiente. Um robô pode ter um amiguinho.
+Seu amiguinho pode sentar bem ali, e
 
 00:00:33.640 --> 00:00:39.570
-I can measure the position of the little friend
-as well. And, he is sitting at about 38 centimetres
+eu posso medir também a posição do amiguinho.
+E ele está sentado a cerca de 38 centímetros
 
 00:00:39.570 --> 00:00:45.010
-in the x direction, that’s his x coordinate.
-And, the y coordinate, not so easy to measure,
+na direção x, essa é a coordenada x dele.
+E, na coordenada y, que não é tão fácil de medir,
 
 00:00:45.010 --> 00:00:50.760
-but I could say perhaps it’s 6 centimetres
-in the y direction. So, any object within
+mas eu poderia dizer que talvez são 6 centímetros
+na direção y. Logo, qualquer objeto dentro
 
 00:00:50.760 --> 00:00:56.519
-this environment I can describe their position
-in terms of two coordinates with respect to
+desse ambiente eu posso descrever sua posição
+em termos de duas coordenadas em relação a
 
 00:00:56.519 --> 00:00:59.969
-the coordinate frame that I laid down at the
-beginning.
+ao sistema de coordenadas que estabeleci no
+início.
 
 00:00:59.969 --> 00:01:03.269
-Describing the position of the robot is an
-important part of the problem, but it’s
+Descrever a posição do robô é uma
+parte importante, mas
 
 00:01:03.269 --> 00:01:07.770
-not quite enough. We need to be able to say
-something about which way this robot is facing.
+não é suficiente. Precisamos ser capazes de dizer
+algo sobre o caminho que esse robô está enfrentando.
 
 00:01:07.770 --> 00:01:12.030
-So, if this robot wanted to move towards this
-robot, we need to know whether it’s going
+Então, se esse robô quisesse se mover na direção desse
+robô, precisamos saber se irá se mover 
 
 00:01:12.030 --> 00:01:17.000
-to move forwards, to the left, to the right,
-backwards. So, this robot is very different
+para frente, para a esquerda, para a direita,
+para trás. Assim, esse robô é bem diferente
 
 00:01:17.000 --> 00:01:22.890
-to this robot, to this robot, to this robot.
-It’s important to be able to describe which
+desse robô, desse robô, e desse robô.
+É importante ser capaz de descrever qual
 
 00:01:22.890 --> 00:01:27.610
-way it’s facing. And, in order to describe
-which way it’s facing, we can use the tools
+caminho está enfrentando. E para isso
+podemos usar as ferramentas
 
 00:01:27.610 --> 00:01:32.320
-that we've already been discussing. And, what
-we can do is we can attach another coordinate
+que já discutimos. E, o que podemos fazer
+é que podemos anexar outro sistema de coordenadas
 
 00:01:32.320 --> 00:01:35.910
-frame to our robot. In this case, I’m going
-to use a green coordinate frame and I’m
+para o nosso robô. Nesse caso eu vou usar
+um sistema de coordenadas verde
 
 00:01:35.910 --> 00:01:39.560
-going to stick it on to the bottom of the
-robot with some, with some blue tack. Now
+e colar no fundo do robô com,
+com adesivo.
 
 00:01:39.560 --> 00:01:44.890
-with the robots here, we can describe its
-orientation - the way it’s facing in the
+com os robôs aqui, podemos descrever sua
+orientação - o caminho que é enfrentado no
 
 00:01:44.890 --> 00:01:52.350
-world - by the orientation of this coordinate
-frame with respect to this coordinate frame.
+mundo - pela orientação desse sistema de coordenadas
+em relação a esse sistema de coordenadas.
 
 00:01:52.350 --> 00:01:58.100
-So, we can describe then the position of this
-new coordinate frame that we've attached to
+Então, podemos descrever assim a posição desse
+novo sistema de coordenadas que anexamos ao
 
 00:01:58.100 --> 00:02:06.290
-the robot in terms of a motion. We do a motion
-from the original coordinate frame, our reference
+robô em termos de movimento. Fazemos um movimento
+do sistema de coordenadas original, o nosso sistema de
 
 00:02:06.290 --> 00:02:10.729
-coordinate frame, sometimes called the world
-coordinate frame, that we move the origin
+coordenadas, as vezes chamado de sistema de 
+coordenadas universal, e movemos a origem
 
 00:02:10.729 --> 00:02:17.290
-of this frame to here and then we rotate.
-We can do the same thing for the little robot.
+desse sistema para aqui e então rotacionamos.
+Podemos fazer a mesma coisa para o robô pequeno.
 
 00:02:17.290 --> 00:02:21.469
-We can describe its pose with respect to the
-world coordinate frame. To do that, I’m
+Podemos descrever sua posição com relação ao
+sistema de coordenadas universal. Para fazer isso,
 
 00:02:21.469 --> 00:02:27.400
-going to attach a blue coordinate frame to
-this little robot, and, I’m going to orient
+Eu vou anexar um sistema de coordenadas azul à
+esse pequeno robô, e irei orientá-lo
 
 00:02:27.400 --> 00:02:31.859
-it so that the x-axis is pointing forward.
-And this is a pretty common convention for
+para que o eixo x esteja apontando para frente.
+E essa é uma convenção bem comum para
 
 00:02:31.859 --> 00:02:39.039
-airplane, ships, cars, robots. We make the
-x-axis the direction of normal motion for the machine.
+aviões, navios, carros, robôs. Fazemos o
+eixo x a direção do movimento normal da máquina.
 
 00:02:40.360 --> 00:02:42.760
-Now, we have a very simple representation
+Agora, temos uma representação bem simples
 
 00:02:42.769 --> 00:02:48.420
-of the original environment where it’s described
-now entirely in terms of a number of coordinate
+do ambiente original onde é agora descrito
+inteiramente em termos de números de sistema
 
 00:02:48.420 --> 00:02:52.930
-frames which represent the pose of the important
-entities in that environment with respect
+de coordenadas, que representa a posição das entidades
+importantes nesse ambiente em relação
 
 00:02:52.930 --> 00:02:58.349
-to the world coordinate frame. Now, just as
-we did for the big robot, we can consider
+ao sistema de coordenadas universal. Agora, assim
+como fizemos para o robô grande, podemos considerar
 
 00:02:58.349 --> 00:03:03.569
-the pose of the little robot in terms of a
-motion. So, imagine that we move the coordinate
+a posição do robô pequeno em termos de movimento.
+Então, imagine que movimentamos o sistema
 
 00:03:03.569 --> 00:03:09.489
-frame from where it lies on top of the reference
-coordinate frame. We make a translational
+de coordenadas de onde se encontra em cima da
+referência do sistema de coordenadas. Fazemos um movimento
 
 00:03:09.489 --> 00:03:15.099
-motion, move it horizontally, we move it vertically,
-and then we rotate it and rotate it quite
+de translação, movemos horizontalmente, verticalmente,
+e então rotacionamos e rotacionamos
 
 00:03:15.099 --> 00:03:19.530
 um pouco até que ele esteja sobre aquele sistema
