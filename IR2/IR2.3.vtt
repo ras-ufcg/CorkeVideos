@@ -3,86 +3,86 @@ Kind: captions
 Language: en-GB
 
 00:00:03.800 --> 00:00:06.700
-Let's have a look at a slightly more realistic example.
+Vamos dar uma olhada em um exemplo um pouco mais realístico.
 
 00:00:07.600 --> 00:00:10.400
-Here I have a 2-dimensional car and
+Eu tenho aqui um carro de duas dimensões e
 
 00:00:10.410 --> 00:00:15.480
-a 2-dimensional coordinate frame. I've labeled
-this coordinate frame W and that stands for
+um sistema de coordenadas de duas dimensões. Eu chamei
+esse sistema de cordenadas W, e isso significa
 
 00:00:15.480 --> 00:00:21.589
-the world coordinate frame and this is quite
-a common thing in robotics to have one reference
+o sistema de coordenadas universal e isso é algo
+bastante comum em robótica, ter um sistema de
 
 00:00:21.589 --> 00:00:27.230
-frame that all other reference frames are
-described with respect to. And to indicate
+referência onde todas as outras coordenadas são
+descritas em relação a ele. E para indicar
 
 00:00:27.230 --> 00:00:33.260
-that very, very clearly, I've labeled the
-x and y axis with the subscript W, so it's
+isso bem, bem claramente, eu marquei os
+eixos x e y com o subscrito W, de forma que está
 
 00:00:33.260 --> 00:00:40.170
-very, very clear that this is the x-axis of
-the W frame and the y-axis of the W frame.
+muito, muito claro que esse é o eixo X do
+sistema de coordenadas W e o eixo y do sistema de coordenadas W.
 
 00:00:40.170 --> 00:00:45.309
-Now let's indicate some points of interest
-in this car, the left seat: the right seat,
+Agora vamos indicar alguns pontos de interesse
+nesse carro, o banco esquerdo: o banco direito,
 
 00:00:45.309 --> 00:00:50.210
-one of the mirrors, door handles, and perhaps
-where we refuel it. I can describe each of
+um dos espelhos, alças das portas, e talvez
+onde nós reabastecemos ele. Eu posso descrever cada um
 
 00:00:50.210 --> 00:00:55.489
-these points by a vector, with respect to
-the world coordinate frame.
+desses pontos com um vetor, com relação ao
+sistema de coordenadas universal.
 
 00:00:55.489 --> 00:01:00.730
-Now let's imagine that a car has moved, now
-it's over here, I could now describe all these
+Vaos agora imaginar que um carro se moveu, e agora
+está aqui. Eu poderia agora descrever todos esses 
 
 00:01:00.730 --> 00:01:06.900
-points again in terms of vectors with respect
-to the origin of the world coordinate frame.
+pontos novamente em termos de vetores com relação
+a origem do sistema de coordenadas universal.
 
 00:01:06.900 --> 00:01:10.790
-But it's a little bit tedious because the
-points haven't actually moved with respect
+Mas isso é um pouco entendiante porque os
+pontos na verdade não se moveram com relação
 
 00:01:10.790 --> 00:01:15.580
-to the car, the whole car has moved and now
-I have to redefine all the vectors again.
+ao carro, e o carro inteiro se moveu e agora
+eu tenho que redefinir todos os vetores novamente.
 
 00:01:15.580 --> 00:01:20.160
-Perhaps, there's a better way. And there it
-is, we are going to use the coordinate frame
+Talvez, tenha uma maneira melhor. E ai está,
+nós vamos usar a ideia do sistema de coordenadas
 
 00:01:20.160 --> 00:01:24.120
-idea again and we are going to create a new
-coordinate frame and I'm going to attach it
+uiversal novamente e nós vamos criar um novo
+sistema de coordenadas e eu vou anexá-lo 
 
 00:01:24.120 --> 00:01:30.120
-to the car. I labeled this frame C - C for
-car. And just to be clear, I labeled the
+ao carro. Eu chamei esse sistema de C - C de 
+carro. E só para ser claro, eu chamei os
 
 00:01:30.120 --> 00:01:37.110
-axis XC and YC: X and Y axis are the coordinate
-frame that are attached to the car. Now it's
+Eixos XC e YC: Os eixos X e Y são o sistema de
+coordenadas que estão anexados ao carro. Agora é
 
 00:01:37.110 --> 00:01:42.710
-a simple matter to describe all these points
-of interest on the car in terms of vectors
+apenas uma questão de descrever todos esses pontos
+de interesse do carro em termo de vetores
 
 00:01:42.710 --> 00:01:49.030
-with respect to the car's coordinate frame.
-Now if I moved the car, the vectors have changed
+com relação ao sistema de coordenadas do carro.
+Agora se eu movi o carro, os vetores mudaram
 
 00:01:49.030 --> 00:01:54.270
-with respect to the world but they haven't
-changed with respect to the car's coordinate frame.
+com respeito ao universal mas eles não
+mudaram com relação ao sistema de coordenadas do carro.
 
 00:01:54.850 --> 00:02:00.930
 Let's simplify things a bit and introduce
