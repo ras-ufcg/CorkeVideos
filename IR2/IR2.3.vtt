@@ -85,92 +85,92 @@ com respeito ao universal mas eles não
 mudaram com relação ao sistema de coordenadas do carro.
 
 00:01:54.850 --> 00:02:00.930
-Let's simplify things a bit and introduce
-a pose here. So introduce another one of these
+Vamos simplificar um pouco e introduzir
+uma pose aqui. Então introduza outra dessas
 
 00:02:00.930 --> 00:02:05.880
-fat arrows which represents a pose, and this
-is the pose from the world coordinate frame
+flechas grossas que representam a pose, e essa
+é a pose a partir do sistema de coordenadas universal
 
 00:02:05.880 --> 00:02:12.410
-to the car's coordinate frame so it's W ksi Z.
-Now let's look at just a single point, one
+para o sistema de coordenadas do carro, então é W ksi Z.
+Agora vamos observar um único ponto, um
 
 00:02:12.410 --> 00:02:16.690
-of the points on the door of the car. I'm
-going to label that point d and we created
+dos pontos na porta do carro. Eu vou
+chamar aquele ponto d e nós criamos um
 
 00:02:16.690 --> 00:02:23.560
-vector from frame C to this point d, and we
-denote that in the way we've already discussed
+vetor do sistema C para esse ponto d, e nós
+denominamos isso da maneira que já discutimos
 
 00:02:23.560 --> 00:02:29.020
-we use a symbol P to denote that we're talking
-about a vector. C is the reference frame so
+nós usamos um símbolo P  para denominar que estamos falando
+de um vetor. C é o sistema de referência, então
 
 00:02:29.020 --> 00:02:34.850
-this is a vector with respect to frame C,
-so it begins at the origin of frame C and
+isso é um vetor com respeito ao sistema C,
+então ele começa na origem do sistema C e
 
 00:02:34.850 --> 00:02:41.610
-it goes to the point d. Now let's consider
-that I want to know what is this vector: the
+vai até o ponto d. Agora vamos considerar
+que eu quero saber o que é esse vetor: O
 
 00:02:41.610 --> 00:02:46.830
-point D with respect to the world coordinate
-frame. In some sort of simplistic way, what
+ponto D com relação ao sistema de coordenadas
+universal. De um jeito meio simplistico, o que
 
 00:02:46.830 --> 00:02:52.100
-I want to do is to add these 2 arrows. I want
-to move along here, and I want to move along
+Eu quero fazer é somar essas duas flechas. Eu quero
+me mover por aqui, e eu quero me mover
 
 00:02:52.100 --> 00:02:59.370
-here. But it's not quite that simple, we can't
-add a pose and a vector. We can't add a fat
+por aqui. Mas não é tão simples assim, nós não podemos
+somar uma pose com um vetor. Nós não podemos somar uma flecha
 
 00:02:59.370 --> 00:03:03.990
-arrow to a thin arrow. Poses and vectors are
-different mathematical objects so we need
+grossa com uma flecha fina. Poses e vetores são
+objetos matemáticos diferentes, então nós precisamos
 
 00:03:03.990 --> 00:03:06.030
-to do this a little bit carefully.
+fazer isso com um pouco de cuidado.
 
 00:03:06.030 --> 00:03:11.900
-The way we do it is to introduce a new operator,
-and it's the dot. In this formalism, we have
+A maneira que fazemos isso é introduzir um novo operador,
+e é o operador ponto. Nesse formalismo, nós temos
 
 00:03:11.900 --> 00:03:17.600
-a pose and it operates on a vector in order
-to transform it to a different coordinate
+uma pose e ele opera em um vetor de forma a
+transformar o vetor em um sistema de coordenadas
 
 00:03:17.600 --> 00:03:23.180
-frame. That's what this operator dot does:
-it transforms this vector which describes
+diferente. Isso é o que o perador ponto faz:
+ele transforma esse vetor, que descreve
 
 00:03:23.180 --> 00:03:29.110
-the point d with respect to the coordinate
-frame C, to a vector that describes the point
+o ponto d em relação ao sistema de coordenadas
+C, em um vetor que descreve o ponto
 
 00:03:29.110 --> 00:03:34.709
-d with respect to the coordinate frame W.
-It performs a transformation between coordinate
+d com relação ao sistema de coordenadas W.
+Ele realiza uma transformação entre sistemas
 
 00:03:34.709 --> 00:03:39.819
-frames. All of this is rather abstract. I’ve
-introduced this operator dot, but I haven't
+de coordenadas. Tudo isso é um pouco abstrato. Eu
+introduzi esse operador ponto, mas eu não
 
 00:03:39.819 --> 00:03:45.130
-told you actually what it is - how would you
-code it? And, we introduced this abstract
+disse a você o que ele realmente é - como você poderia
+codificá-lo? E, nós intruduzimos essa coisa abstrata
 
 00:03:45.130 --> 00:03:50.170
-pose thing described by the Greek letter ksi
-- and I haven't said exactly what that is
+de pose descrita pela letra Grega ksi
+- e eu não disse exatamente o que ela é
 
 00:03:50.170 --> 00:03:54.830
-or how you could code that or implement that.
-These are things would get to in the following
+ou como você poderia implementá-la. Essas são coisas 
+que eu gostaria de discutir nas próximas
 
 00:03:54.830 --> 00:03:56.370
-sections in this lecture.
+seções dessa aula.
 
