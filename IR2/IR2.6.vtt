@@ -168,158 +168,158 @@ que seu determinante é sempre igual a 1.
 E isso significa que, se eu multiplicar qualquer vetor
 
 00:04:13.060 --> 00:04:17.870
-by this matrix, the length of the vector is
-unchanged. That’s an important property
+dessa matriz, o comprimento do vetor não é
+alterado. Isso é uma propriedade importante
 
 00:04:17.870 --> 00:04:22.620
-of a rotation matrix. When I rotate a vector
-from one coordinate frame to another, its
+de uma matriz de rotação. Quando eu rotaciono
+um vetor de um eixo de coordenadas para outro,
 
 00:04:22.620 --> 00:04:28.060
-length is not changed. A mathematician would
-say that a rotation matrix like this belongs
+seu comprimento não é alterado. Um matemático
+diria que uma matriz de rotação como essa é do
 
 00:04:28.060 --> 00:04:33.840
-to the special orthogonal group of dimension
-two. And, symbolically, we’d write that
+grupo ortogonal especial de dimensão dois. 
+E, simbolicamente, escreveríamos que
 
 00:04:33.840 --> 00:04:41.180
-as R is an element of - belongs to - the set
-SO(2), special orthogonal group of dimension
+como R é um elemento - pertencente ao - conjunto
+SO(2), grupo ortogonal especial de dimensão
 
 00:04:41.180 --> 00:04:47.200
-2. Here’s the expression from above. And,
-if I take the rotation matrix across the other
+2. Aqui está a expressão acima. E, se eu pegar
+a matriz de rotação do outro lado
 
 00:04:47.200 --> 00:04:52.330
-side of the equal sign, I can write this.
-This indicates that if I want to rotate a
+do sinal de igualdade, eu posso escrever isso.
+Isso significa que se eu quero rotacionar o 
 
 00:04:52.330 --> 00:04:58.759
-vector from coordinate frame A into coordinate
-frame B, I use the inverse of the rotation
+vetor do eixo de coordenadas A para o eixo de
+coordenadas B, eu uso o inverso  da matriz de
 
 00:04:58.759 --> 00:05:05.700
-matrix from coordinate frame A to coordinate
-frame B. And, remember, that the inverse of
+rotação do eixo de coordenadas A para o eixo
+de coordenadas B. Lembre-se que o inverso
 
 00:05:05.700 --> 00:05:11.419
-a rotation matrix is simply its transpose.
-The labels A and B in this first expression
+da matriz de rotação é simplesmente sua transposta.
+As legendas A e B na primeira expressão
 
 00:05:11.419 --> 00:05:16.270
-are completely general and it’s completely
-proper for me to swap the A and the B and
+são completamente gerais e é completamente
+apropriado para mim trocar o A e o B e
 
 00:05:16.270 --> 00:05:21.340
-now I can write this. These two equations
-are equivalent. So, now I can write this and
+agora eu posso escrever isso. Essas duas equações são
+equivalentes. Então agora eu posso escrever isso e
 
 00:05:21.340 --> 00:05:26.479
-this is really important. What it says is
-the rotation matrix from coordinate frame
+isso é realmente importante. O que diz que
+a matriz de rotação do eixo de coordenadas
 
 00:05:26.479 --> 00:05:31.610
-B to coordinate frame A is the inverse of
-the rotation matrix from coordinate frame
+B para o eixo de coordenadas A é o inverso
+da matriz de rotação do eixo de coordenadas
 
 00:05:31.610 --> 00:05:37.960
-A to coordinate frame B. Let’s have a look
-at some concrete examples of this in MATLAB.
+A para o eixo de coodenadas B. Vamos dar uma 
+olhada em alguns exemplos concretos disso no MATLAB.
 
 00:05:37.960 --> 00:05:43.800
-First of all, I’m going to create a two-dimensional
-rotation matrix using the Toolbox command
+Primeiramente, vou criar uma matriz de rotação
+bidimensional usando o comando rot2 da Toolbox
 
 00:05:43.800 --> 00:05:49.819
-rot2 for rotation matrix in two dimensions.
-And, I’m going to ask for a rotation angle
+para rotacionar a matriz em duas dimensões. 
+E vou pedir um ângulo de rotação
 
 00:05:49.819 --> 00:05:55.699
-of 0 radians. And, here is the 2 x 2 rotation
-matrix and it is the identity matrix. It’s
+de 0 radianos. E aqui está a matriz de rotação
+2x2 e essa é a matriz identidade. Existe
 
 00:05:55.699 --> 00:06:01.289
-got 1s on the diagonal and 0s on the off diagonal.
-I can ask for a rotation that corresponds
+1s na diagonal e 0s na diagonal desligada.
+Eu posso pedir uma rotação que corresponda
 
 00:06:01.289 --> 00:06:06.550
-to an angle say of nought point 2 radians
-and this is that rotation matrix. I can also
+a um ângulo de 0.2 radianos e essa é 
+uma matriz de rotação. Eu também posso
 
 00:06:06.550 --> 00:06:13.020
-specify the angle in degrees. So, for instance,
-I could ask for the angle R of 30 degrees
+especificar o ângulo em graus. Por exemplo, 
+eu poderia pedir o ângulo R de 30 graus
 
 00:06:13.020 --> 00:06:17.490
-and this is the corresponding rotation matrix.
-What I’m going to do is to put that result
+e essa é a matriz de rotação correspondente.
+O que vou fazer é colocar esse resultado
 
 00:06:17.490 --> 00:06:24.270
-in to the workspace variable R and here is
-the rotation matrix again for a rotation of
+na variável R da área de trabalho e aqui
+está a matriz de rotação para uma nova rotação
 
 00:06:24.270 --> 00:06:29.560
-positive 30 degrees. Now, we talked a moment
-ago about this rotation matrix having a number
+positiva de 30 graus. Agora, como dito sobre
+essa matriz de rotação ter uma variedade de
 
 00:06:29.560 --> 00:06:33.979
-of properties, and one of the properties was
-that the columns are orthogonal. So, I’m
+propriedades, e uma dessas propriedades era 
+que as colunas eram ortogonais. Então eu
 
 00:06:33.979 --> 00:06:39.479
-going to create a variable which represents
-the first column of a matrix, another variable
+vou criar uma variável que representa a 
+primeira coluna da matriz, uma outra variável
 
 00:06:39.479 --> 00:06:44.400
-which corresponds to the second column of
-the matrix. And, if I look at the dot product
+que corresponde à segunda coluna da matriz.
+E, se eu olhar para o produto escalar
 
 00:06:44.400 --> 00:06:49.110
-of those two vectors, we can see that it is
-equal to 0. Another property that we mentioned
+desses dois vetores, nós podemos ver que ele 
+é iqual à 0. Outra propriedade que mencionamos
 
 00:06:49.110 --> 00:06:54.490
-is that the determinant of the matrix is equal
-to positive 1 and we can quite easily verify
+é que o determinante da matriz é igual à 1
+positivo e nós podemos facilmente verificar
 
 00:06:54.490 --> 00:06:58.870
-that. Another property we talked about is
-that the inverse of the matrix is the same
+isso. Outra propriedade que falamos é que
+o inverso da matriz é o mesmo
 
 00:06:58.870 --> 00:07:03.660
-as its transpose. So, the inverse of the matrix
-is computed using the MATLAB built in function
+que a sua transposta. Assim, o inverso da matriz
+é calculado usando a função incorporada ao MATLAB
 
 00:07:03.660 --> 00:07:08.770
-inv, and the transpose is computed using the
-quote operator just like that and we can see
+chamada inv, e a transposta é calculada usando
+o operador quote dessa maneira e podemos ver
 
 00:07:08.770 --> 00:07:12.629
-quite clearly that the inverse is equal to
-the transpose.
+claramente que o inverso é igual à 
+transposta.
 
 00:07:12.629 --> 00:07:18.680
-Finally, we can visualize this rotation matrix
-as a rotated coordinate frame. To do that,
+Finalmente, podemos visualizar a rotação da matriz
+como um eixo de coordenadas que foi girado. Para isso,
 
 00:07:18.680 --> 00:07:23.760
-I use the Toolbox function, trplot2. It’s
-a short for transform plot in two dimensions.
+eu uso a função Toolbox, trplot2. É uma abreviação 
+da plotagem de transformação em duas dimensões.
 
 00:07:23.760 --> 00:07:28.950
-I pass in the rotation matrix that I’m interested
-in and there is a representation of the coordinate
+Passo na matriz de rotação que me interessa e há
+uma representação do eixo de coordenadas. 
 
 00:07:28.950 --> 00:07:35.830
-frame. Now, it looks a little bit odd because
-I need to set the axis scaling to equal and
+Agora, isso parece um pouco estranho, porque preciso 
+definir o dimensionamento do eixo para igual
 
 00:07:35.830 --> 00:07:41.550
-here we see a right angled coordinate frame
-shown here in blue and we can see that it
+e aqui vemos um eixo de coordenadas com ângulo
+reto, exibido aqui em azul e podemos ver que ele
 
 00:07:41.550 --> 00:07:44.669
-is rotated with respect to the world coordinate
-frame.
+foi rotacionado em relação ao eixo de coordenadas
+global.
 
