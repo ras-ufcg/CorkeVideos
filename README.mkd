@@ -33,7 +33,8 @@ The "Academy Translate" aims to bring Robotics educational material to portugues
   * A person that is organized and knows how to deal with people;
   * A material that needs to be translated;
   
-* Philosophy
+* Philosophy:
+
 Both of the projects that the "Academy Translate" had been done without a deadline to finish the project, 
 but all the tasks that we had have deadlines so we can organize better the flow of work.
 
