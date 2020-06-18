@@ -37,3 +37,7 @@ The "Academy Translate" aims to bring Robotics educational material to portugues
 
 What do you need most to carry a project like this is a discipline of work, it's an "ants job" always do a small work, after a year you will have a great amount of work done. Both of the projects that the "Academy Translate" had been done without a deadline to finish the project, but all the tasks that we had have deadlines so we can organize better the flow of work. 
 
+* Deadlines and ammount of work:
+
+About the Corke Videos from the Academy Robotics every two weeks the people from the project have 120-170 lines of video, we are on the third assignment of the project and it may increase, but it depends on how much time the volunteers are available.
+
