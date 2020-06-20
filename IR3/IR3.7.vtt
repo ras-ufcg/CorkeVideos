@@ -3,120 +3,120 @@ Kind: captions
 Language: en
 
 00:00:03.610 --> 00:00:09.040
-Now we're going to talk about one of the more
-perplexing elements of rotations in 3D.
+Agora vamos falar sobre um dos elementos mais 
+desconcertantes em relação a rotações 3D.
 
 00:00:09.040 --> 00:00:12.710
-I've got three coordinate frames here and
-they're all initially parallel to each other.
+Aqui eu tenho três quadros de coordenadar e
+são todos inicialmente paralelos um ao outro.
 
 00:00:12.710 --> 00:00:15.669
-The x-axes, the y-axes and the z-axes are
-all aligned.
+Os eixos x, y e z são 
+todos alinhados.
 
 00:00:15.669 --> 00:00:20.800
-I'm going to pick up the first one, the red
-one, and I'm going to rotate it by +90 degrees
+Vou pegar primeiro o vermelho
+e vou rotaciona-lo em +90 graus
 
 00:00:20.800 --> 00:00:22.500
-around its x-axis.
+em torno do eixo x.
 
 00:00:22.500 --> 00:00:26.810
-Positive is in this direction so after rotating
-it by 90 degrees in x-axis, it looks like
+O positivo está nessa direção, então, depois
+de girá-lo 90 graus no eixo x fica
 
 00:00:26.810 --> 00:00:27.810
-this.
+assim.
 
 00:00:27.810 --> 00:00:31.150
-And now I'm going to rotate it by +90 degrees
-around the y-axis.
+E agora eu vou rotacionar em +90 graus
+ao redor do eixo y.
 
 00:00:31.150 --> 00:00:33.910
-So this frame is going to end up looking like
-this.
+Então este quadro vai acabar ficando
+assim.
 
 00:00:33.910 --> 00:00:35.470
-This is its final orientation.
+Essa é sua orientação final.
 
 00:00:35.470 --> 00:00:37.860
-I'm just going to put it down there.
+Eu só vou colocar isso lá embaixo.
 
 00:00:37.860 --> 00:00:42.579
-I'm going to pick up the blue frame and I'm
-going to do the rotation within the opposite
+Vou pegar o quadro azul e
+farei a rotação na ordem 
 
 00:00:42.579 --> 00:00:43.710
-order.
+oposta.
 
 00:00:43.710 --> 00:00:48.070
-First of all, I'm going to rotate it by +90
-degrees around the y-axis.
+Primeiramente, eu vou rotacionar em +90 
+graus ao redor do eixo y.
 
 00:00:48.070 --> 00:00:49.250
-That's the positive direction.
+Essa é a direção positiva.
 
 00:00:49.250 --> 00:00:51.530
-So it's initially going to look like this.
+Portanto, inicialmente ficará assim.
 
 00:00:51.530 --> 00:00:55.350
-And now I'm going to rotate it by +90 degrees
-around the x-axis.
+E agora vou girar em +90 graus 
+ao redor do eixo x.
 
 00:00:55.350 --> 00:00:59.430
-The x-axis is now pointing downwards, that's
-the positive rotation direction.
+O eixo x agora está apontando para baixo,
+essa é a direção positiva de rotação.
 
 00:00:59.430 --> 00:01:02.120
-So this is what the final orientation will
-look like.
+Então é assim que a orientação
+final será.
 
 00:01:02.120 --> 00:01:06.840
-And we can see that these two frames have gotten
-very, very different orientations.
+E nós podemos ver que esses dois quadros receberam
+orientações muito diferentes.
 
 00:01:06.840 --> 00:01:12.000
-So when it comes to doing rotations in three
-dimensions, the order in which you do them
+Então, quando se trata de fazer rotações em três
+dimensões, a ordem que você as faz 
 
 00:01:12.000 --> 00:01:14.430
-is critically important.
+é extremamente importante.
 
 00:01:14.430 --> 00:01:16.330
-Rotations are not to commutative.
+Rotações não são comutativas.
 
 00:01:16.330 --> 00:01:21.490
-Let's look at the non-commutative nature of
-rotation matrix multiplication.
+Vejamos a natureza não comutativa da 
+multiplicação da matriz de rotação.
 
 00:01:21.490 --> 00:01:26.340
-I'm going to have a rotation of 90 degrees
-around the x-axis.
+Vou ter uma rotação de 90 graus 
+ao redor do eixo x.
 
 00:01:26.340 --> 00:01:31.390
-And then I'm going to rotate by 90 degrees
-around the y-axis.
+E então eu vou girar 90 graus
+em torno do eixo y.
 
 00:01:31.390 --> 00:01:34.610
-And the resulting rotation matrix looks like
-this.
+E a matriz de rotação resultante se parece
+com isso.
 
 00:01:34.610 --> 00:01:40.430
-If I do this in the opposite order, I'll rotate
-around the y-axis first, and then I'll rotate
+Se eu fizer isso na ordem contrária, rotacionar
+ao redor o eixo y primeiro, e então rotacionar
 
 00:01:40.430 --> 00:01:43.880
-around the x-axis, by 90 degrees in each case.
+ao redor do eixo x, 90 graus em cada caso.
 
 00:01:43.880 --> 00:01:47.540
-I end up with a resulting rotation matrix
-which looks like this.
+Eu acabo tendo uma matriz de rotação resultante
+que se parece com isso.
 
 00:01:47.540 --> 00:01:52.200
-And we can see that these two matrices are
-quite different.
+E nós podemos ver que essas duas matrizes
+são bem diferentes.
 
 00:01:52.200 --> 00:01:55.770
-When you're multiplying rotation matrices,
-the order is critically important.
+Quando você multiplica matrizes de rotação
+a ordem é extremamente importante.
 
