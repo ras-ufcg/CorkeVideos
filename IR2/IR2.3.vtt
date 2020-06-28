@@ -3,174 +3,174 @@ Kind: captions
 Language: en-GB
 
 00:00:03.800 --> 00:00:06.700
-Let's have a look at a slightly more realistic example.
+Vamos dar uma olhada em um exemplo um pouco mais realístico.
 
 00:00:07.600 --> 00:00:10.400
-Here I have a 2-dimensional car and
+Eu tenho aqui um carro de duas dimensões e
 
 00:00:10.410 --> 00:00:15.480
-a 2-dimensional coordinate frame. I've labeled
-this coordinate frame W and that stands for
+um sistema de coordenadas de duas dimensões. Eu chamei
+esse sistema de cordenadas W, e isso significa
 
 00:00:15.480 --> 00:00:21.589
-the world coordinate frame and this is quite
-a common thing in robotics to have one reference
+o sistema de coordenadas universal e isso é algo
+bastante comum em robótica, ter um sistema de
 
 00:00:21.589 --> 00:00:27.230
-frame that all other reference frames are
-described with respect to. And to indicate
+referência onde todas as outras coordenadas são
+descritas em relação a ele. E para indicar
 
 00:00:27.230 --> 00:00:33.260
-that very, very clearly, I've labeled the
-x and y axis with the subscript W, so it's
+isso bem, bem claramente, eu marquei os
+eixos x e y com o subscrito W, de forma que está
 
 00:00:33.260 --> 00:00:40.170
-very, very clear that this is the x-axis of
-the W frame and the y-axis of the W frame.
+muito, muito claro que esse é o eixo X do
+sistema de coordenadas W e o eixo y do sistema de coordenadas W.
 
 00:00:40.170 --> 00:00:45.309
-Now let's indicate some points of interest
-in this car, the left seat: the right seat,
+Agora vamos indicar alguns pontos de interesse
+nesse carro, o banco esquerdo: o banco direito,
 
 00:00:45.309 --> 00:00:50.210
-one of the mirrors, door handles, and perhaps
-where we refuel it. I can describe each of
+um dos espelhos, alças das portas, e talvez
+onde nós reabastecemos ele. Eu posso descrever cada um
 
 00:00:50.210 --> 00:00:55.489
-these points by a vector, with respect to
-the world coordinate frame.
+desses pontos com um vetor, com relação ao
+sistema de coordenadas universal.
 
 00:00:55.489 --> 00:01:00.730
-Now let's imagine that a car has moved, now
-it's over here, I could now describe all these
+Vaos agora imaginar que um carro se moveu, e agora
+está aqui. Eu poderia agora descrever todos esses 
 
 00:01:00.730 --> 00:01:06.900
-points again in terms of vectors with respect
-to the origin of the world coordinate frame.
+pontos novamente em termos de vetores com relação
+a origem do sistema de coordenadas universal.
 
 00:01:06.900 --> 00:01:10.790
-But it's a little bit tedious because the
-points haven't actually moved with respect
+Mas isso é um pouco entendiante porque os
+pontos na verdade não se moveram com relação
 
 00:01:10.790 --> 00:01:15.580
-to the car, the whole car has moved and now
-I have to redefine all the vectors again.
+ao carro, e o carro inteiro se moveu e agora
+eu tenho que redefinir todos os vetores novamente.
 
 00:01:15.580 --> 00:01:20.160
-Perhaps, there's a better way. And there it
-is, we are going to use the coordinate frame
+Talvez, tenha uma maneira melhor. E ai está,
+nós vamos usar a ideia do sistema de coordenadas
 
 00:01:20.160 --> 00:01:24.120
-idea again and we are going to create a new
-coordinate frame and I'm going to attach it
+uiversal novamente e nós vamos criar um novo
+sistema de coordenadas e eu vou anexá-lo 
 
 00:01:24.120 --> 00:01:30.120
-to the car. I labeled this frame C - C for
-car. And just to be clear, I labeled the
+ao carro. Eu chamei esse sistema de C - C de 
+carro. E só para ser claro, eu chamei os
 
 00:01:30.120 --> 00:01:37.110
-axis XC and YC: X and Y axis are the coordinate
-frame that are attached to the car. Now it's
+Eixos XC e YC: Os eixos X e Y são o sistema de
+coordenadas que estão anexados ao carro. Agora é
 
 00:01:37.110 --> 00:01:42.710
-a simple matter to describe all these points
-of interest on the car in terms of vectors
+apenas uma questão de descrever todos esses pontos
+de interesse do carro em termo de vetores
 
 00:01:42.710 --> 00:01:49.030
-with respect to the car's coordinate frame.
-Now if I moved the car, the vectors have changed
+com relação ao sistema de coordenadas do carro.
+Agora se eu movi o carro, os vetores mudaram
 
 00:01:49.030 --> 00:01:54.270
-with respect to the world but they haven't
-changed with respect to the car's coordinate frame.
+com respeito ao universal mas eles não
+mudaram com relação ao sistema de coordenadas do carro.
 
 00:01:54.850 --> 00:02:00.930
-Let's simplify things a bit and introduce
-a pose here. So introduce another one of these
+Vamos simplificar um pouco e introduzir
+uma pose aqui. Então introduza outra dessas
 
 00:02:00.930 --> 00:02:05.880
-fat arrows which represents a pose, and this
-is the pose from the world coordinate frame
+flechas grossas que representam a pose, e essa
+é a pose a partir do sistema de coordenadas universal
 
 00:02:05.880 --> 00:02:12.410
-to the car's coordinate frame so it's W ksi Z.
-Now let's look at just a single point, one
+para o sistema de coordenadas do carro, então é W ksi Z.
+Agora vamos observar um único ponto, um
 
 00:02:12.410 --> 00:02:16.690
-of the points on the door of the car. I'm
-going to label that point d and we created
+dos pontos na porta do carro. Eu vou
+chamar aquele ponto d e nós criamos um
 
 00:02:16.690 --> 00:02:23.560
-vector from frame C to this point d, and we
-denote that in the way we've already discussed
+vetor do sistema C para esse ponto d, e nós
+denominamos isso da maneira que já discutimos
 
 00:02:23.560 --> 00:02:29.020
-we use a symbol P to denote that we're talking
-about a vector. C is the reference frame so
+nós usamos um símbolo P  para denominar que estamos falando
+de um vetor. C é o sistema de referência, então
 
 00:02:29.020 --> 00:02:34.850
-this is a vector with respect to frame C,
-so it begins at the origin of frame C and
+isso é um vetor com respeito ao sistema C,
+então ele começa na origem do sistema C e
 
 00:02:34.850 --> 00:02:41.610
-it goes to the point d. Now let's consider
-that I want to know what is this vector: the
+vai até o ponto d. Agora vamos considerar
+que eu quero saber o que é esse vetor: O
 
 00:02:41.610 --> 00:02:46.830
-point D with respect to the world coordinate
-frame. In some sort of simplistic way, what
+ponto D com relação ao sistema de coordenadas
+universal. De um jeito meio simplistico, o que
 
 00:02:46.830 --> 00:02:52.100
-I want to do is to add these 2 arrows. I want
-to move along here, and I want to move along
+Eu quero fazer é somar essas duas flechas. Eu quero
+me mover por aqui, e eu quero me mover
 
 00:02:52.100 --> 00:02:59.370
-here. But it's not quite that simple, we can't
-add a pose and a vector. We can't add a fat
+por aqui. Mas não é tão simples assim, nós não podemos
+somar uma pose com um vetor. Nós não podemos somar uma flecha
 
 00:02:59.370 --> 00:03:03.990
-arrow to a thin arrow. Poses and vectors are
-different mathematical objects so we need
+grossa com uma flecha fina. Poses e vetores são
+objetos matemáticos diferentes, então nós precisamos
 
 00:03:03.990 --> 00:03:06.030
-to do this a little bit carefully.
+fazer isso com um pouco de cuidado.
 
 00:03:06.030 --> 00:03:11.900
-The way we do it is to introduce a new operator,
-and it's the dot. In this formalism, we have
+A maneira que fazemos isso é introduzir um novo operador,
+e é o operador ponto. Nesse formalismo, nós temos
 
 00:03:11.900 --> 00:03:17.600
-a pose and it operates on a vector in order
-to transform it to a different coordinate
+uma pose e ele opera em um vetor de forma a
+transformar o vetor em um sistema de coordenadas
 
 00:03:17.600 --> 00:03:23.180
-frame. That's what this operator dot does:
-it transforms this vector which describes
+diferente. Isso é o que o perador ponto faz:
+ele transforma esse vetor, que descreve
 
 00:03:23.180 --> 00:03:29.110
-the point d with respect to the coordinate
-frame C, to a vector that describes the point
+o ponto d em relação ao sistema de coordenadas
+C, em um vetor que descreve o ponto
 
 00:03:29.110 --> 00:03:34.709
-d with respect to the coordinate frame W.
-It performs a transformation between coordinate
+d com relação ao sistema de coordenadas W.
+Ele realiza uma transformação entre sistemas
 
 00:03:34.709 --> 00:03:39.819
-frames. All of this is rather abstract. I’ve
-introduced this operator dot, but I haven't
+de coordenadas. Tudo isso é um pouco abstrato. Eu
+introduzi esse operador ponto, mas eu não
 
 00:03:39.819 --> 00:03:45.130
-told you actually what it is - how would you
-code it? And, we introduced this abstract
+disse a você o que ele realmente é - como você poderia
+codificá-lo? E, nós intruduzimos essa coisa abstrata
 
 00:03:45.130 --> 00:03:50.170
-pose thing described by the Greek letter ksi
-- and I haven't said exactly what that is
+de pose descrita pela letra Grega ksi
+- e eu não disse exatamente o que ela é
 
 00:03:50.170 --> 00:03:54.830
-or how you could code that or implement that.
-These are things would get to in the following
+ou como você poderia implementá-la. Essas são coisas 
+que eu gostaria de discutir nas próximas
 
 00:03:54.830 --> 00:03:56.370
-sections in this lecture.
+seções dessa aula.
 

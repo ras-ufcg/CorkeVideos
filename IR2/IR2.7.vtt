@@ -3,153 +3,153 @@ Kind: captions
 Language: en-GB
 
 00:00:03.620 --> 00:00:09.280
-Now let's bring translation into the picture.
-Coordinate frame A, Coordinate frame B which
+Agora vamos trazer a tradução para a imagem.
+Quadro de coordenada A, Quadro de coordenada B que
 
 00:00:09.280 --> 00:00:14.969
-is translated and rotated with respect to
-coordinate frame A and a point P. We can represent
+é traduzido e girado em relação a
+coordenada do quadro A e um ponto P. Nós podemos representar
 
 00:00:14.969 --> 00:00:20.410
-the point P by a vector with respect to frame
-B and that vector can be described in terms
+o ponto P por um vetor com relação ao quadro
+B e esse vecor pode ser descrito em termos
 
 00:00:20.410 --> 00:00:25.059
-of its components along the XB and YB axis.
+de seus componentes ao longo dos eixos XB e YB.
 
 00:00:25.059 --> 00:00:30.989
-Now we can rotate that vector into a new frame,
-coordinate frame V, and coordinate frame V
+Agora podemos rotacionar esse vetor para um novo quadro,
+quadro de coordenada V, e o quadro de coordenada V
 
 00:00:30.989 --> 00:00:36.010
-has axes which are parallel to coordinate
-frame A. We've already talked about how to
+tem eixos que são paralelos ao quadro
+de coordenada A. Nós já temos falado sobre como 
 
 00:00:36.010 --> 00:00:42.280
-rotate a vector from one coordinate frame
-to another using a rotation matrix. And as
+rotacionar um vetor de quadro de uma coordenada
+para outra usando uma matriz de rotação. E como
 
 00:00:42.280 --> 00:00:46.710
-a sanity check that we've written this expression
-correctly, we noticed that these two Bs are
+um teste de sanidade que nós temos escrito essa expressão
+corretamente, nós percebemos que estes dois Bs estão
 
 00:00:46.710 --> 00:00:49.649
-next to each other. That's a good thing.
+próximos um ao outro. Que é uma boa coisa.
 
 00:00:49.649 --> 00:00:55.569
-Now let's describe the origin of coordinate
-frame V with respect to coordinate frame A
+Agora vamos descrever a origem de quadro de 
+coordenada V em relação ao quadro de coordenada A
 
 00:00:55.569 --> 00:01:03.019
-and we do that with a vector. That's a vector
-from A to V. Now we're allowed to add vectors
+e nós fazemos com que um vetor. Isso é um vetor
+de A para V. Agora nós estamos autorizados a adicionar vetores
 
 00:01:03.019 --> 00:01:09.650
-so we can add this vector ATV to the vector
-VP to obtain the vector that describes the
+para podermos adicionar esse vetor ATV ao vetor
+VP para obter um vetor que descreve o
 
 00:01:09.650 --> 00:01:15.510
-point P with respect to coordinate frame A.
-We can do that because these two vectors are
+ponto P em relação ao quadro de coordenada A.
+Pordemos fazer isso porque esses dois vetores são
 
 00:01:15.510 --> 00:01:20.970
-described with respect to coordinate frames
-whose axes are parallel to one another. I
+descritos em relação ao quadro de coordenadas
+cujos eixos são paralelos um ao outro. Eu
 
 00:01:20.970 --> 00:01:26.470
-can substitute one equation into the other
-and write this. And again because these two
+posso substituir uma equação para o outro
+e escrever isso. E novamente porque esses dois
 
 00:01:26.470 --> 00:01:30.700
-coordinate frames are parallel I can write
-this.
+quadros de coordenadas são paralelos Eu posso escrever
+isso.
 
 00:01:30.700 --> 00:01:35.220
-Let's expand the vectors and matrix in this
-expression and write them in terms of their
+Vamos expandir os vetores e matriz nessa
+expressão e escreva-os em termos de seus
 
 00:01:35.220 --> 00:01:40.230
-elements. Now I can pull a little bit of a
-trick and now write it like this. If you're
+elementos. Agora Eu posso puxar um pouco de 
+truque e agora escreva-o assim. Se você 
 
 00:01:40.230 --> 00:01:45.470
-unsure about this step, expand out the matrix
-and convince yourself that they are exactly the same.
+não tem certeza sobre esta etapa, expanda a matriz
+e convença-se que eles são exatamente o mesmo.
 
 00:01:46.310 --> 00:01:53.200
-Now this expression has got a two-element
-vector and a three-element vector over here.
+Agora essa expressão tem um vetor de dois elementos
+e um vetor de três elementos aqui.
 
 00:01:53.200 --> 00:01:57.650
-Let's make things a little bit more symmetric
-and write it like this. What we've done now
+Vamos tornar as coisas um pouco mais simétrica
+e escrever-lo assim. O que temos fizemos agora
 
 00:01:57.650 --> 00:02:05.720
-is added some zeros and some ones to the bottom
-row of the matrix. Previously we had a 2x2
+é adicionar alguns zeros e outros para a linha
+inferior da matriz. Anteriormente tinhamos uma matriz de rotação 2x2.
 
 00:02:05.720 --> 00:02:12.659
-rotation matrix. Now we see that that's embedded
-into the top left corner of a 3x3 matrix.
+Agora vemos que isso está incorporado
+no canto superior de uma matriz 3x3.
 
 00:02:12.659 --> 00:02:17.980
-And our vectors which used to have 2 elements
-now have three elements. We can write this
+E nosoos vetores que usamos para ter 2 elementos
+agora tem três elementos. Nós podemos escrever isso
 
 00:02:17.980 --> 00:02:24.129
-even more succinctly in this form. The notation,
-the tilde, above the little p indicates that
+ainda mais sucintamente nesta forma. A notação,
+o til, acima do pequeno p indica que
 
 00:02:24.129 --> 00:02:28.650
-it is a homogeneous vector. It has got three
-elements not two, and we'll talk about that
+isso é um vetor homogêneo. Tem três
+elementos não dois, e vamos falar sobre isso
 
 00:02:28.650 --> 00:02:33.709
-in just a moment. The point is described with
-respect to coordinate frame A by a homogeneous
+em apenas um momento.   o ponto é descrito em relação
+ao quadro de coordenada A por um vetor homogêneo
 
 00:02:33.709 --> 00:02:39.079
-vector which we can obtain from the homogeneous
-vector of the point with respect to coordinate
+que podemos obter do vetor homogêneo
+do ponto em relação ao quadro de coordenada
 
 00:02:39.079 --> 00:02:43.139
-frame B multiplied by this matrix.
+B multiplicada por essa matriz.
 
 00:02:43.139 --> 00:02:48.819
-The elements of the matrix include the rotation
-matrix, which is the function of the orientation;
+Os elementos da matriz inclue a matriz de rotalção,
+que é a função da orientação;
 
 00:02:48.819 --> 00:02:54.859
-Theta, and the translation between the origin
-of coordinate frame A and coordinate frame
+Theta, e a translação entrer a origem
+de quadro de coordenada A e quadro de coordenada
 
 00:02:54.859 --> 00:03:01.249
-B. We have the familiar representation of
-a vector in a 2-dimensional plane, two numbers
+B. Temos a representação familiar de
+um vetor em um plano bidimensional, dois números
 
 00:03:01.249 --> 00:03:07.439
-A and B. The homogeneous vector has got three
-elements in it. It's got A and B and an additional
+A e B. O Vetor homogêneo tem três
+elementos nele. Tem A e B e um elemento
 
 00:03:07.439 --> 00:03:15.040
-element which is set to 1. This we refer to
-as a homogeneous transformation. It is a 3x3
+adicional que é definido como 1. Isso nos referimos 
+como uma transfor,ação homogênea. Isso é uma matriz 3x3.
 
 00:03:15.040 --> 00:03:22.459
-matrix. The homogeneous transformation matrix
-T comprises a rotation matrix which is 2x2
+A matriz de transformação homogênea
+T compreende uma matriz de rotação que é 2x2
 
 00:03:22.459 --> 00:03:27.989
-and a translation vector which is a 2x1 matrix
-padded out with a couple of zeros and a one.
+e um vetor converção que é uma matriz 2x1
+preenchida com dois zeros e um um.
 
 00:03:27.989 --> 00:03:33.579
-This matrix describes a relative pose. It
-describes the pose B with respect to the pose
+Essa matriz descreve uma pose relativa. Isso
+descreve uma pose B em relação a pose
 
 00:03:33.579 --> 00:03:39.499
-of A. All of that is encoded in this single
-3x3 matrix. A mathematician would say that
+de A. Tudo do que é codificado nessa única
+matriz 3x3. Um matemático poderia dizer que
 
 00:03:39.499 --> 00:03:46.079
 transformação homogênea pertence ao grupo 
