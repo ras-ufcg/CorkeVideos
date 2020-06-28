@@ -160,166 +160,168 @@ common in robotics and in aerospace, but there
 are other engineering disciplines where they
 
 00:02:55.269 --> 00:02:57.110
-use different conventions.
+usam convenções diferentes.
 
 00:02:57.110 --> 00:03:00.810
-Be very, very careful when you just talk about
-Euler angles.
+Tenha muito, muito cuidado ao falar sobre
+ângulos de Euler.
 
 00:03:00.810 --> 00:03:05.870
-Let’s experiment and here we’re talking
-about ZYZ sequence Euler angles.
+Vamos experimentar e aqui estamos falando
+sobre a sequência ZYZ dos ângulos de Euler.
 
 00:03:05.870 --> 00:03:13.989
-I’m going to use the Toolbox function eul2r,
-which takes three angular arguments, the three
+Vou usar a função eul2r da Toolbox,
+que recebe três argumentos angulares, os três
 
 00:03:13.989 --> 00:03:14.989
-Euler angles.
+ângulos de Euler.
 
 00:03:14.989 --> 00:03:17.459
-And, I’m just going to give them simple
-values: 0.1, 0.
+E vou fornecer a eles valores 
+simples: 0.1, 0.
 
 00:03:17.459 --> 00:03:20.430
-2 and 0.3 radians respectively.
+2 e 0.3 radianos, respectivamente.
 
 00:03:20.430 --> 00:03:25.780
-And, here is the resulting rotation matrix
-that corresponds to the three Euler angles.
+E, aqui está a matriz de rotação resultante
+que corresponde aos três ângulos de Euler.
 
 00:03:25.780 --> 00:03:31.590
-So you can think of this as two alternative
-representations for orientation of the coordinate
+Então você pode pensar nisso como duas representações
+alternativas para orientação do sistema
 
 00:03:31.590 --> 00:03:32.590
-frame.
+de coordenada.
 
 00:03:32.590 --> 00:03:37.549
-We can represent it as a 3 by 3 orthogonal
-matrix or we can represent it by three numbers
+Podemos representá-lo como uma matriz ortogonal
+3 por 3 ou podemos representá-lo por três números
 
 00:03:37.549 --> 00:03:40.129
-which are the Euler angles.
+que são os ângulos de Euler.
 
 00:03:40.129 --> 00:03:41.909
-I can perform the inverse operation.
+Eu posso realizar a operação inversa.
 
 00:03:41.909 --> 00:03:45.180
-I can convert a rotation matrix to Euler angles.
+Eu posso converter uma matriz de rotação em
+ângulos de Euler.
 
 00:03:45.180 --> 00:03:53.930
-To do that, I use the function tr2eul and
-I pass in the rotation matrix which we’ve
+Para fazer isso, eu uso a função tr2eul e
+passo a matriz de rotação que
 
 00:03:53.930 --> 00:03:55.010
-just computed.
+acabamos de computar.
 
 00:03:55.010 --> 00:03:57.790
-And here we have the Euler angles.
+E aqui temos os ângulos de Euler.
 
 00:03:57.790 --> 00:04:02.959
-So I can convert Euler angles to a rotation
-matrix, a rotation matrix back to Euler angles.
+Então posso converter ângulos de Euler em uma matriz de 
+rotação, uma matriz de rotação de volta aos ângulos de Euler.
 
 00:04:02.959 --> 00:04:08.790
-Let’s have a look at a slightly different
-case where the middle Euler angle is a negative
+Vamos dar uma olhada em um caso um pouco diferente
+em que o ângulo de Euler médio é um número
 
 00:04:08.790 --> 00:04:11.590
-number and the result is rotation matrix.
+negativo e o resultado é uma matriz de rotação.
 
 00:04:11.590 --> 00:04:15.550
-It’s a different rotation matrix to the
-one we had before because it’s a different
+Esta é uma matriz de rotação diferente da que
+tínhamos antes, porque é um conjunto diferente
 
 00:04:15.550 --> 00:04:16.750
-set of Euler angles.
+de ângulos de Euler.
 
 00:04:16.750 --> 00:04:21.160
-Now I’ll convert this rotation matrix back
-to Euler angles.
+Agora vou converter essa matriz de rotação
+de volta para ângulos de Euler.
 
 00:04:21.160 --> 00:04:26.389
-And we’ll see that the Euler angles that
-we end up with are not the Euler angles that
+E veremos que os ângulos de Euler que
+obtemos não são os ângulos de Euler com
 
 00:04:26.389 --> 00:04:27.840
-we started with.
+os quais começamos.
 
 00:04:27.840 --> 00:04:32.830
-So this is another important consideration
-when we look at representing orientation in
+Então essa é outra consideração importante
+quando estamos representando orientação em
 
 00:04:32.830 --> 00:04:38.940
-terms of these three-angle sequences: that
-they are not unique, but they are two different
+termos dessas seqüências de três ângulos: que elas
+não são únicas, mas são dois diferentes
 
 00:04:38.940 --> 00:04:43.870
-sets of Euler angles which result in exactly
-the same rotation matrix.
+conjuntos de ângulos de Euler que resultam
+exatamente na mesma matriz de rotação.
 
 00:04:43.870 --> 00:04:48.470
-And just to verify that that is the case,
-I’m going to convert this different set
+E só para verificar se é esse o caso,
+vou converter esse conjunto diferente
 
 00:04:48.470 --> 00:04:51.840
-of Euler angles to a rotation matrix.
+de ângulos de Euler em uma matriz de rotação.
 
 00:04:51.840 --> 00:04:57.520
-I’m going to pass that answer in and we
-can see the resulting rotation matrix.
+Vou fornecer essa resposta e podemos ver
+a matriz de rotação resultante.
 
 00:04:57.520 --> 00:05:01.620
-And we can see that it is exactly the same
-as this one here.
+E podemos ver que é exatamente a mesma
+que esta.
 
 00:05:01.620 --> 00:05:06.780
-So there are two sets of Euler angles which
-result in exactly the same orientation in
+Portanto, existem dois conjuntos de ângulos de Euler
+que resultam exatamente na mesma orientação no
 
 00:05:06.780 --> 00:05:12.240
-space, the same rotation matrix.
+espaço, a mesma matriz de rotação.
 
 00:05:12.240 --> 00:05:16.700
-The other group of rotation sequences are
-commonly called Cardan angles.
+O outro grupo de sequências de rotação é
+comumente chamado ângulos de Cardan.
 
 00:05:16.700 --> 00:05:21.840
-These are named after a very famous, or infamous,
-Italian character who was a doctor, an astrologer
+Estes são nomeados após um personagem italiano
+muito famoso, ou infame, que era médico, astrólogo
 
 00:05:21.840 --> 00:05:25.350
-and a gambler and spent some time in jail
-for heresy.
+e jogador e passou algum tempo
+na cadeia por heresia.
 
 00:05:25.350 --> 00:05:30.610
-But a very, very inventive person, he invented
-the combination lock and he invented the universal
+Mas uma pessoa muito, muito inventiva, ele inventou
+a fechadura com combinação e inventou a junta
 
 00:05:30.610 --> 00:05:35.160
-joint, the thing that transmits torque from
-an engine in the front of the car to the wheels
+universal, a coisa que transmite torque de um
+motor na frente do carro para as rodas
 
 00:05:35.160 --> 00:05:36.770
-at the back of the car.
+na parte traseira do carro.
 
 00:05:36.770 --> 00:05:41.600
-He also published widely on probability and
-was one of the first people to solve cubic
+Ele também publicou amplamente sobre probabilidade e
+foi uma das primeiras pessoas a resolver equações
 
 00:05:41.600 --> 00:05:43.289
-and quartic polynomial equations.
+polinomiais cúbicas e quáticas.
 
 00:05:43.289 --> 00:05:45.789
-So a very, very bright person.
+Então, uma pessoa muito, muito brilhante.
 
 00:05:45.789 --> 00:05:50.199
-The Cardan angles involve rotations around
-different axes.
+Os ângulos do Cardan envolvem rotações em
+torno de diferentes eixos.
 
 00:05:50.199 --> 00:05:54.440
-So no letter is repeated in the rotation sequence.
+Portanto, nenhuma letra é repetida na
+sequência de rotação.
 
 00:05:54.440 --> 00:05:58.680
 The two of them are often referred to as roll,
