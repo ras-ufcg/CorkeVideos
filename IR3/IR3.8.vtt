@@ -1,163 +1,163 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.280 --> 00:00:08.320
-Consider these two coordinate frames, frame
-A and frame B. They are both right-handed
+Considere estes dois sistemas de coordenadas,
+sistema A e sistema B. Eles são ambos sistemas de
 
 00:00:08.320 --> 00:00:09.920
-coordinate frames.
+coordenadas da mão direita.
 
 00:00:09.920 --> 00:00:13.589
-And the problem we’re trying to solve is
-how do we describe the rotation of frame B
+E o problema que nós estamos tentando resolver é
+como descrevemos a rotação do sistema B
 
 00:00:13.589 --> 00:00:19.200
-with respect to frame A. Imagine we could
-pick up frame A and rotate it in space so
+em relação ao sistema A. Imagine que nós podemos
+pegar o sistema A e rotacionar no espaço
 
 00:00:19.200 --> 00:00:23.870
-that its axes were parallel to those of frame
-B. How do we do that?
+para que seus eixos fossem paralelos ao 
+sistema B. Como fazemos isso?
 
 00:00:23.870 --> 00:00:29.560
-Well, a very famous Swiss mathematician, Leonhard
-Euler, came up with what’s called the Rotation
+Bem, um matemático muito famoso Suíço, 
+Leonhard Euler, apareceu com o chamado 
 
 00:00:29.560 --> 00:00:30.560
-Theorem.
+Teorema da Rotação.
 
 00:00:30.560 --> 00:00:36.280
-It states that two three-dimensional coordinate
-frames are related by a sequence of elementary
+Ele afirma que dois sistemas tridimensionais 
+estão relacionados por uma sequência de
 
 00:00:36.280 --> 00:00:40.550
-rotations such as those about the x-axis,
-the y-axis, the z-axis.
+rotações elementares como aquelas
+sobre o eixo x, o eixo y e o eixo z.
 
 00:00:40.550 --> 00:00:45.460
-We need to apply no more than three of those,
-but the rotations in this sequence need to
+Não precisamos aplicar mais do que três,
+mas as rotações nesta sequência precisam
 
 00:00:45.460 --> 00:00:50.719
-be about different axes; that is we’d rotate
-about x-axis, then the y-axis, then maybe
+ser sobre eixos diferentes; ou seja, giraríamos
+sobre o eixo x, depois o eixo y, talvez
 
 00:00:50.719 --> 00:00:53.260
-the x-axis again or maybe about the z-axis.
+o eixo x novamente ou talvez sobre o eixo z.
 
 00:00:53.260 --> 00:00:59.370
-So any rotation can be expressed in terms
-of no more than three rotations as long as
+Então qualquer rotação pode ser expressa em termos
+de não mais que três rotações, desde que
 
 00:00:59.370 --> 00:01:04.780
-those three rotations are consecutively about
-different axes.
+estas três rotações são consecutivamente
+sobre eixos diferentes.
 
 00:01:04.780 --> 00:01:07.530
-Let’s demonstrate this Rotation Theorem.
+Vamos demonstrar este Teorema da Rotação.
 
 00:01:07.530 --> 00:01:12.460
-Here, I have my world reference frame and
-here I have a coordinate frame that has got
+Aqui, eu tenho meu sistema de posição de referência e
+aqui eu tenho um sistema de coordenadas que tem
 
 00:01:12.460 --> 00:01:14.310
-an arbitrary orientation in space.
+uma orientação arbitrária no espaço.
 
 00:01:14.310 --> 00:01:19.270
-And so, the Rotation Theorem says that I should
-be able to take this coordinate frame and
+Então, o Teorema de Rotação diz que eu posso
+ser capaz de pegar este sistema de coordenadas e 
 
 00:01:19.270 --> 00:01:23.640
-with simply three elementary rotations achieve
-an orientation like this.
+com três simples rotações elementares
+obter uma orientação como esta.
 
 00:01:23.640 --> 00:01:27.039
-So, I’m going to take a copy of that world
-reference frame.
+Então, eu vou pegar uma cópia daquele
+sistema de posição de referência
 
 00:01:27.039 --> 00:01:30.290
-And, first thing I’m going to do is to rotate
-it a little bit around the x-axis.
+E, a primeira coisa que eu vou fazer é
+rotacioná-lo um pouco em torno do eixo x,
 
 00:01:30.290 --> 00:01:34.350
-Then, I’m going to rotate it a little bit
-around the y-axis, and then I’m going to
+Depois, eu vou rotacionar ele um pouco
+em torno do eixo y, e então eu vou
 
 00:01:34.350 --> 00:01:36.549
-rotate it a bit around the z-axis.
+rotacionar um pouco em torno do eixo z.
 
 00:01:36.549 --> 00:01:40.770
-And if I pick this axis up and put it in here,
-we’ll see that it now has a roughly the
+E se eu pegar este eixo e colocá-lo aqui,
+iremos ver que agora tem aproximadamente
 
 00:01:40.770 --> 00:01:44.200
-same orientation as the blue frame that I
-started with.
+a mesma orientação que o sistema
+azul que comecei
 
 00:01:44.200 --> 00:01:51.039
-So, let’s write down all the possible sequences
-of rotation, where we apply this caveat that
+Então, vamos anotar todas as sequências possíveis 
+de rotações, onde nós aplicamos esta ressalva de
 
 00:01:51.039 --> 00:01:55.340
-no two successive rotations are about the
-same axis.
+não duas sucessivas rotações 
+sobre o mesmo eixo
 
 00:01:55.340 --> 00:01:58.700
-In fact, there are two of them and I’ve
-written them all down here.
+Na verdade, há duas delas e eu escrevi 
+todas elas bem aqui.
 
 00:01:58.700 --> 00:02:03.590
-These rotations fall into two groups and the
-group shown here are referred to as Euler
+Estas rotações se dividem em dois grupos e
+o grupo mostrado aqui é conhecido como
 
 00:02:03.590 --> 00:02:04.590
-angles.
+ângulos de Euler.
 
 00:02:04.590 --> 00:02:08.869
-And, they are the ones where there are two
-rotations about the same axis.
+E, são eles onde há duas rotações 
+sobre o mesmo eixo.
 
 00:02:08.869 --> 00:02:12.530
-The first one is rotation about X, then Y,
-then X again.
+O primeiro é a rotação sobre o X, depois Y,
+e depois, X novamente.
 
 00:02:12.530 --> 00:02:16.890
-Well, this one over here is Y, then Z, then
-Y again.
+Bem, este outro aqui é Y, depois Z, 
+e depois, Y novamente.
 
 00:02:16.890 --> 00:02:24.030
-So, in the Euler angle group, a particular
-axis will appear twice, but not twice consecutively.
+Portanto, no grupo de ângulos de Euler, um determinado
+eixo aparecerá duas vezes, mas nunca duas vezes consecutivas.
 
 00:02:24.030 --> 00:02:29.250
-This particular group; rotation around Z,
-then around Y, and then around Z is quite
+Este grupo em particular; rotação em torno de Z.
+depois Y, e então em torno de Z é comumente
 
 00:02:29.250 --> 00:02:34.250
-commonly called Euler angles, but in fact
-there are six Euler angles.
+chamados de ângulos de Euler, mas, na verdade,
+existem seis ângulos de Euller.
 
 00:02:34.250 --> 00:02:38.470
-So, we need to be very, very careful when
-we talk about an angle sequence.
+Logo, precisamos ser muito cautelosos quando
+falamos sobre uma sequência angular.
 
 00:02:38.470 --> 00:02:41.010
-It’s in fact not good enough just to say
-Euler angles.
+Na verdade, não é suficiente dizer
+somente ângulos de Euler.
 
 00:02:41.010 --> 00:02:46.299
-We should be very specific and say ZYZ Euler
-angles.
+Devemos ser muito específicos e 
+dizer ângulos ZYZ de Euler
 
 00:02:46.299 --> 00:02:51.040
-Different engineering communities use different
-conventions, and the ZYZ convention is pretty
+Diferentes comunidades de engenharia usam diferentes
+conversões, e a conversão ZYZ é bastante
 
 00:02:51.040 --> 00:02:55.269
-common in robotics and in aerospace, but there
-are other engineering disciplines where they
+comum em robótica e na aeroespacial, mas há
+outras disciplinas de engenharia nas quais elas
 
 00:02:55.269 --> 00:02:57.110
 use different conventions.
