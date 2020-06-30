@@ -175,177 +175,178 @@ combinations in order to achieve much more
 complicated rotations; more about that shortly.
 
 00:03:48.790 --> 00:03:53.500
-In the last lecture when we considered 2-dimensional
-rotations we wrote a rotation matrix that
+Na aula passada, quando consideramos a rotação bidimensional, 
+escrevemos a matriz de rotação que
 
 00:03:53.500 --> 00:03:54.500
-looks like this.
+se pareçe com isso.
 
 00:03:54.500 --> 00:03:59.670
-In fact this is identical to the top left
-corner of the elementary rotation matrix for
+Na verdade, isso é identico a parte superior esquerda
+da matriz de rotação elementar para
 
 00:03:59.670 --> 00:04:01.360
-rotation about Z.
+rotação em torno de Z.
 
 00:04:01.360 --> 00:04:04.440
-The reason about this quite intuitive.
+A razão disso é bastante intuitiva.
 
 00:04:04.440 --> 00:04:09.920
-In the 2 dimensional case we are actually
-rotating around the unseen Z axis which was
+No caso bidimensional, nós realmente estamos
+rotacionando em torno do eixo Z invisível, que 
 
 00:04:09.920 --> 00:04:14.629
-sticking up at us out of the screen and was
-effectively invisible.
+estava apontando para fora da tela e era
+efetivamente invisível.
 
 00:04:14.629 --> 00:04:20.739
-So there is an equivalence between 2-dimensional
-rotation and the 3-dimensional rotation around
+Então há uma equivalência entre a rotação
+bidimensional e a tridimensional em torno
 
 00:04:20.739 --> 00:04:22.030
-the Z axis.
+do eixo Z.
 
 00:04:22.030 --> 00:04:27.639
-When we're talking about orientation we consider
-them in terms of a sequence of elementary
+Quando falamos de orientação, nós a 
+consideramos em termos de uma sequência de rotações 
 
 00:04:27.639 --> 00:04:31.030
-rotations, so let's look at rotations around
-the X-axis.
+elementares, então vamos observar as rotações em 
+torno do eixo X.
 
 00:04:31.030 --> 00:04:36.190
-Now this was the positive rotation direction
-so if I rotate this coordinate frame by 90
+Agora esta foi a direção de rotação positiva, então
+se eu giro esse sistema de coordenadas em 90 
 
 00:04:36.190 --> 00:04:39.860
-degrees around the X-axis it's going to look
-like this.
+graus em torno do eixo X, vai parecer 
+dessa forma.
 
 00:04:39.860 --> 00:04:44.680
-If I rotate it by minus 90 degrees around
-the X-axis it's going to look like this.
+Se eu giro em menos 90 graus em torno do eixo X,
+vai parecer dessa forma.
 
 00:04:44.680 --> 00:04:50.110
-I can rotate it by positive 90 degrees around
-the Y-axis so that's a rotation that way so
+Eu posso girar 90 graus positivos em torno
+do eixo Y, para que tenhamos um rotação dessa forma,
+então
 
 00:04:50.110 --> 00:04:55.340
-positive 90 degrees rotation looks like this
-and a negative 90 degrees rotation is going
+girar 90 graus positivos irá parecer desta forma
+e girar 90 graus negativos irá parecer
 
 00:04:55.340 --> 00:04:56.800
-to look like this.
+desta forma.
 
 00:04:56.800 --> 00:05:01.500
-Now positive rotation around the Z-axis is
-this way, so if I rotate this frame 90 degrees
+Agora, rotação positiva em torno do eixo Z é 
+dessa forma, então se eu girar essa coordenada em 90 graus
 
 00:05:01.500 --> 00:05:06.669
-around the Z-axis it's going to look like
-this or if I rotate it by minus 90 degrees
+em torno do eixo Z, irá parecer desta forma, 
+ou se eu girar menos 90 graus
 
 00:05:06.669 --> 00:05:10.190
-around the Z-axis it's going to look like
-this.
+em torno do eixo Z, irá parecer desta 
+forma.
 
 00:05:10.190 --> 00:05:13.930
-Let's have a look at some of these elementary
-transformation matrices in MATLAB.
+Vamos dar uma olhada em algumas dessas matrizes de
+transformação elementar no MATLAB.
 
 00:05:13.930 --> 00:05:19.400
-We can use the function rotx to create a rotation
-about the X-axis and I'm going to ask for
+Podemos usar a função rotx para criar a rotação
+em torno do eixo X e eu vou pedir
 
 00:05:19.400 --> 00:05:20.759
-a rotation of 0.2
+uma rotação de 0.2
 
 00:05:20.759 --> 00:05:25.419
-radians and this is what the rotation matrix
-looks like.
+radianos e é assim que a matriz de rotação irá 
+parecer.
 
 00:05:25.419 --> 00:05:30.240
-I could have also specified the angle in terms
-of degrees so in this case what I look for
+Eu também poderia ter especificado o ângulo 
+em termos de graus, então, nesse caso o que eu procuro
 
 00:05:30.240 --> 00:05:36.170
-is a rotation of 30 degrees around the X-axis.
+é uma rotação de 30 graus em torno do eixo X.
 
 00:05:36.170 --> 00:05:41.850
-Let me put that matrix into a variable which
-I'm going to call R for rotation it's a 3x3
+Vou colocar essa matrix em uma variável que irei
+chamá-la de R, para rotação. É uma matriz ortogonal
 
 00:05:41.850 --> 00:05:46.120
-orthogonal rotation matrix and we'll just
-test some of the properties we've mentioned
+3x3 de rotação e iremos apenas testar algumas 
+das propriedades que mencionamos 
 
 00:05:46.120 --> 00:05:49.890
-earlier about orthogonal rotation matrices.
+anteriormente sobre matrizes de rotação ortogonais.
 
 00:05:49.890 --> 00:05:54.410
-I can look at the determinant of the matrix
-and we can see that it is equal to 1.
+Eu posso olhar o determinante da matriz
+e podemos ver que é igual a 1.
 
 00:05:54.410 --> 00:06:00.000
-I can compute the inverse of that matrix and
-we can see that it is exactly the same as
+Eu posso computar a inversa desta matriz e 
+podemos ver que é exatamente igual a
 
 00:06:00.000 --> 00:06:02.500
-a transpose of that matrix.
+a transposta desta matriz.
 
 00:06:02.500 --> 00:06:07.030
-And computationally this is particularly convenient
-instead of having to invert the matrix I can
+E computacionalmente isso é particulamente conveniente, 
+em vez de ter que inverter a matriz, eu posso
 
 00:06:07.030 --> 00:06:09.360
-simply transpose it.
+simplesmente transpor.
 
 00:06:09.360 --> 00:06:12.460
-Computationally much, much cheaper.
+Computacionamente muito mais barato.
 
 00:06:12.460 --> 00:06:17.210
-I can also compute a rotation about a different
-axis I could ask for a rotation around the
+Eu também posso calcular uma rotação em torno
+de um diferente eixo. Eu posso pedir uma rotação em torno
 
 00:06:17.210 --> 00:06:18.880
-Y-axis by 0.2
+do eixo Y em 0.2
 
 00:06:18.880 --> 00:06:24.080
-radians or a rotation around the Z-axis,
-again by 0.3
+radianos ou uma rotação em torno do eixo Z, 
+de novo em 0.3
 
 00:06:24.080 --> 00:06:25.560
-radians.
+radianos.
 
 00:06:25.560 --> 00:06:31.110
-The toolbox also contains a function which allows
-me to graphically depict one of these rotation
+A caixa de ferramentes também contém uma função 
+que me permite representar graficamente uma dessas matrizes
 
 00:06:31.110 --> 00:06:33.650
-matrices as a rotated coordinate frame.
+de rotação como um sistema de coordenadas rotacionado.
 
 00:06:33.650 --> 00:06:39.430
-So I can pass the last result, which is in
-the automatic variable ans into the function
+Então, eu posso passar o último resultado, que
+está na variável automática ans, para a função
 
 00:06:39.430 --> 00:06:45.490
-trplot and here we can see the representation
-of the rotated coordinate frame.
+trplot e aqui podemos ver a representação
+do sistema de coordenadas rotacionado.
 
 00:06:45.490 --> 00:06:50.650
-The reference coordinate frame is indicated
-here and the rotated coordinate frame is shown
+O sistema de coordenadas de referência é indicado
+aqui e o sistema de coordenadas rotacionado é mostrado
 
 00:06:50.650 --> 00:06:52.930
-here in blue.
+aqui, em azul.
 
 00:06:52.930 --> 00:06:55.090
-The trplot function has got many, many options.
+A função trplot tem muitas, muitas opções.
 
 00:06:55.090 --> 00:06:58.970
-We can change the color of the coordinate
-frame, we can add a label to the frame, we
+Podemos mudar a cor do sistema de coordenadas,
+podemos adicionar um rótulo para o sistema,
 
 00:06:58.970 --> 00:07:00.900
-can add arrowheads and so on.
+podemos adicionar pontas de flechas e assim por diante.
 
