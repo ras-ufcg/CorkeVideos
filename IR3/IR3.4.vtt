@@ -142,141 +142,141 @@ again using a right hand rule. So I take my
 right hand and I point my thumb along the
 
 00:03:19.630 --> 00:03:24.250
-axis - in this case it's the z-axis, and I
-curl my fingers around, and the direction
+eixo - nesse caso é o eixo z, e eu
+curvo meus dedos ao redor, e a direção
 
 00:03:24.250 --> 00:03:29.330
-of the curl, the direction of the tip of my
-fingers is the positive direction. So this
+da curva, a direção da ponta dos meus
+dedos é a direção positiva. Então essa
 
 00:03:29.330 --> 00:03:36.190
-is a positive rotation around the z-axis.
-Similarly a rotation around the x-axis - this
+é uma rotação positiva ao redor do eixo z.
+Assim como numa rotação ao redor do eixo x -
 
 00:03:36.190 --> 00:03:43.250
-a positive rotation around the x-axis and
-this is a positive rotation around the y-axis.
+essa é uma rotação positiva ao redor do eixo x
+e essa é uma rotação positiva ao redor do eixo y.
 
 00:03:43.250 --> 00:03:49.819
-When we looked previously at the 2-dimensional
-coordinate frame we also had a rule for the
+Quando nós vimos antes o sistema de coordenadas
+bidimensional nós também tínhamos uma regra para
 
 00:03:49.819 --> 00:03:54.980
-direction of positive rotation in two dimensions.
-Here's our 2-dimensional coordinate frame
+direção da rotação positiva em duas dimensões.
+Eis o nosso sistema de coordenadas bidimensional
 
 00:03:54.980 --> 00:04:01.430
-again, here is our x and y-axis lying on top.
-So what we defined as a positive rotation
+novamente, aqui estão nossos eixos x e y por cima.
+Então, o que definimos como um rotação positiva
 
 00:04:01.430 --> 00:04:09.319
-for a 2-dimensional coordinate frame is actually
-a positive rotation around the z-axis, if
+para um sistema de coordenadas bidimensional é,
+na verdade, uma rotação positiva ao redor do eixo z,
 
 00:04:09.319 --> 00:04:15.770
-you could imagine a z-axis being there.
-In robotics, as in many other areas of engineering,
+se você puder imaginar um eixo z lá.
+Na robótica, como em outras áreas da engenharia,
 
 00:04:15.770 --> 00:04:20.370
-it's really useful and important to attach
-coordinate frames to objects. Now here is
+é realmente útil e importante anexar sistemas
+de coordenadas a objetos. Agora aqui está
 
 00:04:20.370 --> 00:04:26.090
-an example of a helicopter in flight and where
-we can attach a right-handed coordinate frame;
+um exemplo de um helicóptero voando onde nós
+podemos anexar um sistema de coordenadas destro;
 
 00:04:26.090 --> 00:04:32.129
-x-axis pointing forward, a y-axis out to the
-right, and a z-axis going straight down. Once
+um eixo x à frente, um eixo y à direita,
+e um eixo z indo para baixo. Uma vez
 
 00:04:32.129 --> 00:04:36.990
-we have a coordinate frame attached to the
-vehicle, we can then describe its orientation
+tendo o sistema de coordenadas anexado ao
+veículo, então podemos descrever sua orientação
 
 00:04:36.990 --> 00:04:41.900
-with respect to another coordinate frame.
-We can also describe its motion with respect
+em relação a outro sistema de coordenadas.
+Também podemos descrever seu movimento em relação
 
 00:04:41.900 --> 00:04:48.069
-to this particular coordinate frame. Forward
-is in the x direction, down is in its z direction
+a esse sistema específico de coordenadas. Em frente
+está na direção x, para baixo está na direção z 
 
 00:04:48.069 --> 00:04:54.330
-and so on. In the example of an industrial
-arm type robot, we might have a 3-dimensional
+e assim por diante. No exemplo de um braço robótico
+industrial, nós devemos ter um sistema tridimensional
 
 00:04:54.330 --> 00:04:58.490
-coordinate frame attached to the base of the
-robot to indicate where it is with respect
+de coordenadas anexado na base do robô
+para indicar onde ele está em relação
 
 00:04:58.490 --> 00:05:03.650
-to the world coordinate frame of the factory
-and we will attach another 3D coordinate frame
+ao sistema de coordenadas mundial da fábrica
+e vamos anexar outro sistema de coordenadas 3D
 
 00:05:03.650 --> 00:05:08.270
-to the gripper, and by convention the z-axis
-points outward in the directions of the fingers,
+à pinça, e por convenção o eixo z
+aponta para fora na direção dos dedos,
 
 00:05:08.270 --> 00:05:12.509
-the direction that it might approach an object
-for describing a pick up. The y-axis by convention
+A direção em que ele pode se aproximar de umm objeto
+para descrever uma coleta. O eixo y por convenção
 
 00:05:12.509 --> 00:05:17.949
-is the direction between the finger tips, then
-we draw in the x-axis so as to create a proper
+é a direção entre as pontas dos dedos, então
+nós desenhamos no eixo x para criar um sistema de
 
 00:05:17.949 --> 00:05:20.900
-right-handed 3-dimensional coordinate frame.
+coordenadas tridimensional destro adequado.
 
 00:05:20.900 --> 00:05:25.969
-If we look into the details of very famous
-engineering projects like the Apollo Lunar
+Se nós olharmos os detalhes de projetos
+famosos de engenharia como o Apollo Lunar
 
 00:05:25.969 --> 00:05:29.759
-Missions, and we look at some of the documentations
-which are all available online and here we
+Missions, e olharmos algumas das documentações
+que estão disponíveis online e
 
 00:05:29.759 --> 00:05:35.889
-can see the x, y and z axis for the Apollo
-command module. And similarly for the Lunar
+aqui nós podemos ver o eixo x, y e z do módulo
+de comando Apollo. E de maneira similar para o módulo
 
 00:05:35.889 --> 00:05:42.240
-module the documentation shows that the x-axis
-is vertically upwards and the z axis is forward
+Lunar a documentação mostra que o eixo x
+está na vertical para cima e o eixo z está
 
 00:05:42.240 --> 00:05:47.879
-in the direction of the front door. This is
-a picture of the massive Saturn V rocket which
+na direção da porta da frente. Essa é uma
+foto do enorme foguete Saturn V que levou
 
 00:05:47.879 --> 00:05:52.620
-got the astronauts to the moon and back, and again
-if we look at the documentation carefully,
+os astronautas à lua e de volta, e de novo
+se nós olharmos cuidadosamente a documentação,
 
 00:05:52.620 --> 00:05:57.539
-we can see that the axes for the early stages
-of the rocket are clearly indicated. Some of the
+podemos ver que os eixos para os estágios iniciais
+do foguete estão claramente indicados. Algumas das
 
 00:05:57.539 --> 00:06:01.400
-coordinate frame conventions are actually
-painted on the outside of the rocket, and
+convenções do sistema de coordenadas estão
+realmente pintadas na parte externa do foguete, e
 
 00:06:01.400 --> 00:06:07.029
-if we look closely at this black ring up here
-what's called the instrumentation module,
+se olharmos atentamente para esse anel preto
+aqui, que é chamado o módulo de instrumentação,
 
 00:06:07.029 --> 00:06:11.089
-which in the flesh is actually quite a massive
-device, we can see quite clearly here is painted
+que no corpo é na verdade um dispositivo
+bastante massivo, podemos ver claramente aqui
 
 00:06:11.089 --> 00:06:15.839
-the direction of the positive z direction
-and the one at the back we can see the direction
+pintado a direção do eixo positivo z e
+atrás nós podemos ver a direção do seu
 
 00:06:15.839 --> 00:06:22.490
-of its negative y-axis. This module is effectively
-the inertial measurement unit for the Saturn
+eixo y negativo. Esse módulo é efetivamente a
+unidade de medição inercial para o foguete Saturn
 
 00:06:22.490 --> 00:06:28.109
-V rocket, functionality now is probably equivalent
-to what you have in the phone in your pocket.
+V, a funtionalidade é provavalmente equivalente
+ao que você tem no telefone no seu bolso.
 
