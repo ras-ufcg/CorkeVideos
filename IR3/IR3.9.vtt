@@ -200,204 +200,205 @@ acontece para este relógio indicado aqui, ele é
 first free to rotate around this axis and
 then it's free to rotate around this axis.
 
+trad3.vtt
+
 00:04:19.060 --> 00:04:23.890
-If I place this box on the table in my cabin
-on board a sailing ship then the clock is
+Se eu colocar essa caixa na mesa na minha sala
+a bordo de um barco a vela então o relógio
 
 00:04:23.890 --> 00:04:30.730
-going to remain level even though the ship
-is undergoing quite considerable motion. This
+irá permanecer nivelado mesmo que o barco
+esteja balançando consideravelmente. Esse
 
 00:04:30.730 --> 00:04:35.810
-last example is a little bit more complex
-it contains what we call a three axis Gimbal.
+Ultimo exemplo é um pouco mais complexo
+ele contém o que chamamos de Gimbal de três eixos.
 
 00:04:35.810 --> 00:04:40.720
-In the first case then, the compass is free
-to rotate around this axis and then that whole
+No primeiro caso, a bússola é livre para
+rotacionar em torno desse eixo e então todo
 
 00:04:40.720 --> 00:04:46.290
-assembly is free to rotate around this axis
-and finally all that inner assembly is
+o conjunto é livre para rotacionar em torno dos eixos
+e finalmente todo conjunto interno é
 
 00:04:46.290 --> 00:04:50.070
-free to rotate around this axis.
+livre para rotacionar em torno desse eixo.
 
 00:04:50.070 --> 00:04:54.720
-Gimbals are widely used in engineering systems
-and this is a schematic of a gimbal that was
+Gimbals são amplamente utilizados em sistemas de engenharia
+e esse é o esquemático de um Gimbal que foi
 
 00:04:54.720 --> 00:05:00.480
-part of the navigation system for the Apollo
-lunar module that was referred to earlier
+parte do sistema de navegação do módulo do Apollo
+lunar referenciado anteriormente
 
 00:05:00.480 --> 00:05:06.480
-in the movie. The key component is what's
-called the stabilized platform and it consists
+no filme. O componente chave é o que chamamos de
+plataforma estabilizada e isso consiste
 
 00:05:06.480 --> 00:05:11.920
-of three gyroscopes spinning quickly and they
-keep this particular assembly shown here in
+em três giroscópios girando rapidamente e eles
+mantém esse conjunto mostrado aqui em
 
 00:05:11.920 --> 00:05:20.130
-blue at a fixed orientation with respect to
-the universe. Now because the vehicle in which
+azul em uma orientação fixa em respeito ao 
+universo. Agora por causa que a estrutura no qual
 
 00:05:20.130 --> 00:05:25.920
-it's mounted is going to be rotating and translating,
-then we need some way to mechanically connect
+isso está montado irá rotacionar e transladar,
+então precisamos de alguma forma para conectar mecanicamente 
 
 00:05:25.920 --> 00:05:32.300
-the space craft to the stable platform but
-in such a way that the motion of the space
+a estrutura espacial à plataforma estável de
+tal forma que o movimento da estrutura
 
 00:05:32.300 --> 00:05:38.080
-craft does not introduce any torque or force
-on the stable platform. So the way to do that
+espacial não introduza torque ou força na
+plataforma estável. Então a forma para fazer isso
 
 00:05:38.080 --> 00:05:44.490
-is to use a series of gimbals so the first
-gimbal is a rotation around this axis here
+é usando uma série de gimbals então o primeiro
+gimbal é uma rotação em torno desse eixo aqui
 
 00:05:44.490 --> 00:05:51.860
-and then that whole assembly is free to rotate
-around this axis and then finally all that
+e então todo o conjunto está livre para rotacionar
+em torno desse eixo e então finalmente todo o
 
 00:05:51.860 --> 00:05:59.190
-assembly is free to rotate around this axis.
-What this allows is really important, if we
+conjunto está livre para rotacionar em torno desse eixo.
+O que isso permite é realmente importante, se nós
 
 00:05:59.190 --> 00:06:05.020
-measure the angles of the shaft in each of
-the gimbals then that tells us the orientation
+medirmos os ângulos do eixo em cada um dos
+gimbals então isso nos diz a orientação
 
 00:06:05.020 --> 00:06:10.390
-of the vehicle with respect to the stable
-platform. And that's how this vehicle is able
+da estrutura em relação à plataforma estável.
+E é assim que a estrutura é capaz
 
 00:06:10.390 --> 00:06:16.810
-to determine it's orientation in space. The
-problem occurs when the angle of the second
+de determinar sua orientação no espaço. O 
+problema ocorre quando o ângulo do segundo
 
 00:06:16.810 --> 00:06:22.350
-gimbal approaches plus or minus 90 degrees
-and that's the condition referred to as Gimbal
+gimbal alcança mais ou menos 90 graus
+e essa é a condição referenciada como Gimbal
 
 00:06:22.350 --> 00:06:25.630
-Lock which was mentioned in the movie clip.
+Lock que foi mencionada no clipe do filme.
 
 00:06:25.630 --> 00:06:30.630
-For space craft navigation it works something
-like this, we have this inner element which
+Para navegação de naves espaciais isso funciona
+assim, nós temos esse elemento interno no qual
 
 00:06:30.630 --> 00:06:35.650
-is referred to as a stable platform, it's
-got three orthogonal gyroscopes on it and
+é referido como plataforma estável, ele 
+tem três giroscópios ortogonais nele e 
 
 00:06:35.650 --> 00:06:40.800
-what that means is that the platform maintains
-a constant orientation with respect to the
+isso implica que a plataforma mantém
+orientação constante com relação ao
 
 00:06:40.800 --> 00:06:45.160
-universe. It's a very impressive thing, the
-space craft then is attached to the other
+universo. Essa é uma coisa muito impressionante, a
+nave espacial então é acoplada ao outro
 
 00:06:45.160 --> 00:06:51.130
-side of the gimbal mechanism. So as the space
-craft's orientation changes over time by reading
+lado do mecanismo gimbal. Daí quando a orientação da
+nave espacial muda ao longo do tempo pela leitura
 
 00:06:51.130 --> 00:06:56.040
-the gimbal angles we can determine the orientation
-of the space craft with respect to the stable
+do ângulo do gimbal nós podemos determinar a orientação
+da nave espacial com relação à plataforma
 
 00:06:56.040 --> 00:07:00.980
-platform whose orientation is a constant.
+estável no qual a orientação é constante.
 
 00:07:00.980 --> 00:07:05.000
-Let's consider the case where the orientation
-of the vehicle is expressed in terms of roll,
+Considerando o caso onde a orientação
+o veículo em termos de ângulos roll,
 
 00:07:05.000 --> 00:07:10.290
-pitch, yaw angles. We write this as a sequence
-of elementary rotations, a rotation around
+pitch, yaw. Nós escrevemos isso como uma sequência
+de rotações elementais, a rotação em torno
 
 00:07:10.290 --> 00:07:15.170
-the X axis by the roll angle, rotation around
-the Y axis by the pitch angle and a rotation
+do eixo X pelo ângulo roll, rotação em torno do
+eixo Y pelo ângulo pitch e a rotação
 
 00:07:15.170 --> 00:07:20.710
-around the Z axis by the yaw angle. Now let's
-consider what happens when the pitch angle
+em torno do eixo Z pelo ângulo yaw. Agora vamos
+considerar o que acontece quando o ângulo pitch
 
 00:07:20.710 --> 00:07:27.510
-equals 90 degrees or pi on 2 radians. We
-can write the expression like this, now the
+se iguala a 90 graus ou pi sobre 2 radianos. Nós
+podemos escrever a expressão desse jeito, agora o
 
 00:07:27.510 --> 00:07:34.270
-pitch angle is equal to pi on 2 and with some
-well known identities I can rewrite it in
+ângulo pitch é igual a pi sobre 2 com algumas
+conhecidas identidades eu posso reescrever isso
 
 00:07:34.270 --> 00:07:40.130
-this form. Now what we have is 2 consecutive
-rotations around the X axis so I can write
+dessa forma. Agora o que temos são 2 rotações
+consecutivas em torno do eixo x então eu posso escrever
 
 00:07:40.130 --> 00:07:46.550
-this now as a single rotation around the X
-axis. The amount of the rotation is R+Y, it's
+isso agora como uma simples rotação em torno do
+eixo X. O valor da rotação é R+Y, essa é
 
 00:07:46.550 --> 00:07:51.930
-the sum of the roll angle and the yaw angle
-and there's a final constant rotation. What
+a soma dos ângulos roll e yaw e 
+essa é a rotação constante final. O que
 
 00:07:51.930 --> 00:07:58.610
-this indicates is that now roll and yaw are
-equivalent we can't tell one from another.
+isso indica é que agora roll e yaw são
+equivalentes nós não podemos diferenciar um do outro.
 
 00:07:58.610 --> 00:08:03.270
-Another way to think about this mechanical
-way in terms of the Gimbal mechanism itself
+Outra forma de pensar nessa forma mecânica 
+em termos apenas do mecanismo de Gimbal
 
 00:08:03.270 --> 00:08:08.800
-is to think that the axis of the first gimbal
-and the third gimbal and now parallel to each
+é pensar no eixo do primeiro gimbal
+e no terceiro gimbal e agora são paralelos entre
 
 00:08:08.800 --> 00:08:16.010
-other and aligned. This is a mathematical
-representation of the Gimbal lock phenomenon.
+si e alinhados. Essa é a representação 
+matemática do fenômeno de Gimbal Lock.
 
 00:08:16.010 --> 00:08:21.310
-And it occurs when the angle of the middle
-gimbal approaches pi on 2. This is the condition
+E isso ocorre quando o ângulo do gimbal do meio
+alcança pi sobre 2. Essa é a condição
 
 00:08:21.310 --> 00:08:25.100
-that they were concerned about in the Apollo
-13 clip.
+em que eles estavam preocupados no clipe
+do Apollo 13.
 
 00:08:25.100 --> 00:08:31.070
-So what this means is when you define your
-coordinate system for any particular vehicle
+Daí o que isso significa é quando você define seu
+sistema de coordenadas para qualquer veículo específico 
 
 00:08:31.070 --> 00:08:36.589
-and if you want to describe it's orientation
-in terms of roll, pitch and yaw angles it's
+e se você pretende descrever sua orientação 
+em termos dos ângulos roll, pitch e yaw é
 
 00:08:36.589 --> 00:08:43.180
-important that the pitch angle is around 0
-for the nominal configuration of your vehicle.
+importante que o ângulo pitch seja próximo de 0
+para configuração nominal do veículo.
 
 00:08:43.180 --> 00:08:49.410
-So if it's an aircraft then the pitch angle
-would be 0 when it is in default horizontal configuration
+Logo se esse for uma aeronave então o ângulo pitch 
+deve ser 0 quando essa é a sua configuração horizontal padrão
 
 00:08:49.410 --> 00:08:54.779
-or as if it was a rocket you would want to
-make sure that the 0 pitch angle corresponded
+ou se esse for um foguete você deve ter 
+certeza que o ângulo pitch 0 corresponde 
 
 00:08:54.779 --> 00:08:59.779
-to the condition of going straight up. You
-need to ensure that the situation with the
+à condição de ir verticalmente para cima. Você
+precisa garantir que a situação em que 
 
 00:08:59.779 --> 00:09:04.980
-pitch angle equals plus or minus 2 does not
-occur during normal operating conditions.
-
+o ângulo pitch se iguale a mais ou menos 2 não
+ocorre durante condições normais de operação.
