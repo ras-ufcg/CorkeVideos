@@ -3,167 +3,167 @@ Kind: captions
 Language: en
 
 00:00:04.180 --> 00:00:08.770
-In high school or Engineering Maths, you’ve
-probably come across the concept of a complex
+No ensino médio ou na aprendizagem da matemática, você 
+possivelmente se deparou com os conceitos de números 
 
 00:00:08.770 --> 00:00:09.770
-number.
+complexos.
 
 00:00:09.770 --> 00:00:14.350
-A number has got two components, a real component
-and an imaginary component.
+Um número composto de duas componentes, uma componente real  
+e a outra componente imaginária. 
 
 00:00:14.350 --> 00:00:20.650
-The imaginary component is a real scalar B
-multiplied by the imaginary number i, i being
+A componente imaginária é um número real escalar B 
+multiplicado pelo número imaginário i, i sendo 
 
 00:00:20.650 --> 00:00:23.360
-the square root of -1.
+A raiz quadrada de -1.
 
 00:00:23.360 --> 00:00:27.140
-We can extend this concept to what’s called
-a hypercomplex number.
+Podemos estender este conceito ao que é chamado de 
+um número hipercomplexo.
 
 00:00:27.140 --> 00:00:32.870
-Now, instead of having just one imaginary
-number i, we have imaginary numbers i, j,
+Agora, em vez de termos apenas um numero imaginário i,
+Temos vários números imaginários i,j,
 
 00:00:32.870 --> 00:00:33.870
-and k.
+e K.
 
 00:00:33.870 --> 00:00:39.350
-They are each the square root of -1 and their
-product is equal to -1.
+Eles são a raiz quadrada de -1 e 
+o produto deles é -1.
 
 00:00:39.350 --> 00:00:45.780
-So, the hypercomplex number has got one real
-part and three imaginary parts.
+Então, os números hipercomplexos possuem uma parte real
+e três partes complexas.
 
 00:00:45.780 --> 00:00:50.850
-Hypercomplex numbers are typically written
-as a scalar plus a vector, s plus v.
+Números hipercomplexos são tipicamente escritos 
+como vetores escalares, s mais v.
 
 00:00:50.850 --> 00:00:57.640
-The concept of hypercomplex numbers can be
-traced back to the Irish mathematician, William
+O conceito de números hipercomplexo podem ser encontrados 
+Com o matemático irlandês, William 
 
 00:00:57.640 --> 00:00:58.890
 Hamilton.
 
 00:00:58.890 --> 00:01:03.500
-The story goes that one day, he was walking
-along the Canal in Dublin and the key equation,
+A história diz que um dia, ele estava caminhando ao longo
+Do canal em Dublin e uma equação chave,
 
 00:01:03.500 --> 00:01:09.380
-i2 = j2 = k2 = ijk = -1 came in to his brain.
+i2 = j2 = k2 = 2jk = -1 surgiu em seu cérebro.
 
 00:01:09.380 --> 00:01:14.550
-And, he carved the equation in to a stone
-on the wall of the bridge.
+E, ele gravou a equação nem uma pedra
+Na parede da ponte.
 
 00:01:14.550 --> 00:01:20.450
-And, there is today a plaque on this particular
-bridge which commemorates this flash of genius
+E, há hoje uma placa nesta ponte 
+Que comemora o flash de um gênio 
 
 00:01:20.450 --> 00:01:22.980
-and inspiration.
+e inspiração.
 
 00:01:22.980 --> 00:01:28.590
-The hypercomplex number is the basis of a
-mathematical object that we call a quaternion.
+O numero hipercomplexo é a base de um objeto matemático 
+que chamamos de quaternion.
 
 00:01:28.590 --> 00:01:32.590
-I denote a quaternion as a Q with a little
-circle above it.
+Eu denoto um quaternion como um Q com um 
+círculo acima dele.
 
 00:01:32.590 --> 00:01:39.460
-So, we write it at s + v. S is a real scalar
-and v is a vector representing the complex
+Então, nós escrevemos s + v. S é um número escalar real
+E v é um vetor que representa a parte complexa 
 
 00:01:39.460 --> 00:01:41.660
-part of this number.
+desse número.
 
 00:01:41.660 --> 00:01:46.810
-Quaternions are often written in this form
-as well where we have s and then inside angle
+Quartions são frequentimente escritos nesta forma onde temos
+Onde temos s e, em seguida, o Angulo entre colchetes
 
 00:01:46.810 --> 00:01:51.869
-brackets, we have the three elements of the
-vector part, the three imaginary parts of
+temos os três elementos que constituem o vetor, 
+as três partes imaginários de
 
 00:01:51.869 --> 00:01:52.869
-the quaternion.
+quarternion.
 
 00:01:52.869 --> 00:01:55.740
-There are quite a few different ways of writing
-quaternions.
+Existem algumas maneiras diferentes de escrever 
+os quaternions.
 
 00:01:55.740 --> 00:02:01.420
-This is the way that I will use in this lecture
-and also the way that the robotics Toolbox
+Esta é a maneira que eu vou usar neste vídeo
+E também a forma como a caixa de ferramentas de robótica  
 
 00:02:01.420 --> 00:02:03.899
-represents a quaternion in MATLAB.
+representada no MATLAB.
 
 00:02:03.899 --> 00:02:08.739
-Just as we can determine the magnitude or
-length of a vector, we can determine the magnitude
+Assim como podemos determinar a magnitudo ou comprimento 
+de um vetor, podemos determinar a magnitude
 
 00:02:08.739 --> 00:02:15.079
-or length of a quaternion and it’s the square
-root of the sum of the four numeric elements
+ou comprimento de um quartions e é o quadrado
+raiz da soma dos quatro elementos numéricos
 
 00:02:15.079 --> 00:02:18.959
-of the quaternion, it’s real part and the
-three imaginary parts.
+No quarternion, parte real e 
+três partes imaginarias 
 
 00:02:18.959 --> 00:02:24.400
-Now, we get to what’s called a unit quaternion
-and this is a quaternion whose magnitude is
+Agora, chegamos ao que é chamado de quarternion unitário
+E este é um quarternon cuja magnitude é
 
 00:02:24.400 --> 00:02:26.090
-equal to 1.
+Igual a 1.
 
 00:02:26.090 --> 00:02:31.440
-Unit quaternions are particularly useful because
-we can use them to encode rotation in three
+Quaternions unitários são particularmente úteis porque
+podemos usá-los para representar a rotação em três
 
 00:02:31.440 --> 00:02:33.120
-dimensional space.
+Dimensões no espaço.
 
 00:02:33.120 --> 00:02:37.810
-A unit quaternion has a lot of similarities
-to the angle and axis representation that
+Um quaternion unitário tem semelhanças
+para a representação do ângulo e eixo que 
 
 00:02:37.810 --> 00:02:40.150
-we discussed in the last section.
+discutimos na última seção.
 
 00:02:40.150 --> 00:02:45.400
-The real part of the unit quaternion is equal
-to the cosine of half the rotation angle and
+A parte real do quaternion unitário é igual
+ao cosseno da metade do ângulo de rotação e
 
 00:02:45.400 --> 00:02:51.310
-the rotation axis which I have denoted here
-by n-hat is related to the vector part of
+o eixo de rotação que eu denotei aqui
+por n-hat está relacionado com a parte vetorial de
 
 00:02:51.310 --> 00:02:57.269
-the quaternion by this relationship which
-involve sine of half the rotation angle.
+o quaternion por esta relacionado ao 
+seno da metade do ângulo de rotação.
 
 00:02:57.269 --> 00:02:59.840
-I can compound two unit quaternions.
+Podemos compor dois quarternions unitários
 
 00:02:59.840 --> 00:03:06.390
-Just as we can compound two rotation matrices,
-I can compound two quaternions and it’s
+Assim como podemos composto duas matrizes de rotação,
+Eu posso compor dois quaternions e é
 
 00:03:06.390 --> 00:03:10.500
-done by using this, what’s called the Hamiltonian
-product rule.
+feito usando isso, o que é chamado de Hamiltoniano
+regra do produto.
 
 00:03:10.500 --> 00:03:16.650
-So, quaternion 1 rotates me from frame A to
-frame B. Quaternion 2 rotates me from frame
+Então, quaternion 1 gira do quadro A para
+quadro B. Quaternion 2 gira a partir do quadro
 
 00:03:16.650 --> 00:03:22.709
 B to frame C, then, the product is the rotation
