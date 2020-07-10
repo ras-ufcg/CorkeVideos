@@ -1,145 +1,146 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt
 
 00:00:03.550 --> 00:00:08.599
-In the previous lecture we introduced the
-notion of pose and poses; a way of describing
+Na aula anterior, introduzimos as noções
+de pose e posicionamento; uma forma de descrever
 
 00:00:08.599 --> 00:00:14.990
-both the translation and the orientation of
-one coordinate frame with respect to another.
+tanto a movimentação quanto a orientação
+de um sistema de coordenadas em relação a outro.
 
 00:00:14.990 --> 00:00:20.449
-And the notation we used is based on the Greek
-letter ksi and we used that to represent pose
+E a notação que usamos é baseada na letra
+grega "ksi" e usamos isso para representar pose
 
 00:00:20.449 --> 00:00:24.949
-and we used the letter B the subscript to
-indicate that we're talking about the pose
+E usamos a letra B, a inscrição, para
+indicar que estamos falando da pose
 
 00:00:24.949 --> 00:00:29.890
-of the coordinate frame B and the leading
-index, in this case A, to indicate that the
+do sistema de coordenadas B, e o índice
+em destaque, no caso A, para indicar que a
 
 00:00:29.890 --> 00:00:37.670
-pose is with respect to coordinate frame A. So we read this symbol as the pose of B with respect to A.
+pose é relativa ao sistema de coordenadas A. 
+Então lemos esse símbolo como a pose de B em relação a A.
 
 00:00:38.260 --> 00:00:43.460
-Things are not much different in 3-dimensions,
-once again we use this abstract notion of
+As coisas não são tão diferentes em 3 dimensões,
+mais uma vez usamos a noção abstrata de
 
 00:00:43.460 --> 00:00:49.010
-pose represented by Greek letter ksi, and
-now we represent the translation and orientation
+pose representada pela letra grega ksi, e
+agora nós representamos a translação e a orientação
 
 00:00:49.010 --> 00:00:54.320
-of one three-dimensional coordinate frame
-with respect to another. Later in this lecture
+de um sistema de coordenadas tridimensional
+em relação a outro. Mais tarde nessa aula
 
 00:00:54.320 --> 00:00:59.390
-we’ll talk about concrete implementations
-of ksi, what it actually means in terms of
+falaremos acerca de aplicações concretas de ksi,
+o que ela de fato representa no que se refere a
 
 00:00:59.390 --> 00:01:05.220
-things that you can compute with, but for
-now just consider that as an abstract symbol.
+coisas com as quais você pode calcular, mas, por
+enquanto, apenas considere ela como um símbolo abstrato.
 
 00:01:05.220 --> 00:01:09.890
-The notation is the same as it is for the
-2-dimensional case and we read this symbol
+A notação é a mesma que era para o caso
+bidimensional, e nós lemos esse símbolo
 
 00:01:09.890 --> 00:01:15.790
-here as being the pose of coordinate frame
-B with respect to coordinate frame A. And
+aqui como sendo a pose do sistema de coordenadas
+B em relação ao sistema de coordenadas A. E
 
 00:01:15.790 --> 00:01:20.940
-remembering that pose has got two components,
-a translational component; that's the distance
+lembrando que a pose possui dois componentes,
+um componente translacional; que é a distância
 
 00:01:20.940 --> 00:01:26.710
-between the origins of frame A and frame B,
-and a rotational component; how do I rotate
+entre as origens do sistema A e do sistem B,
+e um componente rotacional; como eu rotaciono
 
 00:01:26.710 --> 00:01:33.790
-coordinate frame A so that its axes are parallel
-to the axes of coordinate frame B.
+o sistema de coordenadas A de forma que seus eixos
+ficam paralelos aos eixos do sistema de coordenadas B.
 
 00:01:33.790 --> 00:01:39.630
-In 3-dimensions it is not as simple to describe
-the orientation of an object. Consider this
+Em três dimensões, não é tão simples descrever
+a orientação de um objeto. Considere esse
 
 00:01:39.630 --> 00:01:45.780
-airplane. There are a number of ways in which
-it can move. It can pitch up and down, it
+avião. Existem inúmeras formas das quais ele pode se mover.
+Ele pode se mover no pitch para cima e para baixo,
 
 00:01:45.780 --> 00:01:51.510
-can roll to the right or it can roll to the
-left, and it can yaw to the right or to the
+pode se mover no roll para direita e para a
+esquerda, epode se mover no yaw para a direita ou
 
 00:01:51.510 --> 00:01:58.930
-left. So there are number of parameters that
-describe the orientation of this body in space.
+para a esquerda. Então existem inúmeros parâmetros
+que descrevem a orientação desse corpo no espaço.
 
 00:01:58.930 --> 00:02:04.340
-So the way that we are going to formalise
-this is again similar to what we did for the
+Portanto a forma como iremos formalizar isso
+é, novamente, similar a como fizemos para
 
 00:02:04.340 --> 00:02:08.979
-2-dimensional case, and again we attach a
-coordinate frame to the aircraft.
+o caso bidimensional, e novamente nós anexamos
+o sistema de coordenadas à aeronave.
 
 00:02:08.979 --> 00:02:12.980
-Another coordinate frame here, a blue one
-and I'm going to fix it to the aircraft with
+Outro sistema de coordenadas aqui, um azul,
+e eu irei fixá-lo à aeronave, com o
 
 00:02:12.980 --> 00:02:17.860
-the x-axis pointing forward and that means
-that the y-axis points over the wing and the
+eixo x apontando para frente, e isso significa
+que o eixo y aponta sobre a asa, e que o
 
 00:02:17.860 --> 00:02:23.700
-z-axis points upward. So now when it comes
-to describing the pose of this aircraft it's
+eixo z aponta para cima. Então, quando falamos
+em descrever a pose dessa aeronave, ela
 
 00:02:23.700 --> 00:02:28.200
-got a translational component, that's the
-position of the origin of this coordinate
+possui um componente translacional, que é a
+posição da origem desse sistema de coordenadas
 
 00:02:28.200 --> 00:02:33.600
-frame with respect to the origin of this coordinate
-frame, and then there is the orientation of
+em relação à origem desse outro sistema de
+coordenadas, depois temos a orientação desse
 
 00:02:33.600 --> 00:02:38.660
-this coordinate frame with respect to this
-coordinate frame.
+sistema de coordenadas em relação a esse
+outro sistema de coordenadas.
 
 00:02:38.660 --> 00:02:43.970
-The direction of the positive rotation is
-an important concept, and in a 2-dimensional
+A direção da rotação positiva é um conceito
+importante, e em um caso bidimensional
 
 00:02:43.970 --> 00:02:49.870
-case rotation was defined as being positive
-in this direction. If we consider a 2-dimensional
+a rotação foi definida como positiva
+nesta direção, se considerarmos um sistema
 
 00:02:49.870 --> 00:02:54.950
-coordinate frame, then if we grow a z-axis
-out of the screen, that is the equivalent
+de coordenadas bidimensional. Daí, se imaginarmos 
+um eixo z para fora da tela, será equivalente 
 
 00:02:54.950 --> 00:03:01.600
-right handed 3-dimensional coordinate frame.
-So this positive angle convention in two dimensions
+ao sistema de coordenadas tridimensional destro.
+Então, essa convenção de ângulo positivo em duas dimensões
 
 00:03:01.600 --> 00:03:08.010
-corresponds to a positive rotation about the
-z-axis which is coming at us out of the screen.
+corresponde a uma rotação positiva sobre o 
+eixo z, que está vindo para nós através da tela.
 
 00:03:08.010 --> 00:03:14.240
-When we are talking about rotations around
-axes we define the direction of positive rotation
+Quando estamos falando sobre rotaçoes ao redor de
+eixos, definimos a direção da rotação positiva
 
 00:03:14.240 --> 00:03:19.630
-again using a right hand rule. So I take my
-right hand and I point my thumb along the
+novamente, usando uma regra da mão direita. Então eu pego
+minha mão direita e aponto meu polegar sobre o
 
 00:03:19.630 --> 00:03:24.250
 eixo - nesse caso é o eixo z, e eu
