@@ -1,169 +1,169 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: Pt-Br
 
 00:00:03.370 --> 00:00:06.680
-Let’s recap some of the important concepts
-from this lecture.
+Vamos recapitular alguns dos conceitos 
+importantes dessa palestra.
 
 00:00:06.680 --> 00:00:12.740
-Firstly, there are some very important conventions.
-First is the so called right-handed coordinate
+Primeiramente, têm algumas convenções muito importantes.
+Primeiro é o tão chamado sistemas de coordenadas
 
 00:00:12.740 --> 00:00:17.410
-frame. When we construct a 3-dimensional coordinate
-frame, we need to construct it properly and
+destro. Quando construímos um sistema de coordenadas
+3D, nós precisamos construí-lo adequadamente
 
 00:00:17.410 --> 00:00:22.960
-we use our right hand to guide us. The x-axis
-is aligned with our thumb, the y-axis is aligned
+e usamos a mão direita para nos guiar. O eixo x
+é alinhado com o nosso polegar, o eixo y com o
 
 00:00:22.960 --> 00:00:27.989
-with our index finger and the z-axis with
-our middle finger. When it comes to describing
+dedo indicador e o eixo z com nosso dedo do
+meio. Quando se trata de descrever
 
 00:00:27.989 --> 00:00:33.329
-the direction of rotation around an axis,
-we imagine that we’re grasping that axis
+o sentido de rotação em torno de um eixo,
+imaginamos que estamos segurando esse eixo
 
 00:00:33.329 --> 00:00:37.640
-with our thumb pointing in the direction of
-the arrow and the direction that our fingers
+com o nosso polegar apontando na direção
+da seta e a direção que os nossos dedos
 
 00:00:37.640 --> 00:00:42.929
-curl around the axis indicate the positive
-rotational direction.
+se encurvam ao redor do eixo indica a 
+direção rotacional positiva.
 
 00:00:42.929 --> 00:00:49.179
-A rotation matrix in three dimensions can
-be described by a 3 x 3 matrix and the columns
+Uma matriz de rotação em três dimensões pode 
+ser descrita por uma matriz 3 x 3 e as colunas
 
 00:00:49.179 --> 00:00:55.780
-of that matrix are unit vectors that are aligned
-with the axes of coordinate frame B. The first
+dessa matriz são vetores unitários alinhados com
+os eixos do sistema de coordenadas B. A primeira
 
 00:00:55.780 --> 00:01:02.159
-column is the x-axis of frame B, second column
-is the y-axis of frame B and the third column
+coluna é o eixo x do sistema B, a segunda coluna
+é o eixo y e a terceira coluna do sistema B
 
 00:01:02.159 --> 00:01:08.340
-is the z-axis of frame B. And, we use this
-rotation matrix to rotate a vector from frame
+é o eixo z do sistema B. E usamos essa matriz
+de rotação para girar um vetor do sistema
 
 00:01:08.340 --> 00:01:12.590
-B to frame A.
-There are three elementary rotation matrices
+B para o A.
+Existem 3 matrizes de rotação elementares
 
 00:01:12.590 --> 00:01:19.440
-which correspond to rotation around the x-axis,
-the y-axis and the z-axis. We can create an
+que correspondem a rotação ao redor do eixo x,
+y e z. Nós podemos criar uma
 
 00:01:19.440 --> 00:01:25.240
-arbitrary rotation between any two coordinate
-frames by using a sequence of these elementary
+rotação arbitrária entre dois sistemas de 
+coordenadas usando a sequência dessas rotações 
 
 00:01:25.240 --> 00:01:32.230
-rotations. There are in fact 12 possible rotation
-sequences. An important caveat, part of Euler
+elementares. Existem, de fato, 12 sequências 
+possíveis de rotação. Uma ressalva importante,  
 
 00:01:32.230 --> 00:01:40.040
-rotation theorem, is that no two consecutive
-rotations can be about the same axis. Of this
+parte do teorema de rotação de Euler, é que não há
+duas rotações consecutivas no mesmo eixo. Das
 
 00:01:40.040 --> 00:01:46.680
-12, 6 of these sequences are referred to as
-Euler angles. They contain two rotations about
+12, 6 sequências são referidas como ângulos de
+Euler. Elas contêm duas rotações sobre o mesmo
 
 00:01:46.680 --> 00:01:54.380
-the same axis, but not sequentially. For example,
-rotate about x, then, y, then x again. Although
+eixo, mas não sequencialmente. Por exemplo,
+girar em torno de x, de y e de x de novo. Embora
 
 00:01:54.380 --> 00:01:59.070
-all six of these technically are Euler angles,
-when the term Euler angles is used, people
+todos os seis sejam tecnicamente ângulos 
+de Euler, quando o termo é usado, as pessoas
 
 00:01:59.070 --> 00:02:05.890
-are generally referring to the specific sequence,
-ZYZ. But, this convention varies across different
+geralmente se referem à sequência específica 
+ZYZ. Mas, essa convenção varia entre diferentes
 
 00:02:05.890 --> 00:02:09.560
-disciplines of engineering. So, it’s important
-to be sure when you’re talking to somebody
+disciplinas de engenharia. Então, é importante 
+ter certeza quando você está falando com alguém
 
 00:02:09.560 --> 00:02:13.849
-about Euler angles that you’re talking about
-exactly the same sequence.
+sobre ângulos de Euler que vocês estão falando 
+exatamente sobre a mesma sequência.
 
 00:02:13.849 --> 00:02:18.569
-The other six are referred to as Cardan angles.
-And, two of these specifically are often referred
+As outras 6 sequências são chamadas de ângulos de
+Cardan. Duas delas são referidas especificamente como
 
 00:02:18.569 --> 00:02:25.509
-to as roll, pitch, yaw angles. The Cardan
-angles have rotations about three different axes.
+ângulos de rotação, inclinação e guinada. Os ângulos 
+de Cardan têm rotações em torno de três eixos diferentes.
 
 00:02:25.920 --> 00:02:28.260
-We can describe the rotation from any one
+Nós podemos descrever a rotação de um sistema
 
 00:02:28.269 --> 00:02:34.969
-frame to another in terms of a single rotation,
-a rotation by an angle Theta about some axis
+qualquer para outro em termos de uma única
+rotação por um ângulo teta em torno de um eixo
 
 00:02:34.969 --> 00:02:41.280
-V. And, we’ve discussed techniques to determine
-Theta and V given a rotation matrix. And,
+V. E, nós discutimos sobre técnicas para determinar
+teta e V dada a matriz de rotação. E,
 
 00:02:41.280 --> 00:02:46.739
-we introduced the Rodriguez equation which
-allows us to go from an axis and an angle
+nós introduzimos a equação de Rodriguez que
+nos permite ir de um ângulo e um eixo de 
 
 00:02:46.739 --> 00:02:52.950
-back to a rotation matrix.
-We introduced quaternions. These are hypercomplex
+volta a uma matriz de rotação.
+Nós introduzimos quaterniões. Estes são números
 
 00:02:52.950 --> 00:02:58.810
-numbers. They actually comprise a scalar and
-a three-element vector. A unit magnitude quaternion
+hipercomplexos. Na verdade, eles compreendem um
+escalar e um vetor de três elementos. Um quaternião
 
 00:02:58.810 --> 00:03:04.180
-which is referred to as a unit quaternion
-can be used to encode rotation. And, there
+de magnitude unitária referido como unidade de
+quaternião pode ser usado para codificar a rotação.
 
 00:03:04.180 --> 00:03:09.849
-are some simple rules to determine the inverse
-of a quaternion and to compound two quaternions,
+Existem algumas simples regras para determinar o 
+Inverso de um quaternião ou compor 2 quaterniões,
 
 00:03:09.849 --> 00:03:14.260
-and we can work out the effect of two consecutive
-rotations.
+e nós podemos calcular o efeito de duas rotações
+consecutivas.
 
 00:03:14.260 --> 00:03:19.590
-An important question that comes up a lot
-is why do we use something like a rotation
+Uma questão importante que vem bastante à
+tona é porque usamos algo como rotação
 
 00:03:19.590 --> 00:03:25.249
-matrix. A rotation matrix is a 3 by 3 matrix
-and it contains nine numbers, but we know
+da matriz. A matriz de rotação é uma matriz 
+3 x 3 e contém nove números, mas nós sabemos
 
 00:03:25.249 --> 00:03:31.099
-from Euler’s theorem that we only need three
-numbers - three angles - to describe a rotation.
+pelo teorema de Euler que nós só precisamos de três
+números – três ângulos – para descrever uma rotação.
 
 00:03:31.099 --> 00:03:35.569
-What’s the advantage of using nine numbers
-when I could just use three?
+Qual é a vantage de usar os nove números
+quando eu poderia usar apenas três?
 
 00:03:35.569 --> 00:03:42.529
-Well, importantly, the rotation matrix is
-not just any old 3 by 3 matrix. It is a specific
+Bem, o mais importante é que a matriz de rotação
+não é qualquer matriz 3 x 3. É uma matriz
 
 00:03:42.529 --> 00:03:47.980
-matrix. It is an orthonormal matrix. So, although
-there are nine elements, there are a number
+específica e ortonormal. Então, embora
+existam nove elementos, há várias restrições.
 
 00:03:47.980 --> 00:03:54.010
-of constraints. In fact there are six constraints,
-which leaves us with only 3 degrees of freedom.
+De fato, existem seis restrições, o que nos deixa
+Apenas com três graus de liberdade.
 
 00:03:54.010 --> 00:03:58.549
 The first constraints are that each column
