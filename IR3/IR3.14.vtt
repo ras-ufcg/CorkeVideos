@@ -166,170 +166,169 @@ De fato, existem seis restrições, o que nos deixa
 Apenas com três graus de liberdade.
 
 00:03:54.010 --> 00:03:58.549
-The first constraints are that each column
-in this matrix is a unit vector. In fact,
+As primeiras restrições são que que cada coluna
+nessa matriz é um vetor unitário. Em fato,
 
 00:03:58.549 --> 00:04:03.540
-that each column is a unit vector introduces
-three constraints. And then, the columns are
+que cada coluna é um vetor unitário introduz
+três constantes. E então, as colunas são
 
 00:04:03.540 --> 00:04:08.809
-all orthogonal to one another and that introduces
-another three constraints.
+todas ortogonais uma a outra e que introduzem
+outras três constantes.
 
 00:04:08.809 --> 00:04:13.639
-The rotation matrix has some very convenient
-properties. Firstly, we can compound poses
+A matriz de rotação possui algumas propriedades
+muito convenientes. Primeiramente, podemos compor poses
 
 00:04:13.639 --> 00:04:20.479
-or rotations simply by multiplication. That’s
-not the case for Euler angles or roll, pitch,
+ou rotações simplesmente por multiplicação. Esse
+não é o caso para ângulos de Euler ou rolamentos, arremessos,
 
 00:04:20.479 --> 00:04:23.669
-yaw angles.
-A second really important benefit is that
+e ângulos de guinada.
+Um segundo benefício muito importante é que
 
 00:04:23.669 --> 00:04:30.169
-the columns of a rotation matrix describe
-the x, y and z axes of the new coordinate
+as colunas de uma matriz de rotação descrevem
+os eixos x, y e z do novo sistema
 
 00:04:30.169 --> 00:04:35.120
-frame in terms of the old one. Another important
-property is that you can actually read a rotation
+de coordenadas em relação ao antigo. Outra importante
+propriedade é que você pode realmente ler uma matriz
 
 00:04:35.120 --> 00:04:41.370
-matrix. The columns of the rotation matrix
-describe in terms of unit vectors the x,y
+de rotação. As colunas da matriz de rotação
+traçam em termos de vetor unitário os eixos
 
 00:04:41.370 --> 00:04:46.530
-and z-axis of the new coordinate frame.
-Let’s have a look at a few of the different
+x,y e z do novo sistema de coordenadas.
+Vamos dar uma olhada em algumas representações
 
 00:04:46.530 --> 00:04:51.520
-rotational representations that we’ve discussed.
-We can have a rotation matrix with its nine
+rotacionais diferentes que discutimos.
+Podemos ter uma matriz de rotação com seus nove
 
 00:04:51.520 --> 00:04:56.960
-numbers in it. And, one of the advantages
-of rotation matrix is that there is no possibility
+números nela. E, uma das vantagens
+da matriz de rotação é que não há possibilidade
 
 00:04:56.960 --> 00:05:02.830
-of having a singularity. We talked about singularities,
-the gimbal problem, and that occurs with
+de ter singularidade. Falamos sobre singularidades,
+o problema de cardan, e isso ocorre com
 
 00:05:02.830 --> 00:05:08.210
-Euler angles or roll, pitch, yaw representation
-of orientation.
+ângulos de Euler ou rolamentos, arremessos, e representação de guinadas
+de orientação.
 
 00:05:08.210 --> 00:05:13.060
-Compounding two rotations is easy. For a rotation
-matrix, we simply multiply the two matrices
+Combinar duas rotações é fácil. Para uma matriz 
+de rotação, simplesmente multiplicamos as duas matrizes
 
 00:05:13.060 --> 00:05:18.800
-together, whereas for the three-angle representations,
-it’s nontrivial. We can also consider that
+juntas, considerando que para as representações em três ângulos,
+é não trivial. Podemos também considerar que
 
 00:05:18.800 --> 00:05:25.259
-we can represent a coordinate frame’s orientation
-by two vectors; an approach vector and an
+podemos representar a orientação de um sistema de coordenadas
+por dois vetores; um vetor de abordagem e um
 
 00:05:25.259 --> 00:05:30.960
-orientation vector. That’s just six numbers.
-It’s singularity free but not very easy
+vetor de orientação. São apenas seis números.
+É livre de de singularidade mas, não tão fácil
 
 00:05:30.960 --> 00:05:37.120
-to compound two orientations expressed in this
-form. We can also consider the angle + axis
+de combinar duas orientações expressas nessa
+forma. Podemos também considerar o ângulo + orientação
 
 00:05:37.120 --> 00:05:42.720
-orientation. We have one number to describe
-the amount of rotation, the angle, and we
+do eixo. Nós temos um número para descrever
+a quantidade de rotação, o ângulo, e nós
 
 00:05:42.720 --> 00:05:49.300
-need two more numbers to represent the rotational
-axis. It’s a unit vector in three dimensions,
+precisamos de mais dois números para representar o
+eixo rotacional. Ele é um vetor unitário em três dimensões,
 
 00:05:49.300 --> 00:05:54.360
-so there are only two unique numbers in it.
-This representation is singularity free, but
+então existem apenas dois números únicos.
+Essa representação é livre de singularidade, mas
 
 00:05:54.360 --> 00:05:59.370
-it’s a bit problematic to represent a zero
-rotation. And, once again, compounding two
+um pouco problemática para representar a rotação
+zero. E, mais uma vez, combinar duas
 
 00:05:59.370 --> 00:06:05.949
-rotations is nontrivial. Final representation
-is the unit quaternion. It’s got four numbers,
+rotações é não trivial. A representação final
+é a unidade quarteniã. Tem quatro números,
 
 00:06:05.949 --> 00:06:11.180
-though only three of them are unique because
-it’s got a unit magnitude. It’s singularity
+no entanto apenas três deles são únicos porque
+tem uma magnitude unitária. São livres de
 
 00:06:11.180 --> 00:06:16.689
-free. And, we introduced the Hamiltonian product
-as a way of multiplying two quaternions. So,
+de singularidade. E, apresentamos o produto Hamiltoniano
+como forma de multiplicar dois quarteniões. Então,
 
 00:06:16.689 --> 00:06:21.819
-in some respect, the quaternion has got a
-lot of advantages, singularity free, represented
+de alguma forma, o quaternião tem muitas
+vantagens, livre de singularidade, representado
 
 00:06:21.819 --> 00:06:27.699
-by a fewer numbers, and two quaternions can
-be multiplied together using fewer arithmetic
+por um número menor, e dois quaterniões podem
+ser multiplicados juntos usando menos operações
 
 00:06:27.699 --> 00:06:32.699
-operation than is the case for matrix
-multiplication. In robotics, it’s really
+aritméticas que é o caso da multiplicação de
+matriz. Em robótica, realmente
 
 00:06:32.699 --> 00:06:37.569
-the top and bottom representation that are
-in common use, the rotation matrix and the
+são uso comum a representação de cima e baixo, 
+a matriz de rotação e a
 
 00:06:37.569 --> 00:06:41.090
-unit quaternion.
-Finally, we can represent pose, which has
+unidade quaterniã.
+Finalmente, podemos representar uma pose, que tem
 
 00:06:41.090 --> 00:06:46.650
-got both translational component and a rotational
-component, by a single homogeneous transformation
+os dois componentes: translacional e rotacional,
+por uma única matriz
 
 00:06:46.650 --> 00:06:54.229
-matrix - a 4 x 4 matrix. Composition of relative
-poses is done by multiplying matrices. Negation
+homogênea - uma matriz 4 x 4. Combinação de poses
+relativas é feita pela multiplicação de matrizes. A negação
 
 00:06:54.229 --> 00:06:59.810
-or an inverse relative pose is done by inverting
-the matrix. Remember that inverting a homogeneous
+ou a pose relativa inversa é feita invertendo
+a matriz. Lembre-se que inverter uma matriz
 
 00:06:59.810 --> 00:07:06.169
-transformation matrix is not computed by taking
-its transpose. That’s a property only of
+transformação homogênea não é calculada tomando
+sua transposta. Essa é uma propriedade apenas de
 
 00:07:06.169 --> 00:07:11.919
-a rotation matrix. And, transforming a point
-represented by a vector from one frame to
+matriz rotação. E transformar um ponto
+representado por um vetor de um quadro para
 
 00:07:11.919 --> 00:07:18.560
-another is done by multiplying homogeneous
-representation of the point by a homogeneous
+outro é feita multiplicando a representação
+homogênea do ponto pela matriz
 
 00:07:18.560 --> 00:07:24.110
-transformation matrix.
-Final thing to remember, coordinate frames
+transformação homogênea.
+Última coisa para lembrar, eixo de coordernadas
 
 00:07:24.110 --> 00:07:29.250
-are your friend. Use lots of them when you’re
-trying to describe a complex problem. Attach
+são seus amigos. Use muitos deles quando estiver
+tentando descrever um problema complexo. Anexe
 
 00:07:29.250 --> 00:07:34.050
-them to every object of interest and write
-them the relationships between the coordinate
+eles a cada objeto de interesse e escreva
+as relações entre os sistemas de coordenads.
 
 00:07:34.050 --> 00:07:37.960
-frames. Some of the relationships might be
-constant. Some of those relationships might
+Algumas dessas relações podem ser
+constante. Algumas dessas relações podem estar
 
 00:07:37.960 --> 00:07:41.889
-be time varying. And, remember, NASA uses
-them. They must be good.
-
+variando com o tempo. E, lembre-se, a NASA
+usa eles. Eles devem ser bons.
