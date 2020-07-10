@@ -1,130 +1,130 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: PT-BR
 
 00:00:03.419 --> 00:00:09.580
-Here again are two, 3-dimensional coordinate
-frames labeled A and B, and the relative pose
+Aqui novamente temos dois sistemas de coordenadas
+tridimensionais nomeados A e B, e a pose relativa
 
 00:00:09.580 --> 00:00:15.650
-A ksi B which is the pose of B with respect
-to A. We've introduced the point P and we
+A ksi B, que é a pose B em relação
+à A. Nós introduzimos o ponto P e podemos
 
 00:00:15.650 --> 00:00:20.471
-can describe that in terms of a vector with
-respect to the origin of coordinate frame
+descrevê-lo em termos de um vetor em
+relação à origem do sistema de coordenadas
 
 00:00:20.471 --> 00:00:25.300
-A, and we denote that just as we did for the
-2-dimensional case in the last lecture in
+A, e denotamos isso como fizemos para o
+caso bidimensional no último curso dessa
 
 00:00:25.300 --> 00:00:30.529
-this fashion where P indicates a vector and
-A is the reference frame that indicates that
+maneira onde P indica um vetor e A é o
+sistema de referência que indica que
 
 00:00:30.529 --> 00:00:35.570
-the vector P is defined with respect to the
-coordinate frame A.
+o vetor P está definido em relação
+ao sistema de coordenadas A.
 
 00:00:35.570 --> 00:00:40.629
-We can also define this point with respect
-to the coordinate frame B and just as for
+Nós também podemos definir esse ponto em relação 
+ao sistema de coordenadas B e assim como
 
 00:00:40.629 --> 00:00:45.659
-the 2-dimensional case, we can transform a
-vector from one coordinate frame to another
+no caso bidimensional, podemos transformar um
+vetor de um sistema de coordenadas para outro 
 
 00:00:45.659 --> 00:00:47.289
-using the dot operator.
+usando o operador ponto.
 
 00:00:47.289 --> 00:00:55.249
-So, we take the relative pose A ksi B and
-use the dot to apply it to the vector P with
+Então, pegamos a pose relativa A ksi B e usamos
+o operador ponto para aplicá-la no vetor P em
 
 00:00:55.249 --> 00:01:00.019
-respect to B and we can think of the B's in
-the middle here cancelling out and the result
+relação a B e podemos pensar nos B's aqui
+no meio se cancelando e o resultado
 
 00:01:00.019 --> 00:01:06.240
-is that we are left with P defined with respect
-to coordinate frame A. We can extend this
+é esse que ficamos com P definido em relação ao 
+sistema de coordenadas A. Nós podemos estender
 
 00:01:06.240 --> 00:01:07.240
-process.
+esse processo.
 
 00:01:07.240 --> 00:01:12.090
-Now, we can define coordinate frame C with
-respect to coordinate frame B using the symbol
+Agora, podemos definir o sistema de coordenadas C 
+em relação ao sistema de coordenadas B usando o símbolo
 
 00:01:12.090 --> 00:01:19.680
-B ksi C. And we can compose the 2 relative
-transformations, B with respect to A and C
+B ksi C. E nós podemos compor essas 2 transformações
+relativas, B em relação à A e C
 
 00:01:19.680 --> 00:01:25.490
-with respect to B in order to obtain the relative
-pose of C with respect to A and we use the
+em relação à B a fim de obter a pose relativa de
+C em relação à A e utilizamos o 
 
 00:01:25.490 --> 00:01:30.570
-composition operator which is a plus sign
-inside a circle and exactly what that means
+operador de composição que é um sinal de mais
+dentro de um círculo e o que ele significa exatamente
 
 00:01:30.570 --> 00:01:35.780
-is something we'll get to later in this lecture
-but it's a process referred to as composing
+é algo que veremos mais tarde nesse curso mas
+é um processo referido como composição 
 
 00:01:35.780 --> 00:01:40.749
-or compounding and we can extend this process
-indefinitely.
+ou combinação e nós podemos estender esse processo
+indefinidamente.
 
 00:01:40.749 --> 00:01:45.330
-And once we've compounded these two relative
-poses, now we have the relative pose of frame
+E uma vez que combinamos essas duas poses relativas, 
+agora nós temos a pose relativa do sistema
 
 00:01:45.330 --> 00:01:50.679
-C with respect to A, we can write an expression
-for the vector with respect to frame C and
+C em relação à A, nós podemos escrever a expressão
+para o vetor em relação aso sistema C e
 
 00:01:50.679 --> 00:01:55.679
-the vector with respect to frame A and we
-can extend this approach indefinitely.
+o vetor em relação ao sistema A e podemos 
+estender essa abordagem indefinidamente.
 
 00:01:55.679 --> 00:02:00.639
-We've introduced a pose algebra and there
-were just a few simple rules, and these are
+Nós introduzimos a álgebra de posição e existem 
+apenas algumas regras simples, e essas
 
 00:02:00.639 --> 00:02:04.639
-exactly the same as for the 2-dimensional
-case.
+são exatamente as mesmas para o caso
+bidimensional.
 
 00:02:04.639 --> 00:02:10.220
-The actual implementation of ksi differs between
-the 2-D case and the 3-D case but when we
+A implementação real do ksi difere entre
+o caso 2-D e o caso 3-D mas quando nós
 
 00:02:10.220 --> 00:02:16.060
-deal with it in terms of the abstract symbol
-ksi and abstract operators, the rules are
+lidamos com isso em termos do símbolo abstrato
+ksi e operadores abstratos, as regras são
 
 00:02:16.060 --> 00:02:17.209
-absolutely identical.
+absolutamente idênticas.
 
 00:02:17.209 --> 00:02:19.670
-So, the first rule is composition.
+Então, a primeira regra é composição.
 
 00:02:19.670 --> 00:02:24.970
-Two relative poses can be compounded to get
-a third relative pose.
+Duas poses relativas podem ser combinadas para
+obter uma terceira pose relativa.
 
 00:02:24.970 --> 00:02:27.569
-When we do this, there are some important
-checks.
+Quando nós fazemos isso, existem algumas
+verificações importantes.
 
 00:02:27.569 --> 00:02:31.650
-These two inner indices must be equal and
-they effectively cancel out.
+Esses dois índices interiores devem ser iguais
+e eles efetivamente se cancelam.
 
 00:02:31.650 --> 00:02:36.099
-The leading indices are the same and the trailing
-indices are the same.
+Os índices de cima são os mesmos e os índices
+de baixo são os mesmos.
 
 00:02:36.099 --> 00:02:42.420
 In general, composition is not commutative
