@@ -322,160 +322,158 @@ different axes.
 So no letter is repeated in the rotation sequence.
 
 00:05:54.440 --> 00:05:58.680
-The two of them are often referred to as roll,
-pitch and yaw angles.
+Os dois deles são referidos como ângulos de 
+roll, pitch e yaw.
 
 00:05:58.680 --> 00:06:03.680
-That’s the sequence XYZ or the sequence
+Essa é a sequência XYZ ou a sequência 
 ZYX.
 
 00:06:03.680 --> 00:06:08.479
-And which particular one is used as roll,
-pitch, yaw angles depends a bit on the context
+Qual será usado como ângulos de roll, 
+pitch e yaw, depende um pouco do 
 
 00:06:08.479 --> 00:06:09.479
-of the problem.
+contexto do problema.
 
 00:06:09.479 --> 00:06:16.319
-Roll, pitch, yaw angles are a really common
-convention for orientation of bodies in three-dimensional
+Ângulos de roll, pitch e yaw são 
+uma convenção bem comum para orientação de corpos em um
 
 00:06:16.319 --> 00:06:17.319
-space.
+espaço tridimensional.
 
 00:06:17.319 --> 00:06:22.520
-We have the x-axis pointing forward and so
-the roll angle is rotation around the x-axis.
+Nós temos o eixo x apontando para frente e assim
+o ângulo de roll é a rotação em torno do eixo x.
 
 00:06:22.520 --> 00:06:24.960
-So that’s the first rotation that we do.
+Então esta é a primeira rotação que fazemos.
 
 00:06:24.960 --> 00:06:29.380
-Now we perform a rotation around the y-axis
-and that’s referred to as pitch.
+Agora nos realizamos a rotação em torno do eixo y
+e essa é referida como pitch.
 
 00:06:29.380 --> 00:06:31.069
-So that’s this sort of motion.
+Assim esse é a forma de movimento.
 
 00:06:31.069 --> 00:06:36.069
-And then after that rotation, we do a rotation
-around the z-axis and we refer to that as
+Em seguida a esta rotação, fazemos a rotação 
+em torno do eixo z e nos referimos a isto como
 
 00:06:36.069 --> 00:06:37.069
-yaw motion.
+movimento de yaw.
 
 00:06:37.069 --> 00:06:42.470
-So roll, pitch, yaw description of attitude
-is a rotation around the x-axis, then around
+Portanto a descrição do comportamento de roll,
+pitch e yaw é a rotação em torno do eixo x,  
 
 00:06:42.470 --> 00:06:45.700
-the y-axis, and then around the z-axis.
+seguida pelo eixo y, e então pelo eixo z.
 
 00:06:45.700 --> 00:06:50.319
-A way to demonstrate this principle of three
-consecutive rotations is with this mechanism,
+Uma forma de demonstrar este princípio de três
+rotações consecutivas é utilizando este mecanismo,
 
 00:06:50.319 --> 00:06:52.550
-a thing called a Gimbal mechanism.
+algo chamado de mecanismo Gimbal.
 
 00:06:52.550 --> 00:06:54.410
-So, there are two coordinate frames here.
+Então, existem dois sistemas de coordenadas aqui.
 
 00:06:54.410 --> 00:06:57.720
-We have the world reference coordinate frame
-here, the big red frame.
+Nós temos o sistema de coordenadas de referência
+global aqui, o sistema vermelho e grande.
 
 00:06:57.720 --> 00:07:00.620
-And, we have a smaller coordinate frame in
-the middle here.
+E nós temos um sistema de coordenadas menor,
+aqui no meio.
 
 00:07:00.620 --> 00:07:07.520
-Now, we can make a rotation around the x-axis,
-which is a motion like this.
+Agora, podemos rotacionar em torno do eixo x,
+sendo um movimento desta forma.
 
 00:07:07.520 --> 00:07:11.600
-We can rotate around the y-axis, which is
-a rotation like this.
+Podemos rotacionar em torno do eixo y,
+sendo um movimento desta forma.
 
 00:07:11.600 --> 00:07:14.110
-And, we can rotate around the z-axis.
+E podemos rotacionar em torno do eixo z.
 
 00:07:14.110 --> 00:07:19.860
-So, I can put this inner coordinate frame
-at any orientation that I like and the gimbals
+Assim, eu posso por o sistema de coordenada interno
+em qualquer orientação que eu queira e o gimbal
 
 00:07:19.860 --> 00:07:23.330
-will find the appropriate angles to allow
-that to happen.
+irá encontrar o ângulo apropriado para permitir
+que isso aconteça.
 
 00:07:23.330 --> 00:07:28.849
-So this demonstrates very clearly shows that any
-orientation of this inner frame can be achieved
+Isso demonstra claramente que qualquer orientação 
+do sistema interno pode ser alcançado
 
 00:07:28.849 --> 00:07:35.160
-by arbitrary choice of three rotation angles
-around the x, y, and z-axis.
+por escolhas arbitrárias dos três ângulos de
+rotação entorno dos eixos x, y e z.
 
 00:07:35.160 --> 00:07:39.449
-Let’s have a look at some roll, pitch, yaw
-angles in practice.
+Vejamos alguns ângulos de roll, pitch e yaw 
+na prática.
 
 00:07:39.449 --> 00:07:46.699
-This is a schematic diagram of NASA’s lunar
-module from the late ’60s and early ’70s.
+Este é um diagrama esquemático do modulo lunar
+da NASA do fim dos anos 60, início dos 70.
 
 00:07:46.699 --> 00:07:49.440
-We can see the coordinate frames indicated
-on here.
+Podemos ver o sistema de coordenadas indicado 
+aqui.
 
 00:07:49.440 --> 00:07:55.009
-We can see that they define roll as rotation
-around the z-axis which is toward the front
+Podemos ver que eles definiram o roll como 
+em torno do eixo z, que aponta para a frente
 
 00:07:55.009 --> 00:08:00.870
-of the vehicle and they have defined yaw as
-being around the x-axis which is the vertical
+do veículo e eles definiram o pitch como sendo
+em torno do eixo x, que é o eixo vertical
 
 00:08:00.870 --> 00:08:04.130
-axis for this particular vehicle.
+neste veículo em particular.
 
 00:08:04.130 --> 00:08:08.620
-The MATLAB functions for roll, pitch, yaw
-angles are very similar to those for Euler
+As funções MATLAB para ângulos de roll, pitch e yaw
+são muito similares àquelas para
 
 00:08:08.620 --> 00:08:09.620
-angles.
+ângulos de Euler.
 
 00:08:09.620 --> 00:08:14.430
-We used the function rpy2r and we pass in
-the roll, pitch, yaw angles.
+Utilizamos a função rpy2r e passamos os ângulos de
+roll, pitch e yaw.
 
 00:08:14.430 --> 00:08:16.550
-I’ve just made up some simple numbers here.
+Acabei de inventar alguns números simples, aqui.
 
 00:08:16.550 --> 00:08:17.660
-The roll angle is 0.1
+O ângulo de roll é 0.1
 
 00:08:17.660 --> 00:08:18.660
-radians.
+radianos.
 
 00:08:18.660 --> 00:08:20.690
-The pitch angle is 0.2 radians.
+O ângulo de pitch é 0.2 radianos.
 
 00:08:20.690 --> 00:08:23.700
-And the yaw angle is 0.3 radians.
+E o ângulo de yaw é 0.3 radianos.
 
 00:08:23.700 --> 00:08:27.480
-And this is the resulting orthogonal rotation
-matrix.
+Esta é a matriz de rotação ortogonal resultante.
 
 00:08:27.480 --> 00:08:31.340
-Once again, there is an inverse function.
+Mais uma vez, existe uma função inversa.
 
 00:08:31.340 --> 00:08:39.150
-So tr2rpy, and I pass in the rotation matrix
-and the result are roll, pitch, yaw angles,
+Então tr2rpy, eu introduzo a matriz de rotação e
+os resultados dos ângulos de roll, pitch e
 
 00:08:39.150 --> 00:08:41.010
-the same as those that I started with.
-
+yaw são iguais aos que comecei.
