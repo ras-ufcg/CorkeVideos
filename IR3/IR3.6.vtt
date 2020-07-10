@@ -3,176 +3,176 @@ Kind: captions
 Language: en
 
 00:00:03.780 --> 00:00:08.340
-For the two dimensional case we consider two
-coordinate frames, the original frame A, and
+Para o caso bidimensilnal consideramos dois
+quadros de coordenadas, o quadro original A, e
 
 00:00:08.340 --> 00:00:13.190
-a rotated version of that, coordinate frame
-B. And B is rotated in the positive direction
+uma versão rotacionada de disso, quadro de coordenada
+B. E B é rotacionado na direção positiva
 
 00:00:13.190 --> 00:00:21.110
-by angle theta with respect to frame A. We
-then described the new coordinate frame axes
+pelo ângulo teta em relação ao quadro A. Quando
+descrevemos os novos eixos do quadro de coordenada 
 
 00:00:21.110 --> 00:00:26.400
-in terms of the old coordinate frame axes,
-and we were able to write these relationships.
+em termos da antigo eixo do quadro de coordenada,
+e fomos capazes de escrever esses relacionamentos.
 
 00:00:26.400 --> 00:00:32.119
-We then wrote this in matrix form and we ended
-up with a formulation that allowed us to transform
+Em seguida escrevemos isso em forma de matriz e terminamos
+com uma formulação que nos permitiu transformar
 
 00:00:32.119 --> 00:00:40.219
-vectors from the new frame to the old frame
-A. The columns of this rotation matrix are
+vetores da novo quadro para o amtigo quadro
+A. As colunas dessa matriz de rotação são
 
 00:00:40.219 --> 00:00:47.999
-the new X-axis that is the B-axis expressed
-in terms of the A coordinate frame and the
+o novo eixo-X que é o eixo-B expresso
+em termos do quadro coordenada A e o
 
 00:00:47.999 --> 00:00:51.809
-BY-axis in terms of the A coordinate frame.
+eixo-BY em termos do quadro de coordenada A.
 
 00:00:51.809 --> 00:00:55.989
-We used some quite complex geometry and diagrams
-in order to show this.
+Usamos geometria e diagramas bastante complexos
+para mostrar isso.
 
 00:00:55.989 --> 00:01:01.089
-For three dimensions it's a little complex
-to do that kind of geometric construction
+Para três dimensões é um pouco complexo
+para fazer esse tipo de construção geométrica
 
 00:01:01.089 --> 00:01:05.659
-so we're just going to take the big principle
-from last time.
+então nós vamos somente pwgar o grande princípio
+da última vez.
 
 00:01:05.659 --> 00:01:10.159
-We'll start off in a similar fashion, here's
-coordinate frame A and we've drawn a point
+Vamos começar de maneira similar, aqui está
+o quadro de coordenada A e desenhamos um ponto
 
 00:01:10.159 --> 00:01:13.640
-which we can describe in terms of a vector
-with respect to coordinate frame A. I’m
+ao qual podemos descrever em termos do vetor
+em relação ao quadro de coordenada A. Vou
 
 00:01:13.640 --> 00:01:18.600
-going to introduce a new coordinate frame
-B which is rotated with respect to coordinate
+introduzir uma novo quadro de coordenada
+B que é rotacionado em relação ao quadro de coordenada A. 
 
 00:01:18.600 --> 00:01:24.460
-frame A. And we're going to define the point
-with another vector, vector BP which is the
+E vamos definir o ponto
+com outro vetor, vetor BP que é o
 
 00:01:24.460 --> 00:01:27.180
-point in respect to a rotated frame B.
+ponto em relação a um quadro rotacionado B.
 
 00:01:27.180 --> 00:01:30.450
-We're going to pull the same trick as we did
-for the 2-dimensional case.
+Vamos fazer o mesmo truque que fizemos
+para o caso bidimensional.
 
 00:01:30.450 --> 00:01:36.619
-We're going to describe the axes of coordinate
-frame B as unit vectors expressed in terms
+Vamos descrever os eixos de quadro de coordenada
+B como unit vectors expressed in terms
 
 00:01:36.619 --> 00:01:41.440
-of coordinate frame A and they are the columns
-of a new rotation matrix.
+de quadro de coordenada A e ele são as colunas
+da nova matriz de rotação.
 
 00:01:41.440 --> 00:01:45.520
-In this case it's a 3x3 rotation matrix.
+Nesse caso é uma matriz de rotação 3x3.
 
 00:01:45.520 --> 00:01:50.479
-So we're not going to go through the detailed
-geometric construction, we're going to extrapolate
+Então não vamos análisar detalhadamente
+a construção geométrica, vamos extrapolar
 
 00:01:50.479 --> 00:01:55.750
-from the 2-dimensional case and just write
-this expression directly.
+do caso the bidimensional e apenas vamos escrever
+essa expressão diretamente.
 
 00:01:55.750 --> 00:02:01.460
-This new rotation matrix transforms vectors
-from the new coordinate frame B to the old
+Essa nova matriz de rotação transforma vetores
+do novo quadro de coordenada B para o antigo
 
 00:02:01.460 --> 00:02:08.140
-coordinate frame A. This 3-dimensional rotation
-matrix, this 3x3 matrix, has got a lot of
+quadro de coordenada A. Essa matriz de rotação tridimensional,
+essa matriz 3x3, tem muitas propriedades
 
 00:02:08.140 --> 00:02:11.270
-similar properties to it's 2x2 counterpart.
+semelhantes ao seu equivalente 2x2.
 
 00:02:11.270 --> 00:02:16.340
-It is an orthogonal, sometimes called orthonormal,
-matrix.
+É ortogonal, as vezes chamado ortonormal,
+matriz.
+
 
 00:02:16.340 --> 00:02:21.870
-That means each column in the matrix is a
-unit length vector.
+Que significa que cada coluna na matriz é um
+vetor de comprimento unitário.
 
 00:02:21.870 --> 00:02:27.040
-Each column in the matrix is orthogonal to
-all the other columns so that means if I take
+Cada coluna na matriz é ortogonal para
+todas as outras colunas então, que significa que se Eu pego
 
 00:02:27.040 --> 00:02:32.440
-the dot product between column 1 and column
-2 it will be equal to 0, same for column 1
+o produto escalar entre a coluna 1 e a coluna
+2 vai ser igual a 0, o mesmo para coluna 1
 
 00:02:32.440 --> 00:02:35.290
-and column 3, column 2 and column 3.
+e coluna 3, coluna 2 e coluna 3.
 
 00:02:35.290 --> 00:02:39.840
-The inverse of this matrix is the same as
-it's transpose and this is a really useful
+O inverso dessa matriz é o mesmo que
+a transposta e existe uma propriedade realmente útil,
 
 00:02:39.840 --> 00:02:45.239
-property because often times when we're computing
-pose expressions we need to find the inverse
+porque muitas vezes quando computamos
+expressões de pose precisamos encontrar a inversa
 
 00:02:45.239 --> 00:02:50.030
-of the rotation matrix and computationally
-it's much simpler to compute the transpose
+da matriz de rotação e computacionalmente
+é muito mais simples para calcular a transposta
 
 00:02:50.030 --> 00:02:53.519
-than it is to compute the inverse for a 3x3
-matrix.
+do que calcular uma inversa para uma matriz 3x3.
 
 00:02:53.519 --> 00:03:01.570
-The determinant of this matrix is +1, that
-means when we multiply a vector by this matrix,
+O determinante dessa matriz é +1, que
+significa que quando multiplicamos um vetor por essa matriz,
 
 00:03:01.570 --> 00:03:03.379
-its length will be unchanged.
+o seu comrimento permanecerá inalterado.
 
 00:03:03.379 --> 00:03:09.450
-A Mathematician would say that a matrix like
-this belongs to the special orthogonal group
+Um Matemático diria que uma matriz como essa
+pertence ao grupo ortogonal especial
 
 00:03:09.450 --> 00:03:15.710
-of dimension 3 and that'll be written as R
-being an element of the set SO(3).
+de dimensão 3 e irá ser escrito como R,
+sendo um elemento do conjunto SO(3).
 
 00:03:15.710 --> 00:03:22.030
-Three indicating that the matrix is 3x3, it
-is rotation in 3-dimensional space.
+Três indicando que a matriz é 3x3, 
+é girado no espaço tridimensional.
 
 00:03:22.030 --> 00:03:26.220
-There are some very useful rotation matrices
-that we can write down, we refer to these
+Existe algumas matrizes  de rotação muito úteis 
+que podemos escrever, referimos para estes
 
 00:03:26.220 --> 00:03:29.079
-as elementary rotation matrices.
+como matrizes de rotação elementares .
 
 00:03:29.079 --> 00:03:35.180
-The first one then is the rotation by theta
-around the X axis, rotation by theta around
+O primeiro é a rotação por teta
+em torno do eixo X, rotação por teta em torno
 
 00:03:35.180 --> 00:03:40.250
-the Y axis and finally rotation by theta about
-the Z axis.
+do eixo Y e finalmente rotação por teta em torno
+do eixo Z.
 
 00:03:40.250 --> 00:03:45.819
-And we can multiply these together in various
-combinations in order to achieve much more
+E podemos multiplica-las juntas em diversas
+combinações para obter rotações muito mais 
 
 00:03:45.819 --> 00:03:48.790
-complicated rotations; more about that shortly.
+complicadas; mais sobre isso em breve.
 
 00:03:48.790 --> 00:03:53.500
 Na aula passada, quando consideramos a rotação bidimensional, 
