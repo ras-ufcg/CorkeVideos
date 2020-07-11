@@ -127,123 +127,122 @@ Os índices de cima são os mesmos e os índices
 de baixo são os mesmos.
 
 00:02:36.099 --> 00:02:42.420
-In general, composition is not commutative
-so that means ksi 1 compounded with ksi 2
+Em geral, a composição não é comutativa então 
+isso significa ksi 1 composto com ksi 2
 
 00:02:42.420 --> 00:02:46.870
-is different to ksi 2 compounded with ksi
-1.
+é diferente de ksi 2 composto com ksi 1.
 
 00:02:46.870 --> 00:02:52.200
-There is a notion of a null relative pose,
-that means no change in the pose and we represent
+Existe a noção de uma pose relativa nula, isso 
+significa que não há mudança na pose que repesentamos
 
 00:02:52.200 --> 00:02:53.920
-that by the symbol O.
+pelo símbolo O.
 
 00:02:53.920 --> 00:02:59.660
-So, if I have a relative pose of ksi and I
-compound it with the null pose, the result
+Então, se eu tiver uma pose relativa nula de
+ksi e eu compor com a pose nula, o resultado
 
 00:02:59.660 --> 00:03:00.970
-is the original pose.
+é a pose original.
 
 00:03:00.970 --> 00:03:03.549
-It's made no change to the pose.
+Não fazendo nenhuma alteração na pose.
 
 00:03:03.549 --> 00:03:07.720
-If I consider a pose as a relative motion
-from A to B, and then I go back from B to
+Se eu considerar uma pose como um movimento relativo 
+de A para B, e depois voltando de B para
 
 00:03:07.720 --> 00:03:10.709
-A, I'm back where I started from, I haven't
-moved any distance.
+A, eu estou de volta para onde eu comecei, 
+eu não me movi nenhuma distância.
 
 00:03:10.709 --> 00:03:13.030
-That's the null pose 0.
+Essa é a pose nula 0.
 
 00:03:13.030 --> 00:03:17.860
-And if I compound with the inverse of the
-null pose, again, I'm left with my original
+E se eu compor com o inverso da pose nula,
+novamente, eu estou com a minha primeira
 
 00:03:17.860 --> 00:03:20.120
 pose.
 
 00:03:20.120 --> 00:03:25.620
-Now for vectors, we can apply a relative pose
-to a vector, effectively transforms a vector
+Agora, para vetores, podemos aplicar uma pose relativa
+para um vetor, efetivamente transforma um vetor
 
 00:03:25.620 --> 00:03:28.440
-from one coordinate frame to another.
+de um sistema de coordenadas em outro.
 
 00:03:28.440 --> 00:03:33.829
-In this particular case, it transforms the
-vector from frame Y to frame X, and to check
+Nesse caso em particular, ele transforma o 
+vetor do sistema y para o sistema x e verifica
 
 00:03:33.829 --> 00:03:37.969
-if we've done this right, these inner two
-indices must be the same, we can think of
+se fizemos isso direito, esses dois índices
+devem ser os mesmos, nós podemos pensar em
 
 00:03:37.969 --> 00:03:40.710
-them as effectively cancelling out.
+efetivamente cancelá-los. 
 
 00:03:40.710 --> 00:03:43.610
-And these two leading indices must be the
-same.
+E esses dois principais índices devem ser 
+os mesmos.
 
 00:03:43.610 --> 00:03:47.360
-These are very simple checks that we can use
-to ensure that we've written our expressions
+Essas são verificações muito simples que podemos 
+usar para garantir que escrevemos nossas expressões
 
 00:03:47.360 --> 00:03:49.329
-down correctly.
+corretamente.
 
 00:03:49.329 --> 00:03:53.590
-Here's a very complex example where I have
-a large number of 3-dimensional coordinate
+Aqui está um exemplo muito complexo onde eu tenho 
+um grande número de um sistema tridimensional de
 
 00:03:53.590 --> 00:03:56.270
-frames representing some robotics scenario.
+coordenadas representando algum cenário de robótica.
 
 00:03:56.270 --> 00:03:58.250
-I’ve got a world coordinate frame.
+Eu tenho um sistema de coordenadas global.
 
 00:03:58.250 --> 00:04:00.439
-I've got a camera that's fixed in the world.
+Eu tenho uma câmera que está fixa no ambiente.
 
 00:04:00.439 --> 00:04:01.682
-I've got a robot.
+Eu tenho um robô.
 
 00:04:01.682 --> 00:04:05.189
-There's a camera attached to the robot and
-there's an object in the world that the robot
+Há uma câmera conectada ao robô e há um 
+objeto conectado ao ambiente que o robô
 
 00:04:05.189 --> 00:04:08.510
-is looking at and might want to pick up.
+está olhando e pode querer pegar.
 
 00:04:08.510 --> 00:04:13.060
-Just as for the 2-dimensional case, we can
-represent this by a pose-graph.
+Assim como no caso bidimensional, podemos
+representar isso por um gráfico de pose.
 
 00:04:13.060 --> 00:04:18.650
-Each node, each blue circle here represents
-a particular coordinate frame and the edges
+Cada nó, cada círculo azul aqui representa
+um sistema de coordenadas específico e o canto
 
 00:04:18.650 --> 00:04:22.750
-of the graph represent the relative poses.
+do gráfico represente as poses relativas.
 
 00:04:22.750 --> 00:04:27.470
-From this pose graph representation, I can
-write an expression something like this and
+A partir dessa representação gráfica de pose, 
+eu posso escrever alguma expressão como essa e
 
 00:04:27.470 --> 00:04:31.310
-to check that it's correct, we can look at
-it graphically in the pose-graph.
+verificar se está correto, podemos olhar
+graficamente no gráfico de pose.
 
 00:04:31.310 --> 00:04:36.200
-The left hand side of the expression is shown
-in red and the right hand side of the expression
+O lado esquerdo da expressão é exibido
+em vermelho e o lado direito da expressão
 
 00:04:36.200 --> 00:04:37.620
-is shown in blue.
+é exibido em azul.
 
