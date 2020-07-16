@@ -44,16 +44,25 @@ About the Corke Videos from the Academy Robotics every two-three weeks the peopl
 
 
 * Project Activity
-_*IR1*_  - [done]
-_*IR2*_  - [done]
+_*IR1*_  - `done`
+_*IR2*_  - `done`
+
 _*IR3*_  - in progress
+
 _*IR4*_  - in progress
+
 _*IR5*_  - in progress
+
 _*IR6*_  - in progress
+
 _*IR7*_  - in progress
+
 _*IR8*_  - in progress
+
 _*IR9*_  - in progress
+
 _*IR10*_ - in progress
+
 _*IR11*_ - in progress
 
 
