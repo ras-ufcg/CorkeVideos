@@ -137,122 +137,123 @@ accelerometers. So, let’s look inside the
 box and see how an accelerometer works. And,
 
 00:03:00.290 --> 00:03:05.990
-it looks just like the example we studied
-before. It contains a mass and a spring. As
+ele se parece com o exemplo que estudamos
+antes. Ele possui uma massa e uma mola. À
 
 00:03:05.990 --> 00:03:11.500
-the body of the accelerometer accelerates
-upwards, the weight extends the spring. And,
+medida que o corpo do acelerômetro acelera
+para cima, o peso estende a mola. E,
 
 00:03:11.500 --> 00:03:17.510
-as the accelerometer decelerates, the spring
-pulls the weight upwards. So, the extension
+enquanto o acelerômetro desacelera, a mola
+puxa o peso para cima. Assim, o alargamento
 
 00:03:17.510 --> 00:03:23.170
-of the spring is linearly related to the acceleration
-of the body of the accelerometer. This is
+da mola é diretamente relacionado à aceleração
+do corpo do acelerômetro. Isso é
 
 00:03:23.170 --> 00:03:28.330
-the fundamental principle underpinning all
-acceleration sensing devices.
+o princípio fundamental por trás de
+todos os sensores de aceleração.
 
 00:03:28.330 --> 00:03:34.230
-Let’s look inside the box and, once again,
-we see a spring and a mass. The mass is often
+Vamos olhar dentro da caixa e, mais uma vez,
+vemos uma mola e uma massa. A massa é comumente
 
 00:03:34.230 --> 00:03:39.520
-referred to as the proof mass. And, in this
-example, it’s got a mass of m and the extension
+chamada de massa de prova. E, neste
+exemplo, ele possui uma massa m e o alongamento
 
 00:03:39.520 --> 00:03:44.740
-of the spring is denoted by the symbol x.
-Now, I’m going to mark the center of mass
+da mola é denotado pelo símbolo x.
+Agora, vou marcar o centro de massa
 
 00:03:44.740 --> 00:03:49.800
-of the proof mass and its displacement with
-respect to the ground, I’m going to denote it
+da massa de prova, e seu deslocamento
+em relação ao chão, vou chamá-lo
 
 00:03:49.800 --> 00:03:54.790
-by xm. And, the displacement of the body of
-the accelerometer, I’m going to denote by
+de xm. E, o deslocamento do corpo do
+acelerômetro, vou denotá-lo pelo
 
 00:03:54.790 --> 00:04:00.860
-the symbol xb. And, so the acceleration of
-the body is equal to xb double dot and I can
+símbolo xb. Então, a aceleração do corpo
+é igual à segunda derivada de xb e eu posso
 
 00:04:00.860 --> 00:04:07.150
-write a relationship between xm, xb and x.
-The spring force acting on the proof mass,
+escrever uma relação entre xm, xb e x.
+A força elástica agindo na massa de prova,
 
 00:04:07.150 --> 00:04:12.459
-I’m going to call fs, and the gravity force
-acting on the proof mass is the mass multiplied
+a chamarei de fs, e a foça gravitacional
+agindo nela é o valor da massa multiplicado
 
 00:04:12.459 --> 00:04:18.870
-by gravitational acceleration g. I can write
-Newton’s second law which relates the acceleration
+pela aceleração gravitacional g. Eu posso usar
+a segunda lei de Newton, que relaciona a aceleração
 
 00:04:18.870 --> 00:04:25.009
-of the mass to the two forces acting on at the spring force upwards and gravity acting downwards.
+da massa às duas forças agindo nela, a força elástica
+para cima e a gravitacional para baixo.
 
 00:04:25.009 --> 00:04:29.090
-And, for a spring, we know that the force is
-proportional to the extension of the spring,
+E, para a mola, sabemos que a força é
+proporcional ao seu alongamento,
 
 00:04:29.090 --> 00:04:33.919
-and we can imagine that as x increases, I’m
-extending the spring and it is pulling upwards
+e podemos imaginar que à medida que x aumenta,
+estou alongando a mola e ela está puxando para cima
 
 00:04:33.919 --> 00:04:38.930
-with a greater and greater force. Now, we
-can combine these equations and do a little
+com uma força maior e maior. Agora, nós
+podemos combinar essas equações e fazer uma
 
 00:04:38.930 --> 00:04:43.669
-bit of rearrangement and simplification. And
-now, I’m able to write an expression that
+pequena reorganização e simplificação. E
+agora, sou capaz de escrever uma expressão que
 
 00:04:43.669 --> 00:04:49.939
-relates the extension of the spring, x, to
-the acceleration of the body, a, and the gravitational
+relaciona o alongamento da mola, x, à
+aceleração do corpo, a, e à aceleração
 
 00:04:49.939 --> 00:04:55.249
-acceleration, g. It’s really important to
-note that it cannot tell the difference between
+gravitacional, g. É bem importante perceber
+que isso não nos diz a diferença entre
 
 00:04:55.249 --> 00:05:00.889
-acceleration of the body, a, or gravitational
-acceleration, g, and this is something we’ll
+aceleração do corpo, a, e aceleração
+gravitacional, g, e isso é algo que vamos
 
 00:05:00.889 --> 00:05:03.680
-return to in just a moment.
+retomar em alguns instantes.
 
 00:05:03.680 --> 00:05:08.279
-Every accelerometer has a sensitive direction
-and, typically, that’s marked on the body
+Todo acelerômetro tem uma direção sensível
+e, normalmente, isso é marcado no corpo
 
 00:05:08.279 --> 00:05:12.809
-of the accelerometer package. Now, in this
-particular example, the accelerometer measures
+do pacote do acelerômetro. Agora, neste
+exemplo em particular, o acelerômetro mede
 
 00:05:12.809 --> 00:05:18.009
-acceleration in the vertical direction, but
-it is insensitive to acceleration in the horizontal
+a aceleração na direção vertical, mas é
+insensível à aceleração na direção
 
 00:05:18.009 --> 00:05:23.180
-direction or in the direction out of the screen.
-If I place an accelerometer at rest somewhere
+horizontal ou na direção saindo da tela.
+Se eu colocar um acelerômetro em repouso em
 
 00:05:23.180 --> 00:05:29.050
-on the surface of the Earth, the accelerometer
-records an acceleration of 1g in the vertical
+algum lugar na superfície da Terra, o acelerômetro
+registraria uma aceleração de 1g na direção
 
 00:05:29.050 --> 00:05:34.279
-or upward direction and this is a little bit
-unintuitive. If I drop something, it’s going
+vertical ou para cima, e isso é um pouco
+contraintuitivo. Se eu soltar um objeto, ele
 
 00:05:34.279 --> 00:05:39.949
-to accelerate in the downward direction that
-the accelerometer measures 1g in the vertical
+acelera na direção para baixo, onde
+o acelerômetro mede 1g para cima
 
 00:05:39.949 --> 00:05:46.270
 or upward direction. And, this is a consequence
