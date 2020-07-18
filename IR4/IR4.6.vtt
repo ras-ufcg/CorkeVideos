@@ -137,129 +137,129 @@ Now, we want to convert the roll, pitch, yaw
 angle in each row of the matrix X in to a
 
 00:02:44.569 --> 00:02:45.750
-rotation matrix.
+matriz de rotação.
 
 00:02:45.750 --> 00:02:51.400
-And to do that, I’m going to use the rpy2r
-function that we looked at previously and
+E para fazer isso, vou usar a função rpy2r
+que analisamos anteriormente e
 
 00:02:51.400 --> 00:02:52.569
-I’m going to pass in X.
+vou passar X.
 
 00:02:52.569 --> 00:02:58.819
-And what the function will do in this case
-is it will convert every row of this matrix
+E o que a função fará neste caso é
+converter todas as linhas desta matriz
 
 00:02:58.819 --> 00:03:02.020
-into a rotation matrix.
+em uma matriz de rotação.
 
 00:03:02.020 --> 00:03:08.530
-The result is a rotation matrix, but the matrix
-has got dimensions of 3 x 3 x 100.
+O resultado é uma matriz de rotação, mas a matriz
+possui dimensões de 3 x 3 x 100.
 
-00:03:08.530 --> 00:03:11.600
-So we can think of it as a stack of rotation
-matrices.
+00:03:08.530 --> 00:03:11.600  
+Então, podemos pensar nisso como um conjunto
+empilhado de matrizes de rotação.
 
 00:03:11.600 --> 00:03:16.260
-So we could look at the first one in that
-stack and it’s a rotation matrix.
+Então, poderíamos olhar para o primeiro elemento
+da pilha e ele é uma matriz de rotação.
 
 00:03:16.260 --> 00:03:17.260
-It looks like this.
+Parece com isso.
 
 00:03:17.260 --> 00:03:18.900
-It’s null rotation.
+Isto é uma rotação nula.
 
 00:03:18.900 --> 00:03:20.430
-It’s a unit matrix.
+É uma matriz unitária.
 
 00:03:20.430 --> 00:03:25.580
-I could look at the 10th one in the stack
-and it looks something like this.
+Eu poderia olhar para o 10º elemento
+da pilha e pareceria algo assim.
 
 00:03:25.580 --> 00:03:29.390
-So R is a sequence of rotation matrices.
+Então R é uma sequência de matrizes de rotação.
 
 00:03:29.390 --> 00:03:37.670
-Now I can pass a sequence of rotation matrices
-like that to the function tranimate.
+Agora eu posso passar uma sequência de matrizes
+de rotação como essa para a função tranimate.
 
 00:03:37.670 --> 00:03:42.510
-What we will see is an animation showing the
-orientation of the coordinate frame changing
+O que veremos é uma animação mostrando a
+orientação do sistema de coordenadas mudando
 
 00:03:42.510 --> 00:03:48.849
-smoothly from the initial orientation specified
-in terms of roll, pitch, yaw angles to a final
+suavemente da orientação inicial especificada em 
+termos dos ângulos roll, pitch, yaw para a
 
 00:03:48.849 --> 00:03:54.990
-orientation also specified in terms of roll,
-pitch, yaw angles.
+orientação final também especificada em 
+termos dos ângulos roll, pitch, yaw.
 
 00:03:54.990 --> 00:04:01.090
-Euler angles and roll, pitch, yaw angles are
-represented as a vector of three angles.
+Ângulos de Euler e os ângulos roll, pitch e yaw
+são representados como um vetor de três ângulos.
 
 00:04:01.090 --> 00:04:05.930
-Each element of these vectors we can consider
-as a point on a circle and the path from the
+Podemos  considerar cada elemento desses vetores
+como um ponto em um círculo e o caminho do
 
 00:04:05.930 --> 00:04:11.290
-initial angle to the final angle is an arc
-on the unit circle.
+ângulo inicial para o final é um arco
+no círculo unitário.
 
 00:04:11.290 --> 00:04:15.460
-Consider now the case where we have this initial
-angle and this final angle.
+Considere agora o caso onde temos esse
+ângulo inicial e esse ângulo final.
 
 00:04:15.460 --> 00:04:21.239
-And a naive interpolation would move us from
-the initial angle to the final angle the long
+E uma interpolação natural nos moveria do
+ângulo inicial para o ângulo final ao longo
 
 00:04:21.239 --> 00:04:23.470
-way around the circle.
+do caminho do círculo.
 
 00:04:23.470 --> 00:04:27.350
-What we need to remember with angles is that
-there are always two ways to get from A to
+O que precisamos lembrar com ângulos é que
+sempre há duas maneiras de ir de A para
 
 00:04:27.350 --> 00:04:28.350
 B.
 
 00:04:28.350 --> 00:04:31.990
-There is potentially the long way and there
-is potentially the short way.
+Existe potencialmente o longo caminho
+e potencialmente o curto caminho.
 
 00:04:31.990 --> 00:04:37.070
-So when we are interpolating each element
-in our angle sequence vector, it’s important
+Então quando estamos interpolando cada elemento
+em nosso vetor da sequência de angulos, é importante
 
 00:04:37.070 --> 00:04:40.720
-that we choose the shortest path.
+que escolhamos o caminho mais curto.
 
 00:04:40.720 --> 00:04:46.350
-If we look at the angle as a function of time,
-the long path is given here in blue.
+Se olharmos para o ângulo em função do tempo,
+o caminho longo é dado aqui em azul.
 
 00:04:46.350 --> 00:04:50.500
-We see we’re moving from 2 radians to -2
-radians.
+Vemos que estamos nos movendo de 2 radianos para -2
+radianos.
 
 00:04:50.500 --> 00:04:55.970
-Whereas the short path which is shown in red
-moves through an angle of pi radians, pops
+Enquanto o caminho curto mostrado em vermelho
+se move através de um ângulo de pi radianos,
 
 00:04:55.970 --> 00:05:03.120
-back at minus pi radians and then moves quickly
-to the destination point B of a value of -2
+volta para menos pi radianos e depois se move rapidamente
+para o ponto de destino B com um valor de -2
 
 00:05:03.120 --> 00:05:04.120
-radians.
+radianos.
 
 00:05:04.120 --> 00:05:09.290
-Earlier, we introduce quaternions and this
-is the equation we used to interpolate between
+Mais cedo, introduzimos quaternos e esta é
+a equação que usamos para interpolar entre
 
 00:05:09.290 --> 00:05:10.290
 two quaternions.
