@@ -2,248 +2,248 @@ WEBVTT
 Kind: captions
 Language: pt-BR
 
-00:00:08.330 --> 00:00:12.670
+00:00:03.630 --> 00:00:07.970
 Nesta aula, vamos falar sobre como
 descrevemos a posição das coisas
 
-00:00:12.670 --> 00:00:15.620
+00:00:07.970 --> 00:00:10.920
 no mundo. Na robótica, isso é realmente 
 muito, muito importante.
 
-00:00:15.620 --> 00:00:21.110
+00:00:10.920 --> 00:00:16.410
 Por exemplo, em nosso problema de robótica,
 podemos querer descrever a posição de um robô.
 
-00:00:21.110 --> 00:00:24.650
+00:00:16.410 --> 00:00:19.950
 Podemos ainda desejar descrever a posição
 de algo com o qual o robô queira
 
-00:00:24.650 --> 00:00:29.210
+00:00:19.950 --> 00:00:24.510
 interagir. Por exemplo, talvez ele queira interagir
 com minha garrafa de água. Logo, eu preciso descrever
 
-00:00:29.210 --> 00:00:32.950
+00:00:24.510 --> 00:00:28.250
 a posição do robô, a posição da
 garrafa e eu ainda estou interessado
 
-00:00:32.950 --> 00:00:35.260
+00:00:28.250 --> 00:00:30.560
 em descrever a posição relativa.
 
-00:00:35.260 --> 00:00:38.860
+00:00:30.560 --> 00:00:34.160
 Onde está a garrafa de água em relação ao
 robô? E isso é, claramente, algo que
 
-00:00:38.860 --> 00:00:44.330
+00:00:34.160 --> 00:00:39.630
 o robô gostaria de saber, caso desejasse
 ir e pegar a garrafa.
 
-00:00:44.330 --> 00:00:49.860
+00:00:39.630 --> 00:00:45.160
 Quando se trata de descrever a posição das coisas,
 precisamos de um tipo de quadro de referência.
 
-00:00:49.860 --> 00:00:55.350
+00:00:45.160 --> 00:00:50.650
 Esse é um aspecto bem importante em descrever
 a posição das coisas no mundo. Aqui
 
-00:00:55.350 --> 00:00:59.040
+00:00:50.650 --> 00:00:54.340
 está uma imagem do nosso mundo. E uma das
 coisas que precisamos ter em mente é
 
-00:00:59.040 --> 00:01:03.930
+00:00:54.340 --> 00:00:59.230
 que nosso mundo, a superfície do nosso mundo
 está se movendo. Um ponto na superfície da Terra
 
-00:01:03.930 --> 00:01:11.860
+00:00:59.230 --> 00:01:07.160
 – o equador está se movendo perto de 500 metros
 por segundo no espaço. A Terra em si, se move
 
-00:01:11.860 --> 00:01:17.180
+00:01:07.160 --> 00:01:12.480
 numa velocidade tão alta quanto ao redor do sol.
 E ainda, nosso sistema solar se move numa velocidade
 
-00:01:17.180 --> 00:01:23.020
+00:01:12.480 --> 00:01:18.320
 altíssima ao redor do centro da galáxia.
 E a galáxia em si, se move incrivelmente
 
-00:01:23.020 --> 00:01:27.610
+00:01:18.320 --> 00:01:22.910
 rápido em direção à constelação Leo. 
 Portanto, tudo está em movimento.
 
-00:01:27.610 --> 00:01:32.610
+00:01:22.910 --> 00:01:27.910
 Se estamos tentando descrever onde as coisas
 estão, é bem importante que consideremos o
 
-00:01:32.610 --> 00:01:34.470
+00:01:27.910 --> 00:01:29.770
 quadro de referência.
 
-00:01:34.470 --> 00:01:38.310
+00:01:29.770 --> 00:01:33.610
 Tudo está se movendo, logo nós apenas temos que
 fincar, efetivamente, uma estaca no chão e dizer,
 
-00:01:38.310 --> 00:01:44.150
+00:01:33.610 --> 00:01:39.450
 "Este é o ponto de referência e decidiremos
 todas as posições relacionando-se a este
 
-00:01:44.150 --> 00:01:47.880
+00:01:39.450 --> 00:01:43.180
 ponto". Isso é exatamente o que fazemos. Vamos
 fincar uma estaca no chão. Por exemplo,
 
-00:01:47.880 --> 00:01:52.700
+00:01:43.180 --> 00:01:48.000
 pego esta placa aqui e digo, "Esta é a
 origem. Esta é a coordenada zero zero
 
-00:01:52.700 --> 00:01:55.800
+00:01:48.000 --> 00:01:51.100
 e vamos medir todas as distâncias a partir
 daqui.
 
-00:01:55.800 --> 00:02:00.909
+00:01:51.100 --> 00:01:56.209
 E vamos criar um quadro de coordenadas.
 Efetivamente, dois eixos ortogonais. Um eixo x,
 
-00:02:00.909 --> 00:02:05.530
+00:01:56.209 --> 00:02:00.830
 e um eixo y, os tipos de coisas que você
 aprende na escola. E vamos usar essas duas
 
-00:02:05.530 --> 00:02:11.319
+00:02:00.830 --> 00:02:06.619
 distâncias, a distância sobre o eixo x, e a
 distância sobre o eixo y, para assim descrever
 
-00:02:11.319 --> 00:02:14.990
+00:02:06.619 --> 00:02:10.290
 a posição de um objeto num espaço
 bidimensional.
 
-00:02:14.990 --> 00:02:18.760
+00:02:10.290 --> 00:02:14.060
 Nesta aula, Nós vamos manter as coisas
 simples. Vamos apenas considerar a posição
 
-00:02:18.760 --> 00:02:23.790
+00:02:14.060 --> 00:02:19.090
 em duas dimensões. Na próxima aula, eu vou
 intensificar um pouco mais e falar sobre posição
 
-00:02:23.790 --> 00:02:26.870
+00:02:19.090 --> 00:02:22.170
 em 3 dimensões.
 
-00:02:26.870 --> 00:02:33.360
+00:02:22.170 --> 00:02:28.660
 Prosseguindo, pontos de referências são arbitrários.
 Então, vamos falar, por um momento, sobre o sistema de
 
-00:02:33.360 --> 00:02:38.960
+00:02:28.660 --> 00:02:34.260
 sistema que usamos no nosso próprio planeta. 
 Então, temos a representação do planeta Terra
 
-00:02:38.960 --> 00:02:43.100
+00:02:34.260 --> 00:02:38.400
 E isso é uma projeção. A Terra, é claro, é uma
 esfera. Para fazer um mapa retangular
 
-00:02:43.100 --> 00:02:47.450
+00:02:38.400 --> 00:02:42.750
 Como esse devemos fazer é cortar a esfera, 
 desenrolá-la e esticá-la, só então irá parecer
 
-00:02:47.450 --> 00:02:53.930
+00:02:42.750 --> 00:02:49.230
 Com um retângulo. Colocamos algumas linhas de
 referência no globo. A mais importante delas,
 
-00:02:53.930 --> 00:02:56.480
+00:02:49.230 --> 00:02:51.780
 Talvez a mais óbvia, é o equador.
 
-00:02:56.480 --> 00:03:01.260
+00:02:51.780 --> 00:02:56.560
 Visto que a Terra é uma esfera, temos um eixo
 óbvio que é o eixo de rotação que o planeta
 
-00:03:01.260 --> 00:03:06.890
+00:02:56.560 --> 00:03:02.190
 Gira em torno e deve-se criar um plano orthogonal
 a esse eixo rotacional que corta
 
-00:03:06.890 --> 00:03:11.910
+00:03:02.190 --> 00:03:07.210
 A esfera em dois hemisférios iguais e chamamos 
 essa linha de equador e está mostrada
 
-00:03:11.910 --> 00:03:15.900
+00:03:07.210 --> 00:03:11.200
 Aqui em preto. Você pode visitar o equador quando
 puder ficar com uma perna
 
-00:03:15.900 --> 00:03:20.270
+00:03:11.200 --> 00:03:15.570
 No hemisfério norte e a outra perna no 
 hemisfério sul.
 
-00:03:20.270 --> 00:03:25.849
+00:03:15.570 --> 00:03:21.149
 Agora existe outra linha, que chamamos de 
 meridiano primário e ela passa ortogonal ao
 
-00:03:25.849 --> 00:03:30.160
+00:03:21.149 --> 00:03:25.460
 Equador e ela passa sobre o observatório de 
 Greenwich, em Londres.
 
-00:03:30.160 --> 00:03:34.770
+00:03:25.460 --> 00:03:30.070
 Essa linha é completamente arbitrária. Ela não
 precisa estar sobre o observatório de Greenwich,
 
-00:03:34.770 --> 00:03:40.099
+00:03:30.070 --> 00:03:35.399
 Mas a convenção no nosso planeta é que usamos
 a linha do observatório de Greenwich como
 
-00:03:40.099 --> 00:03:45.030
+00:03:35.399 --> 00:03:40.330
 O meridiano primário e você pode visitar Greenwich
 colocar seu pé em cada lado
 
-00:03:45.030 --> 00:03:52.250
+00:03:40.330 --> 00:03:47.550
 do meridiano primário nos hemisférios oeste e leste
 do planeta.
 
-00:03:52.250 --> 00:03:58.850
+00:03:47.550 --> 00:03:54.150
 A distância na direção horizontal é referenciada
 como longitude e a direção,
 
-00:03:58.850 --> 00:04:03.610
+00:03:54.150 --> 00:03:58.910
 A distância na outra direção, nos referimos como
 latitude. Então temos linhas de longitude
 
-00:04:03.610 --> 00:04:08.790
+00:03:58.910 --> 00:04:04.090
 E linhas de latitude que registramos na esfera e
 esses dois números, longitude
 
-00:04:08.790 --> 00:04:14.640
+00:04:04.090 --> 00:04:09.940
 E latitude, são suficientes para descrever a posição em
 qualquer ponto, qualquer lugar na superfície
 
-00:04:14.640 --> 00:04:16.570
+00:04:09.940 --> 00:04:11.870
 Do nosso planeta.
 
-00:04:16.570 --> 00:04:21.720
+00:04:11.870 --> 00:04:17.020
 Agora temos essa linha arbitrária que eu
 mencionei antes que chamei de meridiano primário
 
-00:04:21.720 --> 00:04:26.099
+00:04:17.020 --> 00:04:21.399
 Que passa pelo observatório de Greenwich. Se a
 história tivesse sido diferente, nós teríamos
 
-00:04:26.099 --> 00:04:31.509
+00:04:21.399 --> 00:04:26.809
 um meridiano primário diferente. Existe um 
 propósito para que o meridiano primário passe sobre
 
-00:04:31.509 --> 00:04:36.409
+00:04:26.809 --> 00:04:31.709
 o observatório de Paris e se você visitar Paris
 hoje, você verá a referida linha como a
 
-00:04:36.409 --> 00:04:43.410
+00:04:31.709 --> 00:04:38.710
 Linha Arago na qual esse meridiano primário não 
 existente passa pela cidade de
 
-00:04:43.410 --> 00:04:49.050
+00:04:38.710 --> 00:04:44.350
 Paris e foi nomeada depois que o astrônomo e
 matemático francês, Arago, que propôs esse
 
 
-00:04:49.050 --> 00:04:50.409
+00:04:44.350 --> 00:04:45.709
 Meridiano particular.
 
-00:04:50.409 --> 00:04:55.310
+00:04:45.709 --> 00:04:50.610
 Então, a mensagem pra levar pra casa de hoje é
 que o meridiano primário é completamente arbitrário. Isso
 
-00:04:55.310 --> 00:05:00.629
+00:04:50.610 --> 00:04:55.929
 É uma convenção em que todos concordamos. Isso útil
 ter essa convenção e é assim
 
-00:05:00.629 --> 00:05:03.679
+00:04:55.929 --> 00:04:58.979
 Como descrevemos os pontos no planeta Terra.
