@@ -262,143 +262,143 @@ Earlier, we introduce quaternions and this
 is the equation we used to interpolate between
 
 00:05:09.290 --> 00:05:10.290
-two quaternions.
+dois quatérnios.
 
 00:05:10.290 --> 00:05:15.780
-Once again, it’s a function of S and S varies
-from 0 to 1.
+Novamente, é uma função de S onde S varia
+de 0 à 1.
 
 00:05:15.780 --> 00:05:20.810
-And the important element in this equation
-is Theta and Theta is derived from the elements
+E o elemento importante nesta equação é
+Teta, onde Teta é derivado dos elementos
 
 00:05:20.810 --> 00:05:24.590
-of the initial and final quaternion.
+do quatérnio inicial e do final.
 
 00:05:24.590 --> 00:05:31.260
-This is referred to as spherical linear interpolation
-and it is the shortest and most direct path
+Isto é referido como interpolação linear esférica
+e é o menor e mais direto caminho
 
 00:05:31.260 --> 00:05:34.120
-between any two orientations.
+entre quaisquer duas orientações.
 
 00:05:34.120 --> 00:05:40.650
-And it corresponds to a constant angular velocity
-about a fixed axis in space.
+Isto corresponde a uma velocidade angular constante
+com relação a um eixo fixo no espaço.
 
 00:05:40.650 --> 00:05:45.370
-Let’s create a pair of quaternions that
-we will interpolate between.
+Criemos um par de quatérnios que 
+iremos interpolar.
 
 00:05:45.370 --> 00:05:49.410
-The first one corresponds to a null rotation.
+O primeiro corresponde a uma rotação nula.
 
 00:05:49.410 --> 00:05:52.540
-We see that it’s got a vector component
-of 0.
+Vemos que ele possui uma componente vetorial
+de 0.
 
 00:05:52.540 --> 00:05:59.261
-The second quaternion is a representation
-of a rotation about the x-axis by pi on 2.
+O segundo quatérnio é a representação de uma 
+rotação com relação ao eixo x de pi sobre 2
 
 00:05:59.261 --> 00:06:01.680
-So, we’re going to pass in a rotation matrix.
+Então, nós vamos passar a matrix de rotação.
 
 00:06:01.680 --> 00:06:05.200
-The quaternion class is going to turn that
-into a quaternion.
+A classe de quatérnios irá transformar aquilo
+em um quatérnio.
 
 00:06:05.200 --> 00:06:11.270
-Now, there are two quaternions in our workspace,
-one corresponding to no rotation, one corresponding
+Agora, existem dois quatérnios em nosso workspace,
+um correspondendo a rotação nula, um correspondendo
 
 00:06:11.270 --> 00:06:15.490
-to rotation of 90 degrees about the x-axis.
+a rotação de 90 graus em relação ao eixo x.
 
 00:06:15.490 --> 00:06:18.820
-To interpolate quaternions, we use the interp
-method.
+Para interpolar quatérnios, usamo o método
+interp.
 
 00:06:18.820 --> 00:06:21.350
-We apply that to the initial quaternion.
+Aplicamos aquilo ao quatérnio inicial.
 
 00:06:21.350 --> 00:06:28.970
-And, the first argument is the final quaternion
-and the second argument is the position along
+Assim, o primeiro argumento é o quatérnio final
+e o segundo argumento é a posição ao longo de
 
 00:06:28.970 --> 00:06:29.970
-a trajectory.
+uma trajetória.
 
 00:06:29.970 --> 00:06:32.400
-So 0 is the first point on the trajectory.
+Portanto 0 é o primeiro ponto na trajetória.
 
 00:06:32.400 --> 00:06:38.690
-That’s the initial condition, the initial
-quaternion which is the null rotation.
+Esta é a condição inicial, o quatérnio
+inicial que corresponde à rotação nula.
 
 00:06:38.690 --> 00:06:44.639
-I can repeat that and ask for the final point
-in the interpolation and that is equal to
+Eu posso repetir aquilo e pedir o ponto final na
+interpolação e isto será igual ao
 
 00:06:44.639 --> 00:06:47.100
-the second quaternion.
+segundo quatérnio.
 
 00:06:47.100 --> 00:06:53.540
-I can ask now for a point that’s midway
-between 0.5 and this is the interpolated quaternion.
+Agora posso pedir por um ponto médio, 0.5.
+E este é o quatérnio interpolado.
 
 00:06:53.540 --> 00:06:59.419
-And of course, I can turn that back in to
-a rotation matrix using the R method.
+E é claro, posso transformar aquilo de volta 
+a uma matrix de rotação, usando o método R.
 
 00:06:59.419 --> 00:07:05.870
-Now, we might like to compare the effect of
-the different types of rotational interpolation
+Agora, poderíamos querer comparar o efeito dos 
+diferentes tipos de interpolações rotacionais
 
 00:07:05.870 --> 00:07:07.130
-and that’s a little bit difficult.
+e isto é um tanto complicado.
 
 00:07:07.130 --> 00:07:10.669
-It’s hard to visualize a particular rotation.
+É dificil visualizar uma rotação em particular.
 
 00:07:10.669 --> 00:07:16.270
-But, one way we can do it is to consider the
-effect of a rotation on a particular vector.
+Porém, uma forma que podemos fazer isto é considerar
+o efeito de uma rotação em um vetor em particular.
 
 00:07:16.270 --> 00:07:22.199
-So here, I have chosen the x-axis which I
-can represent by a vector 1, 0, 0.
+Aqui, escolhi o eixo x, o qual represento
+por um vetor 1, 0, 0.
 
 00:07:22.199 --> 00:07:28.100
-And I can apply these three different rotation
-sequences to that vector.
+E posso aplicar essas três diferentes sequências
+de rotação ao vetor.
 
 00:07:28.100 --> 00:07:34.240
-I can interpolate the initial and final Euler
-angles, the initial and final roll, pitch,
+Eu posso interpolar o ângulo de Euler inicial
+e o final, o ângulo roll, pitch, yaw inicial 
 
 00:07:34.240 --> 00:07:40.000
-yaw angles or the initial and final quaternions
-and they are shown by the different colored
+e o final ou o quatérnio inicial e o final, e eles
+são exibidos em segmentos de diferentes
 
 00:07:40.000 --> 00:07:42.490
-parts plotted here on the sphere.
+cores, plotados nesta esfera.
 
 00:07:42.490 --> 00:07:47.080
-The quaternion path shown in white is the
-shortest and most direct path.
+O caminho do quatérnio, exibido em branco,
+é o mais curto e mais direto.
 
 00:07:47.080 --> 00:07:51.780
-We can see that the roll, pitch, yaw interpolation
-path has deviated significantly from it.
+Podemos ver que o caminho da interpolação roll,
+pitch, yaw desviou significativamente deste.
 
 00:07:51.780 --> 00:07:57.199
-It has taken a more indirect and longer path
-to get from the initial orientation to the
+Ele tomou um caminho mais indireto e longo
+para ir da orientação inicial à
 
 00:07:57.199 --> 00:07:58.840
-final orientation.
+orientação final.
 
 00:07:58.840 --> 00:08:01.750
-Quaternion interpolation is the gold standard.
+Intepolação em quatérniso é o padrão-ouro.
 
