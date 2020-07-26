@@ -3,104 +3,104 @@ Kind: captions
 Language: en
 
 00:00:07.609 --> 00:00:12.869
-In the last lecture we talked about how we
-described the position of objects in a two
+Na última aula nos falos sobre como nós
+descrevemos uma posição de objetos em um mundo de
 
 00:00:12.869 --> 00:00:14.050
-dimensional world.
+duas dimensões.
 
 00:00:14.050 --> 00:00:18.380
-We used the example, for instance, a robot
-and we created a two dimensional coordinate
+Nós usamos o exemplo, por sua vez, de um robô
+e nós criamos um sistema de coordenadas de duas
 
 00:00:18.380 --> 00:00:19.380
-frame.
+dimensões.
 
 00:00:19.380 --> 00:00:23.210
-We placed the coordinate frame at a reference
-location and we can describe the position
+Nós colocamos o sistema de coordenadas em um local
+de referência e nós descrevemos a posição
 
 00:00:23.210 --> 00:00:26.520
-of the robot with respect to that co-ordinate
-frame.
+do robô com relação a aquele sistema de
+coordenadas.
 
 00:00:26.520 --> 00:00:31.140
-We also talked about how we describe the orientation
-of the object; that is which way the robot
+Nós também falamos sobre como descremos a orientação
+de um objeto; que é a direção que o robô
 
 00:00:31.140 --> 00:00:35.469
-is pointing with respect to the axes on this
-co-ordinate frame.
+está apontando com relação aos eixos nesse
+sistema de coordenadas.
 
 00:00:35.469 --> 00:00:39.489
-Now what we are going to do is to kick it
-up a level of complexity and introduce the
+Agora o que vamos fazer é aumentar o nível de
+complexidade e introduzir a
 
 00:00:39.489 --> 00:00:40.570
-third dimension.
+terceira dimensão.
 
 00:00:40.570 --> 00:00:44.910
-So for most robotics the third dimension is
-really important.
+Para boa parte da robótica a terceira dimensão
+é realmente importante.
 
 00:00:44.910 --> 00:00:48.350
-The robots hand for instance, in any sort
-of real robot, the hand is going to move in
+As mãos robóticas, por exemplo, em qualquer tipo
+de robô real, a mão ira se movimentar em
 
 00:00:48.350 --> 00:00:51.460
-a plane, but it is also going to be able to
-move up and down.
+um plano, mas também conseguirá se mover para
+cima e para baixo.
 
 00:00:51.460 --> 00:00:56.720
-So we need to be able to describe the position
-and orientation of bodies in three-dimensional
+Assim nós precisamos conseguir descrever a posição
+e orientação dos corpos no espaço
 
 00:00:56.720 --> 00:00:57.720
-space.
+tridimensional.
 
 00:00:57.720 --> 00:01:01.329
-But there are also a lot of robots that move
-in three-dimensional space.
+Mas tambem existem muitos robôs que se movimentam
+em um espaço tridimensional.
 
 00:01:01.329 --> 00:01:05.110
-So here I have a model airplane, or course
-an airplane flies through the air.
+Então aqui eu tenho um modelo de avião, e claro
+que um avião voa através do ar.
 
 00:01:05.110 --> 00:01:06.409
-It goes up and it goes down.
+Ele vai para cima e para baixo.
 
 00:01:06.409 --> 00:01:11.130
-It can move left and right, and it can also
-rotate in a number of interesting ways.
+Ele pode se mover para esquerda e para direita, e também pode
+rotacional em uma variedade de maneiras interessantes.
 
 00:01:11.130 --> 00:01:18.200
-It can pitch up and down, it can yaw like
-this, and it can roll like this.
+Ele pode rotacionar para cima e para baixo, pode guinar desse
+jeito, e pode rolar assim.
 
 00:01:18.200 --> 00:01:23.280
-So underwater robots are another example,
-they are a bit like this but instead of flying
+Então, robôs aquáticos são outro exemplo,
+eles são um pouco desse jeito mas em vez de voar
 
 00:01:23.280 --> 00:01:25.390
-through the air, they are flying through the
-water.
+através do ar, eles estão voando através da
+água.
 
 00:01:25.390 --> 00:01:29.690
-So these are two really important classes
-of robots today, robots that fly and robots
+Assim esses são duas classes de robôs muito ro
+importantes atualmente, robôs que podem voar e robôs
 
 00:01:29.690 --> 00:01:34.700
-that swim under the water and their motion
-is described in terms of three-dimensional
+que nadam debaixo dágua e seu movimento 
+é descrito em termos de um espaço
 
 00:01:34.700 --> 00:01:35.700
-space.
+tridimesional.
 
 00:01:35.700 --> 00:01:39.619
-Where perhaps a simple wheeled robot like this,
-we could get by with just describing it’s
+Onde talvez em um simples robô com rodas como esse,
+nós podemos se virar apenas descrevendo sua
 
 00:01:39.619 --> 00:01:43.380
-position and it’s orientation in terms of
-two-dimensional space.
+posição e orientação em termos de
+um espaço bidimensional.
 
