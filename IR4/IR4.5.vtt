@@ -3,126 +3,126 @@ Kind: captions
 Language: en
 
 00:00:03.649 --> 00:00:08.139
-Many machines and robots have got multiple
-axis of motion.
+Muitas maquinas e robôs tem múltiplos
+eixos de movimento.
 
 00:00:08.139 --> 00:00:14.150
-An industrial robot typically has six joints
-and they have to move smoothly and in a coordinated
+Um robô industrial tipicamente tem seis juntas
+e eles tem que se mover suavemente e de uma maneira
 
 00:00:14.150 --> 00:00:15.150
-fashion.
+coordenada.
 
 00:00:15.150 --> 00:00:19.620
-A technique we can use to help us is linear
-interpolation.
+Uma técnica que podemos usar para nos ajudar é interpolação
+linear.
 
 00:00:19.620 --> 00:00:25.619
-Consider this simple function here where x
-of s is a function of an initial value of
+Considere essa simples função aqui onde x
+de s é uma função com um valor inicial de
 
 00:00:25.619 --> 00:00:27.619
-x and a final value of x.
+x e um valor final de x.
 
 00:00:27.619 --> 00:00:30.009
-And, s varies from 0 to 1.
+E, s varia de 0 até 1.
 
 00:00:30.009 --> 00:00:34.120
-In this case, then, x of s is some sort of
-intermediate value.
+Nesse caso, então, x de s é um time de
+valor intermediário.
 
 00:00:34.120 --> 00:00:41.520
-X of 0 is the initial value, x of 1 is the
-final value, and x of 0.5 is halfway in between
+X de 0 é o valor iicial, x de 1 é o
+valor final, e x de 0.5 é a metade entre
 
 00:00:41.520 --> 00:00:43.580
-the initial and final value.
+o valor inicial e final.
 
 00:00:43.580 --> 00:00:48.140
-Now, x could be a vector which makes the multi-dimensional
-case quite straightforward.
+Agora, x pode ser um vetor, o que faz o caso
+multi-dimensional bem direto.
 
 00:00:48.140 --> 00:00:54.270
-For instance, it could be the xyz position
-of some sort of machine or simple robot.
+Por exemplo, ele poderia ser a posição xyz
+de algum tipo de máquina ou robô simples.
 
 00:00:54.270 --> 00:00:59.420
-So, x is a vector with the three elements
-xyz and we can interpolate linearly between
+Assim, x é um vetor com três elementos
+xyz e nós podemos interpolar linearmente entre
 
 00:00:59.420 --> 00:01:04.330
-an initial position, an initial xyz and a
-final xyz.
+uma posição inicial, um xyz inicial e um
+xyz final.
 
 00:01:04.330 --> 00:01:08.190
-S is a scalar which varies from 0 to 1.
+S é um escalar que varia de 0 a 1.
 
 00:01:08.190 --> 00:01:09.540
-So, what is s?
+Então, o que é s?
 
 00:01:09.540 --> 00:01:13.500
-Well, S is a scalar that varies smoothly from
-0 to 1.
+Bem, S é um escalar que varia suavemente entre 
+0 e 1.
 
 00:01:13.500 --> 00:01:19.680
-And, if S is a smooth function of time, then
-x will be a smooth function of time since
+E, se S é uma função suave do tempo, então
+x será uma função suave do tempo uma vez que
 
 00:01:19.680 --> 00:01:26.100
-x is simply a linear function of S. We already
-know how to make a smoothly varying function
+x é simplesmente uma função linear de S. Nós já
+sabemos como fazer uma função do tempo variante
 
 00:01:26.100 --> 00:01:27.100
-of time.
+e suave.
 
 00:01:27.100 --> 00:01:31.909
-It can be a polynomial function of time or
-it could be a trapezoidal velocity profile
+Ela pode ser uma função polynomial do tempo ou
+ela pode ser uma função do tempo de perfil de
 
 00:01:31.909 --> 00:01:33.310
-function of time.
+velocidade trapezoidal.
 
 00:01:33.310 --> 00:01:35.960
-Let’s look at a two-dimensional example.
+Vejamos um exemplo bidimensional.
 
 00:01:35.960 --> 00:01:40.960
-We want to move in the xy plane and I’ve
-got a starting point and an ending point.
+Nos queremos mover em um plano xy e eu
+adquiri um ponto inicial e um ponto final.
 
 00:01:40.960 --> 00:01:44.720
-Now, I want to move in a straight line from
-the start to the end.
+Agora, eu quero mover em uma linha reta entre
+o início e o fim.
 
 00:01:44.720 --> 00:01:49.110
-I’m going to assign some arbitrary coordinates
-to the start and the end.
+Eu vou atribuir coordenadas arbitrárias
+ao início e ao fim.
 
 00:01:49.110 --> 00:01:54.370
-We’re back in MATLAB and now our first point
-is a vector, not a scalar.
+Nós voltamos ao MATLAB e agora nosso primeiro ponto
+é um vetor, não um escalar.
 
 00:01:54.370 --> 00:02:03.560
-So, the first point is the coordinate 10,
-20, and our last point is a vector 30, 10.
+Assim, o primeiro ponto é a coordenada 10,
+20, e nosso último ponto é o vetor 30,10.
 
 00:02:03.560 --> 00:02:10.069
-And this time, I’m going to use the function
-jtraj, stands for joint interpolated trajectory.
+E dessa vez, eu vou usar a função
+jtraj, de trajetória interpolada de juntas.
 
 00:02:10.069 --> 00:02:18.170
-I’m going to move from the first point to
-the last point in 50 time steps, and we see
+Eu vou mover do primeiro ponto para
+o último ponto em 50 passos de tempo, e nós vemos
 
 00:02:18.170 --> 00:02:19.659
-it all scrolling past.
+tudo passando.
 
 00:02:19.659 --> 00:02:26.630
-If we scroll back, we see that the first point
-has indeed got the vector value of 10 and
+Se nós voltarmos, nós vemos que o primeiro ponto
+realmente moveu o vetor do valor de 10 e
 
 00:02:26.630 --> 00:02:31.870
-20, and the last point has got the value of
-30 and 10.
+20, e o último ponto tem o valor de 
+30 e 10.
 
 00:02:31.870 --> 00:02:39.079
 Let’s plot x as a function of time and we
