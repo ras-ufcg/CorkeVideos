@@ -1,140 +1,140 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.439 --> 00:00:07.500
-We talked about how we can linearly interpolate
-position.
+Nós falamos sobre como podemos
+interpolar linearmente a posição.
 
 00:00:07.500 --> 00:00:10.660
-What do we do for the case of rotations?
+O que fazemos no caso de rotações?
 
 00:00:10.660 --> 00:00:16.580
-We could naively rewrite our expression like
-this where we have the initial rotation, the
+Poderíamos ingenuamente reescrever nossa expressão
+como esta onde temos o valor inicial da rotação, a
 
 00:00:16.580 --> 00:00:19.380
-final rotation and the intermediate rotation.
+rotação final e a rotação intermediária.
 
 00:00:19.380 --> 00:00:21.960
-But, there’s a problem with this scheme.
+Mas, há um problema com este esquema.
 
 00:00:21.960 --> 00:00:25.620
-A rotation matrix is not just any old 3 x 3
-matrix.
+Uma matriz de rotação não é simplesmente 
+uma matriz 3x3 antiga
 
 00:00:25.620 --> 00:00:27.100
-It’s a special matrix.
+É uma matriz especial.
 
 00:00:27.100 --> 00:00:32.990
-It’s an orthogonal matrix and that means
-that each column in the matrix is a unit vector.
+É uma matriz ortogonal o que significa que
+cada coluna na matriz é um vetor unitário
 
 00:00:32.990 --> 00:00:39.519
-So if I add two orthogonal matrices, the result
-will never be an orthogonal matrix because
+Então, se eu adicionar duas matrizes ortogonais, o
+resultado nunca vai ser uma matriz ortogonal porque
 
 00:00:39.519 --> 00:00:44.480
-if I can see that each column, the sum of
-two unit vectors, can never ever be a unit
+se eu puder vê cada coluna, a soma de
+dois vetores unitários, nunca pode ser um
 
 00:00:44.480 --> 00:00:45.480
-vector.
+vetor unitário
 
 00:00:45.480 --> 00:00:50.269
-So this is not a strategy we can use to interpolate
-rotations.
+Logo, esta não é uma estratégia que 
+podemos usar para interpolar rotações
 
 00:00:50.269 --> 00:00:54.819
-We need to consider other ways of representing
-rotation that we can interpolate.
+Precisamos considerar outras maneiras de 
+representar rotações que podemos interpolar
 
 00:00:54.819 --> 00:01:00.679
-So, one way to achieve this is to recall that
-this interpolation formula works for vectors
+Portanto, uma maneira de conseguir isso é lembrar que
+essa fórmula de interpolação trabalha com vetores
 
 00:01:00.679 --> 00:01:05.640
-and we can represent a rotation in terms of
-a vector of angles.
+e podemos representar uma rotação em 
+termos de um vetor de ângulos
 
 00:01:05.640 --> 00:01:10.500
-It can be three Euler angles or it could be
-three roll, pitch, yaw angles.
+Pode ser três ângulos de Euler ou pode ser
+três ângulos de roll, pitch e yaw
 
 00:01:10.500 --> 00:01:16.740
-So if we consider this vector of angles as
-the symbol Gamma, then we can introduce the
+Então, se nós consideramos este vetor de ângulos
+com o simbolo Gama, então podemos introduzir os
 
 00:01:16.740 --> 00:01:22.440
-initial angles, the final angles, and then
-we can interpolate the intermediate angles.
+ângulos iniciais, os ângulos finais, e finalmente
+podemos interpolar os ângulos intermediários 
 
 00:01:22.440 --> 00:01:26.490
-If our initial and final orientations are
-given in terms of rotation matrices, then
+Se nossas orientações inicial e final são
+dadas em termos de matrizes de rotação, então
 
 00:01:26.490 --> 00:01:31.850
-we convert those two into initial set of angles
-and a final set of angles.
+as convertemos em um conjunto inicial
+e um conjunto final de ângulos
 
 00:01:31.850 --> 00:01:37.820
-We interpolate the intermediate angles and
-we can convert those back to a rotation matrix
+Nós interpolamos os ângulos intermediários e
+podemos convertê-los de volta em uma matriz de rotação
 
 00:01:37.820 --> 00:01:39.240
-if we so desire.
+Se assim desejamos.
 
 00:01:39.240 --> 00:01:44.420
-We’re going to use the function jtraj that
-we looked at a moment ago to interpolate roll,
+Vamos usar a função jtraj, que vimos há
+pouco para interpolar os ângulos de roll
 
 00:01:44.420 --> 00:01:45.580
-pitch, yaw angles.
+pitch e yaw.
 
 00:01:45.580 --> 00:01:52.280
-I’m going to put the result into the workspace
-variable X. Invoke the jtraj function.
+Eu vou colocar o resultado na variável da área 
+de trabalho X. Chame a função jtraj. 
 
 00:01:52.280 --> 00:01:57.500
-I’m going to interpolate between a set of
-roll, pitch, yaw angles and roll equal to
+Eu vou interpolar entre um conjunto de ângulos 
+de roll, pitch e yaw e roll igual a 
 
 00:01:57.500 --> 00:02:06.480
-0 and the final set of roll, pitch, yaw angles
-which are equal to minus pi on 2, plus pi
+0 e o conjunto final de ângulos roll, pitch e yaw
+iguais a menos pi sobre 2, mais pi 
 
 00:02:06.480 --> 00:02:09.410
-on 2 and pi on 4.
+sobre 2 e pi sobre 4.
 
 00:02:09.410 --> 00:02:15.620
-And, I’m going to do this interpolation
-over a hundred time steps.
+E, eu vou fazer essa interpolação mais de
+cem etapas de tempo.
 
 00:02:15.620 --> 00:02:20.420
-The result is a new variable in our workspace
-that’s got 100 rows, each row corresponds
+O resultado é uma nova variável em nossa área de
+trabalho que tem 100 linhas, cada linha corresponde
 
 00:02:20.420 --> 00:02:21.420
-to a time step.
+a uma etapa de tempo.
 
 00:02:21.420 --> 00:02:28.810
-And, it has got three columns and the columns
-correspond to the roll, pitch and yaw angles.
+E, temos três colunas e as colunas correspondem
+aos ângulos de roll, pitch e yaw.
 
 00:02:28.810 --> 00:02:32.600
-I can plot this roll, pitch, yaw angles versus
-time.
+Eu posso plotar estes ângulos de 
+roll, pitch e yaw pelo tempo
 
 00:02:32.600 --> 00:02:37.370
-Here we can see what they look like, moving
-smoothly from the initial value to the final
+Aqui podemos vê como eles se movem,
+do valor inicial para o 
 
 00:02:37.370 --> 00:02:38.370
-value.
+valor final.
 
 00:02:38.370 --> 00:02:44.569
-Now, we want to convert the roll, pitch, yaw
-angle in each row of the matrix X in to a
+Agora, nós queremos converter o ângulo de roll,
+pitch e yaw em cada linha da matriz X em uma
 
 00:02:44.569 --> 00:02:45.750
 rotation matrix.
