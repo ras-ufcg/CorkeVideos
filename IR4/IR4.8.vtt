@@ -1,126 +1,126 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.720 --> 00:00:07.480
-Let’s summarize some of the main ideas that
-we have learned in this lecture. There is
+Vamos resumir algumas da ideias principais
+que aprendemos nesse curso. Existe
 
 00:00:07.480 --> 00:00:12.910
-an important distinction between a path and
-a trajectory. A path is a spatial construct
+uma importante distinção entre um caminho é uma
+trajetória. Um caminho é uma construção espacial
 
 00:00:12.910 --> 00:00:19.839
-and tells us how we get from A to B through
-the world. A trajectory is a path plus a schedule.
+e nos informa como chegamos de A até B através do mundo.
+Uma trajetória é um caminho com um cronograma.
 
 00:00:19.839 --> 00:00:24.400
-It tells us how quickly we should move along
-the path, at what time we should be at what
+Ela nos informa quão rápido devemos no mover ao longo
+do caminho, em que tempo devemos estar em um
 
 00:00:24.400 --> 00:00:30.019
-point along the path. It’s important with
-trajectories that the position and orientation
+ponto ao longo do caminho. É importante nas
+trajetórias que a posição e orientação
 
 00:00:30.019 --> 00:00:34.710
-vary smoothly with time. We do this for a
-number of reasons. We want to reduce the maximum
+variem suavemente no tempo. Nós fazemos isso por 
+uma série de razões. Queremos reduzir a aceleração
 
 00:00:34.710 --> 00:00:39.540
-acceleration on the robot, allows us to reduce
-the size of the motors, and it perhaps reduces
+máxima no robô, nos permitindo reduzir o 
+tamanho dos motores, e isso talvez reduza 
 
 00:00:39.540 --> 00:00:44.190
-vibrations induced in the structure of the
-robot. What the smooth mean would mean that
+as vibrações induzidas na estrutura do robô.
+O que suave significa? significa que
 
 00:00:44.190 --> 00:00:49.730
-the position is continuous as a function of
-time and velocity is continuous as a function
+a posição é contínua assim como uma função de tem-
+po e a velocidade é contínua assim como uma função
 
 00:00:49.730 --> 00:00:55.120
-of time. And, we would hope that the acceleration
-is continuous and perhaps the jerk is continuous
+de tempo. E, esperaríamos que a aceleração seja
+contínua e talvez a arrancada seja contínua
 
 00:00:55.120 --> 00:01:00.480
-and so on up through higher-order derivatives.
-In robotics, a common technique for generating
+e assim em diante através das derivadas de maior
+ordem. Em robótica, uma técnica comum para gerar
 
 00:01:00.480 --> 00:01:07.100
-a trajectory is to use a polynomial, typically,
-a quintic polynomial which has got six coefficients
+uma trajetória é usar uma polinomial, tipicamente,
+uma polinomial de quinta ordem que tem seis coeficientes
 
 00:01:07.100 --> 00:01:13.170
-which lets us independently specify six boundary
-conditions, the initial and final position,
+os quais nos permitem independentemente especificar
+seis condições de limites, a posição inicial e final,
 
 00:01:13.170 --> 00:01:19.030
-initial and final velocity, initial and final
-acceleration. And, we can write this simple
+a velocidade inicial e final, a aceleração
+inicial e final. E, podemos escrever essa simples
 
 00:01:19.030 --> 00:01:24.930
-matrix relationship which gives us the coefficient
-values as a function of the trajectory time,
+relação de matrizes que nos dá os valores dos
+coreficientes como uma função do tempo de trajetória,
 
 00:01:24.930 --> 00:01:31.490
-capital T, and the boundary conditions. There
-is, however, a performance problem with polynomial
+T maiúsculo, e as condições de limite. Existe, 
+entretanto, um problema de performance com trajetórias
 
 00:01:31.490 --> 00:01:37.520
-trajectories and that is that the peak velocity
-is almost twice the average velocity and we’re
+polinomiais, que a velocidade de pico é quase
+sempre duas vezes a velocidade média, e estamos
 
 00:01:37.520 --> 00:01:41.870
-wasting motor performance and effectively
-taking twice as long to get where we want
+perdendo performance do motor e efetivamente levando
+duas vezes mais tempo para chegar onde queremos
 
 00:01:41.870 --> 00:01:45.260
-to get to.
-A more efficient trajectory is what’s called
+chegar.
+Uma trajetória mais eficiente é a que é chamada
 
 00:01:45.260 --> 00:01:51.140
-the trapezoidal profile where we have some
-acceleration phase followed by a coasting
+de perfil trapezoidal, onde temos uma
+fase de aceleração seguida de uma fase de
 
 00:01:51.140 --> 00:01:57.330
-or constant velocity phase, followed by a
-deceleration phase. A slight disadvantage
+velocidade de inércia ou constante, seguida de
+uma fase de desaceleração. Uma leve desvantagem
 
 00:01:57.330 --> 00:02:03.260
-of the trapezoidal profile is that the second
-derivative, the acceleration is discontinuous,
+do perfil trapezoidal é que a segunda 
+derivada, a aceleração, é descontínua,
 
 00:02:03.260 --> 00:02:08.670
-but it has many, many other virtues and very,
-very commonly used in robotics and machine
+mas existem muitas, muitas outras qualidades e é
+muito, muito usado em robótica e controle de máquinas-
 
 00:02:08.670 --> 00:02:14.110
-tool control. If we want to move from one
-point to another through a few intermediate
+ferramenta. Se queremos nos mover de um
+ponto para outro através de alguns pontos
 
 00:02:14.110 --> 00:02:20.590
-points which we call via points or way points,
-then in order to achieve continuity in the
+intermediários que chamamos de pontos de via
+ou de passagem, então a fim de atingir continuidade
 
 00:02:20.590 --> 00:02:25.650
-path, we need to introduce what are called
-blends and they are shown here in red. We
+no caminho, precisamos introduzir o que chamamos de
+harmonizadores e eles estão mostrados aqui em vermelho.
 
 00:02:25.650 --> 00:02:30.330
-introduce an acceleration period to transition
-from the velocity heading towards, for instance,
+Nós introduzimos um período de aceleração 
+transição da velocidade para chegar, por exemplo,
 
 00:02:30.330 --> 00:02:35.880
-point 2 in to the velocity we need to head
-towards point 3. The disadvantage being we
+o ponto 2, para a velocidade que precisamos
+para chegar no ponto 3. A desvantagem é que 
 
 00:02:35.880 --> 00:02:38.940
-never actually get to the point that we’re
-heading for.
+nunca chegamos de fato ao ponto que queremo
+ir.
 
 00:02:38.940 --> 00:02:43.860
-If the acceleration time is small, we get
-very close to the via points, but the acceleration
+Se o tempo de aceleração é pequeno, chegamos
+bem perto dos pontos de via, mas a aceleração
 
 00:02:43.860 --> 00:02:49.580
 on the machine is high. Acceleration time
