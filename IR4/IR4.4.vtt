@@ -147,135 +147,135 @@ The first point we want to visit has got a
 value of 10.
 
 00:02:27.900 --> 00:02:31.420
-The last point that I visit has got a value
-of 30.
+O último ponto que eu visito tem o valor
+de 30.
 
 00:02:31.420 --> 00:02:39.529
-And, the via points I’m going to set as
-40, 10 and the last one.
+E, os pontos de passagem que vou definir como
+40, 10 e o último.
 
 00:02:39.529 --> 00:02:44.879
-To compute a trajectory with via points, I
-used the Toolbox function mstraj and it’s
+Para calcular a trajetória com pontos de passagem,eu
+usei a função toolbox mstraj e
 
 00:02:44.879 --> 00:02:46.719
-got rather a lot of arguments.
+tem muitos argumentos.
 
 00:02:46.719 --> 00:02:48.790
-First argument is the via points.
+O primeiro argumento são os pontos de passagem.
 
 00:02:48.790 --> 00:02:54.469
-The next argument is the velocity at which
-we move, and it’s going to be one unit per
+O próximo argumento é a velocidade na qual
+no movemos, e vai ser uma unidade por
 
 00:02:54.469 --> 00:02:55.469
-second.
+segundo.
 
 00:02:55.469 --> 00:02:59.139
-The third argument I’m going to set to null
-for the time being.
+O terceiro argumento eu vou colocar como nulo
+por enquanto. 
 
 00:02:59.139 --> 00:03:03.569
-And, I’m going to put in the first location
-that we want to visit.
+E, vou colocar no primeiro local  
+que queremos visitar.
 
 00:03:03.569 --> 00:03:11.249
-I’m going to put in the time interval and
-I’m going to put in the acceleration time.
+Vou colocar o intervalo de tempo e
+o de aceleração.
 
 00:03:11.249 --> 00:03:13.769
-And, here is our trajectory.
+E, aqui está nossa trajetória.
 
 00:03:13.769 --> 00:03:18.849
-We’ve gone from 10 up to 40, back down to
-10 and up to 30.
+Passamos de 10 para 40, voltamos para
+10 e fomos até 30.
 
 00:03:18.849 --> 00:03:22.980
-Now, let’s look at what happens when we
-adjust some of the parameters.
+Agora, vamos ver o que acontece quando
+ajustamos alguns dos parâmetros.
 
 00:03:22.980 --> 00:03:25.930
-The first thing I’m going to do is to increase
-the acceleration time.
+A primeira coisa que vou fazer é aumentar
+o tempo de aceleração.
 
 00:03:25.930 --> 00:03:30.799
-So, I’m going to increase it from 2 to 4
-and we can see that the trajectory has become
+Então, aumentarei de 2 até 4
+e podemos ver que a trajetória se tornou
 
 00:03:30.799 --> 00:03:31.799
-more rounded.
+mais arredondada.
 
 00:03:31.799 --> 00:03:36.819
-And, we can also see the distance by which
-the trajectory misses the via points has increased.
+E, podemos ver também a distância na qual
+a trajetória que perde os pontos de passagem aumentou.
 
 00:03:36.819 --> 00:03:41.279
-I can increase the acceleration time even
-more, put it up to 8 and we can see again
+Eu posso aumentar o tempo de aceleração ainda
+mais, colocar em 8 e podemos ver de novo
 
 00:03:41.279 --> 00:03:47.159
-that the trajectory is much more rounded because
-the acceleration is much gentler but, the
+que a trajetória está muito mais arredondada porque
+a aceleração é muito mais suave mas, a
 
 00:03:47.159 --> 00:03:51.419
-distance between the trajectory and the via
-points is increased even further.
+distância entre a trajetória e os pontos
+de passagem aumenta ainda mais,
 
 00:03:51.419 --> 00:03:56.750
-If I set the acceleration time to 0, we exactly
-reach the via points but the trajectory will
+Se eu colocar o tempo de aceleração para 0, atingiremos
+exatamente os pontos de passagem mas a trajetória será
 
 00:03:56.750 --> 00:03:58.169
-be discontinuous.
+descontínua.
 
 00:03:58.169 --> 00:04:00.849
-The acceleration will be infinite at the via
-points.
+A aceleração será infinita nos pontos de
+passagem.
 
 00:04:00.849 --> 00:04:03.970
-Let’s go back to something a little bit
-more gentle.
+Vamos voltar a algo um pouco mais
+suave.
 
 00:04:03.970 --> 00:04:09.859
-And now, what I’m going to do is to increase
-the velocity at which we move along the trajectory.
+E agora, o que vou fazer é aumentar
+a velocidade em que nos movemos ao longo da trajetória.
 
 00:04:09.859 --> 00:04:14.420
-You can see right now that this trajectory
-takes nearly 90 seconds to execute.
+Você pode ver bem agora que essa trajetória
+leva aproximadamente 90 segundos para ser executada.
 
 00:04:14.420 --> 00:04:18.800
-So, I’m going to double the speed at which
-we move along the trajectory, change the velocity
+Então, eu vou dobrar a velocidade em que
+no movemos ao longo da trajetória, mudar a velocidade
 
 00:04:18.800 --> 00:04:24.720
-from 1 to 2, and now we execute the trajectory
-in just under 50 seconds.
+de 1 para 2, e agora executamos a trajetória
+em pouco a menos de 50 segundos.
 
 00:04:24.720 --> 00:04:30.210
-The last thing that I’m going to do is to
-remove the velocity specification and replace
+A última coisa que vou fazer é
+remover a especificação da velocidade e substituí-la
 
 00:04:30.210 --> 00:04:32.129
-it with a time specification.
+por uma especificação de tempo.
 
 00:04:32.129 --> 00:04:37.210
-I’m going to say that I don’t care about
-velocity, but I do care about the time.
+Vou dizer que não ligo para a velocidade 
+mas, eu ligo para o tempo.
 
 00:04:37.210 --> 00:04:40.180
-And, I want to specify the times of the segments.
+E, quero especificar os tempos dos segmentos.
 
 00:04:40.180 --> 00:04:43.070
-I want the first segment to last for 10 seconds.
+Quero que o primeiro segmento dure por 10 segundos.
 
 00:04:43.070 --> 00:04:45.770
-I want the second segment to last for 30 seconds.
+Quero que o segundo segmento dure por 30 segundos.
 
 00:04:45.770 --> 00:04:49.620
-And, I want the last segment to last for 20
-seconds.
+E, eu quero que o último segmento dure por 20
+segundos.
 
 00:04:49.620 --> 00:04:51.870
-And now, the trajectory looks like this.
+E agora, a trajetória parece assim.
 
