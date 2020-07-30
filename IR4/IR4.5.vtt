@@ -248,179 +248,178 @@ Passing the speed at which we’re going to
 move along the path, the time of the segments
 
 00:05:09.379 --> 00:05:10.710
-is default.
+é o padrão.
 
 00:05:10.710 --> 00:05:13.970
-Now, start coordinate.
+Agora, comece a coordenar.
 
 00:05:13.970 --> 00:05:19.599
-The time step, 0.1 seconds and the acceleration
-time, which I'm going to consider to be just
+O intervalo de tempo, 0.1 segundos e o tempo de
+aceleração, que eu vou considerar ser apenas
 
 00:05:19.599 --> 00:05:21.509
-1 second.
+1 segundo.
 
 00:05:21.509 --> 00:05:25.430
-And, I’ve created in the workspace variable
-x.
+E, eu criei na área de trabalho a variável x.
 
 00:05:25.430 --> 00:05:32.979
-It’s got 435 rows, so that means that the
-trajectory took 435 time steps to execute
+Tem 435 linhas, então isso significa que a
+tragetória de tempo levou 435 etapas para executar
 
 00:05:32.979 --> 00:05:35.120
-each time steps 0.1 seconds.
+cada etapa de 0.1 segundos.
 
 00:05:35.120 --> 00:05:38.199
-That’s 43.5 second to execute.
+Que são 43.5 segundos para executar.
 
 00:05:38.199 --> 00:05:45.180
-I can plot x versus time and we can see the
-trajectory of the first and second coordinates
+Eu posso traçar x versus tempo e podemos ver a
+trajetória da primeira e segunda coordenadas
 
 00:05:45.180 --> 00:05:48.680
-versus time first coordinate shown in blue.
+versus a primeira coordenada mostrada em azul.
 
 00:05:48.680 --> 00:05:53.840
-If I plot the first coordinate against the
-second coordinate, so that could be the x
+Se eu traçar a primeira coordenada contra a
+segunda coordenada, então essa poderia ser a
 
 00:05:53.840 --> 00:05:57.060
-coordinate and that could be the y coordinate.
+coordenada x e essa poderia ser a coordenada y.
 
 00:05:57.060 --> 00:05:58.729
-I have a plot like this.
+Eu tenho uma plotagem como essa.
 
 00:05:58.729 --> 00:06:04.470
-So, this shows the motion of the point on
-the xy plane and, indeed, it has the square
+Então, isso mostra o movimento do ponto no
+plano xy e, de fato, tem o perfil
 
 00:06:04.470 --> 00:06:08.830
-profile that we are looking for, but it’s
-got rounded corners because we have specified
+quadrado que estamos procurando, mas possui
+os cantos arredondados porque nós especificamos
 
 00:06:08.830 --> 00:06:11.310
-a finite acceleration time.
+um tempo finito de aceleração.
 
 00:06:11.310 --> 00:06:14.620
-Let’s consider now an extra degree of difficulty.
+Vamos considerar agora um grau extra de dificuldade.
 
 00:06:14.620 --> 00:06:18.599
-Let’s consider that the machine is capable
-of moving at 2 meters a second in the x direction,
+Vamos considerar que a máquina é capaz
+de se mover 2 metros por segundo na direção x,
 
 00:06:18.599 --> 00:06:22.520
-but only 1 meter per second in the y direction.
+mas apenas 1 metro por segundo na direção y.
 
 00:06:22.520 --> 00:06:27.310
-We need to take this in to account when we
-figure the trajectory for the robot.
+Nós temos que levar isso em conta quando
+calculamos a tragetória do robô.
 
 00:06:27.310 --> 00:06:31.030
-Consider again this two-dimensional example
-and this is the path that we want from the
+Considere novamente este caminho bidimensional
+e esse é o caminho que nós desejamos do
 
 00:06:31.030 --> 00:06:33.750
-start to the end, that’s our desired path.
+início ao fim, esse é o caminho que queremos.
 
 00:06:33.750 --> 00:06:39.199
-But if the robot is capable of moving more
-quickly in the x direction than in the y direction,
+Mas se o robô é capaz de se mover mais
+rapidamente na direção x que na direção y,
 
 00:06:39.199 --> 00:06:41.439
-the path might look something like this.
+o caminho pode ser algo como isso.
 
 00:06:41.439 --> 00:06:46.030
-It will go very, very quickly in the x direction
-and also move a little bit in the y direction.
+Ele irá, muito rapidamente na direção x
+e também se move um pouco na direção y.
 
 00:06:46.030 --> 00:06:50.370
-But then, the x-axis will have achieved its
-goal, so it will stop moving.
+Mas então, o eixo x vai ter alcançado seu
+objetivo, e ele vai parar de se mover.
 
 00:06:50.370 --> 00:06:55.479
-But, the y-axis which is moving more slowly
-has to keep on going, and so we end up with
+Mas, o eixo y que se move mais devagar
+vai continuar se movendo, então nós acabamos com
 
 00:06:55.479 --> 00:06:59.099
-this dogleg path instead of our desired path.
+com essa curva acentuada em vez do caminho desejado.
 
 00:06:59.099 --> 00:07:04.180
-If I was cutting material on something like
-a flatbed profiling machine, then I’d be
+Se eu estivesse cortando material em algo como
+uma máquina de mesa, então eu ficaria
 
 00:07:04.180 --> 00:07:08.379
-rather upset if I had this path rather than
-the desired one.
+chateado se eu tivesse esse caminho no lugar
+do caminho desejado.
 
 00:07:08.379 --> 00:07:14.430
-So in order to achieve the desired path, we
-need to take in to account the velocity of
+Então para alcançar o caminho desejado, nós
+temos que levar em conta a velociadade de
 
 00:07:14.430 --> 00:07:15.930
-each of the axes.
+cada um dos eixos.
 
 00:07:15.930 --> 00:07:21.490
-We need to work out how long the slowest axis
-requires to get to the next via point.
+Precisamos calcular quanto tempo o eixo mais lento
+requer para chegar ao próximo ponto de passagem.
 
 00:07:21.490 --> 00:07:26.719
-And then, we scale the velocity of the other
-axes so that they all arrive at the same time
+E então, nós escalamos a velocidade do outro
+eixo para que todos cheguem ao mesmo tempo
 
 00:07:26.719 --> 00:07:31.550
-at the via point, and then they all set off
-again to the next via point.
+no ponto de passagem, e então todos eles partirem
+novamente para o próximo ponto de passagem.
 
 00:07:31.550 --> 00:07:33.729
-We repeat this process indefinitely.
+Repetimos esse processo indefinidamente.
 
 00:07:33.729 --> 00:07:40.669
-Now, we’re going to repeat the trajectory,
-but this time we are going to specify the
+Agora, nós vamos repetir a trajetória,
+mas desta vez nós vamos especificar as
 
 00:07:40.669 --> 00:07:43.530
-velocities of the axis being different.
+velocidades dos eixos como diferentes.
 
 00:07:43.530 --> 00:07:48.930
-So, previously, the velocity was 2 units per
-second in the x and y direction.
+Então, antes, a velocidade era 2 unidades
+por segundo nas direções x e y.
 
 00:07:48.930 --> 00:07:56.909
-Now, I’m going to specify a very slow x-axis,
-only 1 unit per second, and a fast y-axis.
+Agora, eu vou especificar um eixo x muito lento,
+apenas 1 unidade por segundo, e um eixo y rápido.
 
 00:07:56.909 --> 00:08:02.819
-If we now look at the trajectory level in
-our workspace, we see it’s got 835 rows,
+Se nós olharmos para o nível de trajetória na
+nossa área de trabalho, nós veremos que possui 835 linhas,
 
 00:08:02.819 --> 00:08:08.409
-0.1 second time step, so that means the trajectory
-now takes 83 seconds, almost twice as long.
+0.1 segundos por passo, significa que a trajetória
+agora leva 83 segundos, quase o dobro do tempo.
 
 00:08:08.409 --> 00:08:14.259
-And, that’s to be expected because, now,
-the trajectory is being paced by the slowest
+E isso é esperado, pois agora
+a trajetória está sendo acompanhada pelo eixo
 
 00:08:14.259 --> 00:08:15.259
-axis.
+mais lento.
 
 00:08:15.259 --> 00:08:18.570
-The slowest axis now can only move at only
-1 unit per second.
+O eixo mais lento agora só pode se mover
+1 unidade por segundo.
 
 00:08:18.570 --> 00:08:24.330
-Previously, it was 2 units per second, so
-we are limited now by an axis which is half
+Antes, eram 2 unidades por segundo, então
+estamos limitados por um eixo que é a metade
 
 00:08:24.330 --> 00:08:30.449
-the original speed, the trajectory has taken
-roughly twice as long to execute.
+da velocidade original, a trajetória levou
+aproximadamente o dobro de tempo de execução.
 
 00:08:30.449 --> 00:08:34.169
-I can plot x versus time.
+Eu posso traçar x versus tempo.
 
 00:08:34.169 --> 00:08:40.870
-We can see the 835 time steps and I can plot
+Nós podemos ver as 835 etapas e eu posso traçar
 x versus y.
 
