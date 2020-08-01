@@ -3,12 +3,12 @@ Kind: captions
 Language: en
 
 00:00:03.649 --> 00:00:08.139
-Muitas maquinas e robôs tem múltiplos
+Muitas máquinas e robôs têm múltiplos
 eixos de movimento.
 
 00:00:08.139 --> 00:00:14.150
 Um robô industrial tipicamente tem seis juntas
-e eles tem que se mover suavemente e de uma maneira
+e eles têm que se mover suavemente e de uma maneira
 
 00:00:14.150 --> 00:00:15.150
 coordenada.
@@ -76,7 +76,7 @@ sabemos como fazer uma função do tempo variante
 e suave.
 
 00:01:27.100 --> 00:01:31.909
-Ela pode ser uma função polynomial do tempo ou
+Ela pode ser uma função polinomial do tempo ou
 ela pode ser uma função do tempo de perfil de
 
 00:01:31.909 --> 00:01:33.310
@@ -125,127 +125,127 @@ realmente moveu o vetor do valor de 10 e
 30 e 10.
 
 00:02:31.870 --> 00:02:39.079
-Let’s plot x as a function of time and we
-can see here that our first axis has moved
+Vamos traçar x a uma função de tempo e nós
+podemos ver aqui que nosso primeiro eixo moveu
 
 00:02:39.079 --> 00:02:44.340
-from 10 up to 30, second axis has moved from
-20 down to 10.
+de 10 até 30, o segundo eixo moveu
+de 20 até 10.
 
 00:02:44.340 --> 00:02:46.859
-This function also returns the velocity.
+Essa função também retorna velocidade.
 
 00:02:46.859 --> 00:02:50.959
-So, I can add that as an extra output argument,
-XD.
+Então, eu posso considerar isso como um argumento de saída
+excedente, XD.
 
 00:02:50.959 --> 00:02:59.629
-And now, we see x velocity as well and I can
-plot XD versus time, and we can see that the
+E agora, vemos também a velocidade x e eu posso
+traçar XD versus tempo, e podemos ver que a
 
 00:02:59.629 --> 00:03:05.389
-velocity of each axis starts and ends at 0
-and has a finite value in between.
+velocidade de cada eixo se inicia e se encerra em 0
+e tem um valor finito entre si.
 
 00:03:05.389 --> 00:03:12.260
-The function also allows me to specify an
-initial and final velocity for the trajectory.
+A função também me permite especificar uma
+velocidade inicial e final para a trajetória.
 
 00:03:12.260 --> 00:03:17.280
-So, if I ask for the initial velocity to be
-0 which is the default condition, if I ask
+Dessa forma, se eu pedir para que a velocidade inicial seja
+0, a qual é a condição padrão, se eu pedir
 
 00:03:17.280 --> 00:03:19.640
-for the final velocity to be equal to 10.
+para que a velocidade final seja igual a 10.
 
 00:03:19.640 --> 00:03:26.080
-Now, if I plot the trajectory versus time,
-we can see that at the end of a trajectory,
+Agora, se eu traçar trajetória versus tempo,
+poderemos ver que ao final da trajetória,
 
 00:03:26.080 --> 00:03:32.310
-the slopes of a line are not equal to 0 and
-that’s because it is achieving its destination
+os declives de uma linha não são iguais a 0,
+isso porque ele está atingindo sua posição
 
 00:03:32.310 --> 00:03:36.959
-position at a finite velocity as we specified.
+destino em uma velocidade finita, como especificamos.
 
 00:03:36.959 --> 00:03:40.329
-Let’s consider a more complex two-dimensional
-example.
+Vamos considerar um exemplo bidimensional mais complexo.
 
 00:03:40.329 --> 00:03:43.579
-I’m going to start and end at this point
-in the XY plane.
+Eu vou iniciar e terminar neste ponto
+no plano XY.
 
 00:03:43.579 --> 00:03:48.909
-I’m going to move to this point, this point,
-this point, and back to where I started from.
+Irei mover a este ponto, este ponto,
+este ponto, e de volta a onde eu iniciei.
 
 00:03:48.909 --> 00:03:51.849
-So, there are now three via points.
+Portanto, agora existem três pontos de percurso.
 
 00:03:51.849 --> 00:03:55.010
-I can assign some arbitrary coordinates to
-these.
+Eu posso atribuir coordenadas arbitrarias para
+eles.
 
 00:03:55.010 --> 00:03:59.109
-In order to move smoothly through the via
-points, we need to introduce blends and we
+Com a finalidade de mover suavemente por entre
+os pontos de percurso, precisaremos introduzir mesclas
 
 00:03:59.109 --> 00:04:02.060
-talked about blends in a previous section.
+nós falamos sobre mesclas na sessão anterior.
 
 00:04:02.060 --> 00:04:08.189
-Here, we want to apply this idea of blends
-which, in this example, is shown for a scalar
+Aqui, nós queremos aplicar essa ideia de mesclas
+que, nesse exemplo, é mostrada para uma variável
 
 00:04:08.189 --> 00:04:09.189
-variable x.
+escalar x.
 
 00:04:09.189 --> 00:04:13.560
-We want to apply it to a multi-dimensional
-case because now we’re talking about a robot
+Eu quero aplicar isso a um caso multidimensional
+porque agora estamos falando de um robô que se
 
 00:04:13.560 --> 00:04:16.630
-moving in the xy plane.
+se move no plano xy.
 
 00:04:16.630 --> 00:04:22.120
-So now, each of the positions XI is a vector
-rather than a scalar.
+Nesse contexto, cada uma das posições XI é mais um 
+vetor do que uma escalar.
 
 00:04:22.120 --> 00:04:27.460
-Now, we’re going to look at a scenario where
-points on the trajectory are vector quantities,
+Ora, olharemos para um cenário onde pontos
+na trajetória são grandezas vetoriais,
 
 00:04:27.460 --> 00:04:30.860
-two-vector in this case, and we have via points.
+de dois vetores, nesse caso, 
+e temos pontos de percurso.
 
 00:04:30.860 --> 00:04:34.069
-Let’s do this square trajectory in MATLAB.
+Vamos fazer essa trajetória quadrada no MATLAB.
 
 00:04:34.069 --> 00:04:45.780
-Our starting coordinate is 40, 50 and the
-via points are 60, 30 which is one row of
+Nossa coordenada de início é 40, 50 e os 
+pontos de percurso são 60, 30 a qual é uma linha
 
 00:04:45.780 --> 00:04:54.039
-the matrix, 40, 10 which is another row of
-the matrix, 20, 30 and we finish where we
+da matriz, 40, 10 a qual é outra linha
+da matriz, 20, 30 e terminamos onde 
 
 00:04:54.039 --> 00:04:55.039
-started.
+começamos.
 
 00:04:55.039 --> 00:04:57.800
-And, that’s the list of via points.
+Nesse sentido, essa é a lista de pontos de percurso.
 
 00:04:57.800 --> 00:05:01.550
-Now, I use the Toolbox function, mstraj.
+Agora, Eu uso a função Toolbox, mstraj.
 
 00:05:01.550 --> 00:05:05.150
-I pass in the list of via points.
+Eu passo na lista de pontos de percurso.
 
 00:05:05.150 --> 00:05:09.379
-Passing the speed at which we’re going to
-move along the path, the time of the segments
+Passando a velocidade na qual iremos nos mover
+ao longo do caminho, o tempo dos segmentos
 
 00:05:09.379 --> 00:05:10.710
 é o padrão.
@@ -313,7 +313,7 @@ mas apenas 1 metro por segundo na direção y.
 
 00:06:22.520 --> 00:06:27.310
 Nós temos que levar isso em conta quando
-calculamos a tragetória do robô.
+calculamos a trajetória do robô.
 
 00:06:27.310 --> 00:06:31.030
 Considere novamente este caminho bidimensional
