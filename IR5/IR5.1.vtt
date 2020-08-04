@@ -264,141 +264,140 @@ acelera na direção para baixo, onde
 o acelerômetro mede 1g para cima
 
 00:05:39.949 --> 00:05:46.270
-or upward direction. And, this is a consequence
-of Einstein’s Equivalence Principle.
+ou para cima. E, isso é consequência do
+principio de equivalência de Einstein
 
 00:05:46.270 --> 00:05:51.680
-And, these two examples are exactly the same
-as far as an accelerometer is concerned. The
+E, esses dois exemplos são exatamente os mesmos
+com relação à um acelerômetro. O
 
 00:05:51.680 --> 00:05:56.249
-accelerometer is sitting on the surface of
-planet Earth, or if it is sitting in a rocket
+acelerômetro está sentado numa superfície do 
+planeta Terra, ou ele está sentado num foguete
 
 00:05:56.249 --> 00:06:01.860
-which is accelerating upwards at 1g. In both
-these cases, the accelerometer will register
+que está sendo acelerado para cima a 1g. Em ambos 
+os casos, o acelerômetro registrará
 
 00:06:01.860 --> 00:06:08.889
-an acceleration of 1g in the vertical direction.
-Gravitational acceleration varies across the
+uma aceleração de 1g na direção vertical.
+A aceleração gravitacional varia ao longo da
 
 00:06:08.889 --> 00:06:14.430
-surface of the Earth. The Earth is not a perfect
-sphere. It’s slightly squashed, so the diameter
+superfície da Terra. A Terra não é uma esfera
+perfeita. Ela é suavemente achatada, então o diâmetro
 
 00:06:14.430 --> 00:06:19.460
-at the equator is greater than the diameter
-measured through the poles. Because of this,
+no equador é maior que o diâmetro 
+medido entre os polos. Por causa disso,
 
 00:06:19.460 --> 00:06:23.479
-somebody who is standing at the equator is
-further away from the center of the Earth.
+alguem parado no equador está bem
+mais longe do centro da Terra.
 
 00:06:23.479 --> 00:06:28.749
-So, therefore, they experience a lower gravitational
-acceleration. So, we can see quite clearly
+Então, portanto, eles experimentam uma menor aceleração
+gravitacional. Então podemos ver bem claramente 
 
 00:06:28.749 --> 00:06:34.680
-in this figure here, the gravitational acceleration
-in the equatorial band is significantly lower
+nessa figura aqui, a aceleração gravitacional 
+na região equatorial é significativamente menor
 
 00:06:34.680 --> 00:06:39.839
-than gravitational acceleration in the temperate
-and Polar Regions of the Earth.
+que a aceleração gravitacional nas regiões
+temperada e polar da Terra.
 
 00:06:39.839 --> 00:06:47.520
-The standard gravity value is taken as 9.80665
-meters per second squared, but note the significant
+O valor padrão da gravidade é dado como 9.80665
+metros por segundo ao quadrado, mas note na variação
 
 00:06:47.520 --> 00:06:52.430
-variation depending on where you are. The
-low cost accelerometers that you have in your
+significante dependendo de onde você esteja. os
+acelerômetros de baixo custo que você tem no 
 
 00:06:52.430 --> 00:06:57.139
-phone and perhaps in the navigation system
-in your car are based on micro-electromechanical
+celular e talvez no sistema de navegação do 
+seu carro são baseados em sistemas de tecnologia
 
 00:06:57.139 --> 00:07:02.509
-system technology and the whole device is
-etched out of silicon. The inertial mass or
+micro eletromecânica e todo o dispositivo é
+montado em silício. A massa inercial ou
 
 00:07:02.509 --> 00:07:08.309
-proof mass is supported by flexible spring
-legs. In the case of horizontal acceleration,
+massa de prova é apoiada por molas flexíveis.
+No caso de acelerações horizontais,
 
 00:07:08.309 --> 00:07:14.110
-the inertial mass will move sideways. And,
-the change in position is measured capacititively
+a massa inercial se moverá lateralmente. E,
+a mudança de posição é medida capacitivamente
 
 00:07:14.110 --> 00:07:20.029
-using these sensors here. It’s really useful
-to be able to measure acceleration in three
+usando sensores aqui. É realmente útil
+ser capaz de medir acelerações em três
 
 00:07:20.029 --> 00:07:25.229
-orthogonal directions aligned with the x,
-y and z-axis of a right-handed coordinate
+direções ortogonais alinhadas com os eixos x, y e z
+do quadro de coordenadas de mão direita.
 
 00:07:25.229 --> 00:07:32.319
-frame. Today, you can buy tri-axial accelerometers
-as a single chip. It contains three MEMS accelerometer
+Hoje, você pode comprar acelerômetros tri-eixo 
+em um único chip. Ele contém 3 acelerômetros MEMS
 
 00:07:32.319 --> 00:07:38.419
-sensors, electronics, analog to digital converters,
-filters and a serial IO capability so that
+sensores, eletrônicos, conversores analógicos e digitais,
+filtros e a capacidade de E/S serial então
 
 00:07:38.419 --> 00:07:42.369
-you can very easily connect it to a microcontroller.
+você consegue facilmente conectar ele num micro-controlador
 
 00:07:42.369 --> 00:07:47.509
-You may not be aware that you have accelerometers
-in your head. In the inner ear assembly in
+Você pode não estar ciente que tem acelerômetros
+na sua cabeça. Na parte interna do ouvido em
 
 00:07:47.509 --> 00:07:52.949
-each of our ears, there are a pair of accelerometers.
-And, the physical principles underlying these
+cada um dos nossos ouvidos, há um par de acelerômetros.
+E, os pricípios físicos por trás desses
 
 00:07:52.949 --> 00:07:57.339
-biological accelerometers are just the same
-as those we’ve already been talking about.
+acelerômetros biológicos são os mesmos que
+aqueles que acabamos de falar sobre.
 
 00:07:57.339 --> 00:08:02.559
-The proof mass is a bunch of calcium carbonate
-crystals and they are referred to as otoliths,
+A massa de prova é um monte de cristais de carbonato 
+de cálcio e são referidos como ótolitos,
 
 00:08:02.559 --> 00:08:07.559
-which means literally ear stones. They are
-sitting on a gelatinous membrane which serves
+que significa literalmente pedras na orelha. Eles estão
+postos numa membrana gelatinosas que servem
 
 00:08:07.559 --> 00:08:12.319
-as the spring. And, embedded in that gelatinous
-membrane are a bunch of hair cells and they
+como a mola. E, embutido nessa membrana
+gelatinosa está um monte de células de cabelo e elas
 
 00:08:12.319 --> 00:08:17.589
-measure the displacement of the otoliths with
-respect to the inner ear. We have two of these
+medem o deslocamento de ótolitos com 
+respeito ao ouvido interno. nós temos dois desses
 
 00:08:17.589 --> 00:08:21.349
-accelerometers in each ear, one is called
-the utricle and one is called the saccule.
+acelerômetros em cada ouvido, um chamado de 
+utrículo e outro chamado de saculo
 
 00:08:21.349 --> 00:08:25.960
-And, they are oriented almost orthogonally,
-so one senses the acceleration in the horizontal
+E eles são orientados quase ortogonalmente,
+então um percebe a aceleração na direção
 
 00:08:25.960 --> 00:08:29.789
-direction, and one senses the acceleration
-in the vertical direction.
+horizontal e o outro percebe a aceleração
+na direção vertical.
 
 00:08:29.789 --> 00:08:34.680
-As you change the orientation of your head,
-the acceleration signals from the utricle
+Assim que você muda a orientação da sua cabeça,
+o sinal de aceleração vindo do utrículo
 
 00:08:34.680 --> 00:08:39.589
-and the saccule vary and allows your brain
-to determine something about the orientation
+e do saculo variam e permitem seu cérebro
+determinar algo com relação a orientação
 
 00:08:39.589 --> 00:08:43.190
-of your head with respect to the world coordinate
-frame.
-
+da sua cabeça com respeito ao quadro
+de coordenadas do mundo
