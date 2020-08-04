@@ -1,150 +1,151 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: Pt-Br
 
 00:00:03.399 --> 00:00:05.500
-Let’s consider a more complex case.
+Vamos considerar um caso mais complexo.
 
 00:00:05.500 --> 00:00:08.889
-I want to start at this particular X value.
+Eu quero começar nesse valor específico X.
 
 00:00:08.889 --> 00:00:11.720
-I want to finish at this particular X value.
+E terminar nesse valor específico X.
 
 00:00:11.720 --> 00:00:16.379
-But, in between, I wanted to visit this X
-value and this X value.
+Mas, entre eles, eu queria visitar esse 
+valor X e esse valor X.
 
 00:00:16.379 --> 00:00:19.810
-I refer to these intermediate points as via
-points.
+Eu me refiro à esses pontos intermediários
+como pontos de passagem.
 
 00:00:19.810 --> 00:00:24.050
-Sometimes, it’s also referred to as way
-points.
+Algumas vezes, é também referido
+como pontos de trajetória.
 
 00:00:24.050 --> 00:00:28.400
-If a robot is going to do this particular
-motion, we have a problem in that the trajectory
+Se um robô está indo fazer esse movimento
+específico, temos um problema em que a
 
 00:00:28.400 --> 00:00:29.789
-is not smooth.
+trajetória não é suave.
 
 00:00:29.789 --> 00:00:34.829
-At each of the points, the velocity abruptly
-changes from one value to another.
+Em cada um dos pontos, a velocidade muda
+abruptamente de um valor para outro.
 
 00:00:34.829 --> 00:00:37.360
-Here, the velocity is increasing.
+Aqui, a velocidade está aumentando.
 
 00:00:37.360 --> 00:00:40.030
-A moment later, the velocity is decreasing.
+Um momento depois está diminuindo.
 
 00:00:40.030 --> 00:00:44.230
-The way we get around this problem is to introduce
-what are called blends.
+O jeito de contornar esse problema é 
+introduzir o que chamamos de mistura.
 
 00:00:44.230 --> 00:00:49.390
-So here, we have the motion between these
-points and in red, it’s shown the blend
+Então aqui, nós temos movimento entre esses
+Pontos e em vermelho, é mostrado a fase
 
 00:00:49.390 --> 00:00:50.390
-phase.
+da mistura.
 
 00:00:50.390 --> 00:00:55.550
-Now, this is where we introduce a smooth mathematical
-curve which maintains continuity.
+Agora, é aqui onde introduzimos uma curva matemática
+Suave que mantém continuidade.
 
 00:00:55.550 --> 00:01:00.190
-So, initially, we accelerate on to the curve
-and head towards X2.
+Então, inicialmente, nós aceleramos na
+curva e seguimos em direção a X2.
 
 00:01:00.190 --> 00:01:06.710
-When we get near X2, we start to transition
-in to the velocity we require on to the next
+Quando nos aproximamos de X2, começamos
+a transição para a velocidade que precisamos
 
 00:01:06.710 --> 00:01:07.710
-path.
+para o próximo caminho.
 
 00:01:07.710 --> 00:01:12.690
-So, we transition our velocity over a set
-period, over what’s called the acceleration
+Então, nós mudamos nossa velocidade durante
+um período definido, sobre o que é chamado de
 
 00:01:12.690 --> 00:01:13.690
-interval.
+intervalo de aceleração.
 
 00:01:13.690 --> 00:01:20.060
-So, our path now consists of segments of linear
-velocity with parabolic or higher-order polynomial
+Assim, nosso caminho agora consiste em segmentos
+de velocidade linear com misturas polinomiais
 
 00:01:20.060 --> 00:01:22.730
-blends to join them together.
+parabólicas ou de ordem superior para juntá-las.
 
 00:01:22.730 --> 00:01:25.810
-We can consider the motion in terms of three
-segments.
+Nós Podemos considerar o movimento em termos
+de três segmentos.
 
 00:01:25.810 --> 00:01:30.740
-The first segment gets us from point 1 to
-point 2, second segment from point 2 to point
+O primeiro segmento nos leva do ponto 1 ao 2,
+o segundo segmento do ponto 2 para o 3
 
 00:01:30.740 --> 00:01:32.720
-3 and so on.
+e assim por diante.
 
 00:01:32.720 --> 00:01:36.800
-Because you probably noticed by now that the
-robot isn’t actually getting to the via
+Porque você provavelmente notou que o 
+robô não está realmente alcançando os
 
 00:01:36.800 --> 00:01:37.800
-points.
+pontos de trajetória.
 
 00:01:37.800 --> 00:01:41.860
-It’s getting close to X2 and then it’s
-going to turn to get on to the path to head
+Está se aproximando do X2 e depois irá 
+virar para seguir o caminho em direção
 
 00:01:41.860 --> 00:01:42.860
-towards X3.
+ao X3.
 
 00:01:42.860 --> 00:01:47.400
-So, it misses X2 and then actually misses
-X3 as well.
+Então, ele perde X2 e acaba perdendo
+X3 também.
 
 00:01:47.400 --> 00:01:49.680
-Now, this is just a bit of a trade off.
+Agora, isso é apenas uma troca.
 
 00:01:49.680 --> 00:01:54.750
-If the acceleration time is very small, then
-we will go very close to the via points, but
+Se o tempo de aceleração é muito pequeno, 
+então nós chegaremos bem perto dos pontos de
 
 00:01:54.750 --> 00:01:56.590
-the acceleration will be very high.
+passagem, mas a aceleração será bem alta.
 
 00:01:56.590 --> 00:02:01.520
-We’re going to have to head towards X2 and
-then very, very quickly change our velocity
+Nós teremos que ir em direção de X2 e 
+rapidamente mudar nossa velocidade
 
 00:02:01.520 --> 00:02:04.450
-in to the velocity we need to head towards
-X3.
+para a velocidade que precisamos para 
+nos aproximar de X3.
 
 00:02:04.450 --> 00:02:09.429
-If the acceleration time is large, then the
-acceleration of the robot is much lower, but
+Se o tempo de aceleração é grande, então
+a aceleração do robô é muito baixa, mas
 
 00:02:09.429 --> 00:02:13.349
-we’re going to miss the via points by a
-larger amount.
+nós vamos perder os pontos de passagem
+por uma distância grande.
 
 00:02:13.349 --> 00:02:18.700
-This is a fundamental engineering trade off
-between accuracy and acceleration.
+Isso é uma troca fundamental na engenharia
+entre precisão e aceleração.
 
 00:02:18.700 --> 00:02:23.500
-Let’s create a trajectory with via points.
+Vamos criar uma trajetória com pontos de
+passagem.
 
 00:02:23.500 --> 00:02:27.900
-The first point we want to visit has got a
-value of 10.
+O primeiro ponto que queremos visitar tem
+um valor igual a 10.
 
 00:02:27.900 --> 00:02:31.420
 O último ponto que eu visito tem o valor
