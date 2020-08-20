@@ -1,0 +1,129 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.830 --> 00:00:08.930
+We're going to introduce an important concept
+called resolved rate motion control. It sounds
+
+00:00:08.930 --> 00:00:14.440
+complex but its really quite simple to understand.
+For a lot of real world problems, we might
+
+00:00:14.440 --> 00:00:20.270
+be interested in the robot end effector moving
+along a straight line in Cartesian space.
+
+00:00:20.270 --> 00:00:24.560
+Now we know that if we move, for instance,
+joint angle 1, we move joint angle 2, then
+
+00:00:24.560 --> 00:00:29.590
+the end of the robot tends to move in arcs
+in space. We don't want it to move in arcs.
+
+00:00:29.590 --> 00:00:34.090
+We want it to move along a straight a line.
+So we began to specify the Cartesian velocity
+
+00:00:34.090 --> 00:00:41.070
+that we want the end effector to follow. We want to convert that then to the required joint velocity.
+
+00:00:41.110 --> 00:00:46.110
+We already touched on this. We take the desired
+velocity nu, we multiply it by the inverse
+
+00:00:46.110 --> 00:00:52.089
+Jacobian and we get the joint velocity that
+we need. We compute that inverse Jacobian,
+
+00:00:52.089 --> 00:00:57.070
+we can write it out symbolically as I had
+done here. Now what I need to do is have the
+
+00:00:57.070 --> 00:01:02.790
+robot's hardware move the joints at this desired
+velocity. But after the robot's been moving
+
+00:01:02.790 --> 00:01:07.600
+for a short period, the joint angle vector
+Q will have changed so that that Jacobian
+
+00:01:07.600 --> 00:01:13.140
+that I've computed will no longer be appropriate.
+So what I need to do then is periodically
+
+00:01:13.140 --> 00:01:19.000
+update the Jacobian matrix. And use that when
+I'm computing the desired robot velocity vector
+
+00:01:19.000 --> 00:01:26.440
+Qdot. So it's a matter of moving the robot
+joints, updating the Jacobian, computing the
+
+00:01:26.440 --> 00:01:33.880
+robot joint velocity, moving the joints, updating
+the Jacobian and so on. Repeat this indefinitely.
+
+00:01:33.880 --> 00:01:39.310
+Most control algorithms that run on a digital
+computer a typically discrete time algorithms.
+
+00:01:39.310 --> 00:01:44.390
+That is they compute things at discrete time
+intervals. So here we have a time line and
+
+00:01:44.390 --> 00:01:51.000
+we indicated a number of time steps. Time
+1, time 2, time 3 and so on . The duration
+
+00:01:51.000 --> 00:01:56.159
+of these time steps, I’m going to denote
+by the symbol delta T. It might be 1/10 of
+
+00:01:56.159 --> 00:02:01.450
+a second it might be a thousandth of a second.
+Something like that. At every time step what
+
+00:02:01.450 --> 00:02:07.180
+I'm going to do is to take the current value
+of the joint angles and call that QK. That
+
+00:02:07.180 --> 00:02:10.129
+stands for joint angles at the time K.
+
+00:02:10.129 --> 00:02:15.140
+To compute the Jacobian, take the inverse,
+multiply it by the velocity that I want to
+
+00:02:15.140 --> 00:02:21.610
+achieve and compute the Qdot that I need to
+achieve at this particular time step. What
+
+00:02:21.610 --> 00:02:27.980
+I'm going to do is take that joint velocity
+Qdot I'm going to multiply it by delta T so
+
+00:02:27.980 --> 00:02:33.160
+that will give me a joint angle displacement;
+that is how much I would want the joints to
+
+00:02:33.160 --> 00:02:35.180
+move over the coming time interval.
+
+00:02:35.180 --> 00:02:42.000
+I add that to the current value of the joint
+angles QK. And that gives me the robot’s
+
+00:02:42.000 --> 00:02:47.740
+target. That's where I want the robot joint
+angles to be at time K +1. Then I tell the
+
+00:02:47.740 --> 00:02:53.000
+robot hardware to move the joints to this
+new joint angle configuration over the time
+
+00:02:53.000 --> 00:02:57.599
+interval delta T. And then I'll repeat this
+steps for as long as necessary.
+
