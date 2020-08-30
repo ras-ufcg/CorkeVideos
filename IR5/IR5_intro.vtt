@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:08.099 --> 00:00:13.059
 Today we take it completely for granted that
@@ -131,132 +131,131 @@ and we did go to the moon, sent men to the
 moon a long time ago, how do you navigate
 
 00:02:56.010 --> 00:03:00.970
-around the moon where there is no GPS system?
-And back then, there was no GPS system around
+em torno da lua, onde não há sistema de GPS?
+E naquela época, não existia um sistema de GPS ao redor
 
 00:03:00.970 --> 00:03:06.380
-planet Earth and certainly there was no GPS
-navigation system around the moon.
+do planeta Terra e certamente não havia um
+sistema de navegação por GPS ao redor da lua.
 
 00:03:06.380 --> 00:03:12.040
-So, the way you do that is what’s called
-inertial navigation, and this is a technique
+Então, a maneira de fazer isso é o que chamamos
+de navegação inercial, e esta é uma técnica
 
 00:03:12.040 --> 00:03:18.900
-that was pioneered by this gentleman, Charles
-Stark Draper, back in the 1950s and the 1960s,
+que foi pioneira por este cavalheiro, Charles
+Stark Draper, nas décadas de 1950s e 1960s,
 
 00:03:18.900 --> 00:03:25.700
-and he was in fact declared Time Man of the
-Year in 1961 for his contributions to engineering
+e ele foi declarado o Homem do Ano pela revista Time
+em 1961 por sua contribuição para o conhecimento
 
 00:03:25.700 --> 00:03:28.820
-knowledge, particularly this inertial navigation
-technology.
+da engenharia, particularmente esta tecnologia
+de navegação inercial.
 
 00:03:28.820 --> 00:03:34.980
-So, inertial navigation technology relies
-on measuring continuously the acceleration
+Então, tecnologia de navegação inercial depende
+da medição continua da aceleração
 
 00:03:34.980 --> 00:03:39.660
-of the body, so if I had the sensors on me
-that measured my acceleration and other sensors
+do corpo, logo se eu tivesse sensores que 
+mediam minha aceleração e outros sensores
 
 00:03:39.660 --> 00:03:45.090
-called gyroscopes which measure my rotation.
-By processing the accelerating signal and
+chamados de giroscópios que medem minha rotação.
+Ao processar o sinal de aceleração e
 
 00:03:45.090 --> 00:03:50.060
-the rotation signal, combining them with some
-pretty clever algorithms, I can work out at
+a rotação do sinal, combinando eles com alguns
+algoritmos inteligentes, posso trabalhar em
 
 00:03:50.060 --> 00:03:56.250
-any point in time where I am. This technology
-was pioneered, was driven by the Cold War
+qualquer ponto no tempo onde estou. Esta tecnologia
+foi pioneira, foi impulsionada pela Guerra Fria
 
 00:03:56.250 --> 00:04:01.030
-that existed at that particular point in time.
+que existiu naquele momento em específico.
 
 00:04:01.030 --> 00:04:05.720
-This is the first inertial navigation system;
-it was a massive piece of kit and it was able
+Este é o primeiro sistema de navegação 
+inercial; era um kit enorme e foi capaz
 
 00:04:05.720 --> 00:04:12.140
-to a guide bomber from the east coast to the
-west coast of the United States, very, very
+de guiar um bombardeiro da costa leste para a 
+costa oeste dos Estados Unidos, um equipamento
 
 00:04:12.140 --> 00:04:18.259
-big piece of equipment, and there was an underwater
-version of this which was used to accurately
+muito, muito grande, e houve uma versão 
+subaquática dele que foi usada para navegar
 
 00:04:18.259 --> 00:04:23.199
-navigate submarines for long periods of time
-underwater, so they could accurately get from
+com precisão submarinos por longos períodos de tempo 
+debaixo d’água, para que eles pudessem obter com precisão
 
 00:04:23.199 --> 00:04:27.719
-one place to another just using this navigation
-technology.
+de um lugar para outro usando apenas 
+esta tecnologia de navegação.
 
 00:04:30.000 --> 00:04:34.760
-Another instance of this inertial navigation
-technology is what got the Apollo space craft
+Outro exemplo desta tecnologia de navegação
+inercial é o que levou a nave espacial Apollo 
 
 00:04:34.760 --> 00:04:39.470
-to the moon, so that they’re able to miniaturize
-this massive inertial navigation system and
+para a lua, então para que eles sejam capazes de
+miniaturizar este sistema de navegação enorme e
 
 00:04:39.470 --> 00:04:44.820
-shrink it down to a box that was about one
-foot, cubed, and that’s what got the vehicle
+reduzi-lo a uma caixa tinha cerca de um pé, em
+cubos, e foi isto que levou o veículo
 
 00:04:44.820 --> 00:04:49.530
-to the orbit around the moon and also got
-the vehicle then from the lunar orbit down
+para a orbita ao redor da lua e também 
+levou o veículo da órbita lunar para 
 
 00:04:49.530 --> 00:04:54.670
-on to the surface of the moon and back up
-again, and this was in 1968.
+a superfície lunar e de volta para cima 
+novamente, e isto foi em 1968.
 
 00:04:54.670 --> 00:05:02.380
-So, phenomenal technological progress from
-an idea to a massive sensor through to a relatively
+Portanto, o progresso tecnológico fenomenal de
+uma ideia de um grande sensor para um sensor
 
 00:05:02.380 --> 00:05:07.690
-small sensor that could be used for landing
-men on the moon.
+relativamente pequeno que poderia ser usado 
+para pousar homens na lua.
 
 00:05:07.690 --> 00:05:13.050
-Today inertial navigation system is almost
-a commodity. It’s reduced to the size of
+Hoje, o sistema de navegação inercial é quase
+uma comodidade. É reduzido ao tamanho de
 
 00:05:13.050 --> 00:05:18.300
-a single chip, and these inertial navigation
-chips, which contain accelerometers and gyroscopes
+único chip, e estes chips de navegação inercial, 
+nos quais contém acelerômetros e giroscópios
 
 00:05:18.300 --> 00:05:22.530
-are embedded into devices like our phones;
-this is how our phone knows whether it’s
+são incorporados em dispositivos como nosso telefone;
+isto é, como nossos telefones sabem se está
 
 00:05:22.530 --> 00:05:28.260
-in portrait mode or in landscape mode. It’s
-how we use it to play games just by moving
+no modo retrato ou paisagem. É assim que 
+usamos para jogar apenas movimentando
 
 00:05:28.260 --> 00:05:33.900
-the phone around, these are all done with
-inertial navigation technology. Smart toys,
+o telefone, tudo isto é feito com a tecnologia 
+do sistema de navegação. Brinquedos inteligentes,
 
 00:05:33.900 --> 00:05:39.889
-like this quadrotor here, use inertial navigation
-sensors to keep the vehicle balanced in space
+como este quadricóptero aqui, usa sensores de navegação 
+inercial que o mantém equilibrado no espaço
 
 00:05:39.889 --> 00:05:41.450
-and to keep it stable.
+e o mantém estável.
 
 00:05:41.450 --> 00:05:48.240
-They’re used in many, many, many, many technologies
-and many, many applications. So, in this particular
+Eles são usados em muitas, muitas, muitas, muitas 
+tecnologias e muitas, muitas aplicações. Logo, nesta aula
 
 00:05:48.240 --> 00:05:51.810
-lecture, we’re going to talk about how inertial
-measurement systems work.
-
+em particular, nós vamos falar sobre como
+funcionam os sistemas de medição inercial.
