@@ -161,169 +161,169 @@ because the configuration can be described
 by two real numbers, Q1 and Q2.
 
 00:03:12.610 --> 00:03:18.500
-Its task space is also a subset of the two-dimensional
-space of real numbers and that’s because
+Seu espaço de trabalho também é um subconjunto do espaço
+bidimensional de números reais e isso é porque
 
 00:03:18.500 --> 00:03:23.689
-its end effector pose can be described by
-two real numbers, X and Y.
+seu efetuador pode ser descrito por dois 
+números reais, X e Y
 
 00:03:23.689 --> 00:03:28.099
-We can describe the configuration and task
-space for a 3-degree of freedom Cartesian
+Podemos descrever o espaço de configuração e de trabalho
+para um robô Gantry Cartesiano com 3 graus de 
 
 00:03:28.099 --> 00:03:33.579
-Gantry robot and we can also describe it for
-a 4-degree of freedom SCARA robot whose end
+liberdade e também podemos descreve-los como um
+robô SCARA com 4 graus de liberdade, cujo
 
 00:03:33.579 --> 00:03:36.709
-effector moves in three dimensions.
+efetuador move em três direções.
 
 00:03:36.709 --> 00:03:41.200
-Most functional real world robots, for example
-industrial robots, have got six joints.
+A maioria dos robôs funcionais do mundo real, por 
+exemplo robôs industriais, têm 6 articulações.
 
 00:03:41.200 --> 00:03:44.640
-So, their configuration space is six dimensional.
+Então, seus espaços de configuração são de seis dimensões.
 
 00:03:44.640 --> 00:03:49.860
-The task space is also six dimensional which
-means that the end effector can adopt an arbitrary
+Seus espaços de trabalho também são de 6 dimensões, o
+que significa que o efetuador pode adotar uma posição
 
 00:03:49.860 --> 00:03:56.410
-position and an arbitrary orientation within
-the limits of the working volume of that particular
+arbitrária e uma orientação arbitrária dentro dos 
+limites do volume de trabalho desse robô
 
 00:03:56.410 --> 00:03:57.410
-robot.
+em particular.
 
 00:03:57.410 --> 00:04:00.989
-There is an important constraint that the
-dimension of the configuration space must
+Existe uma restrição importante em que a 
+dimensão do espaço de configuração deve 
 
 00:04:00.989 --> 00:04:05.120
-be greater than or equal to the dimension
-of the task space.
+ser maior ou igual a dimensão do espaço 
+de trabalho.
 
 00:04:05.120 --> 00:04:10.489
-Here’s an example of a robot where the dimension
-of the configuration space is much bigger
+Aqui temos um exemplo de um robô onde a dimensão
+do espaço de configuração é muito maior que
 
 00:04:10.489 --> 00:04:12.450
-than the dimension of the task space.
+a dimensão do espaço de trabalho.
 
 00:04:12.450 --> 00:04:16.920
-We refer to a robot like this as a redundant
-robot.
+Nos referimos a um robô como este, como um robô redundante.
 
 00:04:16.920 --> 00:04:22.079
-So, although its task space is the same as
-that of a 6-degree of freedom robot like the
+Então, embora seu espaço de trabalho seja o mesmo que 
+o de um robô com 6 graus de liberdade, como o robô 
 
 00:04:22.079 --> 00:04:27.090
-Puma robot we looked at previously, it’s
-able to adopt any pose in three-dimensional
+Puma que vimos anteriormente, é possível 
+adotar qualquer pose no espaço 
 
 00:04:27.090 --> 00:04:28.090
-space.
+tridimensional. 
 
 00:04:28.090 --> 00:04:30.890
-Its configuration space is much bigger.
+Seu espaço de configuração é muito maior.
 
 00:04:30.890 --> 00:04:35.620
-It uses this logic configuration space so
-that it can control not only the end effector
+Ele usa este espaço de configuração lógico para
+que possa controlar não apenas o efetuador,
 
 00:04:35.620 --> 00:04:41.530
-pose, but also the shape of the arm leading
-from the base to the end effector.
+mas também o formato do braço, conduzindo
+da base ao efetuador.
 
 00:04:41.530 --> 00:04:44.430
-We introduced Denavit-Hartenberg notation.
+Nós introduzimos a notação Denavit-Hartenberg.
 
 00:04:44.430 --> 00:04:49.550
-This involves attaching a coordinate frame
-to the far end of each link in the robot.
+Isso envolve anexar o sistema de coordenadas
+na extremidade de cada link no robô.
 
 00:04:49.550 --> 00:04:55.430
-And then, we can write an expression for the
-relative pose between consecutive link reference
+E assim, podemos escrever uma expressão para a
+pose relativa entre sistemas de referência de links
 
 00:04:55.430 --> 00:04:56.430
-frames.
+consecutivos.
 
 00:04:56.430 --> 00:04:59.210
-The Denavit-Hartenberg notation is very concise.
+A notação Denavit-Hartenberg é bem concisa.
 
 00:04:59.210 --> 00:05:04.750
-We can describe the relationship between frames
-using simply four parameters.
+Podemos descrever a relação entre sistemas 
+usando simplismente quatro parâmetros.
 
 00:05:04.750 --> 00:05:09.300
-This imposes a number of constraints though
-on where we place the link coordinate frames.
+Isso impõe uma série de restrições sobre onde 
+colocamos os sistemas de coordenadas dos links.
 
 00:05:09.300 --> 00:05:15.130
-And, the link coordinate frames do not necessarily
-physically lie on the links of the robots
+E, o sistema de coordenadas do link não necessariamente
+dependem fisicamente dos links dos próprios
 
 00:05:15.130 --> 00:05:16.130
-itself.
+robôs.
 
 00:05:16.130 --> 00:05:21.160
-A Denavit-Hartenberg notation allows us to
-very concisely describe any serial link mechanism.
+A notação Denavit-Hartenberg nos permite descrever, de 
+forma muito concisa, qualquer mecanismo de link serial.
 
 00:05:21.160 --> 00:05:27.420
-So, here is a very concise table which describes
-the kinematics of the two-link manipulator
+Então, aqui temos uma tabela bastante concisa que 
+descreve a cinemática de um braço manipulador de dois
 
 00:05:27.420 --> 00:05:28.420
-arm.
+links.
 
 00:05:28.420 --> 00:05:33.759
-The table has got two rows, one per joint,
-and it has got four columns, one column for
+A tabela têm duas linhas, uma por articulação,
+e têm quatro colunas, cada coluna para
 
 00:05:33.759 --> 00:05:36.740
-each of the Denavit-Hartenberg parameters.
+cada um dos parâmetros Denavit-Hartenberg.
 
 00:05:36.740 --> 00:05:41.430
-Because this robot is all revolute, that means
-all of its joints are rotational.
+Uma vez que este robô é todo revoluto, significa 
+que todas suas articulações são rotacionais.
 
 00:05:41.430 --> 00:05:45.150
-The joint coordinates fall in the Theta column.
+As coordernadas da articulação estão na coluna Theta.
 
 00:05:45.150 --> 00:05:49.070
-We use a very similar table for a more complex
-robot like the Puma 560.
+Usamos uma tabela muito semelhante para um robô
+mais complexo, como o Puma 560.
 
 00:05:49.070 --> 00:05:54.800
-The table still has four columns, but now
-it has got six rows, one row per joint of
+A tabela ainda têm quatro colunas, mas agora
+têm 6 linhas, uma para cada articulação
 
 00:05:54.800 --> 00:05:55.800
-the robot.
+do robô.
 
 00:05:55.800 --> 00:06:01.090
-So, the most general way we can describe the
-kinematics of a robot arm is in terms of the
+Então, a forma mais geral que podemos descrever 
+a cinemática de um braço robótico é em termos da
 
 00:06:01.090 --> 00:06:05.610
-kinematic function K and the parameters of
-this function are the joint configuration
+função cinemática K e os parâmetros dessa função é
+o vetor de configuração das
 
 00:06:05.610 --> 00:06:06.610
-vector.
+atriculações.
 
 00:06:06.610 --> 00:06:11.280
-And remember, that is a vector that contains
-either joint angles or joint offsets in the
+E lembre-se, isso é um vetor que contém ou 
+os ângulos das articulações ou os deslocamentos 
+das articulações,
 
 00:06:11.280 --> 00:06:14.570
-case of a prismatic joint, and a number of
-other vectors.
+no caso de uma articulação prismática, e uma série 
+de outros vetores.
 
 00:06:14.570 --> 00:06:19.560
 We have a vector of joint angles, a vector
