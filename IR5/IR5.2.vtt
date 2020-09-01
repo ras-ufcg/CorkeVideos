@@ -3,172 +3,171 @@ Kind: captions
 Language: en
 
 00:00:03.590 --> 00:00:07.120
-To make it tangible, we are going to consider
-the example of my mobile phone.
+Para torna-lo tangível, vamos considerar 
+o exemplo do meu celular.
 
 00:00:07.120 --> 00:00:11.990
-First thing I am going to do is to attach
-a right handed coordinate frame to it and
+A primeira coisa que vou fazer é anexar um sistema de coordenadas 
+com a mao direita dele e 
 
 00:00:11.990 --> 00:00:14.880
-I am going to have the z-axis out of the face
-of the screen.
+Eu vou ter o eixo z fora da tela. 
 
 00:00:14.880 --> 00:00:20.850
-The y-axis is vertically upwards on the phone
-and the x-axis is horizontal from left to
+O eixo y é verticalmente pra cima no celular e 
+o eixo x é horizontal da esquerda pra 
 
 00:00:20.850 --> 00:00:21.850
-right.
+direita.
 
 00:00:21.850 --> 00:00:26.710
-I am going to call this frame B and that stands
-for the body frame or the body-fixed frame.
+Eu vou chamar essa coordenada de B que significa uma 
+coordenada do sistema ou um ponto fixo. 
 
 00:00:26.710 --> 00:00:31.570
-This is a very common notation in aerospace
-and also in robotics.
+Esta é uma notação comum no espaço aéreo e
+também na robótica.
 
 00:00:31.570 --> 00:00:36.960
-Now we are going to place one accelerometer
-aligned with each of the axes that we have
+Agora vamos colocar um acelerômetro 
+alinha com os eixos que temos 
 
 00:00:36.960 --> 00:00:37.960
-attached to the phone.
+anexando ao celular.
 
 00:00:37.960 --> 00:00:43.360
-So, one accelerometer would be in XB direction
-and one in the YB direction and one in the
+Assim, um acelerômetro seria na direção XB 
+e um na direção YB 
 
 00:00:43.360 --> 00:00:44.860
-ZB direction.
+uma na direção ZB.
 
 00:00:44.860 --> 00:00:48.180
-Modern mobile phones, are packed full of inertial
-sensors.
+Celulares modernos, estão cheio 
+de sensores inerciais.
 
 00:00:48.180 --> 00:00:53.540
-They contained three accelerometers, three
-gyros and three magnetometers.
+Eles tinham três acelerômetros, giroscópios 
+e três magnetômetros.
 
 00:00:53.540 --> 00:00:57.739
-Like everything else that we've talked about
-in this lecture series, we are going to attach
+como todo mundo que nós falamos nesta 
+série de palestras, vamos anexar
 
 00:00:57.739 --> 00:00:59.430
-a coordinate frame to the phone.
+uma coordenada para cada sistema do celular.
 
 00:00:59.430 --> 00:01:03.761
-You have to look reasonably deeply into the
-documentation to find the coordinate frame
+Voce tem que olhar profundamente na documentação 
+para encontrar o quadro de coordenadas
 
 00:01:03.761 --> 00:01:09.049
-conventions for the phone, but for an iPhone
-like this, the convention is the x-axis is
+Convencionais para o celular,mas para o Iphone 
+como este, a convenção do eixo x é 
 
 00:01:09.049 --> 00:01:14.310
-to the right and the y-axis is to the top
-of the phone and the z-axis is out of the
+para a direita e o eixo y é para o topo
+do celuar e do eixo z está fora do
 
 00:01:14.310 --> 00:01:15.310
-screen.
+tela.
 
 00:01:15.310 --> 00:01:19.909
-So, I am going to fix one of my standard coordinate
-frames to the phone, so we understand what's
+Então, eu vou corrigir o sistema de coordenadas padrão para o celular,
+então nós entendemos 
 
 00:01:19.909 --> 00:01:22.409
-what.
+o que é.
 
 00:01:22.409 --> 00:01:26.319
-There are many apps that you can get for your
-phone, that report the acceleration measurement
+Existem muitos aplicativos que você pode obter 
+para o seu telefone, que relatam a medição de aceleração
 
 00:01:26.319 --> 00:01:29.250
-recorded by the sensors built into the phone
-itself.
+gravado pelos sensores incorporados 
+no próprio telefone.
 
 00:01:29.250 --> 00:01:33.529
-Unfortunately, many of these apps introduce
-a negative sign.
+Infelizmente, muitos desses aplicativos introduzem 
+um sinal negativo.
 
 00:01:33.529 --> 00:01:38.350
-That means that if the phone is sitting flat
-on the table, it reports a value of minus
+Isso significa que se o telefone está sobre a mesa,
+ele relata um valor de menos
 
 00:01:38.350 --> 00:01:44.520
-1G in the negative z or down with the direction
-but as we discussed in the previous section,
+1G no z negativo ou para baixo com o Sentido,
+mas como discutimos na seção anterior,
 
 00:01:44.520 --> 00:01:49.799
-acceleration of a device sitting flat on a
-table should be 1G in the positive upward
+aceleração de um dispositivo sentado plana sobre 
+uma mesa deve ser 1G no positivo para cima
 
 00:01:49.799 --> 00:01:50.799
-x direction.
+na direção x.
 
 00:01:50.799 --> 00:01:56.989
-So, here we have the plumb bob, which is hanging
-down under the force of gravity, so it is
+Então, aqui temos o bob, que está pendurado
+sob a força da gravidade, por isso é
 
 00:01:56.989 --> 00:02:02.560
-aligned parallel to the gravitational acceleration
-with the same gravitational acceleration is
+alinhado paralelamente com a aceleração gravitaciona.
+Esta mesma aceleração gravitacional é
 
 00:02:02.560 --> 00:02:04.999
-parallel to the z-axis.
+paralela ao eixo z.
 
 00:02:04.999 --> 00:02:09.179
-If I rotate the phone like this, so now, the
-gravitational acceleration is parallel to
+Se eu girar o telefone assim, então agora, a
+aceleração gravitacional é paralela 
 
 00:02:09.179 --> 00:02:14.230
-the y-axis and now I can rotate the phone,
-so the gravitational acceleration is parallel
+ao eixo y e agora eu posso girar o telefone,
+então a aceleração gravitacional é paralela
 
 00:02:14.230 --> 00:02:15.540
-to the x-axis.
+ao eixo x.
 
 00:02:15.540 --> 00:02:20.650
-Let us consider now the problem of determining
-the orientation of the phone with respect
+Vamos considerar agora o problema de determinar
+a orientação do telefone com respeito
 
 00:02:20.650 --> 00:02:22.920
-to a world coordinate frame.
+para um quadro de coordenadas do mundo.
 
 00:02:22.920 --> 00:02:27.080
-The world coordinate frame is shown here in
-blue and its origin shows that the z-axis
+O sistema de coordenadas do mundo é mostrado aqui em
+azul e sua origem mostra que o eixo z
 
 00:02:27.080 --> 00:02:31.140
-is upwards and parallel to the gravity vector.
+é para cima e paralelo ao vetor de gravidade.
 
 00:02:31.140 --> 00:02:35.459
-Frame B, the body frame is attached rigidly
-to the phone.
+A coordenada B, a estrutura é anexada rigidamente
+para o telefone.
 
 00:02:35.459 --> 00:02:41.730
-Now I can write an expression for the orientation
-of the phone with respect to the world coordinate
+Agora,eu posso escrever uma expressão para a orientação
+do telefone em relação ao sistema de coordenada
 
 00:02:41.730 --> 00:02:46.920
-frame and I will do that in terms of yaw,
-pitch and roll angles which are successive
+e eu vou fazer isso em termos de guinada,
+ângulos de arremesso e rolo que são sucessivas
 
 00:02:46.920 --> 00:02:52.030
-rotations about the z-axis, the y-axis and
-then the x-axis.
+rotações sobre o eixo z, o eixo y e
+em seguida, o eixo x.
 
 00:02:52.030 --> 00:02:56.740
-This is the gravitational acceleration in
-the world frame because the world z-axis is
+Esta é a aceleração gravitacional no
+quadro geral, porque o mundo z-eixo é
 
 00:02:56.740 --> 00:03:00.560
-parallel to the gravitational acceleration
-vector.
+paralelo à aceleração gravitacional
+Vetor
 
 00:03:00.560 --> 00:03:02.640
-We note here that G is positive.
+Notamos aqui que G é positivo.
 
 00:03:02.640 --> 00:03:07.739
 We are talking about acceleration in the world
