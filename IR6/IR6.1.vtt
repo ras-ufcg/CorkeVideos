@@ -99,106 +99,104 @@ Here, the links are all in parallel.
 Here are a couple of examples of educational
 
 00:02:17.069 --> 00:02:22.959
-robots. The one on the left is a hobby robot
-that has got four mechanical joints connecting
+robots. O à esquerda é um robô de hobby que
+possui quatro juntas mecânicas conectando
 
 00:02:22.959 --> 00:02:28.980
-the base to the tool-tip where there is a
-parallel jaw or a two-finger gripper.
+a base à ponta do equipamento, onde há uma 
+garra paralela ou uma pinça com dois dedos.
 
 00:02:28.980 --> 00:02:35.439
-The Aldebaran NAO robot shown here has got
-two arms and two legs. And, each of the arms
+O robô Aldebaran NAO mostrado aqui possui
+dois braços de duas pernas. Ainda, cada um dos
 
 00:02:35.439 --> 00:02:40.709
-and the legs is essentially a serial link
-manipulator. In the case of the arms, there
+braços e pernas é essencialmente um manipulador
+serial em cadeia. No caso dos braços, temos
 
 00:02:40.709 --> 00:02:46.090
-are four joints, two at the shoulder, one
-at the elbow and one at the wrist, which control
+quatro juntas, duas nos ombros, uma no cotovelo
+e outra no punho, as quais controlam a posição
 
 00:02:46.090 --> 00:02:51.659
-the position and orientation of the wrist
-which holds a number of fingers. And, those
+e orientação do punho, que possui uma quantidade
+de dedos. Por sua vez, esses dedos
 
 00:02:51.659 --> 00:02:55.079
-fingers themselves have got a number of joints
-within them.
+são compostos por um número de juntas.
 
 00:02:55.079 --> 00:03:01.069
-A very common class of robots have got six
-axes, the six-axis serial link robot. On the
+Uma classe de robôs bastante comum possui seis
+eixos, o robô de cadeia serial de seis eixos.
 
 00:03:01.069 --> 00:03:06.590
-left, we can see an example of a state of
-the art industrial robot which has got six
+À esquerda, podemos ver um exemplo de robô 
+industrial com tecnologia de ponta, que possui
 
 00:03:06.590 --> 00:03:12.129
-links. And, on the right, we can see a very
-unusual example of a six-axis robot. This
+seis elos. E, à direita, podemos ver um exemplo
+bastante incomum de robô de seis eixos. Este
 
 00:03:12.129 --> 00:03:18.789
-arm is used to load and unload satellites
-and other cargo from the shuttle’s payload bay.
+braço é usado para transportar satélites e outros
+carregamentos do compartimento do ônibus espacial. 
 
 00:03:20.140 --> 00:03:25.459
-Here is a very famous robotic arm in
-the history of robot arm development. It was
+Aqui está um braço robótico famoso na história 
+do desenvolvimento de braços robóticos.
 
 00:03:25.459 --> 00:03:30.769
-developed at Stanford University and it’s
-commonly known just as the Stanford Robotic
+Ele foi desenvolvido pela Universidade de Stanford
+e é comumente conhecido Braço Robótico Stanford.
 
 00:03:30.769 --> 00:03:37.459
-Arm. It was developed in 1969. That’s the
-year that people first walked on the moon.
+Foi desenvolvido em 1969. Este foi o ano
+em que a primeira pessoa andou pela Lua.
 
 00:03:37.459 --> 00:03:42.829
-What differentiates this robot arm from robot
-arms that are very common today is that it
+O que diferencia este braço robótico dos braços
+mais comuns atualmente é que ele possui uma 
 
 00:03:42.829 --> 00:03:48.719
-has got a sliding joint. The third joint in
-this robot slides backwards and forwards and
+junta deslizante. A terceira junta neste robô
+desliza para frente, para trás e modifica
 
 00:03:48.719 --> 00:03:55.760
-changes the distance between the robot’s
-tool, it’s wrist and the base of the robot.
+a distância entre a ferramenta do robô, seu
+punho e a base do robô.
 
 00:03:55.760 --> 00:04:00.469
-The first company to produce an industrial
-robot was Unimation Inc, a Connecticut-based
+A primeira companhia a produzir um robô industrial
+foi a Unimation Inc, uma companhia com base em
 
 00:04:00.469 --> 00:04:06.319
-company and they were founded in 1956 and
-installed their first industrial robot in
+Connecticut, fundada em 1956 e instalaram 
+seu primeiro robô industrial em
 
 00:04:06.319 --> 00:04:11.959
-to a manufacturing plant a couple of years
-later. The technology is really quite old.
+uma planta de manufatura alguns anos depois.
+Sua tecnologia é bem ultrapassada.
 
 00:04:11.959 --> 00:04:18.320
-This is an example of one of those Unimate
-robots from 1983. It’s the PUMA 560 robot,
+Este é um exemplo de um desses robôs da
+Unimate, de 1983. Este é o robô PUMA 560,
 
 00:04:18.320 --> 00:04:23.479
-quite a famous robot really in the history
-of robotics research. There were many, many
+bastante conhecido na história de pesquisa
+robótica. Houve muitos, onde muitos desses
 
 00:04:23.479 --> 00:04:28.500
-of these robots actively involved in manufacturing,
-but there are also a great number of them
+robôs atuaram ativamente na manufatura, 
+porém houve um grande número deles 
 
 00:04:28.500 --> 00:04:33.400
-in university research labs such as learning
-how to hack these robots so that they could
+em laboratórios de pesquisa universitária, para
+que aprendessem a hackear esses robô e pudessem
 
 00:04:33.400 --> 00:04:38.949
-add their own control algorithms to the robot.
-So, many, many early robotics research papers
+adicionar seus próprios algoritmos de controle
+ao robô. Assim, inúmeras publicações de pesquisa
 
 00:04:38.949 --> 00:04:43.889
-are all based on these particular PUMA robots,
-the PUMA 560.
-
+com robôs são baseadas nestes robôs PUMA em particular,
+os PUMA 560.
