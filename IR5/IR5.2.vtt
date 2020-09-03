@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-br
 
 00:00:03.590 --> 00:00:07.120
 Para torna-lo tangível, vamos considerar 
@@ -8,7 +8,7 @@ o exemplo do meu celular.
 
 00:00:07.120 --> 00:00:11.990
 A primeira coisa que vou fazer é anexar um sistema de coordenadas 
-com a mao direita dele e 
+com a mão direita dele e 
 
 00:00:11.990 --> 00:00:14.880
 Eu vou ter o eixo z fora da tela. 
@@ -30,7 +30,7 @@ também na robótica.
 
 00:00:31.570 --> 00:00:36.960
 Agora vamos colocar um acelerômetro 
-alinha com os eixos que temos 
+alinhado com os eixos que temos 
 
 00:00:36.960 --> 00:00:37.960
 anexando ao celular.
@@ -58,7 +58,7 @@ série de palestras, vamos anexar
 uma coordenada para cada sistema do celular.
 
 00:00:59.430 --> 00:01:03.761
-Voce tem que olhar profundamente na documentação 
+Você tem que olhar profundamente na documentação 
 para encontrar o quadro de coordenadas
 
 00:01:03.761 --> 00:01:09.049
@@ -67,7 +67,7 @@ como este, a convenção do eixo x é
 
 00:01:09.049 --> 00:01:14.310
 para a direita e o eixo y é para o topo
-do celuar e do eixo z está fora do
+do celular e do eixo z está fora do
 
 00:01:14.310 --> 00:01:15.310
 tela.
@@ -96,7 +96,7 @@ Isso significa que se o telefone está sobre a mesa,
 ele relata um valor de menos
 
 00:01:38.350 --> 00:01:44.520
-1G no z negativo ou para baixo com o Sentido,
+1G no z negativo ou para baixo com o sentido,
 mas como discutimos na seção anterior,
 
 00:01:44.520 --> 00:01:49.799
@@ -111,7 +111,7 @@ Então, aqui temos o bob, que está pendurado
 sob a força da gravidade, por isso é
 
 00:01:56.989 --> 00:02:02.560
-alinhado paralelamente com a aceleração gravitaciona.
+alinhado paralelamente com a aceleração gravitacional.
 Esta mesma aceleração gravitacional é
 
 00:02:02.560 --> 00:02:04.999
@@ -147,7 +147,7 @@ A coordenada B, a estrutura é anexada rigidamente
 para o telefone.
 
 00:02:35.459 --> 00:02:41.730
-Agora,eu posso escrever uma expressão para a orientação
+Agora, eu posso escrever uma expressão para a orientação
 do telefone em relação ao sistema de coordenada
 
 00:02:41.730 --> 00:02:46.920
@@ -163,8 +163,7 @@ Esta é a aceleração gravitacional no
 quadro geral, porque o mundo z-eixo é
 
 00:02:56.740 --> 00:03:00.560
-paralelo à aceleração gravitacional
-Vetor
+paralelo ao vetor aceleração gravitacional.
 
 00:03:00.560 --> 00:03:02.640
 Notamos aqui que G é positivo.
@@ -200,7 +199,7 @@ Agora, eu posso expandir o lado direito
 e substituir o lado esquerdo
 
 00:03:34.709 --> 00:03:37.909
-com a gravidade medida pelos sensores no telefone
+com a gravidade medida pelos sensores no telefone.
 
 00:03:37.909 --> 00:03:40.870
 Eu tenho uma equação vetorial bem simples
