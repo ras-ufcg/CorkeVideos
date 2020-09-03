@@ -1,181 +1,183 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: Pt-Br
 
 00:00:03.970 --> 00:00:08.010
-The final component of the inertia measurement
-unit are the sensors that measure angular
+O componente final da unidade de medição de
+inércia são os sensores que medem a velocidade
 
 00:00:08.010 --> 00:00:13.550
-velocity, and these are commonly referred
-to as gyroscopes. You might have had a gyroscope
+angular, comumente chamados de giroscópios.
+Você já deve ter tido um giroscópio de
 
 00:00:13.550 --> 00:00:17.260
-as a toy when you were a child, and it is
-difficult to understand the relationship between
+brinquedo quando era criança, é difícil 
+entender a relação entre este giroscópio
 
 00:00:17.260 --> 00:00:22.089
-this toy gyroscope, which can balance on the
-end of a pencil with a device that can measure
+de brinquedo, que consegue se equilibrar na ponta
+de um lápis com um dispositivo que pode medir
 
 00:00:22.089 --> 00:00:27.099
-angular velocity. To understand how we can
-use a gyroscope as an angular velocity sensor,
+velocidade angular. Para entender como podemos usar
+um giroscópio como sensor de velocidade angular
 
 00:00:27.099 --> 00:00:31.880
-we need to get right back to fundamentals
-of spinning bodies. Here, we have a disc which
+nós precisamos voltar aos fundamentos de 
+corpos girantes. Aqui, temos um disco que
 
 00:00:31.880 --> 00:00:37.110
-is spinning about the axis shown by the dotted
-line, and it is spinning with an angular velocity,
+está girando ao redor do eixo indicado pela linha
+pontilhada com uma velocidade angular 
 
 00:00:37.110 --> 00:00:43.250
-omega g and the disc has got a rotational
-inertia, j. We refer to the angular momentum
+ômega g e um momento de inércia j.
+Nós nos referimos ao momento angular
 
 00:00:43.250 --> 00:00:48.570
-of this disc and give that the symbol h.
-h is j times omega g. Now, let's
+deste disco e damos a ele o símbolo h.
+h é igual à j vezes ômega g.  Agora, vamos
 
 00:00:48.570 --> 00:00:54.730
-imagine that I apply a torque to this rotating
-disc. If I do that, the disc wants to rotate
+imaginar que eu aplico um torque a esse 
+disco giratório. Se eu fizer isso, o disco quer
 
 00:00:54.730 --> 00:01:00.380
-about the axis shown by the blue arrow. It's
-the cross product of the vector h and
+girar ao redor do eixo mostrado pela seta 
+azul. É o produto vetorial do vetor h e 
 
 00:01:00.380 --> 00:01:01.970
-the vector Tau.
+o vetor Tau.
 
 00:01:01.970 --> 00:01:06.572
-What we have here is a gyroscope and at the
-moment, the device is not spinning we can
+O que temos aqui é um giroscópio e nesse 
+momento, ele não está girando, nós podemos
 
 00:01:06.572 --> 00:01:13.060
-see that it moves very freely and nicely inside
-its gimbal mechanism. If I turn the motor
+ver que se move de forma livre e bem dentro
+de sua suspenção cardã. Se eu ligar o motor,
 
 00:01:13.060 --> 00:01:18.970
-on, it takes a little moment to come up to
-speed, it now behaves very very differently.
+leva um pequeno momento para entrar em 
+ação, agora se comporta de forma diferente.
 
 00:01:18.970 --> 00:01:24.700
-Now, I'm going to rotate the spinning disc
-assembly about the blue arrow and now; the
+Agora, eu vou girar o conjunto do disco 
+giratório ao redor da seta azul e agora; o
 
 00:01:24.700 --> 00:01:29.060
-spinning disc is going to exert a torque about
-the red arrow, and that torque is the cross
+disco giratório irá exercer um torque sobre a
+seta vermelha, e esse torque é o produto
 
 00:01:29.060 --> 00:01:34.850
-product of the vectors omega and h.
-So, how do I measure the torque? If the disc
+vetorial dos vetores ômega e h. Então,
+Como medir o torque? Se o eixo do disco
 
 00:01:34.850 --> 00:01:40.549
-axis is supported by two bearings then, this
-torque will exert a force up on one bearing
+for apoiado por dois rolamentos, então esse
+torque irá exercer uma força para cima em um
 
 00:01:40.549 --> 00:01:45.700
-and down on the other bearing, and those forces
-can be measured. The spinning disc then has
+dos rolamentos e uma para baixo no outro, essas
+forças podem ser medidas. O disco giratório então
 
 00:01:45.700 --> 00:01:50.979
-converted the angular velocity omega into
-a torque which is then, measured using force
+converteu a velocidade angular em um torque
+que é então medido utilizando sensores
 
 00:01:50.979 --> 00:01:51.979
-sensors.
+de força
 
 00:01:51.979 --> 00:01:57.570
-Importantly, if I pull on this axis of the
-gyroscope with a rubber band, I am basically
+É importante ressaltar, se eu puxar este eixo
+do giroscópio com um elástico, eu irei
 
 00:01:57.570 --> 00:02:01.710
-going to exert a force on it. And so, I pull
-in this direction. You will see that the gyroscope
+basicamente exercer uma força sobre ele.
+E então eu puxo nessa direção. Você verá que o
 
 00:02:01.710 --> 00:02:06.310
-is trying to rotate about an axis like this.
+giroscópio está tentando girar ao redor de
+um eixo como este.
 
 00:02:06.310 --> 00:02:10.220
-Angular velocity sensors based on spinning
-discs are not very common anymore. They tend
+Sensores de velocidade angulares baseados em 
+discos giratórios não são mais comuns. São
 
 00:02:10.220 --> 00:02:14.870
-to be rather bulky and require a lot of power
-to keep that disc spinning. Sensors today
+muito volumosos e requerem muita energia para
+manter o disco girando. Sensores atuais são
 
 00:02:14.870 --> 00:02:20.400
-are based on vibrating rather than rotating
-element, but we still tend to call them gyroscopes
+baseados em elementos vibratórios em vez de 
+rotatórios, mas ainda tendemos a chamá-los de
 
 00:02:20.400 --> 00:02:25.490
-or gyroscopic sensors. The vibrating elements
-are fabricated using ‘MEMS’ technology.
+giroscópios ou sensores de giroscópios. Os elementos
+vibratórios são fabricados usando ‘MEMS’ tecnologia.
 
 00:02:25.490 --> 00:02:31.190
-So, the sensing elements themselves are microscopic
-in size but the underlying principle is the
+Então, os próprios elementos sensíveis são de tamanho
+microscópio, mas o princípio é subjacente a todos é o
 
 00:02:31.190 --> 00:02:36.900
-same. Angular velocity in the sensor causes
-forces or torques to be exerted on the micro
+mesmo. A velocidade angular no sensor faz 
+com que forças ou torques sejam exercidos nos
 
 00:02:36.900 --> 00:02:42.950
-scale elements and that leads to displacements,
-which can be measured and amplified to produce
+elementos da microescala e isso leva a deslocamentos,
+que podem ser medidos e amplificados para produzir
 
 00:02:42.950 --> 00:02:48.620
-an angular velocity signal. As with accelerometers
-and magnetometers it is very common to package
+um sinal de velocidade angular. Assim como em
+acelerômetros e magnetômetros, é muito comum
 
 00:02:48.620 --> 00:02:53.430
-three gyroscope sensors into a single chip,
-and they are arranged orthogonally again so
+empacotar três sensores giroscópios em um 
+único chip, dispostos de forma ortogonal
 
 00:02:53.430 --> 00:03:00.630
-they measure the three components of the angular
-velocity vector. Just as you have accelerometers
+novamente para medir os três componentes do 
+vetor de velocidade angular. Assim como você tem
 
 00:03:00.630 --> 00:03:04.989
-in your head, you also have gyroscopes in
-your head and once again, these are in the
+acelerômetros em sua cabeça, você também tem
+giroscópios e novamente, eles estão no conjunto
 
 00:03:04.989 --> 00:03:11.050
-inner ear assembly. In particular, the three
-very distinctive elements known as the semi-circular
+do ouvido interno.  Em particular, os três 
+elementos distintos conhecidos como canais
 
 00:03:11.050 --> 00:03:17.489
-canals. These are very thin tubes filled with
-fluid and rotational motion of your head causes
+semicirculares. São tubos muito finos cheios de
+fluidos e o movimento rotacional da sua cabeça
 
 00:03:17.489 --> 00:03:23.010
-the liquid in those tubes to move. The motion
-of a fluid is detected by tiny hair cells
+faz com que o líquido nos tubos se mova. O mover
+de um fluído é detectado por células ciliadas 
 
 00:03:23.010 --> 00:03:28.569
-within the canals, and this leads to an angular
-velocity signal to your brain. The angular
+minúsculas dentro dos canais, o que leva a um 
+sinal de velocidade angular para o cérebro. O
 
 00:03:28.569 --> 00:03:33.769
-velocity signal is combined with motion information
-that comes from your eyes. If these two signals
+sinal de velocidade angular é combinado com informações
+de movimento que vêm de seus olhos. Se esses dois 
 
 00:03:33.769 --> 00:03:38.240
-are not consistent, it leads to a problem
-which we experience as motion sickness, that's
+sinais não forem consistentes, isso leva a um 
+problema que experimentamos como enjoo, que é quando
 
 00:03:38.240 --> 00:03:42.319
-when our inner ear is telling us that our
-body is moving in one way, but our eyes tell
+nosso ouvido está nos dizendo que nosso corpo
+está se movendo de uma maneira, mas nossos
 
 00:03:42.319 --> 00:03:47.720
-us that our body is moving in a different
-way. So, this is motion sickness or sea sickness,
+olhos nos dizem que nosso corpo está se movendo
+de uma maneira diferente maneira. Isso é enjoo
 
 00:03:47.720 --> 00:03:51.290
-and our body responds rather illogically by
-wanting us to throw up.
+de movimento ou do mar, e nosso corpo responde
+de forma um tanto ilógica, querendo que vomitemos.
+
 
