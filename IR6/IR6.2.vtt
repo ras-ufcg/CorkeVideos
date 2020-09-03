@@ -20,7 +20,7 @@ posição do efetuador desse robô
 
 00:00:25.390 --> 00:00:30.829
 de uma junta. O efetuador é indicado por esse
-símbolo aqui. Nós iremos relembrar da ultima
+símbolo aqui. Nós iremos relembrar da última
 
 00:00:30.829 --> 00:00:35.600
 lição que quando nós queremos descrever a
@@ -109,7 +109,7 @@ impossível para nós configurarmos a posição e
 a orientação do robô de forma independente.
 
 00:02:32.560 --> 00:02:39.879
-Não há suficientes juntas ou graus de 
+Não há juntas suficientes ou graus de 
 liberdade num simples robô como esse
 
 00:02:39.879 --> 00:02:43.989
