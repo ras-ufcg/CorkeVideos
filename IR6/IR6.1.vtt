@@ -1,105 +1,105 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-br
 
 00:00:03.870 --> 00:00:07.799
-Let’s have a look at a few different kinds
-of robots. The first one we’re going to
+Vamos dar uma olhada em alguns diferentes tipos
+de robôs. O primeiro que vamos 
 
 00:00:07.799 --> 00:00:12.559
-consider is what’s called a Gantry robot
-and sometimes called a Cartesian robot. It’s
+considerar é o que chamamos robô Gantry
+e às vezes chamamos de robô de coordenadas cartesianas. É
 
 00:00:12.559 --> 00:00:17.860
-a robot that allows us to control the position
-of the tool-tip in three-dimensional space,
+um robô que nos permite controlar a posição
+da ponta da ferramenta no espaço tridimensional,
 
 00:00:17.860 --> 00:00:24.009
-so we can control the X, Y and Z coordinate
-of the tool-tip. The Gantry robot has got
+assim podemos controlar a coordenada X, Y e Z 
+da ponta da ferramenta. O robô Gantry tem
 
 00:00:24.009 --> 00:00:29.430
-a boom which moves in the direction indicated
-by the blue arrow and the tool moves along
+uma barra a qual se move na direção indicada
+pela seta azul e a ferramenta se move ao longo
 
 00:00:29.430 --> 00:00:35.050
-the boom in the direction shown by the red
-arrow. And, finally, the tool itself moves
+da barra nada direção mostrada pela seta vermelha.
+E, finalmente, a própria ferramenta se move para
 
 00:00:35.050 --> 00:00:40.559
-up and down in the direction indicated by
-the green arrow. We have three motion axes,
+cima e para baixo na direção indicada pela
+seta verde. Temos três eixos de movimentos,
 
 00:00:40.559 --> 00:00:45.329
-each orthogonal to the others.
-This kind of robot is known as a SCARA robot
+cada um ortogonal aos outros.
+Esse tipo de robô é conhecido como um robô SCARA 
 
 00:00:45.329 --> 00:00:50.690
-and they are widely used in manufacturing
-and package handling applications.
+e eles são amplamente usados na fabricação
+e aplicações de manuseio de embalagens.
 
 00:00:50.690 --> 00:00:55.489
-The part of the robot that’s highlighted
-in red rotates around the axis shown here.
+A parte do robô que é destacada
+em vermelho gira em torno do eixo mostrado aqui.
 
 00:00:55.489 --> 00:01:01.780
-And, the part of the robot that’s highlighted
-in blue rotates around this axis. And, finally,
+E, a parte do robô que é destacada
+em azul gira em torno desse eixo. E, finalmente,
 
 00:01:01.780 --> 00:01:07.600
-the tool moves up and down along the axis
-shown here by the green arrow. Some variants
+a ferramenta se move para cima e para baixo em torno do eixo
+mostrado aqui pela seta verde. Algumas variantes
 
 00:01:07.600 --> 00:01:14.610
-of the SCARA robots also rotate the tool around
-the axis shown by the green dashed line. The
+do robô SCARA também giram a ferramenta em torno do
+eixo mostrado pela linha tracejada verde. O
 
 00:01:14.610 --> 00:01:21.410
-term SCARA is an acronym for Selective Compliance
-Articulating Robot and so why the complex
+termo SCARA é um acrônimo para "Braço Robótico para Montagem
+de Conformidade Seletiva" e, então porque o acrônimo 
 
 00:01:21.410 --> 00:01:25.960
-and tortured acronym? But essentially, what
-it means is that the robot is quite free to
+complexo e torturador? Mas essencialmente, o que
+isso significa é que o robô é bastante livre para
 
 00:01:25.960 --> 00:01:31.450
-move in the horizontal plane, but it’s very,
-very stiff in the vertical direction and that’s
+movimento no plano horizontal, mas isso é muito,
+muito rígido na direção vertical e que só é
 
 00:01:31.450 --> 00:01:36.140
-just a consequence of the way it has been
-designed and constructed.
+uma consequência do modo que isso foi
+projetado e construído.
 
 00:01:36.140 --> 00:01:41.570
-A relatively new class of robot is the parallel
-link robot and this is an example of one shown
+Uma classe relativamente nova de robôs é o manipulador parelelo 
+e esse é um exemplo do mostrado
 
 00:01:41.570 --> 00:01:47.420
-here. A great advantage of the parallel link
-robot is all of the motors can be situated
+aqui. Uma ótima vantagem do manipulador parelelo 
+é que todos os motores podem ser localizados
 
 00:01:47.420 --> 00:01:52.980
-in the base of the robot and they are connected
-via mechanical linkages to the tool. So, there
+na base do robô e eles são conectados
+via ligações mecânicas com a ferramenta. Então, existe
 
 00:01:52.980 --> 00:01:59.180
-are a number of mechanical linkages in parallel
-connecting the tool to the motors. This is
+um número de ligações mecânicas em paralelo
+conectando a ferramente ao motor. Isso é
 
 00:01:59.180 --> 00:02:04.890
-a very different architecture to the Gantry
-robot and the SCARA robot. Those robots are referred
+uma arquitetura muito diferente ao robô Gantry
+e o robô SCARA. Estes robôs são mencionados
 
 00:02:04.890 --> 00:02:10.280
-to as serial link robots because there is
-a chain of links from the base to the tool-tip.
+como manipuladores seriais porque existe
+uma cadeia de ligações da base para a ponta de ferramenta.
 
 00:02:10.280 --> 00:02:17.069
-Here, the links are all in parallel.
-Here are a couple of examples of educational
+Aqui, as ligações são todas em paralelo.
+Aqui estão alguns exemplos de robôs 
 
 00:02:17.069 --> 00:02:22.959
-robots. O à esquerda é um robô de hobby que
+educacionais. O à esquerda é um robô de hobby que
 possui quatro juntas mecânicas conectando
 
 00:02:22.959 --> 00:02:28.980
@@ -147,7 +147,7 @@ do desenvolvimento de braços robóticos.
 
 00:03:25.459 --> 00:03:30.769
 Ele foi desenvolvido pela Universidade de Stanford
-e é comumente conhecido Braço Robótico Stanford.
+e é comumente conhecido Braço Robótico de Stanford.
 
 00:03:30.769 --> 00:03:37.459
 Foi desenvolvido em 1969. Este foi o ano
