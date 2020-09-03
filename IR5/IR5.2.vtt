@@ -171,158 +171,155 @@ vector.
 We note here that G is positive.
 
 00:03:02.640 --> 00:03:07.739
-We are talking about acceleration in the world
-frame is G in the upward direction.
+Nós estamos falando sobre aceleração no sistema
+de coordenadas universal é G no sentido ascendente.
 
 00:03:07.739 --> 00:03:14.019
-It is very easy to rotate this gravitational
-acceleration with respect to the world frame
+É extremamente simples rotacionar esta aceleração
+gravitacional respeitando o sistema de coordenadas
+
 
 00:03:14.019 --> 00:03:16.200
-into the body frame.
+dentro do escopo do corpo.
 
 00:03:16.200 --> 00:03:18.900
-This is what the sensors in the phone actually
-measure.
+É isto que os sensores no seu celular medem
 
 00:03:18.900 --> 00:03:24.150
-They are measuring gravity with respect to
-frame B. It is really important to note that
+Eles estão mensurando a gravidade em relação ao
+eixo B. É extremamente importante notar que
 
 00:03:24.150 --> 00:03:26.950
-this assumes that the phone is not accelerating.
+Isto assume que o telefone não está acelerando.
 
 00:03:26.950 --> 00:03:30.310
-The only acceleration on the body is that
-due to gravity.
+A única aceleração aplicada ao corpo é
+aquela devido à gravidade.
 
 00:03:30.310 --> 00:03:34.709
-Now, I can expand out the right hand side
-and I can replace the left hand side with
+Agora, eu posso expandir o lado direito 
+e substituir o lado esquerdo
 
 00:03:34.709 --> 00:03:37.909
-the gravity actually measured by the sensors
-in the phone.
+com a gravidade medida pelos sensores no telefone
 
 00:03:37.909 --> 00:03:40.870
-I have a very simple vector equation.
+Eu tenho uma equação vetorial bem simples
 
 00:03:40.870 --> 00:03:43.340
-If I take the first row in this vector equation.
+Se tomarmos a primeira linha nessa equação vetorial.
 
 00:03:43.340 --> 00:03:49.140
-I can rearrange it to get a solution for the
-pitch angle theta.
+Eu posso reorganizar ela para chegar a uma solução
+para o ângulo de rotação theta.
 
 00:03:49.140 --> 00:03:53.760
-If I take the quotient of the last two rows
-in the vector equation, I get this expression
+Se tomarmos o quociente das duas últimas fileiras
+na equação vetorial, eu obtenho esta expressão
 
 00:03:53.760 --> 00:03:56.379
-for the roll angle of the phone.
+para o ângulo de rotação do telefone.
 
 00:03:56.379 --> 00:04:01.879
-Two very simple equations based on the measured
-acceleration give me the roll and pitch angle
+Duas equações bem simples baseadas nas medidas
+de aceleração me dão os ângulos de rotação e inclinação 
 
 00:04:01.879 --> 00:04:05.590
-of the phone with respect to the world coordinate
-frame.
+do telefone em relação ao sistema de coordenadas universal
 
 00:04:05.590 --> 00:04:09.560
-Then you note in this equation that yaw angle
-does not appear.
+Então, você nota nesta equação que o ângulo de guinada
+nao aparece.
 
 00:04:09.560 --> 00:04:14.040
-A simple way to think about why this is the
-case, is that the gravity vector has got three
+Uma maneira simples de pensar sobre o porquê este é o
+caso, é que o vetor de gravidade possui
 
 00:04:14.040 --> 00:04:20.370
-elements but its length is fixed therefore
-we can define it by only two pieces of information.
+três elementos, mas o comprimento é fixo
+portanto, nós podemos defini-lo por apenas dois pedaços de informação.
 
 00:04:20.370 --> 00:04:24.729
-The third element of the gravity vector is
-redundant.
+O terceiro elemnto do vetor gravidade é redundante.
 
 00:04:24.729 --> 00:04:28.289
-In this case, the two pieces of information
-that we need are the roll angle and the pitch
+Neste caso, os dois pedaços de informação que
+nós precisamos são os ângulos de rotação e 
 
 00:04:28.289 --> 00:04:29.289
-angle.
+inclinação.
 
 00:04:29.289 --> 00:04:30.699
-We do not need the yaw angle.
+Nós não precisamos do ângulo de guinada.
 
 00:04:30.699 --> 00:04:35.000
-To measure the yaw angle, we need to use a
-different sensor and that sensor is actually
+Para medir o ângulo de guinada, nós precisamos usar
+um tipo diferente de sensor, e este sensor é
 
 00:04:35.000 --> 00:04:38.050
-a compass and that is the topic of our next
-section.
+na verdade um compasso, e este é o tópico 
+da nossa próxima sessão.
 
 00:04:38.050 --> 00:04:43.639
-An important consideration when we use three
-accelerometers, is that it measures only two
+Uma consideração importante quando utilizamos 
+três acelerômetros é que eles medem apenas
 
 00:04:43.639 --> 00:04:45.139
-independent variables.
+duas variáveis independentes.
 
 00:04:45.139 --> 00:04:50.250
-The length of the vector is fixed, so therefore,
-we can describe that vector just in terms
+O comprimento do vetor é fixo, portanto,
+nós podemos descrever este vetor apenas em termos
 
 00:04:50.250 --> 00:04:51.250
-of two angles.
+de dois ângulos.
 
 00:04:51.250 --> 00:04:55.950
-We can see that very clearly when the phone
-is configured like this.
+Nós podemos observar isto claramente quando
+o telefone é configurado da seguinte maneira
 
 00:04:55.950 --> 00:04:59.020
-Zero acceleration in the Z and the X directions.
+Aceleração zero nas direções Z e X.
 
 00:04:59.020 --> 00:05:02.370
-The acceleration is all in the Y direction.
+Toda a aceleração é na direção do Y
 
 00:05:02.370 --> 00:05:07.130
-So the accelerometer measurements are exactly
-the same with the phone orientated like this,
+Então, as medidas do acelerômetro são exatamente
+as mesmas com o celular orientado desta maneira,
 
 00:05:07.130 --> 00:05:09.150
-or like this or like this.
+ou desta,
+ou desta.
 
 00:05:09.150 --> 00:05:13.860
-It makes absolutely no difference.
+Não faz diferença alguma.
 
 00:05:13.860 --> 00:05:17.039
-Accelerometers today have very low cost but
-very, very high in performance.
+Atualmente, os acelerômetros possuem um custo baixo
+mas uma performance extremamente alta.
 
 00:05:17.039 --> 00:05:21.889
-Part of the reason for this is that they are
-manufactured in enormous quantities.
+Parte do motivo para isto é que eles são
+fabricados em grandes quantidades.
 
 00:05:21.889 --> 00:05:24.500
-They're use to trigger airbags in cars.
+Eles são utilizados para acionar airbags nos carros.
 
 00:05:24.500 --> 00:05:28.730
-They're used in digital cameras to work out
-whether the camera is in landscape or portrait
+Eles são utilizados em câmeras digitais para saber 
+se a orientação é no modo de paisagem 
 
 00:05:28.730 --> 00:05:29.730
-mode.
+ou retrato.
 
 00:05:29.730 --> 00:05:33.669
-They're used in your phone for all sorts of
-different applications and they're use the
+Eles são utilizados no seu celular para diversos
+tipos de aplicações diferentes e são usados
 
 00:05:33.669 --> 00:05:39.129
-stabilization of unmanned area of vehicles
-from low cost toys like this to much more
+para estabilização de uma gama incontável de veículos
+desde brinquedos baratos como este até
 
 00:05:39.129 --> 00:05:40.580
-sophisticated systems.
-
+sistemas muito mais sofisticados.
