@@ -1,219 +1,218 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.980 --> 00:00:08.850
-Here I have created a very simple robot out
-of Lego. It's got simply one rotational joint
+Aqui eu criei um robô bem simples com Lego.
+Ele tem um uma simples junta rotacional
 
 00:00:08.850 --> 00:00:14.309
-or one revolute joint. And the end effector
-position of the robot can follow any point
+ou uma junta revolucional. E a posição do efetuador
+do robô consegue seguir qualquer ponto
 
 00:00:14.309 --> 00:00:18.550
-around a circle if not particularly interesting
-or particularly useful.
+ao redor de um círculo se não for particularmente
+interessante ou particularmente útil.
 
 00:00:18.550 --> 00:00:25.390
-What we are interested in now is to describe
-the pose of the end effector of this one joint
+O que estamos interessados agora é descrever agora a
+posição do efetuador desse robô
 
 00:00:25.390 --> 00:00:30.829
-robot. The end effector is indicated by this
-symbol here. We will recall from the earlier
+de uma junta. O efetuador é indicado por esse
+símbolo aqui. Nós iremos relembrar da última
 
 00:00:30.829 --> 00:00:35.600
-lecture that when we want to describe the
-pose of an object in two dimensions, we attach
+lição que quando nós queremos descrever a
+posição de um objeto em duas dimensões, nós unimos
 
 00:00:35.600 --> 00:00:40.370
-a coordinate frame to it and the position
-of the object is described by the position
+a estrutura de coordenadas a isso e a posição
+do objeto é descrita pela posição
 
 00:00:40.370 --> 00:00:45.090
-of the origin of the coordinate frame and
-the orientation of the object is described
+da origem da coordenada do quadro e a
+orientação do objeto é descrita
 
 00:00:45.090 --> 00:00:51.309
-by the angle between that coordinate frame
-and the reference coordinate frame. I've indicated
+pelo ângulo entre a estrutura de coordenadas e 
+e o sistema de coordenadas de referência. Eu tenho indicado
 
 00:00:51.309 --> 00:00:56.109
-here a reference coordinate frame with the
-axis x and y.
+aqui o sistema de coordenadas de referência com os
+eixos x e y.
 
 00:00:56.109 --> 00:01:01.820
-The first thing we're going to do is to rotate
-that coordinate frame by the angle Q1. That's
+A primeira coisa que faremos é rotacionar
+o sistema de coordenadas por um ângulo Q1. Esse é
 
 00:01:01.820 --> 00:01:10.410
-the joint angle of our 1 degree freedom robot.
-So I'm going to apply a homogeneous transformation,
+o ângulo da junta do nosso robô de 1 grau de liberdade.
+Então eu irei aplicar uma transformação homogênea,
 
 00:01:10.410 --> 00:01:17.040
-a rotation, by the angle Q1. And now I'm going
-to translate the coordinate frame along the
+uma rotação, por um ângulo Q1. E agora eu vou
+traduzir esse sistema de coordenadas ao longo do
 
 00:01:17.040 --> 00:01:23.500
-link of the robot. So I'm now going to apply
-a translation in the x direction. So the gray
+elo do robô. Então eu agora irei aplicar
+a translação na direção x. O quadro
 
 00:01:23.500 --> 00:01:29.440
-coordinate frame shown here represents the
-pose of the robot. We get to the end effector
+de coordenadas cinza mostrado aqui representa a
+posição do robô. Nós conseguimos o sistema de coordenadas
 
 00:01:29.440 --> 00:01:35.580
-coordinate frame by rotating and then translating
-the reference coordinate frame. All these
+do efetuador rotacionando e transaladando o
+sistema de coordenadas de referência. Todas essas
 
 00:01:35.580 --> 00:01:42.160
-transforms are in two dimensions. So we say
-that they belong the set SE2. That's the set
+transformações são em duas dimensões. Então dizemos
+que eles pertencem ao conjunto SE2. Esse é o conjunto
 
 00:01:42.160 --> 00:01:47.490
-of all translations and rotations in two dimensions.
+de todas as translações e rotações em duas dimensões.
 
 00:01:47.490 --> 00:01:52.470
-Using what we learned in an earlier lecture,
-I can expand this out. Then I can multiply
+Usando o que aprendemos na ultima lição,
+eu posso expandir isso. Logo, eu posso multiplicar
 
 00:01:52.470 --> 00:01:57.570
-the two matrices together and I come up with
-a single homogeneous transformation matrix
+as duas matrizes juntas e apareço com
+uma matriz de transformação única
 
 00:01:57.570 --> 00:02:03.210
-which describes the pose of the end effector.
-The position of the end effector is given
+que descreve a posição do efetuador.
+A posição final do efetor é dada
 
 00:02:03.210 --> 00:02:07.430
-by these two elements in three homogeneous
-transformation matrix and I've written them
+por esses dois elementos nessa matriz de 
+transformação homogênea e eu escrevi
 
 00:02:07.430 --> 00:02:13.310
-out here. And we can see that they describe
-a set of points which lie on a circle of radius
+ela aqui. E nós podemos ver que eles descrevem um 
+conjunto de pontos no qual se dispõem em um círculo de raio
 
 00:02:13.310 --> 00:02:14.019
 A1.
 
 00:02:14.019 --> 00:02:20.500
-So the position of the end effector is a function
-of the joint angle Q1 and the orientation
+Logo a posição do efetuador é uma função do
+ângulo Q1 da junta e a orientação
 
 00:02:20.500 --> 00:02:26.920
-of the end effector which is given by this
-matrix here is also a function of Q1. So its
+do efetuador que é dada por essa matriz
+aqui é também uma função de Q1. Então isso é
 
 00:02:26.920 --> 00:02:32.560
-not possible for us to independently set the
-position and the orientation of the robot.
+impossível para nós configurarmos a posição e
+a orientação do robô de forma independente.
 
 00:02:32.560 --> 00:02:39.879
-There are just not enough joints or degrees
-of freedom in a simple robot like this.
+Não há juntas suficientes ou graus de 
+liberdade num simples robô como esse
 
 00:02:39.879 --> 00:02:43.989
-Let's look at doing this in MATLAB. I'm going
-to define a couple of workspace variables
+Vamos ver o andamento no MATLAB. Eu vou
+definir um par de variáveis
 
 00:02:43.989 --> 00:02:51.489
-A1 which represents a length of the first
-link and Q1 which represents the joint angle.
+A1 que representa o comprimento do primeiro 
+elo e Q1 que representa o ângulo da junta.
 
 00:02:51.489 --> 00:02:56.730
-Now in order to determine the end effector
-pose, I need to multiply together a couple
+Agora, para determinar a posição do efetuador,
+Eu preciso multiplicar juntos os pares
 
 00:02:56.730 --> 00:02:58.560
-of elementary transformations.
+de transformações elementais.
 
 00:02:58.560 --> 00:03:05.150
-An easier way to do this using the robot toolbox
-is with the function called trchain2. It computes
+Uma forma fácil de fazer usando usando a toolbox de robotica
+é com a função chamada trchain2. Ela calcula
 
 00:03:05.150 --> 00:03:08.620
-the result of the chain of homogeneous transformations.
+O resultado de uma cadeia de transformações homogêneas.
 
 00:03:08.620 --> 00:03:14.780
-The first one in the chain rotation by Q1
-and that's followed by a translation in the
+O primeiro na rotação em cadeia por Q1 e
+esse seguido por uma translação na 
 
 00:03:14.780 --> 00:03:21.510
-x direction, that's along the link by a distance
-A1. I just represent that as a string in MATLAB
+direção x, que é ao longo do elo pela distância
+A1. Eu então a represento como uma string no MATLAB
 
 00:03:21.510 --> 00:03:29.310
-and then I pass in the joint angle that I'm
-interested in which is Q1 and here is the result.
+e então eu passo o ângulo da junta que eu estou
+interessado no qual é Q1 e aqui está o resultado.
 
 00:03:29.720 --> 00:03:36.739
-What this is done is when the trchain2 is
-executing, it looks of the variable A1 in
+O que aconteceu é que quando o trchain2 está sendo
+executado, ele procura pela variável A1 na
 
 00:03:36.739 --> 00:03:43.150
-the workspace and it looks for the variable
-Q1 as being the first element of the vector
+área de trabalho e ela procura pela variável
+Q1 como sendo o primeiro elemento do vetor
 
 00:03:43.150 --> 00:03:49.939
-that I passed in. A1 from the workspace. Q1
-comes from the passed vector. Here is in numeric
+que eu passei. A1 da área de trabalho. Q1
+vem do vetor atribuído. Aqui está na forma
 
 00:03:49.939 --> 00:03:57.079
-form the 3x3 homogeneous transformation matrix
-representing the pose of the end effector
+numérica a matriz homogênea de transformação 3x3
+representando a posição do efetuador
 
 00:03:57.079 --> 00:04:00.459
-of our simple one link robot.
+do nosso simples robô de uma articulação
 
 00:04:00.459 --> 00:04:07.120
-Now I can do it using symbols instead of numbers.
-And to do that invoke some functions from
+Agora posso fazer isso usando símbolos ao invés de números.
+E para isso, chame algumas funções do toolbox
 
 00:04:07.120 --> 00:04:13.689
-MATLAB’s symbolic toolbox and I’m going
-to say Q1 is a symbol and A1 is a symbol.
+symbolic do MATLAB e eu irei dizer
+que Q1 é um símbolo e A1 é um símbolo.
 
 00:04:13.689 --> 00:04:17.470
-Now what I'm going to do is just repeat the
-command that I did previously.
+Agora o que farei é só repetir o
+comando que eu fiz anteriormente.
 
 00:04:17.470 --> 00:04:22.200
-And what we had here is a symbolic representation
-of the pose of the end effector; the same
+E o que temos aqui é uma representação simbólica
+da posição do efetuador; o mesmo
 
 00:04:22.200 --> 00:04:28.180
-as we worked out a slide ago. Another I can
-do using the robotic's toolbox is to import
+que fizemos no slide anterior. Um outro que posso
+fazer usando o toolbox de robótica é importar
 
 00:04:28.180 --> 00:04:37.380
-a model of a plainer one joint robot. I do
-that with this function mdl_planar1 and we
+um modelo de um robô mono-articulado planar. Eu faço
+isso com a função mdl_planar1 e nós
 
 00:04:37.380 --> 00:04:41.820
-created a new variable in that workspace;
-variable called P1. You can see that it's
+criamos uma nova variável na área de trabalho;
+variável chamada P1. Pode-se ver que esse é
 
 00:04:41.820 --> 00:04:46.720
-of a serial link of type. It's a robot manipulator
-type object.
+um elo serial de tipo. Esse é um objeto do tipo
+manipulador de robô.
 
 00:04:46.720 --> 00:04:51.760
-Now with this particular type object, it's
-got a number of methods. An interesting method
+Agora com esse tipo singular de objeto, tem-se
+vários métodos. Um método interessante
 
 00:04:51.760 --> 00:04:57.480
-is to teach method and if I invoke that, all
-you see here is a graphical representation
+é o método teach e se eu chamá-lo, tudo
+que você pode ver aqui é uma representação gráfica
 
 00:04:57.480 --> 00:05:03.480
-of a one link robot and a simple teach pendant,
-a single slider here. And as I adjust the
+de um robô mono-articulado e um simples painel de controle
+um simples controle deslizante aqui. E enquanto eu ajusto
 
 00:05:03.480 --> 00:05:10.850
-slider we see the robot move. I'm adjusting
-the value of the first joint angle. What we
+o controle podemos ver o robô se mover. Eu estou ajustando
+o valor do primeiro ângulo da junta. O que nós
 
 00:05:10.850 --> 00:05:19.170
-see here is the xy coordinate of the end effector
-of the robot changing as I adjust each joint angle.
-
+vemos aqui são as coordenadas xy do efetuador
+do robô mudando enquanto eu ajusto cada ângulo da junta.
