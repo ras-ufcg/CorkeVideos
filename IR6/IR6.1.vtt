@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-br
 
 00:00:03.870 --> 00:00:07.799
 Vamos dar uma olhada em alguns diferentes tipos
@@ -8,7 +8,7 @@ de robôs. O primeiro que vamos
 
 00:00:07.799 --> 00:00:12.559
 considerar é o que chamamos robô Gantry
-e às vezes chamamos de robô Cartesiano. É
+e às vezes chamamos de robô de coordenadas cartesianas. É
 
 00:00:12.559 --> 00:00:17.860
 um robô que nos permite controlar a posição
@@ -55,8 +55,8 @@ do robô SCARA também giram a ferramenta em torno do
 eixo mostrado pela linha tracejada verde. O
 
 00:01:14.610 --> 00:01:21.410
-termo SCARA é um acrônimo para Robô Articulado de 
-Conformidade Seletiva e, então porque o acrônimo 
+termo SCARA é um acrônimo para "Braço Robótico para Montagem
+de Conformidade Seletiva" e, então porque o acrônimo 
 
 00:01:21.410 --> 00:01:25.960
 complexo e torturador? Mas essencialmente, o que
@@ -71,12 +71,12 @@ uma consequência do modo que isso foi
 projetado e construído.
 
 00:01:36.140 --> 00:01:41.570
-Uma classe relativamente nova de robôs é o robô de ligação parelela 
+Uma classe relativamente nova de robôs é o manipulador parelelo 
 e esse é um exemplo do mostrado
 
 00:01:41.570 --> 00:01:47.420
-aqui. Uma ótima vantagem do robô de ligação parelelo
-é todos os motores podem ser localizados
+aqui. Uma ótima vantagem do manipulador parelelo 
+é que todos os motores podem ser localizados
 
 00:01:47.420 --> 00:01:52.980
 na base do robô e eles são conectados
@@ -91,7 +91,7 @@ uma arquitetura muito diferente ao robô Gantry
 e o robô SCARA. Estes robôs são mencionados
 
 00:02:04.890 --> 00:02:10.280
-como robôs de ligação serial porque existe
+como manipuladores seriais porque existe
 uma cadeia de ligações da base para a ponta de ferramenta.
 
 00:02:10.280 --> 00:02:17.069
@@ -147,7 +147,7 @@ do desenvolvimento de braços robóticos.
 
 00:03:25.459 --> 00:03:30.769
 Ele foi desenvolvido pela Universidade de Stanford
-e é comumente conhecido Braço Robótico Stanford.
+e é comumente conhecido Braço Robótico de Stanford.
 
 00:03:30.769 --> 00:03:37.459
 Foi desenvolvido em 1969. Este foi o ano
