@@ -326,150 +326,151 @@ no caso de uma articulação prismática, e uma série
 de outros vetores.
 
 00:06:14.570 --> 00:06:19.560
-We have a vector of joint angles, a vector
-of link offsets, a vector of link lengths,
+Temos um vetor com os ângulos das juntas, outro com os 
+deslocamentos dos elos, outro com as larguras dos elos,
 
 00:06:19.560 --> 00:06:24.580
-and a vector of link twists, and a vector
-of joint types whose elements describe whether
+e um vetor com as torções dos elos, e outro com os
+tipos de junta, cujos elementos descrevem se
 
 00:06:24.580 --> 00:06:28.480
-the corresponding joint is revolute or prismatic.
+a junta correspondente é rotativa ou prismática.
 
 00:06:28.480 --> 00:06:33.169
-Most of the elements of Theta, D, A and alpha
-are constant.
+A maioria dos elementos de Theta, D, A e alpha
+são constantes.
 
 00:06:33.169 --> 00:06:38.840
-The joint configuration vector Q contains
-the variables in the system and we substitute
+O vetor de configuração da junta Q contém
+as variáveis do sistema e nós substituímos
 
 00:06:38.840 --> 00:06:45.770
-elements of Q in to elements of Theta, or
-elements of D according to the joint type
+elementos de Q em elementos de Theta, ou
+elementos de D, de acordo com o tipo da junta
 
 00:06:45.770 --> 00:06:50.260
-which is given by the corresponding of the
-vector sigma.
+o qual é dado pelo seu correspondente no
+vetor sigma.
 
 00:06:50.260 --> 00:06:57.160
-Denavit-Hartenberg notation allows us to describe
-links and joints by a group of four elementary
+A notação de Denavit-Hartenberg nos permite descrever
+elos e juntas por um grupo de quatro transformações
 
 00:06:57.160 --> 00:07:03.039
-homogeneous transformations and we stack them
-in end on end, one group per joint of the
+homogêneas elementares, e nós os empilhamos
+de ponta em ponta, um grupo por cada junta do
 
 00:07:03.039 --> 00:07:04.039
-robot.
+robô.
 
 00:07:04.039 --> 00:07:08.419
-In the case of a robot where all the joints
-are revolute, we substitute the elements of
+No caso de um robô no qual todas as juntas são
+rotativas, nós substituímos os elementos do
 
 00:07:08.419 --> 00:07:14.410
-the joint configuration vector, the vector
-Q in to the corresponding Theta elements.
+vetor de configuração das juntas, o vetor
+Q, nos elementos correspondentes em Theta.
 
 00:07:14.410 --> 00:07:19.490
-For the case of a robot that has got a prismatic
-joint as shown here.
+Para o caso de um robô que possui uma junta
+prismática, como demonstrado aqui,
 
 00:07:19.490 --> 00:07:25.810
-We substitute the corresponding joint configuration
-element in to the corresponding link of set
+nós substituímos o elemento de configuração de junta
+correspondente a ela no elemento de deslocamento
 
 00:07:25.810 --> 00:07:28.449
-element, in this case, D2.
+de elo, neste caso, D2.
 
 00:07:28.449 --> 00:07:32.970
-The robot kinematic function tells us the
-relationship between the frame 0 and frame
+A função cinemática do robô nos mostra a
+relação entre o sistema 0 e o sistema
 
 00:07:32.970 --> 00:07:33.970
 6.
 
 00:07:33.970 --> 00:07:39.650
-And frequently, we might want to relate frame
-0 to some sort of factory or world reference
+E frequentemente, nós podemos querer relacionar o
+sistema 0 com algum sistema de referência universal
 
 00:07:39.650 --> 00:07:40.650
-frame.
+ou industrial.
 
 00:07:40.650 --> 00:07:45.129
-So, we introduce a base transform that tells
-where link 0 is with respect to our world
+Então, nós introduzimos uma transformação de base
+que nos diz onde o elo 0 está em relação ao sistema
 
 00:07:45.129 --> 00:07:50.629
-reference frame, and we denote that by Psi
-B. The forward kinematic function gives us
+de referência universal, e denotamos isso por
+Psi B. A função de cinemática direta nos dá
 
 00:07:50.629 --> 00:07:56.169
-the pose of frame 6 and frame 6 is typically
-attached to some sort of mounting plate or
+a pose do sistema 6, o qual está comumente
+ligado a algum tipo de placa de montagem ou
 
 00:07:56.169 --> 00:07:59.009
-flange on the end of the robot.
+flange na ponta do robô.
 
 00:07:59.009 --> 00:08:03.289
-The actual tool, the thing that does the work,
-is attached to that particular flange.
+A verdadeira ferramenta, a coisa que realiza
+o trabalho, está atrelado a este flange.
 
 00:08:03.289 --> 00:08:08.570
-So, if we want to know the pose of the end
-of a tool, the end of the thing that’s doing
+Então, se nós queremos saber a pose da ponta
+de um instrumento, a ponta da coisa que faz
 
 00:08:08.570 --> 00:08:14.539
-the work which I’ve denoted here by frame
-E, then we introduce another relative pose.
+o trabalho, a qual eu denotei aqui pelo sistema
+E, daí nós introduzimos outra pose relativa.
 
 00:08:14.539 --> 00:08:18.550
-I call this KsiT and that stands for tool
-transform.
+Eu chamo isso de KsiT, que se refere a
+transformação de ferramenta.
 
 00:08:18.550 --> 00:08:23.120
-We can write a pose expression for the pose
-of the end effector with respect to the world
+Nós podemos escrever uma expressão para
+a pose do efetuador em relação ao sistema
 
 00:08:23.120 --> 00:08:29.850
-frame in terms of the base transform, the
-forward kinematic function, and the tool transform.
+universal em termos da transformação de base, da
+função cinemática direta, e da transformação de ferramenta.
 
 00:08:29.850 --> 00:08:32.169
-All robots have got a finite workspace.
+Todos os robôs possuem uma área de
+trabalho finita.
 
 00:08:32.169 --> 00:08:36.090
-That’s the set of all reachable end point
-positions.
+Este é o conjunto de todas as posições
+que a ponta pode alcançar.
 
 00:08:36.090 --> 00:08:40.820
-All industrial robots come with a diagram
-like this in their data sheet which shows
+Todos os robôs industriais vêm com um diagrama
+como este em suas documentações, o qual mostra
 
 00:08:40.820 --> 00:08:45.400
-quite clearly the parts of the workspace that
-they can and cannot reach.
+claramente as partes da área de trabalho que
+eles podem e não podem alcançar.
 
 00:08:45.400 --> 00:08:48.340
-In robotics, we’re interested in two kinematic
-problems.
+Em robótica, estamos interessados em dois
+problemas de cinemática.
 
 00:08:48.340 --> 00:08:52.710
-The forward kinematic problem has been the
-subject of this lecture, and that is given
+O problema da cinemática direta tem sido o
+assunto desta aula, que é: dados
 
 00:08:52.710 --> 00:08:58.590
-the joint angles, what is the pose of the
-robot's end effector, the robot’s tooltip.
+os ângulos das juntas, qual é a pose do
+efetuador do robô, da ponta da ferramenta.
 
 00:08:58.590 --> 00:09:02.270
-The subject of our next lecture is the inverse
-kinematic problem.
+O assunto da próxima aula é o problema
+da cinemática inversa.
 
 00:09:02.270 --> 00:09:06.790
-That is given, when I have to design pose
-of the robot’s end effector, what joint
+Que é: dado que eu tenho a pose do
+efetuador do robô, quais ângulos
 
 00:09:06.790 --> 00:09:08.230
-angles do I require?
+de junta eu preciso?
 
