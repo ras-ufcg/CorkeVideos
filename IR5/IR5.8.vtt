@@ -125,129 +125,129 @@ vertically downwards towards the centre of
 the planet, and the other axis points in the
 
 00:02:37.000 --> 00:02:42.690
-geographic east direction. The earth’s magnetic
-field vector is shown here by a red arrow,
+direção geográfica ao leste. O vetor do campo
+magnético terrestre é mostrado aqui pela seta vermelha,
 
 00:02:42.690 --> 00:02:47.660
-and it can be described with respect to this
-coordinate frame by two angles. Magnetic declination
+e ele pode ser descrito com relação a esse
+sistema de coordenadas por dois ângulos. Declinação
 
 00:02:47.660 --> 00:02:51.800
-is the difference between two directions;
-the direction of true north and the direction
+magnética é a diferença entre duas direções;
+a direção do verdadeiro norte e a direção
 
 00:02:51.800 --> 00:02:56.880
-of magnetic north - the direction that the
-compass points in. The other angle is magnetic
+do norte magnético - a direção que a bússola aponta.
+O outro ângulo é a inclinação magnética,
 
 00:02:56.880 --> 00:03:01.620
-inclination, and that’s the angle that the
-magnetic field vector makes with respect to
+e esse é o ângulo que o vetor campo
+magnético faz em relação a uma
 
 00:03:01.620 --> 00:03:07.260
-a local horizontal surface. It’s also referred
-to as magnetic dip.
+superfície local horizontal. Também é mencionado como
+mergulho magnético.
 
 00:03:07.260 --> 00:03:11.130
-In order to determine the yaw angle - that’s
-the direction that the body is facing with
+A fim de determinar o ângulo de yaw - que é
+a direção para a qual o corpo está voltado
 
 00:03:11.130 --> 00:03:16.150
-respect to magnetic north - we need to combine
-information from two sensors. We determine
+em relação ao norte magnético - precisamos combinar
+informações do dois sensores. Nós determinamos
 
 00:03:16.150 --> 00:03:21.350
-the roll and pitch angle of the body using
-the accelerometers, and then we use the components
+os ângulos pitch e roll do corpo usando
+os acelerômetros, e então usamos os componentes
 
 00:03:21.350 --> 00:03:27.080
-of the magnetic field sensed onboard the body,
-combine that with what we know about the local
+do campo magnético detectados a bordo do corpo,
+combinamos isso com o que sabemos sobre o ângulo
 
 00:03:27.080 --> 00:03:32.440
-magnetic inclination angle, and the local
-magnetic field strength to determine the yaw
+de inclinação magnética local, e a força do
+campo magnético local para determinar o ângulo
 
 00:03:32.440 --> 00:03:33.270
-angle.
+yaw.
 
 00:03:33.270 --> 00:03:38.170
-A spinning disc has some interesting dynamic
-properties. One of these is that we can use
+Um disco giratório tem algumas propriedades dinâmicas
+interessantes. Uma delas é que podemos utilizá-lo
 
 00:03:38.170 --> 00:03:44.490
-it to convert an angular velocity - omega
-- about the blue axis, into a torque - tau
+para converter uma velocidade angular - ômega
+- referente ao eixo azul, em torque - tau
 
 00:03:44.490 --> 00:03:46.770
-- about the red axis.
+- referente ao eixo vermelho.
 
 00:03:46.770 --> 00:03:51.160
-We can measure that torque by measuring the
-forces that are exerted on the axle that supports
+Podemos medir esse torque ao mensurarmos as
+forças que são exercidas no eixo que suporta 
 
 00:03:51.160 --> 00:03:56.210
-the rotating disc. If we know the parameters
-such as the rotational inertia of the disc
+o disco giratório. Se sabemos parâmetros
+como a inércia rotacional do disco e
 
 00:03:56.210 --> 00:04:01.040
-and the rotational velocity of the disc, then
-we can determine omega, the rotational velocity
+a velocidade rotacional do disco, então poderemos
+determinar ômega, a velocidade rotacional
 
 00:04:01.040 --> 00:04:04.080
-of this gyroscopic sensor.
+desse sensor giroscópio.
 
 00:04:04.080 --> 00:04:09.160
-Interestingly there are biological equivalents
-of accelerometers and gyroscopes in our bodies.
+Curiosamente existem equivalentes biológicos
+aos acelerômetros e giroscópios no nosso corpo.
 
 00:04:09.160 --> 00:04:14.660
-In each of our ears we have two accelerometers
-and three gyroscopes which measure the motion
+Em cada uma de nossas orelhas temos dois acelerômetros
+e três giroscópios que medem o movimento de nosso
 
 00:04:14.660 --> 00:04:19.410
-of our body, and that’s integrated with
-visual information in our brain to understand
+corpo, e estão integrados com a informação
+visual em nosso cérebro para que se entenda
 
 00:04:19.410 --> 00:04:22.090
-how we are moving with respect to the world.
+como nos movemos em relação ao mundo.
 
 00:04:22.090 --> 00:04:27.080
-Finally we looked at how to compute the derivative
-of a rotation matrix. It’s the product of
-
+Por fim, observamos como calcular a derivada
+de uma matriz de rotação. É o produto de
+ 
 00:04:27.080 --> 00:04:33.120
-two matrices: it’s a skew-symmetric matrix
-multiplied by the original rotation matrix.
+duas matrizes: uma matriz assimétrica
+multiplicada pela matriz de rotação original.
 
 00:04:33.120 --> 00:04:37.860
-The skew-symmetric matrix is computed on the
-angular velocity of the body; that’s the
+A matriz assimetrica é calculada na
+velocidade angular do corpo; a qual é 
 
 00:04:37.860 --> 00:04:43.930
-vector L about which the body is instantaneously
-rotating multiplied by the rate of rotation
+o vetor L pelo qual o corpo está instantaneamente
+girando multiplicado pela taxa de rotação
 
 00:04:43.930 --> 00:04:45.629
-about that axis.
+referente a esse eixo.
 
 00:04:45.629 --> 00:04:50.120
-The skew-symmetric matrix has got a number
-of interesting properties. In particular it’s
+A matriz assimétrica possui diversas propriedades
+interessantes. Em particular, ela é
 
 00:04:50.120 --> 00:04:54.909
-singular. That is, its determinate is always
-equal to 0, and its transpose is the negative
+especial. Isso é, sua determinante é sempre
+igual a 0, e sua transposta é o valor negativo
 
 00:04:54.909 --> 00:05:01.110
-value of itself. In the case of three dimensions,
-as shown here, we can clearly see a zero diagonal,
+dela mesma. no caso de três dimensões, como
+é mostrado aqui, podemos ver claramente uma diagonal zero,
 
 00:05:01.110 --> 00:05:06.199
-and the fact that the matrix only contains
-three unique elements, x, y and z, Each of
+e o fato de que a matriz somente possui
+três elementos únicos, x, y e z, cada qual
 
 00:05:06.199 --> 00:05:09.120
-which appear once with a positive sign, and
-once with a negative sign.
+aparece uma vez com sinal positivo, e
+uma vez com sinal negativo.
 
