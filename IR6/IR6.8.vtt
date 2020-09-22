@@ -1,147 +1,147 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.600 --> 00:00:08.670
-If you pick up any of the standard textbooks
-about robotics, you will find reference to
+Se você pegar qualquer um dos livros-texto
+sobre robótica, encontrará referência à
 
 00:00:08.670 --> 00:00:14.760
-Denavit and Hartenberg notation. This is named
-after Jacques Denavit and Richard Hartenberg
+notação de Denavit e Hartengberg. Esse é o segundo
+nome de Jacques Denavit e Richard Hartenberg
 
 00:00:14.760 --> 00:00:21.850
-who in 1955 wrote an article and later, a
-book which proposed a very, very general way
+que em 1955 escreveram um artigo e depois, um
+livro que propunha uma forma muito geral
 
 00:00:21.850 --> 00:00:28.080
-of describing serial link mechanisms and most
-of the robots that we've looked at are serial
+de descrever os mecanismos de ligação serial e
+a maioria dos robôs que vimos são manipulados
 
 00:00:28.080 --> 00:00:33.550
-link manipulators. So, the Denavit and Hartenberg
-notation is particularly applicable for this
+por ligação serial. Logo, a notação de Denavit and 
+Hartenberg é particularmente aplicável para esta
 
 00:00:33.550 --> 00:00:35.250
-class of mechanism.
+classe de mecanismo.
 
 00:00:35.250 --> 00:00:40.620
-Now in most of the standard textbooks. People
-start off with introducing this particular
+Agora na maioria dos livros-texto. As pessoas 
+começam apresentando esta particular
 
 00:00:40.620 --> 00:00:46.440
-notation. Personally, I find the notation
-somewhat complex and not particularly intuitive.
+notação. Pessoalmente, eu acho a notação um
+tanto complexa e particularmente nada intuitiva.
 
 00:00:46.440 --> 00:00:51.870
-So, what I've done in this particular lecture
-is left it until the end. A key aspect of
+Logo, o que eu fiz nessa aula em particular
+foi deixado para o final. Um aspecto fundamental da 
 
 00:00:51.870 --> 00:00:58.399
-Denavit-Hartenberg notation is that each joint
-in the robot is described simply by 4 parameters.
+notação de Denavit-Hartenberg é que cada junta
+do robô é descrita simplesmente por 4 parâmetros.
 
 00:00:58.399 --> 00:01:02.850
-So, let's start off with a very simple serial
-link manipulative that 2 joint robot that
+Portanto, vamos começar com uma ligação serial muito 
+simples para manipular aquele robô de duas juntas
 
 00:01:02.850 --> 00:01:08.189
-we've seen a number of times before. Each
-joint is attached via a link to the previous
+que vimos várias vezes antes. Cada junta é anexada 
+por meio de uma ligação com a junta anterior
 
 00:01:08.189 --> 00:01:12.299
-joint. So here, we can see joint 1 which is
-connected to link 1 which is connected to
+Aqui, podemos ver a junta 1 que está
+conectada a ligação 1 no qual é conectada a
 
 00:01:12.299 --> 00:01:18.049
-joint 2 which is connected to link 2. Their
-links are rigid but the joints can move. They
+junta 2 que está conectada a ligação 2. Suas
+ligação são rígidas, mas juntas podem mover. Elas
 
 00:01:18.049 --> 00:01:23.490
-can be either rotational as an example shown
-here or they can be prismatic or sliding joints
+podem ser rotacionada como um exemplo mostrado
+aqui ou podem ser juntas prismáticas ou deslizantes 
 
 00:01:23.490 --> 00:01:25.539
-that we've talked about before.
+que discutimos antes.
 
 00:01:25.539 --> 00:01:30.840
-Every joint connects to links and every link
-connects to joints except for the first and
+Todas juntas se conectam as ligações e todas
+ligações se conectam as juntas, exceto pela primeira 
 
 00:01:30.840 --> 00:01:35.890
-last link. The first link is the base of the
-robot which does not move refer to that as
+e última ligação. A primeira ligação é a base do
+robô que não se move e se refere como
 
 00:01:35.890 --> 00:01:42.109
-link 0 and the last link is the in-defector
-or is attached to the in-defector of the robot.
+ligação 0 e a última ligação é o efetuador
+ou está conectado ao efetuador do robô
 
 00:01:42.109 --> 00:01:47.530
-If a robot has got n-joints then, it must
-have n plus 1 links, that's including the
+Se um robô tem n-juntas, então, 
+precisa ter n + 1 ligações, incluindo a
 
 00:01:47.530 --> 00:01:54.759
-0th link or the base. Fundamental to the Denavit-Hartenberg
-notation is we attach a coordinate frame to
+ligação 0 ou a base. Fundamentalmente para a notação 
+Denavit-Hartenberg é anexar a um sistema de coordenadas
 
 00:01:54.759 --> 00:02:01.439
-the far end of every link of the robot. So
-here, we can see link J shown in blue and
+na extremidade de cada ligação do robô. Aqui,
+podemos vê a ligação J mostrada em azul e
 
 00:02:01.439 --> 00:02:07.149
-we attach the coordinate frame J to the far
-end of link J that is the end of the link
+e anexamos o sistema de coordenadas J à 
+extremidade da ligação J que é a extremidade da 
 
 00:02:07.149 --> 00:02:13.400
-that's closest to the robots tool. Then, we
-describe the pose of that link frame with
+ligação que está mais próxima da ferramenta de robôs. Então,
+descrevemos a posição desse sistema de ligação em 
 
 00:02:13.400 --> 00:02:19.170
-respect to the link frame of the previous
-joint. So, this is a relative pose and this
+relação ao sistema de ligação da junta anterior.
+Portanto, está é uma posição relativa e este
 
 00:02:19.170 --> 00:02:25.040
-is a concept we should be familiar with now.
-This is a relative pose from coordinate frame
+é um conceito que devemos estar familiarizados agora.
+Esta é uma posição relativa do sistema de coordenadas
 
 00:02:25.040 --> 00:02:28.140
-J-1 to coordinate frame J.
+J-1 ao sistema de coordenadas J.
 
 00:02:28.140 --> 00:02:34.090
-In the Denavit-Hartenberg notation, the link
-transform is represented by a homogeneous
+Na notação Denavit-Hartenberg, a ligação 
+transformada é representada por uma 
 
 00:02:34.090 --> 00:02:39.690
-transformation matrix which is typically denoted
-by the letter A and it comprises a number
+matriz de transformação homogênea que é tipicamente
+denotada pela letra A e compreende um número
 
 00:02:39.690 --> 00:02:45.140
-of elementary transformations. It comprises
-a rotation around the Z axis. A translation
+de transformações elementares. Compreende
+uma rotação em torno do eixo Z. Uma translação
 
 00:02:45.140 --> 00:02:52.850
-along the Z axis. A translation along the
-X axis and a rotation around the X axis. It's
+ao longo do eixo Z. Uma translação ao longo do eixo
+X e uma rotação em torno do eixo X.
 
 00:02:52.850 --> 00:02:57.540
-very concise. It allows us to describe the
-relationship between the 2 link coordinate
+É muito concisa. Ela nos permite descrever 
+a relação entre os 2 sistemas de coordenadas 
 
 00:02:57.540 --> 00:03:04.310
-frames by simply 4 parameters, theta, D, A
-and alpha. Let's see how that works in practice.
+das ligações simplesmente por 4 parâmetros, teta, D, A 
+e alfa. Vamos ver como isso funciona na prática.
 
 00:03:04.310 --> 00:03:12.990
-So here, we have in red link J-1 and the coordinate
-frame attached to link J-1. First thing that
+Aqui, nós temos uma ligação vermelha J-1 e o sistema 
+de coordenadas anexado a ligação J-1. A primeira coisa que
 
 00:03:12.990 --> 00:03:19.120
-we're going to do is to rotate that coordinate
-frame around its Z axis by an amount theta
+vamos fazer é girar o sistema de coordenadas 
+em torno do eixo Z por um valor teta
 
 00:03:19.120 --> 00:03:24.760
-J and we rotate the axis. The next thing we're
-going to do is to translate that coordinate
+J e girar o eixo. A próxima coisa que vamos
+fazer é transladar esse sistema de coordenadas
 
 00:03:24.760 --> 00:03:29.950
 frame along the Z axis by an amount D and
