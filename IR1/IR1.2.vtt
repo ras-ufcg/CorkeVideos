@@ -11,15 +11,15 @@ e ajam como nós. Nos séculos 18 e 19, as pessoas
 estavam construindo máquinas que
 
 00:00:14.619 --> 00:00:19.140
-eles chamavam de Autômatos, e alguns exemplos
+eles chamavam de autômatos, e alguns exemplos
 são mostrados aqui. Essencialmente, são
 
 00:00:19.140 --> 00:00:24.350
 máquinas muito engenhosas cheias de relógios
-com engrenagens, cames e assim por diante.
+com engrenagens e assim por diante.
 
 00:00:24.350 --> 00:00:29.500
-O exemplo que o desenhista mostra aqui
+Por exemplo, o desenhista mostrado aqui
 no lado direito, foi capaz de realizar
 
 00:00:29.500 --> 00:00:35.590
@@ -31,27 +31,27 @@ Um exemplo anterior muito famoso de máquinas desse
 tipo é o pato digestivo, e mais uma vez
 
 00:00:41.570 --> 00:00:46.010
-é uma máquina que funciona como relógio. O que
-você faria com este pato é que o alimentaria com pequenos
+é uma máquina que funciona como relógio. O que você
+faria com este pato é que o alimentaria com pequenos
 
 00:00:46.010 --> 00:00:50.660
-grânulos, o que parece comer, e eles então passariam
-pelo trato intestinal do
+grânulos, o que parece comer, e eles 
+então passariam pelo trato intestinal do
 
 00:00:50.660 --> 00:00:53.100
 pato e seriam eventualmente excretados.
 
 00:00:53.100 --> 00:00:58.440
-Eles eram capaz de construir uma máquina que parecia
-realista, ela comeria
+Eles eram capaz de construir uma máquina
+que parecia realista, ela comeria
 
 00:00:58.440 --> 00:01:05.110
 e iria excretar. Duas das funções importantes de
 algo que está vivo. Naquela época, isso 
 
 00:01:05.110 --> 00:01:09.950
-era considerado maravilhoso, um exemplo de progresso
-tecnológico, como eles eram capazes
+era considerado maravilhoso, um exemplo de
+progresso tecnológico, como eles eram capazes
 
 00:01:09.950 --> 00:01:15.080
 de construir máquinas que eram muito, muito realistas.
@@ -70,16 +70,16 @@ se envolveu na automatização do processo
 de tecelagem de seda. A tecnologia de tecelagem
 
 00:01:31.470 --> 00:01:37.400
-avançou por Jacquard e ele introduziu a inovação
-do controle do padrão de tecelagem
+avançou por Jacquard e ele introduziu a
+inovação do controle do padrão de tecelagem
 
 00:01:37.400 --> 00:01:44.920
 por meio de uma série de cartões de madeira perfurados.
 Então essa era uma forma de máquina automatizada
 
 00:01:44.920 --> 00:01:49.479
-e programável. O resultado do padrão dependeria
-do padrão dos buracos perfurados
+e programável. O resultado do padrão
+dependeria do padrão dos buracos perfurados
 
 00:01:49.479 --> 00:01:51.930
 nesses cartões de madeira.
@@ -93,11 +93,11 @@ um mecanismo de computação mecânica no fim
 dos anos 1800. Nessa época ele não tinha a tecnologia
 
 00:02:04.229 --> 00:02:10.039
-de realmente construir essa máquina mas, ele introduziu
-a noção realmente importante de um
+de realmente construir essa máquina, mas ele
+introduziu a noção realmente importante de um
 
 00:02:10.039 --> 00:02:15.650
-mecanismo de computação de uso geral e o cálculo
+mecanismo de computação de uso geral e do cálculo
 que realizava era ditado por um programa. Em 
 
 00:02:15.650 --> 00:02:19.500
@@ -116,12 +116,12 @@ podemos traçar uma linhagem para os computadores que
 usamos no dia a dia, em nossos laptops, nossos celulares
 
 00:02:35.560 --> 00:02:42.390
-e nossos computadores é claro, é um componente
+e nossos computadores são claro, são um componente
 crítico dos sistemas robóticos que construímos hoje.
 
 00:02:42.390 --> 00:02:48.069
-Podemos pensar talvez em um robô como um computador 
-que pode fazer coisas no mundo físico.
+Podemos pensar talvez em um robô como um
+computador que pode fazer coisas no mundo físico.
 
 00:02:48.069 --> 00:02:53.230
 A outra inovação realmente importante que
@@ -132,7 +132,7 @@ o trabalho feito após a Segunda Guerra Mundial no
 Laboratório Nacional Argonne nos Estados Unidos.
 
 00:02:58.379 --> 00:03:04.840
-Lá, eles foram enfrentados pelo problema de
+Lá, eles enfrentaram o problema de
 montar armas nucleares. Isso exigia
 
 00:03:04.840 --> 00:03:11.510
@@ -140,27 +140,27 @@ que eles manejassem, manipulassem pedaços de material
 que eram radioativos. Essa era uma tarefa que
 
 00:03:11.510 --> 00:03:16.019
-não poderia ser feita por seres humanos pois,
+não poderia ser feita por seres humanos, pois
 poderia ferir ou machucar as pessoas que fizessem
 
 00:03:16.019 --> 00:03:22.140
 esse trabalho. Precisávamos de máquinas para manejar
-esse material em vez disso mas, o problema era
+esse material em vez disso, mas o problema era
 
 00:03:22.140 --> 00:03:27.730
 que era preciso muita habilidade e inteligência
-para manipular esse material radiativo,
+para manipular esse material radiativo.
 
 00:03:27.730 --> 00:03:31.209
-então, eles criaram um conceito chamado teleoperação.
+Então eles criaram um conceito chamado teleoperação.
 
 00:03:31.209 --> 00:03:35.629
 As pessoas em casacos brancos estão sentadas com
 o que chamamos de braço manipulador mestre
 
 00:03:35.629 --> 00:03:41.159
-Então eles pegariam esses braços com as mãos e
-os moveriam. Os braços aqui
+Então eles pegariam esses braços com
+as mãos e os moveriam. Os braços aqui
 
 00:03:41.159 --> 00:03:47.190
 são referidos como braços escravos. Eles se
@@ -175,8 +175,8 @@ mestre, os braços escravos, estão em uma sala remota
 realizando trabalho no material radioativo.
 
 00:03:58.440 --> 00:04:03.250
-O vídeo do que está acontecendo na sala
-radioativa é transmitido para as pessoas que estão fazendo
+O vídeo do que está acontecendo na sala radioativa 
+é transmitido para as pessoas que estão fazendo
 
 00:04:03.250 --> 00:04:08.510
 o trabalho com o braço mestre, assim eles podem ver
@@ -234,8 +234,8 @@ aqui, um grande inventor americano que
 faleceu recentemente. Ele teve a ideia de criar
 
 00:05:14.050 --> 00:05:19.039
-o que ele chamou de universal automation (automação universal)
-que foi encurtada para Unimation. Esse foi o
+o que ele chamou de universal automation (automação
+universal) que foi encurtada para Unimation. Esse foi o
 
 00:05:19.039 --> 00:05:24.930
 nome da empresa que ele fundou em 1956
