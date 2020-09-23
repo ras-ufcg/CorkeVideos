@@ -3,23 +3,23 @@ Kind: captions
 Language: pt-BR
 
 00:00:03.840 --> 00:00:08.019
-Se você perguntar as pessoas hoje como
-um robô se parece, eles ou vão falar
+Se você perguntar às pessoas hoje
+como é um robô, eles ou vão falar
 
 00:00:08.019 --> 00:00:13.450
 sobre um robô fictício, como o R2D2, ou eles
 vão mencionar um robô de manufatura como
 
 00:00:13.450 --> 00:00:19.090
-o mostrado aqui, e a muitos muitos desses
+o mostrado aqui, e há muitos muitos desses
 robôs trabalhando no planeta nos dias de hoje,
 
 00:00:19.090 --> 00:00:25.460
 mais de 1 milhão deles, e eles sustentam uma
-grande parte da manufatura moderna, de automóveis,
+grande parte da manufatura moderna, de automóveis
 
 00:00:25.460 --> 00:00:28.400
-de dispositivos eletrônicos, como computadores.
+e de dispositivos eletrônicos, como computadores.
 
 00:00:28.400 --> 00:00:34.000
 Eles também realizam muito manuseio de material,
@@ -54,16 +54,16 @@ estão todas em orientações diferentes e o robô
 tem alguns sensores para que ele possa determinar
 
 00:01:09.909 --> 00:01:14.929
-a orientação da garra que ele tem que adotar
-para agarrar o objeto, e
+a orientação da garra que ele tem
+que adotar para agarrar o objeto, e
 
 00:01:14.929 --> 00:01:19.509
 uma vez que tenha feito isso, mover até o
 topo da rampa e soltar. Esse robô está
 
 00:01:19.509 --> 00:01:26.020
-executando um ciclo sem fim de pegar o
-objeto da localização A e soltar na localização B.
+executando um ciclo sem fim de pegar o objeto
+da localização A e soltar na localização B.
 
 00:01:26.020 --> 00:01:30.439
 Outro tipo de robô é esse. Ele é um
@@ -74,16 +74,16 @@ que foi introduzida por volta de 2004 e desde
 então eles tem se tornado enormemente populares,
 
 00:01:36.319 --> 00:01:41.520
-mais de 10 milhões deles foram vendidos.
-Então o robô de manufatura que vimos um momento
+mais de 10 milhões deles foram vendidos. Então
+o robô de manufatura que vimos um momento
 
 00:01:41.520 --> 00:01:46.409
 atrás é uma tecnologia de quase 60 anos
 atrás tem um milhão deles trabalhando. Essa
 
 00:01:46.409 --> 00:01:52.060
-tecnologia que tem pouco mais de uma década
-vendeu mais de 10 milhões deles.
+tecnologia que tem pouco mais de uma
+década vendeu mais de 10 milhões deles.
 
 00:01:52.060 --> 00:01:56.950
 Uma das razões para que esses robôs sejam tão populares
@@ -133,14 +133,14 @@ nunca. Podemos imaginar escalar uma tecnologia como
 
 00:02:47.489 --> 00:02:53.019
 aquele aspirador para um sistema robótico que
-é capaz de agarrar e soltar containers em
+é capaz de agarrar e soltar contâineres em
 
 00:02:53.019 --> 00:02:57.239
 um porto de cargas, e de fato pessoas construiram
 sistemas remotos para fazer isso.
 
 00:02:57.239 --> 00:03:03.299
-Assim esses robôs pegam um container numa localização
+Assim esses robôs pegam um contâiner numa localização
 A e o transportam até uma localização B, quando eles
 
 00:03:03.299 --> 00:03:09.579
@@ -160,8 +160,8 @@ geração de robôs é capaz de se mover
 dentro de um ambiente.
 
 00:03:23.909 --> 00:03:28.459
-Aqui vemos um robô de pesquisa chamado little
-dog, e ele desempenhou um papel muito importante
+Aqui vemos um robô de pesquisa chamado "Little
+Dog", e ele desempenhou um papel muito importante
 
 00:03:28.459 --> 00:03:35.749
 na pesquisa de como nós planejamos onde robôs
@@ -171,36 +171,36 @@ colocam seus pés de modo a andar competentemente
 sobre um terreno desregular e áspero.
 
 00:03:39.980 --> 00:03:44.370
-Aqui vemos o irmão mais velho do little dog,
-logicamente chamado big dog, e esse é um robô
+Aqui vemos o irmão mais velho do "Little Dog",
+logicamente chamado "Big Dog", e esse é um robô
  
 00:03:44.370 --> 00:03:49.620 
 que é capaz de transportar uma carga consideravelmente pesada
 por terrenos bem desgastados em ambientes externos realísticos. 
  
 00:03:49.620 --> 00:03:55.400 
-Aqui, vemos uma demonstração 
-da estabilidade deste robô que caminha sobre 
+Aqui, vemos uma demonstração da 
+estabilidadedeste robô que caminha sobre 
  
 00:03:55.400 --> 00:04:01.440 
 o gelo, é chutado em sua lateral e é capaz 
 de recuperar o equilíbrio e de continuar andando.  
  
 00:04:04.960 --> 00:04:10.980 
-Mais uma vez, podemos ver uma maravilhosa demonstração 
-de sua habilidade de se recuperar de situações extremamente difíceis. 
+Mais uma vez, podemos ver uma maravilhosa demonstração de sua
+habilidade de se recuperar de situações extremamente difíceis. 
  
 00:04:20.889 --> 00:04:26.139 
 Agregando a rodas e pernas, robôs também 
 podem voar e muitos já demonstraram 
  
 00:04:26.139 --> 00:04:32.060 
-robôs voadores de grande escala como o Global 
-Hawk aqui à esquerda, bem como robôs voadores bem, bem pequenos 
+robôs voadores de grande escala como o "Global Hawk" aqui
+à esquerda, bem como robôs voadores bem, bem pequenos 
  
 00:04:32.060 --> 00:04:38.840 
-são mostrados aqui à direita. 
-Então, qual a definição de um robô? Uma definição 
+são mostrados aqui à direita. Então, qual
+a definição de um robô? Uma definição 
  
 00:04:38.840 --> 00:04:42.240 
 que eu gosto muito e que penso que na verdade 
@@ -219,51 +219,51 @@ seja uma função de uma informação que o robô
 identifica pelos seus sensores. Mas, no caso mais simples, 
  
 00:04:58.900 --> 00:05:03.470 
-um robô é uma máquina que move coisas 
-de A para B 
+um robô é uma máquina que
+move coisas de A para B. 
  
 00:05:03.470 --> 00:05:08.389 
-Considerando robôs móveis como os que
-possuem rodas e pernas ou propulsores e podem voar, 
+Considerando robôs móveis como os que possuem
+rodas e pernas ou propulsores e podem voar, 
 
 00:05:08.389 --> 00:05:14.020 
-podemos pensar neles como sendo máquinas que se movem
-automaticamente de locais A para locais 
+podemos pensar neles como sendo máquinas que se
+movem automaticamente de locais A para locais 
 
 00:05:14.020 --> 00:05:20.289 
-B. Uma definição de robô avançada, mais complexa,
-que eu gosto é que ele é uma máquina orientada por objetivos 
+B. Uma definição de robô avançada, mais complexa, que 
+eu gosto é que ele é uma máquina orientada por objetivos 
 
 00:05:20.289 --> 00:05:26.449 
-que pode detectar, planejar e agir, e
-essa frase engloba, creio que os quatro verdadeiros 
+que pode detectar, planejar e agir, e essa
+frase engloba, creio que os quatro verdadeiros 
 
 00:05:26.449 --> 00:05:30.860 
-elementos-chave de um robô.
-A principal coisa: é uma máquina que possui 
+elementos-chave de um robô. A principal
+coisa: é uma máquina que possui 
 
 00:05:30.860 --> 00:05:35.509 
 um objetivo. Existe algo que ela quer
 cumprir, ela quer se transportar de um 
 
 00:05:35.509 --> 00:05:40.590 
-lugar para outro, ou ela quer mover algo
-de um lugar para outro, de forma que esse é seu 
+lugar para outro, ou ela quer mover algo de
+um lugar para outro, de forma que esse é seu 
 
 00:05:40.590 --> 00:05:41.560 
 objetivo. 
 
 00:05:41.560 --> 00:05:45.500 
-No exemplo do robô de fabricação,
-nós vimos que ele era capaz de detectar onde estavam os 
+No exemplo do robô de fabricação, nós vimos
+que ele era capaz de detectar onde estavam os 
 
 00:05:45.500 --> 00:05:51.090 
-objetos que ele queria pegar.
-Nós vimos com o pequeno cão robô andante, ele 
+objetos que ele queria pegar. Nós vimos 
+com o robô "Little Dog" andante, ele 
 
 00:05:51.090 --> 00:05:56.030 
-foi capaz de detectar o formato do seu ambiente
-com o propósito de determinar onde suas patas deveriam 
+foi capaz de detectar o formato do seu ambiente com
+o propósito de determinar onde suas patas deveriam 
 
 00:05:56.030 --> 00:06:01.080 
 ir e isso nos leva, então, para a próxima parte,
@@ -274,15 +274,15 @@ onde ele está e que detectou algo acerca do
 ambiente no qual ele se move, então ele 
 
 00:06:05.590 --> 00:06:11.849 
-faz um plano que o aproxima de
-seu objetivo, e uma vez que ele criou o plano que 
+faz um plano que o aproxima de seu objetivo,
+e uma vez que ele criou o plano que 
 
 00:06:11.849 --> 00:06:15.270 
 o aproxima de seu objetivo, aí que ele age. 
 
 00:06:15.270 --> 00:06:20.560 
-Ele move suas rodas, move suas pernas, 
-muda a velocidade de seus propulsores, a fim  
+Ele move suas rodas, move suas pernas, muda 
+a velocidade de seus propulsores, a fim  
 
 00:06:20.560 --> 00:06:26.310 
 que o robô se aproxime de seu objetivo. 
@@ -293,12 +293,12 @@ Ele detecta, planeja e age. Ele detecta a
 situação seu mundo novamente e atualiza seu 
 
 00:06:32.289 --> 00:06:37.800 
-plano e daí age um pouco mais e por aí vai,
-até que ele atinja seu objetivo. Quais são as características 
+plano e daí age um pouco mais e por aí vai, até que 
+ele atinja seu objetivo. Quais são as características 
 
 00:06:37.800 --> 00:06:43.110 
-dos robôs? Por que os robôs são úteis para nós? Bom,
-eles têm seus méritos. Antes de tudo 
+dos robôs? Por que os robôs são úteis para nós?
+Bom, eles têm seus méritos. Antes de tudo 
 
 00:06:43.110 --> 00:06:49.860 
 robôs são bastante consistentes, eles estão atentos
@@ -313,15 +313,15 @@ a extremidade de um robô com a precisão de uma
 fração de um milímetro, todas as vezes que eles realizam 
 
 00:07:00.849 --> 00:07:06.569 
-a operação, e eles também são muito, muito
-confiáveis. Eles podem trabalhar 24 horas por dia, 7 dias por semana. Eles não 
+a operação, e eles também são muito, muito confiáveis. Eles
+podem trabalhar 24 horas por dia, 7 dias por semana. Eles não 
 
 00:07:06.569 --> 00:07:11.039 
-precisam nem das luzes acesas para realizarem seu
+precisam nem das luzes acesas para realizarem seu 
 trabalho. Portanto, isso significa que robôs são capazes de 
  
 00:07:06.569 --> 00:07:11.039 
-fazer uma boa quantidade de coisas que pessoas não conseguem fazer.,
+fazer uma boa quantidade de coisas que pessoas não conseguem fazer.
 Eles podem ir ao espaço, podem adentrar nas profundezas 
 
 00:07:16.289 --> 00:07:22.039 
@@ -329,44 +329,44 @@ dos oceanos, onde os seres humanos simplesmente são
 capazes de sobreviver. Eles também fazem coisas que 
 
 00:07:22.039 --> 00:07:26.189 
-humanos não fariam. Por exemplo trabalhos que
-são entediantes ou maçantes. 
+humanos não fariam. Por exemplo trabalhos
+que são entediantes ou maçantes. 
 
 00:07:26.189 --> 00:07:32.319 
-E cada vez mais existem um monte de trabalhos rudimentares
-na agricultura e na fabricação nos quais 
+E cada vez mais existem um monte de trabalhos
+rudimentares na agricultura e na fabricação nos quais 
 
 00:07:32.319 --> 00:07:37.250 
-é muito difícil achar humanos dispostos
-a realizar essa atividade. Esses são trabalhos que humanos 
+é muito difícil achar humanos dispostos a realizar 
+essas atividades. Esses são trabalhos que humanos 
 
 00:07:37.250 --> 00:07:43.280 
 hoje consideram inferiores a eles, e que não realizariam.
 Agora robôs irão se mover para esse vácuo de trabalho. 
  
 00:07:43.280 --> 00:07:48.360 
-E, finalmente, robôs fazem coisas que
-pessoas não devem fazer. Eles podem realizar trabalhos 
+E, finalmente, robôs fazem coisas que pessoas 
+não devem fazer. Eles podem realizar trabalhos 
 
 00:07:48.360 --> 00:07:54.530 
 que são perigosos, insalubres ou arriscados, ou
 seja, os robôs pões pessoas para fora do perigo. 
 
 00:07:54.530 --> 00:07:58.169 
-e eu acho que essa é uma ótima coisa que
-os robôs podem fazer. 
+e eu acho que essa é uma ótima 
+coisa que os robôs podem fazer. 
 
 00:07:58.169 --> 00:08:03.069 
-As pessoas às vezes usam a expressão “sujo, maçante
-e perigoso” para refletir as três classes 
+As pessoas às vezes usam a expressão “sujo,
+maçante e perigoso” para refletir as três classes 
 
 00:08:03.069 --> 00:08:08.669 
 de trabalho nas quais os robôs possuem uma considerável vantagem
 sobre os seres humanos. Os trabalhos sujos e perigosos 
  
 00:08:08.669 --> 00:08:13.000 
-são aqueles que os humanos não deveriam
-fazer, e os trabalhos maçantes são aqueles que os humanos 
+são aqueles que os humanos não deveriam fazer, e 
+os trabalhos maçantes são aqueles que os humanos 
 
 00:08:13.009 --> 00:08:14.529 
 não querem fazer. 
