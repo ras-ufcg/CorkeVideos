@@ -141,129 +141,129 @@ em torno do eixo Z por um valor teta
 
 00:03:19.120 --> 00:03:24.760
 J e girar o eixo. A próxima coisa que vamos
-fazer é transladar esse sistema de coordenadas
+fazer é transladar esse quadro do sistema de coordenadas
 
 00:03:24.760 --> 00:03:29.950
-frame along the Z axis by an amount D and
-then, we're going to translate it along the
+ao longo do eixo Z por um valor D e
+então, vamos traduzi-lo ao longo do eixo
 
 00:03:29.950 --> 00:03:38.060
-X axis by an amount J and finally, we're going
-to rotate it around the X axis by an angle
+X por um valor J e finalmente, vamos 
+rotaciona-lo em torno do eixo X por um angulo
 
 00:03:38.060 --> 00:03:40.170
-alpha and now, it looks like this.
+alfa e agora, ele se parece com isso.
 
 00:03:40.170 --> 00:03:48.260
-So, we have moved from the frame J-1 to the
-frame J by applying 4 elementary transformations,
+Então, mudamos do quadro J-1 para o 
+quadro J por aplicando 4 transformações elementares,
 
 00:03:48.260 --> 00:03:56.280
-2 translations and 2 rotations. You're probably
-asking is how can we do this using only 4
+2 translações e 2 rotações. Você provavelmente
+está se perguntando como podemos fazer isso usando apenas 4
 
 00:03:56.280 --> 00:04:02.160
-parameters because a pose has got 2 components.
-It's got a translational component which we
+parâmetros porque uma posição te 2 componentes.
+Tem uma componente translational a qual 
 
 00:04:02.160 --> 00:04:08.950
-described by 3 numbers and it has a rotation
-which we described by 3 numbers. For example,
+descrevemos por 3 números e tem uma rotação
+que descrevemos por 3 números. Por exemplo,
 
 00:04:08.950 --> 00:04:14.470
-roll, pitch, yaw angles or Euler angles. How
-do we do it with just 4 numbers? Well, the
+angulos de rotação, inclinação, guinada,  ou angulos de Euler. Como
+fazemos isso com apenas 4 números? Bem,
 
 00:04:14.470 --> 00:04:19.900
-reason this works is that the Denavit-Hartenberg
-notation requires some constraints on where
+isso funciona porque uma notação Denavit-Hartenberg
+requer algumas restrições onde
 
 00:04:19.900 --> 00:04:27.380
-we place the coordinate frames. The first
-constraint is that the X axis of frame J intersects
+colocamos os quadros de coordenadas. A primeira
+restrição é que o eixo X do quadro J intercepta
 
 00:04:27.380 --> 00:04:35.340
-the Z axis of frame J-1. The second constraint
-is that the X axis of frame J is perpendicular
+o eixo Z  do quadro J-1. A segunda restrição
+é que o eixo X do quadro J é perpendicular
 
 00:04:35.340 --> 00:04:40.940
-to the Z axis of frame J-1. Although, there
-are only 6 degrees of freedom in a relative
+ao eixo Z do quadro J-1. Embora, exista
+apenas 6 graus de liberdade em uma posição
 
 00:04:40.940 --> 00:04:46.550
-pose. The fact that we've introduced 2 constraints
-means that we can describe this using only
+relativa. O fato que temos introduzido 2 restrições
+significa que podemos descrever isso usando apenas
 
 00:04:46.550 --> 00:04:51.860
-4 parameters. There's an interesting and often
-confusing consequence of this and that means
+4 parâmetros. Há uma interessante e frequente
+consequência confusa disso e que significa
 
 00:04:51.860 --> 00:04:57.220
-that the link frames are not necessarily on
-the link itself and this is something that
+que o quadro de ligação não está necessariamente
+ligados em si mesmo e isso é algo que
 
 00:04:57.220 --> 00:05:02.320
-quite often confuses people when they're starting
-off and learning about Denavit-Hartenberg
+muitas vezes confundem as pessoas quando elas estão começando
+e aprendendo sobre notação
 
 00:05:02.320 --> 00:05:03.640
-notation.
+Denavit-Hartenberg
 
 00:05:03.640 --> 00:05:10.080
-The axis of a rotational joint has to be aligned
-with the Z axis of that joints coordinate
+O eixo de uma junta rotacional deve ser alinhado 
+com o eixo Z desse quadro de coordenadas
 
 00:05:10.080 --> 00:05:16.290
-frame. The Denavit-Hartenberg notation requires
-that the axis of joint J is parallel to the
+de junta. A notação Denavit-Hartenberg requer
+que o eixo de junta J seja paralelo ao
 
 00:05:16.290 --> 00:05:21.960
-Z axis of a coordinate frame but it's not
-the coordinate frame attached to link J. The
+eixo Z de um quadro de coordenada mas não é
+o quadro de coordenada anexado ao link J. O
 
 00:05:21.960 --> 00:05:28.590
-axis of joint J is aligned with the Z axis
-of the previous coordinate frame, that's coordinate
+eixo da junta J é alinhado com o eixo Z
+do quadro de coordenada anterior, que é o quadro de coordenada
 
 00:05:28.590 --> 00:05:35.000
-frame J-1 and again, this is a confusing aspect
-for people who is starting out learning about
+J-1 e novamente, isso é um aspecto confuso 
+para pessoas que estão começando a aprender sobre
 
 00:05:35.000 --> 00:05:41.300
-this notation. For the case of a prismatic
-or sliding joint, the motion must be along
+essa notação. Para o caso de um prismático
+ou junta deslizante, o movimento deve ser ao longo
 
 00:05:41.300 --> 00:05:47.389
-the Z axis. So, for rotational joint, rotate
-around the Z axis of the previous frame for
+do eixo Z. Enão, para junta rotacional, gire
+em torno do eixo Z do quadro anterior para
 
 00:05:47.389 --> 00:05:53.160
-a prismatic joint, we translate along the
-Z axis of the previous frame.
+uma junta prismática, nós transladamos em torno do
+eixo Z do quadro anterior.
 
 00:05:53.160 --> 00:06:00.030
-The relative pose from the frame of 1 link
-to the next is described by 4 elementary transformations.
+A posição relativa do quadro de ligação 1
+para o próximo é descrito por 4 transformações elementares.
 
 00:06:00.030 --> 00:06:05.490
-For an n-link robot, we can stack groups of
-these elementary transformations and each
+para o robô de enésima ligação, podemos empilhar grupos destas
+transformações elementares e cada
 
 00:06:05.490 --> 00:06:10.900
-group contains 4 parameters which described
-the relationship between 1 link frame and
+grupo contém 4 parâmetros o qual descreve
+a relação entre o quadro de ligação 1 e
 
 00:06:10.900 --> 00:06:16.850
-the next. If the robot has got all revolute
-joints then, the joint angles correspond to
+o próximo. Se o robô têm toda junta de rotação,
+o angulo de junta corresponde ao
 
 00:06:16.850 --> 00:06:22.550
-the theta values shown here. So, these are
-the joint variables. They change as the robot
+valo tetha apresentado aqui. Então, existe
+as variáveis conjuntas. Elas mudam de acordo com os
 
 00:06:22.550 --> 00:06:27.470
-moves. All the other parameters, the D's,
-the A's and the alpha's are all constant.
+movimentos do robô. Todos os outros parâmetros, os D's,
+os A's e os alpha's são todos constantes.
 
 00:06:27.470 --> 00:06:33.790
 Elas são funções do projeto mecânico do robô
