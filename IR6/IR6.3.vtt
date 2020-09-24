@@ -3,119 +3,122 @@ Kind: captions
 Language: en
 
 00:00:03.879 --> 00:00:08.189
-Now I'm going to add a second joint to the
-robot that I've shown you before and this
+Agora, eu vou adicionar uma segunda tarefa
+ao robô vista anteriormente e este
 
 00:00:08.189 --> 00:00:14.740
-robot is a little bit interesting in that
-the end effector can reach any particular
+Robô é um pouco interessante em que o efeito 
+Final pode alcançar qualquer ponto particular
 
 00:00:14.740 --> 00:00:22.529
-point within an outer maximum circle described
-by this, like an easily adaptive position
+Dentro de um círculo externo descrito por isso,
+Como uma posição facilmente adaptativa
 
 00:00:22.529 --> 00:00:28.819
-like this, like an adaptive position like
-that. My two-degree of freedom robot can adapt
+E outra posição adaptada como essa.
+Meu robô de dois graus de liberdade pode se adaptar
 
 00:00:28.819 --> 00:00:34.720
-any x-y coordinate within the maximum circle.
+a qualquer coordenada x-y dentro do circulo maior.
 
 00:00:34.720 --> 00:00:40.070
-With this two-degree of freedom robot, although
-we can adapt any x-y coordinate within its
+Com esse robô, embora podemos adaptar qualquer 
+Coordenada z-y dentro de seu 
 
 00:00:40.070 --> 00:00:45.710
-working space, it can’t adapt an arbitrary
-orientation. So if the robot wants to be at
+Espaço de trabalho, ele não pode adaptar 
+arbitrariamente uma orientação. Então, se o robô estar
 
 00:00:45.710 --> 00:00:51.210
-this particular xy coordinate, there is no
-other orientation of this link of the robot
+Nesta coordenada x-y, não há outra 
+orientação para o robô,
 
 00:00:51.210 --> 00:00:56.940
-that's possible because orientation and position
-are highly coupled.
+Isso é possível porque a orientação e a posição
+são acoplada.
 
 00:00:56.940 --> 00:01:02.370
-Let's follow a similar procedure to determine
-the pose of the end effector of these two-link
+Vamos seguir um procedimento semelhante para 
+Determinar a posição final desses robôs de dois elos.
 
 00:01:02.370 --> 00:01:09.890
-robot. I'm going to notate the robot and indicate
-the length of its two links and indicate the
+Vou pegar o robô e indicar o comprimento de seus 
+dois elos e seus dois ângulos articulados.
 
 00:01:09.890 --> 00:01:17.630
-two joint angles. Next, we're going to rotate
-out well coordinate frame by an amount Q1.
+Depois, vamos rotacionar o sistema de coordenadas
+por uma quantidade Q1. 
 
 00:01:17.630 --> 00:01:23.039
-So a world reference frame now becomes this
-grey coordinate frame shown here. Next I'm
+Então, o sistemas de referencia agora se torna 
+este sistemas de coordenadas cinza mostrado aqui.
 
 00:01:23.039 --> 00:01:28.600
-going to translate that coordinate frame along
-with the first link of the robot so now it's
+Vamos traduzir esse sistema de coordenadas ao longo
+do primeiro elo do robô.
 
 00:01:28.600 --> 00:01:34.350
-here. We've applied now a transformation in
-the x direction by the distance A1. Now I'm
+Agora temos que aplicar a transformação na 
+direção x pela distancia A1
 
 00:01:34.350 --> 00:01:39.899
-going to rotate the frame by the amount Q2,
-the coordinate frame now looks like this.
+Que vai rotacionar o sistemas pela entidade Q2,
+o sistemas de coordenadas agora se parece com isso
 
 00:01:39.899 --> 00:01:46.350
-Finally, I'm going to translate it in the
-x direction by the amount A2. This gives us
+Finalmente, eu vou transcreve-lo na direção X 
+pelo valor de A2. Isso nos dá
 
 00:01:46.350 --> 00:01:52.179
-the coordinate frame attached to the end effector
-of the robot, the end effector pose.
+O sistemas de coordenadas anexado ao efeito final 
+do robô, a posição final do robô. 
 
 00:01:52.179 --> 00:01:58.060
-Now I can expand out this expression and multiply
-together each of these matrices and the result
+Agora, eu posso expandir a saída desta expressão e 
+multiplicar cada uma dessas matrizes e o resultado
+
 
 00:01:58.060 --> 00:02:04.759
-is this. Once again, we can look at the translational
-path of this homogeneous transformation matrix.
+é esse. Mais uma vez, podemos olhar para a transcrição 
+dessa matriz de transformação homogênea.
 
 00:02:04.759 --> 00:02:10.860
-These elements here pulling out, and now I
-have an expression for the x and y coordinate
+Esses elementos aqui saindo, e agora eu tenho uma expressão 
+Para a coordenada x e 
 
 00:02:10.860 --> 00:02:16.580
-of the end effector of my two-link robot.
-Once again we can see that the rotational
+do efeito final do robô de dois elos. Mais uma vez podemos
+ver que o rotacional 
+
 
 00:02:16.580 --> 00:02:22.070
-path of this transformation matrix which indicates
-the orientation of the end effector is also
+Dessa matriz de transformação que indica a orientação
+do efeito final também é
+
 
 00:02:22.070 --> 00:02:29.700
-a function of Q1 and Q2. In fact it’s a
-function of Q1+Q2. So once again, we can use
+Uma função de Q1 e Q2. Na verdade, é uma função de Q1 + Q2.
+Entao, mais uma vez, podemos usar
 
 00:02:29.700 --> 00:02:37.170
-Q1 and Q2 to independently control x and y
-but we can't independently control the orientation
+Q1 e Q2 para controlar independentemente x e y
+mas não podemos controlar independentemente a orientação
 
 00:02:37.170 --> 00:02:43.410
-of the end effector. If we use Q1 and Q2 to
-choose x and y, then the orientation of the
+do efeito final. Se usarmos Q1 e Q2 para
+escolher x e y, então a orientação do
 
 00:02:43.410 --> 00:02:48.030
-end-effector is already determined and can
-be independently chosen.
+já está determinado e pode
+ser escolhido independentemente.
 
 00:02:48.030 --> 00:02:54.540
-An interesting thing with a two-link manipulator
-is that there are two joint angle configurations
+Uma coisa interessante com um manipulador de dois elos
+é que existem duas configurações de ângulo articular
 
 00:02:54.540 --> 00:03:00.100
-that will put the end effector at a desired
-position. Here is one configuration of the
+que vai aplicar o efeito final em um sistemas
+de coordendas desejado no robô, assim obtendo o efeito.
 
 00:03:00.100 --> 00:03:05.980
 robot, and here is an alternative configuration
