@@ -124,123 +124,123 @@ na direção de z, e então rotacionamos
 ao redor do eixo y por um valor de Q2.
 
 00:02:57.120 --> 00:03:01.409
-Then we move up a little bit and encounter
-the next joint, joint 3 we rotate around the
+Então movemos um pouco e encontramosa próxima
+articulação, a articulação 3 rotacionamos em torno
 
 00:03:01.409 --> 00:03:07.430
-Y axis by the amount Q3 then we move up a
-bit more in the Z direction encounter the
+do eixo Y pelo valor Q3 e então movemos 
+mais um pouco na direção Z encontrando a
 
 00:03:07.430 --> 00:03:13.739
-last joint, joint 4 we rotate around the Y
-axis by the joint angle Q4. And then we move
+última articulação, a articulação 4 rotacionamos em torno
+do eixo Y pelo ângulo de articulação Q4. E então movemos
 
 00:03:13.739 --> 00:03:17.890
-up a bit more in the Z direction until we
-reach the tip of the fingers.
+um pouco mais na direção Z até
+alcançarmos a ponta dos dedos.
 
 00:03:17.890 --> 00:03:25.489
-So just by mentally walking through the robot
-mechanism joint by joint, link by link we
+Então apenas andando mentalmente pelo mecanismo
+do robô articulação por articulação, ligação por ligação
 
 00:03:25.489 --> 00:03:29.810
-can write down an expression for the pose
-of the end effector. Then it’s a simple
+nós podemos escrever uma expressão para a pose
+do efetor final. Assim é uma simples
 
 00:03:29.810 --> 00:03:34.560
-a matter of expanding out the matrices and
-then multiplying them all together. And we
+questão de expandir as matrizes e
+multiplicá-las todas juntas. E nós
 
 00:03:34.560 --> 00:03:38.769
-can use a tool like MATLAB to make that very
-easy for us.
+podemos usar uma ferramenta como MATLAB
+para facilitar.
 
 00:03:38.769 --> 00:03:43.110
-Now we’re going to use MATLAB to determine
-the pose of the end effector of this robot
+Agora nós vamos usar o MATLAB para determinar
+a pose do efetor final desse robô
 
 00:03:43.110 --> 00:03:47.790
-which moves in three dimensions and we’re
-going to do this symbolically but first of
+que se move em três dimensões e vamos
+fazer isso simbolicamente, mas antes
 
 00:03:47.790 --> 00:03:54.049
-all I’m going to define some symbolic variables
-for the various link lengths A1, A2, A3, and
+de tudo vou definir algumas váriaveis simbólicas
+para os vários comprimentos de ligação A1, A2, A3 e
 
 00:03:54.049 --> 00:04:04.189
-A4 and also for the four joint angles Q1,
-Q2, Q3 and Q4. We’re going to use the trchain
+A4 e também para os quatro ângulos de articulação Q1,
+Q2, Q3 e Q4. Vamos usar a função
 
 00:04:04.189 --> 00:04:08.700
-function again. This time we’re going to
-use the function called trchain which operates
+trchain de novo. Dessa vez vamos usar
+a função chamada trchain que opera
 
 00:04:08.700 --> 00:04:13.689
-in three dimensions rather than the function
-trchain2 which operates in two dimensions
+em três dimensões ao invés da função
+trchain2 que opera em duas dimensões
 
 00:04:13.689 --> 00:04:15.620
-that we used in the previous examples.
+que usamos nos exemplos anteriores.
 
 00:04:15.620 --> 00:04:20.239
-And now I start to write this transform string
-so we’re going to do a rotation around the
+E agora vou começar a escrever essa string de transformação,
+e vamos fazer uma rotação em torno do
 
 00:04:20.239 --> 00:04:27.630
-Z axis by Q1 and then we’re going to do
-a translation in the Z direction by A1 then
+eixo Z pelo Q1 e então faremos uma
+translação na direção Z pelo A1 e então
 
 00:04:27.630 --> 00:04:32.580
-we’re going to do a rotation around the
-Y axis by Q2 and then we’re going to do
+vamos rotacionar em torno do
+eixo Y pelo Q2 e fazemos outra
 
 00:04:32.580 --> 00:04:40.470
-another translation in the Z direction by
-A2 and then we’re going to do a rotation
+translação na direção Z pelo
+A2, fazemos então uma rotação
 
 00:04:40.470 --> 00:04:46.210
-around the Y axis by Q3 and then we’re going
-to do another translation in the Z direction
+em torno do eixo Y pelo Q3 e faremos
+outra translação na direção Z
 
 00:04:46.210 --> 00:04:54.340
-by A3 and then we’re going to do a rotation
-around the Y axis by Q4 and finally a translation
+por A3 e rotacionamos em torno
+do eixo Y pelo Q4 e finalmente uma translação
 
 00:04:54.340 --> 00:04:56.160
-in the Z direction by A4.
+na direção Z pelo A4.
 
 00:04:56.160 --> 00:05:07.800
-I close that string and now I pass in the
-joint angles Q1, Q2, Q3 and Q4 and here we
+Eu fecho essa string e agora passo nos ângulos
+de articulação Q1, Q2, Q3 e Q4 e aqui
 
 00:05:07.800 --> 00:05:14.320
-have the expression for the homogeneous transformation
-which represents the pose of this robot which
+temos a a expressão para a transformação homogênea
+que representa a pose desse robô que
 
 00:05:14.320 --> 00:05:19.720
-moves in three dimensions. Because the robot’s
-operating in three dimensions this homogeneous
+move em três dimensões. Já que o robô está
+operando em três dimensões essa transformação
 
 00:05:19.720 --> 00:05:25.000
-transformation is a four-by-four matrix. And
-we can see that it’s quite a large and complex
+homogênea é uma matriz 4x4.E podemos
+ver que é uma expressão um tanto grande 
 
 00:05:25.000 --> 00:05:30.729
-expression and I need to scroll sideways quite
-a lot to get to end of it.
+e complexa e eu preciso rolar bastante para os
+lados para chegar até o seu fim.
 
 00:05:30.729 --> 00:05:35.210
-If I wanted to determine the X coordinate
-of the end effector of this robot I would
+Se eu quisesse determinar a coordenada X
+do efetor final desse robô eu faria isso
 
 00:05:35.210 --> 00:05:40.780
-do that by taking the element in the first
-row and the forth column of this homogeneous
+pegando o primeiro elemento na primeira
+kinha e na quarta coluna desssa matriz
 
 00:05:40.780 --> 00:05:45.500
-transformation matrix and that would be the
-expression for the X coordinate of this robot
+trasnformação homogênea e essa seria a expressão
+para a coordenada X desse robô
 
 00:05:45.500 --> 00:05:48.750
-and again that itself is quite a complex expression.
+e mais uma vez por si só é uma expressão complexa.
 
