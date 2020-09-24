@@ -1,116 +1,116 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: PT-BR
 
 00:00:03.949 --> 00:00:06.649
-Now we are going to add a third link to my
-robot.
+Agora nós vamos adicionar uma terceira
+ligação ao meu robô.
 
 00:00:06.649 --> 00:00:12.549
-So now, we have a 3-degree of freedom robot
-with 3 revolute or 3 rotational joints.
+Então, agora temos um robô de grau de liberdade
+3 com 3 revoluções ou 3 juntas rotacionais.
 
 00:00:12.549 --> 00:00:14.960
-This robot has a much larger working volume.
+Esse robô possui um volume de trabalho muito maior.
 
 00:00:14.960 --> 00:00:20.590
-It can reach any point within this very large
-circle here, but because it has got 3 degrees
+Ele pode alcançar qualquer ponto dentro desse círculo
+bem grande aqui. E porque ele tem 3 graus
 
 00:00:20.590 --> 00:00:25.070
-of freedom it means it cannot only reach any
-particular position within its work space.
+de liberdade significa que ele não pode apenas alcançar 
+qualquer posição específica dentro desse espaço de trabalho.
 
 00:00:25.070 --> 00:00:29.400
-It can also achieve any orientation at that
-particular position.
+Ele também pode alcançar qualquer orientação naquela
+posição específica.
 
 00:00:29.400 --> 00:00:34.090
-If for example the robot's end effector position
-is here, then the robot with 3 degrees of
+Se por exemplo a posição do efetuador do robô
+estiver aqui, então o robô com 3 graus de 
 
 00:00:34.090 --> 00:00:39.340
-freedom is able to achieve any arbitrate orientation
-of this last link of the robot.
+liberdade é capaz de alcançar qualquer orientação
+arbitrária dessa última ligação.
 
 00:00:39.340 --> 00:00:44.440
-We could see I can move it through quite a
-large range of angles of that link and it
+Nós podemos ver que eu posso movê-lo através de uma gama
+bastante grande de ângulos daquela ligação e isso
 
 00:00:44.440 --> 00:00:49.989
-is possible because it has 1 extra degree
-of freedom.
+é possível porque ele tem 1 grau de liberdade
+extra.
 
 00:00:49.989 --> 00:00:53.530
-Let us determine the pose of the end effector
-of our 3-link robot.
+Vamos determinar a pose e o efetuador
+do nosso robô de 3 ligações.
 
 00:00:53.530 --> 00:00:58.680
-The first thing we are going to do is to annotate
-the robot and introduce the lengths of the
+A primeira coisa que vamos fazer é tomar notas 
+do robô e introduzir o comprimento das
 
 00:00:58.680 --> 00:01:02.970
-various links and then we are going to introduce
-the various joint angles.
+ligações variáveis e então iremos introduzir os 
+ângulos variáveis das articulações.
 
 00:01:02.970 --> 00:01:08.500
-Q1 and Q2 in this diagram are both positive
-and Q3 here is a negative value.
+Q1 e Q2 nesse diagrama são ambos positivos
+e Q3 aqui é um valor negativo.
 
 00:01:08.500 --> 00:01:13.659
-You note that the direction of rotation is
-the opposite of that for Q1 and Q2.
+Notem que a direção de rotação é oposta
+àquela para Q1 e Q2.
 
 00:01:13.659 --> 00:01:18.780
-When we did this for the 1 and 2 joint robots,
-I showed an animation of the coordinate frame
+Quando nós fizemos isso para as articulações 1 e 2
+do robô, eu mostrei a animação do sistema de coordenadas
 
 00:01:18.780 --> 00:01:23.920
-moving from the reference coordinate frame
-along the links and ending up at the end effector.
+se movendo do sistema de coordenadas de referência
+ao longo das ligações e chegando ao efetuador.
 
 00:01:23.920 --> 00:01:26.189
-I am not going to do that animation this time.
+Eu não vou fazer aquela animação dessa vez.
 
 00:01:26.189 --> 00:01:30.630
-I think you got the general idea and what
-we are going to do is just write down the
+Eu acho que vocês pegaram a ideia geral e o que
+nós iremos fazer é apenas escrever a
 
 00:01:30.630 --> 00:01:33.340
-transform expression by inspection.
+expressão de transformação por inspeção.
 
 00:01:33.340 --> 00:01:37.950
-The 1st thing we are going to do is to rotate
-it at Q1, translate in the X-direction by
+A primeira coisa que vamos fazer é rotacionar
+em Q1, transladar na direção X por
 
 00:01:37.950 --> 00:01:45.170
-A1, rotate by the angle Q2, translate along
-the 2nd link in its X-direction by the amount
+A1, rotacionar pelo ângulo Q2, transladar ao longo
+da segunda ligação em sua direção X pelo valor 
 
 00:01:45.170 --> 00:01:52.130
-of A2 and then rotate by the angle Q3 and
-then translate in the X-direction by an amount
+de A2 e então rotacionar pelo ângulo Q3 e
+então transladar na direção X por um valor
 
 00:01:52.130 --> 00:01:53.130
 A3.
 
 00:01:53.130 --> 00:01:58.709
-Once again, I can expand out what these matrices
-and multiply them together to come up with
+Mais uma vez, eu posso expandir essas matrizes
+e multiplicá-las para obter uma
 
 00:01:58.709 --> 00:02:04.530
-a homogenous transformation which represents
-the pose of the end effector of this 3-joint
+transformação homogênea que representa
+a pose do efetuador desse robô de
 
 00:02:04.530 --> 00:02:05.530
-robot.
+3 articulações.
 
 00:02:05.530 --> 00:02:08.670
-To do this by hand for the 3-link robot is
-a little bit tedious.
+Fazer isso à mão para o robô de 3 ligações
+é um pouco tedioso.
 
 00:02:08.670 --> 00:02:09.670
-I might make an error.
+Eu posso cometer um erro.
 
 00:02:09.670 --> 00:02:12.340
 So we are going to go straight to MATLAB and
