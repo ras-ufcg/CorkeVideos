@@ -173,172 +173,172 @@ We say that a robot has got so many degrees
 of freedom and that’s equal to the number
 
 00:03:35.410 --> 00:03:40.189
-of joints the robot has and that’s the dimension
-of its configuration space.
+de juntas que o robô tem e pela dimensão
+de seu espaço de configuração.
 
 00:03:40.189 --> 00:03:46.230
-So, if a robot has got three joints, then
-we say that its configuration space has got
+Logo, se um robô possui três juntas, dizemos
+que seu espaço de configuração possui 
 
 00:03:46.230 --> 00:03:47.730
-three dimensions.
+três dimensões.
 
 00:03:47.730 --> 00:03:52.440
-Similarly, we could talk about the degrees
-of freedom in the task space and that’s
+Semelhantemente, poderíamos falar sobre os graus
+de liberdade no espaço de tarefa que é igual
 
 00:03:52.440 --> 00:03:59.790
-equal to the dimension of the task space T.
-Consider the pose of a simple planar robot.
+à dimensão do espaço de tarefa T.
+Considere a pose de um simples robô planar.
 
 00:03:59.790 --> 00:04:05.120
-Its end effector pose is described simply
-by the two coordinates X and Y.
+Sua pose do efetuador é descrita simplesmente
+por duas coordenadas X e Y.
 
 00:04:05.120 --> 00:04:08.209
-In this case, the dimension of a task space
-is 2.
+Nesse caso, a dimensão de um espaço de tarefa
+é 2.
 
 00:04:08.209 --> 00:04:12.830
-If it’s a planar robot with three joints,
-then the end effector pose can be described
+Se é um robô planar com três juntas,
+então a pose do efetuador pode ser descrita
 
 00:04:12.830 --> 00:04:17.079
-by the X and Y position and the orientation
+pelas posições X e Y e pela orientação
 Theta.
 
 00:04:17.079 --> 00:04:21.310
-In this case, we would say that the dimension
-of a task space is 3.
+Nessa situação, diríamos que a dimensão do
+espaço de tarefa é 3.
 
 00:04:21.310 --> 00:04:24.450
-It’s described by a three-dimensional vector.
+Ele é descrito por um vetor tridimensional.
 
 00:04:24.450 --> 00:04:29.720
-For a three-dimensional robot whose end effector
-pose is described by the position, coordinates
+Para um robô tridimensional do qual a pose do efetuador
+é descrita pela posição... coordenadas
 
 00:04:29.720 --> 00:04:35.160
-X, Y and Z, the dimension of its task space
-is also 3.
+X, Y e Z, a dimensão de seu espaço de tarefa
+também é 3.
 
 00:04:35.160 --> 00:04:40.060
-The robot that has got X, Y, Z position and
-also a pitch angle, dimension of its task
+O robô que tem posição X, Y e Z e
+também um ângulo pitch, a dimensão de seu 
 
 00:04:40.060 --> 00:04:41.360
-space is 4.
+espaço de tarefa é 4.
 
 00:04:41.360 --> 00:04:46.650
-And, for something like an industrial robot
-whose end effector pose is described by position
+Além disso, para o caso de um robô industrial
+do qual a pose do efetuador é descrita pela posição
 
 00:04:46.650 --> 00:04:52.110
-X, Y, Z and orientation which could be described
-by three angles, for instance, roll, pitch,
+X, Y, Z e orientação que poderia ser descrita
+por três ângulos, por exemplo, ângulos roll, pitch e
 
 00:04:52.110 --> 00:04:55.710
-yaw angles, the dimension of its task space
-is 6.
+yaw, a dimensão de seu espaço de tarefa
+é 6.
 
 00:04:55.710 --> 00:04:59.320
-In the three-dimensional world in which we
-live and which the robots live, it’s not
+no mundo tridimensional no qual vivemos
+e no qual os robôs vivem, não é 
 
 00:04:59.320 --> 00:05:03.740
-possible to have a task space dimension be
-given 6.
+possível haver um espaço de tarefa com 
+dimensão 6.
 
 00:05:03.740 --> 00:05:09.880
-Now, the really important constraint is that
-in order to reach all of the task space, the
+Agora, o limite mais importante é que,
+a fim de abranger todo o espaço de tarefa, a
 
 00:05:09.880 --> 00:05:14.940
-dimension of the configuration space should
-be greater than or equal to the dimension
+dimensão do espaço de configuração deve
+ser maior ou igual à dimensão
 
 00:05:14.940 --> 00:05:17.050
-of the task space.
+do espaço de tarefa.
 
 00:05:17.050 --> 00:05:20.550
-To make this concrete, let’s look again
-at the 2-degree freedom arm which we should
+Para tornar isso mais visível, olhemos de novo
+para o braço com 2 graus de liberdade com o qual já
 
 00:05:20.550 --> 00:05:22.390
-be quite familiar with by now.
+devemos estar familiarizados.
 
 00:05:22.390 --> 00:05:28.100
-The end effector pose is an element of the
-task space and the task space is a subset
+A pose do efetuador é um elemento do espaço
+de tarefa e o espaço de tarefa é um subconjunto
 
 00:05:28.100 --> 00:05:31.380
-of the two-dimensional space of real numbers.
+do espaço bidimensional dos números reais.
 
 00:05:31.380 --> 00:05:35.680
-End effector pose can be described by a pair
-of two real numbers.
+Pose do efetuador pode ser descrita por um par 
+de dois números reais.
 
 00:05:35.680 --> 00:05:41.580
-The configuration space for this robot is
-a vector that comprises Q1 and Q2, the two
+O espaço de configuração para esse robô é
+um vetor que compreende Q1 e Q2, os dois
 
 00:05:41.580 --> 00:05:43.030
-joint angles.
+ângulos articulares.
 
 00:05:43.030 --> 00:05:48.470
-The configuration space is also a subset of
-the two-dimensional space of real numbers
+O espaço de configuração é também um subconjunto 
+do espaço bidimensional dos números reais
 
 00:05:48.470 --> 00:05:54.030
-because the joint configuration can be described
-by a pair of real numbers, that is Q1 and
+porque a configuração das juntas pode ser descrita
+por um par de números reais, que são Q1 e
 
 00:05:54.030 --> 00:05:55.390
 Q2.
 
 00:05:55.390 --> 00:06:01.590
-For the 3-degree of freedom arm, the end effector
-pose is described by three numbers, X, Y and
+Para o braço com três graus de liberdade, a pose
+do efetuador é descrita por três números, X, Y e 
 
 00:06:01.590 --> 00:06:02.590
 Theta.
 
 00:06:02.590 --> 00:06:07.970
-So, we say now that the task space is a subset
-of the set of all possible positions and the
+Daí, dizemos agora que o espaço de tarefa é um subconjunto
+do conjunto de todas as posições possíveis e o
 
 00:06:07.970 --> 00:06:13.690
-subset of all possible orientations which
-we denote by S. The configuration space is
+subconjunto de todas as possíveis orientações, o qual
+nós representamos por S. O espaço de configuração é 
 
 00:06:13.690 --> 00:06:20.110
-a vector comprising Q1, Q2 and Q3 and that
-is a subset of the three dimensional space
+um vetor compreendendo Q1, Q2 e Q3 e isso é
+um subconjunto do espaço tridimensional
 
 00:06:20.110 --> 00:06:21.540
-of real numbers.
+dos números reais.
 
 00:06:21.540 --> 00:06:23.530
-By now, I’m sure you’re getting the hang
-of this.
+Até aqui, tenho certeza que você está pegando
+o jeito disso.
 
 00:06:23.530 --> 00:06:29.150
-In this case, the task space is a subset of
-r cubed, the set of three-dimensional real
+Nesse caso, o espaço de tarefa é um subconjunto de
+r ao cubo, o conjunto dos números reais
 
 00:06:29.150 --> 00:06:30.150
-numbers.
+tridimensionais.
 
 00:06:30.150 --> 00:06:35.910
-And, the configuration space is also a subset
-of three-dimensional space of real numbers.
+Bem como, o espaço de configuração é também um subconjunto
+do espaço tridimensional dos números reais.
 
 00:06:35.910 --> 00:06:41.760
-A Cartesian Gantry robot is a special case
-because the joint coordinates directly map
+Um robô de coordenadas cartesianas é um caso especial
+porque as coordenadas articulares se mapeiam diretamente 
 
 00:06:41.760 --> 00:06:44.680
-on to the end effector pose.
+à pose do efetuador.
 
 00:06:44.680 --> 00:06:48.890
 As coordenadas da junta são de fato os
