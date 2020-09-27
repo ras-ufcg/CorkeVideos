@@ -1,0 +1,184 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.689 --> 00:00:08.809
+Here again is our simple two-linked planar robot and what we're going to do now is to
+
+00:00:08.809 --> 00:00:16.630
+consider the end effector velocity as a function
+of a very specific set of joint velocities.
+
+00:00:16.630 --> 00:00:21.950
+That's the set of joint velocities that have
+got a magnitude of 1. We can think about this
+
+00:00:21.950 --> 00:00:27.140
+geometrically. What we're interested in is
+the set of all velocities that lie on this
+
+00:00:27.140 --> 00:00:33.930
+red circle. Here is a general point Q that
+lies on that circle. Points here and here
+
+00:00:33.930 --> 00:00:39.760
+corresponds to motion of joint 1 only and
+points here and here corresponds to motion
+
+00:00:39.760 --> 00:00:45.289
+of joint 2 only. All the other points in the
+circle correspond to a mixture of motion of
+
+00:00:45.289 --> 00:00:48.890
+joint 1 and of joint 2.
+
+00:00:48.890 --> 00:00:53.710
+Another way we could write this constraint
+that the velocity lies on the red circle is
+
+00:00:53.710 --> 00:00:59.589
+in terms of this vector, vector product. It's
+the same as the dot product. Same dot product
+
+00:00:59.589 --> 00:01:06.560
+of Qdot with itself is equal to 1. We have
+an expression for Qdot in terms of the Jacobian
+
+00:01:06.560 --> 00:01:12.500
+matrix inverse and the velocity of the robot
+end effector. So I can substitute this expression
+
+00:01:12.500 --> 00:01:18.010
+for Qdot into the above and I get a complex
+expression that looks like this.
+
+00:01:18.010 --> 00:01:23.830
+What does that mean? Well this is the equation
+for an ellipse. It's an ellipse in the velocity
+
+00:01:23.830 --> 00:01:30.110
+space. So in the coordinate system xdot and
+ydot, what we have here is an expression for
+
+00:01:30.110 --> 00:01:36.650
+an ellipse. So this is a particular velocity
+on that ellipse xdot and ydot. What happened
+
+00:01:36.650 --> 00:01:42.260
+is we've mapped a set of velocities in the
+joint space which was a circle into a set
+
+00:01:42.260 --> 00:01:48.790
+of velocities in the end effector velocity
+space and that is an ellipse. What this says
+
+00:01:48.790 --> 00:01:54.040
+is that the robot was able to achieve quite
+a high speed in the y direction but a relatively
+
+00:01:54.040 --> 00:02:01.400
+low speed in the x direction. So it can go fast in the y direction and more slowly in the x direction.
+
+00:02:01.400 --> 00:02:06.760
+Now this ellipse that I've drawn is a function
+of the joint angle configuration. The shape
+
+00:02:06.760 --> 00:02:11.540
+of the ellipse depends on the way the robot
+joint angles are configured.
+
+00:02:12.340 --> 00:02:18.840
+Let's have a look at the example to get the intuition behind this. Once again, this is our two-linked robot.
+
+00:02:18.850 --> 00:02:24.720
+And if I moved joint 1 then the end of link
+1 will move with the velocity like this. And
+
+00:02:24.720 --> 00:02:31.200
+if I move joint 2 then the end of link 2 will
+move with the velocity like this. The end
+
+00:02:31.200 --> 00:02:35.910
+effector velocity is the vector sum of these
+two velocities. We can add the two vectors
+
+00:02:35.910 --> 00:02:38.700
+together and this is the resultant.
+
+00:02:38.700 --> 00:02:44.240
+And what we see in this particular configuration,
+the robot was able to move more quickly in
+
+00:02:44.240 --> 00:02:51.370
+the vertical direction than it can do in the
+horizontal direction. So for equal joint velocities,
+
+00:02:51.370 --> 00:02:57.170
+we will in general get an even velocity in
+the different Cartesian directions. This depends
+
+00:02:57.170 --> 00:03:01.090
+on the robot's configuration.
+
+00:03:01.090 --> 00:03:07.000
+Let's have a look at how the robot's velocity
+ellipse changes shape as the robot's configuration
+
+00:03:07.000 --> 00:03:12.510
+changes. I've imported a model of the two-linked
+planar manipulator. I plotted and I created
+
+00:03:12.510 --> 00:03:17.069
+a teach window here. So we can see the blue
+panel on the side has got a couple of sliders
+
+00:03:17.069 --> 00:03:22.200
+that allow me to change the joint angles of
+the robot. This is a plain view. A top down
+
+00:03:22.200 --> 00:03:25.150
+view of the robot manipulator.
+
+00:03:25.150 --> 00:03:30.930
+First thing I'm going to do is to adjust the
+joint 1 slide a little bit. Here we can see
+
+00:03:30.930 --> 00:03:36.160
+the robot's velocity ellipse. It's very, very
+skinny indeed. That's because the robot is
+
+00:03:36.160 --> 00:03:41.450
+at a near singular condition. We see that
+in configuration like this, the robot is able
+
+00:03:41.450 --> 00:03:46.010
+to move quite quickly towards the left and
+the right. But it's almost completely unable
+
+00:03:46.010 --> 00:03:53.030
+to move either upwards or downwards. The configuration here is close to singularity and similarity
+
+00:03:53.030 --> 00:03:59.090
+came about when the second joint angle was
+very close to 0. Let me increase the second
+
+00:03:59.090 --> 00:04:04.030
+joint angle. What's going to happen now is
+that the ellipse gets wider and wider.
+
+00:04:05.340 --> 00:04:11.160
+The robot is further away from singularity and
+is now in a configuration of joint angles
+
+00:04:11.160 --> 00:04:17.459
+that allows it to move quite readily along
+the direction of link 2 or orthogonal to link
+
+00:04:17.459 --> 00:04:23.690
+2. Now if I reduce the second joint angle,
+Q2, make it close to 0, we see that the ellipse
+
+00:04:23.690 --> 00:04:33.130
+is going to get skinnier and skinnier. Ultimately
+it will become an ellipse of 0 with a straight line.
+

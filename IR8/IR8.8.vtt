@@ -1,0 +1,171 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+00:00:03.850 --> 00:00:08.049
+Let's summarize some of the important concepts
+that we've learned in this particular lecture.
+
+00:00:08.049 --> 00:00:12.760
+In previous lectures we've covered the concept
+of forward kinematics and inverse kinematics.
+
+00:00:12.760 --> 00:00:17.520
+This is the relationship between joint angles
+and the end effector pose. In this lecture
+
+00:00:17.520 --> 00:00:21.780
+what we talked about talked about the velocity
+transform. That's the relationship between
+
+00:00:21.780 --> 00:00:27.830
+the velocity of the joints and the velocity
+of the end effector pose. We've talked about
+
+00:00:27.830 --> 00:00:33.180
+the derivative of the pose and we discussed
+intangible terms what that might mean. It
+
+00:00:33.180 --> 00:00:39.489
+might be the end effector translational velocity
+xdot and ydot. If the robot's got three degrees
+
+00:00:39.489 --> 00:00:46.249
+of freedom, then the end effector pose velocity
+is xdot ydot and theta dot.
+
+00:00:46.249 --> 00:00:50.760
+In this lecture, we introduced this symbol,
+the Greek letter nu to represent what we call
+
+00:00:50.760 --> 00:00:57.520
+the spatial velocity of the end effector.
+That is the rate of change of pose with respect to time.
+
+00:00:57.780 --> 00:01:03.949
+We've introduced this relationship between
+the robot joint velocity and the spatial velocity
+
+00:01:03.949 --> 00:01:09.130
+of the robot's end effector or tooltip. These
+two quantities are related by the Jacobian
+
+00:01:09.130 --> 00:01:14.920
+matrix. The Jacobian matrix is a function
+of the joint configuration represented by
+
+00:01:14.920 --> 00:01:21.380
+the vector Q. For the case of the two-linked
+robot, the spatial velocity is simply xdot
+
+00:01:21.380 --> 00:01:28.590
+and ydot and the joint velocity is the vector
+Q1dot and Q2dot. For the three-linked plain
+
+00:01:28.590 --> 00:01:36.409
+manipulator, the joint velocities Q1dot Q2dot
+Q3dot and the spatial velocity now has a translational
+
+00:01:36.409 --> 00:01:43.820
+component xdot and ydot and a rotational velocity
+component Q dot. So if we think of the robot
+
+00:01:43.820 --> 00:01:49.159
+end effector as a pose of a coordinate frame,
+this is a speed at which the origin of the
+
+00:01:49.159 --> 00:01:54.710
+coordinate frame moves and the speed in which
+the coordinate frame rotates.
+
+00:01:54.710 --> 00:01:59.399
+The Jacobian matrix can sometimes be singular
+or close to singular. That is its determine
+
+00:01:59.399 --> 00:02:04.289
+very close to 0 or its condition number is
+very large. And this is something about how
+
+00:02:04.289 --> 00:02:11.350
+easy or awkward certain Cartesian motions
+will be. We will quantify this a bit by talking
+
+00:02:11.350 --> 00:02:17.580
+about the velocity ellipse of the manipulator.
+What we did was to map a set of velocities
+
+00:02:17.580 --> 00:02:23.920
+that lie on a circle in the joint velocity
+space to an ellipse on the space of the Cartesian
+
+00:02:23.920 --> 00:02:29.030
+velocity of the robot tool; xdot and ydot
+in this particular case. And what we can see
+
+00:02:29.030 --> 00:02:33.440
+is we have an ellipse which indicates that
+the robot is capable of moving in this case
+
+00:02:33.440 --> 00:02:38.860
+quite quickly in the y direction but more
+slowly in the x direction. The shape of this
+
+00:02:38.860 --> 00:02:46.030
+ellipse is a function of the joint angles
+Q. The inverse Jacobian is very useful to
+
+00:02:46.030 --> 00:02:52.070
+us. It allows us to specify the spatial velocity
+of a tool tip in terms of Cartesian coordinates
+
+00:02:52.070 --> 00:02:56.900
+and determine the joint velocities that we
+need in order to achieve that. This is very
+
+00:02:56.900 --> 00:03:00.960
+useful in real world applications where we
+might want the robot end effector to move
+
+00:03:00.960 --> 00:03:04.480
+in a straight line at a determined velocity.
+
+00:03:04.480 --> 00:03:09.140
+So for a two link manipulator, we define the
+end effector velocity in terms of its Cartesian
+
+00:03:09.140 --> 00:03:15.070
+velocity components xdot and ydot and compute
+the appropriate joint angle velocities. And
+
+00:03:15.070 --> 00:03:19.700
+again for the three degree freedom robot,
+we can specify not only the translational
+
+00:03:19.700 --> 00:03:26.150
+velocity xdot and ydot we can also specify
+the rotational velocity of a coordinate frame
+
+00:03:26.150 --> 00:03:31.460
+attached to the end of the robot. This is
+really useful for Cartesian motion. And this
+
+00:03:31.460 --> 00:03:36.290
+technique is referred to as resolved rate
+motion control.
+
+00:03:36.290 --> 00:03:41.510
+Finally we talked about how we can translate
+a velocity defined with respect to one coordinate
+
+00:03:41.510 --> 00:03:47.790
+frame to a velocity with respect to a different
+coordinate frame. The two velocities are related
+
+00:03:47.790 --> 00:03:54.560
+by another Jacobian matrix. And that Jacobian
+matrix is a function of the rotational part
+
+00:03:54.560 --> 00:03:57.960
+of the relative pose between the two coordinate
+frames.
+

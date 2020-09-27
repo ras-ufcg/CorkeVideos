@@ -2,59 +2,59 @@ WEBVTT
 Kind: captions
 Language: pt-BR
 
-00:00:08.210 --> 00:00:13.380
+00:00:04.210 --> 00:00:09.380
 Sejam bem-vindos à nossa primeira aula em nosso
 curso online, Introdução à Robótica.
 
-00:00:13.380 --> 00:00:17.560
+00:00:09.380 --> 00:00:13.560
 Meu nome é Peter Corke e eu irei ser seu
 professor pelas próximas seis semanas.
 
-00:00:17.560 --> 00:00:22.599
+00:00:13.560 --> 00:00:18.599
 Então, esta é uma passagem muito rápida se 
 você gosta dos fundamentos fictícios
 
-00:00:22.599 --> 00:00:27.890
+00:00:18.599 --> 00:00:23.890
 de robótica. O que nós vamos fazer nesta
 primeira aula do curso é examinar a enorme variedade
 
-00:00:27.890 --> 00:00:32.660
+00:00:23.890 --> 00:00:28.660
 de robôs que existem hoje. Nós iremos 
 começar com os robôs de manufatura. Estes
 
-00:00:32.660 --> 00:00:37.870
+00:00:28.660 --> 00:00:33.870
 são os robôs do tipo braços que você vê trabalhando
 em fábricas criando carros, desenvolvendo computadores
 
-00:00:37.870 --> 00:00:42.829
-e são, portanto, uma classe de robôs bastante importante.
+00:00:33.870 --> 00:00:38.829
+e é, portanto, uma classe de robôs bastante importante.
 E, este é o tipo de robô que nós vamos
 
-00:00:42.829 --> 00:00:49.180
+00:00:38.829 --> 00:00:45.180
 estudar com mais calma nesse curso Introdutório
 de Robótica. Mas, nessa aula em particular
 
-00:00:49.180 --> 00:00:53.600
-eu quero representar o quadro geral de 
+00:00:45.180 --> 00:00:49.600
+eu quero apresentar o quadro geral dos 
 diferentes tipos de robôs que estão presentes
 
-00:00:53.600 --> 00:00:58.309
+00:00:49.600 --> 00:00:54.309
 no Mundo de hoje. Então, vamos examinar os
 robôs que dirigem, robôs que voam, robôs 
 
-00:00:58.309 --> 00:01:03.070
+00:00:54.309 --> 00:00:59.070
 que nadam debaixo d’água ou robôs que
 remam em torno da superfície da água,
 
-00:01:03.070 --> 00:01:06.400
+00:00:59.070 --> 00:01:02.400
 efetivamente barcos robotizados.
 Assim, nesta primeira aula, nós vamos
 
-00:01:06.400 --> 00:01:11.180
-orientar nós mesmos no aprendizado sobre a grande
+00:01:02.400 --> 00:01:07.180
+nos orientar no aprendizado sobre a grande
 disseminação de robôs. E, em seguida, para o restante  
 
-00:01:11.180 --> 00:01:16.909
-do curso, nós vamos nos concentrar nossos esforços
-e examinar os robôs do tipo braço em particular.
+00:01:07.180 --> 00:01:12.909
+do curso, nós vamos concentrar nossos esforços
+a examinar os robôs do tipo braço em particular.
 

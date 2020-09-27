@@ -2,565 +2,558 @@ WEBVTT
 Kind: captions
 Language: pt-BR
 
-00:00:43.640 --> 00:00:49.020
+00:00:20.640 --> 00:00:26.020
 Como a maioria das pessoas, eu cresci com imagens
-de robôs como aqueles de Perdidos no Espaço,
+de robôs como aqueles de "Perdidos no Espaço",
 
-00:00:49.020 --> 00:00:53.900
-mas robôs de verdade não são daquela forma. Os robôs
-reais assim como os que veremos nos
+00:00:26.020 --> 00:00:30.900
+mas robôs de verdade não são daquela forma. 
+Os robôs reais assim como os que veremos nos
 
-00:00:53.900 --> 00:00:59.400
+00:00:30.900 --> 00:00:36.400
 próximos minutos são muito diversos
 em forma e função. Nós veremos
 
-00:00:59.400 --> 00:01:03.220
-robôs que podem se mover pelos corredores, nós
-veremos robôs que podem nadar debaixo
+00:00:36.400 --> 00:00:40.220
+robôs que podem se mover pelos corredores, 
+nós veremos robôs que podem nadar debaixo
 
-00:01:03.220 --> 00:01:08.580
+00:00:40.220 --> 00:00:45.580
 d'água, robôs que podem voar, robôs que podem
 realizar montagens. Eles são muito diferentes entre si
 
-00:01:08.580 --> 00:01:13.710
+00:00:45.580 --> 00:00:50.710
 e não são nada parecidos com os robôs que
 nós crescemos vendo na TV e nos filmes.
 
-00:01:13.710 --> 00:01:18.290
+00:00:50.710 --> 00:00:55.290
 O que é comum a todos esses robôs, apesar
 de serem diferentes? O ponto em comum é
 
-00:01:18.290 --> 00:01:23.600
-que eles executam fundamentalmente três ações.
-Eles sentem o mundo, e nós veremos
+00:00:55.290 --> 00:01:00.600
+que eles executam fundamentalmente três
+ações. Eles sentem o mundo, e nós veremos
 
-00:01:23.600 --> 00:01:28.690
+00:01:00.600 --> 00:01:05.690
 a variedade de sensores que robôs usam para
 sentir o mundo e então fazer algum plano,
 
-00:01:28.690 --> 00:01:32.540
-eles captam o que percebem do mundo
-através dos seus sentidos e eles têm um objetivo
+00:01:05.690 --> 00:01:09.540
+eles captam o que percebem do mundo por meio
+dos seus sentidos e eles têm um objetivo
 
-00:01:32.540 --> 00:01:37.470
-que estão tentando alcançar. Então eles planejam
-como se aproximar desses objetivos.
+00:01:09.540 --> 00:01:14.470
+que estão tentando alcançar. Então eles
+planejam como se aproximar desses objetivos.
 
-00:01:37.470 --> 00:01:41.910
+00:01:14.470 --> 00:01:18.910
 E então eles executam uma ação. Pode ser
 nadar pra frente, pode ser voar, pode
 
-00:01:41.910 --> 00:01:46.330
+00:01:18.910 --> 00:01:23.330
 ser descer pelo corredor. E então
 repete; ele sente de novo como o mundo
 
-00:01:46.330 --> 00:01:51.280
-mudou, se atualiza, planeja, e se movimenta
-um pouco mais. Então robôs estão continuamente fazendo planos
+00:01:23.330 --> 00:01:28.280
+mudou, se atualiza, planeja, e se movimenta um pouco
+mais. Então robôs estão continuamente fazendo planos
 
-00:01:51.280 --> 00:01:55.600
-com base nos seus sentidos e agindo num ciclo contínuo.
-Então vamos ver alguns robôs reais.
+00:01:28.280 --> 00:01:32.600
+com base nos seus sentidos e agindo num ciclo
+contínuo. Então vamos ver alguns robôs reais.
 
-00:02:08.420 --> 00:02:10.680
+00:01:45.420 --> 00:01:47.680
 Esse é um exemplo de um robô industrial.
 
-00:02:11.900 --> 00:02:13.900
-Máquinas como essa são descendentes diretos
+00:01:48.900 --> 00:01:50.900
+Máquinas como essa são descendentes diretas
 
-00:02:13.910 --> 00:02:19.590
+00:01:50.910 --> 00:01:56.590
 dos primeiros robôs que entraram em serviço
 na década de 1950. Esse é um grande robô
 
-00:02:19.590 --> 00:02:23.830
-industrial. Robôs como esses são tipicamente
-encontrados em fábricas de automóveis fazendo trabalhos como
+00:01:56.590 --> 00:02:00.830
+industrial. Robôs como esses são tipicamente encontrados
+em fábricas de automóveis fazendo trabalhos como
 
-00:02:23.830 --> 00:02:28.060
+00:02:00.830 --> 00:02:05.060
 pintura com spray, soldagem, ou levantar partes de
 carroceria. Este robô em particular pode levantar
 
-00:02:28.060 --> 00:02:34.260
+00:02:05.060 --> 00:02:11.260
 até 60 kgs. É acionado por 6 motores elétricos
 e eles giram a máquina em torno de diferentes
 
-00:02:34.260 --> 00:02:39.730
+00:02:11.260 --> 00:02:16.730
 eixos. Então, o primeiro motor gira o robô
 sobre um eixo como este; o próximo motor o gira
 
-00:02:39.730 --> 00:02:45.580
+00:02:16.730 --> 00:02:22.580
 sobre um eixo como este; o próximo motor o gira
 sobre um eixo como este. Aqui em baixo nós temos
 
-00:02:45.580 --> 00:02:50.380
-o que nós chamamos de mecanismo de pulso. Esta montagem
-aqui; e que contém três motores e eles
+00:02:22.580 --> 00:02:27.380
+o que nós chamamos de mecanismo de pulso. Esta
+montagem aqui; e que contém três motores e eles
 
-00:02:50.380 --> 00:02:55.540
-rotacionam o efetuador do robô; a
-parte que faz o trabalho; eles o rotacionam sobre
+00:02:27.380 --> 00:02:32.540
+rotacionam o efetuador do robô; a parte
+que faz o trabalho; eles o rotacionam sobre
 
-00:02:55.540 --> 00:03:02.389
-um eixo como este, como este e outro
-como este. Então esses seis motores permitem que o
+00:02:32.540 --> 00:02:39.389
+um eixo como este, como este e outro como
+este. Então esses seis motores permitem que o
 
-00:03:02.389 --> 00:03:08.299
+00:02:39.389 --> 00:02:45.299
 efetuador do robô se mova independentemente
 na direção X, na direção Y e na
 
-00:03:08.299 --> 00:03:14.139
+00:02:45.299 --> 00:02:51.139
 direção Z. E também rotacionar independentemente
 sobre o eixo X dessa forma; sobre o eixo Y
 
-00:03:14.139 --> 00:03:18.939
+00:02:51.139 --> 00:02:55.939
 se movimentano dessa forma; e sobre o eixo Z
 se movimentando dessa forma.
 
-00:03:38.310 --> 00:03:42.820
+00:03:15.310 --> 00:03:19.820
 Esse é o Guiabot. Ele é um robô móvel.
 Diferente do último robô que vimos, este
 
-00:03:42.820 --> 00:03:48.579
+00:03:19.820 --> 00:03:25.579
 robô tem a habilidade de se mover de maneira autônoma
 em um ambiente. Para possibilitar que ele faça
 
-00:03:48.579 --> 00:03:52.880
+00:03:25.579 --> 00:03:29.880
 isso, ele possui uma rica coleção de sensores.
 Esse sensor é provavelmente familiar para você, é
 
-00:03:52.880 --> 00:03:58.840
-uma câmera Kinect. Nós chamamos de câmera 3D. Ela
-retorna a estrutura tridimensional do
+00:03:29.880 --> 00:03:35.840
+uma câmera Kinect. Nós chamamos de câmera 3D.
+Ela retorna a estrutura tridimensional do
 
-00:03:58.840 --> 00:04:02.989
+00:03:35.840 --> 00:03:39.989
 mundo ao redor do robô. E ele precisa dessa
 estrutura tridimensional pois ela que pode
 
-00:04:02.989 --> 00:04:07.209
+00:03:39.989 --> 00:03:44.209
 determinar o que é um obstáculo - um lugar que
 ele não deveria ir - e o que é um lugar livre
 
-00:04:07.209 --> 00:04:12.169
-– que é um espaço onde ele
-pode ir. O robô também tem esse par
+00:03:44.209 --> 00:03:49.169
+– que é um espaço onde ele pode
+ir. O robô também tem esse par
 
-00:04:12.169 --> 00:04:16.660
-de câmeras aqui, nós podemos chamá-las de um par de câmeras
-estéreo, que imita a funão dos nossos próprios
+00:03:49.169 --> 00:03:53.660
+de câmeras aqui, nós podemos chamá-las de um par de
+câmeras estéreo, que imita a funão dos nossos próprios
 
-00:04:16.660 --> 00:04:21.820
-dois olhos. Nós usamos nossos dois olhos para determinar
-a estrutura 3D do mundo. E o robô
+00:03:53.660 --> 00:03:58.820
+dois olhos. Nós usamos nossos dois olhos para
+determinar a estrutura 3D do mundo. E o robô
 
-00:04:21.820 --> 00:04:27.660
+00:03:58.820 --> 00:04:04.660
 os usa para fornecer informações 3D aumentadas
 sobre seu mundo. O robô também tem uma
 
-00:04:27.660 --> 00:04:32.010
-câmera muito interessante no topo. Nós a chamamos
-de câmera omnidirecional. É, na verdade,
+00:04:04.660 --> 00:04:09.010
+câmera muito interessante no topo. Nós a 
+chamamos de câmera omnidirecional. É, na verdade,
 
-00:04:32.010 --> 00:04:36.760
+00:04:09.010 --> 00:04:13.760
 composta por seis câmeras individuais que olham
 em todas essas direções diferentes assim como
 
-00:04:36.760 --> 00:04:41.530
+00:04:13.760 --> 00:04:18.530
 verticalmente. Ele as intregra em conjunto
 para fornecer uma visão quase hemisférica do
 
-00:04:41.530 --> 00:04:45.250
+00:04:18.530 --> 00:04:22.250
 mundo. Uma visão muito, muito ampla.
 
-00:04:45.250 --> 00:04:49.030
+00:04:22.250 --> 00:04:26.030
 Outras características desse robô também são interessantes.
 Aqui em baixo nós temos um sensor que chamamos de
 
-00:04:49.030 --> 00:04:54.870
+00:04:26.030 --> 00:04:31.870
 scanner a laser. Este é essencialmente uma barra de
 pára-choques óticos. Esse sensor é o último recurso
 
-00:04:54.870 --> 00:04:59.190
+00:04:31.870 --> 00:04:36.190
 feito para impedir que o robô colida com algo
 que ele não deveria. Além disso, o robô
 
-00:04:59.190 --> 00:05:03.230
-tem muito poder computacional imbutido. Vemos aqui
-que temos dois Mac Minis juntamente com
+00:04:36.190 --> 00:04:40.230
+tem muito poder computacional imbutido. Vemos
+aqui que temos dois Mac Minis juntamente com
 
-00:05:03.230 --> 00:05:08.190
-um computador que está na base, que
+00:04:40.230 --> 00:04:45.190
+um computador que está na base, que 
 fornece o poder computacional para processar
 
-00:05:08.190 --> 00:05:13.540
+00:04:45.190 --> 00:04:50.540
 as informações de todos os sensores a fim de planejar
 como ele deve se mover e controlar o movimento
 
-00:05:13.540 --> 00:05:19.100
+00:04:50.540 --> 00:04:56.100
 das rodas. Esse robô tem uma noção muito forte
 de onde ele está; ele na verdade constrói
 
-00:05:19.100 --> 00:05:24.100
+00:04:56.100 --> 00:05:01.100
 um mapa desse mundo; um bidimensional e
-um tridimensional.Ele sabe onde ele está
+um tridimensional. Ele sabe onde ele está
 
-00:05:24.100 --> 00:05:28.570
+00:05:01.100 --> 00:05:05.570
 dentro desse mundo e as informações fundamentais
 necessárias afim de conseguir alcançar um
 
-00:05:28.570 --> 00:05:33.690
-objetivo. Para que possa sentir, ele tem computadores de
-planejamento aqui e que enviam ações através dos
+00:05:05.570 --> 00:05:10.690
+objetivo. Para que possa sentir, ele tem computadores 
+de planejamento aqui que enviam ações através dos
 
-00:05:33.690 --> 00:05:38.650
-motores e continuamente repete esse sensoreamento,
+00:05:10.690 --> 00:05:15.650
+motores e continuamente repete esse sensoriamento, 
 planejamento, paradigma de atuação.
 
-00:05:46.240 --> 00:05:50.640
+00:05:23.240 --> 00:05:27.640
 Aqui temos outro robô móvel e esse é um dos 
 gigantes. Máquinas assim são chamadas de 
 
-00:05:50.680 --> 00:05:55.210
-hot metal carriers. Eles são parentes das
-empilhadeiras. São tipicamente encontradas
+00:05:27.680 --> 00:05:32.210
+carregadoras de metal fundido. Eles são parentes
+das empilhadeiras. São tipicamente encontradas
 
-00:05:55.210 --> 00:05:59.870
+00:05:32.210 --> 00:05:36.870
 em instalações de fundição de alumínio, com o 
 trabalho de pegar baldes muito grandes como
 
-00:05:59.870 --> 00:06:03.690
+00:05:36.870 --> 00:05:40.690
 esse que vocês podem ver em primeiro plano,
 o qual será cheio com alumínio fundido
 
-00:06:03.690 --> 00:06:09.020
+00:05:40.690 --> 00:05:46.020
 - 8 toneladas de alumínio fundido. O trabalho
 delas é pegar esse balde, levantar e carregar
 
-00:06:09.020 --> 00:06:13.340
+00:05:46.020 --> 00:05:50.340
 ao longo de uma rede de estradas rumo a outro 
 lugar dentro desse complexo de fundição.
 
-00:06:20.240 --> 00:06:24.470
+00:05:57.240 --> 00:06:01.470
 Essa máquina foi originalmente dirigida por uma 
 pessoa que sentava na cabine aqui e manipulava
 
-00:06:24.470 --> 00:06:29.710
+00:06:01.470 --> 00:06:06.710
 os controles, mas essa em particular 
 foi transformada em um robô. A fim de
 
-00:06:29.710 --> 00:06:34.560
+00:06:06.710 --> 00:06:11.560
 ser um robô efetivo, ela precisa usar um 
 número de diferentes sensores para que evite
 
-00:06:34.560 --> 00:06:39.030
+00:06:11.560 --> 00:06:16.030
 de bater em coisas ou pessoas que ela não deveria
 bater, e que possa determinar onde é dentro
 
-00:06:39.030 --> 00:06:43.610
-do complexo de fundição, além de ser capaz de
-pegar com sucesso o cadinho.
+00:06:16.030 --> 00:06:20.610
+do complexo de fundição, além de ser 
+capaz de pegar com sucesso o cadinho.
 
-00:06:43.610 --> 00:06:48.240
-Agora, vamos dar uma olhada no processo de "pegar".
-O veículo em si tem esse gancho que ele
+00:06:20.610 --> 00:06:25.240
+Agora, vamos dar uma olhada no processo de 
+"pegar". O veículo em si tem esse gancho que ele
 
-00:06:48.240 --> 00:06:53.890
+00:06:25.240 --> 00:06:30.890
 precisa colocar através desse cabo. Então é um
 problema de posicionamento relaticamente preciso
 
-00:06:53.890 --> 00:06:58.250
+00:06:30.890 --> 00:06:35.250
 que o robô precisa resolver. Agora ele faz isso
 usando uma câmera que está aqui em cima no
 
-00:06:58.250 --> 00:07:03.510
-mastro do robô, que olha para baixo e computa
-onde esse balde está em relação ao
+00:06:35.250 --> 00:06:40.510
+mastro do robô, que olha para baixo e 
+computa onde esse balde está em relação ao
 
-00:07:03.510 --> 00:07:07.990
-robô, e o robô se move para trazer 
-o gancho por esse cabo.
+00:06:40.510 --> 00:06:44.990
+robô, e o robô se move para 
+trazer o gancho por esse cabo.
 
-00:07:19.360 --> 00:07:23.520
-Outro sensor realmente importante nesse robô
-é esse dispositivo de digitalização a laser amarelo, e
+00:06:56.360 --> 00:07:00.520
+Outro sensor realmente importante nesse robô é esse
+dispositivo de digitalização a laser amarelo, e
 
-00:07:23.520 --> 00:07:27.070
-há na verdade quatro deles, um em cada
+00:07:00.520 --> 00:07:04.070
+na verdade há quatro deles, um em cada
 canto do robô para que ele possa ver todo
 
-00:07:27.070 --> 00:07:31.750
+00:07:04.070 --> 00:07:08.750
 o caminho ao redor. Ele executa duas funções.
 Uma é que os raios laser podem detectar algo
 
-00:07:31.750 --> 00:07:37.610
+00:07:08.750 --> 00:07:14.610
 como eu, um obstáculo, e ele deve então parar
 para que não colida comigo. Mas também
 
-00:07:37.610 --> 00:07:42.690
+00:07:14.610 --> 00:07:19.690
 executa uma tarefa de navegação realmente importante.
 É assim que o robô sabe onde é dentro do 
 
-00:07:42.690 --> 00:07:46.750
+00:07:19.690 --> 00:07:23.750
 complexo. Então para entender como isso funciona
 nós vamos ir para fora e dar uma olhada em um
 
-00:07:46.750 --> 00:07:49.310
-dos indicadores de navegação que esse sensor
-capta.
+00:07:23.750 --> 00:07:26.310
+dos indicadores de navegação
+que esse sensor capta.
 
-00:07:56.900 --> 00:08:01.120
+00:07:33.900 --> 00:07:38.120
 O robô computa onde ele está no ambiente usando 
 um sistema de identificadores. Nesse caso em
 
-00:08:01.120 --> 00:08:06.730
-particular, são essas tiras de fita reflexiva que
-dão um retorno realmente brilhante nos scanners a laser
+00:07:38.120 --> 00:07:43.730
+particular, são essas tiras de fita reflexiva que dão
+um retorno realmente brilhante nos scanners a laser
 
-00:08:06.730 --> 00:08:12.090
-desses dispositivos amarelos que vimos nos cantos
-do hot metal carrier. Agora o robô tem
+00:07:43.730 --> 00:07:49.090
+desses dispositivos amarelos que vimos nos 
+cantos do carregador de metal. Agora o robô tem
 
-00:08:12.090 --> 00:08:17.660
+00:07:49.090 --> 00:07:54.660
 um mapa que diz o paradeiro de todos esses
 identificadores dentro do complexo. E então ele
 
-00:08:17.660 --> 00:08:23.200
+00:07:54.660 --> 00:08:00.200
 usa a informação sobre onde o robô entende 
 que esses idenditifacodores estão e combina
 
-00:08:23.200 --> 00:08:27.680
+00:08:00.200 --> 00:08:04.680
 os dois para determinar onde o
 robô está em relação ao mapa.
 
-00:08:41.120 --> 00:08:45.520
+00:08:18.120 --> 00:08:22.520
 Aqui nós temos outro tipo de robô móvel.
 Esse aqui se movimenta no ar. É um helicóptero
 
-00:08:45.529 --> 00:08:49.899
+00:08:22.529 --> 00:08:26.899
 de pequena escala - é um tipo de coisa que um
 amador possuiria. O tipo de coisa que eles
 
-00:08:49.899 --> 00:08:55.839
+00:08:26.899 --> 00:08:32.839
 podem voar no fim de semana e eles voam usando
 controles de joystick que preciasm de muita
 
-00:08:55.839 --> 00:09:00.709
-habilidade da parte deles a fim de mantê-lo of skill on their part in order to keep it
+00:08:32.839 --> 00:08:37.709
+habilidade da parte deles a fim de mantê-lo 
 no ar e ir aonde eles querem que ele vá.
 
-00:09:00.709 --> 00:09:04.540
+00:08:37.709 --> 00:08:41.540
 Essa máquina em particular foi transformada 
-em um robô. mas antes de falarmos sobre a
+em um robô. Mas antes de falarmos sobre a
 
-00:09:04.540 --> 00:09:08.709
+00:08:41.540 --> 00:08:45.709
 parte robótica, vamos apenas falar um pouco
 sobre o helicóptero como máquina mesmo porque
 
-00:09:08.709 --> 00:09:10.639
+00:08:45.709 --> 00:08:47.639
 eles são coisas fascinantes.
 
-00:09:10.639 --> 00:09:14.370
-Esse é movido por um pequeno motor a gasolina;
-há um tanque de combustível aqui embaixo que carrega
+00:08:47.639 --> 00:08:51.370
+Esse é movido por um pequeno motor a gasolina; há
+um tanque de combustível aqui embaixo que carrega
 
-00:09:14.370 --> 00:09:20.670
-o combustível. E a força de levante principal vem
-do motor pincipal que fornece um vetor força
+00:08:51.370 --> 00:08:57.670
+o combustível. E a força de impulso principal
+vem do motor pincipal que fornece um vetor força
 
-00:09:20.670 --> 00:09:25.910
+00:08:57.670 --> 00:09:02.910
 vertical para cima, que se opõe ao
 peso do veículo - se opõe à gravidade.
 
-00:09:25.910 --> 00:09:29.899
-O íncrivel sobre o helicóptero é que ele
-pode apontar o vetor força em diferentes direções.
+00:09:02.910 --> 00:09:06.899
+O íncrivel sobre o helicóptero é que ele pode
+apontar o vetor força em diferentes direções.
 
-00:09:29.899 --> 00:09:34.120
+00:09:06.899 --> 00:09:11.120
 Pode apontar para frente, pode apontar para trás,
 pode apontar para os lador e isso tudo é feito
 
-00:09:34.120 --> 00:09:39.339
-por esse mecanismo aqui chamado de swash plate
+00:09:11.120 --> 00:09:16.339
+por esse mecanismo aqui chamado de prato oscilante 
 e o que ele faz é que toda vez que as lâminas
 
-00:09:39.339 --> 00:09:44.809
+00:09:16.339 --> 00:09:21.809
 giram, eles também giram dess jeito em torno dos
 seus eixos para permitir que esse vetor força seja
 
-00:09:44.809 --> 00:09:50.360
+00:09:21.809 --> 00:09:27.360
 controlado e assim dar a habilidade de se mover
 para frente, para trás, para os lados e para cima.
 
-00:09:50.360 --> 00:09:55.100
+00:09:27.360 --> 00:09:32.100
 Aqui há uma outra hélice na parte de trás
 que gera uma força capaz de parar o corpo
 
-00:09:55.100 --> 00:09:58.639
-do helicóptero de girar
+00:09:32.100 --> 00:09:35.639
+do helicóptero de girar.
 
-00:09:58.639 --> 00:10:03.970
+00:09:35.639 --> 00:09:40.970
 Para trasnformá-lo em um robô, nós precisamos
 adicionar alguns sensores. Nesta caixa aqui
 
-
-00:10:03.970 --> 00:10:08.769
+00:09:40.970 --> 00:09:45.769
 embaixo, há alguns sensores como o GPS
 que informa aonde nós estamos em relação 
 
-00:10:08.769 --> 00:10:13.410
+00:09:45.769 --> 00:09:50.410
 ao mundo. Temos aqui alguns acelerômetros
 e giroscópios que nos informam a orientação
 
-00:10:13.410 --> 00:10:18.779
+00:09:50.410 --> 00:09:55.779
 no espaço. Aqui há também um altímetro a laser 
 que mede a sua altura em relação ao chão.
 
-00:10:18.779 --> 00:10:23.579
-e aqui na frente temos um radar que detecta obstáculos
-que ele pode encontrar.
+00:09:55.779 --> 00:10:00.579
+e aqui na frente temos um radar que
+detecta obstáculos que ele pode encontrar.
 
-00:10:23.680 --> 00:10:30.880
-Então, um robô helicóptero como esse pode ser usado 
-em vários tipos de tarefas. Ele é útil em inspeções automáticas:
+00:10:00.680 --> 00:10:07.880
+Então, um robô helicóptero como esse pode ser usado em 
+vários tipos de tarefas. Ele é útil em inspeções automáticas:
 
-00:10:30.910 --> 00:10:36.120
-talvez em uma fazenda ele pode inspecionar a qualidade 
-das plantas, ele poderá voar sobre rios ou porções de água,
+00:10:07.910 --> 00:10:13.120
+talvez em uma fazenda ele pode inspecionar a qualidade das
+plantas, ele poderá voar sobre rios ou porções de água,
 
+00:10:13.120 --> 00:10:16.400
+ele poderia voar ao longo de linhas 
+de distribuição elétrica ou cercas.
 
-00:10:36.120 --> 00:10:39.400
-ele poderia voar ao longo de linhas de distribuição 
-elétrica ou cercas.
-
-00:10:45.680 --> 00:10:49.200
+00:10:22.680 --> 00:10:26.200
 Aqui temos outro tipo de robô móvel. 
 Mas este robô é móvel na água.
 
-00:10:50.720 --> 00:10:55.840
-Usamos robôs como este para criar medições 
-científicas sobre grandes volumes de água como lagos
+00:10:27.720 --> 00:10:32.840
+Usamos robôs como este para criar medições científicas
+sobre grandes volumes de água como lagos
 
-00:10:55.860 --> 00:11:01.780
+00:10:32.860 --> 00:10:38.780
 ou zonas costeiras. Parace simples, mas na verdade 
 é uma máquina bem complexa e sofisticada.
 
-00:11:03.600 --> 00:11:07.589
-Vamos dar uma olhada nele. Aqui no final
-há uma hélice que empurra 
+00:10:40.600 --> 00:10:44.589
+Vamos dar uma olhada nele. Aqui no 
+final há uma hélice que empurra 
 
-00:11:07.589 --> 00:11:12.240
-o robô pela água. Ela possui aletas de controle, 
-O leme tem o papel de conduzi-lo pelo 
+00:10:44.589 --> 00:10:49.240
+o robô pela água. Ela possui aletas de controle. 
+O leme tem o papel de conduzí-lo pelo 
 
-00:11:12.240 --> 00:11:17.319
+00:10:49.240 --> 00:10:54.319
 corpo de água e essas outras servem para direcioná-lo 
 para cima e para baixo na coluna de água. Esse 
 
-00:11:17.319 --> 00:11:21.329
+00:10:54.319 --> 00:10:58.329
 conjunto de antenas possui um receptor de GPS, 
 então quando ele está na superfície da água ele sabe
 
-00:11:21.329 --> 00:11:25.069
-aonde ele está, e nele há outras antenas que nos  
-permite se comunicar com ele quando
+00:10:58.329 --> 00:11:02.069
+aonde ele está, e nele há outras antenas 
+que nos permite se comunicar com ele quando
 
-00:11:25.069 --> 00:11:30.079
+00:11:02.069 --> 00:11:07.079
 ele está em alto mar. Aqui termos sensores sonares
 - sonar de varredura lateral - que utiliza ondas sonoras
 
+00:11:07.079 --> 00:11:12.860
+para criar um mapa tridimensional do mar a 
+medida que o robô passa por ele. Aqui em cima
 
-00:11:30.079 --> 00:11:35.860
-para criar um mapa tridimensional do mar
-a medida que o robô passa por ele. Aqui em cima
-
-
-00:11:35.860 --> 00:11:40.079
+00:11:12.860 --> 00:11:17.079
 nós temos sensores que medem a velocidade da
 corrente marítima do oceando. Apesar do robô
 
-
-00:11:40.079 --> 00:11:43.759
+00:11:17.079 --> 00:11:20.759
 estar se movendo, ele pode medir a velocidade 
 da coluna de água. Aqui embaixo há outro 
 
-00:11:43.759 --> 00:11:49.470
-que mede a velocidade que do robô em relação
-a coluna de água. Aqui na frente 
+00:11:20.759 --> 00:11:26.470
+que mede a velocidade que do robô em 
+relação a coluna de água. Aqui na frente 
 
-00:11:49.470 --> 00:11:54.389
+00:11:26.470 --> 00:11:31.389
 há o aparato científico e este é a 
 instrumentação que nós queremos levar pela
 
-00:11:54.389 --> 00:11:59.339
+00:11:31.389 --> 00:11:36.339
 água para fazer medições sobre o que está 
 acontecendo. Temos aqui sensores que medem
 
-00:11:59.339 --> 00:12:03.639
+00:11:36.339 --> 00:11:40.639
 a condutividade e o pH da água, que medem o 
 total de oxigênio dissolvido, que medem
 
-00:12:03.639 --> 00:12:08.439
+00:11:40.639 --> 00:11:45.439
 a quantidade de clorofila , que medem a quantidae
 de alga azul e verde. Logo, estes dados
 
-00:12:08.439 --> 00:12:12.949
+00:11:45.439 --> 00:11:49.949
 científicos são unidos aos dados de navegação 
 que vem de outros sensores a bordo do
 
-00:12:12.960 --> 00:12:15.920
+00:11:49.960 --> 00:11:52.920
 robô, desta forma nós sabemos aonde 
 estas medições foram feitas
 
-00:12:18.960 --> 00:12:23.840
+00:11:55.960 --> 00:12:00.840
 Este robô em particular tem um tempo de execução
 de até 8 horas, move em torno de 2 metros por segundo
 
-00:12:24.000 --> 00:12:28.000
+00:12:01.000 --> 00:12:05.000
 Logo podemos pesquisar até 30 quilômetros em água 
 numa única missão.
 
-00:12:33.730 --> 00:12:39.559
-Então o que vimos foi um número de interessantes robôs 
-que são claramente bem 
+00:12:10.730 --> 00:12:16.559
+Então o que vimos foi um número de robôs 
+interessantes que são claramente bem 
 
-00:12:39.559 --> 00:12:44.839
-úteis. Estes robôs diferem em forma e na sua 
-funcionalidade, mas a rigor eles estão 
+00:12:16.559 --> 00:12:21.839
+úteis. Estes robôs diferem em forma e na
+sua funcionalidade, mas a rigor eles estão 
 
-00:12:44.839 --> 00:12:49.470
+00:12:21.839 --> 00:12:26.470
 todos fazendo a mesma coisa. Eles estão sensoriando 
 o mundo, para então fazer planos e no final
 
-00:12:49.470 --> 00:12:54.490
+00:12:26.470 --> 00:12:31.490
 eles realizam ações para alcançar 
 as suas metas. Alguns robôs são
 
-00:12:54.490 --> 00:12:59.779
+00:12:31.490 --> 00:12:36.779
 claramente protótipos de pesquisa, mas outros 
 são modelos comerciais. Isto é muito
 
-00:12:59.779 --> 00:13:04.959
+00:12:36.779 --> 00:12:41.959
 emocionante, pois é o começo de 
 toda uma nova onda tecnológica
 
-00:13:04.959 --> 00:13:10.290
+00:12:41.959 --> 00:12:47.290
 e já presenciamos outras ondas no passado.
 A introdução da máquina a vapor, eletricidade
 
-00:13:10.290 --> 00:13:16.089
+00:12:47.290 --> 00:12:53.089
 aviões, automóveis, computadores elétricos. 
 Todas essas coisas foram supreendentes 
 
-00:13:16.089 --> 00:13:21.740
-para os nossos avós e para os nossos pais. Robôs
-serão a nova onda tecnológica
+00:12:53.089 --> 00:12:58.740
+para os nossos avós e para os nossos pais. 
+Robôs serão a nova onda tecnológica
 
-00:13:21.740 --> 00:13:26.850
-num futuro próximo e nós ficaremos muito surpresos
-de vê-los nos nossos
+00:12:58.740 --> 00:13:03.850
+num futuro próximo e nós ficaremos
+muito surpresos de vê-los nos nossos
 
-00:13:26.850 --> 00:13:32.370
-ambientes de trabalho e nas nossas casas. 
-
-workplaces and in our homes. Portanto, 
+00:13:03.850 --> 00:13:09.370
+ambientes de trabalho e nas nossas casas. Portanto, 
 há realmente tempos interessantes pela frente.
 

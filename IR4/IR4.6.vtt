@@ -1,140 +1,140 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.439 --> 00:00:07.500
-We talked about how we can linearly interpolate
-position.
+Nós falamos sobre como podemos
+interpolar linearmente a posição.
 
 00:00:07.500 --> 00:00:10.660
-What do we do for the case of rotations?
+O que fazemos no caso de rotações?
 
 00:00:10.660 --> 00:00:16.580
-We could naively rewrite our expression like
-this where we have the initial rotation, the
+Poderíamos ingenuamente reescrever nossa expressão
+como esta onde temos o valor inicial da rotação, a
 
 00:00:16.580 --> 00:00:19.380
-final rotation and the intermediate rotation.
+rotação final e a rotação intermediária.
 
 00:00:19.380 --> 00:00:21.960
-But, there’s a problem with this scheme.
+Mas, há um problema com este esquema.
 
 00:00:21.960 --> 00:00:25.620
-A rotation matrix is not just any old 3 x 3
-matrix.
+Uma matriz de rotação não é simplesmente 
+uma matriz 3x3 antiga
 
 00:00:25.620 --> 00:00:27.100
-It’s a special matrix.
+É uma matriz especial.
 
 00:00:27.100 --> 00:00:32.990
-It’s an orthogonal matrix and that means
-that each column in the matrix is a unit vector.
+É uma matriz ortogonal o que significa que
+cada coluna na matriz é um vetor unitário
 
 00:00:32.990 --> 00:00:39.519
-So if I add two orthogonal matrices, the result
-will never be an orthogonal matrix because
+Então, se eu adicionar duas matrizes ortogonais, o
+resultado nunca vai ser uma matriz ortogonal porque
 
 00:00:39.519 --> 00:00:44.480
-if I can see that each column, the sum of
-two unit vectors, can never ever be a unit
+se eu puder vê cada coluna, a soma de
+dois vetores unitários, nunca pode ser um
 
 00:00:44.480 --> 00:00:45.480
-vector.
+vetor unitário
 
 00:00:45.480 --> 00:00:50.269
-So this is not a strategy we can use to interpolate
-rotations.
+Logo, esta não é uma estratégia que 
+podemos usar para interpolar rotações
 
 00:00:50.269 --> 00:00:54.819
-We need to consider other ways of representing
-rotation that we can interpolate.
+Precisamos considerar outras maneiras de 
+representar rotações que podemos interpolar
 
 00:00:54.819 --> 00:01:00.679
-So, one way to achieve this is to recall that
-this interpolation formula works for vectors
+Portanto, uma maneira de conseguir isso é lembrar que
+essa fórmula de interpolação trabalha com vetores
 
 00:01:00.679 --> 00:01:05.640
-and we can represent a rotation in terms of
-a vector of angles.
+e podemos representar uma rotação em 
+termos de um vetor de ângulos
 
 00:01:05.640 --> 00:01:10.500
-It can be three Euler angles or it could be
-three roll, pitch, yaw angles.
+Pode ser três ângulos de Euler ou pode ser
+três ângulos de roll, pitch e yaw
 
 00:01:10.500 --> 00:01:16.740
-So if we consider this vector of angles as
-the symbol Gamma, then we can introduce the
+Então, se nós consideramos este vetor de ângulos
+com o simbolo Gama, então podemos introduzir os
 
 00:01:16.740 --> 00:01:22.440
-initial angles, the final angles, and then
-we can interpolate the intermediate angles.
+ângulos iniciais, os ângulos finais, e finalmente
+podemos interpolar os ângulos intermediários 
 
 00:01:22.440 --> 00:01:26.490
-If our initial and final orientations are
-given in terms of rotation matrices, then
+Se nossas orientações inicial e final são
+dadas em termos de matrizes de rotação, então
 
 00:01:26.490 --> 00:01:31.850
-we convert those two into initial set of angles
-and a final set of angles.
+as convertemos em um conjunto inicial
+e um conjunto final de ângulos
 
 00:01:31.850 --> 00:01:37.820
-We interpolate the intermediate angles and
-we can convert those back to a rotation matrix
+Nós interpolamos os ângulos intermediários e
+podemos convertê-los de volta em uma matriz de rotação
 
 00:01:37.820 --> 00:01:39.240
-if we so desire.
+Se assim desejamos.
 
 00:01:39.240 --> 00:01:44.420
-We’re going to use the function jtraj that
-we looked at a moment ago to interpolate roll,
+Vamos usar a função jtraj, que vimos há
+pouco para interpolar os ângulos de roll
 
 00:01:44.420 --> 00:01:45.580
-pitch, yaw angles.
+pitch e yaw.
 
 00:01:45.580 --> 00:01:52.280
-I’m going to put the result into the workspace
-variable X. Invoke the jtraj function.
+Eu vou colocar o resultado na variável da área 
+de trabalho X. Chame a função jtraj. 
 
 00:01:52.280 --> 00:01:57.500
-I’m going to interpolate between a set of
-roll, pitch, yaw angles and roll equal to
+Eu vou interpolar entre um conjunto de ângulos 
+de roll, pitch e yaw e roll igual a 
 
 00:01:57.500 --> 00:02:06.480
-0 and the final set of roll, pitch, yaw angles
-which are equal to minus pi on 2, plus pi
+0 e o conjunto final de ângulos roll, pitch e yaw
+iguais a menos pi sobre 2, mais pi 
 
 00:02:06.480 --> 00:02:09.410
-on 2 and pi on 4.
+sobre 2 e pi sobre 4.
 
 00:02:09.410 --> 00:02:15.620
-And, I’m going to do this interpolation
-over a hundred time steps.
+E, eu vou fazer essa interpolação mais de
+cem etapas de tempo.
 
 00:02:15.620 --> 00:02:20.420
-The result is a new variable in our workspace
-that’s got 100 rows, each row corresponds
+O resultado é uma nova variável em nossa área de
+trabalho que tem 100 linhas, cada linha corresponde
 
 00:02:20.420 --> 00:02:21.420
-to a time step.
+a uma etapa de tempo.
 
 00:02:21.420 --> 00:02:28.810
-And, it has got three columns and the columns
-correspond to the roll, pitch and yaw angles.
+E, temos três colunas e as colunas correspondem
+aos ângulos de roll, pitch e yaw.
 
 00:02:28.810 --> 00:02:32.600
-I can plot this roll, pitch, yaw angles versus
-time.
+Eu posso plotar estes ângulos de 
+roll, pitch e yaw pelo tempo
 
 00:02:32.600 --> 00:02:37.370
-Here we can see what they look like, moving
-smoothly from the initial value to the final
+Aqui podemos vê como eles se movem,
+do valor inicial para o 
 
 00:02:37.370 --> 00:02:38.370
-value.
+valor final.
 
 00:02:38.370 --> 00:02:44.569
-Now, we want to convert the roll, pitch, yaw
-angle in each row of the matrix X in to a
+Agora, nós queremos converter o ângulo de roll,
+pitch e yaw em cada linha da matriz X em uma
 
 00:02:44.569 --> 00:02:45.750
 matriz de rotação.
@@ -262,143 +262,143 @@ Mais cedo, introduzimos quaternos e esta é
 a equação que usamos para interpolar entre
 
 00:05:09.290 --> 00:05:10.290
-two quaternions.
+dois quatérnios.
 
 00:05:10.290 --> 00:05:15.780
-Once again, it’s a function of S and S varies
-from 0 to 1.
+Novamente, é uma função de S onde S varia
+de 0 à 1.
 
 00:05:15.780 --> 00:05:20.810
-And the important element in this equation
-is Theta and Theta is derived from the elements
+E o elemento importante nesta equação é
+Teta, onde Teta é derivado dos elementos
 
 00:05:20.810 --> 00:05:24.590
-of the initial and final quaternion.
+do quatérnio inicial e do final.
 
 00:05:24.590 --> 00:05:31.260
-This is referred to as spherical linear interpolation
-and it is the shortest and most direct path
+Isto é referido como interpolação linear esférica
+e é o menor e mais direto caminho
 
 00:05:31.260 --> 00:05:34.120
-between any two orientations.
+entre quaisquer duas orientações.
 
 00:05:34.120 --> 00:05:40.650
-And it corresponds to a constant angular velocity
-about a fixed axis in space.
+Isto corresponde a uma velocidade angular constante
+com relação a um eixo fixo no espaço.
 
 00:05:40.650 --> 00:05:45.370
-Let’s create a pair of quaternions that
-we will interpolate between.
+Criemos um par de quatérnios que 
+iremos interpolar.
 
 00:05:45.370 --> 00:05:49.410
-The first one corresponds to a null rotation.
+O primeiro corresponde a uma rotação nula.
 
 00:05:49.410 --> 00:05:52.540
-We see that it’s got a vector component
-of 0.
+Vemos que ele possui uma componente vetorial
+de 0.
 
 00:05:52.540 --> 00:05:59.261
-The second quaternion is a representation
-of a rotation about the x-axis by pi on 2.
+O segundo quatérnio é a representação de uma 
+rotação com relação ao eixo x de pi sobre 2
 
 00:05:59.261 --> 00:06:01.680
-So, we’re going to pass in a rotation matrix.
+Então, nós vamos passar a matrix de rotação.
 
 00:06:01.680 --> 00:06:05.200
-The quaternion class is going to turn that
-into a quaternion.
+A classe de quatérnios irá transformar aquilo
+em um quatérnio.
 
 00:06:05.200 --> 00:06:11.270
-Now, there are two quaternions in our workspace,
-one corresponding to no rotation, one corresponding
+Agora, existem dois quatérnios em nosso workspace,
+um correspondendo a rotação nula, um correspondendo
 
 00:06:11.270 --> 00:06:15.490
-to rotation of 90 degrees about the x-axis.
+a rotação de 90 graus em relação ao eixo x.
 
 00:06:15.490 --> 00:06:18.820
-To interpolate quaternions, we use the interp
-method.
+Para interpolar quatérnios, usamo o método
+interp.
 
 00:06:18.820 --> 00:06:21.350
-We apply that to the initial quaternion.
+Aplicamos aquilo ao quatérnio inicial.
 
 00:06:21.350 --> 00:06:28.970
-And, the first argument is the final quaternion
-and the second argument is the position along
+Assim, o primeiro argumento é o quatérnio final
+e o segundo argumento é a posição ao longo de
 
 00:06:28.970 --> 00:06:29.970
-a trajectory.
+uma trajetória.
 
 00:06:29.970 --> 00:06:32.400
-So 0 is the first point on the trajectory.
+Portanto 0 é o primeiro ponto na trajetória.
 
 00:06:32.400 --> 00:06:38.690
-That’s the initial condition, the initial
-quaternion which is the null rotation.
+Esta é a condição inicial, o quatérnio
+inicial que corresponde à rotação nula.
 
 00:06:38.690 --> 00:06:44.639
-I can repeat that and ask for the final point
-in the interpolation and that is equal to
+Eu posso repetir aquilo e pedir o ponto final na
+interpolação e isto será igual ao
 
 00:06:44.639 --> 00:06:47.100
-the second quaternion.
+segundo quatérnio.
 
 00:06:47.100 --> 00:06:53.540
-I can ask now for a point that’s midway
-between 0.5 and this is the interpolated quaternion.
+Agora posso pedir por um ponto médio, 0.5.
+E este é o quatérnio interpolado.
 
 00:06:53.540 --> 00:06:59.419
-And of course, I can turn that back in to
-a rotation matrix using the R method.
+E é claro, posso transformar aquilo de volta 
+a uma matrix de rotação, usando o método R.
 
 00:06:59.419 --> 00:07:05.870
-Now, we might like to compare the effect of
-the different types of rotational interpolation
+Agora, poderíamos querer comparar o efeito dos 
+diferentes tipos de interpolações rotacionais
 
 00:07:05.870 --> 00:07:07.130
-and that’s a little bit difficult.
+e isto é um tanto complicado.
 
 00:07:07.130 --> 00:07:10.669
-It’s hard to visualize a particular rotation.
+É dificil visualizar uma rotação em particular.
 
 00:07:10.669 --> 00:07:16.270
-But, one way we can do it is to consider the
-effect of a rotation on a particular vector.
+Porém, uma forma que podemos fazer isto é considerar
+o efeito de uma rotação em um vetor em particular.
 
 00:07:16.270 --> 00:07:22.199
-So here, I have chosen the x-axis which I
-can represent by a vector 1, 0, 0.
+Aqui, escolhi o eixo x, o qual represento
+por um vetor 1, 0, 0.
 
 00:07:22.199 --> 00:07:28.100
-And I can apply these three different rotation
-sequences to that vector.
+E posso aplicar essas três diferentes sequências
+de rotação ao vetor.
 
 00:07:28.100 --> 00:07:34.240
-I can interpolate the initial and final Euler
-angles, the initial and final roll, pitch,
+Eu posso interpolar o ângulo de Euler inicial
+e o final, o ângulo roll, pitch, yaw inicial 
 
 00:07:34.240 --> 00:07:40.000
-yaw angles or the initial and final quaternions
-and they are shown by the different colored
+e o final ou o quatérnio inicial e o final, e eles
+são exibidos em segmentos de diferentes
 
 00:07:40.000 --> 00:07:42.490
-parts plotted here on the sphere.
+cores, plotados nesta esfera.
 
 00:07:42.490 --> 00:07:47.080
-The quaternion path shown in white is the
-shortest and most direct path.
+O caminho do quatérnio, exibido em branco,
+é o mais curto e mais direto.
 
 00:07:47.080 --> 00:07:51.780
-We can see that the roll, pitch, yaw interpolation
-path has deviated significantly from it.
+Podemos ver que o caminho da interpolação roll,
+pitch, yaw desviou significativamente deste.
 
 00:07:51.780 --> 00:07:57.199
-It has taken a more indirect and longer path
-to get from the initial orientation to the
+Ele tomou um caminho mais indireto e longo
+para ir da orientação inicial à
 
 00:07:57.199 --> 00:07:58.840
-final orientation.
+orientação final.
 
 00:07:58.840 --> 00:08:01.750
-Quaternion interpolation is the gold standard.
+Intepolação em quatérniso é o padrão-ouro.
 

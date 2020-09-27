@@ -1,111 +1,112 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-Br
 
 00:00:03.639 --> 00:00:06.980
-We all have a pretty intuitive idea of what
-a path is.
+Nós temos uma boa intuição sobre o que é 
+um caminho.
 
 00:00:06.980 --> 00:00:12.610
-We consider it as a way of getting from place
-A to place B.
+Consideramos que é uma forma de ir de um 
+local A para um outro local B
 
 00:00:12.610 --> 00:00:17.400
-We can consider it as a set of points that
-link A to B; a set of small steps that we
+Podemos considerar como um conjunto de pontos
+que conectam A até B; uma coleção de passos que nós
 
 00:00:17.400 --> 00:00:18.960
-take along the way.
+damos durante o caminho.
 
 00:00:18.960 --> 00:00:21.679
-A path is a spatial construct.
+Um caminho é uma construção espacial
 
 00:00:21.679 --> 00:00:25.829
-It says something about how we get from A
-to B through the world but it doesn't say
+Ele nos informa como caminharemos de um local A
+até um local B pelo mundo, mas ele não fala 
 
 00:00:25.829 --> 00:00:29.400
-anything about how quickly we should move
-along it.
+sobre quão rápido nós deveremos nos mover 
+durante o caminho.
 
 00:00:29.400 --> 00:00:31.230
-There's no notion of time.
+Não há noção de tempo.
 
 00:00:31.230 --> 00:00:36.590
-A trajectory on the other hand comprises a
-path and a schedule for getting from A to
+Uma trajetória, por outro lado, abrange um caminho
+e um cronograma de como ir de A até
 
 00:00:36.590 --> 00:00:40.520
-B. So there is a notion of time or speed along
-the path.
+B. Então há uma noção de tempo ou velocidade 
+durante o caminho.
 
 00:00:40.520 --> 00:00:45.750
-It's a set of points that I need to be at
-by a particular time.
+É uma coleção de pontos que I preciso estar num 
+determinado tempo
 
 00:00:45.750 --> 00:00:52.530
-In my MATLAB work space, I have got two poses
-represented as 4x4 homogeneous transformation
+No meu workspace do Matlab, Eu tenho duas poses
+representadas como uma matriz de transformação homogênea
 
 00:00:52.530 --> 00:00:53.809
-matrices.
+de tamanho 4x4
 
 00:00:53.809 --> 00:00:59.829
-The first pose represented by the workspace
-variable T0, has got no rotation and has its
+A primeira pose representada pelo workspace,
+a variável T0, não possui rotação e possui sua 
+
 
 00:00:59.829 --> 00:01:03.989
-origin at the origin of the world coordinate
-frame.
+origem na mesma do sistemas de coordenada global
 
 00:01:03.989 --> 00:01:09.520
-The second post represented by the work space
-variable T1, comprises set of 1 in the x direction
+No segundo posto representado pelo workspace pela 
+variável T1, engloba o conjunto 1 na direção x
 
 00:01:09.520 --> 00:01:15.250
-2 in the y direction and 3 in the z direction
-and an orientation described by roll pitch
+2 na direção y, no 3 a direação em z e uma orientação
+descrita pelos ângulos roll pitch
+
 
 00:01:15.250 --> 00:01:20.840
-yaw angles 0.6, 0.8 and 1.4 radians respectively.
+e yaw, 0.6, 0.8 e 1.4 radianos respectivamente.
 
 00:01:20.840 --> 00:01:24.210
-And we can visualize each of these poses.
+E podemos visualizar cada uma das poses.
 
 00:01:24.210 --> 00:01:30.880
-I can plot the pose T0 and we can see there
-its origin is at the origin of the world
+Posso plotar as poses T0 e poderemos ver 
+que sua origem é a  mesma do sistemas de coordenada
 
 00:01:30.880 --> 00:01:31.880
-frame.
+global.
 
 00:01:31.880 --> 00:01:36.000
-And its axes are aligned with the world frame.
+e que seus eixos são alinhados com esse sistema
 
 00:01:36.000 --> 00:01:43.690
-I can plot the other pose T1 and we can see
-that its origin is not at the origin of the
+Eu posso plotar as outra pose T1 e podemos ver 
+que sua origem não é alinhada
 
 00:01:43.690 --> 00:01:49.100
-world reference frame and its axes are not
-parallel to the reference axes.
+com o sistema de referência global e seus eixos 
+não são paralelos com esse sistema.
 
 00:01:49.100 --> 00:01:56.939
-Now I can animate the motion that goes from
-pose T0 to pose T1 and we can see our coordinate
+Agora posso animar o movimento que vai de uma pose T0
+até a pose T1 e conseguimos ver nosso sistemas de 
 
 00:01:56.939 --> 00:02:03.990
-frame is translating and rotating in order
-to move from pose T0 to pose T1. So this
+coordenada está transladando e rotacionando 
+para conseguir se mover da pose T0 até a T1. Então isso
+
 
 00:02:03.990 --> 00:02:10.259
-is what I mean when I talked about a trajectory
-which is smooth motion from one pose to the
+é o que quis dizer quando falei sobre trajetória 
+que é um movimento suave de uma pose até 
 
 00:02:10.259 --> 00:02:11.259
-next.
+outra
 
 00:02:11.259 --> 00:02:13.900
-Figuring out how to do this is the subject
-of this lecture.
+Entender como isso é feito é o assunto desta unidade
 

@@ -11,11 +11,11 @@ Euclides de Alexandria, ele era um Grego que
 viveu há muito tempo no Egito.
 
 00:00:13.920 --> 00:00:20.159
-Em torno de 300 a.C.,ele escreveu um livro muito, muito famoso
-Na verdade, um conjunto de 13 livros. Foi chamado de 
+Em torno de 300 a.C., ele escreveu um livro muito, muito famoso
+Na verdade, um conjunto de 13 livros. Foi chamado de "Os
 
 00:00:20.159 --> 00:00:25.400
-Elementos. E, este é o básico da geometria 
+Elementos". E, este é o básico da geometria 
 Que você aprendeu quando estava na escola.
 
 00:00:25.400 --> 00:00:31.009
@@ -24,10 +24,10 @@ de coisas em 3 dimensões no espaço. É
 
 00:00:31.009 --> 00:00:37.809
 A Geometria sobre linhas, triângulos e círculos.
-É baseado em alguns axiomas, se você gosta dos
+É baseado em alguns axiomas se você gosta dos
 
 00:00:37.809 --> 00:00:43.309
-princípios fundamentais subjacentes.E, a partir de
+princípios fundamentais subjacentes. E, a partir de
 poucos axiomas, todos os outros princípios
 
 00:00:43.309 --> 00:00:50.870
@@ -35,7 +35,7 @@ da geometria podem se derivar. Importante, são
 os números na Geometria Euclidiana. Temos 
 
 00:00:50.870 --> 00:00:55.749
-linhas. Temos cartas. Falamos sobre linhas paralelas 
+linhas. Temos letras. Falamos sobre linhas paralelas 
 e falamos sobre ângulos retos, mas
 
 00:00:55.749 --> 00:01:01.390
@@ -43,7 +43,7 @@ não há números na Geometria Euclidiana
 E não há quadros de coordenadas.
 
 00:01:01.390 --> 00:01:07.300
-Rene Descartes foi um pensador muito, muito famoso
+René Descartes foi um pensador muito, muito famoso
 No século XVII. Ele foi um filósofo.
 
 00:01:07.300 --> 00:01:12.800
@@ -55,16 +55,16 @@ Ele é muitas vezes referido como o Pai do Modernismo
 Filosófico e ele foi particularmente famoso 
 
 00:01:17.050 --> 00:01:23.500
-pela tradução do latin original  
+pela tradução do latim original  
 desta citação, “Penso , logo existo ”.
 
 00:01:23.500 --> 00:01:28.450
-Há muitas histórias sobre a vida Descartes.
-Uma que particularmente eu gosto é o 
+Há muitas histórias sobre a vida de Descartes.
+Uma que particularmente eu gosto é aquela
 
 00:01:28.450 --> 00:01:33.190
-fato que ele descobriu que era muito
-útil deitar na cama durante toda a manhã e pensar
+que ele descobriu que era muito útil 
+deitar na cama durante toda a manhã e pensar.
 
 00:01:33.190 --> 00:01:37.730
 Era seu tempo de raciocínio. E
@@ -72,7 +72,7 @@ Era seu tempo de raciocínio. E
 
 00:01:37.730 --> 00:01:42.070
 Uma manhã, ele estava deitado na cama, olhando 
-na parede, e uma mosca entrou, e ela pousou
+na parede, uma mosca entrou e ela pousou
 
 00:01:42.070 --> 00:01:46.300
 na parede. E, ele percebeu que seria capaz
@@ -92,7 +92,7 @@ no plano usando suas coordenadas, dois números.
 
 00:02:02.310 --> 00:02:07.780
 Então, o que Descartes fez de importante 
-foi adicionar Álgebra á Geometria Euclidiana.
+foi adicionar Álgebra à Geometria Euclidiana.
 
 00:02:07.780 --> 00:02:13.450
 E, assim nos permite expressar
@@ -103,7 +103,7 @@ em termos de equação. Temos as equações
 para duas linhas. Podemos descobrir como elas se cruzam
 
 00:02:18.060 --> 00:02:23.270
-e que ângulo elas se cruzam. É a 
+e em que ângulo elas se cruzam. É a 
 Fusão da Álgebra com a Geometria Antiga.
 
 00:02:23.270 --> 00:02:28.840
@@ -111,7 +111,7 @@ Nos referimos a isso como Geometria Cartesiana ou
 Geometria Analítica. Chamada de cartesiana.
 
 00:02:28.840 --> 00:02:34.720
-Isso é derivado de seu nome em Latin que
+Isso é derivado de seu nome em Latim que
 foi Cartesius. Então, foi ele quem desenvolveu
 
 00:02:34.720 --> 00:02:39.970
@@ -119,8 +119,8 @@ o sistemas de coordenadas, Muito familiar
 nos conceitos atuais, mas remonta  
 
 00:02:39.970 --> 00:02:48.420
-apenas no século XVII.Então, vamos olhar para
-O quadro de duas coordenadas. Temos uma parte de eixos
+apenas no século XVII. Então, vamos olhar para
+O quadro de duas coordenadas. Temos uma parte de eixos.
 
 00:02:48.420 --> 00:02:53.870
 Cada um deles é uma linha de números reais e ele 
@@ -136,14 +136,14 @@ bidimensionais. Para fazer isso, nós
 
 00:03:05.300 --> 00:03:10.660
 saltamos uma linha até o eixo x e sua distância
-para a origem nos refere pela letra a.
+em relação à origem nos refere pela letra a.
 
 00:03:10.660 --> 00:03:15.620
 E, saltamos outra linha através do 
-do eixo y e a distância ao longo do eixo de 
+do eixo y e a distância ao longo do eixo
 
 00:03:15.620 --> 00:03:20.390
-a origem nos refere pela distancia b.
+em relação à origem nos refere pela distancia b.
 Então, o ponto P pode ser descrito de forma muito sucinta
 
 00:03:20.390 --> 00:03:24.550
@@ -195,18 +195,18 @@ isto como uma vetor. Que é um grupo de números
 empilhados um acima do outro. Neste caso,
 
 00:04:24.490 --> 00:04:29.770
-a acima de b. Logo, é um vetor de dois elementos.
+acima de b. Logo, é um vetor de dois elementos.
 Também é o mesmo que uma matriz 2 por 1.
 
 00:04:29.770 --> 00:04:33.010
 Que é uma matriz com duas linhas e uma coluna.
 
 00:04:33.010 --> 00:04:36.330
-Um matemático diria que um vetor é um elemtno de
+Um matemático diria que um vetor é um elemento de
 
 00:04:36.330 --> 00:04:41.830
-um espaço vetorial de dimensão n e que nós escrevemos
-isto como um p minúsculo é um elemento ou pertence ao
+um espaço vetorial de dimensão n e que o escreveríamos
+com um p minúsculo é um elemento ou pertence ao
 
 00:04:41.830 --> 00:04:47.749
 conjunto dos números reais elevados à potência n.
@@ -215,8 +215,6 @@ Novamente, neste caso mais simples, n é igual
 00:04:47.749 --> 00:04:52.620
 a 2 porque é um sistema de coordenadas bidimensional.
 Nós podemos representar nosso vetor, nossa seta
-to 2 because it’s a two-dimensional coordinate
-frame. We can represent our vector, our arrow
 
 00:04:52.620 --> 00:04:57.659
 no eixo de coordenadas, como um vetor n 
@@ -248,15 +246,15 @@ Como nós chegamos lá? Bem, nós seguimos o caminho
 
 00:05:30.729 --> 00:05:35.080
 que é este vetor, esta seta. 
-Outra consideração impotante é que este vetor 
+Outra consideração importante é que este vetor 
 
 00:05:35.080 --> 00:05:40.339
 possui um local de partida particular. E assim,
-nos referimos a ele como um vetor definido.
+nós referimos a ele como um vetor definido.
 
 00:05:40.339 --> 00:05:45.370
 Assim, este vetor mostrado aqui em vermelho é diferente
-deste vetor aqui. Apesar de possuirem
+deste vetor aqui. Apesar de possuírem
 
 00:05:45.370 --> 00:05:49.849
 o mesmo comprimento e o mesmo ângulo, eles são 
@@ -300,7 +298,7 @@ posteriormente neste curso.
 
 00:06:42.270 --> 00:06:48.129
 Atente-se que pontos e vetores são coisas distintas.
-Um ponto determina um local. Nós não 
+Um ponto determina um local. Nós não podemos
 
 00:06:48.129 --> 00:06:53.759
 adicionar dois pontos juntos. Não faz sentido.
@@ -348,14 +346,14 @@ Precisamos ser cuidadosos quando criamos um sistema
 
 00:07:47.539 --> 00:07:52.300
 de coordenadas. Essa é a forma padrão. É
-referido como sistema de coordenadas destro.
+referido como sistema de coordenadas positivo.
 
 00:07:52.300 --> 00:07:58.449
-nós giramos do eixo x em 90° até o eixo y.
+E nós giramos do eixo x em 90° até o eixo y.
 E, aqui está um outro exemplo
 
 00:07:58.449 --> 00:08:03.960
-de um sistema de coordenadas destro. Se nós
+de um sistema de coordenadas deste tipo. Se nós
 virássemos o quadro de cabeça para baixo
 
 00:08:03.960 --> 00:08:09.249
@@ -368,7 +366,7 @@ Agora, nós precisamos ser bem consistentes na
 
 00:08:16.169 --> 00:08:20.830
 forma de definir o sistema de coordenadas e nós
-sempre usaremos o sistema destro.
+sempre usaremos o sistema positivo.
 
 00:08:20.830 --> 00:08:25.599
 Nós nunca usaremos um sistema de coordenadas 
@@ -383,12 +381,12 @@ formas diferentes de construirmos esse
 sistema de coordenadas. Um sistema 
 
 00:08:34.979 --> 00:08:40.050
-canhoto e um destro. 
+negativo e um positivo. 
 Agora, nesse curso, nós vamos apenas
 
 00:08:40.050 --> 00:08:45.240
-lidar com o sistema de coordenadas destro.
-Então, como construímos um sistema destro?
+lidar com o sistema de coordenadas positivo.
+Então, como construímos um sistema positivo?
 
 00:08:45.240 --> 00:08:51.529
 Bem, nós começamos desenhando o eixo x
@@ -399,7 +397,7 @@ o eixo x em 90° no sentido anti-horário.
 Isso nos dá um sistema de coordenadas
 
 00:08:58.339 --> 00:09:02.949
-destro. Então, não importa a orientação do 
+positivo. Então, não importa a orientação do 
 do sistema, a orientação relativa dos eixos
 
 00:09:02.949 --> 00:09:08.829
@@ -415,7 +413,7 @@ postulados e axiomas é muito claro sobre
 isso, diz que linhas paralelas nunca
 
 00:09:19.949 --> 00:09:23.180
-se cruzam e esse é, é claro, o caso
+se cruzam e esse é, claro, o caso
 em um plano.
 
 00:09:23.180 --> 00:09:28.910

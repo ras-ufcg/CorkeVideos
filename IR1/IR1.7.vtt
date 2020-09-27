@@ -4,11 +4,11 @@ Language: pt-BR
 
 00:00:04.710 --> 00:00:09.660
 Nesta seção, Eu gostaria de falar sobre o porquê
-robôs são úteis. Porque nós precisamos de robôs?
+dos robôs serem úteis. Porque nós precisamos de robôs?
 
 00:00:09.660 --> 00:00:14.519
 O primeiro exemplo que eu vou dar é o que 
-chamo de cirurgia robótica mas isso é um pouco
+chamo de cirurgia robótica, mas isso é um pouco
 
 00:00:14.519 --> 00:00:19.640
 impróprio. Na verdade cirurgia habilitada por robô.
@@ -16,14 +16,14 @@ E cirurgiões humanos altamente treinados são a
 
 00:00:19.640 --> 00:00:24.669
 parte chave do sistema. A parte robô do
-sistema é apresentado aqui e existe um
+sistema é apresentada aqui e existe um
 
 00:00:24.669 --> 00:00:29.730
 número de ferramentas que estão dentro do corpo
 do paciente. Existem ferramentas que carregam
 
 00:00:29.730 --> 00:00:34.420
-câmeras muito pequenas e a informação destas
+câmeras muito pequenas e as informações destas
 câmeras são mostradas ao cirurgião 
 
 00:00:34.420 --> 00:00:40.579
@@ -35,7 +35,8 @@ nós poderíamos considerar alguns pequenos joysticks.
 Esses pequenos joysticks controlam o movimento de
 
 00:00:45.839 --> 00:00:49.249
-ferramentas que estão também dentro do corpo do paciente.
+ferramentas que também estão dentro do corpo do 
+paciente.
 
 00:00:49.249 --> 00:00:55.649
 Então o cirurgião está fazendo todo o trabalho qualificado.
@@ -66,14 +67,14 @@ habilitados para fazer diversas incisões muito muito pequenas
 
 00:01:22.200 --> 00:01:28.030
 no corpo do paciente no qual inserimos
-essas pequenas ferramentas e câmeras então os
+essas pequenas ferramentas e câmeras, então os
 
 00:01:28.030 --> 00:01:34.399
 resultados para o paciente são muito melhores.
 Então cirurgia robótica é realmente um nome impróprio. É
 
 00:01:34.399 --> 00:01:40.649
-como a sistema de teleoperação que nós vimos
+como o sistema de teleoperação que nós vimos
 no início em que foi usado para realizar manipulação
 
 00:01:40.649 --> 00:01:45.960
@@ -85,7 +86,7 @@ um cirurgião dentro do corpo do paciente.
 
 00:01:50.469 --> 00:01:56.270
 Nós também podemos usar tecnologia robótica para nos fazer
-mais forte. Existe uma tecnologia chamada exoesqueleto.
+mais fortes. Existe uma tecnologia chamada exoesqueleto.
 
 00:01:56.270 --> 00:02:02.079
 É um robô vestível. Nós nos amarramos
@@ -104,7 +105,7 @@ a força dele aumenta nossa própria força.
 
 00:02:15.160 --> 00:02:20.610
 Aqui está um video de um sistema exoesquelético em
-trabalho. Esse é um dos videos que Eu recebi em uma
+trabalho. Esse é um dos videos que eu recebi em uma
 
 00:02:20.610 --> 00:02:26.010
 exibição robótica recentemente. Nós podemos ver que o
@@ -117,8 +118,8 @@ de lidar com esse grande peso sem esforço.
 Aqui vamos nós. Então essa é uma maneira que as limitações
 
 00:02:41.320 --> 00:02:47.110
-de força humana pode ser aumentada por tecnologia robótica.
-A inteligência na execução
+de força humana pode ser aumentada por tecnologia 
+robótica. A inteligência na execução
 
 00:02:47.110 --> 00:02:51.310
 de movimento ou a execução de ação vem
@@ -130,31 +131,34 @@ ele está vestindo.
 
 00:02:54.890 --> 00:03:00.770
 Outro papel realmente importante para os robôs hoje
-é o gerenciamento de ativos, como uma sociedade nós temos maçicos
+é o gerenciamento de ativos. Como uma sociedade, nós temos maciços
 
 00:03:00.770 --> 00:03:06.630
 investimentos em ativos em termos de linhas de energia,
 tubulações de água, tubulações de gás e sistemas de esgotos.
 
 00:03:06.630 --> 00:03:11.080
-E afim de manter a saúde
+E, a fim de manter a saúde
 destes ativos, eles precisam ser periodicamente
 
 00:03:11.120 --> 00:03:17.100
 inspecionados e isso exige muito trabalho. E alguns destes trabalhos de inspeção são bastante desagradáveis.
 
 00:03:17.110 --> 00:03:22.380
-Imagine se seja seu trabalho inspecionar sistemas de esgoto.
+Imagine que seja seu trabalho inspecionar sistemas de esgoto.
 É escuro, é desagradável, e geralmente
 
 00:03:22.380 --> 00:03:26.970
-um pouco perigoso. Então, as pessoas estão construindo robôs que podem ser colocados nas tubulações
+um pouco perigoso. Então, as pessoas estão construindo robôs que
+podem ser colocados nas tubulações
 
 00:03:26.970 --> 00:03:31.970
-para realizar a inspeção sem o auxílio de seres humanos. Então, os pesquisadores de robótica
+para realizar a inspeção sem o auxílio de seres humanos.
+Então, os pesquisadores de robótica
 
 00:03:31.970 --> 00:03:37.070
-têm desenvolvido sistemas robóticos para realizar esse tipo de trabalho de inspeção. E aqui
+têm desenvolvido sistemas robóticos para realizar esse
+tipo de trabalho de inspeção. E aqui
 
 00:03:37.070 --> 00:03:42.440
 vemos um exemplo de robô de inspeção de tubos.
@@ -164,100 +168,132 @@ Tem rodas para impulsioná-lo através do tubo,
 tem luzes e câmeras.
 
 00:03:44.000 --> 00:03:48.580
-Uma quantia enorme de dinheiro é gasta todos os anos na inspeção de linhas de energia e existem algumas
+Uma quantia enorme de dinheiro é gasta todos os anos na inspeção
+de linhas de energia e existem algumas
 
 00:03:48.580 --> 00:03:53.870
-formas de fazer isso. Uma delas é pilotar um robô ao longo da linha de energia ou então construir
+formas de fazer isso. Uma delas é pilotar um robô
+ao longo dalinha de energia ou então construir
 
 00:03:53.870 --> 00:03:59.720
-um robô que possa rastejar ao longo das linhas de energia. Helicópteros voando perto de linhas de energia é um negócio
+um robô que possa rastejar ao longo das linhas de energia.
+Helicópteros voando perto de linhas de energia são um negócio
 
 00:03:59.720 --> 00:04:04.880
-perigoso. E a cada ano várias colisões de helicópteros são causadas
+perigoso. E a cada ano várias colisões de helicópteros
+são causadas pela proximidade desses helicópteros 
 
 00:04:04.880 --> 00:04:10.140
-pela proximidade com os fios que estão sendo inspecionados. Portanto, esse é exatamente o tipo
+com os fios que estão sendo inspecionados.
+Portanto, esse é exatamente o tipo
 
 00:04:10.140 --> 00:04:13.930
-de trabalho, um trabalho perigoso que um robô deve fazer.
+de trabalho, um trabalho perigoso que um robô deveria
+fazer.
 
 00:04:13.930 --> 00:04:19.160
-Talvez nosso ativo mais importante seja o planeta em que vivemos e os pesquisadores estão desenvolvendo
+Talvez nosso ativo mais importante seja o planeta em
+que vivemos e os pesquisadores estão desenvolvendo
 
 00:04:19.160 --> 00:04:24.930
-todos os tipos de robôs para inspecionar e monitorar a saúde de nosso planeta. Alguns deles serão
+todos os tipos de robôs para inspecionar e monitorar
+a saúde de nosso planeta. Alguns deles serão
 
 00:04:24.930 --> 00:04:30.090
-vistos aqui. Eles são robôs voadores que podem ser transportados para sistemas climáticos perigosos, como
+vistos aqui. Eles são robôs voadores que podem ser
+transportados para sistemas climáticos perigosos, como
 
 00:04:30.090 --> 00:04:36.250
-como furacões ou ciclones, robôs que podem explore o interior de crateras vulcânicas, baseadas em dirigíveis
+como furacões ou ciclones, robôs que podem explorar
+o interior de crateras vulcânicas, robôs 
 
 00:04:36.250 --> 00:04:41.840
-robôs para monitorar a saúde da floresta amazônica, robôs de exploração subaquática,
+dirigíveis para monitorar a saúde da floresta amazônica,
+robôs de exploração subaquática,
 
 00:04:41.840 --> 00:04:47.620
-robôs de exploração para Antártica, e até barcos robôs para monitorar a qualidade da água
+robôs de exploração para Antártica, e até barcos 
+robôs para monitorar a qualidade da água
 
 00:04:47.620 --> 00:04:51.280
-nos armazéns que fornecem água potável para as cidades.
+nos armazéns que fornecem água potável para as
+cidades.
 
 00:04:51.280 --> 00:04:56.729
-É um negócio perigoso enviar humanos para as profundezas dos nossos oceanos. Os mergulhadores humanos
+É um negócio perigoso enviar humanos para as profundezas
+dos nossos oceanos. Os mergulhadores humanos
 
 00:04:56.729 --> 00:05:01.360
-são limitados nas profundezas em que podem mergulhar. Eles também exigem uma embarcação de apoio na
+são limitados nas profundezas em que podem mergulhar.
+Eles também exigem uma embarcação de apoio na
 
 00:05:01.360 --> 00:05:06.240
-superfície da qual mergulham e para a qual retornam. Por causa dessas limitações
+superfície da qual mergulham e para a qual
+retornam. Por causa dessas limitações
 
 00:05:06.240 --> 00:05:11.069
-humanas abaixo da água, houve uma enorme quantidade de pesquisas nas últimas décadas na
+humanas abaixo da água, houve uma enorme
+quantidade de pesquisas nas últimas décadas na
 
 00:05:11.069 --> 00:05:15.909
-construção de sistemas robóticos subaquáticos. Estes são completamente autônomos. Eles têm vários
+construção de sistemas robóticos subaquáticos. Esses são
+completamente autônomos. Eles têm vários
 
 00:05:15.909 --> 00:05:20.659
-sensores a bordo e podemos enviá-los para fazer missões como levantamento fotográfico de
+sensores a bordo e podemos enviá-los para fazer
+missões como levantamento fotográfico de
 
 00:05:20.659 --> 00:05:27.689
-destroços, explorar minerais e examinar a saúde de ativos como os recifes de coral.
+destroços, explorar minerais e examinar 
+a saúde de ativos como os recifes de corais.
 
 00:05:27.689 --> 00:05:32.479
-Outro lugar que os humanos não podem ir é para outros planetas. And here is a collection of
+Outro lugar que os humanos não podem ir é para outros 
+planetas. E aqui está uma coleção de
 
 00:05:32.479 --> 00:05:37.659
-E aqui está uma coleção de robôs que foram enviados para Marte. Aqui na frente temos os pequenos robôs. Sojourner,
+robôs que foram enviados para Marte. Aqui na
+frente temos os pequenos robôs. Sojourner,
 
 00:05:37.659 --> 00:05:43.620
-que foi enviado em 1997. Por trás é um robô que é uma cópia do Spirit e Opportunity
+que foi enviado em 1997. Por trás é um robô
+que é uma cópia do Spirit e Opportunity
 
 00:05:43.620 --> 00:05:50.389
-que foram enviados para Marte em 2003. E aqui, temos esse robô gigante, Curiosity,
+que foram enviados para Marte em 2003. E aqui,
+temos esse robô gigante, Curiosity,
 
 00:05:50.389 --> 00:05:55.879
-que foi enviado para Marte em 2012. Aqui está um exemplo de algumas fotos de Marte tiradas pelo
+que foi enviado para Marte em 2012. Aqui está
+um exemplo de algumas fotos de Marte tiradas pelo
 
 00:05:55.879 --> 00:06:01.740
-Curiosity. E, novamente, aqui podemos ver o tamanho do Curiosity em relação
+Curiosity. E, novamente, aqui podemos ver
+o tamanho do Curiosity em relação
 
 00:06:01.740 --> 00:06:03.300
 a um engenheiro humano.
 
 00:06:03.300 --> 00:06:08.460
-A mensagem importante aqui é que existem ambientes que queremos ir para obter informações
+A mensagem importante aqui é que existem
+ambientes que queremos ir para obter informações
 
 00:06:08.460 --> 00:06:14.999
-sobre a saúde ou o estado do meio ambiente. As profundezas dos oceanos, floresta tropical, vulcões
+sobre a saúde ou o estado do meio ambiente. 
+As profundezas dos oceanos, floresta tropical, vulcões
 
 00:06:14.999 --> 00:06:20.340
-ou outros planetas. Mas atualmente é muito caro ou é muito perigoso enviar recursos humanos
+ou outros planetas. Mas atualmente é muito caro
+ou é muito perigoso enviar seres humanos
 
 00:06:20.340 --> 00:06:25.330
-para esses lugares. Em vez disso, enviamos robôs para lá e eles servem como nossos procuradores
+para esses lugares. Em vez disso, enviamos robôs
+para lá e eles servem como nossos procuradores
 
 00:06:25.330 --> 00:06:31.449
-ou nossos agentes e usamos informações sensoriais desses robôs para aprender sobre esse ambiente
+ou nossos agentes e usamos informações sensoriais
+desses robôs para aprender sobre esse ambiente
 
 00:06:31.449 --> 00:06:35.349
-em vez de ter que enviar seres humanos carregando instrumentos para esses lugares.
+em vez de ter que enviar seres humanos carregando
+instrumentos para esses lugares.

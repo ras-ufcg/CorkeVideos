@@ -1,100 +1,99 @@
 WEBVTT
 Kind: captions
-Language: en
+Linguagem: pt
 
 00:00:03.750 --> 00:00:09.740
-Finally, we come to the problem of interpolating
-between two poses. Poses have got a translational
+Finalmente,chegamos ao problema de interpolar
+entre duas poses. Poses têm uma componente translacional
 
 00:00:09.740 --> 00:00:16.059
-and a rotational component. We need to interpolate
-them separately. We refer to this as Cartesian
+e uma rotacional. Precisamos interpolar
+eles separadamente. Nos referimos a isso como Interpolação Cartesina.
 
 00:00:16.059 --> 00:00:22.770
-interpolation. Let’s consider two poses;
-pose 0 and pose 1, each can be represented
+Vamos considerar duas poses;
+pose 0 e pose 1, cada uma pode ser representado 
 
 00:00:22.770 --> 00:00:29.460
-by a rotation matrix and a vector. We can
-convert the rotation matrix of each pose into
+por uma matriz de rotação e um vetor. Podemos
+converter a matriz de rotação de cada pose em
 
 00:00:29.460 --> 00:00:34.500
-a unique quaternion and we can interpolate
-the translation using the linear interpolation
+um quatérnio único e podemos interpolar
+a translação usando a fórmula de interpolação linear 
 
 00:00:34.500 --> 00:00:39.870
-formula that we introduced earlier. S is a
-function of time, varies smoothly from 0 to
+que introduzimos anteriormente. S é uma
+função do tempo, varia suavemente de 0 a
 
 00:00:39.870 --> 00:00:46.510
-1 over the duration of the trajectory. And,
-we interpolate the rotation using the quaternion
+1 ao longo da duração da trajetória. E,
+interpolamos uma rotação usando a fórmula de interpolação
 
 00:00:46.510 --> 00:00:51.739
-interpolation formula that we introduced in
-the last section. If we want, we can convert
+do quatérnio que introduzimos na
+última seção. Se quisermos, podemos converter
 
 00:00:51.739 --> 00:00:57.570
-the interpolated quaternion back to a rotation
-matrix, combine it with the interpolated translation
+o quatérnio interpolado de volta em uma matriz de rotação,
+combine com a translação interpolada
 
 00:00:57.570 --> 00:01:04.890
-and rebuild a homogeneous transformation matrix.
-Let’s now interpolate between two poses
+e reconstrua uma matriz de transformação homogênea.
+Vamos agora interpolar entre duas poses
 
 00:01:04.890 --> 00:01:10.990
-described in terms of homogeneous transformation
-matrices. The first pose is a null pose. It
+descritas em termos de matrizes de transformação homogêneas. 
+A primeira pose é uma pose nula. Ele
 
 00:01:10.990 --> 00:01:18.920
-just got 0 orientation and a translational
-component of 0. The second pose has a finite
+tem apenas orientação 0 e uma componente translacional
+de 0. A segunda pose tem uma componente
 
 00:01:18.920 --> 00:01:25.110
-translational component and a finite rotational
-component and is defined by this homogeneous
+translacional finita e uma componente rotacional 
+finita e está definida por essa matriz de transformação 
 
 00:01:25.110 --> 00:01:32.790
-transformation matrix here. Now, I can create
-a smooth trajectory between these two poses
+homogênea aqui. Agora eu posso criar
+uma trajetória suave entre estas duas poses
 
 00:01:32.790 --> 00:01:38.780
-using the Toolbox function, ctraj which stands
-for Cartesian trajectory. And, the arguments
+usando a função Toolbox, ctraj que representa
+a trajetória Cartesiana. E, os argumentos
 
 00:01:38.780 --> 00:01:45.880
-are the initial pose, the final pose and the
-number of time steps. The result is a matrix
+são a pose inicial, a pose final e o
+número de etapas de tempo. O resultado é uma matriz
 
 00:01:45.880 --> 00:01:53.579
-that’s 4 x 4 x 50. Once again, this is
-a stack of homogeneous transformation matrices.
+que é 4 x 4 x 50. Mais uma vez, isso é
+uma pilha de matrizes de transformação homogênea.
 
 00:01:53.579 --> 00:01:58.740
-The first element in the stack, look at all
-the rows and all the columns and the first
+O primeiro elemento na pilha, observe que todas
+as linhas e todas as colunas e o primeiro
 
 00:01:58.740 --> 00:02:04.079
-in the stack looks like this. But, the 10th
-one in the stack, look at all the rows and
+na pilha é assim. Mas, o décimo
+na pilha, observe que todas as linhas e
 
 00:02:04.079 --> 00:02:08.369
-all the columns and the 10th in the stack
-looks like this.
+todas as colunas e o décimo na pilha parece com isso.
 
 00:02:08.369 --> 00:02:15.400
-Each homogeneous transformation in this stack
-represents a pose along a trajectory and pose
+Cada transformação homogênea nessa pilha
+representa uma pose ao longo de uma trajetória e a pose
 
 00:02:15.400 --> 00:02:20.790
-varies smoothly along this trajectory, smoothly
-in terms of translation and smoothly in terms
+varia suavemente ao longo dessa trajetória, suavemente
+em termos da translação e suavemente em termos
 
 00:02:20.790 --> 00:02:27.599
-of orientation. I can plot this using the
-tranimate function and we see here that the
+da orientação. Eu posso traçar isso usando a 
+função tranimate e observamos aqui que a
 
 00:02:27.599 --> 00:02:34.199
-pose is changing from the initial pose to
-the final pose smoothly in position and in orientation.
+pose está mudando da pose inicial para
+a pose final suavemente em posição e em orientação.
 

@@ -341,171 +341,171 @@ because the joint coordinates directly map
 on to the end effector pose.
 
 00:06:44.680 --> 00:06:48.890
-The joint coordinates are in fact the lengths
-X, Y and Z.
+As coordenadas da junta são de fato os
+comprimentos X, Y e Z.
 
 00:06:48.890 --> 00:06:55.630
-A 4-degree of freedom SCARA robot arm has
-an end effector pose described by a position
+Um braço do robô SCARA de 4 graus de liberdade
+possui uma pose de efetuador descrita por uma posição
 
 00:06:55.630 --> 00:06:58.340
-X, Y and Z and a yaw angle.
+X, Y e Z e um ângulo de guinada.
 
 00:06:58.340 --> 00:07:04.160
-So, we would say that its task space is a
-subset of r cubed, the set of all possible
+Portanto, diríamos que seu espaço de tarefa é um
+subconjunto de r ao cubo, o conjunto de todas as
 
 00:07:04.160 --> 00:07:08.290
-positions, and the set of all possible orientations.
+possíveis posições, e o conjunto de todas
+as possíveis orientações.
 
 00:07:08.290 --> 00:07:15.130
-Its configuration space is a four-dimensional
-quantity and it comprises the three rotational
+Sua configuração de espaço é uma grandeza
+quadridimensional e compreende os três ângulos
 
 00:07:15.130 --> 00:07:19.060
-joint angles and a vertical displacement of
-the tool.
+da junta de rotação e um deslocamento vertical da
+ferramenta.
 
 00:07:19.060 --> 00:07:24.700
-A 4-degree of freedom parallel link robot,
-again, has a four-dimensional task space.
+Um manipulador paralelo de 4 graus de liberdade,
+novamente, tem um espaço de tarefa quadridimensional.
 
 00:07:24.700 --> 00:07:31.110
-It’s able to control the position and orientation
-of the end effector and it has a four-dimensional
+É capaz de controlar a posição e orientação
+do efetuador e tem um espaço de configuração
 
 00:07:31.110 --> 00:07:32.600
-configuration space.
+quadridimensional.
 
 00:07:32.600 --> 00:07:38.540
-There are four motors located at the base
-connected by links to the end effector.
+Existem quatro motores localizados na base
+conectados por ligações ao efetuador.
 
 00:07:38.540 --> 00:07:44.620
-The four joint educational robot that we looked
-at before has a four-dimensional task space
+O robô educacional de quatro juntas que vimos
+antes tem um espaço de tarefa quadridimensional
 
 00:07:44.620 --> 00:07:49.920
-which can be described by a position X, Y,
-Z and a pitch angle, and its configuration
+que pode ser descrito pela posição X, Y,
+Z e um ângulo de inclinação, e sua configuração
 
 00:07:49.920 --> 00:07:55.340
-is also four-dimensional because there are
-four rotational joints in this robot.
+também é quadridimensional pois existem
+quatro juntas rotacionais no mesmo.
 
 00:07:55.340 --> 00:07:59.560
-The same thing applies for an arm of the NAO
-robot.
+O mesmo se aplica a um braço do robô NAO.
 
 00:07:59.560 --> 00:08:06.260
-For a 6-degree of freedom arm such as shown
-here, the task space is a subset of SE3, the
+Para um braço de 6 graus de liberdade como mostrado aqui,
+o espaço de tareda é um subconjunto de SE3, o conjunto
 
 00:08:06.260 --> 00:08:12.190
-set of all possible positions in three-dimensional
-space and the set of all possible orientations
+de todas as posições possíveis em espaço tridimensional
+e o conjunto de todas as possíveis orientações
 
 00:08:12.190 --> 00:08:14.170
-in three-dimensional space.
+em espaço tridimensional.
 
 00:08:14.170 --> 00:08:18.260
-The configuration space of all these robots
-is also six-dimensional.
+A configuração de espaço de todos esses robôs
+é também hexadimensional.
 
 00:08:18.260 --> 00:08:21.470
-They all have six joints or 6 degrees of freedom.
+Todos eles possuem seis juntas ou 6 graus de liberdade.
 
 00:08:21.470 --> 00:08:26.650
-The industrial robot and the space shuttle
-arm have got six rotational joints.
+O braço do robô industrial e do ônibus
+espacial possui seis juntas rotationais.
 
 00:08:26.650 --> 00:08:32.330
-Whereas, the Stanford arm has got five rotational
-joints and one sliding joint.
+Considerando que, o braço do Stanford possui cinco
+juntas rotacionais e uma junta deslizante.
 
 00:08:32.330 --> 00:08:33.390
-This is a very special case.
+Esse é um caso muito especial.
 
 00:08:33.390 --> 00:08:37.830
-This is a robot with a very large number of
-rotational joints.
+Esse é um robô com um grande número de
+articulações rotacionais.
 
 00:08:37.830 --> 00:08:43.240
-The task space of this robot is exactly the
-same as the robots on the previous slide.
+O espaço de tarefa desse robô é exatamente o
+mesmo dos robôs no slide anterior.
 
 00:08:43.240 --> 00:08:47.279
-The end effector pose is described by its
-position and by its orientation.
+A pose do efetuador é descrita pela sua
+posição e sua orientação.
 
 00:08:47.279 --> 00:08:49.199
-It’s got six dimensions.
+Possui seis dimensões.
 
 00:08:49.199 --> 00:08:53.459
-But, the configuration space for a robot like
-this could be quite massive.
+Mas, a configuração de espaço para um robô como
+esse pode ser bastante massiva.
 
 00:08:53.459 --> 00:08:57.700
-I don’t actually know how many joints this
-robot’s got, but I’m guessing that it’s
+Eu realmente não sei quantas articulações
+esse robô tem, mas acho que tem umas
 
 00:08:57.700 --> 00:08:58.769
-got a hundred joints.
+100 articulações.
 
 00:08:58.769 --> 00:09:04.540
-So, I’m going to say that its configuration
-space is a subset of the 100-dimensional space
+Então, direi que sua configuração espacial
+é um conjunto de espaço 100 dimensional
 
 00:09:04.540 --> 00:09:05.839
-of real numbers.
+de números reais.
 
 00:09:05.839 --> 00:09:12.350
-So, in this case, the dimension of the configuration
-space is greater than the dimension of the
+Então, nesse caso, a dimensão do espaço de
+configuração é maior que a dimensão do
 
 00:09:12.350 --> 00:09:13.920
-task space.
+espaço de tarefa.
 
 00:09:13.920 --> 00:09:16.330
-We call this a redundant robot.
+Nós chamamos isso de robô redundante.
 
 00:09:16.330 --> 00:09:21.370
-An advantage of the redundant robot is that
-the tool-tip can achieve any position and
+Uma vantagem do robô redundante é que
+a ponta da ferramenta pode alcançar qualquer posição e
 
 00:09:21.370 --> 00:09:26.580
-orientation just like a 6-degree of freedom
-industrial robot does, but with its additional
+orientação, assim como o robô insutrial de 6 graus
+de liberdade faz, mas com esses graus de liberdade
 
 00:09:26.580 --> 00:09:30.800
-degrees of freedom, it can also control the
-shape of the arm.
+adicionais, também pode controlar
+o formato do braço.
 
 00:09:30.800 --> 00:09:35.709
-So, it can control the pose of the end effector
-and the shape of the arm.
+Então, ele pode controlar a pose do efetuador
+e o formato do braço.
 
 00:09:35.709 --> 00:09:41.740
-An industrial robot with only six joints can
-only control the pose of the end effector.
+Um robô industrial com apenas seis juntas pode
+apenas controlar a pose do efetuador.
 
 00:09:41.740 --> 00:09:46.579
-It can’t choose an arbitrary configurational
-shape of its arm.
+Ele não pode escolher uma forma configuracional
+arbitrária do seu braço.
 
 00:09:46.579 --> 00:09:52.279
-Another way that we describe robot arms is
-in terms of a configuration string and this
+Outra maneira que descrevemos braços de robôs é
+em termos de uma string de configuração e esta
 
 00:09:52.279 --> 00:09:58.040
-is a string of characters, one character per
-joint and the character is either an R for
+é uma sequência de caracteres, um caractere por
+junta e o caractere é um R para
 
 00:09:58.040 --> 00:10:02.259
-a rotational joint or P for a prismatic or
-sliding joint.
+uma junta rotacional ou P para uma junta prismática
+ou deslizante.
 
 00:10:02.259 --> 00:10:07.860
-So, here we can see the configuration strings
-for three quite different sorts of robot.
+Então, aqui podemos ver as strings de configuração
+para três tipos bem diferentes de robôs.
 

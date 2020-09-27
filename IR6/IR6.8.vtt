@@ -1,430 +1,437 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.600 --> 00:00:08.670
-If you pick up any of the standard textbooks
-about robotics, you will find reference to
+Se você pegar qualquer um dos livros-texto
+sobre robótica, encontrará referência à
 
 00:00:08.670 --> 00:00:14.760
-Denavit and Hartenberg notation. This is named
-after Jacques Denavit and Richard Hartenberg
+notação de Denavit e Hartengberg. Esse é o segundo
+nome de Jacques Denavit e Richard Hartenberg
 
 00:00:14.760 --> 00:00:21.850
-who in 1955 wrote an article and later, a
-book which proposed a very, very general way
+que em 1955 escreveram um artigo e depois, um
+livro que propunha uma forma muito geral
 
 00:00:21.850 --> 00:00:28.080
-of describing serial link mechanisms and most
-of the robots that we've looked at are serial
+de descrever os mecanismos de comunicação serial e
+a maioria dos robôs que vimos são manipulados
 
 00:00:28.080 --> 00:00:33.550
-link manipulators. So, the Denavit and Hartenberg
-notation is particularly applicable for this
+por ligação serial. Logo, a notação de Denavit and 
+Hartenberg é particularmente aplicável para esta
 
 00:00:33.550 --> 00:00:35.250
-class of mechanism.
+classe de mecanismo.
 
 00:00:35.250 --> 00:00:40.620
-Now in most of the standard textbooks. People
-start off with introducing this particular
+Agora na maioria dos livros-texto. As pessoas 
+começam apresentando esta particular
 
 00:00:40.620 --> 00:00:46.440
-notation. Personally, I find the notation
-somewhat complex and not particularly intuitive.
+notação. Pessoalmente, eu acho a notação um
+tanto complexa e particularmente nada intuitiva.
 
 00:00:46.440 --> 00:00:51.870
-So, what I've done in this particular lecture
-is left it until the end. A key aspect of
+Logo, o que eu fiz nessa aula em particular
+foi deixado para o final. Um aspecto fundamental da 
 
 00:00:51.870 --> 00:00:58.399
-Denavit-Hartenberg notation is that each joint
-in the robot is described simply by 4 parameters.
+notação de Denavit-Hartenberg é que cada junta
+do robô é descrita simplesmente por 4 parâmetros.
 
 00:00:58.399 --> 00:01:02.850
-So, let's start off with a very simple serial
-link manipulative that 2 joint robot that
+Portanto, vamos começar com uma ligação serial muito 
+simples para manipular aquele robô de duas juntas
 
 00:01:02.850 --> 00:01:08.189
-we've seen a number of times before. Each
-joint is attached via a link to the previous
+que vimos várias vezes antes. Cada junta é anexada 
+por meio de uma ligação com a junta anterior
 
 00:01:08.189 --> 00:01:12.299
-joint. So here, we can see joint 1 which is
-connected to link 1 which is connected to
+Aqui, podemos ver a junta 1 que está
+conectada a ligação 1 no qual é conectada a
 
 00:01:12.299 --> 00:01:18.049
-joint 2 which is connected to link 2. Their
-links are rigid but the joints can move. They
+junta 2 que está conectada a ligação 2. Suas
+ligação são rígidas, mas juntas podem mover. Elas
 
 00:01:18.049 --> 00:01:23.490
-can be either rotational as an example shown
-here or they can be prismatic or sliding joints
+podem ser rotacionada como um exemplo mostrado
+aqui ou podem ser juntas prismáticas ou deslizantes 
 
 00:01:23.490 --> 00:01:25.539
-that we've talked about before.
+que discutimos antes.
 
 00:01:25.539 --> 00:01:30.840
-Every joint connects to links and every link
-connects to joints except for the first and
+Todas juntas se conectam as ligações e todas
+ligações se conectam as juntas, exceto pela primeira 
 
 00:01:30.840 --> 00:01:35.890
-last link. The first link is the base of the
-robot which does not move refer to that as
+e última ligação. A primeira ligação é a base do
+robô que não se move e se refere como
 
 00:01:35.890 --> 00:01:42.109
-link 0 and the last link is the in-defector
-or is attached to the in-defector of the robot.
+ligação 0 e a última ligação é o efetuador
+ou está conectado ao efetuador do robô
 
 00:01:42.109 --> 00:01:47.530
-If a robot has got n-joints then, it must
-have n plus 1 links, that's including the
+Se um robô tem n-juntas, então, 
+precisa ter n + 1 ligações, incluindo a
 
 00:01:47.530 --> 00:01:54.759
-0th link or the base. Fundamental to the Denavit-Hartenberg
-notation is we attach a coordinate frame to
+ligação 0 ou a base. Fundamentalmente para a notação 
+Denavit-Hartenberg é anexar a um sistema de coordenadas
 
 00:01:54.759 --> 00:02:01.439
-the far end of every link of the robot. So
-here, we can see link J shown in blue and
+na extremidade de cada ligação do robô. Aqui,
+podemos vê a ligação J mostrada em azul e
 
 00:02:01.439 --> 00:02:07.149
-we attach the coordinate frame J to the far
-end of link J that is the end of the link
+e anexamos o sistema de coordenadas J à 
+extremidade da ligação J que é a extremidade da 
 
 00:02:07.149 --> 00:02:13.400
-that's closest to the robots tool. Then, we
-describe the pose of that link frame with
+ligação que está mais próxima da ferramenta de robôs. Então,
+descrevemos a posição desse sistema de ligação em 
 
 00:02:13.400 --> 00:02:19.170
-respect to the link frame of the previous
-joint. So, this is a relative pose and this
+relação ao sistema de ligação da junta anterior.
+Portanto, está é uma posição relativa e este
 
 00:02:19.170 --> 00:02:25.040
-is a concept we should be familiar with now.
-This is a relative pose from coordinate frame
+é um conceito que devemos estar familiarizados agora.
+Esta é uma posição relativa do sistema de coordenadas
 
 00:02:25.040 --> 00:02:28.140
-J-1 to coordinate frame J.
+J-1 ao sistema de coordenadas J.
 
 00:02:28.140 --> 00:02:34.090
-In the Denavit-Hartenberg notation, the link
-transform is represented by a homogeneous
+Na notação Denavit-Hartenberg, a ligação 
+transformada é representada por uma 
 
 00:02:34.090 --> 00:02:39.690
-transformation matrix which is typically denoted
-by the letter A and it comprises a number
+matriz de transformação homogênea que é tipicamente
+denotada pela letra A e compreende um número
 
 00:02:39.690 --> 00:02:45.140
-of elementary transformations. It comprises
-a rotation around the Z axis. A translation
+de transformações elementares. Compreende
+uma rotação em torno do eixo Z. Uma translação
 
 00:02:45.140 --> 00:02:52.850
-along the Z axis. A translation along the
-X axis and a rotation around the X axis. It's
+ao longo do eixo Z. Uma translação ao longo do eixo
+X e uma rotação em torno do eixo X.
 
 00:02:52.850 --> 00:02:57.540
-very concise. It allows us to describe the
-relationship between the 2 link coordinate
+É muito concisa. Ela nos permite descrever 
+a relação entre os 2 sistemas de coordenadas 
 
 00:02:57.540 --> 00:03:04.310
-frames by simply 4 parameters, theta, D, A
-and alpha. Let's see how that works in practice.
+das ligações simplesmente por 4 parâmetros, teta, D, A 
+e alfa. Vamos ver como isso funciona na prática.
 
 00:03:04.310 --> 00:03:12.990
-So here, we have in red link J-1 and the coordinate
-frame attached to link J-1. First thing that
+Aqui, nós temos uma ligação vermelha J-1 e o sistema 
+de coordenadas anexado a ligação J-1. A primeira coisa que
 
 00:03:12.990 --> 00:03:19.120
-we're going to do is to rotate that coordinate
-frame around its Z axis by an amount theta
+vamos fazer é girar o sistema de coordenadas 
+em torno do eixo Z por um valor teta
 
 00:03:19.120 --> 00:03:24.760
-J and we rotate the axis. The next thing we're
-going to do is to translate that coordinate
+J e girar o eixo. A próxima coisa que vamos
+fazer é transladar esse quadro do sistema de coordenadas
 
 00:03:24.760 --> 00:03:29.950
-frame along the Z axis by an amount D and
-then, we're going to translate it along the
+ao longo do eixo Z por um valor D e
+então, vamos traduzi-lo ao longo do eixo
 
 00:03:29.950 --> 00:03:38.060
-X axis by an amount J and finally, we're going
-to rotate it around the X axis by an angle
+X por um valor J e finalmente, vamos 
+rotaciona-lo em torno do eixo X por um angulo
 
 00:03:38.060 --> 00:03:40.170
-alpha and now, it looks like this.
+alfa e agora, ele se parece com isso.
 
 00:03:40.170 --> 00:03:48.260
-So, we have moved from the frame J-1 to the
-frame J by applying 4 elementary transformations,
+Então, mudamos do quadro J-1 para o 
+quadro J por aplicando 4 transformações elementares,
 
 00:03:48.260 --> 00:03:56.280
-2 translations and 2 rotations. You're probably
-asking is how can we do this using only 4
+2 translações e 2 rotações. Você provavelmente
+está se perguntando como podemos fazer isso usando apenas 4
 
 00:03:56.280 --> 00:04:02.160
-parameters because a pose has got 2 components.
-It's got a translational component which we
+parâmetros porque uma posição te 2 componentes.
+Tem uma componente translational a qual 
 
 00:04:02.160 --> 00:04:08.950
-described by 3 numbers and it has a rotation
-which we described by 3 numbers. For example,
+descrevemos por 3 números e tem uma rotação
+que descrevemos por 3 números. Por exemplo,
 
 00:04:08.950 --> 00:04:14.470
-roll, pitch, yaw angles or Euler angles. How
-do we do it with just 4 numbers? Well, the
+angulos de rotação, inclinação, guinada,  ou angulos de Euler. Como
+fazemos isso com apenas 4 números? Bem,
 
 00:04:14.470 --> 00:04:19.900
-reason this works is that the Denavit-Hartenberg
-notation requires some constraints on where
+isso funciona porque uma notação Denavit-Hartenberg
+requer algumas restrições onde
 
 00:04:19.900 --> 00:04:27.380
-we place the coordinate frames. The first
-constraint is that the X axis of frame J intersects
+colocamos os quadros de coordenadas. A primeira
+restrição é que o eixo X do quadro J intercepta
 
 00:04:27.380 --> 00:04:35.340
-the Z axis of frame J-1. The second constraint
-is that the X axis of frame J is perpendicular
+o eixo Z  do quadro J-1. A segunda restrição
+é que o eixo X do quadro J é perpendicular
 
 00:04:35.340 --> 00:04:40.940
-to the Z axis of frame J-1. Although, there
-are only 6 degrees of freedom in a relative
+ao eixo Z do quadro J-1. Embora, exista
+apenas 6 graus de liberdade em uma posição
 
 00:04:40.940 --> 00:04:46.550
-pose. The fact that we've introduced 2 constraints
-means that we can describe this using only
+relativa. O fato que temos introduzido 2 restrições
+significa que podemos descrever isso usando apenas
 
 00:04:46.550 --> 00:04:51.860
-4 parameters. There's an interesting and often
-confusing consequence of this and that means
+4 parâmetros. Há uma interessante e frequente
+consequência confusa disso e que significa
 
 00:04:51.860 --> 00:04:57.220
-that the link frames are not necessarily on
-the link itself and this is something that
+que o quadro de ligação não está necessariamente
+ligados em si mesmo e isso é algo que
 
 00:04:57.220 --> 00:05:02.320
-quite often confuses people when they're starting
-off and learning about Denavit-Hartenberg
+muitas vezes confundem as pessoas quando elas estão começando
+e aprendendo sobre notação
 
 00:05:02.320 --> 00:05:03.640
-notation.
+Denavit-Hartenberg
 
 00:05:03.640 --> 00:05:10.080
-The axis of a rotational joint has to be aligned
-with the Z axis of that joints coordinate
+O eixo de uma junta rotacional deve ser alinhado 
+com o eixo Z desse quadro de coordenadas
 
 00:05:10.080 --> 00:05:16.290
-frame. The Denavit-Hartenberg notation requires
-that the axis of joint J is parallel to the
+de junta. A notação Denavit-Hartenberg requer
+que o eixo de junta J seja paralelo ao
 
 00:05:16.290 --> 00:05:21.960
-Z axis of a coordinate frame but it's not
-the coordinate frame attached to link J. The
+eixo Z de um quadro de coordenada mas não é
+o quadro de coordenada anexado ao link J. O
 
 00:05:21.960 --> 00:05:28.590
-axis of joint J is aligned with the Z axis
-of the previous coordinate frame, that's coordinate
+eixo da junta J é alinhado com o eixo Z
+do quadro de coordenada anterior, que é o quadro de coordenada
 
 00:05:28.590 --> 00:05:35.000
-frame J-1 and again, this is a confusing aspect
-for people who is starting out learning about
+J-1 e novamente, isso é um aspecto confuso 
+para pessoas que estão começando a aprender sobre
 
 00:05:35.000 --> 00:05:41.300
-this notation. For the case of a prismatic
-or sliding joint, the motion must be along
+essa notação. Para o caso de um prismático
+ou junta deslizante, o movimento deve ser ao longo
 
 00:05:41.300 --> 00:05:47.389
-the Z axis. So, for rotational joint, rotate
-around the Z axis of the previous frame for
+do eixo Z. Enão, para junta rotacional, gire
+em torno do eixo Z do quadro anterior para
 
 00:05:47.389 --> 00:05:53.160
-a prismatic joint, we translate along the
-Z axis of the previous frame.
+uma junta prismática, nós transladamos em torno do
+eixo Z do quadro anterior.
 
 00:05:53.160 --> 00:06:00.030
-The relative pose from the frame of 1 link
-to the next is described by 4 elementary transformations.
+A posição relativa do quadro de ligação 1
+para o próximo é descrito por 4 transformações elementares.
 
 00:06:00.030 --> 00:06:05.490
-For an n-link robot, we can stack groups of
-these elementary transformations and each
+para o robô de enésima ligação, podemos empilhar grupos destas
+transformações elementares e cada
 
 00:06:05.490 --> 00:06:10.900
-group contains 4 parameters which described
-the relationship between 1 link frame and
+grupo contém 4 parâmetros o qual descreve
+a relação entre o quadro de ligação 1 e
 
 00:06:10.900 --> 00:06:16.850
-the next. If the robot has got all revolute
-joints then, the joint angles correspond to
+o próximo. Se o robô têm toda junta de rotação,
+o angulo de junta corresponde ao
 
 00:06:16.850 --> 00:06:22.550
-the theta values shown here. So, these are
-the joint variables. They change as the robot
+valo tetha apresentado aqui. Então, existe
+as variáveis conjuntas. Elas mudam de acordo com os
 
 00:06:22.550 --> 00:06:27.470
-moves. All the other parameters, the D's,
-the A's and the alpha's are all constant.
+movimentos do robô. Todos os outros parâmetros, os D's,
+os A's e os alpha's são todos constantes.
 
 00:06:27.470 --> 00:06:33.790
-They're a function of the mechanical design
-of the particular robot. Let's consider a
+Elas são funções do projeto mecânico do robô
+em particular. Vamos considerar um
 
 00:06:33.790 --> 00:06:38.830
-robot that has got a prismatic joint. Its
-second joint is prismatic. Since the first
+robô que tem uma articulação prismática. 
+Sua segunda junta é prismática. Como a 
 
 00:06:38.830 --> 00:06:45.520
-joint is revolute, we substitute Q1 in here.
-For the second joint which is prismatic, we
+a primeira junta é de revolução, substituimos
+Q1 aqui. Para a segunda junta, que é prismática,
 
 00:06:45.520 --> 00:06:52.240
-substitute Q2 in here. For a joint like this,
-theta 2 is a constant just like A2 and alpha
+substituimos Q2 aqui. Para uma articulação desse
+tipo, teta 2 é uma constante, assim como A2 e alfa
 
 00:06:52.240 --> 00:06:57.770
-2. They are the function of the mechanical
-design of this particular robot.
+2. Elas são funções do projeto mecânico desse
+robô em particular.
 
 00:06:57.770 --> 00:07:01.669
-The great advantage of the Denavit-Hartenberg
-notation is that it allows us to very concisely
+A maior vantagem da notação Denavit-Hartenberg
+é que ela nos permite descrever um robô de forma
 
 00:07:01.669 --> 00:07:07.530
-describe a robot. So, for the 2 link robot,
-it can be described simply by a table like this.
+muito concisa. Então, para um robô
+de 2 ligações, pode ser descrito simplismente 
+por uma tabela como esta.
 
 00:07:07.530 --> 00:07:13.669
-We have 1 column for each of the Denavit-Hartenberg
-parameters and we have one row for each joint
+Temos uma coluna para cada parâmetro de Denavit-Hartenberg, 
+e uma linha para cada articulação
 
 00:07:13.669 --> 00:07:19.860
-of the robot. The joint variables Q1 and Q2
-lie in the theta column because they are revolute
+do robô. As variavéis de articulação Q1 e Q2
+estão na coluna de teta porque elas são juntas
 
 00:07:19.860 --> 00:07:25.830
-joints. The D values are all 0. There are no translations along the Z axis because this robot exists
+de revolução. Os valores D são todos 0. Não existe 
+translações ao longo do eixo Z porque este robô 
 
 00:07:25.830 --> 00:07:31.840
-in a plane and the 2 link lengths appear in the A column and the alpha values are all equal to 0.
+existe em um plano e o comprimento da ligação 2 apareçe
+na coluna A e os valores de alfa são todos iguais a 0.
 
 00:07:31.840 --> 00:07:37.050
-So, this very compact table completely describes what we call the kinematics of the robot.
+Portanto, essa tabela muito compacta descreve 
+completamente o que chamamos de cinemáticas do robô.
 
 00:07:37.050 --> 00:07:43.690
-The robotics toolbox is very well set-up to deal with Denavit-Hartenberg notation.
+A toolbox robótica está muito bem configurada 
+para lidar com a notação Denavit-Hartenberg.
 
 00:07:43.750 --> 00:07:49.820
-I'm going to create a Denavit-Hartenberg matrix
-and each row in this matrix represents a single
+Irei criar uma matrix Denavit-Hartenberg, e cada
+linha nesta matrix representa uma única
 
 00:07:49.820 --> 00:07:53.520
-link. It's just like the table we looked at
-a moment ago. Now, I'm going to enter the
+ligação. É bem parecida com a tabela que olhamos
+um instante atrás. Agora, irei inserir
 
 00:07:53.520 --> 00:08:01.250
-numbers corresponding to the columns of that
-table; theta, D, A and alpha for the first
+números correspondentes às colunas dessa 
+tabela; teta, D, A e alfa para a primeira
 
 00:08:01.250 --> 00:08:10.300
-joint and theta, D, A and alpha for the second
-joint and finish that matrix offset, I have
+articulação e teta, D, A e alfa para a segunda
+articulação. E terminar o deslocamento de matriz, 
+eu tenho
 
 00:08:10.300 --> 00:08:17.110
-a simple 2 by 4 matrix which contains a Denavit-Hartenberg
-parameters for a 2 joint robot.
+uma matriz simples 2 por 4 que contém um parâmetro
+de Denavit-Hartenberg para um robô de duas articulações.
 
 00:08:17.110 --> 00:08:21.889
-While I can create a robot object, I'm going
-to put it into the workspace variable R and
+Ao passo que eu crio um objeto robô, irei colocá-lo 
+dentro da uma variável R na área de trabalho e 
 
 00:08:21.889 --> 00:08:27.199
-I use the toolbox function serial link and
-I pass in the Denavit-Hartenberg parameter
+posso usar a função serial link da caixa de
+ferramentas. E eu passo a matriz de parâmetros de 
 
 00:08:27.199 --> 00:08:33.709
-matrix and the result is a serial link object
-created in my workspace and the serial link
+Denavit-Hartenberg e o resultado é um objeto serial link
+criado na minha área de trabalho e o objeto serial link
 
 00:08:33.709 --> 00:08:41.110
-object represents a robot arm. We can see
-here that it's displayed the Denavit-Hartenberg
+representa o braço de um robô. Podemos ver aqui 
+que são exibidos os parâmetros de Denavit-Hartenberg
 
 00:08:41.110 --> 00:08:45.589
-parameters in table form. There are some additional
-parameters around the bottom which we will
+em forma de tabela. Existem alguns parâmetros
+adicionais ao redor da parte inferior que 
 
 00:08:45.589 --> 00:08:48.209
-introduce shortly.
+apresentaremos em breve.
 
 00:08:48.209 --> 00:08:52.869
-Once I have this object then, I can perform
-some simple functions on it I can plot the
+Assim que eu tiver esse objeto, posso
+executar algumas funções simples nele e posso
+plotar o
 
 00:08:52.869 --> 00:08:59.230
-robot with the configuration where the joint
-angles are perhaps 0.2 radiance and 0.3 radiance
+robô com a configuração onde os ângulos das
+articulações são, talvez, 0.2 radianos ou 0.3 radianos
 
 00:08:59.230 --> 00:09:04.860
-and this is what it looks like and I can also
-create a teach pendant.
+e é assim que se parece e também posso criar
+um painel de controle.
 
 00:09:04.860 --> 00:09:09.850
-So, here is the teach pendant, brings up the
-sliders that we've seen before allows me to
+Então, aqui temos um painel de controle, que traz
+o controles deslizantes que vimos antes, e nos permite 
 
 00:09:09.850 --> 00:09:12.970
-move the joints of this robot arm.
+mover as articulações do braço do robô.
 
 00:09:12.970 --> 00:09:20.660
-The robot object also has a forward kinematic
-method. So, I can apply that to the robot
+O objeto do robô também tem um método cinemático direto. 
+Então, eu posso aplicá-lo no objeto do
 
 00:09:20.660 --> 00:09:27.189
-object. It's the fkine method and if I pass
-in for instance, the joint angles 0.2 and
+robô. É o método fkine e se eu passar, por 
+exemplo, os angulos das articulações 0.2 e
 
 00:09:27.189 --> 00:09:36.199
-0.3, it will return for me a homogeneous transformation
-representing the pose of the in-defector of that robot.
+0.3, irá me retornar uma transformação homogênea que 
+representa a pose do efetuador desse robô.
 
 00:09:36.199 --> 00:09:41.819
-We can see here the X coordinate and the Y
-coordinate and this matrix over here represents
+Podemos ver aqui que a coordenada X e a 
+coordenada Y e esta matrix aqui representa 
 
 00:09:41.819 --> 00:09:48.999
-the orientation of the in-defector of this
-robot. For a more complex robot like the Puma
+a orientação do efetuador desse robô. 
+Para um robô mais complexo, como o Puma 
 
 00:09:48.999 --> 00:09:54.949
-560, it can be described by a table like this.
-Once again, the table has got 4 columns but
+560, ela pode ser descrita por uma tabela 
+como essa. Mais uma vez, a tabela tem 4 colunas
 
 00:09:54.949 --> 00:10:00.579
-in this case, it's got 6 rows because there
-are 6 joints, because this robot is all revolute,
+neste caso, ela tem 6 linhas porque tem
+6 juntas, porque esse robô é todo revoluto,
 
 00:10:00.579 --> 00:10:05.819
-we find all the joint verbals in the theta
-column. In the D column and the A column,
+encontramos todas as articulações verbais
+na coluna teta. Na coluna D e na coluna A, 
 
 00:10:05.819 --> 00:10:10.800
-we find a number of numbers which correspond
-to physical lengths on the Puma robot.
+encontramos uma série de números que
+correspondem os comprimentos físicos do robô Puma:
 
 00:10:10.800 --> 00:10:15.209
-The length of the upper arm, the length of
-the lower arm, some horizontal offsets and
+O comprimento do braço, o comprimento
+do antebraço, alguns deslocamentos horizontais e
 
 00:10:15.209 --> 00:10:21.819
-so on and the alpha column, we find a number
-of rotations which either pi on 2 or negative
+assim por diante, e a coluna alfa, encontramos
+uma série de rotações que é pi sobre 2 ou 
 
 00:10:21.819 --> 00:10:28.309
-pi on 2 and they say something about the orientation
-of 1 joints rotational axis and the next joints
+menos pi sobre 2 e dizem algo sobre orientação 
+do eixo de rotação da articulação 1 assim como das
 
 00:10:28.309 --> 00:10:31.369
-rotational axis.
+outras articulações.
 
 00:10:31.369 --> 00:10:35.660
 Where MATLAB and robotics toolbox really come

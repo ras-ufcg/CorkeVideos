@@ -1,220 +1,220 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt_br
 
 00:00:03.550 --> 00:00:06.840
-Magnetic field is measured using a sensor
-called a magnetometer.
+Campo magnético é medido usando um sensor
+chamado magnetômetro. 
 
 00:00:06.840 --> 00:00:12.630
-The most common type of solid state magnetometer
-is a Hall effect sensor and it measures the
+O tipo mais comum de magnetômetro em estado sólido
+é o sensor de efeito Hall e ele mede o
 
 00:00:12.630 --> 00:00:15.400
-magnetic field normal to the chip surface.
+campo magnético normal à superfície do chip.
 
 00:00:15.400 --> 00:00:20.409
-It’s very useful to be able to measure the
-three orthogonal components of magnetic field
+É bastante útil ser capaz de medir as
+três componentes ortogonais do vetor do
 
 00:00:20.409 --> 00:00:21.409
-vector.
+campo magnético.
 
 00:00:21.409 --> 00:00:25.970
-So typically, three orthogonal Hall effect
-sensors are packaged in to a single chip along
+Então, tipicamente, três sensores de efeito
+Hall ortogonais são empacotados em um único chip junto
 
 00:00:25.970 --> 00:00:30.970
-with all the associated electronics and typically
-these have a simple serial interface that
+com toda a eletrônica associada e geralmente eles
+têm uma interface serial simples que 
 
 00:00:30.970 --> 00:00:33.720
-allows them to be easily connected to a
-micro-controller.
+permite que eles sejam facilmente conectados
+a um micro controlador.
 
 00:00:33.720 --> 00:00:39.980
-So, in order to determine the orientation
-of a body in space, we use the accelerometers
+Logo, com o intuito de determinar a orientação
+de um corpo no espaço, nós usamos acelerômetros
 
 00:00:39.980 --> 00:00:44.440
-to determine the downward direction, the direction
-of the gravity vector.
+para determinar a direção para baixo, a direção
+do vetor da gravidade.
 
 00:00:44.440 --> 00:00:49.420
-And, we use that to determine the magnetic
-field component in the horizontal plane which
+Nós usamos isso para determinar a componente
+do campo magnético horizontal ao plano que
 
 00:00:49.420 --> 00:00:54.579
-we can think of as being the same as the direction
-of the needle points on a traditional mechanical
+nós podemos pensar como sendo o mesmo que a direção
+dos pontos da agulha em uma bússola mecânica
 
 00:00:54.579 --> 00:00:55.980
-compass.
+tradicional.
 
 00:00:55.980 --> 00:00:59.750
-To make this tangible, consider again the
-example of my phone and I have attached a
+Para tornar isso tangível, considere novamente o 
+exemplo do meu telefone e eu conectei um
 
 00:00:59.750 --> 00:01:01.429
-body frame to the phone.
+sistema de coordenadas ao telefone.
 
 00:01:01.429 --> 00:01:07.350
-The z-axis is out of the screen, y-axis is
-up the screen and the x-axis is across the
+O eixo z está saindo da tela, o eixo y é para
+cima da tela e o eixo x cruza a 
 
 00:01:07.350 --> 00:01:09.220
-screen from left to right.
+tela da esquerda para a direita.
 
 00:01:09.220 --> 00:01:15.070
-I’m going to align a magnetometer with each
-of these axes and the result is called a tri-axial
+Eu irei alinhar um magnetômetro com cada um
+desses eixos e o resultado é chamado um magnetômetro
 
 00:01:15.070 --> 00:01:18.250
-magnetometer because there are three magnetometers
-there.
+de três eixos porque há três
+magnetômetros lá.
 
 00:01:18.250 --> 00:01:22.720
-Let’s talk now about how we process the
-information from the magnetometer.
+Vamos falar agora sobre como nós processamos a
+informação do magnetômetro.
 
 00:01:22.720 --> 00:01:25.990
-Once again, I have a world coordinate frame
-denoted zero.
+Mais uma vez, nós temos um sistema de coordenadas
+universal chamado zero.
 
 00:01:25.990 --> 00:01:29.920
-Once again, the z-axis is parallel to the
-gravity vector.
+Novamente, o eixo z é paralelo ao
+eixo do vetor da gravidade.
 
 00:01:29.920 --> 00:01:31.340
-It’s pointing straight upwards.
+Ele está apontando diretamente para cima.
 
 00:01:31.340 --> 00:01:35.600
-And, the x-axis is aligned with the magnetic
-north.
+E o eixo x está alinhado com o 
+norte magnético.
 
 00:01:35.600 --> 00:01:39.860
-In this case, I can write the magnetic field
-vector with respect to the world reference
+Nesse caso, eu posso escrever o vetor do campo 
+magnético com relação ao sistema de coordenadas
 
 00:01:39.860 --> 00:01:44.670
-coordinate frame as B, the magnitude of the
-magnetic field vector which I can look up
+do mundo como B, a magnitude do vetor
+campo magnético que eu posso procurar
 
 00:01:44.670 --> 00:01:51.810
-in a table if I know my location on the planet,
-and the cosine and sine of the magnetic inclination
+em uma tabela se eu sei meu lugar no planeta e o
+cosseno e seno do ângulo de inclinação
 
 00:01:51.810 --> 00:01:52.810
-angle.
+magnética.
 
 00:01:52.810 --> 00:01:54.421
-This vector lies in the x-z plane.
+Esse vetor está no plano x-z.
 
 00:01:54.421 --> 00:01:58.530
-It has got no component in the y direction.
+Ele não possui componente na direção y.
 
 00:01:58.530 --> 00:02:03.860
-The rotational transform from the world frame
-to the body frame is given in terms of the
+A transformação rotacional do sistema de coordenadas universal 
+para o sistema de coordenadas do corpo é dado em termos dos
 
 00:02:03.860 --> 00:02:06.230
-roll, pitch and yaw angles.
+ângulos de roll, pitch e yaw.
 
 00:02:06.230 --> 00:02:11.730
-We have already talked about how to determine
-the roll and pitch angles from the accelerometer
+Nós já falamos sobre como determinar o ângulo
+de roll e pitch a partir das medidas do
 
 00:02:11.730 --> 00:02:12.730
-measurements.
+acelerômetro.
 
 00:02:12.730 --> 00:02:17.060
-The magnetometers in the phone measure the
-magnetic field in the coordinate frame B and
+Os magnetômetros no telefone medem o campo
+magnético no sistema de coordenadas B e
 
 00:02:17.060 --> 00:02:19.440
-that allows me to write this relationship.
+isso me permite escrever essa relação.
 
 00:02:19.440 --> 00:02:25.720
-And, now we can solve for the yaw angle psi
-and it is in terms of the roll and pitch angles
+E agora nós podemos solucionar para o ângulo de yaw psi
+em termos do ângulo de roll e pitch
 
 00:02:25.720 --> 00:02:28.540
-that we determined from the accelerometer
-measurements.
+que nos determinamos das medidas do
+acelerômetro.
 
 00:02:28.540 --> 00:02:34.569
-The measured magnetic field strength, BX,
-BY and BZ, the known length of the magnetic
+A medida da força do campo magnético, BX,
+BY e BZ, o módulo conhecido do vetor campo
 
 00:02:34.569 --> 00:02:39.420
-field vector, capital B, and the known inclination
-angle, capital I.
+magnético B, e o ângulo de inclinação
+conhecido, I maiúsculo.
 
 00:02:39.420 --> 00:02:45.140
-And both B and I, we can look up if we know
-our location on the surface of the planet.
+E ambos B e I, nós podemos procurar se nós
+sabemos nossa localização na superfície do planeta.
 
 00:02:45.140 --> 00:02:47.510
-The magnetic field of the earth is quite weak.
+O campo magnético da Terra é bem fraco.
 
 00:02:47.510 --> 00:02:52.140
-Therefore, magnetometers need to be very sensitive
-to magnetic field and this makes magnetometers
+Logo, magnetômetros precisam ser bastante sensíveis a
+campos magnéticos e isso faz que magnetômetros sejam
 
 00:02:52.140 --> 00:02:57.230
-very susceptible to stray magnetic fields
-that are created by electric currents flowing
+muito susceptíveis  a capturar campos magnéticos
+que são criados por correntes elétricas percorrendo
 
 00:02:57.230 --> 00:03:01.370
-inside electronic devices and also from electric
-motors.
+dentro de dispositivos eletrônicos e também
+de motores elétricos.
 
 00:03:01.370 --> 00:03:05.740
-Roboticists building robots that operate
-indoors are often frustrated by the structural
+Roboticistas construindo robôs que operam em ambientes
+internos são geralmente frustrados com as estruturas
 
 00:03:05.740 --> 00:03:09.220
-steel elements of the building which distort
-the earth’s magnetic field.
+de metal da construção que distorcem o
+campo magnético da Terra.
 
 00:03:09.220 --> 00:03:14.430
-There are also power cables in the walls and
-there are Wi-Fi access points and equipment
+Há também cabos de força nas paredes e
+pontos de acesso Wi-Fi e armários de 
 
 00:03:14.430 --> 00:03:19.459
-closets which also create magnetic field which
-can confuse robots that rely predominantly
+equipamentos que também criam campos magnéticos que
+podem confundir os robôs que se baseiam predominantemente
 
 00:03:19.459 --> 00:03:21.380
-on magnetic field sensing.
+na medição de campo magnético.
 
 00:03:21.380 --> 00:03:26.569
-I really like this old picture of the Pioneer
-ten satellite which is exploring the far reaches
+Eu gosto bastante dessa velha figurado satélite 
+Pioneer 10 que está explorando a extensão
 
 00:03:26.569 --> 00:03:30.819
-of our solar system. There’s a bunch of
-electronics and a rocket motor on the back
+do nosso sistema solar. Existem muitos eletrônicos
+e um motor de um foguete atrás 
 
 00:03:30.819 --> 00:03:33.950
-of a large dish which is pointed back at Planet
-Earth.
+de uma grande antena que está apontada de volta
+para o planeta Terra.
 
 00:03:33.950 --> 00:03:40.590
-And, on a long slender boom is the magnetometer
-instrument which is sensing the local magnetic
+E na ponta de um cabo está o magnetômetro
+que está medindo o campo magnético local
 
 00:03:40.590 --> 00:03:45.240
-field and they’ve position that is far away
-as they can from the rest of the electronics
+e eles posicionaram para que estivesse o mais
+longe possível do resto dos eletrônicos
 
 00:03:45.240 --> 00:03:46.240
-in the space craft.
+na aeronave espacial.
 
 00:03:46.240 --> 00:03:51.790
-And, that’s for exactly this reason that
-magnetometer is very sensitive to stray magnetic
+E é por essa razão que o magnetômetro
+é extremamente sensível a campos magnéticos
 
 00:03:51.790 --> 00:03:51.819
-fields.
+dispersos.
 

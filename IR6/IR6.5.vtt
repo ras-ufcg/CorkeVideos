@@ -1,246 +1,246 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: Pt-Br
 
 00:00:03.500 --> 00:00:09.240
-The robots that we looked at so far move in
-the 2D plane but most useful robots move in
+Os robôs que vimos até agora se movem no
+plano 2D, mas os robôs mais usados se movem
 
 00:00:09.240 --> 00:00:15.540
-three dimensions. What we want to do now is
-to determine the pose of the end effector
+em três dimensões. O que queremos fazer agora
+é determinar a pose do efetuador deste
 
 00:00:15.540 --> 00:00:21.359
-of this robot which moves in three dimensional
-space. The process we follow is very, very
+robô que se move no espaço tridimensional.
+O processo que seguimos é muito, muito
 
 00:00:21.359 --> 00:00:26.609
-similar to the process we did for the two
-dimensional robots. First of all we introduced
+similar ao processo que fizemos para os robôs de
+duas dimensões. Primeiramente, introduzimos
 
 00:00:26.609 --> 00:00:33.100
-a reference coordinate frame and then we indicate
-the part of the robot the object whose pose
+um sistema de coordenadas referencial e então 
+indicamos a parte do robô, objeto cuja pose
 
 00:00:33.100 --> 00:00:38.540
-we’re interested in, that’s the end effector
-of the robot indicated here by the symbol ksi E.
+estamos interessados, isso é o efetuador 
+do robô indicado aqui pelo símbolo ksi E.
 
 00:00:39.180 --> 00:00:46.520
-The first step then is a rotation of the coordinate
-frame about the z axis by an amount Q1. Then
+O primeiro passo é uma rotação do sistema de
+coordenadas ao redor do eixo z por um valor Q1.
 
 00:00:46.520 --> 00:00:51.510
-we translate that coordinate frame in the
-x direction by an amount A1 the length of
+Então transladamos o sistema de coordenadas 
+na direção x por um valor A1, o tamanho da
 
 00:00:51.510 --> 00:00:58.380
-the first link. Then we rotate the coordinate
-frame about the z axis again by an amount Q2.
+primeira ligação. Então, rotacionamos o sistema ao
+redor do eixo z novamente por um valor Q2.
 
 00:00:58.380 --> 00:01:04.199
-Next we translate in the X direction by an
-amount A2 that’s the length of the second
+Depois, transladamos na direção x por um
+valor A2, este é o tamanho da segunda ligação.
 
 00:01:04.199 --> 00:01:12.250
-link. Then we rotate around the Z axis again
-by the angle Q3 and finally we translate in
+Então rotacionamos ao redor do eixo z 
+novamente pelo ângulo Q3 e finalmente
 
 00:01:12.250 --> 00:01:14.950
-the Z direction by the amount Q4.
+transladamos na direção z pelo valor Q4.
 
 00:01:14.950 --> 00:01:22.909
-We now have described the pose of the robot’s
-end effector as a chain, a sequence of elementary
+Nós descrevemos agora a pose do efetuador do robô
+como uma corrente, uma sequência de matrizes
 
 00:01:22.909 --> 00:01:29.030
-homogeneous transformation matrices. All of
-the matrices belong to the set SE3 that’s
+elementares de transformações homogêneas. 
+Todas as matrizes pertencem ao conjunto SE3,
 
 00:01:29.030 --> 00:01:34.729
-the set of all rotations and translations
-in three dimensional space. We could expand
+este é o conjunto de todas as rotações e 
+translações no espaço tridimensional. Poderíamos
 
 00:01:34.729 --> 00:01:39.310
-out each of these elementary matrices and
-multiply them all together to come up with
+expandir cada uma dessas matrizes elementares e
+multiplicá-las todas juntas para chegar a uma
 
 00:01:39.310 --> 00:01:44.829
-a single homogeneous transformation metric
-representation the pose the end effector of
+única representação métrica de transformação 
+homogênea a pose do efetuador deste robô
 
 00:01:44.829 --> 00:01:51.610
-this Scara robot. This small robot has gone
-four degrees of freedom, four rotational joints.
+Scara. Esse pequeno robô atingiu quatro 
+graus de liberdade, quatro juntas rotacionais
 
 00:01:51.610 --> 00:01:57.790
-So the first rotation is around an axis like
-this. You see that the whole arm rotates around
+Então a primeira rotação é ao redor de um eixo
+assim. Você vê que todo o braço rotaciona ao 
 
 00:01:57.790 --> 00:02:02.130
-the base. The second rotating joint has got
-an axis like this and we can say that the
+redor da base. A segunda junta de rotação tem
+um eixo como este e podemos dizer que todo o 
 
 00:02:02.130 --> 00:02:08.399
-whole arm can rotate around this axis here.
-The third joint is rotation around this axis,
+braço pode rotacionar ao redor deste eixo aqui.
+A terceira junta é a rotação ao redor deste eixo,
 
 00:02:08.399 --> 00:02:14.560
-you see that longer arm rotates around that
-and the fourth joint is a rotation around
+você vê que o braço mais longo rotaciona ao 
+redor disso e a quarta junta é a rotação ao
 
 00:02:14.560 --> 00:02:20.100
-an axis here. You can see that the whole group
-of mechanism rotates with respect to the lower arm.
+redor de um eixo aqui. Você pode ver que todo o 
+grupo de mecanismos giram em relação ao antebraço.
 
 00:02:20.980 --> 00:02:25.240
-Let’s finish off by looking at this four
-joint educational robot. We've had quite a
+Vamos encerrar olhando para esse robô 
+educacional de quatro articulações. Já
 
 00:02:25.250 --> 00:02:30.379
-bit of practice by now that we should be able
-to write down the expression for the robot
+praticamos bastante até agora ao ponto de 
+sermos capazes de escrever a expressão para
 
 00:02:30.379 --> 00:02:33.190
-end effector pose almost by inspection.
+a pose do efetuador quase que por inspeção.
 
 00:02:33.190 --> 00:02:37.440
-So this is the way I think about the problem.
-I imagine that the robot is stretched down
+Então este é o jeito que eu penso sobre o problema.
+Eu imagino que o robô está esticado verticalmente,
 
 00:02:37.440 --> 00:02:42.879
-vertically with its two fingers pointing to
-the sky and then I just write down the sequence
+apontando seus dois dedos para o céu e então
+eu apenas anoto a sequência de transformações.
 
 00:02:42.879 --> 00:02:47.950
-of transformations. First of all the robots
-rotates around the reference Z axis by the
+Primeiramente, os robôs rotacionam ao
+redor do eixo de referência z pelo valor de 
 
 00:02:47.950 --> 00:02:53.459
-amount Q1 and then we move up a little bit
-which is in the Z direction and then we rotate
+Q1 e então movemos um pouco para cima,
+na direção de z, e então rotacionamos 
 
 00:02:53.459 --> 00:02:57.120
-around the Y axis by the amount Q2.
+ao redor do eixo y por um valor de Q2.
 
 00:02:57.120 --> 00:03:01.409
-Then we move up a little bit and encounter
-the next joint, joint 3 we rotate around the
+Então movemos um pouco e encontramosa próxima
+articulação, a articulação 3 rotacionamos em torno
 
 00:03:01.409 --> 00:03:07.430
-Y axis by the amount Q3 then we move up a
-bit more in the Z direction encounter the
+do eixo Y pelo valor Q3 e então movemos 
+mais um pouco na direção Z encontrando a
 
 00:03:07.430 --> 00:03:13.739
-last joint, joint 4 we rotate around the Y
-axis by the joint angle Q4. And then we move
+última articulação, a articulação 4 rotacionamos em torno
+do eixo Y pelo ângulo de articulação Q4. E então movemos
 
 00:03:13.739 --> 00:03:17.890
-up a bit more in the Z direction until we
-reach the tip of the fingers.
+um pouco mais na direção Z até
+alcançarmos a ponta dos dedos.
 
 00:03:17.890 --> 00:03:25.489
-So just by mentally walking through the robot
-mechanism joint by joint, link by link we
+Então apenas andando mentalmente pelo mecanismo
+do robô articulação por articulação, ligação por ligação
 
 00:03:25.489 --> 00:03:29.810
-can write down an expression for the pose
-of the end effector. Then it’s a simple
+nós podemos escrever uma expressão para a pose
+do efetor final. Assim é uma simples
 
 00:03:29.810 --> 00:03:34.560
-a matter of expanding out the matrices and
-then multiplying them all together. And we
+questão de expandir as matrizes e
+multiplicá-las todas juntas. E nós
 
 00:03:34.560 --> 00:03:38.769
-can use a tool like MATLAB to make that very
-easy for us.
+podemos usar uma ferramenta como MATLAB
+para facilitar.
 
 00:03:38.769 --> 00:03:43.110
-Now we’re going to use MATLAB to determine
-the pose of the end effector of this robot
+Agora nós vamos usar o MATLAB para determinar
+a pose do efetor final desse robô
 
 00:03:43.110 --> 00:03:47.790
-which moves in three dimensions and we’re
-going to do this symbolically but first of
+que se move em três dimensões e vamos
+fazer isso simbolicamente, mas antes
 
 00:03:47.790 --> 00:03:54.049
-all I’m going to define some symbolic variables
-for the various link lengths A1, A2, A3, and
+de tudo vou definir algumas váriaveis simbólicas
+para os vários comprimentos de ligação A1, A2, A3 e
 
 00:03:54.049 --> 00:04:04.189
-A4 and also for the four joint angles Q1,
-Q2, Q3 and Q4. We’re going to use the trchain
+A4 e também para os quatro ângulos de articulação Q1,
+Q2, Q3 e Q4. Vamos usar a função
 
 00:04:04.189 --> 00:04:08.700
-function again. This time we’re going to
-use the function called trchain which operates
+trchain de novo. Dessa vez vamos usar
+a função chamada trchain que opera
 
 00:04:08.700 --> 00:04:13.689
-in three dimensions rather than the function
-trchain2 which operates in two dimensions
+em três dimensões ao invés da função
+trchain2 que opera em duas dimensões
 
 00:04:13.689 --> 00:04:15.620
-that we used in the previous examples.
+que usamos nos exemplos anteriores.
 
 00:04:15.620 --> 00:04:20.239
-And now I start to write this transform string
-so we’re going to do a rotation around the
+E agora vou começar a escrever essa string de transformação,
+e vamos fazer uma rotação em torno do
 
 00:04:20.239 --> 00:04:27.630
-Z axis by Q1 and then we’re going to do
-a translation in the Z direction by A1 then
+eixo Z pelo Q1 e então faremos uma
+translação na direção Z pelo A1 e então
 
 00:04:27.630 --> 00:04:32.580
-we’re going to do a rotation around the
-Y axis by Q2 and then we’re going to do
+vamos rotacionar em torno do
+eixo Y pelo Q2 e fazemos outra
 
 00:04:32.580 --> 00:04:40.470
-another translation in the Z direction by
-A2 and then we’re going to do a rotation
+translação na direção Z pelo
+A2, fazemos então uma rotação
 
 00:04:40.470 --> 00:04:46.210
-around the Y axis by Q3 and then we’re going
-to do another translation in the Z direction
+em torno do eixo Y pelo Q3 e faremos
+outra translação na direção Z
 
 00:04:46.210 --> 00:04:54.340
-by A3 and then we’re going to do a rotation
-around the Y axis by Q4 and finally a translation
+por A3 e rotacionamos em torno
+do eixo Y pelo Q4 e finalmente uma translação
 
 00:04:54.340 --> 00:04:56.160
-in the Z direction by A4.
+na direção Z pelo A4.
 
 00:04:56.160 --> 00:05:07.800
-I close that string and now I pass in the
-joint angles Q1, Q2, Q3 and Q4 and here we
+Eu fecho essa string e agora passo nos ângulos
+de articulação Q1, Q2, Q3 e Q4 e aqui
 
 00:05:07.800 --> 00:05:14.320
-have the expression for the homogeneous transformation
-which represents the pose of this robot which
+temos a a expressão para a transformação homogênea
+que representa a pose desse robô que
 
 00:05:14.320 --> 00:05:19.720
-moves in three dimensions. Because the robot’s
-operating in three dimensions this homogeneous
+move em três dimensões. Já que o robô está
+operando em três dimensões essa transformação
 
 00:05:19.720 --> 00:05:25.000
-transformation is a four-by-four matrix. And
-we can see that it’s quite a large and complex
+homogênea é uma matriz 4x4.E podemos
+ver que é uma expressão um tanto grande 
 
 00:05:25.000 --> 00:05:30.729
-expression and I need to scroll sideways quite
-a lot to get to end of it.
+e complexa e eu preciso rolar bastante para os
+lados para chegar até o seu fim.
 
 00:05:30.729 --> 00:05:35.210
-If I wanted to determine the X coordinate
-of the end effector of this robot I would
+Se eu quisesse determinar a coordenada X
+do efetor final desse robô eu faria isso
 
 00:05:35.210 --> 00:05:40.780
-do that by taking the element in the first
-row and the forth column of this homogeneous
+pegando o primeiro elemento na primeira
+kinha e na quarta coluna desssa matriz
 
 00:05:40.780 --> 00:05:45.500
-transformation matrix and that would be the
-expression for the X coordinate of this robot
+trasnformação homogênea e essa seria a expressão
+para a coordenada X desse robô
 
 00:05:45.500 --> 00:05:48.750
-and again that itself is quite a complex expression.
+e mais uma vez por si só é uma expressão complexa.
 

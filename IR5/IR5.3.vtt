@@ -1,174 +1,176 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: BR
 
 00:00:03.850 --> 00:00:08.420
-In this section, we’re going to talk about
-measuring the magnetic field. A simple and
+Nessa seção nós vamos falar sobre
+medir o campo magnético. Um tipo de
 
 00:00:08.420 --> 00:00:14.010
-familiar type of magnetic field sensor is
-the magnetic compass. The compass was discovered
+sensor de campo magnético simples e familiar
+é a bússola magnética. A bússola foi descoberta
 
 00:00:14.010 --> 00:00:19.740
-by the Chinese over 2,000 years ago. It contains
-a magnetized needle that aligns with the
+pelos chineses mais de 2000 anos atrás. Ela tem
+uma agulha magnética que é se alinha com o
 
 00:00:19.740 --> 00:00:24.990
-Earth’s magnetic field. The Earth rotates
-about an axis that passes through the North
+campo magnético da Terra. A Terra rotaciona
+em torno de um eixo que passa através dos polos
 
 00:00:24.990 --> 00:00:31.070
-and South geographic poles. The Earth itself
-is a gigantic magnet and the North and South
+Norte e Sul geográficos. A Terra em si é um
+ímã gigante e os polos Norte e Sul do
 
 00:00:31.070 --> 00:00:37.149
-poles of the magnet do not correspond to the
-North and South geographic poles of the Earth.
+ímã nãop correspondem aos polos 
+Norte e Sul geográficos da Terra.
 
 00:00:37.149 --> 00:00:42.319
-We can imagine the magnetic field lines from
-this giant internal magnet passing out of
+Nós podemos imaginar as linhas de campo magnético
+desse gigante íma interno saindo da
 
 00:00:42.319 --> 00:00:46.449
-the surface of the planet, arcing through
-space, and then diving back in to the ground
+superfície do planeta, arqueando através
+do espaço, e então mergulhando de volta no solo
 
 00:00:46.449 --> 00:00:51.069
-at the North magnetic pole.
-The red arrow that I’m holding represents
+no polo Sul magnético.
+A seta vermelha que estou segurando representa
 
 00:00:51.069 --> 00:00:55.510
-approximately one of the Earth’s magnetic
-field lines. We can think of these as imaginary
+aproximadamente uma das linhas de campo magnético
+da Terra. Nós podemos pensar nelas como linhas
 
 00:00:55.510 --> 00:01:01.049
-lines which come out of the Earth, arc through
-the sky and land again at the North Pole of
+imaginárias que saem da Terra, arqueam pelo
+céu e aterrisam denovo no polo Norte do
 
 00:01:01.049 --> 00:01:07.299
-the planet. Now, I have aligned this arrow
-by measuring the three components of the Earth’s
+planeta. Agora, eu alinhei essa seta
+medindo as três componentes do campo magnético
 
 00:01:07.299 --> 00:01:11.860
-magnetic field using my phone. And, at the
-moment, the way I have this arrow and the phone
+da Terra usando meu celular. E, no momento, do
+jeito que eu estou com essa seta e o celular
 
 00:01:11.860 --> 00:01:17.930
-oriented, the only component of magnetic field
-that’s non zero is in the Y direction, that’s
+orientados, a única componente do campo magnético
+que não é zero é a na direção Y, que
 
 00:01:17.930 --> 00:01:24.740
-the, this direction on my, on my phone.
-The magnetic poles of the Earth are constantly
+é, essa direção no meu, no meu celular.
+Os polos magnéticos da Terra estão constantemente
 
 00:01:24.740 --> 00:01:29.880
-moving and that’s a bit problematic for
-a sensor like a compass which points at the
+se movendo e isso é um pouco problemático para
+um sensor como uma bússola que aponta para
 
 00:01:29.880 --> 00:01:34.140
-magnetic poles. We need to understand something
-about where the magnetic poles are with respect
+os polos magnéticos. Nós temos que entender algo
+sobre onde os polos magnéticos estão em relação
 
 00:01:34.140 --> 00:01:39.340
-to the geographic poles and how they are moving.
-The needle of a compass points towards the
+aos polos geográficos e como eles se movem.
+a agulha de um compasso aponta em direção ao
 
 00:01:39.340 --> 00:01:44.979
-Magnetic North Pole of the planet. But, true
-North or geographic North is in a different
+Polo Norte Magnético do planeta. Mas, o Norte
+verdadiro ou Norte geográfico está em uma direção
 
 00:01:44.979 --> 00:01:50.729
-direction. Here, we have a right-handed coordinate
-frame where the axes are pointing to geographic
+diferente. Aqui, nós temos um sistema de coordenadas
+do lado direito onde os eixos estão apontando para o Norte
 
 00:01:50.729 --> 00:01:57.229
-North, geographic East and vertically down
-toward the center of the planet. Imagine now
+geográfico, o Leste geográfico e verticalmente para baico
+em direção ao centro do planeta. Imagine agora
 
 00:01:57.229 --> 00:02:03.289
-a plane that contains the magnetic field vector
-which is denoted by a red arrow and the symbol B.
+um avião que contém o vetor campo magnético,
+que é denotado por uma seta vermelha e o símbolo B.
 
 00:02:04.680 --> 00:02:11.180
-Angle between this plane and the geographic
-North direction is the magnetic declination angle D.
+O ângulo entre esse avião e a direção Norte
+geográfico é o ângulo de declinação magnética D.
 
 00:02:12.020 --> 00:02:14.720
-This diagram shows magnetic declination for
+Esse diagrama mostra a declinação magnética para 
 
 00:02:14.720 --> 00:02:20.000
-the year 2010 and we can see that it varies
-quite significantly across the planet. Magnetic
+o ano 2010 e nós podemos ver que ela varia
+bastante significativamente em todo o planeta. O norte
 
 00:02:20.000 --> 00:02:25.920
-North can be up to plus or minus 20 degrees
-away from true North. These values become
+Magnético pode ter mais ou menos 20 graus
+de distância do verdadeiro Norte. Esses valores se tornam 
 
 00:02:25.920 --> 00:02:30.050
-quite extreme in the vicinity of the South
-Magnetic Pole which we can see very clearly
+bastante extremos nas proximidads do Polo Sul
+Magnético, que nós podemos ver claramente
 
 00:02:30.050 --> 00:02:34.630
-here. If you’re sailing a boat and you’re
-using a nautical chart, the appropriate magnetic
+aqui. se você está navegando em um barco e está
+usando uma carta náutica, a declinação magnética
 
 00:02:34.630 --> 00:02:40.050
-declination is typically marked somewhere
-on that chart. Magnetic declination varies
+apropriada é tipicamente marcada em algum lugar
+na carta. A declinação Magnética varia
 
 00:02:40.050 --> 00:02:45.420
-over time and this fascinating video shows the contour lines of magnetic declination
+com o tempo e esse fascinante vídeo mostra as linhas de contorno
+da declinação magnética 
 
 00:02:45.420 --> 00:02:48.280
-varying over periods of hundreds of years.
+variando em períodos de centenas de anos.
 
 00:02:52.740 --> 00:02:56.800
-The magnetic field lines are generally not parallel to the surface of the Earth.
+As linhas de campo magnético são geralmente não paralelas
+à superfície da Terra.
 
 00:02:56.800 --> 00:02:58.860
-In the Southern Hemisphere, the magnetic field lines
+No Hemisfério Sul, as linhas de campo magnético
 
 00:02:58.870 --> 00:03:03.370
-come out of the ground. And, in the Northern
-Hemisphere, the magnetic field lines disappear
+saem do solo. e, no Hemisfério Norte,
+as linhas de campo magnético desaparecem
 
 00:03:03.370 --> 00:03:08.910
-into the ground. So, we can introduce another
-angle which is referred to as magnetic inclination
+para dentro do solo. Então, nós podemos introduzir
+outro ângulo, que é referido como inclinação magnética
 
 00:03:08.910 --> 00:03:14.560
-denoted typically by the symbol I and that
-represents the angle of the magnetic field
+denotado tipicamente pelo símbolo I e que
+representa o ângulo da linha de campo
 
 00:03:14.560 --> 00:03:20.090
-line with respect to the surface of the Earth.
-And, this is a map of magnetic inclination
+magnético em relação à superfície da Terra.
+E, esse é um mapa da inclinação magnética
 
 00:03:20.090 --> 00:03:25.760
-over the surface of the planet. The sign convention
-used is Northern Hemisphere centric. So, if
+através da superfície do planeta. A convenção de
+sinal usada é centrada no Hemisfério Norte. Então, se
 
 00:03:25.760 --> 00:03:30.140
-the magnetic field line is descending in to
-the ground, the inclination angle is considered
+a linha de campo magnética está descendo para
+o solo, o ângulo de inclinação é considerado
 
 00:03:30.140 --> 00:03:34.730
-to be positive. Here is another chart and
-this one shows the strength of the magnetic
+positivo. Aqui está outro gráfico e 
+esse mostra a força do campo 
 
 00:03:34.730 --> 00:03:40.470
-field, the magnitude of the magnetic field
-vector and this is units of nano teslas. That’s
+magnético, a magnitude do vetor campo
+magnético e isso são unidades de nano teslas. Isso é
 
 00:03:40.470 --> 00:03:46.280
-10 to the minus 9 Tesla. For comparison, a
-modern MRI machine has a magnetic field strength
+10 elevado à menos 9 Tesla. Para comparação, uma
+máquina MRI moderna tem uma força de campo magnético
 
 00:03:46.280 --> 00:03:51.370
-of around 4 to 8 Tesla. That’s a hundred
-thousand times stronger than the magnetic
+em torno de 4 à 8 Tesla. Isso é cem mil
+vezes mais forte que a força do campo
 
 00:03:51.370 --> 00:03:52.760
-field strength of the Earth.
+magnético da Terra.
 
