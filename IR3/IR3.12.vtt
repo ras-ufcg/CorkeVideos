@@ -29,7 +29,7 @@ Agora, em vez de termos apenas um numero imaginário i,
 Temos vários números imaginários i,j,
 
 00:00:32.870 --> 00:00:33.870
-e K.
+e k.
 
 00:00:33.870 --> 00:00:39.350
 Eles são a raiz quadrada de -1 e 
@@ -106,7 +106,7 @@ E também a forma como a caixa de ferramentas de robótica
 representada no MATLAB.
 
 00:02:03.899 --> 00:02:08.739
-Assim como podemos determinar a magnitudo ou comprimento 
+Assim como podemos determinar a magnitude ou comprimento 
 de um vetor, podemos determinar a magnitude
 
 00:02:08.739 --> 00:02:15.079
@@ -119,7 +119,7 @@ três partes imaginarias
 
 00:02:18.959 --> 00:02:24.400
 Agora, chegamos ao que é chamado de quarternion unitário
-E este é um quarternon cuja magnitude é
+E este é um quarternion cuja magnitude é
 
 00:02:24.400 --> 00:02:26.090
 Igual a 1.
@@ -144,22 +144,22 @@ ao cosseno da metade do ângulo de rotação e
 
 00:02:45.400 --> 00:02:51.310
 o eixo de rotação que eu denotei aqui
-por n-hat está relacionado com a parte vetorial de
+por n-chapéu está relacionado com a parte vetorial do
 
 00:02:51.310 --> 00:02:57.269
-o quaternion por esta relacionado ao 
+quaternion por estar relacionado ao 
 seno da metade do ângulo de rotação.
 
 00:02:57.269 --> 00:02:59.840
 Podemos compor dois quarternions unitários
 
 00:02:59.840 --> 00:03:06.390
-Assim como podemos composto duas matrizes de rotação,
+Assim como podemos compor duas matrizes de rotação,
 Eu posso compor dois quaternions e é
 
 00:03:06.390 --> 00:03:10.500
 feito usando isso, o que é chamado de Hamiltoniano
-regra do produto.
+ou regra do produto.
 
 00:03:10.500 --> 00:03:16.650
 Então, quaternion 1 gira do quadro A para
