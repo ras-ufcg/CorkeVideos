@@ -41,7 +41,7 @@ desses pontos com um vetor, com relação ao
 sistema de coordenadas universal.
 
 00:00:55.489 --> 00:01:00.730
-Vaos agora imaginar que um carro se moveu, e agora
+Vamos agora imaginar que um carro se moveu, e agora
 está aqui. Eu poderia agora descrever todos esses 
 
 00:01:00.730 --> 00:01:06.900
@@ -144,7 +144,7 @@ uma pose e ele opera em um vetor de forma a
 transformar o vetor em um sistema de coordenadas
 
 00:03:17.600 --> 00:03:23.180
-diferente. Isso é o que o perador ponto faz:
+diferente. Isso é o que operador ponto faz:
 ele transforma esse vetor, que descreve
 
 00:03:23.180 --> 00:03:29.110
