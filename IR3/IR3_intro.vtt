@@ -1,9 +1,9 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:07.609 --> 00:00:12.869
-Na última aula nos falos sobre como nós
+Na última aula nos falamos sobre como 
 descrevemos uma posição de objetos em um mundo de
 
 00:00:12.869 --> 00:00:14.050
@@ -11,14 +11,14 @@ duas dimensões.
 
 00:00:14.050 --> 00:00:18.380
 Nós usamos o exemplo, por sua vez, de um robô
-e nós criamos um sistema de coordenadas de duas
+e criamos um sistema de coordenadas de duas
 
 00:00:18.380 --> 00:00:19.380
 dimensões.
 
 00:00:19.380 --> 00:00:23.210
-Nós colocamos o sistema de coordenadas em um local
-de referência e nós descrevemos a posição
+Colocamos o sistema de coordenadas em um local
+de referência e descrevemos a posição
 
 00:00:23.210 --> 00:00:26.520
 do robô com relação a aquele sistema de
@@ -86,11 +86,11 @@ através do ar, eles estão voando através da
 água.
 
 00:01:25.390 --> 00:01:29.690
-Assim esses são duas classes de robôs muito ro
+Assim esses são duas classes de robôs muito 
 importantes atualmente, robôs que podem voar e robôs
 
 00:01:29.690 --> 00:01:34.700
-que nadam debaixo dágua e seu movimento 
+que nadam debaixo d'água e seu movimento 
 é descrito em termos de um espaço
 
 00:01:34.700 --> 00:01:35.700
