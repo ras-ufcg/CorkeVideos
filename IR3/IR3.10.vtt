@@ -107,7 +107,7 @@ de coordenadas à garra do robô. Nós o orientamos
 
 00:02:23.890 --> 00:02:28.620
 de modo que o eixo z aponta para fora.
-Nos referimos a isso como o vetor de aproximação.
+Referimos a isso como o vetor de aproximação.
 
 00:02:28.620 --> 00:02:33.130
 De modo geral, ele é a direção na qual a garra
