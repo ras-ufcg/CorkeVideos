@@ -11,7 +11,7 @@ Primeiramente, têm algumas convenções muito importantes.
 Primeiro é o tão chamado sistemas de coordenadas
 
 00:00:12.740 --> 00:00:17.410
-destro. Quando construímos um sistema de coordenadas
+positivo. Quando construímos um sistema de coordenadas
 3D, nós precisamos construí-lo adequadamente
 
 00:00:17.410 --> 00:00:22.960
@@ -119,19 +119,19 @@ nos permite ir de um ângulo e um eixo de
 
 00:02:46.739 --> 00:02:52.950
 volta a uma matriz de rotação.
-Nós introduzimos quaterniões. Estes são números
+Nós introduzimos quaternions. Estes são números
 
 00:02:52.950 --> 00:02:58.810
 hipercomplexos. Na verdade, eles compreendem um
-escalar e um vetor de três elementos. Um quaternião
+escalar e um vetor de três elementos. Um quaternion
 
 00:02:58.810 --> 00:03:04.180
 de magnitude unitária referido como unidade de
-quaternião pode ser usado para codificar a rotação.
+quaternion pode ser usado para codificar a rotação.
 
 00:03:04.180 --> 00:03:09.849
 Existem algumas simples regras para determinar o 
-Inverso de um quaternião ou compor 2 quaterniões,
+Inverso de um quaternion ou compor 2 quaternions,
 
 00:03:09.849 --> 00:03:14.260
 e nós podemos calcular o efeito de duas rotações
@@ -202,7 +202,7 @@ de rotação. As colunas da matriz de rotação
 traçam em termos de vetor unitário os eixos
 
 00:04:41.370 --> 00:04:46.530
-x,y e z do novo sistema de coordenadas.
+x, y e z do novo sistema de coordenadas.
 Vamos dar uma olhada em algumas representações
 
 00:04:46.530 --> 00:04:51.520
@@ -218,8 +218,8 @@ de ter singularidade. Falamos sobre singularidades,
 o problema de cardan, e isso ocorre com
 
 00:05:02.830 --> 00:05:08.210
-ângulos de Euler ou rolamentos, arremessos, e representação de guinadas
-de orientação.
+ângulos de Euler ou rolamentos, arremessos, 
+e representação de guinadas de orientação.
 
 00:05:08.210 --> 00:05:13.060
 Combinar duas rotações é fácil. Para uma matriz 
@@ -235,7 +235,7 @@ por dois vetores; um vetor de abordagem e um
 
 00:05:25.259 --> 00:05:30.960
 vetor de orientação. São apenas seis números.
-É livre de de singularidade mas, não tão fácil
+É livre de singularidade mas, não é tão fácil
 
 00:05:30.960 --> 00:05:37.120
 de combinar duas orientações expressas nessa
@@ -259,22 +259,22 @@ zero. E, mais uma vez, combinar duas
 
 00:05:59.370 --> 00:06:05.949
 rotações é não trivial. A representação final
-é a unidade quarteniã. Tem quatro números,
+é a unidade quaternion. Tem quatro números,
 
 00:06:05.949 --> 00:06:11.180
 no entanto apenas três deles são únicos porque
-tem uma magnitude unitária. São livres de
+tem uma magnitude unitária. São livres 
 
 00:06:11.180 --> 00:06:16.689
 de singularidade. E, apresentamos o produto Hamiltoniano
-como forma de multiplicar dois quarteniões. Então,
+como forma de multiplicar dois quaternions. Então,
 
 00:06:16.689 --> 00:06:21.819
-de alguma forma, o quaternião tem muitas
+de alguma forma, o quaternion tem muitas
 vantagens, livre de singularidade, representado
 
 00:06:21.819 --> 00:06:27.699
-por um número menor, e dois quaterniões podem
+por um número menor, e dois quaternion podem
 ser multiplicados juntos usando menos operações
 
 00:06:27.699 --> 00:06:32.699
@@ -286,7 +286,7 @@ são uso comum a representação de cima e baixo,
 a matriz de rotação e a
 
 00:06:37.569 --> 00:06:41.090
-unidade quaterniã.
+unidade quaternion.
 Finalmente, podemos representar uma pose, que tem
 
 00:06:41.090 --> 00:06:46.650
@@ -311,7 +311,7 @@ representado por um vetor de um quadro para
 
 00:07:11.919 --> 00:07:18.560
 outro é feita multiplicando a representação
-homogênea do ponto pela matriz
+homogênea do ponto pela matriz de
 
 00:07:18.560 --> 00:07:24.110
 transformação homogênea.
@@ -323,11 +323,11 @@ tentando descrever um problema complexo. Anexe
 
 00:07:29.250 --> 00:07:34.050
 eles a cada objeto de interesse e escreva
-as relações entre os sistemas de coordenads.
+as relações entre os sistemas de coordenadas.
 
 00:07:34.050 --> 00:07:37.960
 Algumas dessas relações podem ser
-constante. Algumas dessas relações podem estar
+constantes. Algumas dessas relações podem estar
 
 00:07:37.960 --> 00:07:41.889
 variando com o tempo. E, lembre-se, a NASA
