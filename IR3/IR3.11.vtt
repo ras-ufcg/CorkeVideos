@@ -11,22 +11,23 @@ entre esses dois quadros, quadro A e quadro B,
 sobre um eixo arbitrário no espaço. Então, o
 
 00:00:15.590 --> 00:00:20.360
-desafio é determinar o que é 
-esse eixo de rotação, o vetor que iremos
+desafio é determinar qual o
+eixo de rotação, o vetor que iremos
 
 00:00:20.360 --> 00:00:26.150
 definir é v e o que é o valor de rotações 
 em torno do vetor, no qual estamos
 
 00:00:26.150 --> 00:00:30.510
-chamando de Theta. Então o problema é descobrir
-o que é v e o que é Theta, que nos permite
+chamando de Teta. Então o problema é descobrir
+o que é v e o que é Teta, que nos permite
 
 00:00:30.510 --> 00:00:35.680
 rotacionar o quadro A no quadro B.
 
 00:00:35.680 --> 00:00:40.410
-A fim de encontrar o eixo no qual rotacionamos, há uma observação chave:
+A fim de encontrar o eixo no qual rotacionamos, 
+há uma observação chave:
 
 00:00:40.410 --> 00:00:46.610
 o eixo em que estamos rotacionando precisa ser 
@@ -41,17 +42,16 @@ o eixo de rotação precisa ser um auto-vetor da matriz R.
 A matriz de rotação que tem três
 
 00:01:00.149 --> 00:01:05.030
-auto vetores. Há um auto vetor no qual 
-é garantido que tenha elementos que são 
-números
+auto vetores. Há um auto vetor no qual é 
+garantido que tenha elementos que são números
 
 00:01:05.030 --> 00:01:12.970
 reais e isso corresponde ao auto vetor 
 de 1. Há dois auto vetores complexos e
 
 00:01:12.970 --> 00:01:20.080
-eles correspondem à auto vetores complexos que são funções do ângulo de 
-rotação Theta.
+eles correspondem à auto vetores complexos 
+que são funções do ângulo de rotação Teta.
 
 00:01:20.080 --> 00:01:24.570
 Para ilustrar isso, Eu vou criar a matriz
@@ -75,7 +75,7 @@ da matriz de rotação. Nós vemos que
 
 00:01:50.970 --> 00:01:57.420
 há 3 auto vetores, nós esperávamos que, 
-já que é uma matriz 3x3 e o útimo auto vetor é igual
+já que é uma matriz 3x3, o último auto vetor é igual
 
 00:01:57.420 --> 00:02:04.540
 a um. Eu também posso ver os auto vetores
@@ -98,14 +98,14 @@ são iguais a zero.
 
 00:02:26.909 --> 00:02:32.090
 A fim de encontrar o valor da rotacação 
-assim assim como o eixo de rotação, nós devemos usar
+assim como o eixo de rotação, nós devemos usar
 
 00:02:32.090 --> 00:02:39.480
 a função tr2angvec do Toolbox e passar 
 pra ela a matriz de rotação de interesse e 
 
 00:02:39.480 --> 00:02:46.010
-ele disse que precisamos de uma rotação 
+ele informa que precisamos de uma rotação 
 de 0.44 radianos em torno do vetor particular. Agora
 
 00:02:46.010 --> 00:02:56.249
@@ -113,7 +113,7 @@ eu posso pegá-los e colocar em variáveis
 para obter dois argumentos de saída; tr2angvec,
 
 00:02:56.249 --> 00:03:01.969
-e a variável externa Theta foi 
+e a variável externa Teta foi 
 configurada para 0.4466 e a variável de saída v está sendo
 
 00:03:01.969 --> 00:03:08.079
@@ -134,7 +134,7 @@ determinar o ângulo de rotação que precisamos.
 
 00:03:27.169 --> 00:03:32.579
 Agora, vamos considerar que queremos 
-fazer o inverson; que temos o ângulo de rotação Theta e
+fazer o inverso; que temos o ângulo de rotação Teta e
 
 00:03:32.579 --> 00:03:38.599
 temos o vetor em que rotacionamos 
@@ -142,7 +142,7 @@ chamado v, e queremos encontrar a matriz de rotação.
 
 00:03:39.220 --> 00:03:46.400
 e a equação que precisamos é chamada de 
-Equação de Rodruiguez e ela relaciona R com v e Theta.
+Equação de Rodriguez e ela relaciona R com v e Teta.
 
 00:03:47.320 --> 00:03:53.420
 A operação inversa é feita pela função 
@@ -150,7 +150,7 @@ angvec2r, converte a representação um ângulo
 
 00:03:53.430 --> 00:04:00.400
 e um vetor na matriz de rotação. Eu 
-passo o valor da rotação e eu passo o vetor
+passo o valor da rotação e o vetor
 
 00:04:00.400 --> 00:04:05.699
 e aqui está a matriz de rotação, e essa 
