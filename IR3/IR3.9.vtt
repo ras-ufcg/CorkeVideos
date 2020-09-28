@@ -31,7 +31,7 @@ roll/pitch/yaw. Você perceberá que eles estão bem
 diferentes daqueles que passamos. O ângulo do meio,
 
 00:00:43.649 --> 00:00:49.430
-o pitch é o mesmo, é pi/2. O 
+o pitch, é o mesmo, é pi/2. O 
 ângulo roll mudou de 0.3 para 0, e
 
 00:00:49.430 --> 00:00:52.100
@@ -58,7 +58,7 @@ com ângulos roll/pitch/yaw, ocorre com ângulos
 
 00:01:18.520 --> 00:01:24.550
 de Euler. Ela sempre ocorre quando o ângulo do
-meio posasui um valor particular, e, em ângulos
+meio possui um valor particular, e, em ângulos
 
 00:01:24.550 --> 00:01:30.560
 roll/pitch/yaw, o pitch ser igual a pi/2
@@ -197,21 +197,19 @@ daí a bússola se manterá nivelada. O mesmo
 acontece para este relógio indicado aqui, ele é
 
 00:04:12.749 --> 00:04:19.060
-first free to rotate around this axis and
-then it's free to rotate around this axis.
-
-trad3.vtt
+livre para rotacionar nesse eixo e 
+entõ é livre para rotacionar neste outro,
 
 00:04:19.060 --> 00:04:23.890
 Se eu colocar essa caixa na mesa na minha sala
-a bordo de um barco a vela então o relógio
+a bordo de um barco à vela então o relógio
 
 00:04:23.890 --> 00:04:30.730
 irá permanecer nivelado mesmo que o barco
 esteja balançando consideravelmente. Esse
 
 00:04:30.730 --> 00:04:35.810
-Ultimo exemplo é um pouco mais complexo
+ultimo exemplo é um pouco mais complexo
 ele contém o que chamamos de Gimbal de três eixos.
 
 00:04:35.810 --> 00:04:40.720
@@ -266,7 +264,7 @@ e então todo o conjunto está livre para rotacionar
 em torno desse eixo e então finalmente todo o
 
 00:05:51.860 --> 00:05:59.190
-conjunto está livre para rotacionar em torno desse eixo.
+conjunto está livre para rotacionar em torno desse outro eixo.
 O que isso permite é realmente importante, se nós
 
 00:05:59.190 --> 00:06:05.020
