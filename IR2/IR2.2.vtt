@@ -59,7 +59,7 @@ Então, se esse robô quisesse se mover na direção desse
 robô, precisamos saber se irá se mover 
 
 00:01:12.030 --> 00:01:17.000
-para frente, para a esquerda, para a direita,
+para frente, para a esquerda, para a direita ou
 para trás. Assim, esse robô é bem diferente
 
 00:01:17.000 --> 00:01:22.890
@@ -67,7 +67,7 @@ desse robô, desse robô, e desse robô.
 É importante ser capaz de descrever qual
 
 00:01:22.890 --> 00:01:27.610
-caminho está enfrentando. E para isso
+caminho está percorrendo. E para isso
 podemos usar as ferramentas
 
 00:01:27.610 --> 00:01:32.320
@@ -84,7 +84,7 @@ com adesivo.
 
 00:01:39.560 --> 00:01:44.890
 com os robôs aqui, podemos descrever sua
-orientação - o caminho que é enfrentado no
+orientação - o caminho que é percorrido no
 
 00:01:44.890 --> 00:01:52.350
 mundo - pela orientação desse sistema de coordenadas
@@ -238,7 +238,7 @@ chamado sistema de coordenadas universal, nós
 
 00:05:16.440 --> 00:05:21.540
 movemos a origem desse sistema até aqui, e
-depois nós rotacionamos.
+depois o rotacionamos.
 
 00:05:21.540 --> 00:05:28.090
 Logo, vamos resumir o que nós aprendemos nessa
