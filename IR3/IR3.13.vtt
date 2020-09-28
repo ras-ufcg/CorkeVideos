@@ -12,7 +12,7 @@ maneiras que nós podemos representar uma pose.
 
 00:00:13.910 --> 00:00:17.890
 Nós poderíamos representar a componente translacional
-como um vetor, e depois nós poderíamos representar a 
+como um vetor, e depois poderíamos representar a 
 
 00:00:17.890 --> 00:00:23.230
 componente rotacional por um conjunto de 3 ângulos.
@@ -23,7 +23,7 @@ vetor mais um conjunto de 3 ângulos de roll, pitch e
 yaw. Ou nós poderíamos representá-la como um vetor 
 
 00:00:28.999 --> 00:00:34.200
-mais um quaternião. A quarta opção é para representá-la
+mais um quaternion. A quarta opção é para representá-la
 como uma transformação homogênea e isso
 
 00:00:34.200 --> 00:00:38.590
