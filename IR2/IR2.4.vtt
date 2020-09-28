@@ -39,7 +39,7 @@ relação a B. E eu posso descrever o ponto
 
 00:00:51.829 --> 00:00:59.449
 P em termos de um vetor relativo ao sistema C. Então,
-esses posicionamentos relativos pode ser combinados
+esses posicionamentos relativos podem ser combinados
 
 00:00:59.449 --> 00:01:07.290
 ou compostos, então posso chegar ao posicionamento de C
@@ -89,7 +89,7 @@ a ordem que você aciona eles é extremamente
 importante. Agora, considere o exemplo em que
 
 00:02:16.720 --> 00:02:23.140
-Eu movo do sistema-referência e eu movo
+eu movo do sistema-referência e eu movo
 um sistema de coordenadas 30 centímetros na
 
 00:02:23.140 --> 00:02:28.800
@@ -350,8 +350,8 @@ são equivalentes. Finalmente, se eu adiciono zero
 posicionamento relativo ao posicionamento, nada muda.
 
 00:08:25.169 --> 00:08:31.169
-E, se eu subtraio zero posicionamento relativo
-do posicionamento, nada muda.
+E, se eu subtraio zero do posicionamento relativo
+ao posicionamento nada muda.
 
 00:08:31.169 --> 00:08:36.539
 Essas são apenas algumas regras algébricas simples
