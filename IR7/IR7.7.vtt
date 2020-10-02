@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.649 --> 00:00:08.750
 Let's have a look at determining the inverse
@@ -224,119 +224,118 @@ And I use a slightly different method on the
 P560 object, I use the method ikine, I pass
 
 00:05:36.979 --> 00:05:41.720
-in the pose I'd like the robot to adopt and
-I pass in the initial set of joint angles
+na posição que eu gostaria que o robô adotasse e
+passo o conjunto inicial de ângulos de junta
 
 00:05:41.720 --> 00:05:47.080
-for the numerical algorithm and I'm just going
-to make them all zero. It's not particularly
+para o algoritmo numérico e vou apenas fazer
+todos eles igual zero.  Não é particularmente
 
 00:05:47.080 --> 00:05:51.900
-imaginative, but we'll see what happens. Okay
-the algorithm has completed and it's computed
+imaginativo, mas veremos o que acontece. Certo,
+o algoritmo foi concluído e calculado
 
 00:05:51.900 --> 00:05:59.780
-a set of joint angles. If I now plot the robot
-in that configuration, we can see that the
+um conjunto de ângulos de junta. Se eu agora plotar
+o robô nessa configuração, podemos ver que a
 
 00:05:59.780 --> 00:06:04.310
-position of the robot end effector is at the
-origin of the blue co-ordinate frame that
+posição do efetuador do robô está na 
+origem do sistema de coordenadas azul que
 
 00:06:04.310 --> 00:06:09.699
-I drew and that the X, Y and Z axis of the
-robot's end effector are parallel to the X,
+eu desenhei e que os eixos x, y e z do efetuador 
+do robô são paralelos aos eixos X,
 
 00:06:09.699 --> 00:06:13.979
-Y and Z axes of the co-ordinate frame that
-I desire.
+Y e Z do sistema de coordenadas que eu desejo
 
 00:06:13.979 --> 00:06:18.560
-The robot's configuration looks a little bit
-awkward, that's because with the numerical
+A configuração do robô parece um pouco estranha,
+isto é, porque com a técnica numérica
 
 00:06:18.560 --> 00:06:24.159
-technique, I cannot explicitly control the
-pose that it adopts. I need to try some different
+eu não posso controlar explicitamente a posição
+adotada. Eu preciso tentar algumas condições
 
 00:06:24.159 --> 00:06:28.569
-initial conditions in order to perhaps get
-a configuration where the robot's elbow is
+iniciais diferentes, a fim de talvez obter uma
+configuração onde o cotovelo do robô está 
 
 00:06:28.569 --> 00:06:33.849
-up. You'll notice an error message here in
-red, that's nothing to be worried about, it's
+para cima. Você irá perceber uma mensagem de erro
+aqui em vermelho, não há nada para se preocupar, é
 
 00:06:33.849 --> 00:06:39.639
-because the initial set of joint angles that
-I chose, all zeros, results in a robot configuration
+por que todo o conjunto inicial de ângulos de junta que 
+escolhi, todas zero, resultando em uma configuração do robô
 
 00:06:39.639 --> 00:06:44.439
-that is singular and singular configurations
-is something that we're going to discuss along
+que é singular e configurações singulares é 
+algo que nós iremos discutir junto
 
 00:06:44.439 --> 00:06:48.699
-with Jacobians in the next two lectures.
+com Jacobianos nas próximas duas aulas.
 
 00:06:48.699 --> 00:06:52.909
-Solving the inverse kinematics numerically
-looks like a pretty easy thing to do, are
+Resolvendo a cinemática inversa numericamente
+parece uma coisa muito fácil de fazer, 
 
 00:06:52.909 --> 00:06:55.719
-there any drawbacks? Well there are a few.
+existem desvantagens? Bem há algumas.
 
 00:06:55.719 --> 00:07:00.229
-First of all it's important to choose a good
-initial set of joint co-ordinates. If the
+Primeira de todas é importante escolher um bom
+conjunto inicial de coordenadas de junta. Se as
 
 00:07:00.229 --> 00:07:05.300
-joint co-ordinates are too far away from the
-actual joint co-ordinates required to achieve
+coordenadas de junta estão muito longe das
+coordenadas reais da junta necessárias para alcançar
 
 00:07:05.300 --> 00:07:11.060
-the pose then the numerical solution may not
-in fact converge. Another problem is that
+a posição, então a solução numérica pode não
+convergir de fato. Outro problema é que 
 
 00:07:11.060 --> 00:07:17.569
-we can't guarantee a particular robot configuration.
-The robot configuration that is found, depends
+não podemos garantir uma configuração particular 
+do robô. A configuração do robô encontrada, depende
 
 00:07:17.569 --> 00:07:21.650
-on the initial joint co-ordinates that are
-chosen, so the numerical algorithm will start
+das coordenadas inicias da junta que são escolhidas,
+então o algoritmo numérico irá começar
 
 00:07:21.650 --> 00:07:26.110
-with a particular set of joint angles that
-you give it and it will perform the optimization
+com um conjunto particular de ângulos de junta que
+você fornece e ele executara a otimização
 
 00:07:26.110 --> 00:07:31.659
-until it matches the desired end effector pose.
-The particular configuration that it ends
+até que corresponda a posição desejada do 
+efetuador. A configuração particular com a qual
 
 00:07:31.659 --> 00:07:36.990
-up with, depends on your initial choice of
-joint co-ordinates. Now importantly, you cannot
+termina, depende de sua escolha inicial de 
+coordenadas. Agora importante, você não pode
 
 00:07:36.990 --> 00:07:43.249
-control the robot configuration as you can
-with the analytic solution.
+controlar a configuração do robô como 
+você pode com a solução analítica.
 
 00:07:43.249 --> 00:07:48.620
-And finally the numerical solution can be
-computationally expensive. It's an iterative
+E finalmente, a solução numérica pode ser 
+computacionalmente cara. É um algoritmo
 
 00:07:48.620 --> 00:07:54.050
-algorithm and the number of iterations depends
-in some way on how good your initial joint
+iterativo e o número de iterações depende de
+alguma maneira quão boa é suas coordenadas
 
 00:07:54.050 --> 00:07:59.379
-co-ordinates are. So if you wanted this to
-run in real time, to be able to compute inverse
+iniciais de junta. Então, se você pretende que isto
+seja executado em tempo real, para pode calcular a
 
 00:07:59.379 --> 00:08:05.050
-kinematics say in a thousandth of a second,
-then a numerical algorithm may not be the
+cinemática inversa, digamos em um milésimo de
+segundos, então o algoritmo numérico pode não ser a
 
 00:08:05.050 --> 00:08:06.710
-most appropriate way to go.
+maneira mais apropriada.
 
