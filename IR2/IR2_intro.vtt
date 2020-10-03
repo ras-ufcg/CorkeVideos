@@ -11,7 +11,7 @@ no mundo. Na robótica, isso é realmente
 muito, muito importante.
 
 00:00:10.920 --> 00:00:16.410
-Por exemplo, em nosso problema de robótica,
+Por exemplo, no nosso problema em robótica,
 podemos querer descrever a posição de um robô.
 
 00:00:16.410 --> 00:00:19.950
@@ -34,8 +34,8 @@ Onde está a garrafa de água em relação ao
 robô? E isso é, claramente, algo que
 
 00:00:34.160 --> 00:00:39.630
-o robô gostaria de saber, caso desejasse
-ir e pegar a garrafa.
+o robô gostaria de saber, caso
+desejasse ir e pegar a garrafa.
 
 00:00:39.630 --> 00:00:45.160
 Quando se trata de descrever a posição das coisas,
@@ -93,8 +93,8 @@ pego esta placa aqui e digo, "Esta é a
 origem. Esta é a coordenada zero zero
 
 00:01:48.000 --> 00:01:51.100
-e vamos medir todas as distâncias a partir
-daqui.
+e vamos medir todas as 
+distâncias a partir daqui.
 
 00:01:51.100 --> 00:01:56.209
 E vamos criar um quadro de coordenadas.
@@ -109,11 +109,11 @@ distâncias, a distância sobre o eixo x, e a
 distância sobre o eixo y, para assim descrever
 
 00:02:06.619 --> 00:02:10.290
-a posição de um objeto num espaço
-bidimensional.
+a posição de um objeto 
+num espaço bidimensional.
 
 00:02:10.290 --> 00:02:14.060
-Nesta aula, Nós vamos manter as coisas
+Nesta aula, nós vamos manter as coisas
 simples. Vamos apenas considerar a posição
 
 00:02:14.060 --> 00:02:19.090
@@ -128,93 +128,93 @@ Prosseguindo, pontos de referências são arbitrários.
 Então, vamos falar, por um momento, sobre o sistema de
 
 00:02:28.660 --> 00:02:34.260
-sistema que usamos no nosso próprio planeta. 
-Então, temos a representação do planeta Terra
+referência que usamos no nosso próprio planeta. 
+Então, aqui temos a representação do planeta Terra.
 
 00:02:34.260 --> 00:02:38.400
 E isso é uma projeção. A Terra, é claro, é uma
 esfera. Para fazer um mapa retangular
 
 00:02:38.400 --> 00:02:42.750
-Como esse devemos fazer é cortar a esfera, 
+como esse, o que devemos fazer é cortar a esfera, 
 desenrolá-la e esticá-la, só então irá parecer
 
 00:02:42.750 --> 00:02:49.230
-Com um retângulo. Colocamos algumas linhas de
+com um retângulo. Colocamos algumas linhas de
 referência no globo. A mais importante delas,
 
 00:02:49.230 --> 00:02:51.780
-Talvez a mais óbvia, é o equador.
+talvez a mais óbvia, é o equador.
 
 00:02:51.780 --> 00:02:56.560
 Visto que a Terra é uma esfera, temos um eixo
 óbvio que é o eixo de rotação que o planeta
 
 00:02:56.560 --> 00:03:02.190
-Gira em torno e deve-se criar um plano orthogonal
-a esse eixo rotacional que corta
+gira em torno> Você pode criar um plano orthogonal
+a esse eixo de rotação que corta
 
 00:03:02.190 --> 00:03:07.210
-A esfera em dois hemisférios iguais e chamamos 
-essa linha de equador e está mostrada
+a esfera em dois hemisférios iguais. Chamamos 
+essa linha de equador, que está mostrada
 
 00:03:07.210 --> 00:03:11.200
-Aqui em preto. Você pode visitar o equador quando
-puder ficar com uma perna
+aqui em preto. Você pode visitar o 
+equador e pode ficar com uma perna
 
 00:03:11.200 --> 00:03:15.570
-No hemisfério norte e a outra perna no 
-hemisfério sul.
+no hemisfério norte e a
+outra perna no hemisfério sul.
 
 00:03:15.570 --> 00:03:21.149
 Agora existe outra linha, que chamamos de 
 meridiano primário e ela passa ortogonal ao
 
 00:03:21.149 --> 00:03:25.460
-Equador e ela passa sobre o observatório de 
+equador e ela passa sobre o observatório de 
 Greenwich, em Londres.
 
 00:03:25.460 --> 00:03:30.070
 Essa linha é completamente arbitrária. Ela não
-precisa estar sobre o observatório de Greenwich,
+precisa estar sobre o observatório de Greenwich.
 
 00:03:30.070 --> 00:03:35.399
 Mas a convenção no nosso planeta é que usamos
 a linha do observatório de Greenwich como
 
 00:03:35.399 --> 00:03:40.330
-O meridiano primário e você pode visitar Greenwich
+o meridiano primário. Você pode visitar Greenwich
 colocar seu pé em cada lado
 
 00:03:40.330 --> 00:03:47.550
-do meridiano primário nos hemisférios oeste e leste
-do planeta.
+do meridiano primário nos 
+hemisférios oeste e leste do planeta.
 
 00:03:47.550 --> 00:03:54.150
-A distância na direção horizontal é referenciada
-como longitude e a direção,
+A distância na direção horizontal é 
+referenciada como longitude e 
 
 00:03:54.150 --> 00:03:58.910
-A distância na outra direção, nos referimos como
+a distância na outra direção, nos referimos como
 latitude. Então temos linhas de longitude
 
 00:03:58.910 --> 00:04:04.090
-E linhas de latitude que registramos na esfera e
-esses dois números, longitude
+e linhas de latitude que registramos na 
+esfera. E esses dois números, longitude
 
 00:04:04.090 --> 00:04:09.940
-E latitude, são suficientes para descrever a posição em
+e latitude, são suficientes para descrever a posição em
 qualquer ponto, qualquer lugar na superfície
 
 00:04:09.940 --> 00:04:11.870
-Do nosso planeta.
+do nosso planeta.
 
 00:04:11.870 --> 00:04:17.020
 Agora temos essa linha arbitrária que eu
 mencionei antes que chamei de meridiano primário
 
 00:04:17.020 --> 00:04:21.399
-Que passa pelo observatório de Greenwich. Se a
+que passa pelo observatório de Greenwich. Se a
 história tivesse sido diferente, nós teríamos
 
 00:04:21.399 --> 00:04:26.809
@@ -226,24 +226,23 @@ o observatório de Paris e se você visitar Paris
 hoje, você verá a referida linha como a
 
 00:04:31.709 --> 00:04:38.710
-Linha Arago na qual esse meridiano primário não 
-existente passa pela cidade de
+Linha Arago na qual esse meridiano primário
+"não existente" passa pela cidade de
 
 00:04:38.710 --> 00:04:44.350
-Paris e foi nomeada depois que o astrônomo e
+Paris e foi nomeada para o astrônomo e
 matemático francês, Arago, que propôs esse
 
-
 00:04:44.350 --> 00:04:45.709
-Meridiano particular.
+meridiano particular.
 
 00:04:45.709 --> 00:04:50.610
 Então, a mensagem pra levar pra casa de hoje é
 que o meridiano primário é completamente arbitrário. Isso
 
 00:04:50.610 --> 00:04:55.929
-É uma convenção em que todos concordamos. Isso útil
-ter essa convenção e é assim
+é uma convenção em que todos concordamos. 
+É útil ter essa convenção e é assim
 
 00:04:55.929 --> 00:04:58.979
-Como descrevemos os pontos no planeta Terra.
+como descrevemos os pontos no planeta Terra.
