@@ -136,135 +136,135 @@ mover nosso robô para este conjunto de
 ver aqui que o robô definitivamente se moveu
 
 00:03:15.030 --> 00:03:18.849
-Now let's have a look around in here and see
-what's happened. So we can see that the center
+Agora vamos olhar aqui em volta e ver o
+que aconteceu. Então podemos ver que o centro
 
 00:03:18.849 --> 00:03:23.379
-of the end effector is now lined up with the
-center of this new co-ordinate frame that
+do efetuador está alinhado com o
+centro desse novo sistema de coordenadas que
 
 00:03:23.379 --> 00:03:29.840
-we introduced and we can see that the X, Y
-and Z axes of the robot end effector are lined
+introduzimos e podemos ver que os eixos X, Y
+e Z do efetuador do robô estão
 
 00:03:29.840 --> 00:03:37.069
-up with the X, Y and Z axes of the blue frame
-that we just introduced. Now it's a little
+alinhados com os eixos X, Y e Z do sistema azul
+que acabamos de apresentar. Agora é um pouco
 
 00:03:37.069 --> 00:03:43.569
-difficult in this stick figure plot, to determine
-the configuration of this particular robot.
+difícil neste gráfico de bonecos, determinar
+a configuração deste robô em particular.
 
 00:03:43.569 --> 00:03:48.239
-Is this in a left handed configuration or
-a right handed configuration. It's really
+É uma configuração para canhotos
+ou destros. É realmente
 
 00:03:48.239 --> 00:03:53.940
-a bit difficult to tell, however there is
-an improved way of looking at the robot, and
+um pouco difícil de dizer, no entanto há
+uma forma melhor de olhar para o robô, e é
 
 00:03:53.940 --> 00:04:00.110
-that's using the method Plot 3D. It takes
-a little moment to get started the first time
+usando o método Plot 3D. Leva um
+momentinho para começar na primeira vez
 
 00:04:00.110 --> 00:04:07.269
-you run it because it needs to load some detailed
-CAD models of the robot into the workspace.
+que você executa porque precisa carregar alguns
+modelos CAD detalhados do robô na área de trabalho.
 
 00:04:07.269 --> 00:04:15.280
-What we see here is then a beautifully rendered
-image of the Puma 560 robot and it's quite
+O que vemos aqui é uma imagem lindamente renderizada 
+do robô Puma 560 e é bastante
 
 00:04:15.280 --> 00:04:21.449
-clear that the robot is in a left handed configuration
-and the orientation of its gripper is straight
+claro que o robô está numa configuração canhota
+e a orientação de sua garra é para
 
 00:04:21.449 --> 00:04:27.630
-down basically in a configuration where it
-could pick things up from a horizontal table.
+baixo basicamente em uma configuração onde
+ele pode pegar coisas de uma mesa na horizontal.
 
 00:04:27.630 --> 00:04:32.180
-Now we might be interested in putting the
-robot into a different configuration. We can
+Agora nós podemos estar interessados em colocar
+o robô em uma confguração diferente. Podemos
 
 00:04:32.180 --> 00:04:38.240
-do that by re-computing the inverse kinematics,
-but this time we're going to pass in an option
+fazer isso recalculando a cinemática inversa,
+mas dessa vez iremos passar uma opção
 
 00:04:38.240 --> 00:04:44.270
-R, which is asking for the joint angles that
-correspond to a right handed configuration.
+R, que está pedindo pelos ângulos das juntas
+que correspondem a configuração destra.
 
 00:04:44.270 --> 00:04:48.990
-Here is the set of joint angles and we can
-plot those and we can see now that our robot
+Aqui está o grupo de ângulos de junta e
+podemos plotá-los e ver que agora nosso robô
 
 00:04:48.990 --> 00:04:54.770
-is very clearly in a right handed configuration.
+está claramente numa configuração destra.
 
 00:04:54.770 --> 00:05:00.650
-Now I could also ask for it to be in a right
-handed configuration with the elbow down rather
+Agora eu posso pedir para ele ficar em uma
+configuração destra com o cotovelo para baixo em
 
 00:05:00.650 --> 00:05:06.340
-than up and pass in the option D to indicate
-that. We have now a different set of joint
+vez de estar para cima e passar a opção D para indicar
+isso. Agora temos um grupo diferente de ângulos
 
 00:05:06.340 --> 00:05:11.300
-angles, you see that they differ to the values
-shown above and we can plot this and we can
+de juntas, você vê que eles diferem dos valores
+mostrados acima e podemos plotar isso e
 
 00:05:11.300 --> 00:05:16.400
-see that our robot now is in a right handed
-configuration but with its elbow down and
+ver que nosso robô agora está em uma configuração
+destra mas com o cotovelo para baixo e
 
 00:05:16.400 --> 00:05:24.690
-the wrist is in a very, very odd pose indeed.
-It looks quite awkward. I can also then ask
+o pulso está em uma pose muito, muito estranha.
+Parece um pouco esquisito. Eu também posso pedir
 
 00:05:24.690 --> 00:05:32.800
-for the robot to be in a left handed configuration
-with the elbow being down and I can plot that
+para o robô ficar em uma configuração canhota
+com o cotovelo para baixo e eu posso plotar isso
 
 00:05:32.800 --> 00:05:37.360
-and it looks something like this...
+e vai parecer com algo desse tipo...
 
 00:05:37.360 --> 00:05:41.720
-What we've seen for this six degree of freedom
-robot that moves in three dimensions, is that
+O que vimos para este robô de seis graus de liberdade
+que se move em três dimensões, é que
 
 00:05:41.720 --> 00:05:48.110
-there are in fact eight solutions for any
-particular end effector pose. There is a solution
+existem de fato oito soluções para qualquer
+pose particular do efetuador. Há uma solução
 
 00:05:48.110 --> 00:05:53.759
-where the robot is either in a left handed
-or right handed configuration, there is solutions
+onde o robô está ou em uma configuração canhota
+ou destra, há soluções onde o
 
 00:05:53.759 --> 00:05:57.419
-where the elbow is up, that means that the
-elbow is higher than the shoulder or where
+cotovelo está para cima, isso significa que 
+o cotovelo está mais alto que o ombro ou
 
 00:05:57.419 --> 00:06:01.750
-the elbow is down; that's where the elbow
-is below the shoulder and there's solutions
+onde o cotovelo está para baixo; e é onde o cotovelo 
+está abaixo do ombro e há soluções onde
 
 00:06:01.750 --> 00:06:08.979
-where the wrist is flipped or not flipped,
-that's a rotation of 180 degrees in the configuration
+o pulso está ou não virado, existe
+uma rotação de 180 graus na configuração do
 
 00:06:08.979 --> 00:06:14.210
-of the wrist. For the case of the robot with
-a two fingered gripper, as is shown here,
+pulso. Para o caso do robô com uma
+garra de dois dedos, como mostrado aqui,
 
 00:06:14.210 --> 00:06:20.350
-then a rotation of 180 degrees around the
-wrist axis, leaves two fingers in effectively
+então uma rotação de 180 graus em torno do eixo
+do pulso, deixa os dois dedos efetivamente
 
 00:06:20.350 --> 00:06:26.229
-the same configuration and it makes no difference
-when it comes to grasping an object, picking
+na mesm aconfiguração e não faz diferença
+na hora de agarrar um objeto, pegá-lo
 
 00:06:26.229 --> 00:06:27.720
-it up or putting it down.
+ou colocá-lo para baixo
 
