@@ -3,177 +3,177 @@ Kind: captions
 Language: en
 
 00:00:03.500 --> 00:00:08.710
-Let's now consider the important and very
-realistic problem of moving a robot end effector
+Consideremos agora o importante e bastante
+realístico problema de mover um efetuador robótico
 
 00:00:08.710 --> 00:00:16.020
-from one pose to another. From side A to side
-B and we want to move it smoothly. Well we
+de uma pose para outra. Do lado A para o
+lado B e queremos que se mova suavemente.
 
 00:00:16.020 --> 00:00:21.850
-can determine the joint angles that correspond
-to pose A and we can determine the joint angles
+Assim, podemos determinar os ângulos das juntas 
+que correspondem à pose A, assim como os ângulos
 
 00:00:21.850 --> 00:00:27.539
-that correspond to pose B, simply by applying
-the inverse kinematics that we've already
+das juntas que correspondem à pose B, apenas 
+aplicando a cinemática inversa que nós já
 
 00:00:27.539 --> 00:00:28.300
-studied.
+estudamos.
 
 00:00:28.300 --> 00:00:32.830
-Now that we've got these two sets of joint
-angles, the initial set of joint angles and
+Agora que temos os dois conjuntos de ângulos das juntas,
+o conjunto inicial e o conjunto final,
 
 00:00:32.830 --> 00:00:38.190
-the final set of joint angles, all we need
-to do is move smoothly from one set to the
+tudo que temos que fazer é mover suavemente, de um
+conjunto para o outro e nós já discutimos previamente
 
 00:00:38.190 --> 00:00:45.270
-other and we've previously discussed how to do this, how to interpret vector quantities smoothly over time.
+como fazer isto, como interpretar quantidades vetoriais
+suavemente ao longo do tempo.
 
 00:00:45.880 --> 00:00:53.039
-Okay, we're back in MATLAB and first of all
-I'm going to define model for my Puma 560
+Okay, voltamos para o MATLAB e, primeiramente, vou
+definir o modelo para o meu robô Puma 560.
 
 00:00:53.039 --> 00:01:03.000
-robot. And now I'm going to define a couple
-of poses and I am going to orientate this
+Agora, eu irei definir algumas poses e orientar
+essa pose em particular de forma que 
 
 00:01:03.000 --> 00:01:09.240
-particular pose so that the Z axis is pointing
-straight down, as if the robot was working
+o eixo Z esteja apontando diretamente para baixo,
+como se o robô estivesse trabalhando sobre 
 
 00:01:09.240 --> 00:01:21.560
-above a table. And the destination pose is
-going to be like this, minus 0.20 and I'm
+a mesa. Desta forma, a pose de destino será 
+desta forma, menos 0.20 e irei
 
 00:01:21.560 --> 00:01:31.189
-going to orientate it so that the Z axis is
-parallel to the XY plane, rotated around the
+orientá-la de forma que o eixo Z esteja 
+paralelo ao plano XY, rotacionado em relação
 
 00:01:31.189 --> 00:01:34.409
-X axis by Pi on 2.
+ao eixo X em Pi/2.
 
 00:01:34.409 --> 00:01:42.470
-Now I can determine the joint angles for the
-initial pose ikine6s, I'm going to pass in
+Agora podemos determinar os ângulos das juntas para 
+a pose inicial ikine6s. Irei introduzir a 
 
 00:01:42.470 --> 00:01:52.700
-the initial pose and that's the joint angles
-and for the final pose I will do the same
+pose inicial e esses são os ângulos das juntas.
+Faremos o mesmo para a pose final.
 
 00:01:52.700 --> 00:01:59.170
-thing. Now I can compute a trajectory that
-goes from the initial set of joint angles
+Assim, posso computar a trajetória que 
+parte do conjunto inicial de ângulos
 
 00:01:59.170 --> 00:02:03.840
-to the final set of joint angles in 50 steps,
-put a semi colon on the end so it doesn't
+para o conjunto final de ângulos das juntas em 50 
+passos, por um ponto e vírgula no final para que 
 
 00:02:03.840 --> 00:02:10.940
-print that, but the result will be a 50 by
-6 matrix, we can see here, 50 rows, one row
+não seja mostrado. O resultado será um matrix 50 
+por 6, podemos ver aqui, 50 linhas, uma linha
 
 00:02:10.940 --> 00:02:19.230
-per time step and each column represents the
-joint angle evolving over time. Now I can
+para cada passo de tempo e cada coluna representa o 
+ângulo da junta, ao longo do tempo. Agora, posso
 
 00:02:19.230 --> 00:02:25.280
-plot the robot making that particular motion.
-I can animate it by passing in the trajectory
+plotar o robô fazendo este movimento em particular.
+Posso animá-lo ao introduzir a trajetória
 
 00:02:25.280 --> 00:02:34.060
-and here we see the robot doing the motion; it's moving from left to right and the tool is rotating.
+e aqui vemos o robô fazendo o movimento; ele se move
+da esquerda para a direita e a ferramente está rotacionando.
 
 00:02:37.240 --> 00:02:46.180
-If I start a new figure I can plot the joint
-angles and see how they evolved over time.
+Se eu começar uma nova figura, eu posso plotar os 
+ângulos das juntas e ver como eles evoluem no tempo.
 
 00:02:46.190 --> 00:02:52.620
-And we can see that they vary smoothly as
-a function of time over the 50 time steps.
+Assim, podemos ver que eles variam bem suavemente
+como uma função do tempo ao longo dos 50 passos.
 
 00:02:52.620 --> 00:02:58.640
-Now we can look at the joint angle trajectories
-and we can see that the joint angles vary
+Agora podemos visualizar a trajetória do ângulo da
+junta e podemos ver que os ângulos das juntas variam
 
 00:02:58.640 --> 00:03:03.400
-smoothly along the trajectories, starting
-with the joint angles necessary to achieve
+suavemente ao longo da trajetória, começando 
+como os ângulos necessários para atingir
 
 00:03:03.400 --> 00:03:09.610
-pose A and ending with the set of joint angles
-necessary to achieve pose B and this smooth
+a pose A e terminando como o conjunto de ângulos 
+necessários para alcançar a pose B, este suave
 
 00:03:09.610 --> 00:03:16.099
-motion occurs over a period of two seconds.
-Given that I have the joint angles at every
+movimento ocorre ao longo do período de dois segundos.
+Dado que eu tenho os ângulos das juntas em 
 
 00:03:16.099 --> 00:03:21.569
-point along the trajectory; it's relatively
-straight forward to compute the forward kinematics
+cada ponto, ao longo da trajetória; ela é relativamente
+direta para computar a cinemática direta 
 
 00:03:21.569 --> 00:03:27.769
-for each of those intermediate sets of joint
-angles. And here I can plot the end effector
+para cada um desses conjuntos intermediários de
+ângulos. Aqui, posso plotar a posição cartesiana
 
 00:03:27.769 --> 00:03:33.659
-Cartesian position, that's it's X, Y and Z
-co-ordinate as a function of time and we can
+do efetuador, que são suas coordenadas X, Y
+e Z como função do tempo e podemos
 
 00:03:33.659 --> 00:03:39.479
-see that those co-ordinates vary smoothly
-as a function of time, which is very, very desirable.
+ver que essas coordenadas variam suavemente como 
+funções do tempo, o que é bastante desejável.
 
 00:03:39.480 --> 00:03:45.959
-However if I plot the path on the XY plane,
-we can see that it starts at A and goes to
+Contudo, se eu plotar o caminho no plano XY,
+podemos ver que ele começar em A e segue para
 
 00:03:45.959 --> 00:03:52.640
-B but it doesn't move in a straight line in
-the XY plane. When I'm computing the kinematics
+B, porém sem fazer uma linha reta no plano XY.
+Quando estou calculando a cinemáticas
 
 00:03:52.640 --> 00:03:58.150
-for every set of intermediate joint angles,
-I can also determine the end effector orientation
+para cada conjunto intermediário de ângulos, 
+posso também determinar a orientação do efetuador
 
 00:03:58.150 --> 00:04:02.879
-and here I've plotted the roll, pitch and
-yaw angles of the end effector, as it moves
+e aqui, plotei os ângulos roll, pitch e yaw
+do efetuador, conforme se move de A para B.
 
 00:04:02.879 --> 00:04:07.450
-from A to B. We can see that the pitch and
-yaw angles are zero at the beginning of the
+Podemosn ver que os ângulos pitch e yaw são
+zero no início da trajetória
 
 00:04:07.450 --> 00:04:11.260
-trajectory and at the end of the trajectory,
-but in the middle of the trajectory we can
+e ao final da trajetória, porém no meio da trajetória
 
 00:04:11.260 --> 00:04:16.880
-see that the pitch angle is not equal to zero.
-By tackling the problem in this particular
+vemos que o ângulo pitch não é igual a zero.
+Ao confrontar o problema desta forma em particular,
 
 00:04:16.880 --> 00:04:19.080
-form, we've really only applied two constraints.
+nós apenas aplicamos duas restrições.
 
 00:04:19.080 --> 00:04:22.840
-We've said what we want to happen at A and
-what we want to happen at B, but we haven't
+Foi dito o que queremos que aconteça em A e
+o que aconteça em B, porém não dissemos
 
 00:04:22.840 --> 00:04:28.080
-said anything about what happens in between.
-And the result of this approach is that the
+nada sobre o que acontece no meio. Assim, o 
+resultado desta abordagem é que o efetuador
 
 00:04:28.080 --> 00:04:33.070
-end effector has not followed a straight line
-path in the world and the orientation of the
+não seguiu um caminho reto no mundo e sua orientação
 
 00:04:33.070 --> 00:04:39.210
-end effector has deviated from the desired orientation
-in the mid points of the trajectory. In the
+se afastou da orientação desejada nos pontos 
+intermediários da trajetória. 
 
 00:04:39.210 --> 00:04:41.780
-next section we'll look at a way we can remedy
-this.
+Na próxima seção, veremos como remediar isso.
+
 
