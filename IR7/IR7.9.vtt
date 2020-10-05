@@ -1,185 +1,187 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.669 --> 00:00:06.080
-Here we have an image of a redundant robot.
+Aqui temos uma imagem de um robô redundante.
 
 00:00:06.080 --> 00:00:09.090
-And this is a concept that we introduced in
-the previous lecture.
+E este é um conceito q introduzimos na
+aula passada.
 
 00:00:09.090 --> 00:00:14.010
-This is a robot with a very large number of
-degrees of freedom or joints.
+Este é um robô que tem um número alto de
+graus de liberdade ou articulações.
 
 00:00:14.010 --> 00:00:17.840
-We also introduced the concepts of task space
-and configuration space.
+Também introduzimos os conceitos de espaço de
+tarefa e espaço de configuração.
 
 00:00:17.840 --> 00:00:23.650
-Now the task space of this robot is a subset
-of SE3 and that's exactly the same task space
+Agora, o espaço de tarefa deste robô é um subconjunto
+do SE3 e isso é exatamenteo o mesmo espaço de tarefa
 
 00:00:23.650 --> 00:00:29.320
-as the Puma robot has, that is within a working
-volume, it can move to a particular point
+que o robô Puma tem, ou seja, dentro 
+de um volume de trabalho, ele pode se
+mover para um ponto específico
 
 00:00:29.320 --> 00:00:33.500
-and achieve a particular end effector orientation.
+e atingir um efetuador com uma orientação espeficica. 
 
 00:00:33.500 --> 00:00:36.940
-However the configuration space of this robot
-is much, much bigger.
+Porém, o espaço de configuração desse robô é
+muito, muito maior.
 
 00:00:36.940 --> 00:00:42.000
-We're assuming that this robot has got a hundred
-joints, then its configuration space is R
+Estamos assumindo que esse robô tem cem
+articulações, então seu espaço de configuração é R
 
 00:00:42.000 --> 00:00:47.389
-to the 100, with a Puma robot with only 6
-joints, it has got a configuration space of
+elevado a 100. Com o robô Puma tendo apenas 6
+juntas, ele tem o espaço de configuração de
 
 00:00:47.389 --> 00:00:48.909
-R to the 6th.
+R elevado a 6th.
 
 00:00:48.909 --> 00:00:53.000
-The task space has got a dimension of 6, the
-configuration space has got a dimension space
+O espaço de tarefa tem 6 dimensões, o espaço de 
+configuração tem um espaço de 100
 
 00:00:53.000 --> 00:00:54.699
-of 100.
+dimensões.
 
 00:00:54.699 --> 00:00:58.969
-So we could consider that six of those degrees
-of freedom are used to control the position
+Então, podemos considerar que seis desses graus
+de liberdade são usados para controlar a posição
 
 00:00:58.969 --> 00:01:00.910
-and orientation of the end effector.
+e a orientação do efetuador.
 
 00:01:00.910 --> 00:01:07.990
-The other 94 degrees of freedom are used to
-define an arbitrary shape for the robot arm,
+Os outros 94 graus de liberdade são usados
+para definir uma forma arbitrária para o braço
+do robô, 
 
 00:01:07.990 --> 00:01:12.340
-so that we can independently control the position
-and orientation of the end effector and the
+então podemos controlar, independentemente, 
+a posição e a orientação do efetuador e 
 
 00:01:12.340 --> 00:01:17.680
-path that the arm follows in order to get
-from the base of the robot to the end effector.
+o caminho que o braço segue com objetivo
+de pegar da base do robô para o efetuador.
 
 00:01:17.680 --> 00:01:22.310
-When it comes to determining the inverse kinematics
-then, we have a bit of a problem; there are
+Quando se trata de determinar a cinemática inversa,
+temos um pequeno problema: existem, 
 
 00:01:22.310 --> 00:01:29.170
-in fact an infinite number of sets of joint
-angles and infinite number of robot configurations
+na realidade, um número infinito de conjuntos para
+os ângulos das juntas, e um número infinito de
+configurações de robôs
 
 00:01:29.170 --> 00:01:32.950
-that will lead to exactly the same end effector
-pose.
+que irão levar, exatamente, à mesma
+pose do efetuador.
 
 00:01:32.950 --> 00:01:37.640
-In the case of the Puma robot, there were
-six configurations that gave the same end
+No caso do robô Puma, havia seis
+configurações que deram a mesma 
 
 00:01:37.640 --> 00:01:41.680
-effector pose; for this robot there are an
-infinite number.
+pose do efetuador. Para esse robô existem um
+número infinito.
 
 00:01:41.680 --> 00:01:47.030
-To solve the inverse kinematics then for a
-redundant robot, we have to rely on a numerical
+Para resolver a cinemática inversa, em um robô
+redundante, temos que contar com uma solução
 
 00:01:47.030 --> 00:01:48.810
-solution.
+numérica. 
 
 00:01:48.810 --> 00:01:54.749
-We're going to do an example now with a redundant
-robot and we're going to use a Toolbox model
+Nós vamos fazer um exemplo, agora com um robô 
+redundante, e iremos usar um modelo de Toolbox
 
 00:01:54.749 --> 00:01:57.869
-called MDL Hyper 3D.
+chamado MDL Hyper 3D.
 
 00:01:57.869 --> 00:02:05.289
-So this is a Hyper-redundant robot, in 3 dimensions
-and I'm going to ask for a robot with 20 dimensions.
+Então, isto é um robô Hyper-redundante em 3 
+dimensões. E irei pedir um robô com 20 dimensões.
 
 00:02:05.289 --> 00:02:09.851
-We can see that there is a new serial link
-object in the workspace called H3D and if
+Podemos ver que há um novo objeto serial link
+na area de trabalho chamado H3D e se
 
 00:02:09.851 --> 00:02:14.200
-we look at the parameters of the robot, we
-can see that it has got 20 joints, each joint
+olharmos para os parâmetros desse robô, vemos
+que ele tem 20 articulações, cada uma
 
 00:02:14.200 --> 00:02:17.500
-is only 0.05 meters long.
+tem apenas 0.05 metros de comprimento.
 
 00:02:17.500 --> 00:02:23.769
-Let's compute the inverse kinematics numerically
-and we're going to apply the ikine method
+Vamos computar a cinemática inversa numericamente
+e iremos aplicar o método ikine 
 
 00:02:23.769 --> 00:02:27.950
-on that particular object and I'm going to
-pass in the pose that I want the robot to
+neste objeto em particular. E irei passar
+a pose que eu quero que esse robô
 
 00:02:27.950 --> 00:02:32.400
-adopt, that I have already defined and I'm
-going to pass in the initial joint angles
+adote, que eu já defini. E eu vou passar os
+ângulos das articulações iniciais.
 
 00:02:32.400 --> 00:02:37.620
-and I'm going to use the workspace variable
-QZ, that was defined by the script that created
+E eu vou usar a variável QZ, da área de trabalho, 
+que foi definida pelo script que criou o 
 
 00:02:37.620 --> 00:02:39.810
-the robot for me.
+robô para mim.
 
 00:02:39.810 --> 00:02:41.420
-And here we have the solution.
+E aqui temos a solução.
 
 00:02:41.420 --> 00:02:46.510
-We've computed a 20 element vector, which
-are the joint angles necessary for this 20
+Computamos um vetor de 20 elementos, 
+que são os ângulos das articulações 
+necessários para que
 
 00:02:46.510 --> 00:02:50.150
-joint robot to adopt the pose T2.
+esse robô de 20 juntas adote a pose T2.
 
 00:02:50.150 --> 00:02:54.660
-I can test the correctness of this by computing
-the forward Kinematics for the set of joint
+Eu posso testar a exatidão disso computando
+a cinemática direta para o conjunto de ângulos
 
 00:02:54.660 --> 00:02:59.410
-angles that I just computed and that's what
-it looks like and this is the original pose
+das articulações que acabei de calcular, e 
+é isto que se parece e esta é a pose original
 
 00:02:59.410 --> 00:03:00.410
-that I asked for.
+que eu pedi.
 
 00:03:00.410 --> 00:03:02.579
-So we can see that they are identical.
+Então, podemos ver que elas são idênticas. 
 
 00:03:02.579 --> 00:03:07.360
-I can plot the configuration of the robot
-at the set of joint angles computed by the
+Eu posso plotar a configuração do robô no conjunto
+dos ângulos das articulações computadas pela
 
 00:03:07.360 --> 00:03:13.590
-inverse kinematics and it looks something
-like that.
+cinemática inversa e se parece algo assim.
 
 00:03:13.590 --> 00:03:19.530
-Hold on so I can overlay on that now the original
-pose that I asked for, which was in the workspace
+hold on, para que eu possa sobrepor a pose original
+que eu pedi, que estava no área de trabalho, na
 
 00:03:19.530 --> 00:03:20.879
-variable T2.
+variável T2.
 
 00:03:20.879 --> 00:03:24.690
-And there we see that the end effector is
-in the correct position and that it has the
+E lá vemos que o efetuador está na posição
+correta e que ele tem 
 
 00:03:24.690 --> 00:03:26.150
-correct orientation.
-
+a orientação correta.
