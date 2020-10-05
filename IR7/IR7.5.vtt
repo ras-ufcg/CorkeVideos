@@ -1,52 +1,52 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.720 --> 00:00:09.930
-Here we have our familiar 2link robot in the
-configuration where Q2 is greater than 0.
+Aqui temos nosso familiar robô de 2 ligações
+na configuração em que Q2 é maior que 0.
 
 00:00:09.930 --> 00:00:16.529
-And over laid on that is the robot with the
-same end effector position but Q2 is now less
+E sobreposto está o robô com a mesma
+posição do efetuador mas Q2 é agora menor
 
 00:00:16.529 --> 00:00:22.929
-than 0. These are the two possible solutions
-for this robot in order to achieve this particular
+que 0. Essas são as duas soluções possíveis
+para esse robô, a fim de atingir essa pose de ponto
 
 00:00:22.929 --> 00:00:28.679
-endpoint pose. We might be interested in how
-the robot moves from one configuration to
+final em particular. Podemos estar interessados em
+como o robô se movimenta de uma configuração para
 
 00:00:28.679 --> 00:00:34.110
-the other. It's an interesting motion for
-the robot because the end point position is
+a outra. é um movimento interessante para
+o robô porque a posição do ponto final é
 
 00:00:34.110 --> 00:00:39.570
-exactly the same but the joint angles Q1 and
-Q2 need to follow some interesting trajectory
+exatamente a mesma mas os ângulos das juntas Q1 e
+Q2 precisam seguir alguma tragetória interessante
 
 00:00:39.570 --> 00:00:43.450
-to move from the first configuration to the second.
+para se mover da primeira configuração para a segunda.
 
 00:00:43.450 --> 00:00:49.140
-Here's a more vivid example in three dimensions.
-This shows a PUMA 560 robot moving to grab
+Aqui está um exemplo mais vívido em três dimensões.
+Isso mostra um robô PUMA 560 se movendo para agarrar
 
 00:00:49.140 --> 00:00:54.940
-a ball. Now we can see that the robot is making
-that grasp in either the left hand configuration
+uma bola. Agora podemos ver que o robô está fazendo
+esse ajuste tanto na configuração esquerda quanto
 
 00:00:54.940 --> 00:00:59.750
-or the right handed configuration. We might
-ask the question, "How does the robot move
+na configuração destra. Nós podemos nos
+aperguntar, "Como o robô muda de uma
 
 00:00:59.750 --> 00:01:04.869
-from a left handed configuration to a right
-handed configuration? How do we compute the
+configuração esquerda para uma configuração
+destra? Como nós calculamos a
 
 00:01:04.869 --> 00:01:08.820
-trajectory that allows that to happen?"
+trajetória que permite que isso aconteça?"
 
 00:01:08.820 --> 00:01:14.760
 Once again we're going to define a model for
