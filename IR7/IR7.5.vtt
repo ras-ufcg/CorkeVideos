@@ -19,7 +19,7 @@ final em particular. Podemos estar interessados em
 como o robô se movimenta de uma configuração para
 
 00:00:28.679 --> 00:00:34.110
-a outra. é um movimento interessante para
+a outra. É um movimento interessante para
 o robô porque a posição do ponto final é
 
 00:00:34.110 --> 00:00:39.570
@@ -49,151 +49,150 @@ destra? Como nós calculamos a
 trajetória que permite que isso aconteça?"
 
 00:01:08.820 --> 00:01:14.760
-Once again we're going to define a model for
-our PUMA 560 robot. Load that into the workspace.
+Mais uma vez, vamos definir um modelo para o
+nosso robô PUMA 560. Carregue isso na área de trabalho.
 
 00:01:14.760 --> 00:01:21.900
-We have the robot object. Say here. The workspace
-variable p560. I'm going to define a pose
+Nós temos o objeto robô. Declare aqui a variável
+da área de trabalho p560. Eu vou definir uma pose
 
 00:01:21.900 --> 00:01:29.580
-that I'd like my robot to adopt. And let's
-give him by this homogeneous transformation
+que eu gostaria que meu robô adotasse. E vamos
+dar a ele através dessa matriz de transformação
 
 00:01:29.580 --> 00:01:36.920
-matrix here. I'm going to define a new workspace
-variable that represents the set of join angles
+homogênea aqui. Eu vou definir uma nova variável da área
+de trabalho que representa o conjunto de angulos das juntas
 
 00:01:36.920 --> 00:01:43.950
-required by the robot to adopt this particular
-pose in the left handed configuration. I use
+exigido pelo robô para adotar essa pose em
+particular na configuração canhota. Eu uso
 
 00:01:43.950 --> 00:01:50.540
-the ikine6s method, pass in the homogeneous
-transformation representing the desired pose
+o método ikine6s, passe na transformação
+homogênea que representa a pose desejada
 
 00:01:50.540 --> 00:01:56.280
-and the switch L to indicate the robot is
-to be in a left handed configuration and this
+e a chave L para indicar que o robô deve estar
+em uma configuração canhota e esse é o conjunto
 
 00:01:56.280 --> 00:02:02.210
-is the required set of joint angles. I can
-do the same thing for a right handed configuration.
+necessário de ângulos de junta. Eu posso fazer
+a mesma coisa para a configuração destra.
 
 00:02:02.210 --> 00:02:07.350
-I'm going to create a new workspace for a
-variable called QR.
+Eu vou criar uma nova área de trabalho
+para uma variável chamada QR.
 
 00:02:07.350 --> 00:02:12.450
-Let's have a look at these particular robot
-configurations. I can plot the configuration
+Vamos dar uma olhada nessas configurações desse
+robô em particular. Eu posso traçar a configuração
 
 00:02:12.450 --> 00:02:19.480
-QL. And it looks like this in stick figure
-representation. Let me look at that from a
+QL. E fica dessa forma na representação.
+Deixe-me olhar para isso por um
 
 00:02:19.480 --> 00:02:26.310
-different vantage point. And it looks like
-this for the right handed configuration. Now
+ponto de vista diferente. E é desta forma
+para a configuração destra. Agora
 
 00:02:26.310 --> 00:02:30.120
-getting a little bit ahead of ourselves, what
-I'm going to do is to create a trajectory
+indo um pouco mais à frente, o que
+eu vou fazer é criar uma trajetória
 
 00:02:30.120 --> 00:02:34.239
-and show the robot moving from the configuration
-where all those joint angles are equal to
+e mostrar o robô se movendo da configuração
+onde todos os ângulos de juntas são iguais à
 
 00:02:34.239 --> 00:02:39.590
-0 to the left handed pose. It's going to do
-that in 50 time steps.
+0 para a pose de mão direita. Isso será
+feito em 50 passos de tempo.
 
 00:02:39.590 --> 00:02:45.810
-Now the result of the jtraj function and we'll
-talk more about this later in the lecture
+Agora, o resultado para a função jtraj, e nós
+vamos conversar mais sobre isso depois na aula,
 
 00:02:45.810 --> 00:02:52.319
-is a matrix with 50 rows and 6 columns. Each
-row corresponds to particular time step. Row
+é uma matriz com 50 linhas e 6 colunas. Cada
+linha corresponde à um passo em particular. A linha
 
 00:02:52.319 --> 00:02:57.160
-1 is the first point of the trajectory. Row
-50 is the last point of the trajectory. Each
+1 é o primeiro ponto da trajetória. A linha
+50 é o último ponto da trajetória. Cada coluna
 
 00:02:57.160 --> 00:03:00.700
-column represents a particular joint angle.
+representa um ângulo de junta em particular.
 
 00:03:00.700 --> 00:03:06.660
-Now the robotic tool box can easily deal with
-trajectories. So I plot but instead of a particular
+Agora a tool box robótica pode facilmente lidar com
+trajectórias. Então eu traço, mas em vez de um ângulo de
 
 00:03:06.660 --> 00:03:11.940
-joint angle I plot a trajectory. We see the
-robot now moving from 0 angle configuration
+junta específico eu traço uma trajetória. Vemos o
+robô agora se movendo da configuração de ângulo 0
 
 00:03:11.940 --> 00:03:14.440
-to a left handed configuration.
+para a configuração de mão esquerda.
 
 00:03:17.360 --> 00:03:20.760
-I can change this two, move from the 0 angle configuration
+Eu posso alterar esses dois, mover da configuração de
 
 00:03:20.770 --> 00:03:26.239
-to the right handed configuration, and once
-again I can plot that. See the robot doing
+ângulo 0 para a configuração destra, e mais uma
+vez eu posso traçar isso. Veja o robô fazendo
 
 00:03:26.239 --> 00:03:34.660
-a quite convoluted looking motion. Finally
-what I can do is show the robot moving from
+um movimento bastante complicado. Finalmente
+o que eu posso fazer é mostrar o robô se movendo
 
 00:03:34.660 --> 00:03:39.160
-the left handed configuration to the right
-handed configuration.
+da configuração canhota para a configuração
+destra.
 
 00:03:39.160 --> 00:03:44.349
-And this is an interesting motion because
-the robot starts and ends the trajectory with
+E isso é um movimento interessante porque
+o robô inicia e termina a trajetória com
 
 00:03:44.349 --> 00:03:49.739
-its end effector in exactly the same pose.
-But in between the robot is going to go through
+seu efetuador exatamente na mesma pose.
+Mas no meio do caminho o robô vai passar por
 
 00:03:49.739 --> 00:03:56.739
-some contortions in order to change from being
-a left handed robot to a right handed robot.
+algumas contorções para mudar de um robô canhoto
+para um robô destro.
 
 00:03:56.739 --> 00:04:01.379
-Compute the trajectory and then we're going
-to have a look at that. Interesting to see
+Calcule a trajetória e então vamos dar uma
+olhada nisso. Interessante ver o que
 
 00:04:01.379 --> 00:04:06.129
-what the robot does here. You can see that
-the motion is quite complex and the end effector ends
+o robô faz aqui. Você pode ver que o movimento
+é um pouco complexo e o efetuador termina exatamente
 
 00:04:06.129 --> 00:04:13.409
-up just where it started. Sometimes in a manufacturing
-scenario, the robot does exactly need to change
+onde ele começou. Às vezes em um cenário de
+fabricação, o robô precisa exatamente de mudar
 
 00:04:13.409 --> 00:04:18.329
-from being left handed to being right handed.
-Perhaps it needs to access objects at the
+da configuração de canhoto para destro.
+Talvez ele precise acessar objetos nas
 
 00:04:18.329 --> 00:04:22.320
-extreme ends of its workspace and needs to
-change configuration.
+extremidades da sua área de trabalho e precise
+mudar de configuração.
 
 00:04:22.320 --> 00:04:28.830
-So these configuration change motions, there
-is no net over all the motion of the robot
+Então, essas configurações mudam movimentos, não
+há rede sobre todos os movimentos do robô
 
 00:04:28.830 --> 00:04:33.979
-but while it's doing the configuration change,
-there can be some quite wild and exciting
+mas enquanto ele está mudando de configuração,
+podem haver alguns movimentos de junta selvagens
 
 00:04:33.979 --> 00:04:39.060
-joint motions. You need to be a little bit
-careful when you command such a motion that
+e emocionantes. Você precisa ser um pouco cuidadoso
+ao comandar tal movimento para que o robô não
 
 00:04:39.060 --> 00:04:42.560
-the robot is not going to collide with anything
-in its workspace.
+colida em nada na sua área de trabalho.
 
