@@ -153,157 +153,156 @@ We can write this relationship for the sine
 of the joined angle Q2.
 
 00:02:32.970 --> 00:02:39.700
-Now, we can consider this bigger triangle
-whose angle is beta and this side length of
+Agora, nós podemos considerar este triângulo maior
+ao qual o ângulo é beta e o comprimento deste lado
 
 00:02:39.700 --> 00:02:41.820
-the triangle is given here in blue.
+do triângulo é dado em azul.
 
 00:02:41.820 --> 00:02:45.070
-And, the length of the other side of the triangle
-is this.
+Além de que o tamanho do outro lado do triângulo ser este.
 
 00:02:45.070 --> 00:02:51.560
-So, now we can write an expression for the
-angle beta in terms of these parameters here.
+Logo, nós podemos escrever uma expressão para o 
+ângulo beta em termos destes parâmetros.
 
 00:02:51.560 --> 00:02:56.260
-Going back to the red triangle that we drew
-earlier, we can establish a relationship between
+Retornando ao triângulo vermelho que desenhamos
+antes, podemos estabelecer uma relação entre
 
 00:02:56.260 --> 00:02:59.050
-Q1 and the angle beta.
+Q1 e o ângulo beta.
 
 00:02:59.050 --> 00:03:03.790
-Introduce yet another angle, this one gamma
-and we can write a relationship between the
+Introduzindo mais um ângulo, este é gama
+e nós podemos estabelecer uma relação entre
 
 00:03:03.790 --> 00:03:08.669
-angle gamma and the tooltip coordinates x
-and y.
+o ângulo gama e as coordenadas auxiliares x e y
 
 00:03:08.669 --> 00:03:12.910
+Agora, podemos descrever uma relação entre os
+ângulos que viemos construindo, gamma,
 Now, we can write a simple relationship between
 the angles that we’ve constructed, gamma
 
 00:03:12.910 --> 00:03:16.400
-and beta and the joined angle we’re interested
-in which is Q1.
+beta e o ângulo unido que estamos interessados
+que é o Q1.
 
 00:03:16.400 --> 00:03:19.680
-And, the total relationship looks something
-like this.
+Assim, a relação resultante aparece
+de uma forma parecida com a seguinte.
 
 00:03:19.680 --> 00:03:25.180
-Quite a complex relationship, it gives us
-the angle of joined one, that’s Q1 in terms
+Uma relação aparentemente complexa, nos dá
+o ângulo unido, que é Q1 em termos
 
 00:03:25.180 --> 00:03:31.260
-of the end effector coordinates y and x, and
-a bunch of constants, a1 and a2, and it’s
+das coordenadas y e x do efetor final, e um
+bocado de constantes, a1 e a2
 
 00:03:31.260 --> 00:03:35.480
-also a function of the second joint angle,
-Q2.
+e isso também é uma função do segundo ângulo
+unido, Q2.
 
 00:03:35.480 --> 00:03:39.870
-So, let’s summarize what it is that we have
-derived here.
+Então, vamos resumir o que é isto
+que apresentamos até agora.
 
 00:03:39.870 --> 00:03:44.750
-We have an expression for the cosine of Q2
-and we have an expression for Q1.
+Nós temos uma expressão para o cosseno de Q2
+e uma expressão para Q1.
 
 00:03:44.750 --> 00:03:48.690
-Now, the cosine function is symmetrical about
-0.
+Então, a função consseno é simetrica
+em relação a 0.
 
 00:03:48.690 --> 00:03:54.030
-So, if we know the value of the cosine of
-Q2, then there are two possible solutions,
+Portanto, se nós soubermos o valor do cosseno 
+de Q2, teremos duas possíveis soluções.
 
 00:03:54.030 --> 00:03:57.180
-a positive angle and a negative angle.
+Um ângulo positivo e um ângulo negativo.
 
 00:03:57.180 --> 00:04:01.780
-We’re going to explicitly choose the positive
-angle, which means that I can write this expression
+Nós iremos escolher explicitamente o ângulo positivo,
+o que implica que podemos escrever 
 
 00:04:01.780 --> 00:04:02.780
-here.
+esta expressão aqui.
 
 00:04:02.780 --> 00:04:07.880
-And now, we have what we call the inverse
-kinematic solution for this two-link robot.
+Assim, nós temos o que chamamos de solução
+cinemática inversa para esse robô de dois elos.
 
 00:04:07.880 --> 00:04:13.040
-We have an expression for the two joined angles,
-Q1 and Q2 in terms of the end effector pose
+Nós temos uma expressão para os dois ângulos unidos,
+Q1 e Q2 em termos da posição do efetor x e y
 
 00:04:13.040 --> 00:04:16.120
-x and y, and a bunch of constants.
+e uma porção de constantes.
 
 00:04:16.120 --> 00:04:18.510
-You notice that the two equations are not
-independent.
+Note que as duas equações não são independentes.
 
 00:04:18.510 --> 00:04:23.540
-The equation for Q1, in fact, depends on the
-solution for Q2.
+A equação para Q1, de fato, depende 
+da solução para Q2.
 
 00:04:23.540 --> 00:04:28.940
-In this case, Q2 is negative and we’re going
-to write the solution for Q2 with a negative
+Neste caso, Q2 é negativo e nós estamos escrevendo
+a solução para Q2 com um sinal negativo
 
 00:04:28.940 --> 00:04:31.440
-sign in front of the inverse cosine.
+na frente de um cosseno inverso.
 
 00:04:31.440 --> 00:04:36.310
-Now, we need to solve for Q1, so we’re going
-to introduce this particular red triangle,
+Agora, precisamos resolver para Q1, então vamos
+introduzir este triângulo vermelho específico
 
 00:04:36.310 --> 00:04:42.250
-the angle beta that we solved previously,
-and the angle gamma which is defined in terms
+o ângulo beta que descobrimos anteriormente,
+e o ângulo gamma que é definido em termos
 
 00:04:42.250 --> 00:04:43.440
-of y and x.
+de y e x.
 
 00:04:43.440 --> 00:04:48.470
-Now, we write a slightly different relationship
-between Q1, gamma and beta, different to what
+Agora, nós formulamos uma relação levemente diferente
+entre Q1, gamma e beta, diferente do que
 
 00:04:48.470 --> 00:04:49.470
-we had before.
+possuíamos anteriormente.
 
 00:04:49.470 --> 00:04:50.780
-There’s a change of sign involved.
+Há uma mudança de sinal envolvida.
 
 00:04:50.780 --> 00:04:55.180
-Then, we can substitute all that previous
-equation and come up with this expression
+Assim, nós podemos substituir todas as equações 
+anteriores e acabamos com esta expressão
 
 00:04:55.180 --> 00:04:56.180
-for Q1.
+para Q1.
 
 00:04:56.180 --> 00:04:58.400
-Again, there is a change of sign here.
+Novamente, há uma mudança no sinal aqui.
 
 00:04:58.400 --> 00:05:00.430
-Previously, this was a negative sign.
+Anteriormente, este era um sinal negativo.
 
 00:05:00.430 --> 00:05:05.470
-And, here in summary form is the solution
-for the inverse kinematics of our two-link
+E, aqui em suma é a solução para as cinemáticas
+inversas do nosso robô de dois elos
 
 00:05:05.470 --> 00:05:10.480
-robot when it is in this particular configuration,
-where Q2 is negative.
+quando ele está nesta configuração em particular, 
+onde Q2 é negativo.
 
 00:05:10.480 --> 00:05:16.070
-Let’s compare the two solutions, the case
-where Q2 is positive and the case where Q2
+Vamos comparar as duas soluções, o caso em que Q2 
+é positivo e o caso em que Q2 
 
 00:05:16.070 --> 00:05:16.820
-is negative.
+é negativo.
 
