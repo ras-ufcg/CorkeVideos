@@ -11,11 +11,11 @@ dizer, e eu não posso dizer isso fortemente,
 é que os sistemas de coordenadas são seus amigos.
 
 00:00:11.160 --> 00:00:16.800
-Eles tornam muito fácil decompor e entender
+Eles são muito fáceis decompor e entender
 problemas complexos. Então, atribuímos sistemas
 
 00:00:16.800 --> 00:00:21.070
-de coordenadas a tudo no ambiente dos robores,
+de coordenadas a tudo no ambiente dos rôbos,
 e anotamos as relações entre os
 
 00:00:21.070 --> 00:00:25.730
@@ -63,7 +63,7 @@ de coordenadas em termos de posição. E posição
 
 00:01:19.790 --> 00:01:25.600
 é algo que possui três parâmetros:
-tem uma translação, as componentes X e Y
+tem uma translação, as componentes x e y
 
 00:01:25.600 --> 00:01:31.900
 e a rotação que é a componente teta. Podemos 
@@ -107,7 +107,7 @@ coordenadas. Não podemos simplesmente adicionar
 
 00:02:24.359 --> 00:02:28.519
 vetores e posições por que eles são
-diferentes objetos matemáticos
+diferentes objetos matemáticos.
 
 00:02:28.519 --> 00:02:34.079
 Podemos combinar posições. Se nós sabemos a 
@@ -129,7 +129,7 @@ Podemos reescrever um conjunto complexo de relações
 espaciais definidas em termos de sistemas de coordenadas, em
 
 00:02:56.370 --> 00:03:02.249
-termos de um pouco mais organizado, gráfico de posição. E
+termos de um pouco mais organizado, um gráfico de posição. E
 nós podemos usar o gráfico de posição para escrever
 
 00:03:02.249 --> 00:03:07.790
@@ -179,11 +179,11 @@ O próximo passo é transformar isso em objetos matemáticos
 reais e podemos descrever a rotação em termos
 
 00:04:19.849 --> 00:04:26.490
-de uma matriz 2 x 2 que transforma um vetor
+de uma matriz 2 x 2, que transforma um vetor
 de um sistema de coordenadas para outro
 
 00:04:26.490 --> 00:04:33.810
-sistema, se as origens desses dois sistemas são
+sistema. Se as origens desses dois sistemas são
 idênticas, a matriz de rotação 2 x 2 é uma
 
 00:04:33.810 --> 00:04:39.500
@@ -192,10 +192,10 @@ matriz ortogonal ou ortonormal, sua inversa
 
 00:04:39.500 --> 00:04:46.860
 é sempre +1. Dizemos que essas matrizes pertencem
-ao especial grupo de dimensão 2 ortogonal
+ao grupo especial de dimensão ortogonal 2.
 
 00:04:46.860 --> 00:04:53.740
-A matriz transforma um vetor do sistema de coordenadas
+Essa matriz transforma um vetor do sistema de coordenadas
 B no sistema de coordenadas A, mas é definido
 
 00:04:53.740 --> 00:04:59.169
@@ -247,24 +247,24 @@ A negação que descrevemos anteriormente pelo
 operador O- abstrato é o inverso
 
 00:06:09.389 --> 00:06:15.669
-da matriz de transformação homogênea,
-e lembre-se de que a inversa para uma matriz
+da matriz de transformação homogênea.
+Elembre-se de que a inversa para uma matriz
 
 00:06:15.669 --> 00:06:22.300
 homogênea não é igual a sua transposta. Essa
-propriedade pertence apenas a uma matriz de rotação
+propriedade pertence apenas a uma matriz de rotação,
 
 00:06:22.300 --> 00:06:27.080
 que é apenas uma pequena parte da matriz de
 transformação homogênea.
 
 00:06:27.080 --> 00:06:32.379
-O operador ponto abstrato que usamos para
+O operador ponto abstrato, que usamos para
 transformar um vetor de um sistema de coordenadas
 
 00:06:32.379 --> 00:06:38.449
-para outro é implementado multiplicando a matriz 
+para outro, é implementado multiplicando a matriz 
 de transformação homogênea pela 
 
 00:06:38.449 --> 00:06:40.610
-representação homogênea desse vetor
+representação homogênea desse vetor.
