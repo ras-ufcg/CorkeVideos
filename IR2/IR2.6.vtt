@@ -15,36 +15,36 @@ cima do P indica isso. Eu posso escrever
 esse vetor em termos de suas componentes - suas
 
 00:00:22.160 --> 00:00:32.329
-distâncias ao longo do eixo XA e do eixo YA
-e os vetores unitários XA e YA chapéu. Agora, vamos
+distâncias ao longo do eixo xA e do eixo yA
+e os vetores unitários xA e yA-chapéu. Agora, vamos
 
 00:00:32.329 --> 00:00:38.000
 introduzir um novo sistema de coordenads, o sistema B,
 e ele tem a mesma origem que é rotacionada
 
 00:00:38.000 --> 00:00:44.940
-pelo ângulo Theta. Eu posso descrever o ponto
+pelo ângulo teta. Eu posso descrever o ponto
 por um vetor em relação ao sistema de coordenadas
 
 00:00:44.940 --> 00:00:52.620
 B e eu posso escrevê-lo em termos dos vetores
-unitários XB e YB chapéu, e eles estão indicados
+unitários xB e yB-chapéu. E eles estão indicados
 
 
 00:00:52.620 --> 00:01:00.440
-aqui em vermelho. Eu posso escrever expressões para XB
-chapéu em termos do cosseno de Theta e do seno de Theta,
+aqui em vermelho. Eu posso escrever expressões para xB
+chapéu em termos do cosseno de teta e do seno de teta.
 
 00:01:00.440 --> 00:01:06.869
-e eu possso escrever uma expressão para YB chapéu
-em termos de menos o seno de Theta e o cosseno de Theta. Se
+E eu possso escrever uma expressão para yB-chapéu
+em termos de menos o seno de teta e o cosseno de teta. Se
 
 00:01:06.869 --> 00:01:14.210
 Eu substituo essas duas equações aqui, eu posso
 escrever essa expressão. Então eu posso expandir,
 
 00:01:14.210 --> 00:01:20.729
-rearranjar e fatorar XA chapéu e YA chapéu.
+rearranjar e fatorar xA-chapéu e yA-chapéu.
 A próxima coisa a se observar é que pelo fato desses
 
 00:01:20.729 --> 00:01:27.689
@@ -52,11 +52,11 @@ dois sistemas de coordenadas compartilharem uma origem,
 então o vetor AP e BP são de fato exatamente o
 
 00:01:27.689 --> 00:01:35.770
-mesmo. Os coeficientes de XA chapéu devem ser os
-mesmos, para que nós possamos escrever isso. E, os coeficientes
+mesmo. Os coeficientes de xA-chapéu devem ser os
+mesmos, para que nós possamos escrever isso. E os coeficientes
 
 00:01:35.770 --> 00:01:41.909
-de YA chapéu devem ser os mesmos, para que nós 
+de yA-chapéu devem ser os mesmos, para que nós 
 possamos escrever isso. Vamos pegar essas duas expressões.
 
 00:01:41.909 --> 00:01:47.039
@@ -69,7 +69,7 @@ e você irá descobrir que chegou às
 
 00:01:50.770 --> 00:01:56.229
 expressões acima. Agora, vamos escrever a parte
-vetorial de forma mais concosa. Ao invés de em termos de
+vetorial de forma mais concisa. Ao invés de termos de
 
 00:01:56.229 --> 00:02:01.749
 seus elementos individuais, nós escrevemos como o 
@@ -80,12 +80,12 @@ particular. Então, essa expressão relaciona o vetor
 em relação ao sistema B com o vetor em 
 
 00:02:08.400 --> 00:02:16.689
-relação ao sistema A. Isso é alcanado multiplicando
+relação ao sistema A. Isso é alcançado multiplicando
 os componentes do vetor B por essa matriz
 
 00:02:16.689 --> 00:02:19.709
-2x2.
-Podemos tornar essa expressão ainda mais concisa
+2x2. Podemos tornar essa expressão
+ainda mais concisa
 
 00:02:19.709 --> 00:02:25.709
 e escrevê-la assim. e, nós introduzimos 
@@ -101,7 +101,7 @@ por uma matriz de rotação R. Aqui nós temos a mesma
 
 00:02:38.140 --> 00:02:44.069
 expressão de antes, e para ser mais preciso, 
-um pouco mais cuidadosamente, nós vamos adicionar alguns
+com um pouco mais de cuidado, nós vamos adicionar alguns
 
 00:02:44.069 --> 00:02:51.110
 rótulos para a matriz R e vamos colocar um A
@@ -120,23 +120,23 @@ A para o sistema B. A ordem dessas duas coisas
 é diferente então não se engane com 
 
 00:03:08.840 --> 00:03:12.250
-isso.
-Vamos dar uma olhada na matriz de rotação.
+isso. Vamos dar uma olhada
+na matriz de rotação.
 
 00:03:12.250 --> 00:03:19.110
-Uma matriz assim é referda como uma matriz ortogonal 
+Uma matriz assim é referida como uma matriz ortogonal 
 ou algumas vezes como uma matriz ortonormal.
 
 00:03:19.110 --> 00:03:24.020
 Cada coluna nessa matriz é um vetor unitário
-e você pode mostrar isso por conta própria bem
+e você pode mostrar isso por uma conta própria bem
 
 00:03:24.020 --> 00:03:29.890
 facilmente. Cada coluna na matriz é ortogonal 
 às outras colunas. Nesse caso, há
 
 00:03:29.890 --> 00:03:35.050
-somente duas colunas e você pode mostrar, de novo
+somente duas colunas. E você pode mostrar, de novo
 muito facilmente, que o vetor formado pela primeira
 
 00:03:35.050 --> 00:03:40.530
@@ -144,7 +144,7 @@ coluna é ortogonal ao vetor formado
 pela segunda coluna. O produto escalar dessas
 
 00:03:40.530 --> 00:03:46.030
-duas colunas vap ser igual a zero. Uma propriedade
+duas colunas vai ser igual a zero. Uma propriedade
 realmente útil de uma matriz ortogonal é 
 
 00:03:46.030 --> 00:03:52.670
@@ -160,8 +160,8 @@ temos uma matriz cuja inversa pode ser calculada
 de forma muito simples transpondo os elementos
 
 00:04:03.280 --> 00:04:06.859
-da matriz.
-Outra propriedade da matriz de rotação é 
+da matriz. Outra propriedade
+da matriz de rotação é 
 
 00:04:06.859 --> 00:04:13.060
 que seu determinante é sempre igual a 1.
@@ -209,14 +209,14 @@ As legendas A e B na primeira expressão
 
 00:05:11.419 --> 00:05:16.270
 são completamente gerais e é completamente
-apropriado para mim trocar o A e o B e
+apropriado trocar o A e o B e
 
 00:05:16.270 --> 00:05:21.340
 agora eu posso escrever isso. Essas duas equações são
 equivalentes. Então agora eu posso escrever isso e
 
 00:05:21.340 --> 00:05:26.479
-isso é realmente importante. O que diz que
+é realmente importante. Isso diz que
 a matriz de rotação do eixo de coordenadas
 
 00:05:26.479 --> 00:05:31.610
@@ -229,7 +229,7 @@ olhada em alguns exemplos concretos disso no MATLAB.
 
 00:05:37.960 --> 00:05:43.800
 Primeiramente, vou criar uma matriz de rotação
-bidimensional usando o comando rot2 da Toolbox
+bidimensional usando o comando rot2 da toolbox
 
 00:05:43.800 --> 00:05:49.819
 para rotacionar a matriz em duas dimensões. 
@@ -273,7 +273,7 @@ primeira coluna da matriz, uma outra variável
 
 00:06:39.479 --> 00:06:44.400
 que corresponde à segunda coluna da matriz.
-E, se eu olhar para o produto escalar
+E se eu olhar para o produto escalar
 
 00:06:44.400 --> 00:06:49.110
 desses dois vetores, nós podemos ver que ele 
@@ -293,7 +293,7 @@ que a sua transposta. Assim, o inverso da matriz
 
 00:07:03.660 --> 00:07:08.770
 chamada inv, e a transposta é calculada usando
-o operador quote dessa maneira e podemos ver
+o operador aspa dessa maneira e podemos ver
 
 00:07:08.770 --> 00:07:12.629
 claramente que o inverso é igual à 
@@ -304,20 +304,20 @@ Finalmente, podemos visualizar a rotação da matriz
 como um eixo de coordenadas que foi girado. Para isso,
 
 00:07:18.680 --> 00:07:23.760
-eu uso a função Toolbox, trplot2. É uma abreviação 
+eu uso a função toolbox, trplot2. É uma abreviação 
 da plotagem de transformação em duas dimensões.
 
 00:07:23.760 --> 00:07:28.950
-Passo na matriz de rotação que me interessa e há
-uma representação do eixo de coordenadas. 
+Passo a matriz de rotação que me interessa e 
+surge uma representação do eixo de coordenadas. 
 
 00:07:28.950 --> 00:07:35.830
 Agora, isso parece um pouco estranho, porque preciso 
-definir o dimensionamento do eixo para igual
+definir o escalonamento do eixo para igual
 
 00:07:35.830 --> 00:07:41.550
 e aqui vemos um eixo de coordenadas com ângulo
-reto, exibido aqui em azul e podemos ver que ele
+reto, exibido aqui em azul. E podemos ver que ele
 
 00:07:41.550 --> 00:07:44.669
 foi rotacionado em relação ao eixo de coordenadas
