@@ -4,7 +4,7 @@ Language: pt
 
 00:00:03.550 --> 00:00:08.599
 Na aula anterior, introduzimos as noções
-de pose e posicionamento; uma forma de descrever
+de pose e pose é uma forma de descrever
 
 00:00:08.599 --> 00:00:14.990
 tanto a movimentação quanto a orientação
@@ -15,7 +15,7 @@ E a notação que usamos é baseada na letra
 grega "ksi" e usamos isso para representar pose
 
 00:00:20.449 --> 00:00:24.949
-E usamos a letra B, a inscrição, para
+E usamos a letra B, o subscrito, para
 indicar que estamos falando da pose
 
 00:00:24.949 --> 00:00:29.890
@@ -23,8 +23,7 @@ do sistema de coordenadas B, e o índice
 em destaque, no caso A, para indicar que a
 
 00:00:29.890 --> 00:00:37.670
-pose é relativa ao sistema de coordenadas A. 
-Então lemos esse símbolo como a pose de B em relação a A.
+pose é relativa ao sistema de coordenadas A. Então lemos esse símbolo como a pose de B em relação a A.
 
 00:00:38.260 --> 00:00:43.460
 As coisas não são tão diferentes em 3 dimensões,
@@ -36,14 +35,14 @@ agora nós representamos a translação e a orientação
 
 00:00:49.010 --> 00:00:54.320
 de um sistema de coordenadas tridimensional
-em relação a outro. Mais tarde nessa aula
+em relação a outro. Mais tarde, nessa aula,
 
 00:00:54.320 --> 00:00:59.390
 falaremos acerca de aplicações concretas de ksi,
 o que ela de fato representa no que se refere a
 
 00:00:59.390 --> 00:01:05.220
-coisas com as quais você pode calcular, mas, por
+coisas com as quais você pode calcular mas, por
 enquanto, apenas considere ela como um símbolo abstrato.
 
 00:01:05.220 --> 00:01:09.890
@@ -211,7 +210,7 @@ de coordenadas anexado na base do robô
 para indicar onde ele está em relação
 
 00:04:58.490 --> 00:05:03.650
-ao sistema de coordenadas mundial da fábrica
+ao sistema de coordenadas de mundo da fábrica
 e vamos anexar outro sistema de coordenadas 3D
 
 00:05:03.650 --> 00:05:08.270
@@ -270,7 +269,7 @@ que no corpo é na verdade um dispositivo
 bastante massivo, podemos ver claramente aqui
 
 00:06:11.089 --> 00:06:15.839
-pintado a direção do eixo positivo z e
+pintada a direção do eixo positivo z e
 atrás nós podemos ver a direção do seu
 
 00:06:15.839 --> 00:06:22.490
@@ -278,6 +277,6 @@ eixo y negativo. Esse módulo é efetivamente a
 unidade de medição inercial para o foguete Saturn
 
 00:06:22.490 --> 00:06:28.109
-V, a funtionalidade é provavalmente equivalente
+V, a funcionalidade é provavalmente equivalente
 ao que você tem no telefone no seu bolso.
 
