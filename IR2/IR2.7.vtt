@@ -4,29 +4,29 @@ Language: pt-BR
 
 00:00:03.620 --> 00:00:09.280
 Agora vamos trazer a tradução para a imagem.
-Quadro de coordenada A, Quadro de coordenada B que
+Sistema de coordenada A, sistema de coordenada B que
 
 00:00:09.280 --> 00:00:14.969
 é traduzido e girado em relação a
-coordenada do quadro A e um ponto P. Nós podemos representar
+coordenada do sistema A e um ponto P. Nós podemos representar
 
 00:00:14.969 --> 00:00:20.410
-o ponto P por um vetor com relação ao quadro
-B e esse vecor pode ser descrito em termos
+o ponto P por um vetor com relação ao sistema
+B e esse vetor pode ser descrito em termos
 
 00:00:20.410 --> 00:00:25.059
-de seus componentes ao longo dos eixos XB e YB.
+de seus componentes ao longo dos eixos xB e yB.
 
 00:00:25.059 --> 00:00:30.989
-Agora podemos rotacionar esse vetor para um novo quadro,
-quadro de coordenada V, e o quadro de coordenada V
+Agora podemos rotacionar esse vetor para um novo sistema,
+sistema de coordenada V. E o sistema de coordenada V
 
 00:00:30.989 --> 00:00:36.010
-tem eixos que são paralelos ao quadro
-de coordenada A. Nós já temos falado sobre como 
+tem eixos que são paralelos ao sistema
+de coordenada A. Nós já falados sobre como 
 
 00:00:36.010 --> 00:00:42.280
-rotacionar um vetor de quadro de uma coordenada
+rotacionar um vetor de um sistema de coordenadas
 para outra usando uma matriz de rotação. E como
 
 00:00:42.280 --> 00:00:46.710
@@ -37,63 +37,63 @@ corretamente, nós percebemos que estes dois Bs estão
 próximos um ao outro. Que é uma boa coisa.
 
 00:00:49.649 --> 00:00:55.569
-Agora vamos descrever a origem de quadro de 
-coordenada V em relação ao quadro de coordenada A
+Agora vamos descrever a origem do sistema de 
+coordenada V em relação ao sistema de coordenada A
 
 00:00:55.569 --> 00:01:03.019
-e nós fazemos com que um vetor. Isso é um vetor
-de A para V. Agora nós estamos autorizados a adicionar vetores
+e nós fazemos com um vetor. Isso é um vetor
+de A para V. Agora nós podemos adicionar vetores
 
 00:01:03.019 --> 00:01:09.650
-para podermos adicionar esse vetor ATV ao vetor
+para podermos adicionar esse vetor A para V ao vetor
 VP para obter um vetor que descreve o
 
 00:01:09.650 --> 00:01:15.510
 ponto P em relação ao quadro de coordenada A.
-Pordemos fazer isso porque esses dois vetores são
+Podemos fazer isso porque esses dois vetores são
 
 00:01:15.510 --> 00:01:20.970
-descritos em relação ao quadro de coordenadas
+descritos em relação ao sistema de coordenadas
 cujos eixos são paralelos um ao outro. Eu
 
 00:01:20.970 --> 00:01:26.470
-posso substituir uma equação para o outro
+posso substituir uma equação no outro
 e escrever isso. E novamente porque esses dois
 
 00:01:26.470 --> 00:01:30.700
-quadros de coordenadas são paralelos Eu posso escrever
+quadros de coordenadas são paralelos eu posso escrever
 isso.
 
 00:01:30.700 --> 00:01:35.220
 Vamos expandir os vetores e matriz nessa
-expressão e escreva-os em termos de seus
+expressão e escrevê-los em termos de seus
 
 00:01:35.220 --> 00:01:40.230
-elementos. Agora Eu posso puxar um pouco de 
-truque e agora escreva-o assim. Se você 
+elementos. Agora eu posso usar um pequeno
+truque e agora escrevê-lo assim. Se você 
 
 00:01:40.230 --> 00:01:45.470
 não tem certeza sobre esta etapa, expanda a matriz
-e convença-se que eles são exatamente o mesmo.
+e prove que eles são exatamente o mesmo.
 
 00:01:46.310 --> 00:01:53.200
 Agora essa expressão tem um vetor de dois elementos
 e um vetor de três elementos aqui.
 
 00:01:53.200 --> 00:01:57.650
-Vamos tornar as coisas um pouco mais simétrica
-e escrever-lo assim. O que temos fizemos agora
+Vamos tornar as coisas um pouco mais simétricas
+e escrevê-los assim. O que temos fizemos agora
 
 00:01:57.650 --> 00:02:05.720
-é adicionar alguns zeros e outros para a linha
-inferior da matriz. Anteriormente tinhamos uma matriz de rotação 2x2.
+é adicionar alguns zeros e uns na linha inferior da
+matriz. Anteriormente tinhamos uma matriz de rotação 2x2.
 
 00:02:05.720 --> 00:02:12.659
-Agora vemos que isso está incorporado
+Agora vemos que isso está encapsulado
 no canto superior de uma matriz 3x3.
 
 00:02:12.659 --> 00:02:17.980
-E nosoos vetores que usamos para ter 2 elementos
+E nossos vetores que tinham 2 elementos
 agora tem três elementos. Nós podemos escrever isso
 
 00:02:17.980 --> 00:02:24.129
@@ -101,46 +101,46 @@ ainda mais sucintamente nesta forma. A notação,
 o til, acima do pequeno p indica que
 
 00:02:24.129 --> 00:02:28.650
-isso é um vetor homogêneo. Tem três
-elementos não dois, e vamos falar sobre isso
+isso é um vetor homogêneo. Ele tem três
+elementos não dois. Vamos falar sobre isso
 
 00:02:28.650 --> 00:02:33.709
-em apenas um momento.   o ponto é descrito em relação
-ao quadro de coordenada A por um vetor homogêneo
+em apenas um momento. O ponto é descrito em relação
+ao sistema de coordenadas A por um vetor homogêneo
 
 00:02:33.709 --> 00:02:39.079
 que podemos obter do vetor homogêneo
-do ponto em relação ao quadro de coordenada
+do ponto em relação ao sistema de coordenadas
 
 00:02:39.079 --> 00:02:43.139
 B multiplicada por essa matriz.
 
 00:02:43.139 --> 00:02:48.819
-Os elementos da matriz inclue a matriz de rotalção,
-que é a função da orientação;
+Os elementos da matriz inclue a matriz de rotação,
+que é em função da orientação;
 
 00:02:48.819 --> 00:02:54.859
-Theta, e a translação entrer a origem
-de quadro de coordenada A e quadro de coordenada
+teta, e da translação entre a origem
+do sistema de coordenadas A e do sistema de coordenadas
 
 00:02:54.859 --> 00:03:01.249
 B. Temos a representação familiar de
 um vetor em um plano bidimensional, dois números
 
 00:03:01.249 --> 00:03:07.439
-A e B. O Vetor homogêneo tem três
-elementos nele. Tem A e B e um elemento
+A e B. O vetor homogêneo tem três
+elementos. Tem A e B e um elemento
 
 00:03:07.439 --> 00:03:15.040
 adicional que é definido como 1. Isso nos referimos 
-como uma transfor,ação homogênea. Isso é uma matriz 3x3.
+como uma transformação homogênea. Isso é uma matriz 3x3.
 
 00:03:15.040 --> 00:03:22.459
 A matriz de transformação homogênea
 T compreende uma matriz de rotação que é 2x2
 
 00:03:22.459 --> 00:03:27.989
-e um vetor converção que é uma matriz 2x1
+e um vetor conversão que é uma matriz 2x1
 preenchida com dois zeros e um um.
 
 00:03:27.989 --> 00:03:33.579
@@ -153,17 +153,17 @@ matriz 3x3. Um matemático poderia dizer que
 
 00:03:39.499 --> 00:03:46.079
 transformação homogênea pertence ao grupo 
-Euclidiano especial da dimensão 2. Simbolicamente,
+euclidiano especial da dimensão 2. Simbolicamente,
 
 00:03:46.079 --> 00:03:51.419
-diríamos que a matriz T pertence ao conjunto SE (2).
+diríamos que a matriz T pertence ao conjunto SE(2).
 
 00:03:51.419 --> 00:03:58.209
 Finalmente, é hora de começar a tornar reais esses 
 conceitos abstratos. Pose é apenas uma matriz. Onde
 
 00:03:58.209 --> 00:04:04.809
-tínhamos o símbolo ksi antes de podermos substituir
+antes  tínhamos o símbolo ksi podermos substituir
 essa matriz de transformação homogênea 3x3.
 
 00:04:04.809 --> 00:04:11.129
@@ -180,31 +180,31 @@ ou seja, simplesmente o inverso
 
 00:04:23.780 --> 00:04:29.449
 de uma matriz de transformação homogênea. Eu
-Mencionei anteriormente que o inverso de uma matriz 
+mencionei anteriormente que o inverso de uma matriz 
 
 00:04:29.449 --> 00:04:34.550
 de rotação é igual à sua transposta. Isso não
-é o caso de uma matriz de transformação homogênea
+é o caso de uma matriz de transformação 
 
 00:04:34.550 --> 00:04:41.389
 homogênea. Você precisa calcular uma matriz inversa 
 adequada: inverta uma matriz 3x3.
 
 00:04:41.389 --> 00:04:47.780
-Introduzimos um operador de ponto que transforma 
+Introduzimos um operador ponto que transforma 
 um vetor de um quadro de coordenadas em outro.
 
 00:04:47.780 --> 00:04:55.550
 E isso é simplesmente o produto da matriz de 
-transformação homogênea e o vetor representado 
+transformação homogênea e do vetor representado 
 
 00:04:55.550 --> 00:05:01.970
-na forma homogênea. Lembre-se de que o vetor homogêneo 
-é obtido do vetor original
+na forma homogênea. Lembre-se de que o
+vetor homogêneo é obtido do vetor original
 
 00:05:01.970 --> 00:05:08.550
-P, para o vetor dois pode ser aumento ou anexamos
-a ele um elemento para que tenhamos uma vetor de três
+P, o vetor de dois elementos ao qual anexamos
+um elemento, para que tenhamos uma vetor de três
 
 00:05:08.550 --> 00:05:08.979
 componentes.
@@ -249,23 +249,27 @@ canto superior esquerdo. Podemos ver que a parte da
 rotação dessa matriz é igual a zero. Essa 
 
 00:06:12.120 --> 00:06:16.820
-matriz de transformação homogênea representa uma
-uma rotação pura.
+matriz de transformação homogênea
+representa uma uma rotação pura.
 
 00:06:17.400 --> 00:06:31.420
-Agora podemos multiplicar os dois juntos. transl2, multiplique pela parte de rotação - 30 graus.
+Agora podemos multiplicar os dois juntos.
+Multiplique pela parte de rotação -30 graus.
 
 00:06:31.420 --> 00:06:38.100
-E agora o que tenho é uma transformação homogênea que representa uma pose.
+E agora o que tenho é uma transformação
+homogênea que representa uma pose.
 
 00:06:38.110 --> 00:06:41.790
-Tem um componente rotacional e um componente translacional.
+Tem um componente rotacional e 
+uma componente translacional.
 
 00:06:41.790 --> 00:06:45.470
-Agora, a caixa de ferramentas possui uma função abreviada para conseguir isso.
+Agora, a caixa de ferramentas possui uma
+função abreviada para conseguir isso.
 
 00:06:45.600 --> 00:06:50.539
-Passo nas partes translacionais x e y;
+Passo nos argumentos translacionais x e y;
 a parte rotacional nos dá a opção
 
 00:06:50.539 --> 00:06:55.739
@@ -274,26 +278,26 @@ de graus. Temos exatamente a mesma matriz aqui.
 
 00:06:56.720 --> 00:07:02.840
 Agora vamos traçar essa pose em particular e ver
-como ela se parece. E para fazer isso, 
+como ela se parece. E para fazer isso 
 
 00:07:02.849 --> 00:07:09.219
-criarei um eixo para plotar, onde
-x vai variar de 0-5 e y
+criarei um eixo para plotar, no qual
+x vai variar de 0 a 5 e y
 
 00:07:09.219 --> 00:07:16.129
-da mesma forma. Eu preciso definir a proporção para 
+também. Eu preciso definir a proporção para 
 que tudo pareça razoável, então
 
 00:07:16.129 --> 00:07:24.039
-vou definir o eixo para que a proporção
-seja quadrada. Vou adiar porque
+vou definir o axis para que a proporção
+seja quadrada. Vou usar o hold porque
 
 00:07:24.039 --> 00:07:29.250
 preciso traçar algumas poses. A primeira pose
-que vou plotar vou colocar na variável de espaço de 
+que vou plotar vou colocar na variável do
 
 00:07:29.250 --> 00:07:34.919
-trabalho T1 e é a pose que olhei 
+worksapce T1, que é a pose que olhei 
 há pouco: 1 na direção x,
 
 00:07:34.919 --> 00:07:40.680
@@ -313,10 +317,10 @@ pela transformação homogênea. Eu vou plotar
 
 00:07:57.039 --> 00:08:03.960
 como um sistema chamado 1, e eu vou plotar
-na cor azul. Existem algumas opções
+na cor azul. Existem algumas opções.
 
 00:08:03.960 --> 00:08:11.539
-.Aqui vemos a pose plotada. Nós podemos
+Aqui vemos a pose plotada. Nós podemos
 ver que de fato há uma componente de translação; 
 
 00:08:11.539 --> 00:08:17.090
@@ -331,7 +335,7 @@ Eu posso criar outra pose facilmente. Eu
 posso criar uma pose que tenha um descolamento
 
 00:08:26.229 --> 00:08:32.469
-de 2 na direção x. 1 na direção y e com
+de 2 na direção x e 1 na direção y e com
 nenhuma rotação. É assim que uma transformação
 
 00:08:32.469 --> 00:08:37.469
@@ -339,12 +343,11 @@ homogênea se parece. Agora eu vou
 plotar isso. Eu vou usar a função trplot2 
 
 00:08:37.469 --> 00:08:42.649
-de novo, passo a matrix de transformação
-homogênea,e eu vou plotar como um sistema de 
-coordenadas
+de novo. Passo a matrix de transformação homogênea,
+e eu vou plotar como um sistema de  coordenadas
 
 00:08:42.649 --> 00:08:49.440
-chamando-o de 2. Para diferenciar, eu vou plotar
+chamando 2. Para diferenciar, eu vou plotar
 como um sistema de cor vermelha, e aqui vemos
 
 00:08:49.440 --> 00:08:56.950
@@ -368,9 +371,8 @@ eu vou colorir com verde. Então se eu
 componho estas duas poses eu resulto com
 
 00:09:26.000 --> 00:09:31.230
-a pose 3 mostrada aqui. Um modo como podemos 
-pensar sobre isso é que nós movemos 
-do sistema de coordenadas universal
+a pose 3 mostrada aqui. Um modo como podemos pensar sobre
+isso é que nós movemos o sistema de coordenadas universal
 
 
 00:09:31.230 --> 00:09:38.700
@@ -378,7 +380,7 @@ do sistema de coordenadas universal
 no sistema 1 nós movemos 2 na direção x
 
 00:09:38.700 --> 00:09:45.320
-e 1 na direção y. Mas as direções X e Y
+e 1 na direção y. Mas as direções x e y
 são do sistema 1, não do sistema universal, e
 
 00:09:45.320 --> 00:09:50.160
@@ -386,14 +388,14 @@ nos leva ao sistema chamado 3.
 
 00:09:50.160 --> 00:09:56.740
 Eu poderia compor as poses na ordem 
-contrária. Eu vou criar uma nova pose T4 e 
+contrária. Eu vou criar uma nova pose T4 que 
 
 00:09:56.740 --> 00:10:05.420
 será a pose 2 composta com a pose 1. Nós
 podemos ver como a matrix de transformação
 
 00:10:05.420 --> 00:10:12.110
-homogênea se parece e é diferente de T3.
+homogênea é e como é diferente de T3.
 Eu posso plotar isso. Eu posso passar 
 
 00:10:12.110 --> 00:10:21.130
@@ -405,7 +407,7 @@ Aqui podemos ver que o sistema 4 é resultado
 da composição da pose 2 com a pose 1. Agora eu
 
 00:10:31.260 --> 00:10:36.570
-vou introduzir um ponto dentro do plote. 
+vou introduzir um ponto dentro do plot. 
 Eu vou introduzir um ponto na coordenada 
 
 00:10:36.570 --> 00:10:44.360
