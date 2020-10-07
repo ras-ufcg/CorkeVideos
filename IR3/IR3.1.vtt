@@ -3,16 +3,16 @@ Kind: captions
 Language: pt-BR
 
 00:00:03.530 --> 00:00:07.750
-Agora vamos considerar um objeto no qual 
-se movimenta nas três dimensões do espaço, por exemplo,
+Agora vamos considerar um objeto que se movimenta
+nas três dimensões do espaço, por exemplo,
 
 00:00:07.750 --> 00:00:12.240
 este avião, mas poderia ser um robô voador,
 poderia ser um robô subaquático.
 
 00:00:12.240 --> 00:00:14.809
-Eu quero descrever sua posição dentro do
-universo.
+Eu quero descrever sua 
+posição dentro do universo.
 
 00:00:14.809 --> 00:00:18.480
 E nós vamos usar o mesmo processo que
@@ -30,7 +30,7 @@ Agora, para o caso de três dimensões, este
 Possui um eixo x, eixo y e um eixo z.
 
 00:00:28.470 --> 00:00:32.750
-E, eu vou colocá-lo em um lugar arbitrário 
+E eu vou colocá-lo em um lugar arbitrário 
 no universo e este será 
 
 00:00:32.750 --> 00:00:34.570
@@ -38,7 +38,7 @@ nosso sistema de coordenadas de referência.
 
 00:00:34.570 --> 00:00:38.739
 Em três dimensões, nós usamos um sistema de
-coordenadas que parece como isto e há 
+coordenadas que parece como este e há 
 
 00:00:38.739 --> 00:00:42.489
 muita similaridade com o sistema de 
@@ -68,10 +68,10 @@ sistema de coordenadas 3D.
 
 00:01:06.450 --> 00:01:11.460
 Vamos fazer isto descendo uma linha 
-até o plano XY e medindo o deslocamento A
+até o plano xy e medindo o deslocamento A
 
 00:01:11.460 --> 00:01:18.469
-ao longo do eixo X, o deslocamento B ao longo
+ao longo do eixo x, o deslocamento B ao longo
 do eixo y e o deslocamento C ao longo do
 
 00:01:18.469 --> 00:01:19.469
@@ -90,28 +90,28 @@ A, B e C são as coordenadas do ponto.
 
 00:01:30.110 --> 00:01:34.930
 Então, podemos considerar um ponto como
-uma localização no espaço de n dimensões.
+uma localização no espaço de N dimensões.
 
 00:01:34.930 --> 00:01:39.119
 Um matemático diria que P pertence
 ao conjunto dos números reais de ordem
 
 00:01:39.119 --> 00:01:40.119
-n.
+N.
 
 00:01:40.119 --> 00:01:42.890
-E neste caso em particular, n é igual
+E neste caso em particular, N é igual
 à três.
 
 00:01:42.890 --> 00:01:47.759
 No sentido geral, representamos as coordenadas
-como um grupo ou uma tupla de n
+como um grupo ou uma tupla de N
 
 00:01:47.759 --> 00:01:48.759
 números.
 
 00:01:48.759 --> 00:01:53.409
-Novamente, neste caso, n é três, portanto representamos
+Novamente, neste caso, N é três, portanto representamos
 um ponto por uma coordenada que compreende
 
 00:01:53.409 --> 00:01:55.720
@@ -126,33 +126,33 @@ eixo x, componente B paralela ao eixo y
 e uma componente C paralela ao eixo z.
 
 00:02:06.399 --> 00:02:12.360
-E, podemos representar um vetor P usando a
+E podemos representar um vetor P usando a
 letra minúscula p e um vetor coluna.
 
 00:02:12.360 --> 00:02:16.700
-Isto é uma pilha de números acima dos 
+Isto é, uma pilha de números acima dos 
 outros: a distância A, a distância B e
 
 00:02:16.700 --> 00:02:21.239
 a distância C. Um vetor é um elemento de
-um espaço vetorial de n dimensões.
+um espaço vetorial de N dimensões.
 
 00:02:21.239 --> 00:02:26.480
 Um matemático diria que a letra minúscula 
 p pertence ao conjunto dos números reais
 
 00:02:26.480 --> 00:02:27.610
-de ordem n.
+de ordem N.
 
 00:02:27.610 --> 00:02:30.800
-Novamente, neste caso, n igual à 3.
+Novamente, neste caso, N igual à 3.
 
 00:02:30.800 --> 00:02:34.590
 Nós também podemos representar um vetor
-por vetor coluna de n elementos.
+por vetor coluna de N elementos.
 
 00:02:34.590 --> 00:02:38.500
-São n números empilhados um acima do outro.
+São N números empilhados um acima do outro.
 
 00:02:38.500 --> 00:02:41.319
 Podemos considerar um vetor como um deslocamento relativo.
@@ -192,7 +192,7 @@ Agora, cada um desses vetores tem um comprimento
 de um e eles são paralelos aos eixos 
 
 00:03:22.240 --> 00:03:24.780
-de coordenadas, x, y e z.
+de coordenadas x, y e z.
 
 00:03:24.780 --> 00:03:28.739
 Agora, podemos representar nosso vetor p
@@ -210,11 +210,11 @@ diferenças importantes entre pontos e vetores.
 Pontos definem uma localização.
 
 00:03:40.439 --> 00:03:41.810
-Não é possível.
+Não é possível,
 
 00:03:41.810 --> 00:03:45.989
-Não faz sentido adicionar ou multiplicar
-pontos.
+não faz sentido adicionar
+ou multiplicar pontos.
 
 00:03:45.989 --> 00:03:47.349
 Vetores não definem localização.
@@ -246,7 +246,7 @@ normalmente a origem do sistema de coordenadas.
 
 00:04:16.730 --> 00:04:20.989
 Pontos e vetores são representados
-por um grupo de n números reais.
+por um grupo de N números reais.
 
 00:04:20.989 --> 00:04:25.800
 N, no nosso caso, é três, porque estamos
@@ -258,7 +258,7 @@ linha, uma lista de números entre parênteses,
 
 00:04:31.930 --> 00:04:36.310
 enquanto um vetor é normalmente representado
-como uma linha dos n números um acima do
+como uma linha dos N números um acima do
 
 00:04:36.310 --> 00:04:39.009
 outro e tipicamente entre colchetes.
@@ -283,14 +283,14 @@ Agora, eu posso medir essa distância.
 
 00:04:55.350 --> 00:05:02.330
 A grosso modo, eu diria que são cerca de 35
-centímetros na direção X e pode ser algo
+centímetros na direção x e pode ser algo
 
 00:05:02.330 --> 00:05:09.310
-como 18 centímetros na direção Y e
+como 18 centímetros na direção y e
 é algo como 13 centímetros na
 
 00:05:09.310 --> 00:05:10.310
-direção Z.
+direção z.
 
 00:05:10.310 --> 00:05:15.650
 Então, eu posso descrever a posição desse ponto em
