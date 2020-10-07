@@ -1,17 +1,17 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.540 --> 00:00:07.900
-Na palestra anterior, quando discutimos sobre 
+Na aula anterior, quando discutimos sobre 
 mundos bidimensionais, nós introduzimos o conceito
 
 00:00:07.900 --> 00:00:09.980
-de um sistema de coordenadas destro.
+de um sistema de coordenadas positivo.
 
 00:00:09.980 --> 00:00:14.100
 Assim, apenas para lembrá-lo, o sistema de
-coordenadas destro é construído deste modo.
+coordenadas positivo é construído deste modo.
 
 00:00:14.100 --> 00:00:19.200
 Nós desenhamos o eixo x e então giramos o 
@@ -29,7 +29,7 @@ Então, aqui está o sistema de coordenadas
 bidimensional destro que acabamos de falar.
 
 00:00:28.370 --> 00:00:32.560
-E, o que farei agora é rotacioná-lo em três 
+E o que farei agora é rotacioná-lo em três 
 dimensões.
 
 00:00:32.560 --> 00:00:35.790
@@ -41,7 +41,7 @@ Antes, ele estava se projetando da tela até nós.
 
 00:00:38.980 --> 00:00:42.680
 Para criar um sistema de coordenadas tridimensional
-destro, começamos de uma maneira similar.
+positivo, começamos de uma maneira similar.
 
 00:00:42.680 --> 00:00:44.470
 Desenhamos o eixo x.
@@ -77,11 +77,11 @@ vemos que o eixo z aponta para cima.
 
 00:01:18.560 --> 00:01:22.150
 Nos referimos a ele como um sistema
-de coordenadas destro.
+de coordenadas positivo.
 
 00:01:22.150 --> 00:01:26.460
-E a razão para o chamarmos de sistema destro
-é pela orientação dos eixos poder ser 
+E a razão para o chamarmos de sistema positivo
+é porque orientação dos eixos poder ser 
 
 00:01:26.460 --> 00:01:29.140
 facilmente definida utizando minha mão direita.
@@ -100,7 +100,7 @@ Assim, sempre que trabalhamos com sistemas
 de coordenadas tridimencionais, eles sempre são 
 
 00:01:40.280 --> 00:01:43.119
-sistemas de coordenada destros.
+sistemas de coordenada positivos.
 
 00:01:43.119 --> 00:01:47.530
 Neste sistema de coordenadas que construí, temos
@@ -110,7 +110,7 @@ um eixo x, um eixo y e este,
 um eixo z apontando para baixo.
 
 00:01:49.619 --> 00:01:51.520
-Este é um sistema de coordenadas canhoto.
+Este é um sistema de coordenadas negativo.
 
 00:01:51.520 --> 00:01:55.650
 
@@ -118,16 +118,16 @@ Assim, é melhor não usá-los, eles vão
 lhe causar todo tipo de problemas.
 
 00:01:55.650 --> 00:01:57.880
-Portanto, não use sistemas de coordenadas canhotos.
+Portanto, não use sistemas de coordenadas negativo.
 
 00:01:57.880 --> 00:02:00.409
-Escolha o sistema de coordenadas destro.
+Escolha o sistema de coordenadas positivo.
 
 00:02:00.409 --> 00:02:02.550
 Então, só para recapitular.
 
 00:02:02.550 --> 00:02:07.280
-Quando criamos um sistema de coordenadas destro,
+Quando criamos um sistema de coordenadas positivo,
 usamos esta regra, que é chamada de regra da mão
 
 00:02:07.280 --> 00:02:09.420
