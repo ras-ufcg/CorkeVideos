@@ -52,7 +52,7 @@ Então qualquer rotação pode ser expressa em termos
 de não mais que três rotações, desde que
 
 00:00:59.370 --> 00:01:04.780
-estas três rotações são consecutivamente
+estas três rotações são consecutivas
 sobre eixos diferentes.
 
 00:01:04.780 --> 00:01:07.530
@@ -75,10 +75,10 @@ obter uma orientação como esta.
 
 00:01:23.640 --> 00:01:27.039
 Então, eu vou pegar uma cópia daquele
-sistema de posição de referência
+sistema de coordenadas de referência
 
 00:01:27.039 --> 00:01:30.290
-E, a primeira coisa que eu vou fazer é
+E a primeira coisa que eu vou fazer é
 rotacioná-lo um pouco em torno do eixo x,
 
 00:01:30.290 --> 00:01:34.350
@@ -101,7 +101,7 @@ Então, vamos anotar todas as sequências possíveis
 de rotações, onde nós aplicamos esta ressalva de
 
 00:01:51.039 --> 00:01:55.340
-não duas sucessivas rotações 
+duas rotações não sucessivas 
 sobre o mesmo eixo
 
 00:01:55.340 --> 00:01:58.700
@@ -109,7 +109,7 @@ Na verdade, há duas delas e eu escrevi
 todas elas bem aqui.
 
 00:01:58.700 --> 00:02:03.590
-Estas rotações se dividem em dois grupos e
+Essas rotações se dividem em dois grupos e
 o grupo mostrado aqui é conhecido como
 
 00:02:03.590 --> 00:02:04.590
@@ -153,7 +153,7 @@ dizer ângulos ZYZ de Euler
 
 00:02:46.299 --> 00:02:51.040
 Diferentes comunidades de engenharia usam diferentes
-conversões, e a conversão ZYZ é bastante
+convenções, e a convenção ZYZ é bastante
 
 00:02:51.040 --> 00:02:55.269
 comum em robótica e na aeroespacial, mas há
@@ -179,10 +179,10 @@ que recebe três argumentos angulares, os três
 
 00:03:14.989 --> 00:03:17.459
 E vou fornecer a eles valores 
-simples: 0.1, 0.
+simples: 0.1, 0.2
 
 00:03:17.459 --> 00:03:20.430
-2 e 0.3 radianos, respectivamente.
+e 0.3 radianos, respectivamente.
 
 00:03:20.430 --> 00:03:25.780
 E, aqui está a matriz de rotação resultante
@@ -193,10 +193,10 @@ Então você pode pensar nisso como duas representações
 alternativas para orientação do sistema
 
 00:03:31.590 --> 00:03:32.590
-de coordenada.
+de coordenadas.
 
 00:03:32.590 --> 00:03:37.549
-Podemos representá-lo como uma matriz ortogonal
+Podemos representá-los como uma matriz ortogonal
 3 por 3 ou podemos representá-lo por três números
 
 00:03:37.549 --> 00:03:40.129
@@ -206,8 +206,7 @@ que são os ângulos de Euler.
 Eu posso realizar a operação inversa.
 
 00:03:41.909 --> 00:03:45.180
-Eu posso converter uma matriz de rotação em
-ângulos de Euler.
+Eu posso converter uma matriz de rotação em ângulos de Euler.
 
 00:03:45.180 --> 00:03:53.930
 Para fazer isso, eu uso a função tr2eul e
@@ -310,18 +309,17 @@ Ele também publicou amplamente sobre probabilidade e
 foi uma das primeiras pessoas a resolver equações
 
 00:05:41.600 --> 00:05:43.289
-polinomiais cúbicas e quáticas.
+polinomiais cúbicas e quárticas.
 
 00:05:43.289 --> 00:05:45.789
-Então, uma pessoa muito, muito brilhante.
+Logo, uma pessoa muito, muito brilhante.
 
 00:05:45.789 --> 00:05:50.199
 Os ângulos do Cardan envolvem rotações em
 torno de diferentes eixos.
 
 00:05:50.199 --> 00:05:54.440
-Portanto, nenhuma letra é repetida na
-sequência de rotação.
+Portanto, nenhuma letra é repetida na sequência de rotação.
 
 00:05:54.440 --> 00:05:58.680
 Os dois deles são referidos como ângulos de 
@@ -339,8 +337,8 @@ pitch e yaw, depende um pouco do
 contexto do problema.
 
 00:06:09.479 --> 00:06:16.319
-Ângulos de roll, pitch e yaw são 
-uma convenção bem comum para orientação de corpos em um
+Ângulos de roll, pitch e yaw são uma convenção 
+bem comum para orientação de corpos em um
 
 00:06:16.319 --> 00:06:17.319
 espaço tridimensional.
@@ -357,7 +355,7 @@ Agora nos realizamos a rotação em torno do eixo y
 e essa é referida como pitch.
 
 00:06:29.380 --> 00:06:31.069
-Assim esse é a forma de movimento.
+Assim essa é a forma de movimento.
 
 00:06:31.069 --> 00:06:36.069
 Em seguida a esta rotação, fazemos a rotação 
@@ -468,7 +466,8 @@ O ângulo de pitch é 0.2 radianos.
 E o ângulo de yaw é 0.3 radianos.
 
 00:08:23.700 --> 00:08:27.480
-Esta é a matriz de rotação ortogonal resultante.
+Esta é a matriz de rotação ortogonal 
+resultante.
 
 00:08:27.480 --> 00:08:31.340
 Mais uma vez, existe uma função inversa.
