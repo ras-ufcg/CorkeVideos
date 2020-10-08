@@ -1,21 +1,21 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.780 --> 00:00:08.340
-Para o caso bidimensilnal consideramos dois
-quadros de coordenadas, o quadro original A, e
+Para o caso bidimensional consideramos dois
+sistemas de coordenadas, o sistema original A, e
 
 00:00:08.340 --> 00:00:13.190
-uma versão rotacionada de disso, quadro de coordenada
+uma versão rotacionada desse, o sistema de coordenadas
 B. E B é rotacionado na direção positiva
 
 00:00:13.190 --> 00:00:21.110
-pelo ângulo teta em relação ao quadro A. Quando
-descrevemos os novos eixos do quadro de coordenada 
+pelo ângulo theta em relação ao sistema A. Quando
+descrevemos os novos eixos do sistema de coordenadas 
 
 00:00:21.110 --> 00:00:26.400
-em termos da antigo eixo do quadro de coordenada,
+em termos da antigo eixo do sistema de coordenadas,
 e fomos capazes de escrever esses relacionamentos.
 
 00:00:26.400 --> 00:00:32.119
@@ -23,15 +23,15 @@ Em seguida escrevemos isso em forma de matriz e terminamos
 com uma formulação que nos permitiu transformar
 
 00:00:32.119 --> 00:00:40.219
-vetores da novo quadro para o amtigo quadro
+vetores da novo sistema para o antigo sistema
 A. As colunas dessa matriz de rotação são
 
 00:00:40.219 --> 00:00:47.999
-o novo eixo-X que é o eixo-B expresso
-em termos do quadro coordenada A e o
+o novo eixo-x que é o eixo-B expresso
+em termos do sistema coordenada A e o
 
 00:00:47.999 --> 00:00:51.809
-eixo-BY em termos do quadro de coordenada A.
+eixo-By em termos do sistema de coordenada A.
 
 00:00:51.809 --> 00:00:55.989
 Usamos geometria e diagramas bastante complexos
@@ -42,38 +42,39 @@ Para três dimensões é um pouco complexo
 para fazer esse tipo de construção geométrica
 
 00:01:01.089 --> 00:01:05.659
-então nós vamos somente pwgar o grande princípio
+então nós vamos somente usar o grande princípio
 da última vez.
 
 00:01:05.659 --> 00:01:10.159
 Vamos começar de maneira similar, aqui está
-o quadro de coordenada A e desenhamos um ponto
+o sistema de 
+A e desenhamos um ponto
 
 00:01:10.159 --> 00:01:13.640
 ao qual podemos descrever em termos do vetor
-em relação ao quadro de coordenada A. Vou
+em relação ao sistema de coordenadas A. Vou
 
 00:01:13.640 --> 00:01:18.600
-introduzir uma novo quadro de coordenada
-B que é rotacionado em relação ao quadro de coordenada A. 
+introduzir uma novo sistema de coordenadas
+B que é rotacionado em relação ao sistema de coordenadas A. 
 
 00:01:18.600 --> 00:01:24.460
 E vamos definir o ponto
 com outro vetor, vetor BP que é o
 
 00:01:24.460 --> 00:01:27.180
-ponto em relação a um quadro rotacionado B.
+ponto em relação a um sistema rotacionado B.
 
 00:01:27.180 --> 00:01:30.450
 Vamos fazer o mesmo truque que fizemos
 para o caso bidimensional.
 
 00:01:30.450 --> 00:01:36.619
-Vamos descrever os eixos de quadro de coordenada
-B como unit vectors expressed in terms
+Vamos descrever os eixos de sistema de coordenadas
+B como vetores unitários expressos em termos
 
 00:01:36.619 --> 00:01:41.440
-de quadro de coordenada A e ele são as colunas
+do sistema de coordenadas A e ele são as colunas
 da nova matriz de rotação.
 
 00:01:41.440 --> 00:01:45.520
@@ -84,24 +85,23 @@ Então não vamos análisar detalhadamente
 a construção geométrica, vamos extrapolar
 
 00:01:50.479 --> 00:01:55.750
-do caso the bidimensional e apenas vamos escrever
+do caso bidimensional e apenas vamos escrever
 essa expressão diretamente.
 
 00:01:55.750 --> 00:02:01.460
 Essa nova matriz de rotação transforma vetores
-do novo quadro de coordenada B para o antigo
+do novo sistema de coordenadas B para o antigo
 
 00:02:01.460 --> 00:02:08.140
-quadro de coordenada A. Essa matriz de rotação tridimensional,
+sistema de coordenadas A. Essa matriz de rotação tridimensional,
 essa matriz 3x3, tem muitas propriedades
 
 00:02:08.140 --> 00:02:11.270
-semelhantes ao seu equivalente 2x2.
+semelhantes à sua equivalente 2x2.
 
 00:02:11.270 --> 00:02:16.340
-É ortogonal, as vezes chamado ortonormal,
-matriz.
-
+É matriz ortogonal, as vezes chamado 
+ortonormal.
 
 00:02:16.340 --> 00:02:21.870
 Que significa que cada coluna na matriz é um
@@ -109,7 +109,7 @@ vetor de comprimento unitário.
 
 00:02:21.870 --> 00:02:27.040
 Cada coluna na matriz é ortogonal para
-todas as outras colunas então, que significa que se Eu pego
+todas as outras colunas então, que significa que se eu pego
 
 00:02:27.040 --> 00:02:32.440
 o produto escalar entre a coluna 1 e a coluna
@@ -120,10 +120,10 @@ e coluna 3, coluna 2 e coluna 3.
 
 00:02:35.290 --> 00:02:39.840
 O inverso dessa matriz é o mesmo que
-a transposta e existe uma propriedade realmente útil,
+a transposta e essa é uma propriedade realmente útil,
 
 00:02:39.840 --> 00:02:45.239
-porque muitas vezes quando computamos
+porque muitas vezes quando estamos computando
 expressões de pose precisamos encontrar a inversa
 
 00:02:45.239 --> 00:02:50.030
@@ -131,17 +131,18 @@ da matriz de rotação e computacionalmente
 é muito mais simples para calcular a transposta
 
 00:02:50.030 --> 00:02:53.519
-do que calcular uma inversa para uma matriz 3x3.
+do que calcular uma inversa para uma matriz
+3x3.
 
 00:02:53.519 --> 00:03:01.570
 O determinante dessa matriz é +1, que
 significa que quando multiplicamos um vetor por essa matriz,
 
 00:03:01.570 --> 00:03:03.379
-o seu comrimento permanecerá inalterado.
+o seu comprimento permanecerá inalterado.
 
 00:03:03.379 --> 00:03:09.450
-Um Matemático diria que uma matriz como essa
+Um matemático diria que uma matriz como essa
 pertence ao grupo ortogonal especial
 
 00:03:09.450 --> 00:03:15.710
@@ -157,11 +158,11 @@ Existe algumas matrizes  de rotação muito úteis
 que podemos escrever, referimos para estes
 
 00:03:26.220 --> 00:03:29.079
-como matrizes de rotação elementares .
+como matrizes de rotação elementares.
 
 00:03:29.079 --> 00:03:35.180
-O primeiro é a rotação por teta
-em torno do eixo X, rotação por teta em torno
+O primeiro é a rotação por theta
+em torno do eixo X, rotação por theta em torno
 
 00:03:35.180 --> 00:03:40.250
 do eixo Y e finalmente rotação por teta em torno
@@ -182,11 +183,11 @@ escrevemos a matriz de rotação que
 se pareçe com isso.
 
 00:03:54.500 --> 00:03:59.670
-Na verdade, isso é identico a parte superior esquerda
+Na verdade, isso é idêntico a parte superior esquerda
 da matriz de rotação elementar para
 
 00:03:59.670 --> 00:04:01.360
-rotação em torno de Z.
+rotação em torno do eixo Z.
 
 00:04:01.360 --> 00:04:04.440
 A razão disso é bastante intuitiva.
@@ -207,8 +208,8 @@ bidimensional e a tridimensional em torno
 do eixo Z.
 
 00:04:22.030 --> 00:04:27.639
-Quando falamos de orientação, nós a 
-consideramos em termos de uma sequência de rotações 
+Quando falamos de orientação, nós a consideramos 
+em termos de uma sequência de rotações 
 
 00:04:27.639 --> 00:04:31.030
 elementares, então vamos observar as rotações em 
@@ -227,9 +228,8 @@ Se eu giro em menos 90 graus em torno do eixo X,
 vai parecer dessa forma.
 
 00:04:44.680 --> 00:04:50.110
-Eu posso girar 90 graus positivos em torno
-do eixo Y, para que tenhamos um rotação dessa forma,
-então
+Eu posso girar 90 graus positivos em torno do eixo
+Y, para que tenhamos uma rotação dessa forma, então
 
 00:04:50.110 --> 00:04:55.340
 girar 90 graus positivos irá parecer desta forma
@@ -305,8 +305,8 @@ simplesmente transpor.
 Computacionamente muito mais barato.
 
 00:06:12.460 --> 00:06:17.210
-Eu também posso calcular uma rotação em torno
-de um diferente eixo. Eu posso pedir uma rotação em torno
+Eu também posso calcular uma rotação em torno de um 
+eixo diferente. Eu posso pedir uma rotação em torno
 
 00:06:17.210 --> 00:06:18.880
 do eixo Y em 0.2
@@ -319,8 +319,8 @@ de novo em 0.3
 radianos.
 
 00:06:25.560 --> 00:06:31.110
-A caixa de ferramentes também contém uma função 
-que me permite representar graficamente uma dessas matrizes
+A toolbox também contém uma função que me permite 
+representar graficamente uma dessas matrizes
 
 00:06:31.110 --> 00:06:33.650
 de rotação como um sistema de coordenadas rotacionado.
@@ -349,4 +349,3 @@ podemos adicionar um rótulo para o sistema,
 
 00:06:58.970 --> 00:07:00.900
 podemos adicionar pontas de flechas e assim por diante.
-
