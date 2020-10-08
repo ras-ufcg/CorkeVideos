@@ -69,7 +69,7 @@ operador de composição que é um sinal de mais
 dentro de um círculo e o que ele significa exatamente
 
 00:01:30.570 --> 00:01:35.780
-é algo que veremos mais tarde nesse curso mas
+é algo que veremos mais tarde nesse curso, mas
 é um processo referido como composição 
 
 00:01:35.780 --> 00:01:40.749
@@ -77,7 +77,7 @@ ou combinação e nós podemos estender esse processo
 indefinidamente.
 
 00:01:40.749 --> 00:01:45.330
-E uma vez que combinamos essas duas poses relativas, 
+E, uma vez que combinamos essas duas poses relativas, 
 agora nós temos a pose relativa do sistema
 
 00:01:45.330 --> 00:01:50.679
@@ -89,7 +89,7 @@ o vetor em relação ao sistema A e podemos
 estender essa abordagem indefinidamente.
 
 00:01:55.679 --> 00:02:00.639
-Nós introduzimos a álgebra de posição e existem 
+Nós introduzimos a álgebra de pose e existem 
 apenas algumas regras simples, e essas
 
 00:02:00.639 --> 00:02:04.639
@@ -108,7 +108,7 @@ ksi e operadores abstratos, as regras são
 absolutamente idênticas.
 
 00:02:17.209 --> 00:02:19.670
-Então, a primeira regra é composição.
+Então, a primeira regra é a composição.
 
 00:02:19.670 --> 00:02:24.970
 Duas poses relativas podem ser combinadas para
@@ -131,7 +131,8 @@ Em geral, a composição não é comutativa então
 isso significa ksi 1 composto com ksi 2
 
 00:02:42.420 --> 00:02:46.870
-é diferente de ksi 2 composto com ksi 1.
+é diferente de ksi 2 composto com ksi 
+1.
 
 00:02:46.870 --> 00:02:52.200
 Existe a noção de uma pose relativa nula, isso 
@@ -141,8 +142,8 @@ significa que não há mudança na pose que repesentamos
 pelo símbolo O.
 
 00:02:53.920 --> 00:02:59.660
-Então, se eu tiver uma pose relativa nula de
-ksi e eu compor com a pose nula, o resultado
+Então, se eu tiver uma pose relativa de ksi e eu
+compor com a pose nula, o resultado
 
 00:02:59.660 --> 00:03:00.970
 é a pose original.
@@ -205,7 +206,7 @@ um grande número de um sistema tridimensional de
 coordenadas representando algum cenário de robótica.
 
 00:03:56.270 --> 00:03:58.250
-Eu tenho um sistema de coordenadas global.
+Eu tenho um sistema de coordenadas de mundo.
 
 00:03:58.250 --> 00:04:00.439
 Eu tenho uma câmera que está fixa no ambiente.
@@ -215,7 +216,7 @@ Eu tenho um robô.
 
 00:04:01.682 --> 00:04:05.189
 Há uma câmera conectada ao robô e há um 
-objeto conectado ao ambiente que o robô
+objeto no mundo em que o robô
 
 00:04:05.189 --> 00:04:08.510
 está olhando e pode querer pegar.
