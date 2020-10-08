@@ -3,154 +3,154 @@ Kind: captions
 Language: en
 
 00:00:04.819 --> 00:00:09.769
-We saw this simple two-link robot in the previous
-lecture about forward kinematics.
+Vimos este simples robô de dois elos 
+anteriormente na leitura sobre cinemática.
 
 00:00:09.769 --> 00:00:14.700
-The tooltip pose of this robot is described
-simply by two numbers, the coordinates x and
+A pose de ponta de ferramenta deste robô é descrita 
+simplesmente por dois números, as coordenadas x e
 
 00:00:14.700 --> 00:00:17.550
-y with respect to the world coordinate frame.
+y em relação ao quadro de coordenadas do mundo.
 
 00:00:17.550 --> 00:00:23.010
-So, the problem here is that given x and y,
-we want to determine the joined angles, Q1
+Então, o problema aqui é que dado x e y,
+queremos determinar os ângulos unidos, Q1
 
 00:00:23.010 --> 00:00:24.150
-and Q2.
+e Q2.
 
 00:00:24.150 --> 00:00:27.890
-The solution that we’re going to follow
-in this particular section is a geometric
+A solução que vamos seguir
+nesta seção em particular é de forma
 
 00:00:27.890 --> 00:00:28.890
-one.
+Geométrica.
 
 00:00:28.890 --> 00:00:30.660
-We’re going to start with a simple piece
-of construction.
+Vamos começar com uma simples 
+peça de construção.
 
 00:00:30.660 --> 00:00:34.580
-We’re going to overlay the red triangle
-on top of our robot.
+Vamos sobrepor o triângulo vermelho 
+em cima do nosso robô.
 
 00:00:34.580 --> 00:00:39.730
-We know that the end point coordinate is x,
-y, so the vertical height of the triangle
+Sabemos que a coordenada do ponto final é x,
+y, então a altura vertical do triângulo
 
 00:00:39.730 --> 00:00:42.250
-is y, the horizontal width is x.
+é y, a largura horizontal é x.
 
 00:00:42.250 --> 00:00:48.800
-And, using Pythagoras theorem, we can write
-r squared equals x squared plus y squared.
+E, usando teorema de Pitágoras, podemos escrever r ao 
+quadrado igual a x ao quadrado mais y ao quadrado.
 
 00:00:48.800 --> 00:00:50.399
-So far, so easy.
+Até agora, muito fácil.
 
 00:00:50.399 --> 00:00:55.660
-Now, we’re going to look at this triangle
-highlighted here in red and we want to determine
+Agora, vamos olhar para este triângulo destacado
+aqui em vermelho e queremos determinar 
 
 00:00:55.660 --> 00:00:57.680
-the angle alpha.
+o ângulo alfa.
 
 00:00:57.680 --> 00:01:00.230
-In order to do that, we need to use the cosine
-rule.
+IPara fazer isso, precisamos usar a 
+regra do cosseno.	
 
 00:01:00.230 --> 00:01:04.970
-And, if you’re a little rusty on the cosine
-rule, here is a bit of a refresher.
+E, se você está um pouco enferrujado na regra do cosseno,
+aqui está um pouco de uma atualização.
 
 00:01:04.970 --> 00:01:06.649
-We have an arbitrary triangle.
+Temos um triângulo arbitrário.
 
 00:01:06.649 --> 00:01:10.540
-We don’t have to have any right angles in
-it and we’re going to label the length of
+Nós não temos que ter nenhum ângulo reto
+nele e vamos rotular o comprimento de
 
 00:01:10.540 --> 00:01:15.180
-this edge as A and the angle opposite that
-edge, we’re going to label as little a.
+esta borda como A e o ângulo oposto a essa borda,
+vamos rotular como azinho.
 
 00:01:15.180 --> 00:01:21.000
-And, we do the same for this edge and this
-angle, and this edge and this angle.
+E fazemos o mesmo por essa borda e este ângulo,
+e esta borda e este ângulo.
 
 00:01:21.000 --> 00:01:27.030
-So, all together, the sides are labelled capitals
-A, B and C, and the angles are labelled little
+Assim, todos juntos, os lados são capitais rotuladas 
+A, B e C, e os ângulos são rotulados como
 
 00:01:27.030 --> 00:01:28.280
-a, little b, and little c.
+Azinho, Bêzinho e Cêzinho.
 
 00:01:28.280 --> 00:01:33.010
-So, the cosine rule is simply this relationship
-here.
+Então, a regra do cosseno é simplesmente 
+essa relação aqui.
 
 00:01:33.010 --> 00:01:37.640
-It’s a bit like Pythagoras’ theorem except
-for this extra term on the end with the cos
+É um pouco como o teorema de Pitágoras, exceto 
+por este termo extra no final com o cossseno
 
 00:01:37.640 --> 00:01:38.729
-a in it.
+de a.
 
 00:01:38.729 --> 00:01:43.250
-Now, let’s apply the cosine rule to the
-particular triangle we looked at a moment
+Agora, vamos aplicar a regra do cosseno
+ao triângulo particular que olhamos 
 
 00:01:43.250 --> 00:01:44.250
-ago.
+há pouco.
 
 00:01:44.250 --> 00:01:47.689
-It’s pretty straightforward to write down
-this particular relationship.
+É muito simples escrever essa 
+relação em particular.
 
 00:01:47.689 --> 00:01:52.020
-We can isolate the term cos alpha which gives
-us the angle alpha that we’re interested
+Podemos isolar o termo cos alfa que nos dá o
+ângulo alfa que estamos interessados
 
 00:01:52.020 --> 00:01:53.020
-in.
+em achar.
 
 00:01:53.020 --> 00:01:58.450
-And, it’s defined in terms of the constant
-link lengths, A1 and A2 and the position of
+E, é definido em termos dos comprimentos 
+constantes de A1 e A2 e a posição
 
 00:01:58.450 --> 00:02:01.329
-the end effector, x and y.
+do efeito final, x e y.
 
 00:02:01.329 --> 00:02:05.579
-We can write this simple relationship between
-the angles alpha and Q2.
+Podemos escrever esta relação simples entre os
+ângulos alfa e Q2.
 
 00:02:05.579 --> 00:02:11.500
-And, we know from the shape of the cosine
-function that cos of Q2 must be equal to negative
+E, sabemos pela forma da função cossina que
+cos de Q2 deve ser igual a negativo 
 
 00:02:11.500 --> 00:02:12.510
-of cos alpha.
+de cos alfa.
 
 00:02:12.510 --> 00:02:18.240
-This time, let’s just write an expression
-for the cosine of the joined angle Q2.
+Desta vez, vamos apenas escrever uma expressão
+para o cosseno do ângulo unido Q2.
 
 00:02:18.240 --> 00:02:22.750
-Now, we’re going to draw yet another red
-triangle and we’re going apply some simple
+Agora, vamos desenhar mais um triângulo 
+vermelho e vamos aplicar uma
 
 00:02:22.750 --> 00:02:24.250
-trigonometry here.
+simples trigonometria aqui.
 
 00:02:24.250 --> 00:02:29.270
-If we know Q2, then we know this length and
-this length of the red triangle.
+Se conhecemos o Q2, então sabemos esse comprimento 
+e este comprimento do triângulo vermelho.
 
 00:02:29.270 --> 00:02:32.970
-We can write this relationship for the sine
-of the joined angle Q2.
+Podemos escrever esta relação para 
+o seno do ângulo unido Q2.
 
 00:02:32.970 --> 00:02:39.700
 Agora, nós podemos considerar este triângulo maior
