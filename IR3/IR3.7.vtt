@@ -1,13 +1,13 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.610 --> 00:00:09.040
 Agora vamos falar sobre um dos elementos mais 
 desconcertantes em relação a rotações 3D.
 
 00:00:09.040 --> 00:00:12.710
-Aqui eu tenho três quadros de coordenadar e
+Aqui eu tenho três sistemas de coordenadas e
 são todos inicialmente paralelos um ao outro.
 
 00:00:12.710 --> 00:00:15.669
@@ -33,7 +33,7 @@ E agora eu vou rotacionar em +90 graus
 ao redor do eixo y.
 
 00:00:31.150 --> 00:00:33.910
-Então este quadro vai acabar ficando
+Então este sistema vai acabar ficando
 assim.
 
 00:00:33.910 --> 00:00:35.470
@@ -43,7 +43,7 @@ Essa é sua orientação final.
 Eu só vou colocar isso lá embaixo.
 
 00:00:37.860 --> 00:00:42.579
-Vou pegar o quadro azul e
+Vou pegar o sistema azul e
 farei a rotação na ordem 
 
 00:00:42.579 --> 00:00:43.710
@@ -72,7 +72,7 @@ Então é assim que a orientação
 final será.
 
 00:01:02.120 --> 00:01:06.840
-E nós podemos ver que esses dois quadros receberam
+E nós podemos ver que esses dois sistemas receberam
 orientações muito diferentes.
 
 00:01:06.840 --> 00:01:12.000
@@ -119,4 +119,3 @@ são bem diferentes.
 00:01:52.200 --> 00:01:55.770
 Quando você multiplica matrizes de rotação
 a ordem é extremamente importante.
-
