@@ -136,136 +136,136 @@ In fact what it does is allow us to partition
 the problem into two. It allows us to solve
 
 00:02:49.620 --> 00:02:55.930
-for the position of the robot’s end effector,
-the XYZ co-ordinate and then separately to
+para a posição do efetuador do robô,
+a coordenada XYZ e depois, separadamente,
 
 00:02:55.930 --> 00:03:01.190
-solve for the orientation of the robot's end
-effector, that is the orientation that could
+resolver para a orientação do efetuador,
+cuja é a orientação que pode ser
 
 00:03:01.190 --> 00:03:07.170
-be expressed in terms roll, pitch, yaw angles
-or in terms of Euler angles. But what happens
+expressa em termos dos ângulos de roll, pitch, yaw,
+ou em termos de ângulos Euler. Mas o que acontece
 
 00:03:07.170 --> 00:03:10.650
-if it's not possible to determine the analytic
-solution?
+se não for possível determinar a solução
+analítica?
 
 00:03:10.650 --> 00:03:14.930
-Perhaps the robot doesn't have a spherical
-wrist or what if it's just too hard to figure
+Talvez o robô não tenha um punho esférico,
+ou talvez seja muito complicado de calcular,
 
 00:03:14.930 --> 00:03:20.049
-out or you can't be bothered to go through
-the pages of algebra required to determine
+ou você não pode se incomodar de folhear as páginas
+de livros de álgebra necessárias para determinar
 
 00:03:20.049 --> 00:03:25.610
-the solution? Well there is an alternative
-and that is to find a numerical solution to
+a solução? Bom, existe uma alternativa, que
+seria encontrar uma solução numérica para
 
 00:03:25.610 --> 00:03:30.980
-the problem. We can always determine the forward
-kinematics of a robot, that's relatively straight
+o problema. Nós podemos determinar a cinemática
+direta do robô, o que é, relativamente, fácil
 
 00:03:30.980 --> 00:03:36.590
-forward to do as we showed in the previous
-lecture. If we know the desired pose of our
+de fazer, uma vez que mostramos isso em nossa aula
+anterior. Se nós soubermos a pose desejada do nosso
 
 00:03:36.590 --> 00:03:42.480
-robot, which I'm going to call Ksi star, then
-all we have to do is adjust the joint angles
+robô, a qual vou chamar de Ksi asterisco, depois tudo
+o que precisamos fazer é ajustar os ângulos de junta
 
 00:03:42.480 --> 00:03:48.319
-until the pose given to us by the forward
-kinematics Ksi equals the desired value Ksi
+até que a pose obtida pela cinemática direta
+Ksi se iguale ao valor desejado Ski
 
 00:03:48.319 --> 00:03:53.909
-star. So you could think of it perhaps as
-having a large number of dials, each dial
+asterisco. Você poderia pensar nisso como se eu
+tivesse um grande número de medidores, cada um
 
 00:03:53.909 --> 00:03:59.209
-represents a particular joint angle and I’m
-just going to adjust all of those dials until
+representando um ângulo de junta específico, e
+eu apenas ajusto todos esses medidores, até que
 
 00:03:59.209 --> 00:04:05.049
-the robot's end effector pose equals the pose
-that I want. A more formal way of describing
+a pose do efeturador do robô se iguale à pose
+que eu quero. Uma maneira mais formal de descrever
 
 00:04:05.049 --> 00:04:09.010
-a problem like this is to represent it as
-an optimization problem.
+um problema como esse é representá-lo como
+uma problema de otimização.
 
 00:04:09.010 --> 00:04:13.840
-What I want to do is minimize the relative
-pose which is given by the forward kinematics
+O que eu quero fazer é minimizar a pose relativa,
+a qual é dada pela cinemática direta
 
 00:04:13.840 --> 00:04:20.250
-of the robot compounded with the inverse of
-the desired pose and I want to know the joint
+do robô composta com a inversa da pose 
+desejada, e eu quero saber quais ângulos
 
 00:04:20.250 --> 00:04:23.720
-angles that cause this minimum.
+de junta que causam esse mínimo.
 
 00:04:23.720 --> 00:04:28.480
-We've mostly talked about serial linked robots
-and these are robots formed by a chain of
+Nós falamos bastante sobre robôs de elos seriais,
+e esses são aqueles formados por uma corrente
 
 00:04:28.480 --> 00:04:33.000
-links, starting at the base of the robot we
-have a link, that link holds up the second
+de elos, começando da base do robô, onde nós
+temos um elo, este sustenta o segundo
 
 00:04:33.000 --> 00:04:36.530
-link, which holds up the third link and so on.
+elo, o qual sustenta o terceiro elo, e assim por diante.
 
 00:04:36.530 --> 00:04:40.630
-An alternative structure for a robot is what's
-called a parallel link robot and that's shown
+Uma estrutura alternativa para robôs é o que chamamos
+de robô de elos paralelos, e isso é mostrado
 
 00:04:40.630 --> 00:04:46.220
-here on the right. They have the advantage
-that all the motors are placed in the base.
+aqui na direita. Eles possuem a vantagem de
+que todos os motores são colocados na base.
 
 00:04:46.220 --> 00:04:51.260
-This has advantages over a serial link robot
-where each motor has to hold up not only the
+Isso tem vantagens sobre o robô de elos seriais
+onde cada motor precisa sustentar não só o
 
 00:04:51.260 --> 00:04:55.700
-next link but also the motor that drives the
-link beyond that.
+próximo elo, mas também o motor que fornece
+energia ao elo atrás dele.
 
 00:04:55.700 --> 00:04:59.960
-Parallel link robots are also very, very ridged
-and they're capable of very high speed motion.
+Robôs de elos paralelos são também muito, muito
+retraídos e realizam movimentos em altíssima velocidade.
 
 00:04:59.960 --> 00:05:05.350
-They're used for high speed, very precise,
-pick and place operations. So for a serial
+Eles são usados para operações de pegar e posicionar 
+com alta velocidade e precisão. Então, para um robô
 
 00:05:05.350 --> 00:05:10.670
-link robot, the kinematics - the forward kinematics
-is very easy to determine, very easy to write
+de elos seriais, a cinemática direta é muito
+fácil de determinar, muito fácil de escrever.
 
 00:05:10.670 --> 00:05:16.410
-down. However for a parallel link robot, the
-forward kinematics is very, very complex and
+Entretanto, para um robô de elos paralelos, a
+cinemática direta é muito, muito complexa e
 
 00:05:16.410 --> 00:05:21.720
-an analytical form may not even exist. For
-a serial link robot, the inverse kinematics
+uma forma analítica pode não existir. Para
+um robô de elos seriais, a cinemática inversa
 
 00:05:21.720 --> 00:05:28.530
-is typically complex and analytic form may
-not exist. However for most parallel link
+é, tipicamente, complexa, e uma forma analítica pode
+não existir. Entretando, para o a maioria dos robôs
 
 00:05:28.530 --> 00:05:33.210
-robots, the inverse kinematics is actually
-very easy to determine and an analytic form
+de elos paralelos, a cinemática inversa é, na verdade,
+muito fácil de determinar, e uma forma analítica 
 
 00:05:33.210 --> 00:05:39.600
-always exists. So there is some complementarity
-between serial and parallel link robots; one
+sempre existe. Logo, existe uma certa complementaridade
+entre robôs de elos seriais e paralelos; um
 
 00:05:39.600 --> 00:05:43.820
-has an easy forward kinematics, the other
-has an easy inverse kinematics.
+tem uma fácil cinemática direta, o outro
+tem uma fácil cinemática inversa.
 
