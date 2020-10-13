@@ -3,115 +3,117 @@ Kind: captions
 Language: pt-BR
 
 00:00:03.649 --> 00:00:08.750
-Let's have a look at determining the inverse
-kinematics of our simple two link robot using
+Vamos observar a determinação da cinemática
+inversa do nosso simples robô de dois elos usando
 
 00:00:08.750 --> 00:00:10.940
-a numerical approach.
+uma abordagem numérica.
 
 00:00:10.940 --> 00:00:18.770
-We're going to load now, into the workspace
-a model of our two link robot. And that's
+Vamos abrir agora, na área de trabalho
+um modelo de nosso robô de dois elos. Ou seja,
 
 00:00:18.770 --> 00:00:25.880
-the workspace variable P2, is this new robot
-and we can plot the configuration for the
+a variável P2 da área de trabalho é esse novo 
+robô e podemos traçar sua configuração 
 
 00:00:25.880 --> 00:00:30.820
-robot for zero joint angles, this function
-also defines a workspace variable QZ, which
+para ângulos de junta zerados, essa função
+também define uma varíavel da área de trabalho QZ, a qual
 
 00:00:30.820 --> 00:00:38.020
-contains the value of zero zero and that's what the robot looks like in the zero angle configuration.
+contém o valor de zero zero e é assim que o 
+robô se mostra na configuração de ângulo zero.
 
 00:00:39.180 --> 00:00:44.390
-Now I'm going to define a desired end effector
-position for this robot and I'm going to define
+Agora irei definir uma posição desejada do
+efetuador para esse robô e irei simplesmente 
 
 00:00:44.390 --> 00:00:49.460
-simply the translation and it's going to be
-one in the X direction, one in the Y direction
+definir a translação, que será uma
+na direção X, uma na direção Y
 
 00:00:49.460 --> 00:00:52.180
-and zero in the Z direction.
+e zero na direção Z.
 
 00:00:52.180 --> 00:00:58.210
-Remember that this robot has only got two
-joints and he can only move in the XY plane
+Lembre-se que esse robô possui somente duas
+juntas e ele só pode se mover no plano XY 
 
 00:00:58.210 --> 00:01:02.790
-so it doesn’t make sense for me to put a
-value for the Z co-ordinate that's anything
+então para mim não faz sentido atribuir
+um valor para a coordenada Z que não seja zero. 
 
 00:01:02.790 --> 00:01:10.650
-but zero. The robot is incapable of achieving
-any position where Z is not equal to zero.
+O robô é incapaz de chegar a qualquer
+posição em que Z não é igual a zero.
 
 00:01:10.650 --> 00:01:17.120
-And here is the homogeneous transformation,
-representing the desired position.
+E aqui está a transformação homogênea,
+representando a posição desejada.
 
 00:01:17.120 --> 00:01:24.150
-Now in order to determine the inverse kinematics
-numerically, I write down our object and I'm
+Agora a fim de determinar a cinemática inversa
+numericamente, eu escrevo nosso objeto e eu
 
 00:01:24.150 --> 00:01:30.080
-going to use the method ikine, it stands for
-Inverse Kinematics. And this particular method
+usarei o método ikine, que significa Inverse Kinematics
+(cinemática inversa). E esse método particular
 
 00:01:30.080 --> 00:01:36.180
-performs a numerical solution to determine
-the inverse kinematics. First argument I pass
+executa uma solução numérica para determinar 
+a cinemática inversa. O primeiro argumento que 
 
 00:01:36.180 --> 00:01:43.390
-in is the desired end effector pose T that we've
-just defined and I'm going to put in the initial
+eu passo é a pose desejada T do efetuador que nós
+acabamos de definir e eu irei adicionar os ângulos
 
 00:01:43.390 --> 00:01:50.250
-joint angles that I'm going to use in the search for the optimal joint angles to achieve that pose.
+de junta iniciais que irei usar na procura pelos 
+melhores ângulos de junta para atingir essa pose.
 
 00:01:50.720 --> 00:01:56.640
-The last argument is a little bit more complex.
-It's what I call a "Mask Matrix" and its axis
+O último argumento é um pouco mais complexo.
+É o que eu chamo de "Mask Matrix" (Matriz Máscara) e é
 
 00:01:56.640 --> 00:02:01.850
-element matrix and the first two elements
-are ones and the last four elements are zeros.
+uma matriz de seis elementos e os dois primeiros elementos
+são 1's e os quatro últimos elementos são 0's.
 
 00:02:01.850 --> 00:02:08.360
-And what this is telling the ikine function
-is only try and match the end effector X and
+E o que isso está dizendo para a função ikine é que 
+ela tente encontrar as posições X e Y do efetuador.
 
 00:02:08.360 --> 00:02:13.779
-Y position, don't bother trying to match the
-Z co-ordinate, don't bother trying to match
+Não se importe em tentar encontrar a coordenada Z
+, não se importe em tentar encontrar
 
 00:02:13.779 --> 00:02:19.569
-the orientation. Because this robot's only
-got two degrees of freedom, it can only achieve
+a orientação. Uma vez que esse robô possui somente
+dois graus de liberdade, só poderá efetuar
 
 00:02:19.569 --> 00:02:25.279
-two constraints in its end effector pose and
-I've chosen those constraints to be its X
+duas condições na pose do efetuador e
+eu decidi que essas condições serão suas 
 
 00:02:25.279 --> 00:02:31.650
-position and its Y position. I don't care
-about any other elements of the end effector
+posições X e Y. Eu não me importo com
+quaisquer outros elementos da pose do 
 
 00:02:31.650 --> 00:02:39.250
-pose. I hit enter and the solution has come
-back a Pi and minus Pi. Well let's plot that,
+efetuador. Eu pressiono enter e a solução 
+retorna Pi e menos Pi. Bom, vamos traçar isso.
 
 00:02:41.200 --> 00:02:49.639
-plot Q and there we see the desired configuration
-of the robot to achieve the particular end effector
+Traçamos Q, e daí vemos a configuração desejada do 
+robô a fim de atingir a particular posição do efetuador 
 
 00:02:49.639 --> 00:02:51.439
-position that I asked for.
+que eu pedi.
 
 00:02:51.439 --> 00:02:55.120
-Let's just have a look at that robot from
-above and we can see very clearly, the end effector
+Vamos dar uma olhada de cima nesse robô
+e podemos ver claramente,
 
 00:02:55.120 --> 00:03:01.829
 has moved to the position one in the X direction
