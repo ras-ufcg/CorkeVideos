@@ -3,137 +3,137 @@ Kind: captions
 Language: en
 
 00:00:03.889 --> 00:00:09.000
-Let's recap what we've learnt about solving
-the inverse Kinematic problem for particular
+Vamos recapitular o que aprendemos sobre resolver
+o problema cinemático inverso para braços
 
 00:00:09.000 --> 00:00:14.529
-robot arms. So far we've looked at the analytic
-solution and that involved us creating a model
+de robôs específicos. Até agora vimos na solução analítica
+e que nos envolveu na criação de um modelo
 
 00:00:14.529 --> 00:00:20.249
-of the robot's joints and links. We write
-down the equations for the forward kinematics
+das juntas e ligações do robô. Escrevemos
+abaixo as equações para a cinemática direta
 
 00:00:20.249 --> 00:00:25.169
-of the robot arm and that's relatively a straightforward
-thing to do.
+do braço do robô e isso é relativamente simples de
+fazer.
 
 00:00:25.169 --> 00:00:29.369
-Next comes the hard part, where we need to
-write down a lot of equations in attempt to
+Em seguida vem a parte difícil, onde precisamos 
+escrever abaixo muitas equações na tentativa de
 
 00:00:29.369 --> 00:00:35.110
-solve for the unknown joint variables and
-that requires some human insight. Often when
+solucionar para variáveis de juntas desconhecidas e
+isso requer algum discernimento humano. Freqentemente quando
 
 00:00:35.110 --> 00:00:38.770
-you're trying to do this, you'll find yourself
-going down some blind alleys before you come
+você está tentando fazer isso, vai se encontrar
+em alguns becos sem saídas antes de voltar
 
 00:00:38.770 --> 00:00:42.989
-back out and determine the right way to get
-to the solution.
+e determinar o jeito certo para chegar
+na solução.
 
 00:00:42.989 --> 00:00:48.730
-This process can be automated, using a computer
-algebra package; you can write software that
+Esse processo pode ser automatizado, usando um pacote de algebra 
+computacional; você pode escrever um software que
 
 00:00:48.730 --> 00:00:54.949
-will solve the inverse kinematics for certain
-classes of robot arms. The great advantage
+vai resolver a cinemática inversa para certas
+classes de braço de robô. Uma ótima vantagem
 
 00:00:54.949 --> 00:01:00.190
-of the analytic solution is that it explicitly
-shows the multiple configurations that the
+da solução analítica é que isso mostra
+explicitamente as configurações múltiplas que o
 
 00:01:00.190 --> 00:01:06.380
-robot arm can be in. So for our two link manipulator,
-we showed two configurations with the middle
+o braço do robô pode estar. Portanto nosso manipulador de dois links,
+mostramos duas configurações com a junta do meio 
 
 00:01:06.380 --> 00:01:10.590
-joint either below the diagonal line or above
-the diagonal line.
+abaixo da linha diagonal ou acima da
+linha diagonal.
 
 00:01:10.590 --> 00:01:15.750
-For the Puma 560 robot, we showed configurations
-where it's like a left handed person or a
+Para o robô Puma 560, mostramos configurações
+onde ele é canhoto ou
 
 00:01:15.750 --> 00:01:22.780
-right handed person and so on. The multiple
-configurations come out explicitly when you
+destro e assim por diante. As múltiplas
+configurações aparecem explicitamente quando você
 
 00:01:22.780 --> 00:01:26.119
-solve the analytic equations.
+resolve as equações analíticas.
 
 00:01:26.119 --> 00:01:30.119
-Another advantage of the analytic solution
-is you end up writing expressions for the
+Outra vantagem da solução analítica
+é que você termina escrevendo expressõs para os
 
 00:01:30.119 --> 00:01:35.350
-joint angles in terms of the end effector
-pose and they are quite compact and that means
+ângulos das articulações em termos da pose do efetor final 
+e elas são bastante compactas e isso significa
 
 00:01:35.350 --> 00:01:38.040
-that they are very fast to execute.
+que são muito rápidos para executar.
 
 00:01:38.040 --> 00:01:42.619
-The problem becomes increasingly difficult
-as the number of joints in the robot increases.
+O problema torna-se cada vez mais difícil
+à medidida qie o número de articulações no robô aumenta.
 
 00:01:42.619 --> 00:01:48.219
-In an earlier section we derived the solution
-for a simple two joint robot and already that
+Em uma seção anterior derivamos a solução
+para um robô simples de duas articulações e já
 
 00:01:48.219 --> 00:01:53.189
-took quite a number of slides in order to
-come up with the solution. What comes to our
+precisou de um grande número de slides 
+para chegar a solução. O que nos ajuda 
 
 00:01:53.189 --> 00:01:59.350
-rescue is that over many decades, smart people
-have determined the inverse kinematic solutions
+é que ao longo de muitas décadas, pessoas inteligentes
+determinaram as as soluções cinemáticas inversas.
 
 00:01:59.350 --> 00:02:04.590
-for particular robots or for particular classes
-of robots, so they've done the hard work of
+para robôs específicos ou para classes específicas 
+de robôs, assim nós aceitamos a difícil tarefa de
 
 00:02:04.590 --> 00:02:08.310
-deriving the solutions and these have been
-published in the literature.
+derivar as soluções e estas foram
+publicados na literatura.
 
 00:02:08.310 --> 00:02:11.900
-So if you've got a particular robot and you're
-looking for a solution, go and hit up the
+Então se você tem um robô específico e você está
+procurando por uma solução, vá e pesquise a
 
 00:02:11.900 --> 00:02:16.569
-literature and see if somebody has already
-solved this problem for you.
+literatura e veja se alguém já 
+sololveu esse problema para você.
 
 00:02:16.569 --> 00:02:20.629
-When you're trying to determine the inverse
-kinematics for a six degree of freedom robot,
+Quando você está experimentando para determinar a cinemática 
+inversa para um robô de seis graus de liberdade,
 
 00:02:20.629 --> 00:02:25.260
-it's really, really useful to have what's
-called a "Spherical Wrist." Now a spherical
+é muito, muito útil para ter o que é
+chamado de um "Pulso esférico". Agora um pulso
 
 00:02:25.260 --> 00:02:31.459
-wrist is one in which the three wrist joint
-axes all intersect at a common point, as shown
+esférico é aquele em que os três eixos de articulação
+do punho se cruzam em um ponto comum, como mostrado
 
 00:02:31.459 --> 00:02:37.519
-in this sketch here. Almost all industrial
-robots have a spherical wrist. It's quite
+neste esboço aqui. Quase todos os robôs industriais
+têm um pulso esférico. É um mecanismo bastante 
 
 00:02:37.519 --> 00:02:42.940
-a complex mechanism but it leads to great
-simplicity when it comes to determining the
+complexo mas leva a uma grande
+simplicidade quando se trata de determinar a
 
 00:02:42.940 --> 00:02:44.739
-inverse kinematics of the robot.
+cinemática inversa do robô.
 
 00:02:44.739 --> 00:02:49.620
-In fact what it does is allow us to partition
-the problem into two. It allows us to solve
+Na verdade, o que ele faz é nos permitir particionar
+o problema em dois. Isso nos permite resolver
 
 00:02:49.620 --> 00:02:55.930
 para a posição do efetuador do robô,
