@@ -166,166 +166,169 @@ Então, quaternion 1 gira do quadro A para
 quadro B. Quaternion 2 gira a partir do quadro
 
 00:03:16.650 --> 00:03:22.709
-B to frame C, then, the product is the rotation
-from frame A to frame C. And, I can compute
+B para o quadro C, e após, o produto será a rotação
+a partir do quadro A até o quadro C. E eu posso computar
 
 00:03:22.709 --> 00:03:24.829
-the inverse of a quaternion.
+a inversa do quaternion
 
 00:03:24.829 --> 00:03:29.130
-So if I use a quaternion to rotate me from
-frame A to frame B, the inverse is quite simple.
+Então se eu utilizar um quaternion para me rotacionar do
+quadro A para o quadro B, a inversa é bem simples.
 
 00:03:29.130 --> 00:03:33.780
-It’s just the negation of the vector part
-of the quaternion.
+É somente a negativação do vetor parte do quaternion.
 
 00:03:33.780 --> 00:03:37.390
-Once again, I’m going to create a fairly
-arbitrary rotation matrix.
+Novamente, irei criar uma matriz de rotação
+relativamente arbitrária.
 
 00:03:37.390 --> 00:03:45.331
-Going to start with some Euler angles, convert
-them to rotation matrix 0.1, 0.2, 0.3, just
+Começarei com alguns ângulos de Euler, convertendo
+eles para a matriz de rotação 0.1, 0.2, 0.3, apenas
 
 00:03:45.331 --> 00:03:46.370
-for the purpose of illustration.
+no intuito de visualização.
 
 00:03:46.370 --> 00:03:48.120
-Here we have a rotation matrix.
+Aqui nós temos uma matriz de rotação.
 
 00:03:48.120 --> 00:03:54.130
+Agora, irei criar um quaternion e uso
+a classe quaternion e passo como um argumento
 Now, I’m going to create a quaternion and
 I use the quaternion class and I pass in as
 
 00:03:54.130 --> 00:03:55.770
-an argument a rotation matrix.
+a matriz de rotação
 
 00:03:55.770 --> 00:04:00.410
-And, the result is a quaternion object which
-we can see in our workspace.
+Daí, o resultado é um objeto quaternion ao qual
+nós podemos observar no nosso espaço de trabalho.
 
 00:04:00.410 --> 00:04:06.140
-Now, the quaternion has got a real part and
-an imaginary part, which is indicated inside
+Agora, o quaternion possui uma parte real e 
+uma parte imaginária, o que é indicado dentro
 
 00:04:06.140 --> 00:04:07.480
-the angle brackets.
+dos colchetes de ângulo.
 
 00:04:07.480 --> 00:04:14.540
-I’m going to park the quaternion into a
-permanent variable called Q and let’s look
+Eu vou fixar o quaternion em uma variável
+permanente denominada Q e vamos olhar
 
 00:04:14.540 --> 00:04:18.790
-at what we can do with this quaternion object
-in MATLAB.
+o que podemos fazer com este objeto
+quaternion no MATLAB.
 
 00:04:18.790 --> 00:04:24.189
-One of the things that I can do is I can plot
-this quaternion and look at the orientation
+Uma das coisas que eu posso fazer é plotar este
+quaternion e observar a orientação
 
 00:04:24.189 --> 00:04:29.820
-and it behaves just like the trplot function
-that we looked at earlier.
+e seu comportamento, assim como a função
+trplot que observamos anteriormente
 
 00:04:29.820 --> 00:04:34.870
-I can compute the inverse of the quaternion,
-and here it is here, and we can see that the
+Eu posso computar a inversa do quaternion,
+e aqui está isto, e podemos ver que
 
 00:04:34.870 --> 00:04:40.180
-real part of the quaternion remains unchanged,
-but the vector part is negated.
+a parte real do quaternion permanece constante,
+mas a parte vetorial fica negativa.
 
 00:04:40.180 --> 00:04:47.530
-If I multiply the quaternion by its inverse,
-the result is the null quaternion.
+Se eu multiplicar o quaternion pela sua inversa,
+o resultado é o quaternion nulo.
 
 00:04:47.530 --> 00:04:51.060
-This has got a vector component equal to 0.
+Que possui uma componente vetorial 
+equivalente a 0.
 
 00:04:51.060 --> 00:04:55.270
-So this indicates a 0 rotation.
+Logo, isto indica uma rotação 0.
 
 00:04:55.270 --> 00:04:58.500
-I can also compute that using the division
-operator in MATLAB.
+Também é possível calcular aquilo
+utilizando o operador de divisão do MATLAB.
 
 00:04:58.500 --> 00:05:03.789
-So, if I take a quaternion and effectively
-divide it by the quaternion, it’s the same
+Então, se eu tomar um quaternion e dividi-lo
+efetivamente pelo quaternion, é a mesma coisa
 
 00:05:03.789 --> 00:05:05.250
-as multiplying by its inverse.
+que multiplicá-lo pela sua inversa.
 
 00:05:05.250 --> 00:05:07.650
-I once again get the zero rotation.
+E novamente obtenho a rotação zero.
 
 00:05:07.650 --> 00:05:14.610
-If I have a quaternion and I multiply it by
-a vector, let’s say a vector is a unit vector
+Se eu tomo um quaternion e o multiplico por um
+vetor, digamos que um vetor é o vetor unitário
 
 00:05:14.610 --> 00:05:20.750
-in the x direction and I turn it to a column
-vector by transposing it, then what this notation
+na direção x e eu o transformo em um vetor coluna
+por transposição, então esta notação
 
 00:05:20.750 --> 00:05:24.969
-in MATLAB does is to multiply the vector by
-the quaternion.
+no MATLAB faz com que multiplique 
+o vetor pelo quaternion.
 
 00:05:24.969 --> 00:05:27.520
-Effectively, it rotates the vector.
+Realmente, ele rotaciona o vetor.
 
 00:05:27.520 --> 00:05:31.880
-Finally, I can do an example to illustrate
-interpolation.
+Por fim, eu posso fazer um exemplo
+para visualizar a interpolação.
 
 00:05:31.880 --> 00:05:37.120
-If I call quaternion with no arguments, it
-returns a quaternion corresponding to the
+Se eu chamo um quaternion com nenhum argumento, 
+ele retorna um quaternion correspondente a
 
 00:05:37.120 --> 00:05:38.910
-null rotation.
+rotação nula.
 
 00:05:38.910 --> 00:05:47.129
-So, if I use MATLAB syntax like this, I take
-my null quaternion, interpolate it with the
+Portanto, se eu utilizar a sintaxe do MATLAB assim,
+eu tomo meu quaternion nulo, interpolo ele com
 
 00:05:47.129 --> 00:05:53.539
-other quaternion I have, Q, and I pass in
-an argument which tells me the interpolation
+outro quaternion que possuo, Q, e passo 
+um argumento que me indica 
 
 00:05:53.539 --> 00:05:54.539
-fraction.
+a fração de interpolação.
 
 00:05:54.539 --> 00:06:00.340
-So, this is interpolating between the quaternion
-Q0, the null rotation, and the quaternion
+Assim, esta é a interpolação entre o quaternion
+Q0, a rotação nula, e o quaternion 
 
 00:06:00.340 --> 00:06:04.199
 Q.
-The last argument is the interpolation distance.
+O último argumento é a distância de interpolação.
 
 00:06:04.199 --> 00:06:06.530
-0 corresponds to the initial quaternion.
+0 corresponde ao quaternion inicial.
 
 00:06:06.530 --> 00:06:08.710
-1 corresponds to the final quaternion.
+1 corresponde ao quaternion final.
 
 00:06:08.710 --> 00:06:13.660
-If I pass in 0, the result should be our initial
-quaternion.
+Se eu mando um 0, o resultado
+deve ser o nosso quaternion inicial.
 
 00:06:13.660 --> 00:06:16.860
-Make it 1, the result will be our final quaternion.
+Faço com que seja 1, o resultado
+será nosso quaternion final.
 
 00:06:16.860 --> 00:06:22.940
-And if I put in something like 0.5, this is
-an interpolation halfway between the initial
+E se eu coloco algo como 0.5, esta é a
+interpolação no meio do quaternion inicial
 
 00:06:22.940 --> 00:06:25.419
-quaternion and the final quaternion.
+e o quaternion final.
 
 00:06:25.419 --> 00:06:30.669
-So this is a way to interpolate rotations
-that are represented as quaternions.
+Logo, está a maneira de interpolar rotações
+que são representadas como quaternions.
 
