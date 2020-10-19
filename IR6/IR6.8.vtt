@@ -434,127 +434,126 @@ do eixo de rotação da articulação 1 assim como das
 outras articulações.
 
 00:10:31.369 --> 00:10:35.660
-Where MATLAB and robotics toolbox really come
-into their own is when we're dealing with
+O MATLAB e a robotics toolbox realmente se
+destacam quando estamos lidando com 
 
 00:10:35.660 --> 00:10:41.670
-complex robots, those with 6 joints or more.
-I can import a model of the classical Puma
+robôs complexos, aqueles com 6 juntas ou mais.
+Eu posso importar o robô clássico modelo 
 
 00:10:41.670 --> 00:10:47.540
-560 robot and it's created a verbal in the
-workspace called P560 and I can have a look
+Puma 560 e é criado um verbal na área de 
+trabalho chmado P560 e  eu posso olhar 
 
 00:10:47.540 --> 00:10:52.929
-at that and here, we see a table which contains
-the Denavit-Hartenberg parameters that described
+para ele, aqui vemos uma tabela que contém os 
+parâmetros de Denavit-Hartenberg que descreveu 
 
 00:10:52.929 --> 00:10:55.119
-that particular robot.
+aquele robô em particular. 
 
 00:10:55.119 --> 00:11:00.689
-Now, I can plot that robot for a particular
-joint angle configuration. Now, I'm going
+Agora, eu posso plotar esse robô para uma configuração 
+particular de ângulo e junta. Agora, eu vou
 
 00:11:00.689 --> 00:11:06.499
-to use the variable QZ which was defined by
-the function in the Puma 560. We can see that
+usar a variável QZ que foi definida pela
+função no Puma 560. Podemos ver isso 
 
 00:11:06.499 --> 00:11:11.959
-over here in the workspace. It's a vector
-with 6 elements all equal to 0 and here, we
+aqui na área de trabalho. É um vetor com 6 
+elementos e todos são iguais a 0 e aqui, nós
 
 00:11:11.959 --> 00:11:18.819
-see the robot in the configuration where all
-its joint angles are equal to 0. Another configuration
+vemos o robô na configuração onde todos os seus
+ângulos de atriculação são iguais a 0. Outra configuração
 
 00:11:18.819 --> 00:11:23.290
-that was defined is this one QR which was
-referred to the robot's ready pose and this
+que foi definida é este QR que foi referido 
+à pose pronta do robô e este
 
 00:11:23.290 --> 00:11:27.110
-is with the arm pointing straight up into
-the air.
+é com o braço apontado diretamente para
+o ar. 
 
 00:11:27.110 --> 00:11:31.420
-I can also bring up a teach pendant on this
-particular robot. Here, we see it. Now, I
+Eu também posso abrir um terminal de programação
+nesse robô em particular. Aqui, nós vemos isso. Agora eu
 
 00:11:31.420 --> 00:11:37.240
-have got 6 sliders, 1 for each of its joints.
-I can rotate it above the waist. I can move
+tenhos 6 controles deslizantes, 1 para cada de suas 
+juntas. Posso girar acima da cintura. Posso mover 
 
 00:11:37.240 --> 00:11:44.610
-the shoulder down. I can lift the elbow up.
-I'll move the elbow down, move it down a bit
+o ombro para baixo. Posso levantar o cotovelo.
+Vou mover o cotovelo para baixo,  mover um pouco
 
 00:11:44.610 --> 00:11:50.369
-more and I can rotate it around the waist
-so we can see what's going on.
+mais para baixo e girá-lo em torno da cintura
+para que possamos ver o que está acontecendo.
 
 00:11:50.369 --> 00:11:54.920
-We can see the in-defector coordinate frame
-there and if I adjust the wrist joint angles,
+Podemos ver o eixo de coordenadas desertor alí e,
+se eu ajustar os ângulos da articulação do punho
 
 00:11:54.920 --> 00:12:01.399
-we can see the orientation of the in-defector
-changing. The object has got a forward kinematic
+podemos ver a orientação da mudança do desertor.
+O objeto possui um método cinemático 
 
 00:12:01.399 --> 00:12:06.749
-method. So, if I asked for the forward kinematics
-for a set of joint angles, perhaps the joint
+direto. Então, se eu pedisse a conemática direta para 
+um conjunto de ângulos de junta, talvez os ângulos
 
 00:12:06.749 --> 00:12:13.879
-angles equal 0.1, 0.2, 0.3. I'm just making
-up some numbers here. This is the homogeneous
+de juntas fossem iguais a 0,1;0,2;0,3. Estou apenas
+inventando alguns números aqui. Esta é a transformação
 
 00:12:13.879 --> 00:12:21.499
-transformation which represents the pose of
-the in-defector of this 6 axis Puma 560 robot.
+homogênea que representa a pose do desertor
+deste robô Puma 560 de 6 eixos.
 
 00:12:21.499 --> 00:12:27.660
-So, to use a very general mathematical notation,
-we can say that the pose of an n-joint robot
+Então, para usar uma notação generalista, 
+podemos dizer que a pose de um robô n-juntas 
 
 00:12:27.660 --> 00:12:34.300
-which I'm going to write as PSI N is a function
-and the function is K and K stands for kinematics,
+que irei escrever como PSI N é uma função e a 
+função é K e K significa cinemática,
 
 00:12:34.300 --> 00:12:39.369
-a term that we will define concisely shortly
-and it's a function of the joint configuration,
+um termo que nós iremos definir de maneira 
+concisa como uma função da configuração da junta,
 
 00:12:39.369 --> 00:12:42.730
-that's the vector of the N joint variables.
+que é o vetor de N variáveis junta.
 
 00:12:42.730 --> 00:12:47.839
-They might be angles or they might be links
-in the case of a sliding joint. A vector of
+Eles podem ser ângulos ou podem ser lingações
+no caso de uma junta deslizante. Um vetor de
 
 00:12:47.839 --> 00:12:53.670
-joint angles, a vector of link offsets, a
-vector of link lengths and a vector of what
+ângulos de junta, um vertor de deslocamentos de ligação, 
+um vetor de comprimento de ligação, um vetor que 
 
 00:12:53.670 --> 00:12:58.429
-are called link twists and a vector of joint
-types.
+é chamado de ligações de torção e um vetor de
+tipos de juntas.
 
 00:12:58.429 --> 00:13:03.540
-Sigma is a vector that contains elements which
-are either R or P and they indicate whether
+Sigma é um vetor que contém elementos 
+que são R ou P e  eles indicam se 
 
 00:13:03.540 --> 00:13:09.480
-the joint is revolute or prismatic. In the
-case of a revolute joint, we substitute the
+a junta é de revolução ou prismática. No caso 
+de uma junta de revolução, nós substituimos o 
 
 00:13:09.480 --> 00:13:16.179
-corresponding element of theta from the corresponding
-element of Q and for prismatic joint, we substitute
+elemento correspondente de theta pelo elemento correspondente
+ao elemento Q e para a junta prismática, nós substituimos 
 
 00:13:16.179 --> 00:13:23.519
-the corresponding element of D from the corresponding
-element of Q. All the other elements of D,
+o elemento correspondente à D do elemento correspondente
+de Q. Todos os elementos de D, 
 
 00:13:23.519 --> 00:13:26.100
 theta, A and alpha are constant.
-
