@@ -15,10 +15,10 @@ Podemos considerar como um conjunto de pontos
 que conectam A até B; uma coleção de passos que nós
 
 00:00:17.400 --> 00:00:18.960
-damos durante o caminho.
+percorremos durante o caminho.
 
 00:00:18.960 --> 00:00:21.679
-Um caminho é uma construção espacial
+Um caminho é uma construção espacial.
 
 00:00:21.679 --> 00:00:25.829
 Ele nos informa como caminharemos de um local A
@@ -40,15 +40,15 @@ B. Então há uma noção de tempo ou velocidade
 durante o caminho.
 
 00:00:40.520 --> 00:00:45.750
-É uma coleção de pontos que I preciso estar num 
-determinado tempo
+É uma coleção de pontos nos quais é preciso estar num 
+determinado tempo.
 
 00:00:45.750 --> 00:00:52.530
 No meu workspace do Matlab, Eu tenho duas poses
 representadas como uma matriz de transformação homogênea
 
 00:00:52.530 --> 00:00:53.809
-de tamanho 4x4
+de tamanho 4x4.
 
 00:00:53.809 --> 00:00:59.829
 A primeira pose representada pelo workspace,
@@ -56,7 +56,7 @@ a variável T0, não possui rotação e possui sua
 
 
 00:00:59.829 --> 00:01:03.989
-origem na mesma do sistemas de coordenada global
+origem igual a do sistemas de coordenada global.
 
 00:01:03.989 --> 00:01:09.520
 No segundo posto representado pelo workspace pela 
@@ -81,15 +81,15 @@ que sua origem é a  mesma do sistemas de coordenada
 global.
 
 00:01:31.880 --> 00:01:36.000
-e que seus eixos são alinhados com esse sistema
+Seus eixos são alinhados com esse sistema.
 
 00:01:36.000 --> 00:01:43.690
-Eu posso plotar as outra pose T1 e podemos ver 
+Eu posso plotar a outra pose T1 e podemos ver 
 que sua origem não é alinhada
 
 00:01:43.690 --> 00:01:49.100
-com o sistema de referência global e seus eixos 
-não são paralelos com esse sistema.
+com o sistema de referência global e que
+seus eixos não são paralelos com esse sistema.
 
 00:01:49.100 --> 00:01:56.939
 Agora posso animar o movimento que vai de uma pose T0
@@ -101,12 +101,12 @@ para conseguir se mover da pose T0 até a T1. Então isso
 
 
 00:02:03.990 --> 00:02:10.259
-é o que quis dizer quando falei sobre trajetória 
+é o que quis dizer quando falei sobre trajetória,
 que é um movimento suave de uma pose até 
 
 00:02:10.259 --> 00:02:11.259
-outra
+outra.
 
 00:02:11.259 --> 00:02:13.900
-Entender como isso é feito é o assunto desta unidade
+Entender como isso é feito é o assunto desta unidade.
 
