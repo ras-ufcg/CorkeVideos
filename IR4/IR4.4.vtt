@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: Pt-Br
+Language: pt-BR
 
 00:00:03.399 --> 00:00:05.500
 Vamos considerar um caso mais complexo.
@@ -46,14 +46,14 @@ introduzir o que chamamos de mistura.
 
 00:00:44.230 --> 00:00:49.390
 Então aqui, nós temos movimento entre esses
-Pontos e em vermelho, é mostrado a fase
+pontos e em vermelho, é mostrado a fase
 
 00:00:49.390 --> 00:00:50.390
 da mistura.
 
 00:00:50.390 --> 00:00:55.550
-Agora, é aqui onde introduzimos uma curva matemática
-Suave que mantém continuidade.
+Agora, é aqui onde introduzimos uma curva
+matemática suave e que mantém continuidade.
 
 00:00:55.550 --> 00:01:00.190
 Então, inicialmente, nós aceleramos na
@@ -81,7 +81,7 @@ de velocidade linear com misturas polinomiais
 parabólicas ou de ordem superior para juntá-las.
 
 00:01:22.730 --> 00:01:25.810
-Nós Podemos considerar o movimento em termos
+Nós podemos considerar o movimento em termos
 de três segmentos.
 
 00:01:25.810 --> 00:01:30.740
@@ -92,7 +92,7 @@ o segundo segmento do ponto 2 para o 3
 e assim por diante.
 
 00:01:32.720 --> 00:01:36.800
-Porque você provavelmente notou que o 
+Você provavelmente notou que o 
 robô não está realmente alcançando os
 
 00:01:36.800 --> 00:01:37.800
@@ -153,11 +153,11 @@ de 30.
 
 00:02:31.420 --> 00:02:39.529
 E, os pontos de passagem que vou definir como
-40, 10 e o último.
+40, 10 é o último.
 
 00:02:39.529 --> 00:02:44.879
-Para calcular a trajetória com pontos de passagem,eu
-usei a função toolbox mstraj e
+Para calcular a trajetória com pontos de 
+passagem, eu usei a função toolbox mstraj e
 
 00:02:44.879 --> 00:02:46.719
 tem muitos argumentos.
@@ -177,7 +177,7 @@ O terceiro argumento eu vou colocar como nulo
 por enquanto. 
 
 00:02:59.139 --> 00:03:03.569
-E, vou colocar no primeiro local  
+E vou colocar no primeiro local  
 que queremos visitar.
 
 00:03:03.569 --> 00:03:11.249
@@ -185,7 +185,7 @@ Vou colocar o intervalo de tempo e
 o de aceleração.
 
 00:03:11.249 --> 00:03:13.769
-E, aqui está nossa trajetória.
+E aqui está nossa trajetória.
 
 00:03:13.769 --> 00:03:18.849
 Passamos de 10 para 40, voltamos para
@@ -238,8 +238,8 @@ Vamos voltar a algo um pouco mais
 suave.
 
 00:04:03.970 --> 00:04:09.859
-E agora, o que vou fazer é aumentar
-a velocidade em que nos movemos ao longo da trajetória.
+E agora, o que vou fazer é aumentar a velocidade
+em que nos movemos ao longo da trajetória.
 
 00:04:09.859 --> 00:04:14.420
 Você pode ver bem agora que essa trajetória
@@ -254,8 +254,8 @@ de 1 para 2, e agora executamos a trajetória
 em pouco a menos de 50 segundos.
 
 00:04:24.720 --> 00:04:30.210
-A última coisa que vou fazer é
-remover a especificação da velocidade e substituí-la
+A última coisa que vou fazer é remover a 
+especificação da velocidade e substituí-la
 
 00:04:30.210 --> 00:04:32.129
 por uma especificação de tempo.
@@ -265,7 +265,7 @@ Vou dizer que não ligo para a velocidade
 mas, eu ligo para o tempo.
 
 00:04:37.210 --> 00:04:40.180
-E, quero especificar os tempos dos segmentos.
+E quero especificar os tempos dos segmentos.
 
 00:04:40.180 --> 00:04:43.070
 Quero que o primeiro segmento dure por 10 segundos.
@@ -274,9 +274,9 @@ Quero que o primeiro segmento dure por 10 segundos.
 Quero que o segundo segmento dure por 30 segundos.
 
 00:04:45.770 --> 00:04:49.620
-E, eu quero que o último segmento dure por 20
-segundos.
+E eu quero que o último segmento
+dure por 20 segundos.
 
 00:04:49.620 --> 00:04:51.870
-E agora, a trajetória parece assim.
+E agora a trajetória parece assim.
 
