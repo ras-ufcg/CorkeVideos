@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.530 --> 00:00:08.870
 Queremos a posição e orientação do nosso 
@@ -154,160 +154,160 @@ uma matriz que é essencialmente uma função do
 tempo de trajetória e algumas constantes.
 
 00:02:50.269 --> 00:02:54.590
-Let’s create a polynomial trajectory and
-to do that I’m going to use the Toolbox
+Vamos criar uma trajetória polinomial e
+para fazer isso eu vou usar a função da
 
 00:02:54.590 --> 00:02:59.670
-function tpoly, short hand for trajectory
-polynomial.
+toolbox tpoly, simplificação de trajetória
+polinomial.
 
 00:02:59.670 --> 00:03:05.200
-The polynomial is going to have an initial
-value of 0, a final value of 1 and there are
+o polinômio vai ter um valor inicial de 0,
+um valor final de 1 e vão existir
 
 00:03:05.200 --> 00:03:07.400
-going to be 50 time steps.
+50 passos de tempo.
 
 00:03:07.400 --> 00:03:10.819
-And here, we can see the trajectory.
+E aqui nós podemos ver a trajetória.
 
 00:03:10.819 --> 00:03:17.630
-We can see that S starts off at 0 and rises
-smoothly and settles out at a value of 1.
+Nós podemos ver que S inicia em 0 e cresce 
+suavemente até alcançar o valor de 1.
 
 00:03:17.630 --> 00:03:24.340
-We can see that the velocity starts at 0 and
-ends at 0 and the acceleration also starts
+Nós podemos ver que a velocidade inicia em 0 e
+termina em 0 e que a aceleração também inicia
 
 00:03:24.340 --> 00:03:26.640
-and ends at the value of 0.
+e finaliza no valor nulo.
 
 00:03:26.640 --> 00:03:29.760
-And so, change the final condition.
+E então, muda a condição final.
 
 00:03:29.760 --> 00:03:36.090
-So, instead of going from 0 to 1, it goes
-from 0 to -1 and we can see the polynomial
+Ao inés de ir de 0 para 1, ele vai de 0 para -1
+e nós podemos ver que o polinômio 
 
 00:03:36.090 --> 00:03:39.650
-now does exactly that.
+faz exatamente isso.
 
 00:03:39.650 --> 00:03:45.160
-I can get the value of the variable S from
-this function if I provide an output argument
+Eu posso pegar o valor da variável S dessa
+função se eu usar um argumento de saída e
 
 00:03:45.160 --> 00:03:52.420
-and instead of producing a plot it will return
-the vector S. And now, we have in our workspace
+ao invés de produzir o plot, ela vai retornar
+o vetor S. E agora nós temos em nosso workspace
 
 00:03:52.420 --> 00:03:58.690
-S which is a vector with 50 rows and one column,
-represents the value of S at each of the 50
+s, que é um vetor com 50 linhas e uam coluna
+representante do valor de s a cada um dos 50
 
 00:03:58.690 --> 00:04:00.909
-time steps.
+passos no tempo.
 
 00:04:00.909 --> 00:04:06.470
-I can also ask for the velocity and the acceleration
-and I’m going put those in to the variables
+Eu posso também pedir pela velocidade e aceleração
+e eu irei colocar elas em duas variáveis
 
 00:04:06.470 --> 00:04:11.370
-SD and STD for S dot and S double dot.
+SD e STD para s ponto e s ponto ponto.
 
 00:04:11.370 --> 00:04:17.079
-And again, I have created in my work space
-some additional vector variables, each of
+E novamente, eu criei no meu workspace
+algumas varia´veis vetoriais adicionais e 
 
 00:04:17.079 --> 00:04:18.810
-them has got 50 rows.
+cada uma tem 50 linhas.
 
 00:04:18.810 --> 00:04:21.840
-The rows correspond to the time steps.
+As linhas correspondem aos passos de tempo.
 
 00:04:21.840 --> 00:04:26.539
-You'll notice in all the plots that the initial
-and final velocities have been equal to 0.
+Você irá notar que todos os plotos que as velocidades
+iniciais e finais são equivalentes a 0.
 
 00:04:26.539 --> 00:04:33.780
-Well, I can override that by providing explicit
-values for the initial and I’m going to
+Então, eu posso sobrescrever isso explicitando
+os valores das condições iniciais e eu vou
 
 00:04:33.780 --> 00:04:38.061
-ask the initial velocity to be 0.5 and
-I’m going to ask for the final velocity
+pedir a velocidade inicial para ser 0.5 e
+a velocidade final para ser
 
 00:04:38.061 --> 00:04:39.410
-to be equal to 0.
+igual a 0.
 
 00:04:39.410 --> 00:04:44.620
-What you can see is the initial velocity now
-is equal to 0.5, final velocity is equal to
+O que você pode ver é que agora a velocidade
+inicial é equivalente a 0.5, e a velocidade final é
 
 00:04:44.620 --> 00:04:45.620
 0.
 
 00:04:45.620 --> 00:04:49.670
-But, what you'll notice is if you look at
-the plot of S, you’ll see that it has gone
+Mas o que você vai notar é que, se você olhar
+o plot de s, você vai ver que ele começa em 
 
 00:04:49.670 --> 00:04:53.210
-from 0 to 1, but it has massively overshot.
+0 e termina em um com um grande overshoot.
 
 00:04:53.210 --> 00:05:00.330
-It has gone up as high as 5 and then reduced
-to the desired final value.
+Ele subiu até aproximadamente 5 e depois 
+reduziu até o valor final desejado.
 
 00:05:00.330 --> 00:05:04.770
-By changing the boundary conditions, we have
-dramatically changed the shape of the trajectory.
+ao mudar as condições de fronteira, nós mudamos
+drasticamente o formato da trajetória.
 
 00:05:04.770 --> 00:05:11.400
-So, we have seen that the quintic polynomial
-makes nice, smooth curves moving from 0 to
+então nós vimos que um polinomio de quinto rgau
+faz uma curva legal e suave movendo de 0 a
 
 00:05:11.400 --> 00:05:17.330
-1 over a period of 50 time units and we can
-see that the velocity is smooth and the acceleration
+1 no per[iodo de 50 unidades de tempo e nós podemos
+ver que a velocidade é suave e que a aceleração
 
 00:05:17.330 --> 00:05:18.330
-is smooth.
+é suave.
 
 00:05:18.330 --> 00:05:20.190
-But, there’s a bit of a problem here.
+Mas há um problema aqui.
 
 00:05:20.190 --> 00:05:26.870
-That is that the peak velocity that the robot
-undertakes has got a value of 0.038 units,
+é que o pico de velocidade que o robô é sujeito
+é um valor de 0.038 unidades, mas
 
 00:05:26.870 --> 00:05:30.990
-but the average velocity over the path is
-much, much less.
+a velocidade média durante o caminho é 
+muito menos.
 
 00:05:30.990 --> 00:05:32.850
-It’s only .02.
+É apenas .02.
 
 00:05:32.850 --> 00:05:37.020
-On average, we’re only going at 52% of the
-peak velocity for this path.
+Em média, nós estamos indo em apenas 52% da
+velocidade de pico desse caminho.
 
 00:05:37.020 --> 00:05:41.820
-So, that means that for most of the path,
-the motor isn't working as hard as it could
+Isso significa que pela maior parte do caminho,
+o motor não está trabalhando tanto quanto ele
 
 00:05:41.820 --> 00:05:42.820
-be.
+pode.
 
 00:05:42.820 --> 00:05:47.500
-It means that we have to install a motor which
-can go at this peak speed but mostly we’re
+Isso significa que instalamos um motor que
+nós podemos usar até sua velocidade de pico mas
 
 00:05:47.500 --> 00:05:48.810
-not using that capacity.
+não estamos usando toda essa capacidade.
 
 00:05:48.810 --> 00:05:50.240
-We’re wasting performance.
+Estamos disperdiçando performance.
 
 00:05:50.240 --> 00:05:54.150
-It also means that it’s going to take us
-longer to get where we want to go.
+Isso também significa que vai demorar mais
+para chegar no ponto em que queremos.
 
