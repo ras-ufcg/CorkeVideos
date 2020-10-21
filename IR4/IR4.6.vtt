@@ -35,7 +35,7 @@ Então, se eu adicionar duas matrizes ortogonais, o
 resultado nunca vai ser uma matriz ortogonal porque
 
 00:00:39.519 --> 00:00:44.480
-se eu puder vê cada coluna, a soma de
+se eu puder ver cada coluna, a soma de
 dois vetores unitários, nunca pode ser um
 
 00:00:44.480 --> 00:00:45.480
@@ -82,7 +82,7 @@ Nós interpolamos os ângulos intermediários e
 podemos convertê-los de volta em uma matriz de rotação
 
 00:01:37.820 --> 00:01:39.240
-Se assim desejamos.
+Se assim desejarmos.
 
 00:01:39.240 --> 00:01:44.420
 Vamos usar a função jtraj, que vimos há
@@ -92,8 +92,8 @@ pouco para interpolar os ângulos de roll
 pitch e yaw.
 
 00:01:45.580 --> 00:01:52.280
-Eu vou colocar o resultado na variável da área 
-de trabalho X. Chame a função jtraj. 
+Eu vou colocar o resultado na variável X da
+workspace. Chame a função jtraj. 
 
 00:01:52.280 --> 00:01:57.500
 Eu vou interpolar entre um conjunto de ângulos 
@@ -126,7 +126,7 @@ Eu posso plotar estes ângulos de
 roll, pitch e yaw pelo tempo
 
 00:02:32.600 --> 00:02:37.370
-Aqui podemos vê como eles se movem,
+Aqui podemos ver como eles se movem,
 do valor inicial para o 
 
 00:02:37.370 --> 00:02:38.370
@@ -270,7 +270,7 @@ de 0 à 1.
 
 00:05:15.780 --> 00:05:20.810
 E o elemento importante nesta equação é
-Teta, onde Teta é derivado dos elementos
+Theta, onde Theta é derivado dos elementos
 
 00:05:20.810 --> 00:05:24.590
 do quatérnio inicial e do final.
@@ -302,7 +302,7 @@ O segundo quatérnio é a representação de uma
 rotação com relação ao eixo x de pi sobre 2
 
 00:05:59.261 --> 00:06:01.680
-Então, nós vamos passar a matrix de rotação.
+Então, nós vamos passar a matriz de rotação.
 
 00:06:01.680 --> 00:06:05.200
 A classe de quatérnios irá transformar aquilo
@@ -316,7 +316,7 @@ um correspondendo a rotação nula, um correspondendo
 a rotação de 90 graus em relação ao eixo x.
 
 00:06:15.490 --> 00:06:18.820
-Para interpolar quatérnios, usamo o método
+Para interpolar quatérnios, usamos o método
 interp.
 
 00:06:18.820 --> 00:06:21.350
@@ -349,7 +349,7 @@ E este é o quatérnio interpolado.
 
 00:06:53.540 --> 00:06:59.419
 E é claro, posso transformar aquilo de volta 
-a uma matrix de rotação, usando o método R.
+a uma matriz de rotação, usando o método R.
 
 00:06:59.419 --> 00:07:05.870
 Agora, poderíamos querer comparar o efeito dos 
@@ -374,11 +374,11 @@ E posso aplicar essas três diferentes sequências
 de rotação ao vetor.
 
 00:07:28.100 --> 00:07:34.240
-Eu posso interpolar o ângulo de Euler inicial
-e o final, o ângulo roll, pitch, yaw inicial 
+Eu posso interpolar os ângulos de Euler iniciais
+e os finais, os ângulos roll, pitch, yaw iniciais 
 
 00:07:34.240 --> 00:07:40.000
-e o final ou o quatérnio inicial e o final, e eles
+e os finais ou os quatérnios inicial e o final, e eles
 são exibidos em segmentos de diferentes
 
 00:07:40.000 --> 00:07:42.490
