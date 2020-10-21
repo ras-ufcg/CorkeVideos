@@ -1,10 +1,10 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.649 --> 00:00:08.139
-Muitas máquinas e robôs têm múltiplos
-eixos de movimento.
+Muitas máquinas e robôs 
+têm múltiplos eixos de movimento.
 
 00:00:08.139 --> 00:00:14.150
 Um robô industrial tipicamente tem seis juntas
@@ -14,8 +14,8 @@ e eles têm que se mover suavemente e de uma maneira
 coordenada.
 
 00:00:15.150 --> 00:00:19.620
-Uma técnica que podemos usar para nos ajudar é interpolação
-linear.
+Uma técnica que podemos usar para nos 
+ajudar é interpolação linear.
 
 00:00:19.620 --> 00:00:25.619
 Considere essa simples função aqui onde x
@@ -25,21 +25,21 @@ de s é uma função com um valor inicial de
 x e um valor final de x.
 
 00:00:27.619 --> 00:00:30.009
-E, s varia de 0 até 1.
+E s varia de 0 até 1.
 
 00:00:30.009 --> 00:00:34.120
-Nesse caso, então, x de s é um time de
-valor intermediário.
+Nesse caso, então, x de s é um
+comjunto de valores intermediários.
 
 00:00:34.120 --> 00:00:41.520
-X de 0 é o valor iicial, x de 1 é o
+X de 0 é o valor inicial, x de 1 é o
 valor final, e x de 0.5 é a metade entre
 
 00:00:41.520 --> 00:00:43.580
 o valor inicial e final.
 
 00:00:43.580 --> 00:00:48.140
-Agora, x pode ser um vetor, o que faz o caso
+Agora x pode ser um vetor, o que faz o caso
 multi-dimensional bem direto.
 
 00:00:48.140 --> 00:00:54.270
@@ -61,15 +61,15 @@ S é um escalar que varia de 0 a 1.
 Então, o que é s?
 
 00:01:09.540 --> 00:01:13.500
-Bem, S é um escalar que varia suavemente entre 
+Bem, s é um escalar que varia suavemente entre 
 0 e 1.
 
 00:01:13.500 --> 00:01:19.680
-E, se S é uma função suave do tempo, então
+E, se s é uma função suave do tempo, então
 x será uma função suave do tempo uma vez que
 
 00:01:19.680 --> 00:01:26.100
-x é simplesmente uma função linear de S. Nós já
+x é simplesmente uma função linear de s. Nós já
 sabemos como fazer uma função do tempo variante
 
 00:01:26.100 --> 00:01:27.100
@@ -136,8 +136,8 @@ de 20 até 10.
 Essa função também retorna velocidade.
 
 00:02:46.859 --> 00:02:50.959
-Então, eu posso considerar isso como um argumento de saída
-excedente, XD.
+Então, eu posso considerar isso como um 
+argumento de saída excedente, XD.
 
 00:02:50.959 --> 00:02:59.629
 E agora, vemos também a velocidade x e eu posso
@@ -184,18 +184,18 @@ este ponto, e de volta a onde eu iniciei.
 Portanto, agora existem três pontos de percurso.
 
 00:03:51.849 --> 00:03:55.010
-Eu posso atribuir coordenadas arbitrarias para
+Eu posso atribuir coordenadas arbitrárias para
 eles.
 
 00:03:55.010 --> 00:03:59.109
 Com a finalidade de mover suavemente por entre
-os pontos de percurso, precisaremos introduzir mesclas
+os pontos de percurso, precisaremos introduzir mistura.
 
 00:03:59.109 --> 00:04:02.060
-nós falamos sobre mesclas na sessão anterior.
+Nós falamos sobre mistura na sessão anterior.
 
 00:04:02.060 --> 00:04:08.189
-Aqui, nós queremos aplicar essa ideia de mesclas
+Aqui nós queremos aplicar essa ideia de mistura
 que, nesse exemplo, é mostrada para uma variável
 
 00:04:08.189 --> 00:04:09.189
@@ -209,8 +209,8 @@ porque agora estamos falando de um robô que se
 se move no plano xy.
 
 00:04:16.630 --> 00:04:22.120
-Nesse contexto, cada uma das posições XI é mais um 
-vetor do que uma escalar.
+Nesse contexto, cada uma das posições Xi
+é mais um vetor do que uma escalar.
 
 00:04:22.120 --> 00:04:27.460
 Ora, olharemos para um cenário onde pontos
@@ -238,7 +238,7 @@ começamos.
 Nesse sentido, essa é a lista de pontos de percurso.
 
 00:04:57.800 --> 00:05:01.550
-Agora, Eu uso a função Toolbox, mstraj.
+Agora, Eu uso a função toolbox mstraj.
 
 00:05:01.550 --> 00:05:05.150
 Eu passo na lista de pontos de percurso.
@@ -261,7 +261,7 @@ aceleração, que eu vou considerar ser apenas
 1 segundo.
 
 00:05:21.509 --> 00:05:25.430
-E, eu criei na área de trabalho a variável x.
+E eu criei na área de trabalho a variável x.
 
 00:05:25.430 --> 00:05:32.979
 Tem 435 linhas, então isso significa que a
@@ -330,23 +330,23 @@ rapidamente na direção x que na direção y,
 o caminho pode ser algo como isso.
 
 00:06:41.439 --> 00:06:46.030
-Ele irá, muito rapidamente na direção x
-e também se move um pouco na direção y.
+Ele irá muito rapidamente na direção x
+mas também se move um pouco na direção y.
 
 00:06:46.030 --> 00:06:50.370
-Mas então, o eixo x vai ter alcançado seu
+Então o eixo x vai ter alcançado seu
 objetivo, e ele vai parar de se mover.
 
 00:06:50.370 --> 00:06:55.479
-Mas, o eixo y que se move mais devagar
+Mas o eixo y que se move mais devagar
 vai continuar se movendo, então nós acabamos com
 
 00:06:55.479 --> 00:06:59.099
 com essa curva acentuada em vez do caminho desejado.
 
 00:06:59.099 --> 00:07:04.180
-Se eu estivesse cortando material em algo como
-uma máquina de mesa, então eu ficaria
+Se eu estivesse cortando material
+em algo como uma mesa, então eu ficaria
 
 00:07:04.180 --> 00:07:08.379
 chateado se eu tivesse esse caminho no lugar
@@ -364,7 +364,7 @@ Precisamos calcular quanto tempo o eixo mais lento
 requer para chegar ao próximo ponto de passagem.
 
 00:07:21.490 --> 00:07:26.719
-E então, nós escalamos a velocidade do outro
+E então nós escalamos a velocidade do outro
 eixo para que todos cheguem ao mesmo tempo
 
 00:07:26.719 --> 00:07:31.550
@@ -382,7 +382,7 @@ mas desta vez nós vamos especificar as
 velocidades dos eixos como diferentes.
 
 00:07:43.530 --> 00:07:48.930
-Então, antes, a velocidade era 2 unidades
+Então, antes a velocidade era 2 unidades
 por segundo nas direções x e y.
 
 00:07:48.930 --> 00:07:56.909
@@ -398,8 +398,8 @@ nossa área de trabalho, nós veremos que possui 835 linhas,
 agora leva 83 segundos, quase o dobro do tempo.
 
 00:08:08.409 --> 00:08:14.259
-E isso é esperado, pois agora
-a trajetória está sendo acompanhada pelo eixo
+E isso é esperado, pois agora a 
+trajetória está sendo acompanhada pelo eixo
 
 00:08:14.259 --> 00:08:15.259
 mais lento.
@@ -420,6 +420,6 @@ aproximadamente o dobro de tempo de execução.
 Eu posso traçar x versus tempo.
 
 00:08:34.169 --> 00:08:40.870
-Nós podemos ver as 835 etapas e eu posso traçar
-x versus y.
+Nós podemos ver as 835 etapas e
+eu posso traçar x versus y.
 
