@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Linguagem: pt
+Linguagem: pt-BR
 
 00:00:03.750 --> 00:00:09.740
 Finalmente,chegamos ao problema de interpolar
@@ -8,11 +8,11 @@ entre duas poses. Poses têm uma componente translacional
 
 00:00:09.740 --> 00:00:16.059
 e uma rotacional. Precisamos interpolar
-eles separadamente. Nos referimos a isso como Interpolação Cartesina.
+eles separadamente. Nos referimos a isso como Interpolação Cartesiana.
 
 00:00:16.059 --> 00:00:22.770
 Vamos considerar duas poses;
-pose 0 e pose 1, cada uma pode ser representado 
+pose 0 e pose 1, cada uma pode ser representada
 
 00:00:22.770 --> 00:00:29.460
 por uma matriz de rotação e um vetor. Podemos
@@ -59,7 +59,7 @@ homogênea aqui. Agora eu posso criar
 uma trajetória suave entre estas duas poses
 
 00:01:32.790 --> 00:01:38.780
-usando a função Toolbox, ctraj que representa
+usando a função da Toolbox, ctraj, que representa
 a trajetória Cartesiana. E, os argumentos
 
 00:01:38.780 --> 00:01:45.880
