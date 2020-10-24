@@ -30,9 +30,8 @@ para controlar uma máquina como essa no ar é
 o senso de equilíbrio sabendo sua orientação
 
 00:00:35.940 --> 00:00:42.079
-em um espaço 3D. Então, ele tem uma unidade de 
-medição inercial integrada. Assim, em algum lugar 
-nesta grande 
+em um espaço 3D. Então, ele tem uma unidade de medição 
+inercial integrada. Assim, em algum lugar nesta grande 
 
 00:00:42.079 --> 00:00:48.010
 pilha de eletrônicos, tem uma placa que se 
@@ -55,9 +54,8 @@ está indo em relação ao campo magnético da
 Terra.
 
 00:01:07.950 --> 00:01:14.270
-Agora, esta pequena placa é customizada para
-este quadricóptero em particular. Um produto 
-comercial 
+Agora, esta pequena placa é customizada para este
+quadricóptero em particular. Um produto comercial 
 
 00:01:14.270 --> 00:01:20.510
 que executa exatamente a mesma função é um 
@@ -72,31 +70,28 @@ três magnetômetros. Agora, essa mesma funcionalidade
 existe de forma muito compacta dentro da maioria
 
 00:01:31.950 --> 00:01:37.290
-dos smartphones modernos. E, isso permite que o 
-o aplicativo de bússola do smartfone possa
+dos smartphones modernos. E isso permite que o 
+o aplicativo de bússola do smartphone possa
 
 00:01:37.290 --> 00:01:43.170
-encontrar o norte, e possa determinar os
-ângulos roll e pitch. Algumas vezes é utilizado 
-no controle de video game e assim por diante. 
+encontrar o norte, e possa determinar os ângulos rolle pitch.
+Algumas vezes é utilizado no controle de video game e assim por diante. 
 
 00:01:44.460 --> 00:01:48.240
 Agora imagine que eu estou dentro de um elevador,
 e eu tenho um modelo 
 
 00:01:48.240 --> 00:01:53.960
-de dinâmica muito simples para meu corpo.
-Ele consiste de uma massa ligada à uma mola.
-A massa representa 
+de dinâmica muito simples para meu corpo. Ele consiste 
+de uma massa ligada à uma mola. A massa representa 
 
 00:01:53.960 --> 00:01:59.130
 a massa do meu corpo situada no meu centro de
 gravidade e está ligada à uma mola
 
 00:01:59.130 --> 00:02:05.270
-que representa a suavidade da parte inferior
-do meu corpo e das minhas pernas. Agora, quando
-o elevador
+que representa a suavidade da parte inferior do meu 
+corpo e das minhas pernas. Agora, quando o elevador
 
 00:02:05.270 --> 00:02:10.610
 começa a subir, nos sentimos momentaneamente 
@@ -132,13 +127,10 @@ estenda, nos fazendo sentir um pouco mais leves.
 00:02:42.210 --> 00:02:47.090
 Aqui temos uma pequena e moderna unidade de 
 medição inercial, esse tipo que é comumente usada
-Here is a small modern inertial measurement
-unit, the type that’s quite commonly used
 
 00:02:47.090 --> 00:02:53.230
-em uma variedade de sistemas robóticos. 
-Dentro desta pequena caixa existe vários sensores
-incluindo
+em uma variedade de sistemas robóticos. Dentro desta 
+pequena caixa existe vários sensores incluindo
 
 00:02:53.230 --> 00:03:00.290
 acelerômetros. Então, vamos olhar dentro da
@@ -181,8 +173,8 @@ da massa de prova, e seu deslocamento
 em relação ao chão, vou chamá-lo
 
 00:03:49.800 --> 00:03:54.790
-de xm. E, o deslocamento do corpo do
-acelerômetro, vou denotá-lo pelo
+de xm. E o deslocamento do corpo do
+acelerômetro vou denotá-lo pelo
 
 00:03:54.790 --> 00:04:00.860
 símbolo xb. Então, a aceleração do corpo
@@ -193,7 +185,7 @@ escrever uma relação entre xm, xb e x.
 A força elástica agindo na massa de prova,
 
 00:04:07.150 --> 00:04:12.459
-a chamarei de fs, e a foça gravitacional
+eu chamarei de fs, e a foça gravitacional
 agindo nela é o valor da massa multiplicado
 
 00:04:12.459 --> 00:04:18.870
@@ -201,8 +193,7 @@ pela aceleração gravitacional g. Eu posso usar
 a segunda lei de Newton, que relaciona a aceleração
 
 00:04:18.870 --> 00:04:25.009
-da massa às duas forças agindo nela, a força elástica
-para cima e a gravitacional para baixo.
+da massa às duas forças agindo nela, a força elástica para cima e a gravitacional para baixo.
 
 00:04:25.009 --> 00:04:29.090
 E, para a mola, sabemos que a força é
@@ -261,15 +252,15 @@ contraintuitivo. Se eu soltar um objeto, ele
 
 00:05:34.279 --> 00:05:39.949
 acelera na direção para baixo, onde
-o acelerômetro mede 1g para cima
+o acelerômetro mede 1g na vertical
 
 00:05:39.949 --> 00:05:46.270
 ou para cima. E, isso é consequência do
 principio de equivalência de Einstein
 
 00:05:46.270 --> 00:05:51.680
-E, esses dois exemplos são exatamente os mesmos
-com relação à um acelerômetro. O
+E, esses dois exemplos são exatamente os 
+mesmos com relação à um acelerômetro. O
 
 00:05:51.680 --> 00:05:56.249
 acelerômetro está sentado numa superfície do 
@@ -296,7 +287,7 @@ alguem parado no equador está bem
 mais longe do centro da Terra.
 
 00:06:23.479 --> 00:06:28.749
-Então, portanto, eles experimentam uma menor aceleração
+Portanto eles experimentam uma menor aceleração
 gravitacional. Então podemos ver bem claramente 
 
 00:06:28.749 --> 00:06:34.680
@@ -367,11 +358,11 @@ A massa de prova é um monte de cristais de carbonato
 de cálcio e são referidos como ótolitos,
 
 00:08:02.559 --> 00:08:07.559
-que significa literalmente pedras na orelha. Eles estão
-postos numa membrana gelatinosas que servem
+que significa literalmente pedras na orelha. Eles 
+estão postos numa membrana gelatinosas que serve
 
 00:08:07.559 --> 00:08:12.319
-como a mola. E, embutido nessa membrana
+como a mola. E embutido nessa membrana
 gelatinosa está um monte de células de cabelo e elas
 
 00:08:12.319 --> 00:08:17.589
@@ -399,5 +390,5 @@ e do saculo variam e permitem seu cérebro
 determinar algo com relação a orientação
 
 00:08:39.589 --> 00:08:43.190
-da sua cabeça com respeito ao quadro
-de coordenadas do mundo
+da sua cabeça com respeito ao sistema
+de coordenadas de mundo
