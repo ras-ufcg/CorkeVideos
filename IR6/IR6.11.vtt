@@ -1,18 +1,18 @@
 WEBVTT
 Kind: captions
-Language: pt-Br
+Language: pt-BR
 
 00:00:03.669 --> 00:00:07.569 
 Eu usei o termo cinemática várias vezes
-nesta lição e ainda não fui
+nesta lição mas ainda não fui
 
 00:00:07.569 --> 00:00:13.950
 muito claro sobre o que significa. Cinemática 
 é o termo da matemática que estuda o
 
 00:00:13.950 --> 00:00:20.500
-movimento de um corpo ou sistema de corpos. Cinemática
-se preocupa com a posição de coisas 
+movimento de um corpo ou de um sistema de corpos.
+A cinemática se preocupa com a posição de coisas 
 
 00:00:20.500 --> 00:00:25.789
 ou o ângulo entre elas e suas velocidades.
@@ -26,12 +26,12 @@ Cinemática não está relacionada com forças ou momentos.
 Este é trabalho para a dinâmica.
 
 00:00:34.219 --> 00:00:40.550
-Logo, na cinemática pessoas estudam mecanismos como os
-mostrados aqui e tentam entender
+Logo, na cinemática as pessoas estudam mecanismos
+como os mostrados aqui e tentam entender
 
 00:00:40.550 --> 00:00:45.280
-como o movimento de um corpo está relacionado com
-o movimento de outro corpo
+como o movimento de um corpo está 
+relacionado com o movimento de outro corpo
 
 00:00:45.280 --> 00:00:50.219
 Eu já mostrei aqui exemplos de vários
@@ -45,25 +45,25 @@ destes mecanismos. Na robótica consideramos
 dois problemas cinemáticos.
 
 00:00:59.429 --> 00:01:04.190
-O primeiro, que será abordado nesta lição 
-é o que é chamado de problema de cinemática 
+O primeiro, que será abordado nesta lição, 
+é o que se chama de problema da cinemática 
 
 00:01:04.190 --> 00:01:10.690
-direta, refere-se a dado os ângulos de juntas de 
+direta, a partir dos ângulos das juntas de 
 um robô, qual a pose do seu efetuador?
 
 00:01:11.080 --> 00:01:16.079
-O segundo problema é chamado de cinemática inversa.
-E o discutiremos na próxima
+O segundo problema é chamado de 
+cinemática inversa. E o discutiremos na próxima
 
 00:01:16.079 --> 00:01:21.640
-lição, Sabendo que eu sei a pose final do efetuador 
-do robô, o problema é 
+lição: sabendo que eu conheço a pose
+final do efetuador do robô, o problema é 
 
 00:01:21.640 --> 00:01:27.240
-determinar quais são os ângulos de juntas necessários
-para se alcançar isso. Deixe-me 
+determinar quais são os ângulos de juntas
+necessários para se alcançá-la. Vou 
 
 00:01:27.240 --> 00:01:30.210
-deixá-lo com esta frase que eu gosto muito. Se refere
-a cinemática.
+deixá-lo com esta frase que
+eu gosto muito. Se refere a cinemática.
