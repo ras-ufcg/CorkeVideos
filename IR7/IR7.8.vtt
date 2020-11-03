@@ -60,39 +60,37 @@ Agora iremos mover a junta 6 do robô.
 Nós vemos que ela causa o mesmo movimento
 
 00:01:20.830 --> 00:01:26.390
-no efetuador, 
-of motion of the end effector. Now, what we're
-going to do is to counter rotate joints 4
+no efetuador. Agora o que iremos fazer é
+contra-rotacionar as juntas 4 e
 
 00:01:26.390 --> 00:01:31.750
-and joint 6 so if joint 4 is increasing, joint
-6 is decreasing, net result being that the
+e 6, logo, se a junta 4 está aumentando 
+a junta 6 está diminuindo. Isto resulta
 
 00:01:31.750 --> 00:01:36.750
-end factor does not move at all.
-So, just as in Gimbal Lock case, we've lost
+no fato que o efetuador não se move.
+Da mesma forma que no caso do Gimbal Lock, nós perdemos
 
 00:01:36.750 --> 00:01:42.200
-the decree of freedom. Joint 4 and joint 6
-result in exactly the same motion that the
+Um grau de liberdade. A Junta 4 e 6 resultam no 
+mesmo movimento que para o efetuador
 
 00:01:42.200 --> 00:01:47.050
-robots end effector and in robotics, we refer
-to this as a singularity.
+e para a robótica, nos referimos como singularidade
 
 00:01:47.050 --> 00:01:52.600
-What it means in practical sense is if the
-axis of joints 4 and joint 6 are aligned like
+O que isso quer dizer no senso prático é que
+se os eixos das juntas 4 e 6 estiverem alinhados 
 
 00:01:52.600 --> 00:01:58.960
-this then it's not possible for the robot
-end effector to adopt some particular orientations.
+desta forma, não será possível para o efetuador 
+adotar certas orientações em particular.
 
 00:01:58.960 --> 00:02:03.560
-In order to break that alignment, to move
-out of singularity, it's important that the
+Para quebrar o alinhamento, ou seja, 
+para sair da singularidade, é necessário que 
 
 00:02:03.560 --> 00:02:08.840
-5th joint angle theta 5 is set to some value
-that's not equal to 0.
+o ângulo da 5ª junta, theta 5, tenha um valor
+diferente de 0
 
