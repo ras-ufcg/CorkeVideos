@@ -1,47 +1,45 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.659 --> 00:00:08.430
-A really important consideration with any
-robot is the set of all possible points that
+Uma consideração realmente importante com 
+qualquer robô é um conjunto de pontos que
 
 00:00:08.430 --> 00:00:09.510
-it can reach.
+ele pode alcançar.
 
 00:00:09.510 --> 00:00:14.599
-And we refer to this volume as the workspace
-of the robot.
+E nos referimos a este volume como o plano
+de trabalho do robô
 
 00:00:14.599 --> 00:00:19.050
-For most industrial robot arms in the data
-sheet that comes with the robot, you could
+A maior parte dos manipuladores industriais vem acompanhado 
+de um datasheet, lá pode-se  
 
 00:00:19.050 --> 00:00:21.380
-find the diagram that looks something like
-this.
+encontrar um diagrama que parece como este aqui
 
 00:00:21.380 --> 00:00:25.920
-It is a plain view and side elevation view
-of the robot.
+Isto é uma vista superior e uma vista lateral
+do robô
 
 00:00:25.920 --> 00:00:31.119
-And what you can see here marked in blue is
-the reachable volume of the robot.
+e o que você consegue ver marcado de azul é o 
+volume alcançável do robô.
 
 00:00:31.119 --> 00:00:35.190
-We can see that this volume around the body
-of the robot where it cannot reach either.
+Podemos ver também que este volume em torno do
+corpo do robô, no qual ele não consegue alcançar
 
 00:00:35.190 --> 00:00:40.300
-And this is due to mechanical limits on the
-range of motion of particular joints or it’s
+e isto acontece pelas limitações mecânicas da 
+amplitude do movimento de certas juntas ou isto
 
 00:00:40.300 --> 00:00:45.170
-an artifact of the robot control software
-to prevent parts of the arm intersecting or
+é um artifício do sofware de controle para previnir
+que partes do braço cruzem ou
 
 00:00:45.170 --> 00:00:48.789
-colliding with other parts of the robot's
-arm or its base.
-
+colidam com outras partes do braço robótico ou de 
+sua base.
