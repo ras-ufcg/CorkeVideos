@@ -44,7 +44,7 @@ Números hipercomplexos são tipicamente escritos
 como vetores escalares, s mais v.
 
 00:00:50.850 --> 00:00:57.640
-O conceito de números hipercomplexo podem ser encontrados 
+O conceito de números hipercomplexos pode ser encontrado 
 Com o matemático irlandês, William 
 
 00:00:57.640 --> 00:00:58.890
@@ -62,7 +62,7 @@ E, ele gravou a equação nem uma pedra
 Na parede da ponte.
 
 00:01:14.550 --> 00:01:20.450
-E, há hoje uma placa nesta ponte 
+E há hoje uma placa nesta ponte 
 Que comemora o flash de um gênio 
 
 00:01:20.450 --> 00:01:22.980
@@ -70,10 +70,10 @@ e inspiração.
 
 00:01:22.980 --> 00:01:28.590
 O numero hipercomplexo é a base de um objeto matemático 
-que chamamos de quaternion.
+que chamamos de quatérnio.
 
 00:01:28.590 --> 00:01:32.590
-Eu denoto um quaternion como um Q com um 
+Eu denoto um quatérnio como um Q com um 
 círculo acima dele.
 
 00:01:32.590 --> 00:01:39.460
@@ -84,62 +84,62 @@ E v é um vetor que representa a parte complexa
 desse número.
 
 00:01:41.660 --> 00:01:46.810
-Quartions são frequentimente escritos nesta forma onde temos
+Quatérnios são frequentimente escritos nesta forma
 Onde temos s e, em seguida, o Angulo entre colchetes
 
 00:01:46.810 --> 00:01:51.869
 temos os três elementos que constituem o vetor, 
-as três partes imaginários de
+as três partes imaginárias do
 
 00:01:51.869 --> 00:01:52.869
-quarternion.
+quartérnio.
 
 00:01:52.869 --> 00:01:55.740
 Existem algumas maneiras diferentes de escrever 
-os quaternions.
+os quatérnios.
 
 00:01:55.740 --> 00:02:01.420
 Esta é a maneira que eu vou usar neste vídeo
-E também a forma como a caixa de ferramentas de robótica  
+E também a forma como a toolbox de robótica  
 
 00:02:01.420 --> 00:02:03.899
-representada no MATLAB.
+representa o quatérnio no MATLAB.
 
 00:02:03.899 --> 00:02:08.739
 Assim como podemos determinar a magnitude ou comprimento 
 de um vetor, podemos determinar a magnitude
 
 00:02:08.739 --> 00:02:15.079
-ou comprimento de um quartions e é o quadrado
-raiz da soma dos quatro elementos numéricos
+ou comprimento de um quatérnio e é a raiz
+quadrada da soma dos quatro elementos numéricos
 
 00:02:15.079 --> 00:02:18.959
-No quarternion, parte real e 
-três partes imaginarias 
+do quatérnio, é a parte real e 
+as três partes imaginarias 
 
 00:02:18.959 --> 00:02:24.400
-Agora, chegamos ao que é chamado de quarternion unitário
-E este é um quarternion cuja magnitude é
+Agora, chegamos ao que é chamado de quatérnio unitário
+E este é um quatérnio cuja magnitude é
 
 00:02:24.400 --> 00:02:26.090
 Igual a 1.
 
 00:02:26.090 --> 00:02:31.440
-Quaternions unitários são particularmente úteis porque
+quatérnios unitários são particularmente úteis porque
 podemos usá-los para representar a rotação em três
 
 00:02:31.440 --> 00:02:33.120
 Dimensões no espaço.
 
 00:02:33.120 --> 00:02:37.810
-Um quaternion unitário tem semelhanças
+Um quatérnio unitário tem semelhanças
 para a representação do ângulo e eixo que 
 
 00:02:37.810 --> 00:02:40.150
 discutimos na última seção.
 
 00:02:40.150 --> 00:02:45.400
-A parte real do quaternion unitário é igual
+A parte real do quatérnio unitário é igual
 ao cosseno da metade do ângulo de rotação e
 
 00:02:45.400 --> 00:02:51.310
@@ -147,37 +147,38 @@ o eixo de rotação que eu denotei aqui
 por n-chapéu está relacionado com a parte vetorial do
 
 00:02:51.310 --> 00:02:57.269
-quaternion por estar relacionado ao 
+quatérnio por estar relacionado ao 
 seno da metade do ângulo de rotação.
 
 00:02:57.269 --> 00:02:59.840
-Podemos compor dois quarternions unitários
+Podemos compor dois quatérnios unitários
 
 00:02:59.840 --> 00:03:06.390
 Assim como podemos compor duas matrizes de rotação,
-Eu posso compor dois quaternions e é
+Eu posso compor dois quatérnios e é
 
 00:03:06.390 --> 00:03:10.500
 feito usando isso, o que é chamado de Hamiltoniano
 ou regra do produto.
 
 00:03:10.500 --> 00:03:16.650
-Então, quaternion 1 gira do quadro A para
-quadro B. Quaternion 2 gira a partir do quadro
+Então, o quatérnio 1 gira do sistema A para
+sistema B. Quatérnio 2 gira a partir do sistema
 
 00:03:16.650 --> 00:03:22.709
-B para o quadro C, e após, o produto será a rotação
-a partir do quadro A até o quadro C. E eu posso computar
+B para o sistema C e, depois, o produto será a rotação
+a partir do sistema A até o sistema C. E eu posso computar
 
 00:03:22.709 --> 00:03:24.829
-a inversa do quaternion
+a inversa do quatérnio.
 
 00:03:24.829 --> 00:03:29.130
-Então se eu utilizar um quaternion para me rotacionar do
-quadro A para o quadro B, a inversa é bem simples.
+Então se eu utilizar um quatérnio para me rotacionar do
+sistema A para o sistema B, a inversa é bem simples.
 
 00:03:29.130 --> 00:03:33.780
-É somente a negativação do vetor parte do quaternion.
+É somente a negativação do vetor 
+parte do quatérnio.
 
 00:03:33.780 --> 00:03:37.390
 Novamente, irei criar uma matriz de rotação
@@ -194,67 +195,64 @@ no intuito de visualização.
 Aqui nós temos uma matriz de rotação.
 
 00:03:48.120 --> 00:03:54.130
-Agora, irei criar um quaternion e uso
+Agora, irei criar um quatérnio e uso
 a classe quaternion e passo como um argumento
-Now, I’m going to create a quaternion and
-I use the quaternion class and I pass in as
 
 00:03:54.130 --> 00:03:55.770
 a matriz de rotação
 
 00:03:55.770 --> 00:04:00.410
-Daí, o resultado é um objeto quaternion ao qual
-nós podemos observar no nosso espaço de trabalho.
+Daí, o resultado é um objeto quatérnio ao qual
+nós podemos observar na nossa área de trabalho.
 
 00:04:00.410 --> 00:04:06.140
-Agora, o quaternion possui uma parte real e 
+Agora, o quatérnio possui uma parte real e 
 uma parte imaginária, o que é indicado dentro
 
 00:04:06.140 --> 00:04:07.480
 dos colchetes de ângulo.
 
 00:04:07.480 --> 00:04:14.540
-Eu vou fixar o quaternion em uma variável
+Eu vou fixar o quatérnio em uma variável
 permanente denominada Q e vamos olhar
 
 00:04:14.540 --> 00:04:18.790
 o que podemos fazer com este objeto
-quaternion no MATLAB.
+quatérnio no MATLAB.
 
 00:04:18.790 --> 00:04:24.189
 Uma das coisas que eu posso fazer é plotar este
-quaternion e observar a orientação
+quatérnio e observar a orientação
 
 00:04:24.189 --> 00:04:29.820
 e seu comportamento, assim como a função
 trplot que observamos anteriormente
 
 00:04:29.820 --> 00:04:34.870
-Eu posso computar a inversa do quaternion,
+Eu posso computar a inversa do quatérnio,
 e aqui está isto, e podemos ver que
 
 00:04:34.870 --> 00:04:40.180
-a parte real do quaternion permanece constante,
+a parte real do quatérnio permanece constante,
 mas a parte vetorial fica negativa.
 
 00:04:40.180 --> 00:04:47.530
-Se eu multiplicar o quaternion pela sua inversa,
-o resultado é o quaternion nulo.
+Se eu multiplicar o quatérnio pela sua inversa,
+o resultado é o quatérnio nulo.
 
 00:04:47.530 --> 00:04:51.060
-Que possui uma componente vetorial 
-equivalente a 0.
+Que possui uma componente vetorial equivalente a 0.
 
 00:04:51.060 --> 00:04:55.270
 Logo, isto indica uma rotação 0.
 
 00:04:55.270 --> 00:04:58.500
-Também é possível calcular aquilo
-utilizando o operador de divisão do MATLAB.
+Também é possível calcular isso utilizando
+o operador de divisão do MATLAB.
 
 00:04:58.500 --> 00:05:03.789
-Então, se eu tomar um quaternion e dividi-lo
-efetivamente pelo quaternion, é a mesma coisa
+Então, se eu tomar um quatérnio e dividi-lo
+efetivamente pelo quatérnio, é a mesma coisa
 
 00:05:03.789 --> 00:05:05.250
 que multiplicá-lo pela sua inversa.
@@ -263,7 +261,7 @@ que multiplicá-lo pela sua inversa.
 E novamente obtenho a rotação zero.
 
 00:05:07.650 --> 00:05:14.610
-Se eu tomo um quaternion e o multiplico por um
+Se eu tomo um quatérnio e o multiplico por um
 vetor, digamos que um vetor é o vetor unitário
 
 00:05:14.610 --> 00:05:20.750
@@ -272,7 +270,7 @@ por transposição, então esta notação
 
 00:05:20.750 --> 00:05:24.969
 no MATLAB faz com que multiplique 
-o vetor pelo quaternion.
+o vetor pelo quatérnio.
 
 00:05:24.969 --> 00:05:27.520
 Realmente, ele rotaciona o vetor.
@@ -282,53 +280,51 @@ Por fim, eu posso fazer um exemplo
 para visualizar a interpolação.
 
 00:05:31.880 --> 00:05:37.120
-Se eu chamo um quaternion com nenhum argumento, 
-ele retorna um quaternion correspondente a
+Se eu chamo um quatérnio com nenhum argumento, 
+ele retorna um quatérnio correspondente a
 
 00:05:37.120 --> 00:05:38.910
 rotação nula.
 
 00:05:38.910 --> 00:05:47.129
 Portanto, se eu utilizar a sintaxe do MATLAB assim,
-eu tomo meu quaternion nulo, interpolo ele com
+eu tomo meu quatérnio nulo, interpolo ele com
 
 00:05:47.129 --> 00:05:53.539
-outro quaternion que possuo, Q, e passo 
+outro quatérnio que possuo, Q, e passo 
 um argumento que me indica 
 
 00:05:53.539 --> 00:05:54.539
 a fração de interpolação.
 
 00:05:54.539 --> 00:06:00.340
-Assim, esta é a interpolação entre o quaternion
-Q0, a rotação nula, e o quaternion 
+Assim, esta é a interpolação entre o quatérnio
+Q0, a rotação nula, e o quatérnio 
 
 00:06:00.340 --> 00:06:04.199
 Q.
 O último argumento é a distância de interpolação.
 
 00:06:04.199 --> 00:06:06.530
-0 corresponde ao quaternion inicial.
+0 corresponde ao quatérnio inicial.
 
 00:06:06.530 --> 00:06:08.710
-1 corresponde ao quaternion final.
+1 corresponde ao quatérnio final.
 
 00:06:08.710 --> 00:06:13.660
 Se eu mando um 0, o resultado
-deve ser o nosso quaternion inicial.
+deve ser o nosso quatérnio inicial.
 
 00:06:13.660 --> 00:06:16.860
-Faço com que seja 1, o resultado
-será nosso quaternion final.
+atribuo 1, o resultado será nosso quatérnio final.
 
 00:06:16.860 --> 00:06:22.940
 E se eu coloco algo como 0.5, esta é a
-interpolação no meio do quaternion inicial
+interpolação no meio do quatérnio inicial
 
 00:06:22.940 --> 00:06:25.419
-e o quaternion final.
+e o quatérnio final.
 
 00:06:25.419 --> 00:06:30.669
 Logo, está a maneira de interpolar rotações
-que são representadas como quaternions.
-
+que são representadas como quatérnios.
