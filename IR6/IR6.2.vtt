@@ -24,18 +24,18 @@ símbolo aqui. Nós iremos relembrar da última
 
 00:00:30.829 --> 00:00:35.600
 lição que quando nós queremos descrever a
-posição de um objeto em duas dimensões, nós unimos
+pose de um objeto em duas dimensões, nós unimos
 
 00:00:35.600 --> 00:00:40.370
 a estrutura de coordenadas a isso e a posição
 do objeto é descrita pela posição
 
 00:00:40.370 --> 00:00:45.090
-da origem da coordenada do quadro e a
+da origem do sistema de coordenadas e a
 orientação do objeto é descrita
 
 00:00:45.090 --> 00:00:51.309
-pelo ângulo entre a estrutura de coordenadas e 
+pelo ângulo entre nosso sistema de coordenadas e 
 e o sistema de coordenadas de referência. Eu tenho indicado
 
 00:00:51.309 --> 00:00:56.109
@@ -52,15 +52,15 @@ Então eu irei aplicar uma transformação homogênea,
 
 00:01:10.410 --> 00:01:17.040
 uma rotação, por um ângulo Q1. E agora eu vou
-traduzir esse sistema de coordenadas ao longo do
+traduzir esse sistema de coordenadas ao longo da
 
 00:01:17.040 --> 00:01:23.500
-elo do robô. Então eu agora irei aplicar
-a translação na direção x. O quadro
+ligação do robô. Então eu agora irei aplicar
+a translação na direção x. O sistema
 
 00:01:23.500 --> 00:01:29.440
 de coordenadas cinza mostrado aqui representa a
-posição do robô. Nós conseguimos o sistema de coordenadas
+pose do robô. Nós conseguimos o sistema de coordenadas
 
 00:01:29.440 --> 00:01:35.580
 do efetuador rotacionando e transaladando o
@@ -83,7 +83,7 @@ uma matriz de transformação única
 
 00:01:57.570 --> 00:02:03.210
 que descreve a posição do efetuador.
-A posição final do efetor é dada
+A posição final do efetuador é dada
 
 00:02:03.210 --> 00:02:07.430
 por esses dois elementos nessa matriz de 
@@ -118,7 +118,7 @@ definir um par de variáveis
 
 00:02:43.989 --> 00:02:51.489
 A1 que representa o comprimento do primeiro 
-elo e Q1 que representa o ângulo da junta.
+ligação e Q1 que representa o ângulo da junta.
 
 00:02:51.489 --> 00:02:56.730
 Agora, para determinar a posição do efetuador,
@@ -139,11 +139,11 @@ O primeiro na rotação em cadeia por Q1 e
 esse seguido por uma translação na 
 
 00:03:14.780 --> 00:03:21.510
-direção x, que é ao longo do elo pela distância
+direção x, que é ao longo da ligação pela distância
 A1. Eu então a represento como uma string no MATLAB
 
 00:03:21.510 --> 00:03:29.310
-e então eu passo o ângulo da junta que eu estou
+e então eu passo o ângulo da articulação que eu estou
 interessado no qual é Q1 e aqui está o resultado.
 
 00:03:29.720 --> 00:03:36.739
@@ -191,10 +191,10 @@ isso com a função mdl_planar1 e nós
 
 00:04:37.380 --> 00:04:41.820
 criamos uma nova variável na área de trabalho;
-variável chamada P1. Pode-se ver que esse é
+variável chamada P1. Pode-se ver que essa é
 
 00:04:41.820 --> 00:04:46.720
-um elo serial de tipo. Esse é um objeto do tipo
+uma articulação serial de tipo. Esse é um objeto do tipo
 manipulador de robô.
 
 00:04:46.720 --> 00:04:51.760
