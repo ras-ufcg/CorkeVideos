@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: pt-br
+Language: pt-BR
 
 00:00:03.870 --> 00:00:07.799
 Vamos dar uma olhada em alguns diferentes tipos
@@ -12,19 +12,19 @@ e às vezes chamamos de robô de coordenadas cartesianas. É
 
 00:00:12.559 --> 00:00:17.860
 um robô que nos permite controlar a posição
-da ponta da ferramenta no espaço tridimensional,
+da ponta do instrumento no espaço tridimensional,
 
 00:00:17.860 --> 00:00:24.009
 assim podemos controlar a coordenada X, Y e Z 
-da ponta da ferramenta. O robô Gantry tem
+da ponta do instrumento. O robô Gantry tem
 
 00:00:24.009 --> 00:00:29.430
 uma barra a qual se move na direção indicada
-pela seta azul e a ferramenta se move ao longo
+pela seta azul e o instrumento se move ao longo
 
 00:00:29.430 --> 00:00:35.050
 da barra nada direção mostrada pela seta vermelha.
-E, finalmente, a própria ferramenta se move para
+E, finalmente, o próprio instrumento se move para
 
 00:00:35.050 --> 00:00:40.559
 cima e para baixo na direção indicada pela
@@ -99,7 +99,7 @@ Aqui, as ligações são todas em paralelo.
 Aqui estão alguns exemplos de robôs 
 
 00:02:17.069 --> 00:02:22.959
-educacionais. O à esquerda é um robô de hobby que
+educacionais. O da esquerda é um robô de hobby que
 possui quatro juntas mecânicas conectando
 
 00:02:22.959 --> 00:02:28.980
@@ -116,14 +116,15 @@ serial em cadeia. No caso dos braços, temos
 
 00:02:40.709 --> 00:02:46.090
 quatro juntas, duas nos ombros, uma no cotovelo
-e outra no punho, as quais controlam a posição
+e outra no punho, as quais controlam 
 
 00:02:46.090 --> 00:02:51.659
-e orientação do punho, que possui uma quantidade
-de dedos. Por sua vez, esses dedos
+a posição e orientação do punho, que possui uma 
+quantidade de dedos. Por sua vez, 
 
 00:02:51.659 --> 00:02:55.079
-são compostos por um número de juntas.
+esses dedos são compostos por um 
+número de juntas.
 
 00:02:55.079 --> 00:03:01.069
 Uma classe de robôs bastante comum possui seis
@@ -154,11 +155,11 @@ Foi desenvolvido em 1969. Este foi o ano
 em que a primeira pessoa andou pela Lua.
 
 00:03:37.459 --> 00:03:42.829
-O que diferencia este braço robótico dos braços
+O que diferencia esse braço robótico dos braços
 mais comuns atualmente é que ele possui uma 
 
 00:03:42.829 --> 00:03:48.719
-junta deslizante. A terceira junta neste robô
+junta deslizante. A terceira junta nesse robô
 desliza para frente, para trás e modifica
 
 00:03:48.719 --> 00:03:55.760
@@ -183,10 +184,10 @@ Unimate, de 1983. Este é o robô PUMA 560,
 
 00:04:18.320 --> 00:04:23.479
 bastante conhecido na história de pesquisa
-robótica. Houve muitos, onde muitos desses
+robótica. Houve muitos, muitos desses
 
 00:04:23.479 --> 00:04:28.500
-robôs atuaram ativamente na manufatura, 
+robôs atuando ativamente na manufatura, 
 porém houve um grande número deles 
 
 00:04:28.500 --> 00:04:33.400
@@ -198,5 +199,5 @@ adicionar seus próprios algoritmos de controle
 ao robô. Assim, inúmeras publicações de pesquisa
 
 00:04:38.949 --> 00:04:43.889
-com robôs são baseadas nestes robôs PUMA em particular,
+com robôs são baseadas nestes robôs PUMA, em particular
 os PUMA 560.
