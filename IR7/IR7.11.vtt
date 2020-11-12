@@ -50,11 +50,11 @@ continuar de onde nós paramos no exemplo
 anterior. O que nós vamos fazer agora é
 
 00:01:09.969 --> 00:01:16.359
-movimento cartesiano interpolado. Eu vou
-uma nova variável na área de trabalho TS. Essa
+movimento cartesiano interpolado. Eu vou criar
+uma nova variável TS na área de trabalho. Essa
 
 00:01:16.359 --> 00:01:22.389
-uma pose cartesiana interpolada. Eu usarei
+é a pose cartesiana interpolada. Eu usarei
 a função ctraj para a trajetória cartesiana
 
 00:01:22.389 --> 00:01:29.229
@@ -139,7 +139,7 @@ dos conjuntos intermediários de ângulos de junta e
 
 00:03:47.620 --> 00:03:52.530
 traçar a coordenada x versus a coordenada y.
-Eu osso ver agora que o efetuador do robô
+Eu posso ver agora que o efetuador do robô
 
 00:03:52.530 --> 00:03:56.880
 está se movendo em uma perfeita linha reta de
