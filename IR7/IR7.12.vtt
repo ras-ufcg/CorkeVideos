@@ -204,112 +204,112 @@ the optimizer will find the particular robot
 configuration that you're interested in. If
 
 00:04:24.909 --> 00:04:30.309
-you wanted a left handed configuration, you
-can't guarantee the optimizer will find that
+você quisesse uma configuração canhota, não é 
+garantido que o otimizador irá encontrar esta
 
 00:04:30.309 --> 00:04:36.259
-particular configuration, it depends on your
-choice of initial joint angles. It can also
+configuração em particular, isso depende da sua
+escolha inicial dos ângulos das articulações. O que 
 
 00:04:36.259 --> 00:04:41.639
-be computationally expensive. It's an iterative
-algorithm and the number of iterations depends
+também pode ser computacionalmente caro. É um 
+algoritmo iterativo e o número de iterações depende
 
 00:04:41.639 --> 00:04:48.479
-on how good your initial set of joint angles
-is and that computational expense maybe inappropriate
+de quão bom é seu conjunto inicial dos ângulos de articulação
+e que despesas computacionais podem ser inadequadas
 
 00:04:48.479 --> 00:04:53.939
-in a hard, real time system where you need
-to compute inverse kinematics within a small
+em um sistema de tempo real rígido onde você
+calcular a cinemática inversa em um pequeno
 
 00:04:53.939 --> 00:04:59.729
-and finite amount of time. We talked about
-how to create smooth paths for the robot end
+e finito período de tempo. Nós falamos sobre
+como criar caminhos suaves para o robô
 
 00:04:59.729 --> 00:05:05.069
-effector moving from one pose to another and
-we introduced two approaches to doing this.
+efetuador se movendo de uma pose a outra e
+introduzimos duas aproximações para fazer isso.
 
 00:05:05.069 --> 00:05:10.249
-The first is what's called a "Joint Interpolated
-Path." We take the initial pose and final
+A primeira é o chamado “Caminho de Junta 
+Interpolada”. Pegamos a pose inicial e final
 
 00:05:10.249 --> 00:05:16.550
-pose and we use inverse kinematics to determine
-the initial and final sets of joint angles,
+e usamos a cinemática inversa para determinar o 
+conjunto final e inicial de ângulos das articulações,
 
 00:05:16.550 --> 00:05:21.819
-then we smoothly interpolate between those
-two sets of joint angles and that's relatively
+em seguida, nós interpolamos suavemente entre 
+esses dois conjuntos e isso é relativamente
 
 00:05:21.819 --> 00:05:23.639
-straightforward to do.
+simples de fazer.
 
 00:05:23.639 --> 00:05:28.469
-The disadvantage of this is we can't guarantee
-that the robot will follow a straight line
+A desvantagem disso é que não podemos garantir
+que o robô irá seguir um caminho em linha reta
 
 00:05:28.469 --> 00:05:34.330
-path in three dimensional space. We also can't
-guarantee that the end effector orientation
+no espaço de tridimensional. Também não podemos
+garantir que a orientação do efetuador será
 
 00:05:34.330 --> 00:05:41.069
-will be our desired value at every point along
-that path; however joint interpolated paths
+nosso valor desejado em cada ponto ao logo desse
+caminho; entretanto caminhos de junta interpolada
 
 00:05:41.069 --> 00:05:46.740
-are relatively cheap to compute because we're
-only interpolating joint angle vectors at
+são relativamente baratos para calcular, pois estamos
+apenas interpolando vetores de ângulo de junta
 
 00:05:46.740 --> 00:05:52.729
-ever time step. An alternative is to compute
-a Cartesian interpolated path and what we
+em cada espaço de tempo. Uma alternativa é calcular
+um caminho interpolado cartesiano e o que fazemos 
 
 00:05:52.729 --> 00:05:58.419
-do here is for every point along the trajectory
-we interpolate between the initial and final
+aqui é para cada ponto ao longo da trajetória
+nós interpolamos entre a pose inicial e a final
 
 00:05:58.419 --> 00:06:04.110
-end effector pose. For each interpolated pose
-we then compute the inverse kinematics to
+do efetuador. Para cada pose interpolada nós
+computamos a cinemática inversa para encontrar
 
 00:06:04.110 --> 00:06:08.279
-find the joint angles that are appropriate
-at that particular time step.
+os ângulos de junta que são apropriados neste
+espaço de tempo em particular.
 
 00:06:08.279 --> 00:06:12.759
-The advantage of this technique is that it
-allows for straight line paths in three dimensional
+A vantagem dessa técnica é que permite caminhos 
+em linha reta no espaço tridimensional. Também
 
 00:06:12.759 --> 00:06:17.779
-space. It also ensures that the end effector
-has got the desired orientation at every point
+garante que o efetuador possua a orientação 
+desejada em cada ponto 
 
 00:06:17.779 --> 00:06:19.619
-along the trajectory.
+ao longo da trajetória.
 
 00:06:19.619 --> 00:06:24.860
-The disadvantage is that computationally it's
-much more expensive. We need to interpolate
+A desvantagem é que computacionalmente é
+muito mais caro. Precisamos interpolar poses
 
 00:06:24.860 --> 00:06:29.710
-poses and that involves interpolating the
-translational component and the rotational
+e isso envolve interpolar as componentes
+translacional e rotacional 
 
 00:06:29.710 --> 00:06:35.529
-component and that might in fact involve converting
-from rotation matrix to a quaternion interpolating
+e isso pode de fato envolver a conversão de uma matriz
+de rotação para um quatérnio que será interpolado
 
 00:06:35.529 --> 00:06:40.339
-the quaternion and then transforming that
-back to a rotation matrix, then we have to
+e, em seguida, será transformado de volta 
+para uma matriz de rotação, então temos que
 
 00:06:40.339 --> 00:06:46.589
-perform the inverse kinematics at every single
-time step. So much more computation involved,
+realizar a cinemática inversa a cada espaço de 
+tempo. Muito mais computação envolvida,
 
 00:06:46.589 --> 00:06:50.989
-upside is that we can guarantee straight line
-paths in three dimensional space.
+a vantagem é que podemos garantir caminhos
+em linha reta no espaço tridimensional.
 
