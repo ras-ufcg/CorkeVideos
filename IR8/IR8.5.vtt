@@ -1,129 +1,129 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.830 --> 00:00:08.930
-We're going to introduce an important concept
-called resolved rate motion control. It sounds
+Iremos introduzir um conceito importante
+chamado taxa de controle de movimento definida. Parece
 
 00:00:08.930 --> 00:00:14.440
-complex but its really quite simple to understand.
-For a lot of real world problems, we might
+complexo mas é até bem simples de entender.
+Para muitos dos problemas do mundo real, poderemos
 
 00:00:14.440 --> 00:00:20.270
-be interested in the robot end effector moving
-along a straight line in Cartesian space.
+ter o interesse de que o efetuador do robô se 
+mova ao longo de uma linha reta no espaço Cartesiano.
 
 00:00:20.270 --> 00:00:24.560
-Now we know that if we move, for instance,
-joint angle 1, we move joint angle 2, then
+Agora sabemos que se movermos, por exemplo,
+o ângulo de junta 1, movermos o ângulo de junta 2, daí
 
 00:00:24.560 --> 00:00:29.590
-the end of the robot tends to move in arcs
-in space. We don't want it to move in arcs.
+a extremidade do robô tende a se mover em arcos
+no espaço. Nós não queremos que ele se mova em arcos.
 
 00:00:29.590 --> 00:00:34.090
-We want it to move along a straight a line.
-So we began to specify the Cartesian velocity
+Queremos que ele se mova ao longo de uma linha reta.
+Então começamos a especificar a velocidade Cartesiana
 
 00:00:34.090 --> 00:00:41.070
-that we want the end effector to follow. We want to convert that then to the required joint velocity.
+que queremos que o efetuador obedeça.
+Queremos converter isso, então, na velocidade de junta adequada.
 
 00:00:41.110 --> 00:00:46.110
-We already touched on this. We take the desired
-velocity nu, we multiply it by the inverse
+Já mencionamos isso. Pegamos a velocidade desejada
+nu, multiplicamos ela pela Jacobiana 
 
 00:00:46.110 --> 00:00:52.089
-Jacobian and we get the joint velocity that
-we need. We compute that inverse Jacobian,
+inversa e chegamos à velocidade de junta 
+que precisamos. E nós podemos computar essa Jacobiana inversa,
 
 00:00:52.089 --> 00:00:57.070
-we can write it out symbolically as I had
-done here. Now what I need to do is have the
+podemos escrevê-la simbolicamente, como fiz
+aqui. Agora o que eu preciso é que
 
 00:00:57.070 --> 00:01:02.790
-robot's hardware move the joints at this desired
-velocity. But after the robot's been moving
+o hardware do robô mova as juntas com essa velocidade
+desejada. Mas depois que o robô tenha se movido
 
 00:01:02.790 --> 00:01:07.600
-for a short period, the joint angle vector
-Q will have changed so that that Jacobian
+por um curto período, o vetor ângulo de junta
+Q terá mudado de forma que essa Jacobiana
 
 00:01:07.600 --> 00:01:13.140
-that I've computed will no longer be appropriate.
-So what I need to do then is periodically
+que eu computei não será mais adequada.
+Então o que eu preciso fazer é, periodicamente,
 
 00:01:13.140 --> 00:01:19.000
-update the Jacobian matrix. And use that when
-I'm computing the desired robot velocity vector
+atualizar a matriz Jacobiana. E usar isso quando
+estiver computando o vetor Qdot de velocidade desejada
 
 00:01:19.000 --> 00:01:26.440
-Qdot. So it's a matter of moving the robot
-joints, updating the Jacobian, computing the
+do robô. Então tudo é uma questão de mover as juntas
+do robô, atualizar a Jacobiana, computar a
 
 00:01:26.440 --> 00:01:33.880
-robot joint velocity, moving the joints, updating
-the Jacobian and so on. Repeat this indefinitely.
+velocidade de junta do robô, mover as juntas, atualizar
+a Jacobiana e por aí vai. Repita isso indefinidamente.
 
 00:01:33.880 --> 00:01:39.310
-Most control algorithms that run on a digital
-computer a typically discrete time algorithms.
+Muitos dos algoritmos de controle executados em num computador
+digital são tipicamente algoritmos de tempo discreto. 
 
 00:01:39.310 --> 00:01:44.390
-That is they compute things at discrete time
-intervals. So here we have a time line and
+Ou seja, eles computam as coisas em intervalos de tempo
+discretos. Bom, aqui temos uma linha do tempo e
 
 00:01:44.390 --> 00:01:51.000
-we indicated a number of time steps. Time
-1, time 2, time 3 and so on . The duration
+nós indicamos alguns passos. Passo 1,
+passo 2, passo 3 e por aí vai. E a duração
 
 00:01:51.000 --> 00:01:56.159
-of these time steps, I’m going to denote
-by the symbol delta T. It might be 1/10 of
+desses passos irei denotar 
+através do símbolo delta T. Ele poderá ser 1/10 de
 
 00:01:56.159 --> 00:02:01.450
-a second it might be a thousandth of a second.
-Something like that. At every time step what
+segundo, ou pode ser 1/1000 de segundo,
+algo assim... Agora, para cada passo, o que
 
 00:02:01.450 --> 00:02:07.180
-I'm going to do is to take the current value
-of the joint angles and call that QK. That
+vou fazer é pegar o atual valor
+dos ângulos de junta e chamá-lo de QK. Que
 
 00:02:07.180 --> 00:02:10.129
-stands for joint angles at the time K.
+significa ângulos de junta no passo K
 
 00:02:10.129 --> 00:02:15.140
-To compute the Jacobian, take the inverse,
-multiply it by the velocity that I want to
+Irei computar a Jacobiana, pegar a inversa,
+multiplicá-la pela velocidade que eu quero
 
 00:02:15.140 --> 00:02:21.610
-achieve and compute the Qdot that I need to
-achieve at this particular time step. What
+atingir e computar o Qdot que eu preciso
+atingir nesse passo específico. O que farei
 
 00:02:21.610 --> 00:02:27.980
-I'm going to do is take that joint velocity
-Qdot I'm going to multiply it by delta T so
+agora é pegar essa velocidade de junta Qdot
+multiplicar ela por delta T para
 
 00:02:27.980 --> 00:02:33.160
-that will give me a joint angle displacement;
-that is how much I would want the joints to
+que isso me dê um deslocamento de ângulo de junta;
+ou seja, o quanto eu quero que as juntas
 
 00:02:33.160 --> 00:02:35.180
-move over the coming time interval.
+se movam no intervalo de tempo seguinte.
 
 00:02:35.180 --> 00:02:42.000
-I add that to the current value of the joint
-angles QK. And that gives me the robot’s
+Eu adiciono isso ao atual valor dos ângulos
+de junta QK. E isso me dá o alvo do
 
 00:02:42.000 --> 00:02:47.740
-target. That's where I want the robot joint
-angles to be at time K +1. Then I tell the
+robô. É aí onde quero que os ângulos de junta
+do robô estejam no passo K+1. Daí eu digo
 
 00:02:47.740 --> 00:02:53.000
-robot hardware to move the joints to this
-new joint angle configuration over the time
+para o hardware do robô para mover as juntas até
+essa nova configuração de ângulo de junta ao longo do 
 
 00:02:53.000 --> 00:02:57.599
-interval delta T. And then I'll repeat this
-steps for as long as necessary.
-
+intervalo de tempo delta T. Daí eu vou repetir esses
+passos enquanto for necessário.
