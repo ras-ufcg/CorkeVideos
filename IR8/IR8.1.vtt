@@ -1,48 +1,48 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.689 --> 00:00:08.900
-In previous lectures we talked about kinematics
-and in particular we talked about forward
+Nas lições anteriores falamos sobre cinemática
+e em particular falamos de cinemática
 
 00:00:08.900 --> 00:00:13.919
-kinematics. And that's the problem of given
-the joint angles of the robot. One is the
+direta. E esse é o problema de dados os
+ângulos de juntas do robô. Um é a
 
 00:00:13.919 --> 00:00:19.110
-pose of the robots end effector. We then moved
-on and we talked about inverse kinematic which
+posição do efetuador do robô. Então seguimos
+e falamos sobre a cinemática inversa que o
 
 00:00:19.110 --> 00:00:25.350
-is the problem given the end effector pose,
-what are the joint angles needed to achieve that?
+o problema é que dado a posição do efetuador,
+quais são os ângulos de junta necessários para alcançá-la?
 
 00:00:25.560 --> 00:00:29.220
-In this lecture we are going to be talking
-about velocities. We're interested in the
+Nessa lição vamos falar sobre
+velocidades. Nós estamos interessados na
 
 00:00:29.220 --> 00:00:34.660
-relationship between the velocity of the joint
-angles and the velocity of the end effector.
+na relação entre a velocidade dos ângulos de 
+junta e a velocidade do efetuador.
 
 00:00:34.660 --> 00:00:39.079
-We're interested in the derivative of the
-end effector pose.
+Nós estamos interessados na derivada da
+posição do efetuador.
 
 00:00:39.079 --> 00:00:43.489
-And one of the topics we're going to discuss
-is what exactly does it mean to take the derivative
+E um dos tópicos que iremos discutir
+é o que significa exatamente pegar a derivada
 
 00:00:43.489 --> 00:00:48.620
-of the pose of the end effector of a robot.
-We're going to start our discussion simply
+da posição do efetuador do robô.
+Nós vamos começar nossa discussão simples
 
 00:00:48.620 --> 00:00:52.960
-and consider robots that operate only in the
-plane. And in the next lecture we are going
+e considerar robôs que operam apenas no
+plano. E na próxima lição nós vamos
 
 00:00:52.960 --> 00:00:56.789
-to talk about this for robots that move within
-three dimensions.
+falar sobre isso para robôs que se movem dentro
+de três dimensões.
 
