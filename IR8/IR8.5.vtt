@@ -67,7 +67,7 @@ velocidade de junta do robô, mover as juntas, atualizar
 a Jacobiana e por aí vai. Repita isso indefinidamente.
 
 00:01:33.880 --> 00:01:39.310
-Muitos dos algoritmos de controle que rodam num computador
+Muitos dos algoritmos de controle executados em num computador
 digital são tipicamente algoritmos de tempo discreto. 
 
 00:01:39.310 --> 00:01:44.390
