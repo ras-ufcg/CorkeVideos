@@ -101,107 +101,107 @@ orientation of the joints with respect to
 the links. We need to know the lengths of
 
 00:02:13.780 --> 00:02:19.150
-the links and so on. From that we extract
-a number of equations and we attempt to solve
+das ligações e assim em diante. Dali nós extraímos
+um número de equações e tentamos resolver
 
 00:02:19.150 --> 00:02:24.700
-for the unknown joint variables. As I said
-before, it requires some human insight, although
+para as variáveis de articulações desconhecidas. Como
+eu disse antes, isso requer um pouco de percepção humana, embora
 
 00:02:24.700 --> 00:02:29.989
-it can be automated using computer algebra
-techniques for particular robots or particular
+possa ser automatizado usando técnicas de álgebra
+computacional para robôs especiais ou classes
 
 00:02:29.989 --> 00:02:31.849
-classes of robots.
+especiais de robôs.
 
 00:02:31.849 --> 00:02:38.069
-The great advantages of the analytic solution
-is it explicitly shows you the multiple configurations
+As grandes vantagens da solução analítica 
+é que ela mostra explicitamente as múltiplas configurações
 
 00:02:38.069 --> 00:02:42.730
-of the robot and lets you choose the joint
-angles that will give you the configuration
+do robô e deixa você escolher os ângulos
+de articulação que irão te dar a configuração
 
 00:02:42.730 --> 00:02:48.709
-that you want. For the Puma 560 robot it allows
-you to explicitly choose a left handed configuration
+que você quer. Para o robô Puma 560, ele permite
+que você escolha explicitamente uma configuração canhota
 
 00:02:48.709 --> 00:02:54.650
-or a right handed configuration or the elbow
-up or the elbow down. Another advantage is
+ou uma configuração destra ou o cotovelo para cima
+ou o cotovelo para baixo. Outra vantagem é
 
 00:02:54.650 --> 00:03:00.349
-that the solutions are very compact and fast
-to execute. You can take the resulting equations
+que as soluções são muito compactas e rápidas
+para executar. Você pode pegar as equações resultantes
 
 00:03:00.349 --> 00:03:03.800
-and you can code them up in your favorite
-programming language and they will execute
+e escrever elas na sua linguagem de programação
+favorita e elas vão ser executadas
 
 00:03:03.800 --> 00:03:09.050
-very, very quickly. However the analytic approach
-is increasingly difficult as the number of
+muito, muito rápido. Entretanto a abordagem analítica
+se torna cada vez mais difícil uma vez que o número de
 
 00:03:09.050 --> 00:03:14.860
-joints increases and takes quite a lot of
-work to do it for a six link robot. Fortunately
+articulações aumenta e exige bastante trabalho 
+fazer isso para um robô de 6 ligações. Felizmente
 
 00:03:14.860 --> 00:03:19.300
-a lot of smart people have looked at this
-problem over many, many decades and solutions
+muitas pessoas inteligentes olharam para esse
+problema por várias, várias décadas e soluções
 
 00:03:19.300 --> 00:03:25.060
-for almost all robots have been derived and
-are published somewhere in the literature.
+para quase todos os robôes foram derivadas e
+publicadas em algum lugar na literatura.
 
 00:03:25.060 --> 00:03:29.610
-An alternative to the analytic solution is
-the numerical solution and that's applicable
+Uma alternativa para a solução analítica é
+a solução numérica e essa é aplicável
 
 00:03:29.610 --> 00:03:34.129
-when the analytic solution doesn't exist or
-the analytic solution is just too hard to
+quando a solução analítica não existe ou
+a solução analítica é muito difícil de
 
 00:03:34.129 --> 00:03:38.980
-figure out. It relies on the fact that we
-can always determine the forward kinematics
+descobrir. Isso baseia-se no fato que nós
+sempre podemos determinar a cinemática direta
 
 00:03:38.980 --> 00:03:43.239
-of the robot, that’s relatively straightforward
-to do and we talked about that in the previous
+do robô, isso é relativamente simples
+de fazer e nós falamos sobre isso no curso 
 
 00:03:43.239 --> 00:03:46.530
-lecture.
-We know the pose that we want the robot end
+anterior.
+Nós sabemos a pose que queremos que o efetuador
 
 00:03:46.530 --> 00:03:51.560
-effector to achieve which is called ksi*,
-but all we need to do is adjust the joint
+do robô alcance, á qual é chamada ksi*, mas
+tudo que precisamos fazer é ajustar os ângulos
 
 00:03:51.560 --> 00:03:58.470
-angles Q until ksi matches ksi* and we can
-pose this mathematically as an optimization
+de articulação Q até ksi ser igual a ksi* e podemos
+apresentar isso matematicamente como um problema
 
 00:03:58.470 --> 00:04:03.379
-problem written very formally here. And we
-showed how we can use MATLAB and the robotics
+de automatização escrito muito formalmente aqui. E nós
+mostramos como podemos usar o MATLAB e o Robotic
 
 00:04:03.379 --> 00:04:09.450
-toolbox to determine the numerical solution
-for a two link robot and for a six link robot.
+Toolbox para determinar a solução numérica para um
+robô de 2 ligações e para um robô de 6 ligações.
 
 00:04:09.450 --> 00:04:13.879
-There are some disadvantages with the numerical
-solution. You need to be careful about choosing
+Existem algumas desvantagens com a solução
+numérica. Você precisa ter cuidado escolhendo
 
 00:04:13.879 --> 00:04:19.629
-the initial set of joint angles that you use
-for your optimizer. You can't guarantee that
+o conjunto inicial de ângulos de articulação que 
+você usa para seu otimizador. Você não pode garantir
 
 00:04:19.629 --> 00:04:24.909
-the optimizer will find the particular robot
-configuration that you're interested in. If
+que o otimizador irá encontrar a configuração especial
+do robô que você está interessado. Se
 
 00:04:24.909 --> 00:04:30.309
 você quisesse uma configuração canhota, não é 
