@@ -121,121 +121,121 @@ que vai aplicar o efeito final em um sistemas
 de coordendas desejado no robô, assim obtendo o efeito.
 
 00:03:00.100 --> 00:03:05.980
-robot, and here is an alternative configuration
-of the robot that results in the same end
+Aqui está uma configuração do robô, e aqui temos uma
+configuração alternativa que resulta no mesmo
 
 00:03:05.980 --> 00:03:09.240
-effector position.
+efetuador de posição.
 
 00:03:09.240 --> 00:03:13.530
-For the two-link robot, I've already created
-some works based variables to represent the
+Para o robô de dois elos, eu já havia criado
+algumas variáveis baseadas em trabalhos para
 
 00:03:13.530 --> 00:03:18.710
-link lengths, that's the variables A1 and
-A2 and to represent the two joint angles Q1
+representar o comprimento das ligações, são as variáveis 
+A1 e A2 e para representar os ângulos das juntas temos
 
 00:03:18.710 --> 00:03:25.160
-and Q2. And you can see their numeric values
-over here. To determine the end effector pose
+Q1 e Q2. E você pode ver os valores numéricos
+neste local. Para determinador a postura do efetuador final
 
 00:03:25.160 --> 00:03:31.610
-I need to chain together a number of elementary
-homogeneous transformations so I am going
+eu preciso concatenar um número de transformações
+homogêneas elementares, então eu vou ter
 
 00:03:31.610 --> 00:03:39.290
-to have a rotation by Q1 followed by translation
-and the x direction by A1 followed by a rotation
+a rotação por Q1 seguida pela translação 
+e a direção x por A1 seguida pela rotação de Q2
 
 00:03:39.290 --> 00:03:47.760
-of Q2, followed by a translation in the x
-direction by the length of link 2.
+seguida pela translação na direção x pelo
+comprimento da ligação 2.
 
 00:03:47.760 --> 00:03:57.040
-And I'm going to pass in the two joint angles,
-Q1 and Q2. Here we have a homogeneous transformation
+E eu vou passar os dois ângulos de junção, Q1 e Q2.
+Aqui nós temos a transformação homogênea
 
 00:03:57.040 --> 00:04:03.900
-representing the pose of the end effector
-of a two-link robot and the position of the
+representando a postura do efetuador de 
+um robô de dois elos e a posição
 
 00:04:03.900 --> 00:04:09.520
-end effector is given by these two numbers
-here and this 2X2 matrix here represents the
+do efetuador é dado por estes dois números
+aqui e esta matriz 2x2 aqui representa a
 
 00:04:09.520 --> 00:04:12.900
-orientation of the end effector.
+orientação do efetuador.
 
 00:04:12.900 --> 00:04:19.750
-Now we can substitute these numeric values
-by symbols so I defined symbol Q1 and Q2 and
+Agora, nós podemos substituir esses valores numéricos
+por símbolos. Então eu defino os símbolos Q1 e Q2 e
 
 00:04:19.750 --> 00:04:26.380
-symbols for A1 and A2. We can see in the workspace
-now these things are symbolic objects as far
+símbolos para A1 e A2. Nós podemos ver dentro do 
+espaço de trabalho que estas coisas são objetos simbólicos
 
 00:04:26.380 --> 00:04:33.350
-as MATLAB is concerned. And I can repeat this
-trchain2 function and what I have now is a
+no que diz respeito ao MATLAB. E eu posso repetir esta
+função trchain2 e o que eu tenho agora é 
 
 00:04:33.350 --> 00:04:39.250
-symbolic representation of the pose of this
-two-link robot manipulator.
+a representação simbólica da postura deste 
+manipulador de robôs de dois elos.
 
 00:04:43.440 --> 00:04:51.150
-I can import a model of a two-link manipulator
-as the tool box of function mdl_planar2, and
+Eu posso importar um modelo de um manipulador de
+dois elos como a toolbox da função md1_planar2,
 
 00:04:51.150 --> 00:04:57.330
-creates a new object in the works based called
-P2 which represents this robot manipulator.
+e criar um novo objeto na base de trabalho
+chamado P2 que representa esse manipulador do robô.
 
 00:04:57.330 --> 00:05:02.980
-What I can do is I can invoke the teach method
-again and here we see a two-link robot manipulator
+O que eu posso fazer é que posso invocar o método de ensino
+novamente e aqui nós vemos um manipulador de robôs de dois elos
 
 00:05:02.980 --> 00:05:09.550
-and I can adjust its joint angles and see
-how it moves. Up here we have the x and y
+e eu posso ajustar os ângulos de junta e observar
+como irá se mover. Aqui em cima temos as coordenadas
 
 00:05:09.550 --> 00:05:15.150
-coordinates of the robot end effector and
-we see that that updates as I adjust the joint angles.
+x e y do efetuador do robô e nós podemos ver que aquilo 
+é atualizado conforme ajusto os ângulos da articulação.
 
 00:05:15.350 --> 00:05:20.040
-An interesting thing with the two-link manipulator
-is that there are two sets of joint angles
+Uma coisa interessante com o manipulador de dois elos
+é que existem dois conjuntos de ângulos de junta
 
 00:05:20.040 --> 00:05:24.900
-which result in the same end effector position.
-I'm going to use the plot method and I'm going
+que resultam no mesmo efetuador de posição.
+Eu vou usar o método de plotagem e vou mover
 
 00:05:24.900 --> 00:05:31.560
-to move the robot to a configuration where
-joint one has got an angle of zero and joint
+o robô para uma configuração onde a junta um
+terá um ângulo zero e a junta 2
 
 00:05:31.560 --> 00:05:34.860
-2 has an angle of pi on two radians.
+tem um ângulo de dois pi em radianos.
 
 00:05:34.860 --> 00:05:39.860
-And here we see a robot in that particular
-configuration. Now I'm going to plot it in
+E aqui nós podemos ver o robô naquela configuração
+particular. Agora nós vamos plotar isto
 
 00:05:39.860 --> 00:05:45.030
-a different configuration, that angle is going
-to be pi on two and this angle is going to
+em uma configuração diferente, aquele ângulo sera 
+dois pi e este ângulo vai ser 
 
 00:05:45.030 --> 00:05:46.660
-be minus pi on two.
+menos dois pi.
 
 00:05:46.660 --> 00:05:52.160
-What we see is that the robot end effector
-has got exactly the same position. Robot has
+O que nós podemos observar é que o robô e o 
+efetuador possuem exatamente a mesma posição.
 
 00:05:52.160 --> 00:05:57.389
-a different configuration, the end effector
-has got a different orientation but the position
+O robô possui uma configuração diferente, 
+o efetuador possui uma orientação diferente, 
 
 00:05:57.389 --> 00:05:58.759
-is exactly the same.
+mas a posição é exatamente a mesma
 
