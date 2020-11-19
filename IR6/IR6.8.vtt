@@ -11,7 +11,7 @@ notação de Denavit e Hartengberg. Esse é o segundo
 nome de Jacques Denavit e Richard Hartenberg
 
 00:00:14.760 --> 00:00:21.850
-que em 1955 escreveram um artigo e depois, um
+que em 1955 escreveram um artigo e um
 livro que propunha uma forma muito geral
 
 00:00:21.850 --> 00:00:28.080
@@ -90,7 +90,7 @@ podemos vê a ligação J mostrada em azul e
 
 00:02:01.439 --> 00:02:07.149
 e anexamos o sistema de coordenadas J à 
-extremidade da ligação J que é a extremidade da 
+extremidade da ligação J, que é a extremidade da 
 
 00:02:07.149 --> 00:02:13.400
 ligação que está mais próxima da ferramenta de robôs. Então,
@@ -149,7 +149,7 @@ então, vamos traduzi-lo ao longo do eixo
 
 00:03:29.950 --> 00:03:38.060
 X por um valor J e finalmente, vamos 
-rotaciona-lo em torno do eixo X por um angulo
+rotaciona-lo em torno do eixo X por um ângulo
 
 00:03:38.060 --> 00:03:40.170
 alfa e agora, ele se parece com isso.
@@ -163,7 +163,7 @@ quadro J por aplicando 4 transformações elementares,
 está se perguntando como podemos fazer isso usando apenas 4
 
 00:03:56.280 --> 00:04:02.160
-parâmetros porque uma posição te 2 componentes.
+parâmetros: porque uma posição tem 2 componentes.
 Tem uma componente translational a qual 
 
 00:04:02.160 --> 00:04:08.950
@@ -171,8 +171,8 @@ descrevemos por 3 números e tem uma rotação
 que descrevemos por 3 números. Por exemplo,
 
 00:04:08.950 --> 00:04:14.470
-angulos de rotação, inclinação, guinada,  ou angulos de Euler. Como
-fazemos isso com apenas 4 números? Bem,
+angulos de rotação, inclinação, guinada, ou angulos
+de Euler. Como fazemos isso com apenas 4 números? Bem,
 
 00:04:14.470 --> 00:04:19.900
 isso funciona porque uma notação Denavit-Hartenberg
@@ -203,11 +203,11 @@ que o quadro de ligação não está necessariamente
 ligados em si mesmo e isso é algo que
 
 00:04:57.220 --> 00:05:02.320
-muitas vezes confundem as pessoas quando elas estão começando
-e aprendendo sobre notação
+muitas vezes confunde as pessoas quando
+elas estão começando e aprendendo sobre notação
 
 00:05:02.320 --> 00:05:03.640
-Denavit-Hartenberg
+Denavit-Hartenberg.
 
 00:05:03.640 --> 00:05:10.080
 O eixo de uma junta rotacional deve ser alinhado 
@@ -219,7 +219,7 @@ que o eixo de junta J seja paralelo ao
 
 00:05:16.290 --> 00:05:21.960
 eixo Z de um quadro de coordenada mas não é
-o quadro de coordenada anexado ao link J. O
+o quadro de coordenada anexo à ligação J. O
 
 00:05:21.960 --> 00:05:28.590
 eixo da junta J é alinhado com o eixo Z
@@ -234,7 +234,7 @@ essa notação. Para o caso de um prismático
 ou junta deslizante, o movimento deve ser ao longo
 
 00:05:41.300 --> 00:05:47.389
-do eixo Z. Enão, para junta rotacional, gire
+do eixo Z. Então, para junta rotacional, gire
 em torno do eixo Z do quadro anterior para
 
 00:05:47.389 --> 00:05:53.160
@@ -246,24 +246,24 @@ A posição relativa do quadro de ligação 1
 para o próximo é descrito por 4 transformações elementares.
 
 00:06:00.030 --> 00:06:05.490
-para o robô de enésima ligação, podemos empilhar grupos destas
-transformações elementares e cada
+para o robô de enésima ligação, podemos empilhar 
+grupos destas transformações elementares e cada
 
 00:06:05.490 --> 00:06:10.900
-grupo contém 4 parâmetros o qual descreve
+grupo contém 4 parâmetros, o qual descreve
 a relação entre o quadro de ligação 1 e
 
 00:06:10.900 --> 00:06:16.850
-o próximo. Se o robô têm toda junta de rotação,
-o angulo de junta corresponde ao
+o próximo. Se o robô tem junta de rotação,
+o ângulo de junta corresponde ao
 
 00:06:16.850 --> 00:06:22.550
-valo tetha apresentado aqui. Então, existe
+valor teta apresentado aqui. Então, existe
 as variáveis conjuntas. Elas mudam de acordo com os
 
 00:06:22.550 --> 00:06:27.470
-movimentos do robô. Todos os outros parâmetros, os D's,
-os A's e os alpha's são todos constantes.
+movimentos do robô. Todos os outros parâmetros, os Ds,
+os As e os alfas são todos constantes.
 
 00:06:27.470 --> 00:06:33.790
 Elas são funções do projeto mecânico do robô
@@ -290,9 +290,8 @@ A maior vantagem da notação Denavit-Hartenberg
 é que ela nos permite descrever um robô de forma
 
 00:07:01.669 --> 00:07:07.530
-muito concisa. Então, para um robô
-de 2 ligações, pode ser descrito simplismente 
-por uma tabela como esta.
+muito concisa. Então, para um robô de 2 ligações, 
+pode ser descrito simplesmente por uma tabela como esta.
 
 00:07:07.530 --> 00:07:13.669
 Temos uma coluna para cada parâmetro de Denavit-Hartenberg, 
@@ -300,14 +299,14 @@ e uma linha para cada articulação
 
 00:07:13.669 --> 00:07:19.860
 do robô. As variavéis de articulação Q1 e Q2
-estão na coluna de teta porque elas são juntas
+estão na coluna de teta porque elas são unidas
 
 00:07:19.860 --> 00:07:25.830
 de revolução. Os valores D são todos 0. Não existe 
-translações ao longo do eixo Z porque este robô 
+translações ao longo do eixo Z, porque este robô 
 
 00:07:25.830 --> 00:07:31.840
-existe em um plano e o comprimento da ligação 2 apareçe
+existe em um plano. O comprimento da ligação 2 apareçe
 na coluna A e os valores de alfa são todos iguais a 0.
 
 00:07:31.840 --> 00:07:37.050
@@ -315,7 +314,7 @@ Portanto, essa tabela muito compacta descreve
 completamente o que chamamos de cinemáticas do robô.
 
 00:07:37.050 --> 00:07:43.690
-A toolbox robótica está muito bem configurada 
+A toolbox de robótica está muito bem configurada 
 para lidar com a notação Denavit-Hartenberg.
 
 00:07:43.750 --> 00:07:49.820
@@ -328,12 +327,11 @@ um instante atrás. Agora, irei inserir
 
 00:07:53.520 --> 00:08:01.250
 números correspondentes às colunas dessa 
-tabela; teta, D, A e alfa para a primeira
+tabela: teta, D, A e alfa para a primeira
 
 00:08:01.250 --> 00:08:10.300
-articulação e teta, D, A e alfa para a segunda
-articulação. E terminar o deslocamento de matriz, 
-eu tenho
+articulação e teta, D, A e alfa para a segunda articulação. 
+E para terminar o deslocamento de matriz, eu tenho
 
 00:08:10.300 --> 00:08:17.110
 uma matriz simples 2 por 4 que contém um parâmetro
@@ -344,8 +342,8 @@ Ao passo que eu crio um objeto robô, irei colocá-lo
 dentro da uma variável R na área de trabalho e 
 
 00:08:21.889 --> 00:08:27.199
-posso usar a função serial link da caixa de
-ferramentas. E eu passo a matriz de parâmetros de 
+posso usar a função serial link da toolbox.
+E eu passo a matriz de parâmetros de 
 
 00:08:27.199 --> 00:08:33.709
 Denavit-Hartenberg e o resultado é um objeto serial link
@@ -363,16 +361,15 @@ adicionais ao redor da parte inferior que
 apresentaremos em breve.
 
 00:08:48.209 --> 00:08:52.869
-Assim que eu tiver esse objeto, posso
-executar algumas funções simples nele e posso
-plotar o
+Assim que eu tiver esse objeto, posso executar 
+algumas funções simples nele e posso plotar o
 
 00:08:52.869 --> 00:08:59.230
 robô com a configuração onde os ângulos das
-articulações são, talvez, 0.2 radianos ou 0.3 radianos
+articulações são, talvez, 0.2 radianos ou 0.3 radianos.
 
 00:08:59.230 --> 00:09:04.860
-e é assim que se parece e também posso criar
+E é assim que se parece e também posso criar
 um painel de controle.
 
 00:09:04.860 --> 00:09:09.850
@@ -396,7 +393,7 @@ representa a pose do efetuador desse robô.
 
 00:09:36.199 --> 00:09:41.819
 Podemos ver aqui que a coordenada X e a 
-coordenada Y e esta matrix aqui representa 
+coordenada Y e esta matriz aqui representa 
 
 00:09:41.819 --> 00:09:48.999
 a orientação do efetuador desse robô. 
@@ -408,7 +405,7 @@ como essa. Mais uma vez, a tabela tem 4 colunas
 
 00:09:54.949 --> 00:10:00.579
 neste caso, ela tem 6 linhas porque tem
-6 juntas, porque esse robô é todo revoluto,
+6 juntas, porque esse robô é todo articulado,
 
 00:10:00.579 --> 00:10:05.819
 encontramos todas as articulações verbais
@@ -419,22 +416,22 @@ encontramos uma série de números que
 correspondem os comprimentos físicos do robô Puma:
 
 00:10:10.800 --> 00:10:15.209
-O comprimento do braço, o comprimento
+o comprimento do braço, o comprimento
 do antebraço, alguns deslocamentos horizontais e
 
 00:10:15.209 --> 00:10:21.819
-assim por diante, e a coluna alfa, encontramos
+assim por diante; e a coluna alfa, encontramos
 uma série de rotações que é pi sobre 2 ou 
 
 00:10:21.819 --> 00:10:28.309
 menos pi sobre 2 e dizem algo sobre orientação 
-do eixo de rotação da articulação 1 assim como das
+do eixo de rotação da articulação 1, assim como das
 
 00:10:28.309 --> 00:10:31.369
 outras articulações.
 
 00:10:31.369 --> 00:10:35.660
-O MATLAB e a robotics toolbox realmente se
+O MATLAB e a toolbox de robótica realmente se
 destacam quando estamos lidando com 
 
 00:10:35.660 --> 00:10:41.670
@@ -466,7 +463,7 @@ elementos e todos são iguais a 0 e aqui, nós
 
 00:11:11.959 --> 00:11:18.819
 vemos o robô na configuração onde todos os seus
-ângulos de atriculação são iguais a 0. Outra configuração
+ângulos de articulação são iguais a 0. Outra configuração
 
 00:11:18.819 --> 00:11:23.290
 que foi definida é este QR que foi referido 
@@ -493,32 +490,32 @@ mais para baixo e girá-lo em torno da cintura
 para que possamos ver o que está acontecendo.
 
 00:11:50.369 --> 00:11:54.920
-Podemos ver o eixo de coordenadas desertor alí e,
+Podemos ver o eixo de coordenadas do efetuador alí e,
 se eu ajustar os ângulos da articulação do punho
 
 00:11:54.920 --> 00:12:01.399
-podemos ver a orientação da mudança do desertor.
+podemos ver a orientação da mudança do efetuador.
 O objeto possui um método cinemático 
 
 00:12:01.399 --> 00:12:06.749
-direto. Então, se eu pedisse a conemática direta para 
+direto. Então, se eu pedisse a cinemática direta para 
 um conjunto de ângulos de junta, talvez os ângulos
 
 00:12:06.749 --> 00:12:13.879
-de juntas fossem iguais a 0,1;0,2;0,3. Estou apenas
+de juntas fossem iguais a 0,1; 0,2; 0,3. Estou apenas
 inventando alguns números aqui. Esta é a transformação
 
 00:12:13.879 --> 00:12:21.499
-homogênea que representa a pose do desertor
+homogênea que representa a pose do efetuador
 deste robô Puma 560 de 6 eixos.
 
 00:12:21.499 --> 00:12:27.660
 Então, para usar uma notação generalista, 
-podemos dizer que a pose de um robô n-juntas 
+podemos dizer que a pose de um robô de n-juntas 
 
 00:12:27.660 --> 00:12:34.300
-que irei escrever como PSI N é uma função e a 
-função é K e K significa cinemática,
+que irei escrever como PSI-N é uma função e essa 
+função é K. E K significa cinemática,
 
 00:12:34.300 --> 00:12:39.369
 um termo que nós iremos definir de maneira 
@@ -528,11 +525,11 @@ concisa como uma função da configuração da junta,
 que é o vetor de N variáveis junta.
 
 00:12:42.730 --> 00:12:47.839
-Eles podem ser ângulos ou podem ser lingações
+Eles podem ser ângulos ou podem ser ligações
 no caso de uma junta deslizante. Um vetor de
 
 00:12:47.839 --> 00:12:53.670
-ângulos de junta, um vertor de deslocamentos de ligação, 
+ângulos de junta, um vetor de deslocamentos de ligação, 
 um vetor de comprimento de ligação, um vetor que 
 
 00:12:53.670 --> 00:12:58.429
@@ -541,19 +538,19 @@ tipos de juntas.
 
 00:12:58.429 --> 00:13:03.540
 Sigma é um vetor que contém elementos 
-que são R ou P e  eles indicam se 
+que são R ou P, e eles indicam se 
 
 00:13:03.540 --> 00:13:09.480
 a junta é de revolução ou prismática. No caso 
-de uma junta de revolução, nós substituimos o 
+de uma junta de revolução, nós substituímos o 
 
 00:13:09.480 --> 00:13:16.179
-elemento correspondente de theta pelo elemento correspondente
-ao elemento Q e para a junta prismática, nós substituimos 
+elemento correspondente de teta pelo elemento correspondente
+ao elemento Q. E para a junta prismática, nós substituimos 
 
 00:13:16.179 --> 00:13:23.519
-o elemento correspondente à D do elemento correspondente
+o elemento correspondente a D do elemento correspondente
 de Q. Todos os elementos de D, 
 
 00:13:23.519 --> 00:13:26.100
-theta, A and alpha are constant.
+teta, A e alfa são constantes.
