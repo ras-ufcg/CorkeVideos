@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: pt-br
+Language: pt-BR
 
 00:00:03.429 --> 00:00:08.900
 Considere um robô industrial padrão
@@ -35,8 +35,8 @@ Chamamos isso de transformação de base
 do robô. A pose do efetuador no
 
 00:00:50.329 --> 00:00:55.170
-sistema de coordenadas universal pode ser obtida,
-simplesmente, pela composição da transformação de base
+sistema de coordenadas universal pode ser obtida
+ pela composição da transformação de base
 
 00:00:55.170 --> 00:01:01.930
 com a transformação de cinemática direta,
@@ -59,8 +59,8 @@ Agora, vamos focar na extremidade da ferramenta do
 robô. A cinemática nos dá a pose do efetuador
 
 00:01:24.260 --> 00:01:29.060
-do robô, mas, na verdade, nos dá também
-a pose de parte do flange de montagem
+do robô, mas na verdade nos dá também
+a pose do flange de montagem
 
 00:01:29.060 --> 00:01:33.560
 na extremidade do robô, e seria interessante
@@ -82,12 +82,12 @@ coordenadas aqui. Com uma medição cautelosa,
 podemos determinar a pose relativa do sistema 6 para o E, a qual seria constante.
 
 00:01:56.020 --> 00:02:01.530
-Agora, a pose do efetuador, em relação
-ao sistema de coordenadas universal, pode
+Agora, a pose do efetuador em relação
+ao sistema de coordenadas universal pode
 
 00:02:01.530 --> 00:02:08.179
 ser escrito por este conjunto de poses compostas.
-É a transfrmação de base combinada com o
+É a transformação de base combinada com o
 
 00:02:08.179 --> 00:02:14.879
 modelo cinemático do braço combinado com a
@@ -98,7 +98,7 @@ de montagem à sua extremidade.
 
 00:02:18.459 --> 00:02:21.529
 Aqui temos uma de nossas sessões passadas no MATLAB
-onde nós estávamos trabalhando com um modelo do
+em que nós estávamos trabalhando com um modelo do
 
 00:02:21.529 --> 00:02:28.349
 robô Puma-560. Podemos ver aqui embaixo da
@@ -109,8 +109,8 @@ que existem uma matriz de transformação de base e outra de
 transformação da ferramenta e cada uma delas corresponde a
 
 00:02:33.689 --> 00:02:40.659
-rotação zero e translação zero. Mas nós podemos,
-facilmente, alterar a transformação de base do
+rotação zero e translação zero. Mas nós podemos
+facilmente alterar a transformação de base do
 
 00:02:40.659 --> 00:02:47.919
 robô, por exemplo, ajustando a propriedade
@@ -133,8 +133,8 @@ o objeto-robô possui uma transformação
 de base diferente da que achamos.
 
 00:03:10.969 --> 00:03:15.709
-Agora, compute a cinemática direta do robô,
-isto é levado em conta, e nós podemos
+Agora, compute a cinemática direta do robô.
+Isto é, levado em conta. E nós podemos
 
 00:03:15.709 --> 00:03:21.299
 ver que a posição do efetuador agora está bem 
@@ -146,18 +146,18 @@ ainda mais complexa. Por exemplo, eu poderia, na verdade,
 
 00:03:27.180 --> 00:03:32.029
 virar o robô de ponta cabeça, eu o rotaciono
-ao redor do eixo x em pi radianos,
+ao redor do eixo X em pi radianos,
 
 00:03:32.029 --> 00:03:37.629
 e isto é como a tranformação de base do robô
-se parece agora, e se eu, novamente, computar a
+se parece agora. E se eu novamente computar a
 
 00:03:37.629 --> 00:03:43.180
 cinemática direta para os mesmos ângulos de junta,
 veremos que a posição do efetuador
 
 00:03:43.180 --> 00:03:48.019
-é diferente e podemos observar que a orientação do
+é diferente. E podemos observar que a orientação do
 efetuador está muito diferente, os sinais
 
 00:03:48.019 --> 00:03:51.949
@@ -176,15 +176,15 @@ A outra coisa que posso querer fazer com o robô
 seria adicionar uma tranformação de ferramenta a ele,
 
 00:04:05.499 --> 00:04:11.680
-e faço isso ajustando a propriedade ferramenta
-e eu posso declarar que a ferramenta foi
+e faço isso ajustando a propriedade ferramenta.
+Eu posso declarar que a ferramenta foi
 
 00:04:11.680 --> 00:04:17.739
-deslocada em zero na direção x, em zero
+deslocada em zero na direção X, em zero
 na direção Y e, talvez, em 0.2 metros
 
 00:04:17.739 --> 00:04:23.169
-na direção z, a qual aponta para fora da 
+na direção Z, a qual aponta para fora da 
 placa de montagem na extremidade do robô.
 
 00:04:23.169 --> 00:04:28.590
