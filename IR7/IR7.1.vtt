@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pr-BR
 
 00:00:04.819 --> 00:00:09.769
 Vimos este simples robô de dois elos 
@@ -8,13 +8,13 @@ anteriormente na leitura sobre cinemática.
 
 00:00:09.769 --> 00:00:14.700
 A pose de ponta de ferramenta deste robô é descrita 
-simplesmente por dois números, as coordenadas x e
+simplesmente por dois números, as coordenadas X e
 
 00:00:14.700 --> 00:00:17.550
-y em relação ao quadro de coordenadas do mundo.
+Y em relação ao quadro de coordenadas do mundo.
 
 00:00:17.550 --> 00:00:23.010
-Então, o problema aqui é que dado x e y,
+Então, o problema aqui é que dado X e Y,
 queremos determinar os ângulos unidos, Q1
 
 00:00:23.010 --> 00:00:24.150
@@ -22,10 +22,10 @@ e Q2.
 
 00:00:24.150 --> 00:00:27.890
 A solução que vamos seguir
-nesta seção em particular é de forma
+nesta seção em particular é 
 
 00:00:27.890 --> 00:00:28.890
-Geométrica.
+geométrica.
 
 00:00:28.890 --> 00:00:30.660
 Vamos começar com uma simples 
@@ -36,15 +36,15 @@ Vamos sobrepor o triângulo vermelho
 em cima do nosso robô.
 
 00:00:34.580 --> 00:00:39.730
-Sabemos que a coordenada do ponto final é x,
-y, então a altura vertical do triângulo
+Sabemos que a coordenada do ponto final é 
+[X,Y] então a altura vertical do triângulo
 
 00:00:39.730 --> 00:00:42.250
-é y, a largura horizontal é x.
+é Y, a largura horizontal é X.
 
 00:00:42.250 --> 00:00:48.800
-E, usando teorema de Pitágoras, podemos escrever r ao 
-quadrado igual a x ao quadrado mais y ao quadrado.
+E usando teorema de Pitágoras, podemos escrever r ao 
+quadrado igual a X ao quadrado mais Y ao quadrado.
 
 00:00:48.800 --> 00:00:50.399
 Até agora, muito fácil.
@@ -57,11 +57,11 @@ aqui em vermelho e queremos determinar
 o ângulo alfa.
 
 00:00:57.680 --> 00:01:00.230
-IPara fazer isso, precisamos usar a 
-regra do cosseno.	
+Para fazer isso, precisamos usar a 
+regra dos cossenos.	
 
 00:01:00.230 --> 00:01:04.970
-E, se você está um pouco enferrujado na regra do cosseno,
+Se você está um pouco enferrujado na regra do cosseno,
 aqui está um pouco de uma atualização.
 
 00:01:04.970 --> 00:01:06.649
@@ -73,7 +73,7 @@ nele e vamos rotular o comprimento de
 
 00:01:10.540 --> 00:01:15.180
 esta borda como A e o ângulo oposto a essa borda,
-vamos rotular como azinho.
+vamos rotular como a.
 
 00:01:15.180 --> 00:01:21.000
 E fazemos o mesmo por essa borda e este ângulo,
@@ -84,7 +84,7 @@ Assim, todos juntos, os lados são capitais rotuladas
 A, B e C, e os ângulos são rotulados como
 
 00:01:27.030 --> 00:01:28.280
-Azinho, Bêzinho e Cêzinho.
+a, b e c.
 
 00:01:28.280 --> 00:01:33.010
 Então, a regra do cosseno é simplesmente 
@@ -109,14 +109,14 @@ há pouco.
 relação em particular.
 
 00:01:47.689 --> 00:01:52.020
-Podemos isolar o termo cos alfa que nos dá o
+Podemos isolar o termo cosseno alfa que nos dá o
 ângulo alfa que estamos interessados
 
 00:01:52.020 --> 00:01:53.020
 em achar.
 
 00:01:53.020 --> 00:01:58.450
-E, é definido em termos dos comprimentos 
+É definido em termos dos comprimentos 
 constantes de A1 e A2 e a posição
 
 00:01:58.450 --> 00:02:01.329
@@ -127,15 +127,15 @@ Podemos escrever esta relação simples entre os
 ângulos alfa e Q2.
 
 00:02:05.579 --> 00:02:11.500
-E, sabemos pela forma da função cossina que
-cos de Q2 deve ser igual a negativo 
+Sabemos pela forma da função cosseno que
+cosseno de Q2 deve ser igual a negativo 
 
 00:02:11.500 --> 00:02:12.510
-de cos alfa.
+de cosseno de alfa.
 
 00:02:12.510 --> 00:02:18.240
 Desta vez, vamos apenas escrever uma expressão
-para o cosseno do ângulo unido Q2.
+para o cosseno do ângulo Q2.
 
 00:02:18.240 --> 00:02:22.750
 Agora, vamos desenhar mais um triângulo 
@@ -178,13 +178,11 @@ Introduzindo mais um ângulo, este é gama
 e nós podemos estabelecer uma relação entre
 
 00:03:03.790 --> 00:03:08.669
-o ângulo gama e as coordenadas auxiliares x e y
+o ângulo gama e as coordenadas auxiliares X e Y.
 
 00:03:08.669 --> 00:03:12.910
 Agora, podemos descrever uma relação entre os
-ângulos que viemos construindo, gamma,
-Now, we can write a simple relationship between
-the angles that we’ve constructed, gamma
+ângulos que viemos construindo, gama,
 
 00:03:12.910 --> 00:03:16.400
 beta e o ângulo unido que estamos interessados
@@ -196,10 +194,10 @@ de uma forma parecida com a seguinte.
 
 00:03:19.680 --> 00:03:25.180
 Uma relação aparentemente complexa, nos dá
-o ângulo unido, que é Q1 em termos
+o ângulo que é Q1 em termos
 
 00:03:25.180 --> 00:03:31.260
-das coordenadas y e x do efetor final, e um
+das coordenadas Y e X do atuador final, e um
 bocado de constantes, a1 e a2
 
 00:03:31.260 --> 00:03:35.480
@@ -263,14 +261,14 @@ introduzir este triângulo vermelho específico
 
 00:04:36.310 --> 00:04:42.250
 o ângulo beta que descobrimos anteriormente,
-e o ângulo gamma que é definido em termos
+e o ângulo gama que é definido em termos
 
 00:04:42.250 --> 00:04:43.440
-de y e x.
+de Y e X.
 
 00:04:43.440 --> 00:04:48.470
 Agora, nós formulamos uma relação levemente diferente
-entre Q1, gamma e beta, diferente do que
+entre Q1, gama e beta diferente do que
 
 00:04:48.470 --> 00:04:49.470
 possuíamos anteriormente.
@@ -292,7 +290,7 @@ Novamente, há uma mudança no sinal aqui.
 Anteriormente, este era um sinal negativo.
 
 00:05:00.430 --> 00:05:05.470
-E, aqui em suma é a solução para as cinemáticas
+Aqui em suma é a solução para as cinemáticas
 inversas do nosso robô de dois elos
 
 00:05:05.470 --> 00:05:10.480
