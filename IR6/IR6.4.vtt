@@ -1,10 +1,10 @@
 WEBVTT
 Kind: captions
-Language: PT-BR
+Language: pt-BR
 
 00:00:03.949 --> 00:00:06.649
-Agora nós vamos adicionar uma terceira
-ligação ao meu robô.
+Agora nós vamos adicionar uma 
+terceira ligação ao meu robô.
 
 00:00:06.649 --> 00:00:12.549
 Então, agora temos um robô de grau de liberdade
@@ -18,15 +18,15 @@ Ele pode alcançar qualquer ponto dentro desse círculo
 bem grande aqui. E porque ele tem 3 graus
 
 00:00:20.590 --> 00:00:25.070
-de liberdade significa que ele não pode apenas alcançar 
-qualquer posição específica dentro desse espaço de trabalho.
+de liberdade significa que ele alcança qualquer 
+posição específica dentro desse espaço de trabalho.
 
 00:00:25.070 --> 00:00:29.400
-Ele também pode alcançar qualquer orientação naquela
-posição específica.
+Ele também pode alcançar qualquer orientação 
+em qualquer posição específica.
 
 00:00:29.400 --> 00:00:34.090
-Se por exemplo a posição do efetuador do robô
+Se, por exemplo, a posição do efetuador do robô
 estiver aqui, então o robô com 3 graus de 
 
 00:00:34.090 --> 00:00:39.340
@@ -34,12 +34,12 @@ liberdade é capaz de alcançar qualquer orientação
 arbitrária dessa última ligação.
 
 00:00:39.340 --> 00:00:44.440
-Nós podemos ver que eu posso movê-lo através de uma gama
-bastante grande de ângulos daquela ligação e isso
+Nós podemos ver que eu posso movê-lo por uma gama
+grande de ângulos daquela ligação e isso
 
 00:00:44.440 --> 00:00:49.989
-é possível porque ele tem 1 grau de liberdade
-extra.
+é possível porque ele tem 1 grau
+de liberdade extra.
 
 00:00:49.989 --> 00:00:53.530
 Vamos determinar a pose e o efetuador
@@ -58,11 +58,11 @@ Q1 e Q2 nesse diagrama são ambos positivos
 e Q3 aqui é um valor negativo.
 
 00:01:08.500 --> 00:01:13.659
-Notem que a direção de rotação é oposta
-àquela para Q1 e Q2.
+Notem que a direção de rotação 
+é oposta de para Q1 e Q2.
 
 00:01:13.659 --> 00:01:18.780
-Quando nós fizemos isso para as articulações 1 e 2
+Nós fizemos isso para as articulações 1 e 2
 do robô, eu mostrei a animação do sistema de coordenadas
 
 00:01:18.780 --> 00:01:23.920
@@ -74,7 +74,7 @@ Eu não vou fazer aquela animação dessa vez.
 
 00:01:26.189 --> 00:01:30.630
 Eu acho que vocês pegaram a ideia geral e o que
-nós iremos fazer é apenas escrever a
+nós iremos fazer penas ao escrever a
 
 00:01:30.630 --> 00:01:33.340
 expressão de transformação por inspeção.
@@ -175,7 +175,7 @@ pois precisamos rolar para os lados para ver o final
 disso.
 
 00:03:25.329 --> 00:03:32.209
-O componente x, por exemplo, é dado pela
+O componente Xx, por exemplo, é dado pela
 1ª linha e a 3ª coluna do resultado que
 
 00:03:32.209 --> 00:03:37.239
@@ -187,10 +187,10 @@ robô de 3 ligações.
 
 00:03:40.110 --> 00:03:46.650
 Eu também posso importar um modelo de um robô planar
-de 3 ligações e essa é a função da caixa de ferramentas e
+de 3 ligações e essa é a função da toolbox e
 
 00:03:46.650 --> 00:03:51.739
-a árvore plana cria um objeto de ligações
+a árvore planar cria um objeto de ligações
 seriais em nosso espaço de trabalho.
 
 00:03:51.739 --> 00:03:57.519
