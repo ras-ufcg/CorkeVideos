@@ -27,7 +27,7 @@ jeitos diferentes, mas comumente é escrita como
 
 00:00:33.050 --> 00:00:37.829
 tangente elevada a menos um, algumas vezes 
-é escrita como Atan ou como Arctan.
+é escrita como atan ou como arctan.
 
 00:00:37.829 --> 00:00:43.160
 Talvez estas sejam as formas mais comumente
@@ -38,7 +38,7 @@ tangente. Agora, vamos observar alguns casos
 mais complexos, mas começaremos com o mais
 
 00:00:48.359 --> 00:00:53.739
-simples destes. E nós temos um triângulo
+simples destes. Nós temos um triângulo
 de altura um e largura dois, o ângulo marcado
 
 00:00:53.739 --> 00:01:00.960
@@ -62,7 +62,7 @@ que é 0.4636 como esperado. Agora, vamos
 considerar o caso de um ângulo que é maior 
 
 00:01:25.830 --> 00:01:31.480
-que Pi em dois. Neste caso, a altura é um e 
+que pi/2. Neste caso, a altura é um e 
 a largura é igual a menos dois.
 
 00:01:31.480 --> 00:01:40.300
@@ -101,12 +101,12 @@ O problema subjacente aqui é que a função
 inversa da tangente possui um intervalo que
 
 00:02:24.950 --> 00:02:30.810
-abrange de menos pi em dois a mais pi em dois.
+abrange de menos pi/2 a mais pi/2.
 Para contornar o problema, introduzimos uma
 
 00:02:30.810 --> 00:02:36.069
-nova função chamada comumente de “A Tan Two”,
-você irá encontrar uma função com este nome na
+nova função chamada comumente de arco tangente de dois,
+você irá encontrar uma função com o nome atan2 na
 
 00:02:36.069 --> 00:02:41.540
 biblioteca matemática de várias linguagens de 
