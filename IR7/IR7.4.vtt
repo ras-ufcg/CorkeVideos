@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-Br
 
 00:00:03.470 --> 00:00:08.069
 Agora nós vamos olhar para um robô com seis
@@ -15,23 +15,23 @@ robô Puma 560 e este cria várias variáveis
 no espaço de trabalho. A mais importante
 
 00:00:20.650 --> 00:00:26.650
-destas é a variável P560, este é um objeto
-MATLAB que representa um objeto. Existem
+dessas é a variável P560. Esta é um objeto
+MATLAB que representa um robô. Existem
 
 00:00:26.650 --> 00:00:32.430
-algumas outras variáveis ​​também e estas representam
-configurações particulares do ângulo da junta, QZ
+algumas outras variáveis e estas representam
+configurações particulares do ângulo da junta. QZ
 
 00:00:32.430 --> 00:00:38.020
-por exemplo é um vetor de comprimento seis
+por exemplo, é um vetor de comprimento seis
 preenchido com zeros e representa o conjunto de
 
 00:00:38.020 --> 00:00:41.500
 ângulos de junta zero para este robô em particular.
 
 00:00:41.500 --> 00:00:46.000
-Os objetos do robô possuem vários métodos
-e um dos métodos, o método plot, nos permite
+Os objetos do robô possuem vários métodos.
+Um dos métodos, o método plot, nos permite
 
 00:00:46.000 --> 00:00:51.570
 ver a configuração de um robô, então aqui está
@@ -39,7 +39,7 @@ aquele robô em particular quando todos os
 
 00:00:51.570 --> 00:00:58.180
 ângulos de junta são iguais a zero. Posso ver
-isso de vários pontos de vista diferentes
+isso de vários pontos de vista diferentes,
 
 00:00:58.180 --> 00:01:03.430
 vendo o robô e também o sistema de
@@ -50,20 +50,20 @@ aqui os eixos X, Y e Z do efetuador
 do robô.
 
 00:01:08.840 --> 00:01:12.900
-Agora estamos falando sobre cinemática inversa,
-então eu quero que o robô vá para uma determinada
+Agora estamos falando sobre cinemática inversa. 
+Então eu quero que o robô vá para uma determinada
 
 00:01:12.900 --> 00:01:18.100
-pose e eu vou definir isso. Em primeiro lugar
+pose e eu vou definir isso. Em primeiro lugar,
 eu vou definir a componente translational
 
 00:01:18.100 --> 00:01:24.540
 usando a função transl e eu quero uma
-coordenada X de 0,6, uma coordenada Y
+coordenada X de 0.6, uma coordenada Y
 
 00:01:24.540 --> 00:01:31.190
-de 0,1 e uma coordenada Z de 0 e agora
-preciso dar alguma orientação. E eu faço
+de 0.1 e uma coordenada Z de 0. Agora
+preciso dar alguma orientação. Eu faço
 
 00:01:31.190 --> 00:01:38.020
 isso especificando seus ângulos roll, pitch e yaw.
@@ -71,7 +71,7 @@ Eu quero que o ângulo roll seja 0, eu quero
 
 00:01:38.020 --> 00:01:45.000
 que o ângulo pitch seja 180 graus e eu quero que
-o ângulo yaw seja 0 graus e eu especifico
+o ângulo yaw seja 0 graus. Eu especifico
 
 00:01:45.000 --> 00:01:52.490
 que dei os ângulos em termos de unidades de graus.
@@ -82,22 +82,22 @@ que representa a pose na qual estou interessado.
 
 00:01:56.170 --> 00:02:02.780
 Agora vamos dar uma olhada nessa pose em
-particular e posso sobrepor a pose na figura
+particular. Posso sobrepor a pose na figura
 
 00:02:02.780 --> 00:02:09.509
-que contém o robô, habilito o hold e eu agora
+que contém o robô, para tal habilito o hold e eu agora
 ploto aquela pose particular e então nós
 
 00:02:09.509 --> 00:02:14.950
 podemos ver o sistema de coordenadas que representa
-esta pose e podemos dar uma olhada por aqui.
+esta pose. Podemos dar uma olhada por aqui.
 
 00:02:14.950 --> 00:02:19.230
 Portanto, a posição associada a esta pose é a
-origem deste novo sistema de coordenadas azul
+origem deste novo sistema de coordenadas azul.
 
 00:02:19.230 --> 00:02:27.340
-e podemos ver a orientação deste novo sistema
+E podemos ver a orientação deste novo sistema
 em termos de seus eixos X, Y e Z.
 
 00:02:27.340 --> 00:02:32.770
@@ -128,16 +128,16 @@ O resultado é o conjunto de ângulos de junta que,
 se o robô adotasse esses ângulos, ele
 
 00:03:03.500 --> 00:03:09.680
-alcançaria a pose. Bem, vamos testar isso, podemos
+alcançaria a pose. Bem, vamos testar isso. Podemos
 mover nosso robô para este conjunto de
 
 00:03:09.680 --> 00:03:15.030
 ângulos de junta que nós acabamos de calcular e podemos
-ver aqui que o robô definitivamente se moveu
+ver aqui que o robô definitivamente se moveu.
 
 00:03:15.030 --> 00:03:18.849
 Agora vamos olhar aqui em volta e ver o
-que aconteceu. Então podemos ver que o centro
+que aconteceu. Podemos ver que o centro
 
 00:03:18.849 --> 00:03:23.379
 do efetuador está alinhado com o
@@ -149,11 +149,11 @@ e Z do efetuador do robô estão
 
 00:03:29.840 --> 00:03:37.069
 alinhados com os eixos X, Y e Z do sistema azul
-que acabamos de apresentar. Agora é um pouco
+que acabamos de apresentar. Realmente é um pouco
 
 00:03:37.069 --> 00:03:43.569
-difícil neste gráfico de bonecos, determinar
-a configuração deste robô em particular.
+difícil determinar a configuração deste robô 
+em particular neste gráfico de bonecos.
 
 00:03:43.569 --> 00:03:48.239
 É uma configuração para canhotos
@@ -164,7 +164,7 @@ um pouco difícil de dizer, no entanto há
 uma forma melhor de olhar para o robô, e é
 
 00:03:53.940 --> 00:04:00.110
-usando o método Plot 3D. Leva um
+usando o método plot3D. Leva um
 momentinho para começar na primeira vez
 
 00:04:00.110 --> 00:04:07.269
@@ -180,7 +180,7 @@ claro que o robô está numa configuração canhota
 e a orientação de sua garra é para
 
 00:04:21.449 --> 00:04:27.630
-baixo basicamente em uma configuração onde
+baixo, basicamente em uma configuração onde
 ele pode pegar coisas de uma mesa na horizontal.
 
 00:04:27.630 --> 00:04:32.180
@@ -197,7 +197,7 @@ que correspondem a configuração destra.
 
 00:04:44.270 --> 00:04:48.990
 Aqui está o grupo de ângulos de junta e
-podemos plotá-los e ver que agora nosso robô
+podemos plotá-los e ver que, agora, nosso robô
 
 00:04:48.990 --> 00:04:54.770
 está claramente numa configuração destra.
@@ -207,12 +207,12 @@ Agora eu posso pedir para ele ficar em uma
 configuração destra com o cotovelo para baixo em
 
 00:05:00.650 --> 00:05:06.340
-vez de estar para cima e passar a opção D para indicar
+vez de estar para cima, e passar a opção D para indicar
 isso. Agora temos um grupo diferente de ângulos
 
 00:05:06.340 --> 00:05:11.300
 de juntas, você vê que eles diferem dos valores
-mostrados acima e podemos plotar isso e
+mostrados acima. Podemos plotar isso e
 
 00:05:11.300 --> 00:05:16.400
 ver que nosso robô agora está em uma configuração
@@ -262,9 +262,9 @@ então uma rotação de 180 graus em torno do eixo
 do pulso, deixa os dois dedos efetivamente
 
 00:06:20.350 --> 00:06:26.229
-na mesm aconfiguração e não faz diferença
+na mesma configuração e não faz diferença
 na hora de agarrar um objeto, pegá-lo
 
 00:06:26.229 --> 00:06:27.720
-ou colocá-lo para baixo
+ou colocá-lo para baixo.
 
