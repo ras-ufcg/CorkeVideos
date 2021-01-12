@@ -1,143 +1,140 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-br
 
 00:00:03.879 --> 00:00:08.189
 Agora, eu vou adicionar uma segunda tarefa
-ao robô vista anteriormente e este
+ao robô visto anteriormente e este
 
 00:00:08.189 --> 00:00:14.740
-Robô é um pouco interessante em que o efeito 
-Final pode alcançar qualquer ponto particular
+robô é um pouco interessante pois o efetuador
+pode alcançar qualquer ponto particular
 
 00:00:14.740 --> 00:00:22.529
-Dentro de um círculo externo descrito por isso,
-Como uma posição facilmente adaptativa
+dentro de um círculo máximo como esse,
+como uma posição facilmente adaptativa como essa
 
 00:00:22.529 --> 00:00:28.819
-E outra posição adaptada como essa.
+ou uma posição adaptativa como essa.
 Meu robô de dois graus de liberdade pode se adaptar
 
 00:00:28.819 --> 00:00:34.720
-a qualquer coordenada x-y dentro do circulo maior.
+a qualquer coordenada x-y dentro do círculo maior.
 
 00:00:34.720 --> 00:00:40.070
-Com esse robô, embora podemos adaptar qualquer 
-Coordenada z-y dentro de seu 
+Com esse robô de dois graus de liberdade, embora podemos adaptar
+qualquer coordenada x-y dentro desse 
 
 00:00:40.070 --> 00:00:45.710
-Espaço de trabalho, ele não pode adaptar 
-arbitrariamente uma orientação. Então, se o robô estar
+workspace, ele não pode se adaptar arbitrariamente
+a uma orientação. Então, se o robô está
 
 00:00:45.710 --> 00:00:51.210
-Nesta coordenada x-y, não há outra 
-orientação para o robô,
+nessa coordenada x-y, não há outra 
+orientação para essa ligação do robô.
 
 00:00:51.210 --> 00:00:56.940
-Isso é possível porque a orientação e a posição
-são acoplada.
+Isso só é possível porque a orientação 
+e a posição são fortemente acopladas.
 
 00:00:56.940 --> 00:01:02.370
-Vamos seguir um procedimento semelhante para 
-Determinar a posição final desses robôs de dois elos.
+Vamos seguir um procedimento semelhante para determinar
+a posição final do efetuador das duas ligações desse.
 
 00:01:02.370 --> 00:01:09.890
-Vou pegar o robô e indicar o comprimento de seus 
-dois elos e seus dois ângulos articulados.
+robô. Vou anotar o robô e indicar o 
+comprimento de suas duas ligações e seus 
 
 00:01:09.890 --> 00:01:17.630
-Depois, vamos rotacionar o sistema de coordenadas
-por uma quantidade Q1. 
+dois ângulos de junta. Depois, vamos rotacionar
+o sistema de coordenadas por uma quantidade Q1. 
 
 00:01:17.630 --> 00:01:23.039
-Então, o sistemas de referencia agora se torna 
-este sistemas de coordenadas cinza mostrado aqui.
+Então, o sistemas coordenadas do mundo agora se torna 
+este sistemas de coordenadas cinza mostrado aqui. Agora
 
 00:01:23.039 --> 00:01:28.600
-Vamos traduzir esse sistema de coordenadas ao longo
-do primeiro elo do robô.
+vamos deslocar esse sistema de coordenadas
+ao longo da primeira ligação do robô
 
 00:01:28.600 --> 00:01:34.350
-Agora temos que aplicar a transformação na 
-direção x pela distancia A1
+aqui. Agora temos que aplicar a transformação na 
+direção x pela distância A1. Agora irei
 
 00:01:34.350 --> 00:01:39.899
-Que vai rotacionar o sistemas pela entidade Q2,
-o sistemas de coordenadas agora se parece com isso
+rotacionar o sistema de coordenadas pela quantidade Q2, e 
+o sistemas de coordenadas agora se parece com isso.
 
 00:01:39.899 --> 00:01:46.350
-Finalmente, eu vou transcreve-lo na direção X 
+Finalmente, eu vou deslocá-lo na direção x 
 pelo valor de A2. Isso nos dá
 
 00:01:46.350 --> 00:01:52.179
-O sistemas de coordenadas anexado ao efeito final 
-do robô, a posição final do robô. 
+o sistema de coordenadas acoplado ao efetuador final 
+do robô, a pose final do efetuador. 
 
 00:01:52.179 --> 00:01:58.060
 Agora, eu posso expandir a saída desta expressão e 
 multiplicar cada uma dessas matrizes e o resultado
 
-
 00:01:58.060 --> 00:02:04.759
-é esse. Mais uma vez, podemos olhar para a transcrição 
-dessa matriz de transformação homogênea.
+é esse. Mais uma vez, podemos olhar para o caminho de
+translação dessa matriz de transformação homogênea.
 
 00:02:04.759 --> 00:02:10.860
-Esses elementos aqui saindo, e agora eu tenho uma expressão 
-Para a coordenada x e 
+Esses elementos aqui, separando-os, e agora eu tenho
+uma expressão para a coordenada x e y
 
 00:02:10.860 --> 00:02:16.580
-do efeito final do robô de dois elos. Mais uma vez podemos
-ver que o rotacional 
-
+do efetuador final do robô de duas ligações. 
+Mais uma vez podemos ver que o caminho de rotação 
 
 00:02:16.580 --> 00:02:22.070
-Dessa matriz de transformação que indica a orientação
-do efeito final também é
-
+dessa matriz de transformação que indica a 
+orientação do efeito final também é
 
 00:02:22.070 --> 00:02:29.700
-Uma função de Q1 e Q2. Na verdade, é uma função de Q1 + Q2.
-Entao, mais uma vez, podemos usar
+uma função de Q1 e Q2. Na verdade, é uma função
+de Q1 + Q2. Então, mais uma vez, podemos usar
 
 00:02:29.700 --> 00:02:37.170
-Q1 e Q2 para controlar independentemente x e y
+Q1 e Q2 para controlar independentemente x e y,
 mas não podemos controlar independentemente a orientação
 
 00:02:37.170 --> 00:02:43.410
-do efeito final. Se usarmos Q1 e Q2 para
+do efetuador final. Se usarmos Q1 e Q2 para
 escolher x e y, então a orientação do
 
 00:02:43.410 --> 00:02:48.030
-já está determinado e pode
+efetuador final já está determinado e não pode
 ser escolhido independentemente.
 
 00:02:48.030 --> 00:02:54.540
-Uma coisa interessante com um manipulador de dois elos
-é que existem duas configurações de ângulo articular
+Uma coisa interessante com um manipulador de duas ligações
+é que existem duas configurações de ângulo de junta
 
 00:02:54.540 --> 00:03:00.100
-que vai aplicar o efeito final em um sistemas
-de coordendas desejado no robô, assim obtendo o efeito.
+que vão colocar o efetuador na posição desejada.
+Aqui está uma configuração do 
 
 00:03:00.100 --> 00:03:05.980
-Aqui está uma configuração do robô, e aqui temos uma
-configuração alternativa que resulta no mesmo
+robô, e aqui temos uma configuração alternativa 
+que resulta na mesma
 
 00:03:05.980 --> 00:03:09.240
-efetuador de posição.
+posição final do efetuador.
 
 00:03:09.240 --> 00:03:13.530
-Para o robô de dois elos, eu já havia criado
-algumas variáveis baseadas em trabalhos para
+Para o robô de duas ligações, eu já havia 
+criado algumas variáveis para
 
 00:03:13.530 --> 00:03:18.710
-representar o comprimento das ligações, são as variáveis 
-A1 e A2 e para representar os ângulos das juntas temos
+representar o comprimento das ligações, que são as variáveis 
+A1 e A2 e para representar os dois ângulos das juntas, Q1
 
 00:03:18.710 --> 00:03:25.160
-Q1 e Q2. E você pode ver os valores numéricos
-neste local. Para determinador a postura do efetuador final
+e Q2. E você pode ver os valores numéricosaqui. 
+Para determinador a pose do efetuador
 
 00:03:25.160 --> 00:03:31.610
 eu preciso concatenar um número de transformações
@@ -145,10 +142,10 @@ homogêneas elementares, então eu vou ter
 
 00:03:31.610 --> 00:03:39.290
 a rotação por Q1 seguida pela translação 
-e a direção x por A1 seguida pela rotação de Q2
+e a direção x por A1 seguida pela rotação de Q2,
 
 00:03:39.290 --> 00:03:47.760
-seguida pela translação na direção x pelo
+seguida pela translação na direção x e pelo
 comprimento da ligação 2.
 
 00:03:47.760 --> 00:03:57.040
@@ -168,7 +165,7 @@ orientação do efetuador.
 
 00:04:12.900 --> 00:04:19.750
 Agora, nós podemos substituir esses valores numéricos
-por símbolos. Então eu defino os símbolos Q1 e Q2 e
+por símbolos. Então, eu defino os símbolos Q1 e Q2 e
 
 00:04:19.750 --> 00:04:26.380
 símbolos para A1 e A2. Nós podemos ver dentro do 
@@ -184,11 +181,11 @@ manipulador de robôs de dois elos.
 
 00:04:43.440 --> 00:04:51.150
 Eu posso importar um modelo de um manipulador de
-dois elos como a toolbox da função md1_planar2,
+dois elos com a função da toolbox md1_planar2,
 
 00:04:51.150 --> 00:04:57.330
 e criar um novo objeto na base de trabalho
-chamado P2 que representa esse manipulador do robô.
+chamado P2, que representa esse manipulador do robô.
 
 00:04:57.330 --> 00:05:02.980
 O que eu posso fazer é que posso invocar o método de ensino
@@ -207,7 +204,7 @@ Uma coisa interessante com o manipulador de dois elos
 é que existem dois conjuntos de ângulos de junta
 
 00:05:20.040 --> 00:05:24.900
-que resultam no mesmo efetuador de posição.
+que resultam na mesma posição do efetuador.
 Eu vou usar o método de plotagem e vou mover
 
 00:05:24.900 --> 00:05:31.560
