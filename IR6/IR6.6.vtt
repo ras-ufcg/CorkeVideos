@@ -1,13 +1,13 @@
 WEBVTT
 Kind: captions
-Language: pt-Br
+Language: pt-BR
 
 00:00:03.990 --> 00:00:08.960
 A maioria dos robôs do mundo real, como 
 os robôs industriais mostrados aqui, têm 6 juntas.
 
 00:00:08.960 --> 00:00:12.639
-E, normalmente, para robôs industriais, esses links são 
+E normalmente, para robôs industriais, esses links são 
 todos de revolução.
 
 00:00:12.639 --> 00:00:14.379
@@ -15,14 +15,13 @@ Isso quer dizer que estas são juntas de rotação
 
 00:00:14.379 --> 00:00:19.310
 Não são juntas que deslizam, como as que vimos antes
-com o robô de pernas
-
+com o robô com pernas
 
 00:00:19.310 --> 00:00:24.920
 Estes robôs são também manipuladores de link em série,
 o que quer dizer que vamos da base até
 
 00:00:24.920 --> 00:00:29.720
-o efetuador por uma série de links e juntas do robô
+o efetuador por uma série de links e juntas do robô.
 
 
