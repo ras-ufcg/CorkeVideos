@@ -8,18 +8,18 @@ como acabamos de ver, mas dessa vez nós vamos
 
 00:00:07.970 --> 00:00:12.639
 resolvê-lo utilizando uma abordagem analítica,
-em que vamos contar muito mais com álgebra,
+em que vamos contar com muito mais com álgebra,
 
 00:00:12.639 --> 00:00:19.220
-em especial álgebra linerar em vez de geometria.
-Nós temos uma expressão E, a qual é a transformação
+em especial álgebra liner em vez de geometria.
+Nós temos uma expressão E, que é a transformação
 
 00:00:19.220 --> 00:00:24.460
 homogênea que representa a pose dos efetuadores
-dos robôs e nós vimos isso no
+dos robôs, e nós vimos isso no
 
 00:00:24.460 --> 00:00:31.500
-último curso, nós podemos escrever a pose do
+último curso. Nós podemos escrever a pose do
 efetuador como uma sequência de transformações elementares
 
 00:00:31.500 --> 00:00:38.809
@@ -32,7 +32,7 @@ por A2. Se eu expandir isso, multiplicar todas
 
 00:00:45.859 --> 00:00:51.870
 as transformãções, eu consigo a expressão mostrada
-aqui; uma matriz de transformação homogênea
+aqui: uma matriz de transformação homogênea
 
 00:00:51.870 --> 00:00:56.069
 3x3 representando a pose do efetuador do robô.
@@ -78,7 +78,7 @@ onde eu tiver seno de Q2, eu vou escrever S2.
 É uma forma bastante comum de abreviação quando as pessoas
 
 00:01:54.240 --> 00:01:58.969
-estão olhando para equa~ções cinemáticas de robôs.
+estão olhando para equações cinemáticas de robôs.
 E aqui estão as equações após fazer essas
 
 00:01:58.969 --> 00:02:04.119
@@ -91,36 +91,35 @@ bem conhecida. Então eu vou considerar
 
 00:02:10.280 --> 00:02:15.930
 apenas uma das equações, a equação para
-Y e usando nossa bem conhecida identidade e 
+Y e usando a identidade conhecida e 
 
 00:02:15.930 --> 00:02:21.870
 sua solução, eu posos determinar os valores para as
-variáveis a, b e c
+variáveis a, b e c.
 
 00:02:21.870 --> 00:02:27.390
-e uma vez que eu determinei essas, então eu
+Uma vez que eu determinei essas, então eu
 posso apenas escrever a solução de Q1, que 
 
 00:02:27.390 --> 00:02:31.209
-é equivalente a theta nesse caso em
-especial.
+é equivalente a teta nesse caso em especial.
 
 00:02:31.209 --> 00:02:36.530
-Aqui novamente está nossa expressão para Q1, copiada
+Aqui está nossa expressão para Q1, copiada
 dos slides anteriores, e nós podemos lembrar
 
 00:02:36.530 --> 00:02:41.799
-de mais cedo nos nossos trabalhos que determinamos
-essa relação especial; X ao quadrado mais
+que mais cedo, nos nossos trabalhos que determinamos
+essa relação especial, X ao quadrado mais
 
 00:02:41.799 --> 00:02:47.390
-Y ao quadrado é igual a essa expressão complexa
-especial. Então eu posso substituir isso e
+Y ao quadrado, é igual a essa expressão complexa.
+Então eu posso substituir isso e
 
 00:02:47.390 --> 00:02:53.830
 fazer algumas simplificações e eu acabo com
-essa expressão ligeiramente menos complexa para Q1. E
+essa expressão ligeiramente menos complexa para Q1.
 
 00:02:53.830 --> 00:02:58.760
-é a mesma expressão que eu consegui seguindo
+E é a mesma expressão que eu consegui seguindo
 a abordagem geométrica na seção anterior.
