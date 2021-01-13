@@ -3,102 +3,102 @@ Kind: captions
 Language: en
 
 00:00:03.860 --> 00:00:08.519
-Let's recap some of the big things that we've
-learned in this lecture. In the previous lecture
+Vamos recapitular algumas das informações que aprendemos
+neste capítulo. No capítulo anterior
 
 00:00:08.519 --> 00:00:14.249
-we discussed the forward kinematic function;
-that's the function K. Its argument is Q and
+discutimos a função cinemática direta;
+essa é a função K. Seu argumento é Q e
 
 00:00:14.249 --> 00:00:19.430
-that's the vector of joint angles, its vector
-of length N, where N is the number of joints
+esse é o vetor dos ângulos articulares, seu vetor
+de comprimento N, onde N é o número de junta
 
 00:00:19.430 --> 00:00:25.690
-that the robot has. The result of the forward
-kinematic function is the pose of the robots
+que o robô tem. O resultado da função
+cinemática direta é a pose dos robôs
 
 00:00:25.690 --> 00:00:31.850
-end effector, which I call here ksiN. Forward
-kinematics takes the joint angles and gives
+efetuador, que chamo aqui de ksiN. A cinemática direta
+pega os ângulos da junta e nos
 
 00:00:31.850 --> 00:00:35.000
-us the robot end effector pose.
+da, a pose do robô efetuador.
 
 00:00:35.000 --> 00:00:39.340
-In this lecture we've discussed the inverse
-kinematic function that's shown here as K
+Nesta aula, discutimos a função cinemática 
+inverso que é mostrada aqui como K
 
 00:00:39.340 --> 00:00:46.050
-to the minus one. It operates on the robot
-end effector pose and tells us the joint angles
+para o menor. Ele opera no robô
+pose de efetor final e nos diz os ângulos articulares
 
 00:00:46.050 --> 00:00:52.450
-required to achieve that pose. The inverse
-is not unique. For a particular robot end
+necessário para conseguir essa pose. O inverso
+não é único. Para um fim específico do robô
 
 00:00:52.450 --> 00:00:58.120
-effector pose, there can be multiple sets
-of joint angles which will achieve that particular
+efetuador pose, pode haver vários conjuntos
+de ângulos de junta que atingirão aquele
 
 00:00:58.120 --> 00:01:02.930
-pose, for our little two link robot, there
-are two possible configurations shown here.
+pose, para o nosso pequeno robô de duas ligações,
+são duas configurações possíveis mostradas aqui.
 
 00:01:02.930 --> 00:01:07.610
-For our six link Puma robot, which operates
-in three dimensional space, there are in fact
+Para o nosso robô Puma de seis links, que opera
+no espaço tridimensional, existem de fato
 
 00:01:07.610 --> 00:01:09.820
-six possible solutions.
+seis soluções possíveis.
 
 00:01:09.820 --> 00:01:14.060
-There are several approaches to solving the
-inverse kinematic problem for a particular
+Existem várias abordagens para resolver o
+problema de cinemática inversa para um determinado
 
 00:01:14.060 --> 00:01:19.369
-robot. For a simple robot like the two link
-example, we use a geometric solution and that
+robô. Para um robô simples como os dois ligações,por
+exemplo, usamos uma solução geométrica e que
 
 00:01:19.369 --> 00:01:25.290
-requires some intuition and some insight,
-it involves defining particular triangles,
+requer alguma intuição e algum insight,
+envolve a definição de triângulos particulares,
 
 00:01:25.290 --> 00:01:30.299
-introducing new angles and applying a number
-of simple trigonometric relationships in order
+introduzindo novos ângulos e aplicando um número
+de relações trigonométricas simples em ordem
 
 00:01:30.299 --> 00:01:36.570
-to solve for the joint angles we're interested
-in, in this case Q1 and Q2 as a function of
+para resolver os ângulos das juntas que estamos interessados, 
+neste caso, Q1 e Q2 como uma função do
 
 00:01:36.570 --> 00:01:44.820
-the end effector pose XY and the robot's constant
-link lengths A1 and A2. We right down the
+efetuador pose XY XY e o robô com comprimentos constante 
+de ligação A1 e A2. Nós vamos as
 
 00:01:44.820 --> 00:01:49.729
-forward kinematic equations, which here give
-us the end effector pose X and Y in terms
+equações cinemáticas diretas que aqui estão,
+o efetuador pose, representam X and Y em termos
 
 00:01:49.729 --> 00:01:54.250
-of the joint angles and then with a large
-amount of manipulation and again with some
+dos ângulos articulares e, em seguida, com um grande
+quantidade de manipulação e novamente com algun
 
 00:01:54.250 --> 00:02:00.180
-insight and intuition, we can write down equations
-which give us the robot joint angles.
+insight e intuição, podemos escrever equações
+que nos dão os ângulos de articulação do robô.
 
 00:02:00.180 --> 00:02:04.960
-The steps involved in the analytic solution
-for robot inverse kinematics involves the
+As etapas envolvidas na solução analítica
+para a cinemática inversa do robô envolve o
 
 00:02:04.960 --> 00:02:09.819
-following steps; firstly we need a model of
-the robot, we need to know the position and
+seguintes passos; em primeiro lugar, precisamos de um modelo do
+robô, precisamos saber a posição e
 
 00:02:09.819 --> 00:02:13.780
-orientation of the joints with respect to
-the links. We need to know the lengths of
+orientação das juntas em relação 
+as ligações. Precisamos saber os comprimentos 
 
 00:02:13.780 --> 00:02:19.150
 das ligações e assim em diante. Dali nós extraímos
