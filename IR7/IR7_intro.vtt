@@ -3,45 +3,45 @@ Kind: captions
 Language: en
 
 00:00:07.120 --> 00:00:11.290
-In the last lecture, we talked about robot
-forward kinematics, and forward kinematics
+Na última palestra, falamos sobre cinemática
+direta do robô, e cinemática direta
 
 00:00:11.290 --> 00:00:16.380
-is the relationship between the robot joint
-angles, which we represent by a vector I call
+é a relação entre os ângulos de juntas do robô, 
+os quais representamos por um vetor que chamo de
 
 00:00:16.380 --> 00:00:19.770
-'Q, and the pose of the robot end effector.
+'Q, e a posição do efetor final do robô.
 
 00:00:19.770 --> 00:00:24.730
-We can describe this in terms of a mathematical
-function. We can describe forward kinematics
+Podemos descrever isso em termos de uma função
+matemática. Podemos descrever cinemática direta
 
 00:00:24.730 --> 00:00:31.119
-as the function curly K of the robot joint
-angles, and the return value of that function
+como a funcão curva K do angulos de junta do
+robô, e o valor retornado desta funcão
 
 00:00:31.119 --> 00:00:37.270
-is the pose of the end effector. This is very
-very useful in robotics, but more useful is
+é a posição do efetor final. Isso é muito
+útil em robótica, mas ainda mais útil é
 
 00:00:37.270 --> 00:00:39.940
-what's called the 'Inverse Kinematics.'
+o que é chamado 'Cinemática Inversa'.
 
 00:00:39.940 --> 00:00:44.980
-This is the function that tells us that joint
-angles that we need in order to achieve a
+Essa é a função que nos indica os ângulos
+de junta que precisamos para atingir uma
 
 00:00:44.980 --> 00:00:47.870
-particular robot end effector pose.
+determinada posição final do robô.
 
 00:00:47.870 --> 00:00:51.769
-So say we want the robots end effector to
-be at this particular pose in space, then
+Então digamos que queremos o efetor final do robô esteja
+nessa determinada posição no espaço, então
 
 00:00:51.769 --> 00:00:58.300
-what should the joint angles be set to in order for the robot end effector to get to that particular pose?
+quais devem ser os angulos das juntas para que o efetor final do robô chegue a essa determinada posição?
 
 00:00:58.300 --> 00:01:03.600
-This is called the 'Inverse Kinematics Problem' that's really key to arm type robots.
+Isso é chamado o 'Problema da Cinemática Inversa' que é realmente a chave para armar robôs do tipo.
 
