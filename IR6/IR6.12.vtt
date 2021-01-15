@@ -3,162 +3,162 @@ Kind: captions
 Language: en
 
 00:00:03.280 --> 00:00:07.160
-Let’s summarize what we’ve learned in
-this lecture and this lecture has been all
+Vamos resumir o que aprendemos nesta
+aula e ela tem tudo a ver 
 
 00:00:07.160 --> 00:00:08.740
-about forward kinematics.
+com cinemática direta.
 
 00:00:08.740 --> 00:00:13.990
-That’s the problem of determining the pose
-of the robot tip or the robot’s end effector
+Esse é o problema de determinar a pose 
+da ponta do robô ou do efetuador do robô
 
 00:00:13.990 --> 00:00:20.040
-given a set of the joint coordinates, the
-things that vary as the robot moves.
+dado um conjunto de coordenadas de junta,as 
+coisas variam de acordo com os movimentos do robô.
 
 00:00:20.040 --> 00:00:26.290
-For a robot within joints, we denote the end
-effector pose as Ksi N and it is a function
+Para um robô com juntas, denotamos o 
+efetuador da pose como Ksi N e é uma função 
 
 00:00:26.290 --> 00:00:31.980
-of the joint coordinates, which are vector
-of length N. And, we typically denote the
+das coordenadas de junta, que são vetores de 
+comprimento N. E, normalmente denotamos o
 
 00:00:31.980 --> 00:00:38.309
-vector of joint coordinates by the symbol
-Q and this function which maps the joint angles
+vetor de coordenadas de junta  pelo símbolo
+Q e esta função que mapeia os ângulos de junta 
 
 00:00:38.309 --> 00:00:44.870
-to the end effector pose, we denote by the
-symbol K, K for kinematic, the forward kinematic
+para o efetuador da pose, nós denotamos pelo símbolo K, 
+K de cinemática (Kinematic), a função cinemática 
 
 00:00:44.870 --> 00:00:45.960
-function.
+direta. 
 
 00:00:45.960 --> 00:00:52.170
-We looked at a number of examples about how
-to determine the robot tooltip pose.
+Vimos vários exemplos sobre como determinar
+a dica de contexto da pose.
 
 00:00:52.170 --> 00:00:57.129
-We did that by drawing the robot, by taking
-a reference coordinate frame attached to the
+Fizemos isso desenhando o robô, tomando como 
+referência um sistema de coordenada anexado à
 
 00:00:57.129 --> 00:01:01.129
-base of the robot and then walking it through
-the robot mechanism.
+base do robô e então conduzindo-o por meio
+do mecanismo do robô.
 
 00:01:01.129 --> 00:01:06.350
-We would rotate it and translate it from the
-base of the robot through to the end effector.
+Nós rodaríamos e transladaríamos isso da base
+do robô até o efetuador. 
 
 00:01:06.350 --> 00:01:12.530
-We could then write down a sequence of elementary
-transformations, which we could expand and
+Nós podemos, então, escrever uma sequência de 
+transformações elementares, que poderíamos expandir e 
 
 00:01:12.530 --> 00:01:18.680
-multiply out to come up with an expression
-for a homogeneous transformation which represents
+multiplicar para chegar a uma expressão para uma 
+transformação homogênea que representa
 
 00:01:18.680 --> 00:01:21.250
-the pose of the robot’s end effector.
+a pose do efetuador  do robô.
 
 00:01:21.250 --> 00:01:26.759
-So, we did it for a simple planar robot with
-just two joints and we also did it for a robot
+Então, fizemos isso para um robô planar simples com 
+apenas duas juntas e também fizemos isso para um robô
 
 00:01:26.759 --> 00:01:31.270
-with four joints whose end effector moves
-in three-dimensional space.
+com quatro juntas cujo efetuador se move 
+no espaço tridimensional. 
 
 00:01:31.270 --> 00:01:35.539
-We did this for a number of robots that move
-in two dimensions and in three dimensions,
+Fizemos isso para um número de robôs que se 
+movem em duas e três dimensões,
 
 00:01:35.539 --> 00:01:40.350
-and hope you got the idea about how you can
-write down this transformation expression
+e espero que você tenha a ideia de como 
+escrever essa expressão de transformaçao
 
 00:01:40.350 --> 00:01:46.240
-almost by inspection, just by looking at the
-robot and, in your mind, walking a coordinate
+quase que por inspesão, apenas olhando para o 
+robô e, em sua mente, andando no sistema de
 
 00:01:46.240 --> 00:01:50.509
-frame from the base of the robot through each
-of the links and each of the joints until
+coordenada da base do robô, por meio de cada
+uma das ligações e de cada uma das juntas, até
 
 00:01:50.509 --> 00:01:51.950
-it get to the end effector.
+chegar no efetuador.
 
 00:01:51.950 --> 00:01:58.490
-It’s a very simple and very intuitive way
-of writing the expression for robot end effector
+É uma maneira muito simples e intuitiva 
+de escrever a expressão para o efetuador robótico 
 
 00:01:58.490 --> 00:01:59.680
-pose.
+da pose.
 
 00:01:59.680 --> 00:02:05.130
-We introduced the rather formal concept of
-a configuration space.
+Introduzimos o conceito bastante formal de
+um espaço de configuração. 
 
 00:02:05.130 --> 00:02:10.550
-As just mentioned, the configuration of a
-robot with N joints is the joint configuration
+Como mencionado, a configuração de um 
+robô com N juntas é o vetor de configuração
 
 00:02:10.550 --> 00:02:11.610
-vector.
+de juntas. 
 
 00:02:11.610 --> 00:02:17.129
-The elements in that vector or an angle if
-the joint is rotational, revolute, and it
+Os elementos nesse vetor ou ângulo, se
+a junta for rotacional, giram, e será uma
 
 00:02:17.129 --> 00:02:21.710
-is a link if the joint is prismatic or sliding.
+ligação se a junta for prismática ou deslizante.
 
 00:02:21.710 --> 00:02:27.569
-The set of all of these vectors is referred
-to as the configuration space of the robot.
+O conjunto de todos esses vetores são referidos
+como o espaço de configuração do robô.
 
 00:02:27.569 --> 00:02:33.069
-It’s a subset of the N dimensional space
-of real numbers where N is the number of joints
+É um subconjunto do espaço N-dimensional 
+dos números reais, onde N é o número de juntas
 
 00:02:33.069 --> 00:02:34.370
-in the robot.
+do robô.
 
 00:02:34.370 --> 00:02:38.709
-The other concept that we introduced is the
-task space of the robot and this is the space
+Outro conceito que introduzimos é o de espaço
+de tarefas  do robô e este é o espaço
 
 00:02:38.709 --> 00:02:41.459
-of all possible end effector poses.
+de todas as possíveis poses do efetuador.
 
 00:02:41.459 --> 00:02:46.709
-For a two-dimensional robot, the task space
-is a subset of SE2 which is the set of all
+Para um robô bidimensional, o espaço de tarefas
+é um subconjunto de SE2, que é o conjunto de todas
 
 00:02:46.709 --> 00:02:50.739
-possible positions and orientations in the
-plane.
+as possíveis posições e orientações no 
+plano.
 
 00:02:50.739 --> 00:02:56.129
-For a three-dimensional robot, the task space
-is a subset of SE3, the set of all possible
+Para um robô tridimensional, o espaço de tarefas
+é um subconjunto de SE3, o conjunto de todas as possíveis
 
 00:02:56.129 --> 00:02:59.830
-positions and orientations in three-dimensional
-space.
+as posiçoes e orientações no espaço
+tridimensional.
 
 00:02:59.830 --> 00:03:05.410
-For this 2-degree of freedom planar robot
-arm, its configuration space is a subset of
+Para este braço robótico planar com dois graus de liberdade, 
+seu espaço de configuração é um subconjunto do
 
 00:03:05.410 --> 00:03:10.080
-the space of two-dimensional real numbers
-because the configuration can be described
+espaço bidimensional de números reais 
+porque a configuração pode ser descrita
 
 00:03:10.080 --> 00:03:12.610
-by two real numbers, Q1 and Q2.
+por dois números reais, Q1 e Q2.
 
 00:03:12.610 --> 00:03:18.500
 Seu espaço de trabalho também é um subconjunto do espaço
