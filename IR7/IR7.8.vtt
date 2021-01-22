@@ -6,14 +6,13 @@ Language: pt-BR
 Vamos olhar à alguns desafios práticos, um deles é 
 a alcançabilidade. Nosso robô tem
 
-
 00:00:08.289 --> 00:00:14.410
 apenas links finitos. Logo, há uma grande número de 
 posições que o
 
 00:00:14.410 --> 00:00:20.119
-robô é fisicamente impossibilitador de alcançar.
-Se o ponto não é alcançável então,
+robô é fisicamente impossibilitado de alcançar.
+Se o ponto não é alcançável, então
 
 00:00:20.119 --> 00:00:25.830
 ele geralmente levará há algum problema na 
@@ -72,11 +71,11 @@ no fato que o efetuador não se move.
 Da mesma forma que no caso do Gimbal Lock, nós perdemos
 
 00:01:36.750 --> 00:01:42.200
-Um grau de liberdade. A Junta 4 e 6 resultam no 
-mesmo movimento que para o efetuador
+Um grau de liberdade. As Juntas 4 e 6 resultam no 
+mesmo movimento para o efetuador
 
 00:01:42.200 --> 00:01:47.050
-e para a robótica, nos referimos como singularidade
+e, para a robótica, nos referimos como singularidade
 
 00:01:47.050 --> 00:01:52.600
 O que isso quer dizer no senso prático é que
