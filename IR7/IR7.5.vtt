@@ -8,7 +8,7 @@ na configuração em que Q2 é maior que 0.
 
 00:00:09.930 --> 00:00:16.529
 E sobreposto está o robô com a mesma
-posição do efetuador mas Q2 é agora menor
+posição do efetuador, mas Q2 é agora menor
 
 00:00:16.529 --> 00:00:22.929
 que 0. Essas são as duas soluções possíveis
@@ -24,7 +24,7 @@ o robô porque a posição do ponto final é
 
 00:00:34.110 --> 00:00:39.570
 exatamente a mesma mas os ângulos das juntas Q1 e
-Q2 precisam seguir alguma tragetória interessante
+Q2 precisam seguir alguma tragetória de interesse
 
 00:00:39.570 --> 00:00:43.450
 para se mover da primeira configuração para a segunda.
@@ -35,14 +35,14 @@ Isso mostra um robô PUMA 560 se movendo para agarrar
 
 00:00:49.140 --> 00:00:54.940
 uma bola. Agora podemos ver que o robô está fazendo
-esse ajuste tanto na configuração esquerda quanto
+esse ajuste tanto na configuração canhota quanto
 
 00:00:54.940 --> 00:00:59.750
 na configuração destra. Nós podemos nos
-aperguntar, "Como o robô muda de uma
+perguntar, "Como o robô muda de uma
 
 00:00:59.750 --> 00:01:04.869
-configuração esquerda para uma configuração
+configuração canhota para uma configuração
 destra? Como nós calculamos a
 
 00:01:04.869 --> 00:01:08.820
@@ -61,15 +61,15 @@ que eu gostaria que meu robô adotasse. E vamos
 dar a ele através dessa matriz de transformação
 
 00:01:29.580 --> 00:01:36.920
-homogênea aqui. Eu vou definir uma nova variável da área
-de trabalho que representa o conjunto de angulos das juntas
+homogênea aqui. Eu vou definir uma nova variável na área
+de trabalho que representa o conjunto de ângulos das juntas
 
 00:01:36.920 --> 00:01:43.950
 exigido pelo robô para adotar essa pose em
 particular na configuração canhota. Eu uso
 
 00:01:43.950 --> 00:01:50.540
-o método ikine6s, passe na transformação
+o método ikine6s, passe a transformação
 homogênea que representa a pose desejada
 
 00:01:50.540 --> 00:01:56.280
@@ -124,8 +124,8 @@ linha corresponde à um passo em particular. A linha
 representa um ângulo de junta em particular.
 
 00:03:00.700 --> 00:03:06.660
-Agora a tool box robótica pode facilmente lidar com
-trajectórias. Então eu traço, mas em vez de um ângulo de
+Agora a toolbox de robótica pode facilmente lidar com
+trajetórias. Então eu traço, mas em vez de um ângulo de
 
 00:03:06.660 --> 00:03:11.940
 junta específico eu traço uma trajetória. Vemos o
@@ -171,7 +171,7 @@ o robô faz aqui. Você pode ver que o movimento
 
 00:04:06.129 --> 00:04:13.409
 onde ele começou. Às vezes em um cenário de
-fabricação, o robô precisa exatamente de mudar
+fabricação, o robô precisa exatamente mudar
 
 00:04:13.409 --> 00:04:18.329
 da configuração de canhoto para destro.
@@ -183,7 +183,7 @@ mudar de configuração.
 
 00:04:22.320 --> 00:04:28.830
 Então, essas configurações mudam movimentos, não
-há rede sobre todos os movimentos do robô
+há rede sobre todos os movimentos do robô,
 
 00:04:28.830 --> 00:04:33.979
 mas enquanto ele está mudando de configuração,
@@ -195,4 +195,3 @@ ao comandar tal movimento para que o robô não
 
 00:04:39.060 --> 00:04:42.560
 colida em nada na sua área de trabalho.
-
