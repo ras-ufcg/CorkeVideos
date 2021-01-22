@@ -6,7 +6,7 @@ Language: pt-BR
 Aqui temos uma imagem de um robô redundante.
 
 00:00:06.080 --> 00:00:09.090
-E este é um conceito q introduzimos na
+E este é um conceito que introduzimos na
 aula passada.
 
 00:00:09.090 --> 00:00:14.010
@@ -22,9 +22,8 @@ Agora, o espaço de tarefa deste robô é um subconjunto
 do SE3 e isso é exatamenteo o mesmo espaço de tarefa
 
 00:00:23.650 --> 00:00:29.320
-que o robô Puma tem, ou seja, dentro 
-de um volume de trabalho, ele pode se
-mover para um ponto específico
+que o robô Puma tem, ou seja, dentro de um volume de 
+trabalho, ele pode se mover para um ponto específico
 
 00:00:29.320 --> 00:00:33.500
 e atingir um efetuador com uma orientação espeficica. 
@@ -42,14 +41,14 @@ elevado a 100. Com o robô Puma tendo apenas 6
 juntas, ele tem o espaço de configuração de
 
 00:00:47.389 --> 00:00:48.909
-R elevado a 6th.
+R elevado a 6ª.
 
 00:00:48.909 --> 00:00:53.000
 O espaço de tarefa tem 6 dimensões, o espaço de 
-configuração tem um espaço de 100
+configuração tem um espaço de
 
 00:00:53.000 --> 00:00:54.699
-dimensões.
+100 dimensões.
 
 00:00:54.699 --> 00:00:58.969
 Então, podemos considerar que seis desses graus
@@ -59,9 +58,8 @@ de liberdade são usados para controlar a posição
 e a orientação do efetuador.
 
 00:01:00.910 --> 00:01:07.990
-Os outros 94 graus de liberdade são usados
-para definir uma forma arbitrária para o braço
-do robô, 
+Os outros 94 graus de liberdade são usados para 
+definir uma forma arbitrária para o braço do robô, 
 
 00:01:07.990 --> 00:01:12.340
 então podemos controlar, independentemente, 
@@ -76,20 +74,19 @@ Quando se trata de determinar a cinemática inversa,
 temos um pequeno problema: existem, 
 
 00:01:22.310 --> 00:01:29.170
-na realidade, um número infinito de conjuntos para
-os ângulos das juntas, e um número infinito de
-configurações de robôs
+na realidade, um número infinito de conjuntos para os ângulos
+das juntas, e um número infinito de configurações de robôs
 
 00:01:29.170 --> 00:01:32.950
 que irão levar, exatamente, à mesma
 pose do efetuador.
 
 00:01:32.950 --> 00:01:37.640
-No caso do robô Puma, havia seis
+No caso do robô Puma, haviam seis
 configurações que deram a mesma 
 
 00:01:37.640 --> 00:01:41.680
-pose do efetuador. Para esse robô existem um
+pose do efetuador. Para esse robô existe um
 número infinito.
 
 00:01:41.680 --> 00:01:47.030
@@ -101,7 +98,7 @@ numérica.
 
 00:01:48.810 --> 00:01:54.749
 Nós vamos fazer um exemplo, agora com um robô 
-redundante, e iremos usar um modelo de Toolbox
+redundante, e iremos usar um modelo da Toolbox
 
 00:01:54.749 --> 00:01:57.869
 chamado MDL Hyper 3D.
@@ -144,9 +141,8 @@ robô para mim.
 E aqui temos a solução.
 
 00:02:41.420 --> 00:02:46.510
-Computamos um vetor de 20 elementos, 
-que são os ângulos das articulações 
-necessários para que
+Computamos um vetor de 20 elementos, que são os 
+ângulos das articulações necessários para que
 
 00:02:46.510 --> 00:02:50.150
 esse robô de 20 juntas adote a pose T2.
