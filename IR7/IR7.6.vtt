@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.889 --> 00:00:09.000
 Vamos recapitular o que aprendemos sobre resolver
@@ -15,8 +15,8 @@ das juntas e ligações do robô. Escrevemos
 abaixo as equações para a cinemática direta
 
 00:00:20.249 --> 00:00:25.169
-do braço do robô e isso é relativamente simples de
-fazer.
+do braço do robô e isso é relativamente simples 
+de fazer.
 
 00:00:25.169 --> 00:00:29.369
 Em seguida vem a parte difícil, onde precisamos 
@@ -24,7 +24,7 @@ escrever abaixo muitas equações na tentativa de
 
 00:00:29.369 --> 00:00:35.110
 solucionar para variáveis de juntas desconhecidas e
-isso requer algum discernimento humano. Freqentemente quando
+isso requer algum discernimento humano. Frequentemente quando
 
 00:00:35.110 --> 00:00:38.770
 você está tentando fazer isso, vai se encontrar
@@ -47,8 +47,8 @@ da solução analítica é que isso mostra
 explicitamente as configurações múltiplas que o
 
 00:01:00.190 --> 00:01:06.380
-o braço do robô pode estar. Portanto nosso manipulador de dois links,
-mostramos duas configurações com a junta do meio 
+o braço do robô pode estar. Logo, para nosso manipulador de duas
+juntas, mostramos duas configurações com a junta do meio 
 
 00:01:06.380 --> 00:01:10.590
 abaixo da linha diagonal ou acima da
@@ -78,10 +78,10 @@ que são muito rápidos para executar.
 
 00:01:38.040 --> 00:01:42.619
 O problema torna-se cada vez mais difícil
-à medidida qie o número de articulações no robô aumenta.
+à medidida que o número de articulações no robô aumenta.
 
 00:01:42.619 --> 00:01:48.219
-Em uma seção anterior derivamos a solução
+Em uma seção anterior, derivamos a solução
 para um robô simples de duas articulações e já
 
 00:01:48.219 --> 00:01:53.189
@@ -90,23 +90,23 @@ para chegar a solução. O que nos ajuda
 
 00:01:53.189 --> 00:01:59.350
 é que ao longo de muitas décadas, pessoas inteligentes
-determinaram as as soluções cinemáticas inversas.
+determinaram as soluções cinemáticas inversas.
 
 00:01:59.350 --> 00:02:04.590
 para robôs específicos ou para classes específicas 
 de robôs, assim nós aceitamos a difícil tarefa de
 
 00:02:04.590 --> 00:02:08.310
-derivar as soluções e estas foram
-publicados na literatura.
+derivar as soluções e essas foram
+publicadas na literatura.
 
 00:02:08.310 --> 00:02:11.900
 Então se você tem um robô específico e você está
-procurando por uma solução, vá e pesquise a
+procurando por uma solução, vá e pesquise na
 
 00:02:11.900 --> 00:02:16.569
 literatura e veja se alguém já 
-sololveu esse problema para você.
+resolveu esse problema para você.
 
 00:02:16.569 --> 00:02:20.629
 Quando você está experimentando para determinar a cinemática 
@@ -141,7 +141,7 @@ a coordenada XYZ e depois, separadamente,
 
 00:02:55.930 --> 00:03:01.190
 resolver para a orientação do efetuador,
-cuja é a orientação que pode ser
+que é a orientação que pode ser
 
 00:03:01.190 --> 00:03:07.170
 expressa em termos dos ângulos de roll, pitch, yaw,
@@ -211,7 +211,7 @@ Nós falamos bastante sobre robôs de elos seriais,
 e esses são aqueles formados por uma corrente
 
 00:04:28.480 --> 00:04:33.000
-de elos, começando da base do robô, onde nós
+de elos, começando na base do robô, onde nós
 temos um elo, este sustenta o segundo
 
 00:04:33.000 --> 00:04:36.530
