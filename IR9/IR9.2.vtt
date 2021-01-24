@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.750 --> 00:00:08.799
 In the previous lecture, we looked at the
@@ -251,133 +251,133 @@ We are now going to use the expression we
 introduced a moment ago which relates the
 
 00:05:26.880 --> 00:05:32.169
-derivative of a function to a finite difference
-in a function. If I compute that finite difference,
+derivada de uma função para uma diferença finita
+em uma função. Se eu calcular essa diferença finita
 
 00:05:32.169 --> 00:05:37.350
-I get this matrix result here. And the question
-is, of course, what does this actually mean?
+Eu obtenho esta matriz resultante aqui. E a pergunta
+é, claro, o que isto realmente significa?
 
 00:05:37.350 --> 00:05:42.500
-If I write the symbolic expression for a homogeneous
-transformation matrix, which we recall has
+Se eu escrever a expressão simbólica para uma 
+Matriz de transformação linear, que lembramos tem
 
 00:05:42.500 --> 00:05:48.880
-got a 3 x 3 rotational component and a 3 x
-1 translational component, and if I take the
+um componente rotacional 3 x 3 e um 
+componente de translação 3 x 1, e se eu pegar a 
 
 00:05:48.880 --> 00:05:55.210
-derivative of that matrix with respect to
-the joint variable Q1, I can write this expression
+derivada daquela matriz com relação a variável de
+articulação Q1, eu posso escrever esta expressão
 
 00:05:55.210 --> 00:05:58.050
-here.
-Now, we can match the components in this symbolic
+Aqui.
+Agora, podemos combinar os componentes nesta expressão
 
 00:05:58.050 --> 00:06:02.920
-expression with the components in the numeric
-expression. So, this is the expression - a
+simbólica com as componentes na expressão 
+numérica. Então, esta é a expressão - uma
 
 00:06:02.920 --> 00:06:08.789
-partial derivative of T with respect to Q1
-and this bit here is the partial derivative
+derivada parcial de T com relação a Q1 e
+este pedaço aqui é a derivada parcial
 
 00:06:08.789 --> 00:06:14.319
-of the rotation matrix with respect to Q1.
-Let us consider first the translational part.
+da matriz de rotação com relação a Q1.
+Vamos considerar primeiro a parte translacional
 
 00:06:14.319 --> 00:06:19.370
-Here is the partial derivative of the robot’s
-end-effector position with respect to Q1.
+Aqui é a derivada parcial da posição do 
+efetuador do robô em relação a Q1. 
 
 00:06:19.370 --> 00:06:24.660
-And, if I multiply that by the rate of change
-of Q1 with respect to time, I end up with
+E, se eu multiplicar pela taxa de variação 
+de Q1 em relação ao tempo, acabo com
 
 00:06:24.660 --> 00:06:31.009
-the rate of change of translation with respect
-to time, which is in fact is the end-effector’s
+a taxa de variação da translação em relação
+ao tempo, que é, de fato a velocidade de translação
 
 00:06:31.009 --> 00:06:35.789
-translational velocity. That is x-dot, y-dot
-and z-dot which I might also write sometimes
+do efetuador. Isso é x ponto, y ponto e z ponto 
+que eu posso também escrever às vezes
 
 00:06:35.789 --> 00:06:43.370
-as Vx, Vy or Vz. I can rearrange this expression
-and we have an expression for the end-effector
+como Vx, V you Vz. Eu posso rearranjar esta expressão 
+e temos uma expressão para a velocidade do efetuador
 
 00:06:43.370 --> 00:06:49.180
-velocity in terms of a constant vector multiplied
-by the velocity of joint one.
+em termos de um vetor constante multiplicado 
+pela velocidade da articulação 1. 
 
 00:06:49.180 --> 00:06:52.880
-You notice that there is an approximation
-sign in here. It is important to remember
+Você notou que há um sinal de aproximação
+aqui. É importante lembrar
 
 00:06:52.880 --> 00:06:58.100
-that we have computed a finite difference
-here. It is an approximation to the true derivative.
+que calculamos uma diferença finita aqui. 
+É uma aproximação para a derivada verdadeira.
 
 00:06:58.100 --> 00:07:04.289
-We used a change in joint angle of 0.01 radians.
-And, as we make that change in joint angle
+Usamos uma variação no ângulo da junta de 0,01 radianos.
+E, conforme fazemos essa variação no ângulo da junta
 
 00:07:04.289 --> 00:07:08.960
-smaller and smaller, we will get a better
-approximation to the true derivative. But,
+cada vez menor, obtemos uma melhor 
+aproximação para derivada verdadeira. Mas,
 
 00:07:08.960 --> 00:07:13.860
-if we make it too small, we will encounter
-numerical errors because of the way arithmetic
+se o tornar muito pequeno, encontraremos erros
+numéricos por causa da forma aritmética.
 
 00:07:13.860 --> 00:07:18.979
-is done inside a digital computer and we need
-to find some sort of balance. So, keep in
+é feita dentro de um computador digital e precisamos
+encontrar algum tipo de equilíbrio. Portanto, tenha em
 
 00:07:18.979 --> 00:07:24.319
-mind that what we have done here is an approximation
-to the true relationship.
+mente que fizemos aqui é uma aproximação
+do relacionamento verdadeiro
 
 00:07:24.319 --> 00:07:28.520
-We have related end-effector translational
-velocity to rate of change of Q1 and we can
+Relacionamos a velocidade de translação do 
+efetuador à taxa de variação de Q1 e podemos
 
 00:07:28.520 --> 00:07:33.699
-do this for joint two and for joint three
-all the way up to joint six. Find the expressions
+fazer isto para a articulação dois e articulação três 
+até a articulação seis. Encontre as expressões
 
 00:07:33.699 --> 00:07:37.530
-that relate joint velocity to end-effector
-translational velocity.
+que relacionam a velocidade da articulação
+à velocidade de translação do efetuador.
 
 00:07:37.530 --> 00:07:41.880
-Let us now consider the rotational part. And,
-this is not quite as straightforward. Here,
+Agora vamos considerar a parte rotacional.
+E, isto não é tão simples. Aqui,
 
 00:07:41.880 --> 00:07:47.860
-I have written the partial derivative of a
-rotation matrix with respect to joint angle
+escrevi a derivada parcial de uma matriz de
+rotação com relação ao ângulo da articulação
 
 00:07:47.860 --> 00:07:52.920
-one. And, if I multiply that by the rate of
-change of joint one with respect to time,
+um. E, se eu multiplicar isso pela taxa de 
+variação da articulação um em relação ao tempo,
 
 00:07:52.920 --> 00:07:59.100
-I end up with the rate of change of the rotation
-matrix with respect to time. There is a well-known
+acabo com a taxa de variação da matriz de rotação
+em relação ao tempo. Há uma bem conhecida
 
 00:07:59.100 --> 00:08:03.419
-relationship between the rate of change of
-the rotation matrix, the angular velocity
+relação entre a taxa de variação da
+matriz de rotação, a velocidade angular
 
 00:08:03.419 --> 00:08:09.099
-omega and the rotation matrix itself. And,
-we can substitute that in here. The matrix
+ômega e a própria matriz de rotação. E,
+podemos substituir isso aqui. A matriz
 
 00:08:09.099 --> 00:08:14.240
-S is what we called a skew symmetric matrix
-and it is a function of the angular velocity
+S é que chamamos de matriz simétrica de
+inclinação e é uma função do vetor de velocidade
 
 00:08:14.240 --> 00:08:14.669
-vector omega.
+angular ômega.
 
