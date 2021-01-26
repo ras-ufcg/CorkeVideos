@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.500 --> 00:00:08.710
 Consideremos agora o importante e bastante
@@ -73,7 +73,7 @@ para o conjunto final de ângulos das juntas em 50
 passos, por um ponto e vírgula no final para que 
 
 00:02:03.840 --> 00:02:10.940
-não seja mostrado. O resultado será um matrix 50 
+não seja mostrado. O resultado será um matriz 50 
 por 6, podemos ver aqui, 50 linhas, uma linha
 
 00:02:10.940 --> 00:02:19.230
@@ -175,5 +175,3 @@ intermediários da trajetória.
 
 00:04:39.210 --> 00:04:41.780
 Na próxima seção, veremos como remediar isso.
-
-
