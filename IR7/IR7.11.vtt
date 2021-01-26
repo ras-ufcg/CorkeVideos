@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:03.520 --> 00:00:08.960
 Vamos reafirmar o problema. Queremos mover
@@ -42,12 +42,12 @@ vamos realizar cinemática inversa. Esse
 caso anterior. Anteriormente nós interpolamos
 
 00:00:58.910 --> 00:01:05.100
-os ângulos das juntas. Nesse caso, vamos, na verdade,
+os ângulos das juntas. Nesse caso vamos, na verdade,
 interpolar a pose cartesiana. Nós vamos
 
 00:01:05.100 --> 00:01:09.969
 continuar de onde nós paramos no exemplo
-anterior. O que nós vamos fazer agora é
+anterior. O que nós vamos fazer agora é o
 
 00:01:09.969 --> 00:01:16.359
 movimento cartesiano interpolado. Eu vou criar
@@ -70,8 +70,8 @@ quatro linhas, quatro colunas e 50 planos. Então,
 nós podemos imaginar como um conjunto de matrizes 4x4
 
 00:01:42.889 --> 00:01:50.209
-Empilhadas uma em cima da outra.
-A dimensão final indica de qual passo em particular estamos falando.
+Empilhadas uma em cima da outra. A dimensão final 
+indica de qual passo em particular estamos falando.
 
 00:01:50.209 --> 00:01:56.829
 Vamos dar uma olhada em todas as linhas e
@@ -82,7 +82,7 @@ a pose inicial. Podemos olhar para a segunda
 pose e para a terceira pose e assim por diante. Agora
 
 00:02:08.369 --> 00:02:16.260
-eu posso, na verdade mudar essa matriz tridimensional
+eu posso, na verdade, mudar essa matriz tridimensional
 na função cinemática inversa. Cinemática inversa
 
 00:02:16.260 --> 00:02:20.940
@@ -95,10 +95,10 @@ junta para cada pose nessa matriz. Então, o
 
 00:02:29.010 --> 00:02:37.000
 resultado agora QS, nós podemos ver que é uma matriz com
-50 linhas e 6 colunas. Está calculada, a
+50 linhas e 6 colunas. Está calculada a
 
 00:02:37.000 --> 00:02:44.670
-cinemática inversa, para cada única pose
+cinemática inversa para cada única pose
 na matriz TS. E nós podemos voltar para a figura
 
 00:02:44.670 --> 00:02:54.030
@@ -151,10 +151,10 @@ todos os conjuntos intermediários de ângulos de juntas,
 
 00:04:02.520 --> 00:04:08.540
 Eu posso determinar a pose do efetuador do
-robô. Se eu traçar a coordenada x do efetuador
+robô. Se eu traçar a coordenada X do efetuador
 
 00:04:08.540 --> 00:04:13.130
-contra a coordenada y, eu posso ver que o
+contra a coordenada Y, eu posso ver que o
 efetuador se moveu em uma perfeita
 
 00:04:13.130 --> 00:04:16.819
@@ -186,9 +186,8 @@ bem similares. Não há muita variação
 
 00:04:49.409 --> 00:04:54.189
 nos ângulos de articulação em função do tempo
-necessário para atingir esse movimento do efetuador
+necessária para atingir esse movimento do efetuador
 
 00:04:54.189 --> 00:04:57.810
 em linha reta versus o movimento do efetuador em
 linha reta.
-
