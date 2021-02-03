@@ -127,128 +127,128 @@ way in which the forward kinematics changes
 as a function of variation of a single joint
 
 00:02:46.910 --> 00:02:49.660
-angle.
-For the six-axis robot, we are going to treat
+junta.
+Para o robô de seis eixos, iremos tratar as
 
 00:02:49.660 --> 00:02:53.840
-the joints individually and we are going to
-start with joint number one. So, the first
+juntas individualmente e iremos começar
+com a junta número um. Então, a primeira
 
 00:02:53.840 --> 00:02:58.260
-thing that we are interested in is, if I adjust
-joint number one, what effect does that have
+coisa em que estamos interessados é, se eu ajustar
+a junta número um, que efeito isso tem na
 
 00:02:58.260 --> 00:03:03.660
-on the translational and angular velocity
-of the end-effector? In the animation on the
+velocidade angular e translacional do efetuador?
+Na animação no lado 
 
 00:03:03.660 --> 00:03:09.030
-right hand side, we can see the end-effector
-pose changing as we make small adjustments
+da mão direita, podemos ver a pose do efetuador
+mudando enquanto fazemos pequenos ajustes
 
 00:03:09.030 --> 00:03:15.310
-to the first joint angle. That is Q1.
-Let us look at how this works for the Puma
+no ângulo da primeira junta. Isso é, Q1.
+Vamos olhar como isso funciona para o robô 
 
 00:03:15.310 --> 00:03:21.500
-560 robot. The first thing I am going to do
-is to load a model of the Puma 560 robot and
+Puma 560. A primeira coisa que irei fazer é
+carregar um modelo do robô Puma 560 e
 
 00:03:21.500 --> 00:03:26.840
-we need to decide what joint angle configuration
-the robot is going to be in. You will notice
+nós precisamos decidir em qual configuração angular
+da junta o robô estará. Você irá notar nesta
 
 00:03:26.840 --> 00:03:33.520
-in the workspace that there are a number of
-variables like Qn, Qr, Qs and Qz and these
+área de trabalho que existe um número de 
+variáveis como Qn, Qr, Qs e Qz, e estas são
 
 00:03:33.520 --> 00:03:38.530
-are just different robot poses.
-The one we are going to use is Qn. That is
+apenas poses diferentes do robô.
+A que nós iremos usar é Qn. Que é 
 
 00:03:38.530 --> 00:03:44.790
-short hand for Q nominal. This is a pose of
-the Puma robot that is somewhat in the middle
+uma abreviação para Q nominal. Essa é uma pose
+do robô Puma que está um pouco no meio da 
 
 00:03:44.790 --> 00:03:49.670
-of its workspace and where it is very dexterous.
-It is able to move nicely in many different
+área de trabalho e onde é bastante hábil.
+É capaz de mover muito bem em várias direções
 
 00:03:49.670 --> 00:03:53.409
-directions.
-Now, we are going to do is to compute the
+diferentes.
+Agora, o que iremos fazer é computar a
 
 00:03:53.409 --> 00:03:59.720
-forward kinematics at that particular pose
-and we use the fkine method to do that. And,
+cinemática direta nesta pose em particular e
+usamos o método fkine para fazer isso. E,
 
 00:03:59.720 --> 00:04:04.159
-here is the end-effector pose expressed as
-a homogeneous transformation matrix. Now,
+aqui está a pose do efetuador expressa em forma
+de uma matriz de transformação homogênea. Agora,
 
 00:04:04.159 --> 00:04:11.239
-what I am going to do is to compute the end-effector
-pose when I slightly disturb the joint angles.
+o que eu irei fazer é computar a pose do efetuador
+quando eu perturbo ligeiramente os ângulos das juntas. 
 
 00:04:11.239 --> 00:04:18.060
-So, it is going to be about the pose Qn. What
-I am going to do is to add a vector to that
+Então, será sobre a pose Qn. O que eu irei
+fazer é adicionar um vetor a isso e o
 
 00:04:18.060 --> 00:04:20.549
-and the first element in the vector is a small
-displacement.
+primeiro elemento no vetor é um pequeno
+deslocamento.
 
 00:04:20.549 --> 00:04:26.170
-Now, I am going to displace joint one. So,
-I am going to add zero to the rest of the
+Agora, eu vou deslocar a junta um. E então, 
+vou adicionar zero para o resto das
 
 00:04:26.170 --> 00:04:32.449
-robot’s joints. What we have now is the
-end-effector pose for a very small change
+juntas do robô. O que temos agora é a pose
+do efetuador para uma pequena mudança
 
 00:04:32.449 --> 00:04:38.500
-in the angle of joint number one. We have
-disturbed joint one by 0.01 radians. And
+no ângulo da junta número um. Nós 
+perturbamos a junta um por 0,01 radianos. E
 
 00:04:38.500 --> 00:04:43.120
-here, we can see that the end-effector pose
-is slightly different.
+aqui, podemos ver que a pose do efetuador
+é ligeiramente diferente.
 
 00:04:43.120 --> 00:04:48.190
-If we summarised the results that we have
-just obtained in MATLAB for the nominal joint
+Se resumirmos os resultados que acabamos de 
+obter no MATLAB para o ângulo da junta 
 
 00:04:48.190 --> 00:04:52.610
-angle given here by the vector Q, this is
-the robot’s end-effector pose expressed
+nominal dado aqui pelo vetor Q, essa é a
+pose do efetuador expressa
 
 00:04:52.610 --> 00:04:59.300
-as a 4 x 4 homogenous transformation matrix.
-We adjusted Q by a very small amount. We adjusted
+por uma matriz de transformação homogênea 4 x 4.
+Nós ajustamos Q por um valor muito pequeno. Ajustamos
 
 00:04:59.300 --> 00:05:05.090
-it by 0.01 radians, which is around half
-a degree. When we did that, we obtained a
+em 0,01 radianos, que é cerca de meio grau. 
+Quando fizemos isso, obtemos um
 
 00:05:05.090 --> 00:05:10.509
-slightly different value for the robot’s
-end-effector pose. We can see that the numbers
+valor ligeiramente diferente para a pose do 
+efetuador do robô. Podemos ver que os números
 
 00:05:10.509 --> 00:05:14.729
-in those two matrices are not exactly the
-same and that is, of course, what we expect
+nas duas matrizes não são exatamente os 
+mesmos e isso é, claro, o que esperamos 
 
 00:05:14.729 --> 00:05:19.180
-because we have changed one of the joint angles.
-The challenge now is to understand how this
+porque mudamos um dos ângulos da junta.
+O desafio agora é entender como essa
 
 00:05:19.180 --> 00:05:22.910
-change is related to the change in the joint
-angle.
+mudança está relacionada à mudança no 
+ângulo da junta.
 
 00:05:22.910 --> 00:05:26.880
-We are now going to use the expression we
-introduced a moment ago which relates the
+Agora, vamos usar a expressão que nós 
+introduzimos há pouco, que relaciona a
 
 00:05:26.880 --> 00:05:32.169
 derivada de uma função para uma diferença finita
