@@ -1,95 +1,93 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.399 --> 00:00:08.870
-Let’s do a quick introduction to skew symmetric
-matrices. These matrices are sometimes called
+Vamos fazer uma breve introdução às matrizes de simetria
+oblíqua. Essas matrizes às vezes são chamadas de
 
 00:00:08.870 --> 00:00:13.160
-anti-symmetric matrices and they have this
-interesting property that the transpose is
+matrizes antissimétricas e elas têm essa
+propriedade interessante em que sua transposta é
 
 00:00:13.160 --> 00:00:18.410
-equal to the negative of the original matrix.
-These matrices are always singular. Their
+igual à oposta da matriz original.
+Essas matrizes são sempre singulares. Sua
 
 00:00:18.410 --> 00:00:23.650
-determinant is always equal to zero.
-Any matrix is the sum of a symmetric matrix
+determinante sempre é igual a zero.
+Toda matriz é a soma de uma matriz simétrica
 
 00:00:23.650 --> 00:00:30.099
-and a skew symmetric matrix. In three dimensions,
-we can write the skew symmetric matrix which
+com uma antissimétrica. Em três dimensões,
+podemos expressar uma matriz antissimétrica que
 
 00:00:30.099 --> 00:00:35.300
-is a function of a three element vector in
-this fashion. So, we have a vector whose elements
+é a função de um vetor de três elementos com este
+aspecto. Então, temos um vetor cujos elementos
 
 00:00:35.300 --> 00:00:40.460
-are X, Y, and Z. The skew symmetric matrix
-looks like this. The obvious features are
+são X, Y e Z. A matriz antissimétrica
+tem essa aparência. A característica óbvia
 
 00:00:40.460 --> 00:00:45.320
-a diagonal of zeros. There are two X's in
-there. Two Y's and two Z's. One of them has
+é a diagonal de zeros. Há dois X's alí.
+Dois Y's e dois Z's. Um deles tem
 
 00:00:45.320 --> 00:00:49.170
-a positive sign and one of them has a negative
-sign.
+um sinal positivo e um deles tem um sinal negativo.
 
 00:00:49.170 --> 00:00:54.510
-We can also write a vector cross product as
-a matrix vector product. One of the matrices
+Também podemos expressar um produto vetorial
+como um produto matriz-vetor. Uma das matrizes
 
 00:00:54.510 --> 00:00:58.410
-is a skew symmetric matrix computed from the
-first vector.
+é uma matriz antissimétrica calculada do
+primeiro vetor.
 
 00:00:58.410 --> 00:01:02.710
-Here’s a skew symmetric matrix and I am
-going share with you some rules of thumb for
+Aqui está uma matriz antissimétrica e eu irei
+te mostrar algumas dicas indispensáveis para
 
 00:01:02.710 --> 00:01:07.390
-how you work out which elements are where
-when you write this matrix down. To start
+que você compreenda onde fica cada elemento
+quando você expressa essa matriz. De início,
 
 00:01:07.390 --> 00:01:11.970
-with, there is a zero diagonal. So, that’s
-pretty easy. You write three zeros down the
+temos uma diagonal de zeros. Daí, é
+bem fácil. Você escreve três zeros diagonal
 
 00:01:11.970 --> 00:01:15.000
-diagonal.
-There is also what I think of as an exclusion
+abaixo.
+Também existe o que eu penso ser uma regra de
 
 00:01:15.000 --> 00:01:21.920
-rule. So, in row X and in column Y, that element
-will not be an extra Y. It will be the other
+exclusão. Ou seja, na linha X e na coluna Y, esse
+elemento não será um Y extra. Ele será a outra
 
 00:01:21.920 --> 00:01:26.740
-thing. And in this case, it will be a Z.
-If we consider a cyclic rotation sequence.
+coisa. E nesse caso, ele será um Z.
+Se considerarmos uma sequência de rotação cíclica.
 
 00:01:26.740 --> 00:01:33.020
-So, we have an endless sequence - X, Y, Z,
-X, Y, Z and so on. If I consider the element
+Portanto, teremos uma sequência infinita - X, Y, Z,
+X, Y, Z e por aí vai. Se considerarmos o elemento
 
 00:01:33.020 --> 00:01:40.020
-in column Y and in row X, moving from Y to
-X, it is going backwards in that cyclic rotation
+na coluna Y e na linha X, saindo de Y para
+X, ele está voltando nessa sequência de rotação
 
 00:01:40.020 --> 00:01:44.010
-sequence. Because we are going backwards in
-the sequence, I am going to put a minus sign
+cíclica. Pelo fato de estarmos voltando na
+sequência, irei colocar um sinal negativo
 
 00:01:44.010 --> 00:01:48.090
-on that particular element.
-If we look at this one over here, we are going
+nesse elemento específico.
+Se olharmos para esse outro aqui, estamos indo
 
 00:01:48.090 --> 00:01:53.909
-from Z to X. And, that’s a forward in the
-cyclic rotation sequence. So, we give this
+de Z para X. Portanto, esse é um avanço na
+sequência de rotação cíclica. Daí colocamos
 
 00:01:53.909 --> 00:01:55.140
-element a positive sign.
-
+um sinal positivo nesse elemento.
