@@ -1,87 +1,86 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:07.160 --> 00:00:12.680
-In the last lecture, we talked about the relationship
-between the velocity of a robot's joints and
+Na última aula, nós falamos sobre a relação
+entre a velocidade de um robô e 
 
 00:00:12.680 --> 00:00:18.940
-the velocity of the robot end-effector, the
-rate of change of the pose of the robot end-effector.
+a velocidade do efetuador do robô, a taxa de
+variação da pose do efetuador do robô.
 
 00:00:18.940 --> 00:00:24.210
-And, we talked previously about these two
-robotic problems, the forward kinematic problem
+E, nós falamos antes sobre esses dois problemas
+de rôbótica, o problema da cinemática direta
 
 00:00:24.210 --> 00:00:29.670
-and the inverse kinematic problem and then
-we introduced this velocity transform problem.
+e o problema da cinemática inversa e então introduzimos
+esse problema na transformação da velocidade.
 
 00:00:29.670 --> 00:00:34.019
-In our last lecture, we did everything in
-two-dimensional space. This we have seen a
+Na nossa última aula, nós fizemos tudo em
+um espaço bi-dimensional. Isso nós vimos
 
 00:00:34.019 --> 00:00:38.230
-number of times through this course. Things
-are pretty easy in two dimensions. They get
+várias vezes ao longo desse curso. As coisas
+são bem fáceis em duas dimensões. Elas ficam
 
 00:00:38.230 --> 00:00:43.350
-much more complex in three dimensions. In
-this lecture, we are going to do it in three
+bem mais complexas em três dimensões. Nessa
+aula, nós vamos fazer isso em três 
 
 00:00:43.350 --> 00:00:46.670
-dimensions.
-So now, we are going to define what does it
+dimensões.
+Então, agora nós vamos definir o que isso
 
 00:00:46.670 --> 00:00:53.190
-mean, this psi dot, in terms of three-dimensional
-pose changing with time. So, first, we’re
+significa, esse ponto psi, em termos de uma pose
+tridimensional mudando com o tempo. Então, primeiro, vamos
 
 00:00:53.190 --> 00:00:57.880
-going to describe what mathematical object this
-psi dot is and then we’re going to work on
+descrever qual objeto matemático esse ponto psi é
+e então vamos trabalhar na
 
 00:00:57.880 --> 00:01:03.020
-the relationship between joint angle rates
-and pose rate.
+relação entre as taxas de ângulo de articulação
+e a taxa de pose.
 
 00:01:03.020 --> 00:01:08.610
-Now, as we do this, there are some advanced
-concepts and, if you are not particularly
+Agora, enquanto fazemos isso, existem alguns
+conceitos avançados e, se você não é particularmente
 
 00:01:08.610 --> 00:01:13.050
-strong at maths, you don’t have background
-in differential calculus, your not too comfortable
+bom em matemática, você não tem experiência em 
+cálculo diferencial, você não é tão confortável
 
 00:01:13.050 --> 00:01:17.500
-with linear algebra and we've done a bit of
-linear algebra already. We used matrices and
+com álgebra linear e nós já fizemos um pouco de 
+álgebra linear. Nós usamos matrizes e 
 
 00:01:17.500 --> 00:01:22.209
-vectors, but this is going to be perhaps matrix
-and vector used at a more advanced level.
+vetores, mas isso vai ser talvez matrizes e 
+vetores usados em um nível mais avançado.
 
 00:01:22.209 --> 00:01:26.830
-If you are not too comfortable with these
-concepts, you might struggle with this particular
+Se você não está tão confortável com esses
+conceitos, você pode ter dificuldade com essa
 
 00:01:26.830 --> 00:01:30.950
-lecture. So, your options are just to try
-and skim through the lecture, observe the
+aula em especial. Então, suas opções são apenas
+tentar e folhear essa palestra, observar a
 
 00:01:30.950 --> 00:01:35.920
-gist of what I’m trying to say even if you
-don’t get all of the details. Maybe look
+essência do que estou tentando dizer mesmo se
+você não pegar todos os detalhes. Talvez olhar
 
 00:01:35.920 --> 00:01:42.110
-at some, some additional textbooks. Do some
-more reading to get the, the prerequisites
+em alguns, alguns livros didáticos adicionais.
+Faça mais leituras para alcançar os, os pré-requisitos
 
 00:01:42.110 --> 00:01:46.640
-that you are going need to understand that.
-So, just a little bit of a, of a warning before
+que vocÇe irá precisar para entender isso.
+Então, só um pouco de, de avisos antes
 
 00:01:46.640 --> 00:01:48.360
-we get in to the details of it.
-
+de entrarmos nos detalhes.
