@@ -3,132 +3,132 @@ Kind: captions
 Language: pt-BR
 
 00:00:03.750 --> 00:00:08.799
-In the previous lecture, we looked at the
-tooltip velocity for a two-joint robot. The
+Nas lições anteriores, demos uma olhada na tooltip
+de velocidade para o robô de duas juntas.
 
 00:00:08.799 --> 00:00:14.740
-end-effector pose is described by the end-effector
-coordinates x and y, and we came up with expressions
+A pose do efetuador é descrita pelas coordenadas 
+x e y do efetuador e obtemos as expressões para 
 
 00:00:14.740 --> 00:00:19.890
+a taxa de variação da pose do efetuador.
+Essa é a taxa de variação de x e a taxa
 for the rate of change of the end-effector
-pose. That is the rate of change of x and
 
 00:00:19.890 --> 00:00:25.939
-the rate of change of y in terms of the rate
-of change of the robot joint angles. We did
+de variação de y em termos da taxa de variação 
+dos ângulos de junta do robô. Fizemos algo
 
 00:00:25.939 --> 00:00:31.390
-a similar thing for the three-joint robot
-where the end-effector pose is described by
+similar para o robô de três juntas onde a pose
+do efetuador é descrita pelas coordenadas
 
 00:00:31.390 --> 00:00:38.420
-a coordinate x and y, and an orientation angle,
-theta. And, we again described x-dot, y-dot
+x e y, e pelo ângulo de orientação, teta. Além
+disso, mais uma vez descrevemos x-ponto, y-ponto
 
 00:00:38.420 --> 00:00:42.829
-and theta-dot in terms of the rate of change
-of the robot’s joint angles.
+e teta-ponto em termos da taxa de variação dos 
+ângulos de junta do robô.
 
 00:00:42.829 --> 00:00:48.840
-Now, we want to do the same thing for a six-axis
-robot like this Puma 560 robot. We found out
+Agora, queremos fazer o mesmo para um robô seis eixos
+como esse robô Puma 560. Descobrimos que isso
 
 00:00:48.840 --> 00:00:53.579
-that it is very, very difficult to do. The
-necessary differential calculus and algebra
+é muito, muito difícil de se fazer. A necessidade 
+de cálculo diferencial e álgebra nos levará
 
 00:00:53.579 --> 00:00:58.370
-is going to take up pages and pages and pages
-in my notebook. It is a very difficult thing
+a páginas e mais páginas de nosso caderno.
+Isso é bem difícil de se fazer.
 
 00:00:58.370 --> 00:01:02.140
-to do. So, we are going to look at an alternative
-way to crack this problem.
+Assim, nós tomaremos uma abordagem diferente para 
+solucionar esse problema.
 
-00:01:02.140 --> 00:01:07.430
-So, what we want do now is to understand the
-relationship between the velocity of the joints
+00:01:02.140 --> 00:01:07.430]
+Então, o que queremos fazer agora é entender a 
+relação entre velocidade dos ângulos desse
 
 00:01:07.430 --> 00:01:11.860
-of this multi-jointed robot and the velocity
-of the end-effector, which we described in
+robô multi juntas e a velocidade do 
+efetuador, que é descrita em termos da
 
 00:01:11.860 --> 00:01:17.350
-terms of its rate of change of its x, y and
-z coordinates and rate of change of its orientation.
+taxa de variação de suas coordenadas x, y e z,
+e a taxa de variação de sua orientação.
 
 00:01:17.350 --> 00:01:21.820
-If we look at just a single joint, which
-is the approach we are going to use here,
+Se olharmos apenas uma única junta, que será
+a abordagem que iremos utilizar aqui,
 
 00:01:21.820 --> 00:01:25.810
-we can see that as I adjust just the first
-joint of the robot, we can see that the end-effector
+vemos que à medida que eu ajusto a primeira 
+junta do robô, observamos que o efetuador se 
 
 00:01:25.810 --> 00:01:31.670
-moves in an arc. And so, as I adjust joint
-one by a small amount, we see that the x and
+move em um arco. Assim, à medida que ajusto a 
+junta um em uma quantidade pequena, vemos que as 
 
 00:01:31.670 --> 00:01:36.840
-y coordinates of the end-effector change.
-Now, if I adjust the second joint by a small
+coordenadas x e y do efetuador se alteram. 
+Agora, se ajusto a segunda junta em uma pequena
 
 00:01:36.840 --> 00:01:41.860
-amount, we can see that the end-effector changes
-in the vertical or z direction and its orientation
+quantia, podemos ver que o efetuador se desloca 
+na vertical, ou na direção z, e sua orientação 
 
 00:01:41.860 --> 00:01:46.670
-also changes slightly. We can follow exactly
-the same argument for the third joint of the
+também se altera levemente. Podemos seguir esse
+mesmo argumento para a terceira junta do robô,
 
 00:01:46.670 --> 00:01:52.259
-robot, fourth joint of the robot and so on.
-In your first calculus class, you would have
+a quarta e assim em diante. Em sua primeira 
+aula de cálculo, você teria visto essa relação.
 
 00:01:52.259 --> 00:01:58.040
-come across this relationship. We can approximate
-the derivative of a function by taking a finite
+Podemos aproximar a derivada de uma função ao
+tomar uma diferença finita.
 
 00:01:58.040 --> 00:02:04.150
-difference. In this case, we perturb the value
-of x by a small amount, delta x. And, as delta
+Neste caso, pertubamos o valor de x em uma
+quantia pequena, delta x. Assim, à medida que 
 
 00:02:04.150 --> 00:02:10.229
-x gets smaller and smaller in the limit as
-it approaches zero, we have the true derivative.
+delta x fica menor e menor no limite, aproximando-se 
+de zero, temos uma derivada genuína.
 
 00:02:10.229 --> 00:02:15.620
-What we are going to do is to compute an approximate
-derivative of the forward kinematic function.
+O que iremos fazer agora é computar uma derivada
+aproximada da função de cinemática direta.
 
 00:02:15.620 --> 00:02:21.780
-Now, we have introduced previously the forward
-kinematics as a function K and function of
+Agora, nós introduzimos anteriormente a cinemática
+direta como uma função K e função do ângulo
 
 00:02:21.780 --> 00:02:26.190
-the joint angles and it returns the end-effector
-pose. And, you will notice here that I have
+de junta, retornando a posição do efetuador.
+E, você irá notar aqui que utilizei a
 
 00:02:26.190 --> 00:02:31.590
-used the partial derivative notation because
-the kinematic function is a function of a
+notação de derivada parcial, pois a função
+cinemática é função de um vetor Q.
 
 00:02:31.590 --> 00:02:36.849
-vector Q. And, we are going to consider the
-partial derivative with respect to one particular
+Ainda, vamos considerar a derivada parcial em 
+relação a um ângulo de junta em particular.
 
 00:02:36.849 --> 00:02:41.069
-joint angle. So, what we are trying to do
-is to come up with an approximation for the
+Assim, o que estamos tentando fazer é 
+obter uma aproximação para a maneira como
 
 00:02:41.069 --> 00:02:46.910
-way in which the forward kinematics changes
-as a function of variation of a single joint
+a cinemática direta se altera como uma função 
+da variação de um único ângulo de junta.
 
 00:02:46.910 --> 00:02:49.660
-junta.
-Para o robô de seis eixos, iremos tratar as
+Para o robô de seis eixos, nós iremos tratar
 
 00:02:49.660 --> 00:02:53.840
 juntas individualmente e iremos começar
