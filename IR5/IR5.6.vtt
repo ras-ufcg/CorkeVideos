@@ -24,8 +24,8 @@ Se a única força agindo no corpo é a gravidade,
 então podemos usar a aceleração medida
 
 00:00:24.020 --> 00:00:29.710
-no corpo para determinar os ângulos de rolamento
-e lançamento em respeito ao vetor gravidade
+no corpo para determinar os ângulos de roll
+e pitch em respeito ao vetor gravidade
 
 00:00:29.710 --> 00:00:32.230
 ou a direção para baixo
@@ -65,8 +65,7 @@ Ele contém uma plataforma giroestabilizada de
 flutuação livre chamada de elemento estável 
 
 00:01:09.340 --> 00:01:12.350
-e é mostrada aqui pelo sistema de coordenadas
-I.
+e é mostrada aqui pelo sistema de coordenadas I.
 
 00:01:12.350 --> 00:01:17.310
 A plataforma está conectada com o veículo
