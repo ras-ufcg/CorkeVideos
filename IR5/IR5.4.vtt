@@ -30,7 +30,7 @@ têm uma interface serial simples que
 
 00:00:30.970 --> 00:00:33.720
 permite que eles sejam facilmente conectados
-a um micro controlador.
+a um microcontrolador.
 
 00:00:33.720 --> 00:00:39.980
 Logo, com o intuito de determinar a orientação
@@ -139,7 +139,7 @@ E agora nós podemos solucionar para o ângulo de yaw psi
 em termos do ângulo de roll e pitch
 
 00:02:25.720 --> 00:02:28.540
-que nos determinamos das medidas do
+que nós determinamos das medidas do
 acelerômetro.
 
 00:02:28.540 --> 00:02:34.569
@@ -189,7 +189,7 @@ podem confundir os robôs que se baseiam predominantemente
 na medição de campo magnético.
 
 00:03:21.380 --> 00:03:26.569
-Eu gosto bastante dessa velha figurado satélite 
+Eu gosto bastante dessa velha figura o satélite 
 Pioneer 10 que está explorando a extensão
 
 00:03:26.569 --> 00:03:30.819
