@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-br
 
 00:00:05.049 --> 00:00:10.990
 Nesta seção, vamos ver como calcular a derivada
@@ -128,7 +128,7 @@ multiplicado pela matriz de rotação original.
 
 00:02:52.260 --> 00:02:58.330
 Se eu agora multiplicar ambos os lados da expressão
-por d teta d t, essa é a taxa de mudança de teta,
+por "dê" teta "dê" "tê", essa é a taxa de mudança de teta,
 
 00:03:00.280 --> 00:03:02.580
 Posso escrever uma expressão como esta.
