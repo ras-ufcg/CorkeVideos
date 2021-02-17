@@ -8,7 +8,7 @@ o exemplo do meu celular.
 
 00:00:07.120 --> 00:00:11.990
 A primeira coisa que vou fazer é anexar um sistema de coordenadas 
-com a mão direita dele e 
+com a mão direita a ele e 
 
 00:00:11.990 --> 00:00:14.880
 Eu vou ter o eixo z fora da tela. 
@@ -33,7 +33,7 @@ Agora vamos colocar um acelerômetro
 alinhado com os eixos que temos 
 
 00:00:36.960 --> 00:00:37.960
-anexando ao celular.
+anexado ao celular.
 
 00:00:37.960 --> 00:00:43.360
 Assim, um acelerômetro seria na direção XB 
@@ -47,7 +47,7 @@ Celulares modernos, estão cheio
 de sensores inerciais.
 
 00:00:48.180 --> 00:00:53.540
-Eles tinham três acelerômetros, giroscópios 
+Eles tem três acelerômetros, giroscópios 
 e três magnetômetros.
 
 00:00:53.540 --> 00:00:57.739
@@ -62,7 +62,7 @@ Você tem que olhar profundamente na documentação
 para encontrar o quadro de coordenadas
 
 00:01:03.761 --> 00:01:09.049
-Convencionais para o celular,mas para o Iphone 
+Convencionais para o celular, mas para o Iphone 
 como este, a convenção do eixo x é 
 
 00:01:09.049 --> 00:01:14.310
@@ -133,7 +133,7 @@ Vamos considerar agora o problema de determinar
 a orientação do telefone com respeito
 
 00:02:20.650 --> 00:02:22.920
-para um quadro de coordenadas do mundo.
+a um quadro de coordenadas do mundo.
 
 00:02:22.920 --> 00:02:27.080
 O sistema de coordenadas do mundo é mostrado aqui em
@@ -151,8 +151,8 @@ Agora, eu posso escrever uma expressão para a orientação
 do telefone em relação ao sistema de coordenada
 
 00:02:41.730 --> 00:02:46.920
-e eu vou fazer isso em termos de guinada,
-ângulos de arremesso e rolo que são sucessivas
+e eu vou fazer isso em termos dos ângulos de yaw,
+pitch e roll que são sucessivas
 
 00:02:46.920 --> 00:02:52.030
 rotações sobre o eixo z, o eixo y e
@@ -160,7 +160,7 @@ em seguida, o eixo x.
 
 00:02:52.030 --> 00:02:56.740
 Esta é a aceleração gravitacional no
-quadro geral, porque o mundo z-eixo é
+quadro geral, porque o mundo  é
 
 00:02:56.740 --> 00:03:00.560
 paralelo ao vetor aceleração gravitacional.
@@ -170,7 +170,7 @@ Notamos aqui que G é positivo.
 
 00:03:02.640 --> 00:03:07.739
 Nós estamos falando sobre aceleração no sistema
-de coordenadas universal é G no sentido ascendente.
+de coordenadas universal que é G no sentido ascendente.
 
 00:03:07.739 --> 00:03:14.019
 É extremamente simples rotacionar esta aceleração
@@ -208,7 +208,7 @@ Eu tenho uma equação vetorial bem simples
 Se tomarmos a primeira linha nessa equação vetorial.
 
 00:03:43.340 --> 00:03:49.140
-Eu posso reorganizar ela para chegar a uma solução
+Eu posso reorganizá-la para chegar a uma solução
 para o ângulo de rotação theta.
 
 00:03:49.140 --> 00:03:53.760
@@ -238,7 +238,7 @@ três elementos, mas o comprimento é fixo
 portanto, nós podemos defini-lo por apenas dois pedaços de informação.
 
 00:04:20.370 --> 00:04:24.729
-O terceiro elemnto do vetor gravidade é redundante.
+O terceiro elemento do vetor gravidade é redundante.
 
 00:04:24.729 --> 00:04:28.289
 Neste caso, os dois pedaços de informação que
@@ -317,7 +317,7 @@ tipos de aplicações diferentes e são usados
 
 00:05:33.669 --> 00:05:39.129
 para estabilização de uma gama incontável de veículos
-desde brinquedos baratos como este até
+desde brinquedos baratos como este, até
 
 00:05:39.129 --> 00:05:40.580
 sistemas muito mais sofisticados.
