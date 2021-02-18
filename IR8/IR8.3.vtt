@@ -1,14 +1,13 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:04.350 --> 00:00:09.630
-Essa é a relação linear entre a velocidade
-angular da articulação e a velocidade do 
-efetuador que
+Essa é a relação linear entre a velocidade angular 
+da articulação e a velocidade do efetuador que
 
 00:00:09.630 --> 00:00:16.500
-calculamos, momentos atrás. A matriz Jacobiana aqui, 
+calculamos momentos atrás. A matriz Jacobiana aqui, 
 J é uma matriz dois por dois e isso significa
 
 00:00:16.500 --> 00:00:21.610
@@ -20,18 +19,16 @@ nos dizendo é que se eu sei a velocidade que
 eu quero para o efetuador, e se posso computar a 
 
 00:00:27.370 --> 00:00:33.300
-a matriz Jacobiana e depois invertê-la, eu posso
-calcular quais as velocidades do ângulo da junta 
-que preciso para
+a matriz Jacobiana e depois invertê-la, eu posso calcular 
+quais as velocidades do ângulo da junta que preciso para
 
 00:00:33.300 --> 00:00:40.000
 atingir essa velocidade específica para o efetuador. 
 Isso é uma coisa muito poderosa. Não importa
 
 00:00:40.000 --> 00:00:45.690
-qual seja a velocidade do efetuador, sempre posso
-calcular um conjunto de velocidades angulares das
-juntas 
+qual seja a velocidade do efetuador, sempre posso calcular 
+um conjunto de velocidades angulares das juntas 
 
 00:00:45.690 --> 00:00:49.120
 que me dará a velocidade do efetuador. 
@@ -46,14 +43,14 @@ e, como é apenas uma matriz dois por dois,
 
 00:00:59.469 --> 00:01:05.799
 inversa é assim. Há um aspecto um pouco 
-problemático nesse inverso do jacobiano
+problemático nesse inverso do jacobiano,
 
 00:01:05.799 --> 00:01:11.680
-, que é esse termo aqui. Quando o ângulo
+que é esse termo aqui. Quando o ângulo
 da segunda junta, Q2 é igual a zero, o inverso
 
 00:01:11.680 --> 00:01:16.119
-do Jacobiano torna-se infinito Isso pode 
+do Jacobiano torna-se infinito. Isso pode 
 parecer um pouco incomum, mas há uma intuição 
 
 00:01:16.119 --> 00:01:18.649
@@ -80,9 +77,8 @@ um robô de única articulação, que se parece com
 esta. Então este é um robô com apenas um único
 
 00:01:44.149 --> 00:01:49.869
-ângulo de articulação. E, claramente, um robô 
-como esse têm movimentos muito, muito limitados.
-A velocidade do
+ângulo de articulação. E, claramente, um robô como esse 
+têm movimentos muito, muito limitados. A velocidade do
 
 00:01:49.869 --> 00:01:56.409
 efetuador só pode ser paralela a este vetor 
@@ -102,16 +98,15 @@ liberdade. Existe uma direção na área
 
 00:02:12.270 --> 00:02:17.780
 de trabalho cartesiana do robô, na qual 
-é impossível que o efetuador se mova. 
+é impossível que o efetuador se mova
 
 00:02:17.780 --> 00:02:22.930
-Mesmo se o ângulo da articulação não seja 
+mesmo se o ângulo da articulação não seja 
 extamente igual a zero, talvez próximo a zero,
 
 00:02:22.930 --> 00:02:28.310
-ainda teremos problemas nessa direção
-que o robô é capaz de se mover. Então, um 
-robô
+ainda teremos problemas nessa direção que o 
+robô é capaz de se mover. Então, um robô
 
 00:02:28.310 --> 00:02:34.310
 com esse tipo de configuração terá dificuldade
@@ -161,7 +156,7 @@ O número de condição é um escalar que podemos
 computar de qualquer matriz e caso o número
 
 00:03:23.230 --> 00:03:28.980
-de codição seja grande, indica que a matriz esta
+de codição seja grande, indica que a matriz está
 próxima de ser singular, ou seja, seu determinante
 
 00:03:28.980 --> 00:03:34.150
