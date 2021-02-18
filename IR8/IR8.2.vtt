@@ -11,7 +11,7 @@ a velocidade do efetuador. Aqui, temos duas
 animações que mostram um simples robô planar
 
 00:00:15.799 --> 00:00:22.949
-de dois elos. Na esquerda, vemos um exemplo onde
+de douas juntas. Na esquerda, vemos um exemplo onde
 a junta 1 do robô está variando de forma sinusoidal.
 
 00:00:22.949 --> 00:00:28.090
@@ -200,5 +200,5 @@ velocidade, mas não é apenas a velocidade no
 plano. Ela também inclui a velocidade rotacional,
 
 00:04:41.360 --> 00:04:46.660
-o que será bem importante quando falarmos sobre 
+que será bem importante quando falarmos sobre 
 robôs que operam no espaço tridimensional.
