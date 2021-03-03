@@ -184,176 +184,177 @@ result of zero. In this particular case, if
 the robot had 100 joints, then the null space
 
 00:04:02.219 --> 00:04:11.260
-would be of dimension 94. That's 100 minus
-6. So, N would be a 6 x 94 element matrix.
+seria a dimensão 94. Isto é 100 menos
+6. Então, N seria uma matriz de 6 x 94 elementos
 
 00:04:11.260 --> 00:04:16.420
-I'm going to import the model of a redundant
-robot that moves in 3D and that's the model
+Vou importar o modelo de um redundante
+robô que se move em 3D e esse é o modelo
 
 00:04:16.420 --> 00:04:21.940
-hyper 3D. And, I'm going to ask for a robot
-with 20 joints. To illustrate, for example,
+hyper 3D. E, vou pedir um robô
+com 20 articulações. Para ilustrar, por exemplo
 
 00:04:21.940 --> 00:04:26.190
-I need to choose a set of joint angles. I
-need to choose 20 numbers. I know that if
+Preciso escolher um conjunto de ângulos de articulação. eu
+precisa escolher 20 números. Eu sei que se
 
 00:04:26.190 --> 00:04:29.340
-they're all equal to zero, the robot will
-be at a singularity.
+eles são todos iguais a zero, o robô irá
+estar em uma singularidade.
 
 00:04:29.340 --> 00:04:34.370
-So, what I'm going to do is to choose 20 random
-numbers. I'm going to use the MATLAB built-in
+Então, o que vou fazer é escolher 20
+números aleatórios. Vou usar o MATLAB para contruir
 
 00:04:34.370 --> 00:04:39.650
-function rand. So, this is my joint angle
-vector – 20 random numbers in the range
+uma função rand. Então, este é o meu ângulo de articulação,
+um vetor de 20 números aleatórios no intervalo de
 
 00:04:39.650 --> 00:04:46.039
-0 to 1. And, I can plot this particular joint
-angle configuration for a robot and this is
+0 à 1. E eu posso plotar esta configuração de uma 
+articulação em particular para um robô e isto é
 
 00:04:46.039 --> 00:04:50.630
-what it looks like. If I can just have a bit
-of a look around and we can see that it's
+o que parece. Se eu posso ter um bit
+de vizualização ao redor, podemos ver que 
 
 00:04:50.630 --> 00:04:55.139
-pointing slightly upwards and it's got a few
-bends and twists in it.
+a ponta ligeiramente pra cima e tem alguns
+curvas e torções nele.
 
 00:04:55.139 --> 00:05:00.520
-Now that I have the set of joint angles and
-I have a robot model, I can compute a Jacobian
+Agora que tenho o conjunto de ângulos de articulações e
+eu tenho um modelo de robô, posso calcular a matrix
 
 00:05:00.520 --> 00:05:05.830
-matrix. And, we've seen how to do that for
-many other types of robots. I used the Jacobian
+Jacobiana. E vimos como fazer isso para
+muitos outros tipos de robôs. Eu uso o método 
 
 00:05:05.830 --> 00:05:11.430
-method and I pass in the set of joint angles.
-And, this is the Jacobian matrix. We can see
+Jacobiano e eu passo no conjunto de ângulos articulares.
+E, esta é a matrix Jacobiana. Podemos ver
 
 00:05:11.430 --> 00:05:16.250
-that it's got 6 rows and it's got 20 columns
-because there are 20 joints.
+que tem 6 linhas e 20 colunas
+porque existem 20 articulações.
 
 00:05:16.250 --> 00:05:20.639
-If I tried to invert this matrix, I'm going
-to get an error because the matrix is not
+Se eu tentar inverter esta matriz, vou
+obter um erro porque a matriz não é
 
 00:05:20.639 --> 00:05:24.910
-square. MATLAB is telling me I can't do that
-but I can compute the pseudo-inverse. And,
+quadrada. O MATLAB está me dizendo que eu não posso fazer isso
+mas posso calcular o pseudo-inverso. Que
 
 00:05:24.910 --> 00:05:31.000
-that's computed using the MATLAB built-in
-function pinv, and pass in the Jacobian matrix.
+é calculado usando o MATLAB na construção da 
+função pinv e passar na matriz Jacobiana.
 
 00:05:31.000 --> 00:05:36.789
-And, this is the result of the pseudo-inverse.
-And, we can see that we have here in the workspace
+E, este é o resultado da pseudo-inversa.
+E podemos ver o que temos no espaço de trabalho
 
 00:05:36.789 --> 00:05:41.660
-now a 20 x 6 matrix, the pseudo-inverse of
-the Jacobian matrix.
+agora uma matriz 20 x 6, a pseudo-inversa de
+a matriz Jacobiana.
 
 00:05:41.660 --> 00:05:46.889
-Now, we talked about the null space motion.
-And, in order to compute the null space motion,
+Agora, falamos sobre o movimento do espaço nulo.
+E, a fim de calcular o movimento do espaço nulo,
 
 00:05:46.889 --> 00:05:52.749
-we need to compute the null space of the Jacobian
-matrix itself and MATLAB has the function to do that.
+precisamos calcular o espaço nulo da matriz 
+Jacobiano e o MATLAB têm a função de fazer isso.
 
 00:05:52.750 --> 00:05:58.620
-It's the function null and I pass in the Jacobian
-matrix and here is the null space matrix.
+É a função nula, aqui a matriz 
+Jacobiano e aqui está a matriz de espaço nulo.
 
 00:05:58.620 --> 00:06:04.669
-The null space matrix has 20 rows and only
-14 columns. 14 comes from 20, which is the
+A matriz de espaço nulo tem 20 linhas e apenas
+14 colunas. 14 vem de 20, que é o
 
 00:06:04.669 --> 00:06:09.879
-number of columns in the original Jacobian
-minus 6. And 6 is the rank of that original
+número de colunas  na matriz original 
+menos 6. E 6 é a classificação da matriz
 
 00:06:09.879 --> 00:06:15.520
-Jacobian. That's the number of unique columns
-in the Jacobian matrix. So, there were 6 unique
+Jacobiana. Esse é o número de colunas na matriz Jacobiana. 
+Então, havia 6 únicas
 
 00:06:15.520 --> 00:06:21.699
-columns and there were 14 columns that exist
-in the null space of that Jacobian. 14 plus
+colunas e 14 colunas que existe
+no espaço nulo daquela matriz. 14 mais
 
 00:06:21.699 --> 00:06:25.610
-6 equals 20, the original number of columns.
+6 é igual a 20, o número original de colunas.
 
 00:06:25.610 --> 00:06:29.400
-Let's summarize some of the different shapes
-that a robot Jacobian matrix can have. For
+Vamos resumir algumas das diferentes formas
+que uma matriz Jacobiana pode ter. Para
 
 00:06:29.400 --> 00:06:33.780
-the case of a robot with 6 joints, we say
-that the robot is fully actuated. The Jacobian
+o caso de um robô com 6 articulações, dizemos
+que o robô está totalmente acionado. A matriz
 
 00:06:33.780 --> 00:06:39.270
-will be a square 6 x 6 matrix. And a robot
-with 6 joints is able to fully access all
+Jacobinana será quadrada 6 x 6. E um robô
+com 6 juntas é capaz de acessar totalmente 
 
 00:06:39.270 --> 00:06:44.210
-poses within SE3.
-That means, any position and any arbitrary
+as posições dentro de SE3.
+Isso significa que em qualquer posição e qualquer
 
 00:06:44.210 --> 00:06:50.090
-orientation. For the case of a robot with
-less than 6 joints, which we refer to as an
+orientação. Para o caso de um robô com
+menos de 6 juntas, que chamamos de
 
 00:06:50.090 --> 00:06:56.990
-under-actuated robot, the Jacobian will be a 6 x N matrix. It will have more rows than it has columns.
+robô sub-atuado,a matriz Jacobiana será 6 x N. 
+Ele terá mais linhas do que colunas.
 
 00:06:56.990 --> 00:07:02.460
-This means that the robot cannot access all
-possible poses within a SE3. And, in order
+Isso significa que o robô não pode acessar todos
+possíveis poses dentro de um SE3. E, em ordem
 
 00:07:02.470 --> 00:07:07.509
-to use the Jacobian for control purposes,
-we need to square it up and we do that by
+usar a matriz para fins de controle,
+precisamos corrigir isso e fazemos isso 
 
 00:07:07.509 --> 00:07:12.509
-removing some spatial degrees of freedom.
-We eliminate some rows in the Jacobian matrix
+removendo alguns graus de liberdade espaciais.
+Eliminamos algumas linhas na matriz Jacobiana
 
 00:07:12.509 --> 00:07:19.210
-so that it becomes a 5 x 5 or 4 x 4 Jacobian
-matrix which is then invertible. In the case
+para que se torne uma matriz 5 x 5 ou 4 x 4  
+que é então invertível. Dentro do estojo
 
 00:07:19.210 --> 00:07:24.550
-of a robot with more than 6 joints, which
-we refer to as an over actuated robot, the
+de um robô com mais de 6 articulações, que
+nós nos referimos como um robô super acionado, a
 
 00:07:24.550 --> 00:07:29.819
-Jacobian matrix has more columns than it has
-rows. It's a 6 x N matrix.
+matriz jacobiana tem mais colunas do que tem
+linhas. É uma matriz 6 x N.
 
 00:07:29.819 --> 00:07:34.930
-In order to use the Jacobian matrix for control
-purposes, we take its pseudo-inverse. The
+Para usar a matriz Jacobiana para controle,
+tomamos seu pseudo-inverso. A
 
 00:07:34.930 --> 00:07:39.190
-great advantage of a robot like this is that
-we can think about having spare joints and
+grande vantagem de um robô como este é que
+podemos pensar em ter juntas sobressalentes e
 
 00:07:39.190 --> 00:07:43.629
-we can use some of these spare joints to do
-what we call null space motion. And, while
+podemos usar algumas dessas juntas sobressalentes para fazer
+o que chamamos de movimento de espaço nulo. E enquanto
 
 00:07:43.629 --> 00:07:47.780
-we hold the ineffective pose constant, we
-can adjust all of the joints to change the
+mantemos a pose ineficaz constante, nós
+podemos ajustar todas as juntas para mudar o
 
 00:07:47.780 --> 00:07:51.619
-shape of the arm or move the joints away from
-motion limits.
+formato do braço ou afaste as articulações
+limites de movimento.
 
