@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-br
 
 00:00:03.340 --> 00:00:08.260
 Nós vamos voltar e considerar a parte
@@ -8,7 +8,7 @@ rotacional dessa matriz derivada.
 
 00:00:08.260 --> 00:00:12.519
 Nós vamos reorganizar sua expressão e
-isolar a matriz assimétrica. Isso quer dizer
+isolar a matriz anti-simétrica. Isso quer dizer
 
 00:00:12.519 --> 00:00:17.769
 que temos que levar a matriz de rotação para
@@ -19,12 +19,10 @@ que calcular sua inversa mas, sabemos que para uma matriz
 de rotação sua inversa é igual a sua transposta.
 
 00:00:23.270 --> 00:00:28.730
-Então agora temos uma matriz assimétrica em
+Então agora temos uma matriz anti-simétrica em
 termos da derivada da matriz de rotação
 
 00:00:28.730 --> 00:00:34.930
-with respect to Q1 and that's the approximation
-that we've got highlighted here in red. The
 em relação a Q1 e essa é a aproximação
 que temos destacado aqui em vermelho. A
 
@@ -33,15 +31,16 @@ matriz de rotação transposta e a taxa de
 mudança do ângulo de junta do robô. Nós podemos
 
 00:00:39.399 --> 00:00:45.059
-calcular isso numericamente e acabar com essa matriz que deve ser uma matriz assimétrica.
+calcular isso numericamente e acabar com essa
+matriz que deve ser uma matriz anti-simétrica.
 
 00:00:45.060 --> 00:00:49.460
 Vamos dar uma olhada nisso com mais detalhes.
-Sabemos que uma matriz assimétrica tem
+Sabemos que uma matriz anti-simétrica tem
 
 00:00:49.460 --> 00:00:54.700
 uma forma parecida com isso então vamos checar
-se realmente é uma matriz assimétrica e
+se realmente é uma matriz anti-simétrica e
 
 00:00:54.700 --> 00:00:57.789
 e se for, quais os valores de sua velocidade
@@ -57,7 +56,7 @@ muito muito perto de zero, e lembrem-se que isso
 
 00:01:07.039 --> 00:01:12.200
 que isso são zeros na diagonal.
-Parece uma matriz assimétrica
+Parece uma matriz anti-simétrica
 
 00:01:12.200 --> 00:01:17.329
 para mim. Vamos olhar os elementos que correspondem
@@ -65,33 +64,33 @@ a Omega X. Nesse caso ambos são zero
 
 00:01:17.329 --> 00:01:23.240
 assim, podemos escrever que Omega X é aproximadamente
-igual a zero vezes Q1dot. Vamos olhar para
+igual a zero vezes Q1ponto. Vamos olhar para
 
 00:01:23.240 --> 00:01:27.880
 os elementos de Omega Y e são ambos iguais
 a zero logo, posso dizer feliz que Omega
 
 00:01:27.880 --> 00:01:30.409
-Y é aproximadamente igual a zero vezes Q1dot.
+Y é aproximadamente igual a zero vezes Q1ponto.
 
 00:01:30.409 --> 00:01:36.169
 Vamos agora olhar para Omega Z e é bem 
 visível que Omega Z é aproximadamente
 
 00:01:36.169 --> 00:01:42.689
-igual a 1 vezes Q1dot. Então, o que temos feito
-é combinar os elementos em uma matriz assimétrica
+igual a 1 vezes Q1ponto. Então, o que temos feito
+é combinar os elementos em uma matriz anti-simétrica
 
 00:01:42.689 --> 00:01:48.139
 exata, aproximamos uma matriz
-assimétrica e escrevemos as relações entre
+anti-simétrica e escrevemos as relações entre
 
 00:01:48.139 --> 00:01:54.819
 os componentes da velocidade angular do robô
 efetuador e a taxa de mudança do primeiro
 
 00:01:54.819 --> 00:01:56.399
-ângulo de junta qu é Q1dot.
+ângulo de junta que é Q1ponto.
 
 00:01:56.399 --> 00:02:02.429
 Assim agora posso escrever em forma de matriz
@@ -103,113 +102,113 @@ para a velocidade de transição do efetuador do
 
 00:02:06.919 --> 00:02:11.969
 robô. E eu posso combinar as duas empilhando
-os dois vetores e trazendo o
+os dois vetores e deixando o
 
 00:02:11.969 --> 00:02:13.909
-out the common term Q1dot.
+fator comum, Q1ponto, em evidência.
 
 00:02:13.909 --> 00:02:18.860
-And I now have this relationship between the
-spatial velocity of the robot's end-effector
+E agora eu tenho esta relação especial entre a
+velocidade espacial do efetuador do robô
 
 00:02:18.860 --> 00:02:23.650
-and the velocity of the robot's first joint
-angle. So here's the expression that we just
+e a velocidade de seu primeiro ângulo de
+junta. Então, aqui está a expressão que acabamos
 
 00:02:23.650 --> 00:02:30.110
-computed and we can do the same thing for
-joint 2 and joint 3 all the way up to joint 6.
+de encontrar e podemos fazer a mesma coisa para
+a junta 2 e a junta 3, assim até a junta 6.
 
 00:02:30.300 --> 00:02:35.379
-You'll notice that the numbers in the vectors
-at the top and the columns of the matrix are
+Perceba que os números nos vetores
+de cima e as colunas da matriz são
 
 00:02:35.379 --> 00:02:40.510
-slightly different and that's because the
-vectors at the top are an approximation to
+um pouco diferentes, e isso se dá devido aos
+vetores de cima serem aproximações da
 
 00:02:40.510 --> 00:02:43.989
-the true derivative while the columns with
-the matrix are the true derivative. Here's
+verdadeira derivada, enquanto as colunas da
+matriz são a verdadeira derivada. Aqui está
 
 00:02:43.989 --> 00:02:49.379
-the matrix again and it relates the spatial
-velocity to the robot's joint velocity by
+a matriz novamente e ela relaciona a velocidade
+espacial com a velocidade da junta do robô por
 
 00:02:49.379 --> 00:02:54.769
-this matrix in the middle which is another
-instance of a Jacobian matrix. It's a 6 x 6
+esta matriz no meio, que é outra instância
+da matriz Jacobiana. É uma matriz
 
 00:02:54.769 --> 00:03:00.319
-matrix and it’s referred to as the manipulator
-Jacobian matrix. We can write this expression
+6 x 6 e é chamada de matriz Jacobiana
+manipuladora. Podemos escrever essa expressão
 
 00:03:00.319 --> 00:03:01.900
-much more succinctly.
+de forma bem mais sucinta.
 
 00:03:01.900 --> 00:03:06.900
-We use the Greek letter ‘nu’ as we have done
-previously to represent spatial velocity and
+Usamos a letra grega ‘nu’ como fizemos anteriormente
+para representar a velocidade espacial e
 
 00:03:06.900 --> 00:03:12.859
-we represent joint velocity by Qdot. I've
-used capital J to represent the manipulator
+representamos a velocidade de junta por Qponto.
+Eu usei J maiúsculo para representa a Jacobiana
 
 00:03:12.859 --> 00:03:18.269
-Jacobian and I've indicated that it is a function
-of Q. The elements of the Jacobian matrix
+manipuladora e indiquei que ela é uma função
+de Q. Os elementos da matriz Jacobiana
 
 00:03:18.269 --> 00:03:21.170
-depend on the joint angles.
+dependem dos ângulos de junta.
 
 00:03:21.170 --> 00:03:26.980
-Now we're going to compute the exact Jacobian
-for the Puma 560 robot and I've already loaded
+Agora, nós vamos calcular a Jacobiana exata
+do robô Puma 560 e eu já carreguei um
 
 00:03:26.980 --> 00:03:31.459
-a model of the robot into my workspace. I'm
-going to put the Jacobian into the workspace
+modelo do robô na minha área de trabalho. Eu
+vou colocar a Jacobiana na minha área de trabalho
 
 00:03:31.459 --> 00:03:37.999
-for variable J and my robot object is called
-P560 and the method that I'm going to invoke
+como a variável J e o objeto do meu robô é
+chamado P560 e o método que irei chamar
 
 00:03:37.999 --> 00:03:43.549
-is called Jacobian and the only argument that
-I've passed in is the set of joint angles.
+é chamado Jacobiana e o único argumento que
+passei nele é o conjunto de ângulos de junta.
 
 00:03:43.549 --> 00:03:48.499
-And here is the Jacobian matrix and that's
-being computed for the set of joint angles
+E aqui está a matriz Jacobiana e ela está sendo
+calculada para o conjunto de ângulos de junta
 
 00:03:48.499 --> 00:03:54.450
-QN and this is what it looks like in radians
-and this is a robot configuration a set of
+QN e isto é o conteúdo dele em radianos
+e essa é uma configuração do robô de um conjunto
 
 00:03:54.450 --> 00:04:00.200
-robot joint angles that puts the robot’s end-effector
-somewhere in the middle of its useful workspace.
+de ângulos de junta que colocam seu efetuador em
+algum lugar no meio de sua área de trabalho útil.
 
 00:04:00.200 --> 00:04:05.999
-A useful way to think about the Jacobian matrix
-is in terms of what the individual columns
+Uma boa forma de se pensar sobre a matriz Jacobiana
+é em termos do que suas colunas individualmente
 
 00:04:05.999 --> 00:04:11.519
-mean. The first column of the Jacobian matrix
-multiplied by the rate of change of the first
+significam. A primeira coluna da matriz
+multiplicada pela taxa de variação da primeira
 
 00:04:11.519 --> 00:04:16.400
-joint gives me a contribution to the end-effector’s
-spatial velocity.
+junta me dá uma componente da velocidade
+espacial do efetuador.
 
 00:04:16.400 --> 00:04:22.550
-And this column gives me a component of end-effector
-velocity due to Q2. This is the component
+E esta coluna me dá uma componente da velocidade
+do efetuador devido a Q2. Esta é a componente
 
 00:04:22.550 --> 00:04:31.590
-due to Q3, Q4, Q5 and Q6. And we add the components
-due to each of these joints to get the sum
+devido a Q3, Q4, Q5 e Q6. E nós somamos as componentes
+relacionadas a cada junta para conseguir a soma
 
 00:04:31.590 --> 00:04:34.290
-total end-effector spatial velocity.
+total da velocidade espacial do efetuador.
 
