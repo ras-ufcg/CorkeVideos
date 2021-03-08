@@ -3,157 +3,156 @@ Kind: captions
 Language: en-GB
 
 00:00:03.540 --> 00:00:07.270
-There is a lot of really rich information
-in the Jacobian matrix and we can use it as
+Existe muitas informações ricas em uma matriz
+Jacobiana e podemos utilizá-la como uma
 
 00:00:07.270 --> 00:00:13.950
-a sort of diagnostic tool to work at how well the robot can move at a particular joint angle configuration.
+espécie de ferramenta de diagnóstico para trabalhar em o quão
+bem o robô pode mover em uma configuração de juntas particular.
 
 00:00:14.240 --> 00:00:18.760
-Let us look in more detail at the case where
-the Jacobian matrix is singular and this is
+Vamos avaliar em mais detalhes o caso em que
+a matriz Jacobiana é singular e isto é como
 
 00:00:18.770 --> 00:00:24.060
-what the Jacobian matrix looks like for a
-robot in the pose shown here, where joint
+essa matriz se parece, para um robô com a 
+pose mostrada aqui, onde o ângulo de junta
 
 00:00:24.060 --> 00:00:29.360
-angle five is equal to zero. The motion of
-the end-effector due to joint four is given
+cinco é igual a zero. O movimento do efetuador
+devido à junta quatro é dado por essa coluna
 
 00:00:29.360 --> 00:00:34.660
-by this column of the Jacobian matrix and
-the motion of the end-effector due to joint
+da matriz Jacobiana e o movimento do 
+efetuador devido à junta seis
 
 00:00:34.660 --> 00:00:38.280
-six is given by this column of the Jacobian
-matrix.
+é dado por essa coluna da matriz Jacobiana.
 
 00:00:38.280 --> 00:00:43.650
-You will notice that these two columns are
-identical and that means that they result
+Você notará que essas duas colunas são idênticas 
+e isso significa que elas resultam
 
 00:00:43.650 --> 00:00:48.800
-in the same end-effector motion and in this
-particular case it is rotation about the world
+no mesmo movimento do efetuador e neste caso 
+particular, é uma rotação entorno do eixo Z.
 
 00:00:48.800 --> 00:00:56.230
-Z axis. We can get the same motion by changing
-joint four or by changing joint six.
+Nos podemos obter o mesmo movimento ao mudar
+a junta quatro ou mudar a junta seis.
 
 00:00:56.230 --> 00:01:01.810
-For a square matrix, if two columns are identical,
-then it becomes singular; and a mathematician
+Para uma matriz quadrada, se as duas colunas forem
+idênticas, então ela se torna singular; Um matemático
 
 00:01:01.810 --> 00:01:08.050
-would say that the rank of the matrix has
-reduced from full rank, rank six, to a rank of five.
+diria que o rank da matriz teria reduzido de um 
+rank completo, rank seis, para um rank cinco.
 
 00:01:08.540 --> 00:01:13.660
-Here is that same Jacobian matrix in MATLAB
-and we can clearly see that columns four and
+Aqui está aquela mesma matriz Jacobiana no MATLAB
+e podemos ver claramente que as colunas quatro
 
 00:01:13.670 --> 00:01:19.040
-column six are identical. If we compute the
-determinate of the matrix, we see that it
+e seis são idênticas. Se computarmos o determinante
+dessa matriz, vêmos que ele é igual a zero;
 
 00:01:19.040 --> 00:01:24.040
-is equal to zero; it means that this Jacobian
-is singular. If I compute the rank of this
+Isso significa que a matriz Jacobiana é singular.
+Se eu computar o rank dessa matriz, será igual 
 
 00:01:24.040 --> 00:01:29.540
-matrix, it is equal to five and that’s saying
-that there are only five unique columns in
+a cinco, o que significa que existem 
+apenas cinco colunas na matriz.
 
 00:01:29.540 --> 00:01:32.960
-this matrix. Two of the columns are identically
-equal.
+Duas dessas colunas são idênticas.
 
 00:01:32.960 --> 00:01:38.200
-Let us look now at a more healthy Jacobian
-matrix. We are going to compute the Jacobian
+Analisemos agora uma matrix Jacobiana mais saudável.
+Iremos computar o Jacobiano para o ângulo de junta
 
 00:01:38.200 --> 00:01:45.720
-for the set joint angle Qn. This matrix has
-no obvious duplicated columns. Its determinant
+definido, Qn. Essa matriz possui nenhuma coluna
+evidentemente duplicada. Seu determinante
 
 00:01:45.720 --> 00:01:52.940
-is not equal to zero and its rank is equal
-to six. That means that all six columns are unique.
+é diferente de zero e seu rank é igual a seis.
+Isso significa que todas as seis colunas são únicas.
 
 00:01:54.040 --> 00:01:58.940
-In the last lecture, we introduced the concept
-of the velocity ellipse and we did this in
+Em nossa última aula, introduzimos o conceito 
+de elipse de velocidade e fizemos isso em 
 
 00:01:58.950 --> 00:02:04.640
-two dimensions. For a set of joint angles
-which lie on a circle in the plane of all
+duas dimensões. Para um conjunto de ângulos 
+de junta, contidos pelo círculo no plano de 
 
 00:02:04.640 --> 00:02:11.159
-possible joint angle velocities, we mapped
-that into an ellipse in the space of all possible
+todas as possíveis velocidades dos ângulos de junta, 
+nós mapeamos isso em uma elipse no espaço de todas
 
 00:02:11.159 --> 00:02:16.950
-end-effector velocities and that indicated
-that in a particular robot joint angle configuration,
+as possíveis velocidades do efetuador e isso indicou
+que, em uma determinada configuração de ângulos,
 
 00:02:16.950 --> 00:02:21.450
-the robot was able to move more quickly in
-the world Y direction than it could move in
+o robô foi capaz de mover mais rapidamente na
+direção do mundo Y do que foi capaz de mover
 
 00:02:21.450 --> 00:02:26.560
-the world X direction. We can do the same
-thing for a six-axis robot, but the mathematics
+na direção do mundo X. Podemos fazer o mesmo para
+o robô de seis eixos, porém a matemática
 
 00:02:26.560 --> 00:02:29.040
-is a little bit more complex.
+é um pouco mais complexa.
 
 00:02:29.040 --> 00:02:33.760
-We have this relationship between the robot
-end-effector spatial velocity and the joint
+Temos essa relação entre a velocidade espacial
+do efetuador do robô e a velocidade do ângulo
 
 00:02:33.760 --> 00:02:38.980
-angle velocity. I can combine these two equations
-and come up with this expression which is
+de junta. Eu posso combinar essas duas equações 
+e obter essa expressão, que é a equação para um
 
 00:02:38.980 --> 00:02:44.900
-the equation for a hyper-ellipsoid or some
-ellipse in six dimensions; so it is a little
+hiper-elipsóide ou alguma elipse em seis dimensões;
+então é um pouco difícil de entender.
 
 00:02:44.900 --> 00:02:49.209
-hard to get your head around. Mostly, we
-are interested in the first three elements
+Na maioria das vezes, estamos interessados nos três 
+primeiros elementos da velocidade espacial;
 
 00:02:49.209 --> 00:02:54.340
-of the spatial velocity; that is the translational
-velocity of the robot end-effector.
+Essa é a velocidade translacional do 
+efetuador do robô.
 
 00:02:54.340 --> 00:03:00.969
-In this case, we end up with a three-dimensional
-ellipsoid which we can quite easily plot. So,
+Neste caso, nós acabamos com um elipsóide
+tridimensional que podemos facilmente plotar.
 
 00:03:00.969 --> 00:03:06.290
-here is the velocity ellipsoid for a robot
-in a particular configuration. We could view
+Assim, aqui está o elipsóide de velocidade para
+o robô em uma determinada configuração.
 
 00:03:06.290 --> 00:03:11.290
-this ellipsoid from different angles and we
-could see that the ellipse is quite elongated
+Podemos observar este elipsóide de diferente
+ângulos e podemos ver que a elipse é bastante
 
 00:03:11.290 --> 00:03:16.029
-in the vertical direction and it is reasonably
-flat in the direction towards the base of
+alongada na direção vertical e é razoavelmente
+achatada na direção na base do robô
 
 00:03:16.029 --> 00:03:21.379
-the robot and so the robot is able to move
-most quickly in the direction of the long
+e, portanto, o robô é capaz de mover mais
+rapidamente na direção do eixo comprido da
 
 00:03:21.379 --> 00:03:26.019
-axis of the ellipse and it moves much more
-slowly in the direction of the short axis
+elipse e se move muito mais devagar 
+na direção do eixo curto
 
 00:03:26.019 --> 00:03:27.749
-of this ellipsoid.
+deste elipsóide.
 
 00:03:27.749 --> 00:03:32.439
 If the ellipsoid was actually a sphere, then
