@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.889 --> 00:00:07.839
 We have just worked out a way to describe
@@ -125,124 +125,126 @@ If I was to write a computer algorithm to
 do this, it would be a type of discrete time
 
 00:02:39.120 --> 00:02:44.569
-algorithm. It would be computed at a number
-of discrete time steps, time step 1, time
+algorithm. Seria calculado em uma série de 
+passos no tempo discreto, passo de tempo 1,
 
 00:02:44.569 --> 00:02:50.060
-step 2, time step 3, and I’ll generalize
-that to time step k. And, the interval between
+passo de tempo 2, passo de tempo 3, e vou 
+generalizar isso para o passo de tempo k.
+E, o intervalo entre 
 
 00:02:50.060 --> 00:02:56.320
-time steps is given by the symbol delta T.
-So, at time step, k, I will take the joint angles
+os passos de tempo é dado pelo símbolo delta T.
+Então, no passo de tempo, k, tomarei os ângulos 
+das juntas 
 
 00:02:56.320 --> 00:03:01.530
-that’s measured at time, k. I compute the
-Jacobian, invert it, multiply it by the desired
+que são medidos no tempo, k. Calculo o Jacobiano, 
+inverto-o, multiplico-o pela velocidade espacial desejada 
 
 00:03:01.530 --> 00:03:06.970
-spatial velocity and determine the joint angle
-velocity that I need to achieve. If I multiply
+e determino a velocidade angular da junta 
+que preciso atingir. Se eu multiplicar 
 
 00:03:06.970 --> 00:03:12.500
-the joint velocity by the time interval, delta
-T, then I obtain the change in joint angles
+a velocidade da articulação pelo intervalo de tempo, 
+delta T, obtenho a mudança nos ângulos das juntas 
 
 00:03:12.500 --> 00:03:17.090
-over that time step. I add it to the current
-set of joint angles and I end up with the
+ao longo deste intervalo de tempo. Eu o adiciono ao 
+conjunto atual de ângulos das juntas e acabo com o 
 
 00:03:17.090 --> 00:03:22.849
-set of joint angles that I need to have at
-the next time step, at time k+1. And, then
+conjunto de ângulos das juntas que preciso ter na próxima 
+etapa de tempo, no tempo k + 1. E, então,
 
 00:03:22.849 --> 00:03:30.230
-I tell my robot to move to that new set of
-joint angles and I repeat the process.
+digo ao meu robô para se mover para aquele novo conjunto 
+de ângulos de articulação e repito o processo.
 
 00:03:30.230 --> 00:03:34.299
-We are now going to look at resolved-rate motion
-control. And, I have already computed the
+Agora vamos olhar o controle de movimento
+de taxa resolvida. E já calculei 
 
 00:03:34.299 --> 00:03:39.340
-Jacobian matrix for the set of joint angles
-which I call QN. Now, what I want to do is
+a matriz Jacobiana para o conjunto de ângulos 
+das juntas que chamo de QN. Agora, o que eu quero fazer 
 
 00:03:39.340 --> 00:03:43.980
-to specify the spatial velocity that I want
-my robot to have. I’m going to put that
+é especificar a velocidade espacial que desejo 
+que meu robô tenha. Vou colocar isso em 
 
 00:03:43.980 --> 00:03:49.220
-in to a variable called, nu, which is the Greek
-letter that I used to denote spatial velocity
+uma variável chamada, nu, que é a letra grega 
+que usei para denotar a velocidade espacial
 
 00:03:49.220 --> 00:03:55.190
-and I am going to ask for a spatial velocity
-of zero in x, zero in the y, one unit per
+e vou pedir uma velocidade espacial de zero em x, 
+zero em y, uma unidade por 
 
 00:03:55.190 --> 00:04:00.769
-second in the z direction and no angular velocity.
-And, I’m going to put that in to a column
+segundo na direção z e sem velocidade angular.
+E, vou colocar isso em um vetor coluna.
 
 00:04:00.769 --> 00:04:06.470
-vector. So, there we have it. If I now multiply
-the inverse of the Jacobian by the desired
+Então só temos isso. Se, agora, eu multiplicar 
+o inverso do Jacobiano pela velocidade espacial desejada, 
 
 00:04:06.470 --> 00:04:12.210
-spatial velocity, and what I have here is
-the joint angle velocity vector. This is the
+o que tenho aqui é o vetor de velocidade 
+ângular da junta. Este é o 
 
 00:04:12.210 --> 00:04:17.570
-set of joint angle velocities that will give
-me the desired spatial velocity vector that’s
+conjunto de velocidades angulares da junta que 
+me dará o vetor de velocidade espacial desejado, 
 
 00:04:17.570 --> 00:04:22.920
-a motion of one unit per second in the vertical
-or z direction.
+que é um movimento de uma unidade por segundo 
+na direção vertical ou na direção z.
 
 00:04:22.920 --> 00:04:27.720
-We can see that it involves no motion at all
-for joints 1 and 4 and it does require motion
+Podemos ver que não envolve movimento algum 
+para as articulações 1 e 4 e requer movimento 
 
 00:04:27.720 --> 00:04:33.150
-of joints 2 and 3. That’s the shoulder and
-the elbow joint and also joint 5, one of the
+das articulações 2 e 3. Isso é o ombro e a articulação 
+do cotovelo e também a articulação 5, uma das 
 
 00:04:33.150 --> 00:04:37.870
-wrist joints. And, we can see that of all
-the joints, it is the elbow joint, joint 3
+articulações do pulso. E, podemos ver que de todas as 
+articulações, é a articulação do cotovelo, junta 3 
 
 00:04:37.870 --> 00:04:42.210
-that has to move the fastest in order to achieve
-the desired motion.
+que tem que se mover mais rápido para conseguir 
+o movimento desejado.
 
 00:04:42.210 --> 00:04:48.620
-Here is an animation that shows this in practice.
-I have commanded the robot to move vertically
+Aqui está uma animação que mostra isso na prática. 
+Ordenei ao robô que se movesse verticalmente 
 
 00:04:48.620 --> 00:04:55.150
-with a velocity of positive 1 in the world
-z direction. We observed that the robot end-effector
+com uma velocidade positiva 1 na direção 
+global z. Observamos que o efetuador do robô 
 
 00:04:55.150 --> 00:04:59.480
-moved that in constant velocity. But, if we
-look at how the joint angles change as a function
+se moveu com velocidade constante. Mas, se olharmos 
+como os ângulos das juntas mudam em função 
 
 00:04:59.480 --> 00:05:02.370
-of time, we see that they are not moving linearly.
+do tempo, vemos que eles não estão se movendo linearmente.
 
 00:05:02.370 --> 00:05:06.370
-We also know that some of the joint angles
-are increasing in velocity. And, you notice
+Também sabemos que alguns ângulos das juntas
+estão aumentando em velocidade. E, você percebe
 
 00:05:06.370 --> 00:05:10.471
-that as the robot got to the end of that motion,
-it started to look a little bit awkward. It
+que quando o robô chegou ao fim desse movimento, 
+ele começou a ficar um pouco estranho. Ele 
 
 00:05:10.471 --> 00:05:14.810
-can only move in the z direction for so long.
-Eventually, it’s not going to be able to
+só pode se mover na direção z por algum tempo. 
+Eventualmente, não será capaz de 
 
 00:05:14.810 --> 00:05:17.250
-reach the position that it needs to move to.
+alcançar a posição para a qual precisa se mover.
 
