@@ -1,9 +1,9 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.540 --> 00:00:07.270
-Existe muitas informações ricas em uma matriz
+Existem muitas informações ricas em uma matriz
 Jacobiana e podemos utilizá-la como uma
 
 00:00:07.270 --> 00:00:13.950
@@ -155,149 +155,151 @@ na direção do eixo curto
 deste elipsóide.
 
 00:03:27.749 --> 00:03:32.439
-If the ellipsoid was actually a sphere, then
-we say the motion is isotropic; that means
+Se o elipsoide fosse realmente uma esfera, então
+dizemos que o movimento é isotrópico; isso
 
 00:03:32.439 --> 00:03:38.120
-that the robot end-effector is able to move
-equally quickly in any direction. It is convenient
+significa que o robô efetuador é capaz de se mover com
+a mesma rapidez em qualquer direção. É conveniente
 
 00:03:38.120 --> 00:03:43.999
-to introduce a notion of manipulability, a difficult
-word to say, and it is a simple scalar measure
+introduzir uma noção de manipulabilidade, uma
+palavra difícil de dizer, e é uma medida escalar simples 
 
 00:03:43.999 --> 00:03:49.370
-that says something about the shape of the
-velocity ellipsoid. If manipulability is equal
+que diz algo sobre o formato do elipsoide de
+velocidade. Se a manipulabilidade é igual a
 
 00:03:49.370 --> 00:03:53.889
-to one, then we have the case of isotropic
-motion; the robot is able to move equally
+um, então temos o caso do movimento isotrópico;
+o robô é capaz de se mover igualmente
 
 00:03:53.889 --> 00:03:55.439
-fast in any direction.
+rápido em qualquer direção.
 
 00:03:55.439 --> 00:04:00.609
-If manipulability is equal to zero, then the
-ellipsoid is collapsed and it becomes just
+Se a manipulabilidade é igual a zero, então o
+elipsoide é colapsado e se torna apenas uma
 
 00:04:00.609 --> 00:04:05.959
-an elliptical plate and it means that motion
-in one Cartesian direction is not possible
+placa elíptica e isso significa que o movimento
+em uma direção cartesiana não é possível.
 
 00:04:05.959 --> 00:04:11.739
-at all. In general, the manipulability will
-be somewhere between zero and one. If it is
+Em geral, a manipulabilidade estará em 
+algum lugar entre zero e um. Se estiver 
 
 00:04:11.739 --> 00:04:17.559
-close to one, it means that the robot is configured
-to move quite quickly in any direction in its workspace.
+perto de um, isso significa que o robô está configurado para se
+mover rapidamente em qualquer direção em seu espaço de trabalho.
 
 00:04:17.860 --> 00:04:23.400
-As the manipulability gets closer to zero,
-it means that the robot is in an awkward pose
+Ao passo que a manipulabilidade se aproxima de zero,
+isso significa que o robô está numa pose estranha
 
 00:04:23.410 --> 00:04:28.300
-and there are some directions where it was
-not able to move very quickly at all. Manipulability
+e que existem algumas direções onde ele não foi
+capaz de se mover rapidamente. A manipulabilidade
 
 00:04:28.300 --> 00:04:33.720
-is a strong function of the robot joint angles,
-so depending on the task, you may need to
+é uma função importante dos ângulos das juntas,
+então dependendo da tarefa, você pode precisar
 
 00:04:33.720 --> 00:04:39.980
-set the robot joint angles so that it has got the speed required in order to achieve that particular task.
+definir os ângulos das juntas para que ele tenha a velocidade 
+necessária para realizar aquela tarefa específica.
 
 00:04:41.740 --> 00:04:45.820
-We are going to use MATLAB to display one
-of these velocity ellipsoids. The first thing
+Nós vamos usar o MATLAB para exibir uma dessas
+elipsoides de velocidade. A primeira coisa
 
 00:04:45.820 --> 00:04:51.430
-I am going to do is to plot the robot in the
-joint angle configuration that is in the middle
+que vou fazer é plotar o robô na configuração
+do ângulo da junta que está no meio da sua
 
 00:04:51.430 --> 00:04:55.970
-of its work-space and that is what the robot
-looks like and then I am going to use the
+área de trabalho e é assim que o robô 
+se parece e então eu vou usar o
 
 00:04:55.970 --> 00:04:59.970
-method for ellipse to overlay on that a velocity
-ellipsoid.
+o método para a elipse sobrepor à elipsoide
+de velocidade.
 
 00:04:59.970 --> 00:05:04.820
-This method has got quite a number of arguments
-and options. First of all, I pass in the joint
+Este método possui um grande número de argumentos 
+e opções. Primeiramente, eu passo nos ângulos da 
 
 00:05:04.820 --> 00:05:10.360
-angles that I am interested in. I want the
-ellipse to be plotted in the colour blue and
+articulação que estou interessado. Eu quero
+que a elipse seja plotada na cor azul e
 
 00:05:10.360 --> 00:05:15.800
-I want the edge lines on the ellipse to be
-in white. I want the whole thing to
+eu quero que as linhas da borda sejam
+brancas. Eu quero que tudo seja 
 
 00:05:15.800 --> 00:05:23.470
-be somewhat translucent, so I am going to
-give it an alpha value of 0.5 and there we
+um pouco translúcido, então eu vou 
+dar um valor alfa de 0,5 e lá
 
 00:05:23.470 --> 00:05:25.760
-see the velocity ellipse.
+vemos a elipse velocidade.
 
 00:05:25.760 --> 00:05:31.190
-Now, I can rotate this around and look at
-it from all sorts of different orientations
+Agora, eu posso girar este ao redor e olhar para 
+ele de todos os tipos de diferentes orientações 
 
 00:05:31.190 --> 00:05:36.640
-and viewpoints. If I look at it pretty much
-side on, we can see that the ellipse is relatively
+e pontos de vista. Se eu olhar de lado, 
+podemos ver que a elipse e relativamente
 
 00:05:36.640 --> 00:05:41.920
-thin in the direction toward the base of the
-robot. That is the direction where the robot
+fina na direção próxima a base do robô.
+Esta é a direção que o robô não
 
 00:05:41.920 --> 00:05:47.240
-is not able to move very quickly or as in
-the vertical Z direction, basically up and
+é capaz de se mover rapidamente ou como na 
+direção vertical Z, basicamente para cima e para
 
 00:05:47.240 --> 00:05:53.050
-down, the robot is able to move quite quickly;
-so that is the velocity ellipsoid for this
+baixo, o robô é capaz de se mover rapidamente; 
+então essa é a velocidade do elipsoide para 
 
 00:05:53.050 --> 00:05:55.470
-joint angle configuration.
+esta configuração do ângulo da junta.
 
 00:05:55.470 --> 00:06:00.710
-If I choose a different joint angle configuration,
-this is where the robot arm is stretched right
+Se eu escolher uma configuração de ângulo de junta 
+diferente, isso é onde o braço do robô é esticado 
 
 00:06:00.710 --> 00:06:06.250
-out horizontally which is the joint angle
-vector, Qs, in my workspace then the robot
+horizontalmente, que é o vetor de ângulo de junta,
+Qs, na minha área de trabalho, então o robô
 
 00:06:06.250 --> 00:06:11.970
-is in that configuration and now I am going
-to plot the ellipse for this particular configuration,
+está nessa configuração e agora vou plotar a
+elipse para esta configuração em particular, 
 
 00:06:11.970 --> 00:06:18.340
-so I would just come back and edit this command,
-change Qn to Qs, and here we have the velocity
+então eu apenas voltaria e editaria esse comando,
+mudando de Qn para Qs, e aqui temos o elipsoide
 
 00:06:18.340 --> 00:06:20.220
-ellipsoid for this particular case.
+de velocidade para este caso em particular.
 
 00:06:20.220 --> 00:06:25.970
-Now, we can see that it is an ellipse; but
-side on, it has got no thickness at all, it
+Agora, podemos ver que é uma elipse; mas
+de lado, não tem espessura alguma, é uma
 
 00:06:25.970 --> 00:06:30.700
-is a plate. So, in this particular joint angle
-configuration, the robot is able to move its
+placa. Então, nesta configuração de ângulo de
+junta em particular, o robô é capaz de mover
 
 00:06:30.700 --> 00:06:34.710
-end-effector from this particular view up
-and down and left and right; but looking it
+seu efetuador a partir dessa visão em particular para cima e
+para baixo, para a esquerda e para a direita; mas olhando 
 
 00:06:34.710 --> 00:06:40.710
-at this way, it has got no ability at all
-to move the end-effector back towards the base.
+desta forma, não tem nenhuma habilidade para
+mover o efetuador de volta para a base.
+
 
