@@ -27,7 +27,7 @@ da articulação, Q1, Q2 e Q3.  Vamos indicar a
 posição do efetuador no qual compreende uma 
 
 00:00:36.680 --> 00:00:43.250
-componente X e Y e uma orientação teta. 
+componente X e Y e uma orientação theta. 
 Descrevemos anteriormente como escrever
 
 00:00:43.250 --> 00:00:49.940
@@ -113,8 +113,8 @@ com esta. Ao igualar os argumentos das
 funções cosseno e seno aqui, está bem
 
 00:02:35.470 --> 00:02:40.260
-claro que podemos escrever que teta é
-igual a Q1 mais Q2 mais Q3
+claro que podemos escrever que theta 
+é igual a Q1 mais Q2 mais Q3
 
 00:02:40.260 --> 00:02:44.230
 Se você pensar sobre a geometria do problema, 
@@ -122,7 +122,7 @@ então este resultado não é particularmente
 
 00:02:44.230 --> 00:02:48.690
 surpreendente. Agora posso tirar a derivada
-de teta com relação ao tempo, logo teta ponto é
+de theta com relação ao tempo, logo theta ponto é
 
 00:02:48.690 --> 00:02:56.950
 igual a Q1 ponto, mais Q2 ponto, mais Q3 ponto e 
@@ -145,7 +145,7 @@ na qual é três por três. Aqui eu tenho a velocidade
 da articulação e aqui eu tenho a velocidade
 
 00:03:20.269 --> 00:03:25.680
-espacial do efetuador, mas uma vez uma
+espacial do efetuador, mas novamente a
 relação linear entre velocidade de articulação
 
 00:03:25.680 --> 00:03:30.190
@@ -161,7 +161,7 @@ velocidade translacional, que são as componentes X ponto
 
 00:03:41.340 --> 00:03:48.019
 e Y ponto e também em termos de sua velocidade 
-de rotação; teta ponto. Portanto, se eu especificar
+de rotação; theta ponto. Portanto, se eu especificar
 
 00:03:48.019 --> 00:03:52.500
 que, o que eu quero no meu problema específico 
@@ -173,4 +173,3 @@ a velocidade dos ângulos da junta que preciso
 
 00:03:57.950 --> 00:04:00.459
 para alcançar essa velocidade do efetuador.
-
