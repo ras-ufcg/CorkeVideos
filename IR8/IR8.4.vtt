@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.689 --> 00:00:08.809
 Novamente, temos nosso robô planar de dois-elos
@@ -23,8 +23,8 @@ círculo vermelho. Aqui está um ponto genérico Q
 contido pelo círculo. Pontos, aqui e aqui,
 
 00:00:33.930 --> 00:00:39.760
-correspondem a movimento de apenas a junta 1 e 
-pontos, aqui e aqui, correspondem a movimento 
+correspondem ao movimento de apenas a junta 1 e 
+pontos, aqui e aqui, correspondem ao movimento 
 
 00:00:39.760 --> 00:00:45.289
 da junta 2, apenas. Todos os outros pontos dentro
@@ -38,12 +38,12 @@ Outra forma que podemos escrever essa restrição, que
 a velocidade é contida pelo círculo vermelho, é
 
 00:00:53.710 --> 00:00:59.589
-em termos desse produto vetor, vetor. É igual
+em termos desse vetor, vetor produto. É igual
 ao produto escalar. Assim, o produto escalar
 
 00:00:59.589 --> 00:01:06.560
 de Q ponto com ele mesmo é igual a 1. Temos uma
-expressão para Q ponto em termos da matrix Jacobiana
+expressão para Q ponto em termos da matriz Jacobiana
 
 00:01:06.560 --> 00:01:12.500
 inversa e a velocidade do efetuador do robô. 
