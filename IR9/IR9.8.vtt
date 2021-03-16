@@ -1,136 +1,135 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.679 --> 00:00:08.330
-In a much earlier lecture, we introduced the
-notion of roll, pitch, yaw angles. It’s
+Numa aula bem anterior a essa, introduzimos a
+noção dos ângulos de roll, pitch e yaw. Eles
 
 00:00:08.330 --> 00:00:13.699
-an intuitive way to think about the orientation
-of a body in space and we can think about
+são uma forma intuitiva de pensarmos sobre a orientação
+de um corpo no espaço, e podemos pensar 
 
 00:00:13.699 --> 00:00:18.939
-it as the product of a number of elementary
-rotations. It’s a rotation around the x-axis
+neles como o produto de um número de rotações
+elementares. É uma rotação ao redor do eixo-x
 
 00:00:18.939 --> 00:00:24.140
-by the roll angle, a rotation around the y-axis
-by the pitch angle, and a rotation around
+pelo ângulo roll, uma rotação ao redor do eixo-y
+pelo ângulo pitch, e uma rotação ao redor
 
 00:00:24.140 --> 00:00:29.440
-the z-axis by the yaw angle.
-Now, we could take the derivative of this
+do eixo-z pelo ângulo yaw.
+Agora, poderíamos pegar a derivada dessa
 
 00:00:29.440 --> 00:00:34.039
-expression and we obtain a relationship for
-the rate of change of the rotation matrix
+expressão e obteríamos a relação da
+taxa de mudança da matriz de rotação
 
 00:00:34.039 --> 00:00:39.170
-in terms of some elementary rotation matrices.
-The derivatives of some elementary rotation
+relativa a algumas matrizes elementares de rotação.
+As derivadas de algumas matrizes elementares
 
 00:00:39.170 --> 00:00:44.590
-matrices, and the derivative of the roll angle,
-pitch angle and yaw angle which are here denoted
+de rotação, e as derivadas do ângulo roll, do ângulo
+pitch e do ângulo yaw os quais estão representados
 
 00:00:44.590 --> 00:00:50.441
-by r dot, p dot and y dot, respectively.
-We also know that the time derivative of a
+pelo ponto r, ponto p e ponto y, respectivamente.
+Nós também sabemos que a derivada de tempo de uma
 
 00:00:50.441 --> 00:00:54.809
-rotation matrix can be expressed in terms
-of a skew-symmetric matrix which is a function
+matriz de rotação pode ser expressa e na forma
+de uma matriz antissimétrica que é uma função
 
 00:00:54.809 --> 00:00:59.809
-of angular velocity and the rotation matrix
-itself. I can rearrange this rather complex
+de uma velocidade angular e a própria matriz 
+de rotação. Eu posso rearranjar essa expressão
 
 00:00:59.809 --> 00:01:05.799
-expression and so for the skew-symmetric matrix,
-s. And then, I can equate the finite elements
+meio complexa, e para isso vou ter a matriz antissimétrica
+"S". Daí, posso igualar os elementos finitos
 
 00:01:05.799 --> 00:01:10.299
-of s between the left and right hand side
-of my equation.
+de "S" entre os lados esquerdo e direito
+da minha equação.
 
 00:01:10.299 --> 00:01:14.780
-The result is a relationship between angular
-velocity, omega, and the rates of change of
+O resultado é uma relação entre velocidade
+angular, ômega, e as taxas de mudança dos
 
 00:01:14.780 --> 00:01:20.820
-my roll, pitch and yaw angles. And, this relationship
-is in terms of yet another Jacobian matrix.
+meus ângulos roll, pitch e yaw. Além disso, essa relação
+está em conformidade com outra matriz Jacobiana.
 
 00:01:20.820 --> 00:01:27.490
-It’s a 3 x 3 Jacobian matrix and is denoted
-by the symbol capital B. B is a function of
+É uma matriz Jacobiana 3 x 3 e é representada
+pela letra maíscula B. B é uma função dos
 
 00:01:27.490 --> 00:01:32.810
-the roll, pitch, yaw angles. And, more precisely,
-it’s a function of the roll angle and the
+ângulos roll, pitch e yaw. E, mais precisamente,
+é uma função do ângulo roll e do
 
 00:01:32.810 --> 00:01:38.670
-pitch angle. The yaw angle does not appear
-in the expression for this Jacobian matrix.
+ângulo pitch. O ângulo yaw não aparece 
+na expressão nessa matriz Jacobiana.
 
 00:01:38.670 --> 00:01:44.229
-This is a nice relationship because it links
-a very obscure and abstract quantity like
+Essa é uma boa relação porque ela conecta
+uma "quantidade" muito abstrata e obscura como
 
 00:01:44.229 --> 00:01:49.130
-angular velocity and expresses it in terms
-of roll, pitch and yaw rates which are much
+a velocidade angular e expressa ela na forma
+de taxas de roll, pitch e yaw as quais são muito
 
 00:01:49.130 --> 00:01:53.270
-more intuitive for engineers.
-Here is the expression that we introduced
+mais intuitivas para engenheiros.
+Aqui está a expressão que introduzimos
 
 00:01:53.270 --> 00:01:58.860
-earlier which maps the rate of change of robot
-joint angles to the robot end effector spatial
+mais cedo a qual mapeia a taxa de mudança dos ângulos
+de junta do robô para a velocidade espacial do efetuador
 
 00:01:58.860 --> 00:02:03.140
-velocity. The spatial velocity, as we know,
-comprises two components: the translational
+do robô. A velocidade espacial, como sabemos,
+contém dois componentes: o componente
 
 00:02:03.140 --> 00:02:09.489
-component and a rotational component expressed
-here as an angular velocity vector.
+translacional e o componente rotacional expressos
+aqui como um vetor de velocidade angular.
 
 00:02:09.489 --> 00:02:15.410
-What we'd like to do is to redefine this spatial
-velocity vector so that the rotational part
+O que gostariamos de fazer é redefinir esse vetor
+velocidade espacial de forma que a parte rotacional
 
 00:02:15.410 --> 00:02:20.810
-now contains the roll, pitch and yaw rates
-of change. If we are going to do that, then
+agora contenha as taxas de mudança de roll, pitch
+e yaw. Se vamos fazer isso, então
 
 00:02:20.810 --> 00:02:26.739
-we need to change our definition of the Jacobian
-matrix itself. So, we introduce a variant
+precisamos mudar nossa própria definição de matriz
+Jacobiana. Dessa forma, introduzimos uma variante
 
 00:02:26.739 --> 00:02:33.540
-of the Jacobian matrix called JA and that
-is the analytic Jacobian matrix and it relates
+da matriz Jacobiana chamada JA, que é
+a matriz Jacobiana analítica e que relaciona
 
 00:02:33.540 --> 00:02:39.609
-the change in robot joint angles to spatial
-velocity defined now with roll, pitch and
+a mudança nos ângulos de junta do robô à
+velocidade espacial definida agora por taxas de
 
 00:02:39.609 --> 00:02:44.260
-yaw angle rates.
-To obtain the analytic Jacobian, we start
+ângulos roll, pitch e yaw.
+Para obtermos a Jacobiana analítica, começamos
 
 00:02:44.260 --> 00:02:49.879
-with the standard robot manipulator Jacobian
-matrix and we pre-multiply it by this matrix,
+com a matriz Jacobiana de manipulação de robô
+padrão e nós pré-multiplicamos ela por essa matriz,
 
 00:02:49.879 --> 00:02:57.519
-contains a lot of 1s and 0s and it also contains
-the inverse of the 3 x 3 Jacobian matrix B.
+que contém um bocado de 1s e 0s e também contém
+a inversa da matriz 3 x 3 Jacobiana B.
 
 00:02:57.519 --> 00:03:02.890
-B is a function of the roll, pitch, yaw angles
-which I denote by the symbol capital Gamma.
-
+B é uma função dos ângulos roll, pitch e yaw
+que eu denoto pela letra maiúscula Gamma.
