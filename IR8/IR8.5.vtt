@@ -7,7 +7,7 @@ Iremos introduzir um conceito importante
 chamado taxa de controle de movimento definida. Parece
 
 00:00:08.930 --> 00:00:14.440
-complexo mas é até bem simples de entender.
+complexo, mas é até bem simples de entender.
 Para muitos dos problemas do mundo real, poderemos
 
 00:00:14.440 --> 00:00:20.270
@@ -56,7 +56,7 @@ Então o que eu preciso fazer é, periodicamente,
 
 00:01:13.140 --> 00:01:19.000
 atualizar a matriz Jacobiana. E usar isso quando
-estiver computando o vetor Qdot de velocidade desejada
+estiver computando o vetor Q ponto de velocidade desejada
 
 00:01:19.000 --> 00:01:26.440
 do robô. Então tudo é uma questão de mover as juntas
@@ -67,7 +67,7 @@ velocidade de junta do robô, mover as juntas, atualizar
 a Jacobiana e por aí vai. Repita isso indefinidamente.
 
 00:01:33.880 --> 00:01:39.310
-Muitos dos algoritmos de controle executados em num computador
+Muitos dos algoritmos de controle executados num computador
 digital são tipicamente algoritmos de tempo discreto. 
 
 00:01:39.310 --> 00:01:44.390
@@ -98,11 +98,11 @@ Irei computar a Jacobiana, pegar a inversa,
 multiplicá-la pela velocidade que eu quero
 
 00:02:15.140 --> 00:02:21.610
-atingir e computar o Qdot que eu preciso
+atingir e computar o Q ponto que eu preciso
 atingir nesse passo específico. O que farei
 
 00:02:21.610 --> 00:02:27.980
-agora é pegar essa velocidade de junta Qdot
+agora é pegar essa velocidade de junta Q ponto
 multiplicar ela por delta T para
 
 00:02:27.980 --> 00:02:33.160
