@@ -3,185 +3,185 @@ Kind: captions
 Language: en-GB
 
 00:00:03.810 --> 00:00:08.620
-We're going to talk now about the shape of
-the Jacobian matrix. A robot manipulator has
+Nós vamos falar agora sobre a forma da
+matriz Jacobiana Um robô manipulador tem
 
 00:00:08.620 --> 00:00:12.959
-in general got N joints, N could be a small
-number, the robot might have only two
+em geral N juntas, N pode ser um número
+pequeno, o robô pode ter apenas duas
 
 00:00:12.959 --> 00:00:17.150
-joints. The robots might have 100 joints.
-I want to understand what's the effect of
+juntas. O robô pode ter 100 juntas.
+Eu quero entender qual o efeito do
 
 00:00:17.150 --> 00:00:22.230
-the number of joints on the shape of the robot
-manipulator Jacobian matrix, because the Jacobian
+número de juntas na forma do robô
+manipulador de matriz Jacobiana, pois a Jacobiana
 
 00:00:22.230 --> 00:00:28.849
-has one column per joint. So, an N joint robot
-has a manipulator Jacobian matrix with N columns.
+tem uma coluna por junta. Assim, um robô com N juntas
+tem o manipulador de matriz jacobiana com N colunas.
 
 00:00:28.849 --> 00:00:34.090
-The Jacobian has one row for each element
-of the spatial velocity vector. So, for motion
+A Jacobiana tem uma linha para cada elemento
+do vetor da velocidade espacial. Então, para movimentos
 
 00:00:34.090 --> 00:00:39.080
-in three dimensions, the spatial velocity
-vector has got 6 elements – 3 for translational
+em três dimensões, o vetor da velocidade
+espacial tem 6 elementos - 3 para a velocidade
 
 00:00:39.080 --> 00:00:43.800
-velocity and 3 for angular velocity. And,
-that means the Jacobian matrix always has
+de translação e 3 para a velocidade angular. E,
+isso significa que a matriz Jacobiana sempre tem
 
 00:00:43.800 --> 00:00:48.970
-six rows. So, the robot manipulator Jacobian
-matrix is a 6 x N matrix.
+seis linhas. Então a matriz Jacobiana do robô
+manipulador é uma matriz 6 x N.
 
 00:00:48.970 --> 00:00:53.980
-This robot only has 4 joints and we call it
-an under actuated robot. And, that means that
+Esse robô tem apenas 4 juntas e nós chamamos
+de um robô sub-atuado. E, isso quer dizer quer
 
 00:00:53.980 --> 00:00:59.530
-its task space doesn't cover all of the set
-SE3. Although the end effector can achieve
+seu espaço de tarefas não cobre todo o conjunto
+SE3. Ainda que o efetuador alcance
 
 00:00:59.530 --> 00:01:05.800
-all positions within the limits of its works
-space, it's not able to achieve all possible orientations.
+todas as posições dentro dos limites de seu espaço
+de trabalho., não é capaz de alcançar todas as orientações possíveis.
 
 00:01:05.800 --> 00:01:10.359
-So, for example, when the robot in a configuration
-like this, it can adjust the orientation of
+Então, por exemplo, quando o robô em uma configuração
+assim, pode ajustar a orientação da
 
 00:01:10.359 --> 00:01:14.229
-the gripper like that. But, it's impossible
-for it to adjust the orientation of the gripper
+garra dessa forma. Mas, é impossível para ele
+ajustar a orientação da garra
 
 00:01:14.229 --> 00:01:17.869
-in that direction or in that direction.
+nessa direção ou nessa direção.
 
 00:01:18.640 --> 00:01:23.740
-Let's consider the case of a robot with only
-4 joints. This is often referred to as an
+Consideremos o caso de um robô com apenas
+4 juntas. Isso geralmente é chamado de um
 
 00:01:23.740 --> 00:01:29.890
-under-actuated robotic system. In this case,
-the robot Jacobian has got 6 rows and 4 columns.
+sistema robótico sub-atuado. Nesse caso,
+o robô Jacobiano tem 6 linhas e 4 colunas.
 
 00:01:29.890 --> 00:01:35.060
-The Jacobian is not square, and therefore,
-we cannot invert it. But that's not necessarily
+O Jacobiano não é quadrado, portanto,
+não podemos inverter. Mas isso não é necessariamente
 
 00:01:35.060 --> 00:01:40.689
-a problem. A robot like this is unable to
-rotate the tool about the x or y axis. It's
+um problema. Um robô assim é incapaz de
+rotacionar a ferramenta no eixo x ou y. É
 
 00:01:40.689 --> 00:01:45.880
-just the way it's constructed. It cannot rotate
-the tool in that way. So, we can strike out
+a forma que foi construído. Não pode rotacionar
+a ferramenta dessa forma. Então, podemos excluir
 
 00:01:45.880 --> 00:01:51.679
-these elements of the robot’s spatial velocity.
-Since we can't control velocity around these
+esses elementos da velocidade espacial do robô.
+Já que não podemos controlar a velocidade em torno
 
 00:01:51.679 --> 00:01:53.209
-axes, let's just remove them.
+desses eixos, vamos apenas removê-los.
 
 00:01:53.209 --> 00:01:58.469
-If I do that, then I should also remove the
-corresponding rows in the Jacobian matrix.
+Se eu fizer isso, então eu devo remover as
+linhas correspondentes na matriz Jacobiana.
 
 00:01:58.469 --> 00:02:04.969
-And, the result now is a 4 x 4 system. And
-now, the Jacobian matrix is invertible. Given
+E, o resultado agora é um sistema 4 x 4. E
+agora, a matriz Jacobiana é uma matriz inversível. Dada
 
 00:02:04.969 --> 00:02:09.850
-a desired spatial velocity, it's a smaller
-spatial velocity vector now. We can compute
+a velocidade espacial desejada, é um vetor
+de velocidade espacial menor agora. Nós podemos
 
 00:02:09.850 --> 00:02:14.319
-the robot joint angle velocities. We need
-to obtain that spatial velocity.
+calcular as velocidades angulares. Precisamos
+obter essa velocidade espacial.
 
 00:02:14.319 --> 00:02:19.840
-Here's a robot that has perhaps 100 joints.
-In this case, the manipulator Jacobian is
+Temos aqui um robô que tem possivelmente 100 juntas.
+Nesse caso, o manipulador Jacobiano é
 
 00:02:19.840 --> 00:02:26.530
-a 6 x 100 matrix. It's not square and we
-cannot invert it. We can compute something
+uma matriz 6 x 100. Não é quadrada e não podemos
+invertê-la. Nós podemos calcular algo
 
 00:02:26.530 --> 00:02:31.260
-called the pseudo-inverse and that's often
-denoted by the symbol plus.
+chamado de pseudo-inversa e é geralmente
+denotada pelo símbolo mais.
 
 00:02:31.260 --> 00:02:36.239
-The pseudo-inverse is computed in this way.
-This looks quite straight forward until you
+A pseudo-inversa é calculada dessa forma.
+Isso parece bastante simples até você
 
 00:02:36.239 --> 00:02:41.790
-remind yourself that the term inside here
-is in fact a 100 x 100 matrix and we need to
+se lembrar que o termo aqui dentro
+é em fato uma matriz 100 x 100 e precisamos
 
 00:02:41.790 --> 00:02:47.750
-invert that. And computationally, that's not
-a simple thing to do. However, if we use this
+inverter isso. E computacionalmente, isso não
+é uma coisa simples de se fazer. Contudo, se usarmos
 
 00:02:47.750 --> 00:02:52.769
-pseudo-inverse, we can write an expression
-that relates the desired spatial velocity
+essa pseudo-inversa, podemos escrever uma expressão
+que relaciona a velocidade espacial desejada
 
 00:02:52.769 --> 00:03:00.549
-of the robots end effector to the required
-velocity of each of its 100 joints.
+do efetuador do robô para a velocidade
+requirida para cada uma de suas 100 juntas.
 
 00:03:00.549 --> 00:03:04.819
-But we can do an extra thing as well in the case
-of a robot like this – a robot with more
+Mas nós podemos fazer algo extra também no caso
+de um robô desse - um robô com mais de
 
 00:03:04.819 --> 00:03:11.349
-than 6 joints. We can add this term here and
-we refer to this as the null-space motion.
+de 6 juntas. Podemos adicionar esse termo aqui
+e nos referimos a isso como o movimento de espaço nulo.
 
 00:03:11.349 --> 00:03:16.599
-It's pre-multiplied by this matrix expression
-here, which effectively filters it, so that
+É pré-multiplicado por essa expressão de matriz
+aqui, o que o filtra com eficácia, assim
 
 00:03:16.599 --> 00:03:21.980
-this motion does not affect the pose of the
-robot end effector. We can use this motion,
+esse movimento não afeta a posição do
+efetuador do robô. Podemos usar esse movimento,
 
 00:03:21.980 --> 00:03:25.730
-which doesn't affect the end effector pose
-to do things like change the shape of the
+que não afeta a posição do efetuador
+para fazer coisas como mudar a forma
 
 00:03:25.730 --> 00:03:31.239
-arm. We can also use it to do things like
-move a robot joint away from its limit towards
+do braço. Podemos também usar para fazer coisas 
+como movera a junta do robô fora de seus limites em
 
 00:03:31.239 --> 00:03:33.560
-the middle part of its working range.
+direção a parte do meio da sua área de trabalho.
 
 00:03:33.560 --> 00:03:39.019
-So, we use this extra joint velocity motion
-to change the shape of the arm, move joints
+Então, usamos esse movimento de velocidade extra
+da junta para mudar a forma do braço, mover juntas
 
 00:03:39.019 --> 00:03:44.299
-away from their limits. At the same time not
-affecting the end effector pose. It's a pretty
+além de seus limites. Ao mesmo tempo sem alterar
+a posição do efetuador. É um truque bem
 
 00:03:44.299 --> 00:03:50.879
-neat trick. This matrix N is referred to as
-the null space of the Jacobian matrix. It
+legal. Essa matriz N é chamada de matriz
+Jacobiano do espaço nulo. É
 
 00:03:50.879 --> 00:03:55.700
-is the set of vectors that pre-multiplied
-by the manipulator Jacobian matrix, give a
+o conjunto de vetores que pré-multiplicados
+pelo manipulador da matriz Jacobiana, dá um
 
 00:03:55.700 --> 00:04:02.219
-result of zero. In this particular case, if
-the robot had 100 joints, then the null space
+resultado de zero. Nesse caso em particular, se
+o robô tiver 100 juntas, então o espaço nulo
 
 00:04:02.219 --> 00:04:11.260
 seria a dimensão 94. Isto é 100 menos
