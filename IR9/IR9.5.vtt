@@ -3,129 +3,129 @@ Kind: captions
 Language: pt-BR
 
 00:00:03.889 --> 00:00:07.839
-We have just worked out a way to describe
-the relationship between the rate of change
+Nós acabamos de trabalhar em um jeito de 
+descrever a relação entre a taxa de mudança 
 
 00:00:07.839 --> 00:00:13.520
-of its joint angles and the translational
-and angular velocity of the robot’s end-effector.
+de seus ângulos de junta e da velocidade 
+translacional e angular do efetuador do robô.
 
 00:00:13.520 --> 00:00:19.340
-Spatial velocity is a six-vector that comprises
-the translational velocity, v, and the angular
+Velocidade espacial é um vetor de 6 que compreende
+a velocidade translacional, v, e a velocidade
 
 00:00:19.340 --> 00:00:24.730
-velocity, omega. And, we wrote a relationship
-between spatial velocity of the end-effector
+ângular, ômega. E, nós escrevemos uma relação
+entre a velocidade espacial e o efetuador
 
 00:00:24.730 --> 00:00:28.039
-and the velocity of the joint angles.
+e a velocidade dos ângulos de junta.
 
 00:00:28.039 --> 00:00:33.360
-For a robot like this, the Jacobian matrix,
-J, is a 6 x 6 matrix. It’s square. So, we
+Para um robô como esse, a matriz Jacobiana,
+J, é uma matriz 6x6. É quadrada. Então, nós
 
 00:00:33.360 --> 00:00:39.300
-can rearrange this expression to obtain the
-robot joint angle velocity that we need in
+podemos reorganizar essa expressão para obter
+a velocidade do ângulo de junta do tobô que precisamos
 
 00:00:39.300 --> 00:00:45.510
-order to achieve a desired robot end-effector
-spatial velocity and we can do this unless
+a fim de conseguir a velocidade espacial desejada fddo
+efetuador do robô e nós podemos fazer isso a não ser que 
 
 00:00:45.510 --> 00:00:49.920
-the Jacobian is singular. That is its determinant
-is equal to zero.
+a Jacobiana seja singular. Isso significa que seu
+determinante seja igual a zero.
 
 00:00:49.920 --> 00:00:54.680
-Unfortunately, there are some circumstances
-where the Jacobian will be singular and one
+Infelizmente, há algumas circunstâncias onde a 
+Jacobiana vai ser singular e uma
 
 00:00:54.680 --> 00:01:01.140
-of the singularities occurs when joint angle
-five is equal to zero as shown here. If we
+das singularidades ocorre quando o ângulo de junta
+cinco é igual a zero, como mostrado aqui. Se nós
 
 00:01:01.140 --> 00:01:08.110
-rotate joint 4, we can see how the robot end-effector
-moves. If I move joint 6, we see that the
+rotacionarmos a junta 4, podemos ver como o efetuador
+do robô se move. Se eu mover a junta 6, nós vemos que
 
 00:01:08.110 --> 00:01:13.630
-end-effector motion is exactly the same; it’s
-that due to joint 4. So, if I rotate joints
+o movimento do efetuador é exatamente o mesmo; isso
+é devido à junta 4. Então, se eu rotaciono as juntas
 
 00:01:13.630 --> 00:01:18.060
-4 and 6 in opposite directions, they cancel
-each other out. They are both moving, but
+4 e 6 em direções opostas, elas se cancelam.
+elas estão ambas se movendo, mas
 
 00:01:18.060 --> 00:01:21.390
-the end-effector is not moving at all.
+o efetuador não está se movendo de forma alguma.
 
 00:01:21.390 --> 00:01:26.200
-Following on from the earlier example, we
-can test the determinant of the Jacobian matrix
+Seguindo do exemplo mais recente, nós podemos
+testar o determinante da matriz Jacobiana
 
 00:01:26.200 --> 00:01:31.270
-for the joint angle configuration QN. And,
-here we can see the determinant, and it’s
+para o a configuaração do ângulo de junta QN. E,
+aqui nós podemos ver o determinante, e não
 
 00:01:31.270 --> 00:01:36.430
-not equal to zero. It means I can then invert
-the Jacobian matrix and this is what the inverse
+é igual a zero. Isso significa que eu posso então inver-
+ter a matriz Jacobiana e aqui está como a Jacobiana
 
 00:01:36.430 --> 00:01:41.540
-Jacobian looks like. If we consider a different
-joint angle configuration, I’m going to
+inversa se parece. Se nós considerarmos uma
+configuração diferente de ângulo de junta, eu vou
 
 00:01:41.540 --> 00:01:46.140
-look at the joint configuration Q0 which is
-where all the joint angles equal to zero.
+olhar para a configuração de junta Q0 que é 
+onde todos os ângulos de junta são igual a zero.
 
 00:01:46.140 --> 00:01:53.040
-If I compute the Jacobian here and pass in
-QZ, we can see this is what the Jacobian looks
+Se eu calcular a Jacobiana aqui e passar no
+QZ, podemos ver que isso é como a Jacobiana
 
 00:01:53.040 --> 00:01:57.040
-like and the determinant in this particular
-case is equal to zero.
+se parece e o determinante nesse caso
+particular é igual a zero.
 
 00:01:57.040 --> 00:02:01.859
-So, let’s say, I’ve got a robot control problem
-and I want the robot end-effector to have
+Então, vamos dizer, eu estou com um problema
+de controle de robô e eu quero que seu efetuador tenha
 
 00:02:01.859 --> 00:02:07.119
-a very specific spatial velocity denoted by
-the Greek letter nu, then I can work out what
+uma velocidade espacial muito específica denotada pela
+letra grega nu, então eu posso trabalhar em qual
 
 00:02:07.119 --> 00:02:11.050
-joint velocity I need in order to achieve
-that. If I know the joint angles, and then
+velocidade de junta eu preciso a fim de conseguir
+isso. Se eu sei os ângulos de junta, e então
 
 00:02:11.050 --> 00:02:15.710
-I can compute the Jacobian matrix and invert
-it. And then, I move all the joints at that
+eu posso calcular a matriz Jacobiana e invertê-la.
+E então, eu movo todas as juntas naquela 
 
 00:02:15.710 --> 00:02:20.170
-particular speed and the robot end-effector
-will move with the desired spatial velocity,
+velocidade particular e o efetuador do robô
+irá mover com a velocidade espacial desejada,
 
 00:02:20.170 --> 00:02:25.890
-nu. Now, the problem is that because the robot
-joint angles are changing, after a short while,
+nu. Agora, o problema é que devido aos ângulos de
+junta do robô estarem mudando, depois de pouco tempo
 
 00:02:25.890 --> 00:02:30.630
-the Jacobian will be no longer appropriate
-because the Jacobian is a function of the
+a Jacobiana não irá mais ser apropriada 
+porque ela é uma função dos
 
 00:02:30.630 --> 00:02:35.160
-joint angles. So, I will need to recompute
-the Jacobian matrix.
+ângulos de juntas. Então, eu vou precisar
+recalcular a matriz Jacobiana.
 
 00:02:35.160 --> 00:02:39.120
-If I was to write a computer algorithm to
-do this, it would be a type of discrete time
+Se eu estava para escrever um algoritmo de computador
+para fazer isso, seria um tipo de algoritmo de tempo
 
 00:02:39.120 --> 00:02:44.569
-algorithm. Seria calculado em uma série de 
+discreto. Seria calculado em uma série de 
 passos no tempo discreto, passo de tempo 1,
 
 00:02:44.569 --> 00:02:50.060
