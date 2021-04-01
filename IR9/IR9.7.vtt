@@ -4,7 +4,7 @@ Language: pt-BR
 
 00:00:03.750 --> 00:00:08.210
 Na aula anterior, vimos como transformar a
-velocidade espacial de um sistema de coordenadas
+velocidade no espaço de um sistema de coordenadas
 
 00:00:08.210 --> 00:00:13.760
 em outro. Fizemos isto para o caso de 
@@ -12,7 +12,7 @@ bidimensional e aprendemos que a relação
 
 00:00:13.760 --> 00:00:19.240
 entre velocidades é dada por um matriz
-Jacobiana que na verdade é uma função da
+Jacobiana, que na verdade é uma função da
 
 00:00:19.240 --> 00:00:23.500
 orientação relativa entre dois sistemas de coordenadas.
@@ -22,43 +22,43 @@ Para caso tridimensional, as coisas são bem similares.
 Então, aqui está um sistema de coordenadas
 
 00:00:27.519 --> 00:00:32.300
-de referência tridimensional, um ponto que
+de referência tridimensional e um ponto que
 tem uma velocidade espacial com relação ao
 
 00:00:32.300 --> 00:00:38.480
-Sistema A. E, aqui está o Sistema B e podemos
-descrever a posição relativa entre o Sistema A e
+sistema A. Aqui está o sistema B e podemos
+descrever a posição relativa entre o sistema A e
 
 00:00:38.480 --> 00:00:44.329
-o Sistema B. Podemos mostrar em vermelho a velocidade
-espacial em relação ao Sistema B e a relação
+o sistema B. Podemos mostrar em vermelho a velocidade
+no espaço em relação ao sistema B e a relação
 
 00:00:44.329 --> 00:00:50.350
 entre os dois é dado por uma matriz Jacobiana.
 Para o caso tridimensional, a matriz Jacobiana
 
 00:00:50.350 --> 00:00:56.789
-é 6 x 6. E, novamente, é uma função
+é 6 x 6. Novamente, ela é uma função
 somente da orientação relativa
 
 00:00:56.789 --> 00:01:02.750
-entre os dois sistemas de coordenadas. É
-uma função da matriz de rotação do Sistema B
+entre os dois sistemas de coordenadas, ou seja, é
+uma função da matriz de rotação do sistema B
 
 00:01:02.750 --> 00:01:07.560
-para o Sistema A.
+para o sistema A.
 Aqui está um exemplo de um robô industrial.
 
 00:01:07.560 --> 00:01:13.360
-E, se eu aplicar um conjunto particular de
-velocidades do ângulo de junta, obtenho uma
+Se eu aplicar um conjunto particular de
+velocidades para os ângulo de junta, obtenho uma
 
 00:01:13.360 --> 00:01:18.770
-velocidade espacial específica para o efetuador do robô
-e essas duas quantidades são relacionados pelo
+velocidade no espaço específica para o efetuador do robô.
+Essas duas quantidades são relacionados pelo
 
 00:01:18.770 --> 00:01:23.770
-manipulador, Jacobiano. Agora, isso assume
+operador Jacobiano. Com isso, assumimos
 que a velocidade do efetuador do robô 
 
 00:01:23.770 --> 00:01:30.280
@@ -71,7 +71,7 @@ velocidade do efetuador com relação ao
 
 00:01:35.990 --> 00:01:40.060
 sistema de coordenadas do efetuador. 
-Eu chamei aqui como Sistema 6.
+Eu chamei aqui como sistema 6.
 
 00:01:40.060 --> 00:01:46.189
 Agora, podemos escrever isto em termos de uma
@@ -82,24 +82,24 @@ relaciona a velocidade do ângulo da junta do robô
 com a velocidade do efetuador do robô expressa em termos do
 
 00:01:51.579 --> 00:01:56.250
-Sistema 6. Podemos escrever uma
+sistema 6. Podemos escrever uma
 expressão para a velocidade espacial
 
 00:01:56.250 --> 00:02:02.320
-do efetuador com relação ao Sistema 6 em
+do efetuador com relação ao sistema 6 em
 termos de duas matrizes Jacobianas. Este Jacobiano
 
 00:02:02.320 --> 00:02:06.479
 é a matriz Jacobiana do robô manipulador
-padrão da qual falamos anteriormente. 
+padrão sobre a qual falamos anteriormente. 
 
 00:02:06.479 --> 00:02:13.330
-E, esta matriz Jacobiana é responsável por transformar
-velocidade de um Sistema 0 para o Sistema 6
+Esta matriz Jacobiana é responsável por transformar
+velocidade de um sistema 0 para o sistema 6,
 
 00:02:13.330 --> 00:02:20.170
-e é uma função da posição relativa do Sistema 6
-para o Sistema 0. E, esta matriz Jacobiana
+logo é uma função da posição relativa do Sistema 6
+para o Sistema 0. Esta matriz Jacobiana
 
 00:02:20.170 --> 00:02:26.040
 como introduzimos no slide anterior,
