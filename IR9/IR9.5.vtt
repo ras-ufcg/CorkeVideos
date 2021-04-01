@@ -11,7 +11,7 @@ de seus ângulos de junta e da velocidade
 translacional e angular do efetuador do robô.
 
 00:00:13.520 --> 00:00:19.340
-Velocidade espacial é um vetor de 6 que compreende
+Velocidade espacial é um vetor de 6 unidades que compreende
 a velocidade translacional, v, e a velocidade
 
 00:00:19.340 --> 00:00:24.730
