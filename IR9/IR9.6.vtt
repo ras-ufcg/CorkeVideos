@@ -3,20 +3,20 @@ Kind: captions
 Language: pt-BR
 
 00:00:03.540 --> 00:00:07.270
-Existem muitas informações ricas em uma matriz
+Existem muitas informações uma matriz
 Jacobiana e podemos utilizá-la como uma
 
 00:00:07.270 --> 00:00:13.950
-espécie de ferramenta de diagnóstico para trabalhar em o quão
-bem o robô pode mover em uma configuração de juntas particular.
+espécie de ferramenta de diagnóstico para trabalhar se
+o robô pode mover bem em uma configuração de juntas particular.
 
 00:00:14.240 --> 00:00:18.760
 Vamos avaliar em mais detalhes o caso em que
-a matriz Jacobiana é singular e isto é como
+a matriz Jacobiana é singular, e é assim como
 
 00:00:18.770 --> 00:00:24.060
-essa matriz se parece, para um robô com a 
-pose mostrada aqui, onde o ângulo de junta
+essa matriz se parece para um robô com a 
+pose mostrada aqui, para o ângulo da junta
 
 00:00:24.060 --> 00:00:29.360
 cinco é igual a zero. O movimento do efetuador
@@ -30,8 +30,8 @@ efetuador devido à junta seis
 é dado por essa coluna da matriz Jacobiana.
 
 00:00:38.280 --> 00:00:43.650
-Você notará que essas duas colunas são idênticas 
-e isso significa que elas resultam
+Você notará que essas duas colunas são idênticas.
+Isso significa que elas resultam
 
 00:00:43.650 --> 00:00:48.800
 no mesmo movimento do efetuador e neste caso 
@@ -43,23 +43,23 @@ a junta quatro ou mudar a junta seis.
 
 00:00:56.230 --> 00:01:01.810
 Para uma matriz quadrada, se as duas colunas forem
-idênticas, então ela se torna singular; Um matemático
+idênticas, então ela se torna singular. Um matemático
 
 00:01:01.810 --> 00:01:08.050
-diria que o rank da matriz teria reduzido de um 
-rank completo, rank seis, para um rank cinco.
+diria que o posto da matriz teria reduzido de um 
+posto completo, posto seis, para um posto cinco.
 
 00:01:08.540 --> 00:01:13.660
-Aqui está aquela mesma matriz Jacobiana no MATLAB
-e podemos ver claramente que as colunas quatro
+Aqui está aquela mesma matriz Jacobiana no MATLAB.
+Podemos ver claramente que as colunas quatro
 
 00:01:13.670 --> 00:01:19.040
 e seis são idênticas. Se computarmos o determinante
-dessa matriz, vêmos que ele é igual a zero;
+dessa matriz, vêmos que ele é igual a zero.
 
 00:01:19.040 --> 00:01:24.040
 Isso significa que a matriz Jacobiana é singular.
-Se eu computar o rank dessa matriz, será igual 
+Se eu computar o posto dessa matriz, será igual 
 
 00:01:24.040 --> 00:01:29.540
 a cinco, o que significa que existem 
@@ -69,15 +69,15 @@ apenas cinco colunas na matriz.
 Duas dessas colunas são idênticas.
 
 00:01:32.960 --> 00:01:38.200
-Analisemos agora uma matrix Jacobiana mais saudável.
+Analisemos agora uma matrix Jacobiana melhor.
 Iremos computar o Jacobiano para o ângulo de junta
 
 00:01:38.200 --> 00:01:45.720
-definido, Qn. Essa matriz possui nenhuma coluna
-evidentemente duplicada. Seu determinante
+definido como Qn. Essa matriz possui nenhuma 
+coluna duplicada. Seu determinante
 
 00:01:45.720 --> 00:01:52.940
-é diferente de zero e seu rank é igual a seis.
+é diferente de zero e seu posto é igual a seis.
 Isso significa que todas as seis colunas são únicas.
 
 00:01:54.040 --> 00:01:58.940
@@ -93,15 +93,15 @@ todas as possíveis velocidades dos ângulos de junta,
 nós mapeamos isso em uma elipse no espaço de todas
 
 00:02:11.159 --> 00:02:16.950
-as possíveis velocidades do efetuador e isso indicou
+as possíveis velocidades do efetuador. Isso indicou
 que, em uma determinada configuração de ângulos,
 
 00:02:16.950 --> 00:02:21.450
 o robô foi capaz de mover mais rapidamente na
-direção do mundo Y do que foi capaz de mover
+direção Y do que foi capaz de mover
 
 00:02:21.450 --> 00:02:26.560
-na direção do mundo X. Podemos fazer o mesmo para
+na direção X do mundo. Podemos fazer o mesmo para
 o robô de seis eixos, porém a matemática
 
 00:02:26.560 --> 00:02:29.040
@@ -121,7 +121,7 @@ então é um pouco difícil de entender.
 
 00:02:44.900 --> 00:02:49.209
 Na maioria das vezes, estamos interessados nos três 
-primeiros elementos da velocidade espacial;
+primeiros elementos da velocidade espacial.
 
 00:02:49.209 --> 00:02:54.340
 Essa é a velocidade translacional do 
@@ -129,7 +129,7 @@ efetuador do robô.
 
 00:02:54.340 --> 00:03:00.969
 Neste caso, nós acabamos com um elipsóide
-tridimensional que podemos facilmente plotar.
+tridimensional que podemos plotar facilmente.
 
 00:03:00.969 --> 00:03:06.290
 Assim, aqui está o elipsóide de velocidade para
@@ -144,7 +144,7 @@ alongada na direção vertical e é razoavelmente
 achatada na direção na base do robô
 
 00:03:16.029 --> 00:03:21.379
-e, portanto, o robô é capaz de mover mais
+Portanto, o robô é capaz de mover mais
 rapidamente na direção do eixo comprido da
 
 00:03:21.379 --> 00:03:26.019
@@ -156,7 +156,7 @@ deste elipsóide.
 
 00:03:27.749 --> 00:03:32.439
 Se o elipsoide fosse realmente uma esfera, então
-dizemos que o movimento é isotrópico; isso
+dizemos que o movimento é isotrópico. Isso
 
 00:03:32.439 --> 00:03:38.120
 significa que o robô efetuador é capaz de se mover com
@@ -164,15 +164,15 @@ a mesma rapidez em qualquer direção. É conveniente
 
 00:03:38.120 --> 00:03:43.999
 introduzir uma noção de manipulabilidade, uma
-palavra difícil de dizer, e é uma medida escalar simples 
+palavra difícil de dizer, que é uma medida escalar simples 
 
 00:03:43.999 --> 00:03:49.370
 que diz algo sobre o formato do elipsoide de
 velocidade. Se a manipulabilidade é igual a
 
 00:03:49.370 --> 00:03:53.889
-um, então temos o caso do movimento isotrópico;
-o robô é capaz de se mover igualmente
+um, então temos o caso do movimento isotrópico,
+que o robô é capaz de se mover igualmente
 
 00:03:53.889 --> 00:03:55.439
 rápido em qualquer direção.
@@ -218,11 +218,11 @@ que vou fazer é plotar o robô na configuração
 do ângulo da junta que está no meio da sua
 
 00:04:51.430 --> 00:04:55.970
-área de trabalho e é assim que o robô 
-se parece e então eu vou usar o
+área de trabalho. É assim que o robô 
+se parece, então eu vou usar o
 
 00:04:55.970 --> 00:04:59.970
-o método para a elipse sobrepor à elipsoide
+o método para a elipse e sobrepor à elipsoide
 de velocidade.
 
 00:04:59.970 --> 00:05:04.820
@@ -245,24 +245,24 @@ dar um valor alfa de 0,5 e lá
 vemos a elipse velocidade.
 
 00:05:25.760 --> 00:05:31.190
-Agora, eu posso girar este ao redor e olhar para 
-ele de todos os tipos de diferentes orientações 
+Agora, eu posso girar ele e olhar de 
+todas as diferentes orientações 
 
 00:05:31.190 --> 00:05:36.640
 e pontos de vista. Se eu olhar de lado, 
-podemos ver que a elipse e relativamente
+podemos ver que a elipse é relativamente
 
 00:05:36.640 --> 00:05:41.920
 fina na direção próxima a base do robô.
 Esta é a direção que o robô não
 
 00:05:41.920 --> 00:05:47.240
-é capaz de se mover rapidamente ou como na 
-direção vertical Z, basicamente para cima e para
+é capaz de se mover rapidamente. Na direção
+vertical z, basicamente para cima e para
 
 00:05:47.240 --> 00:05:53.050
-baixo, o robô é capaz de se mover rapidamente; 
-então essa é a velocidade do elipsoide para 
+baixo, o robô é capaz de se mover rapidamente. 
+Então essa é a velocidade do elipsoide para 
 
 00:05:53.050 --> 00:05:55.470
 esta configuração do ângulo da junta.
@@ -276,7 +276,7 @@ horizontalmente, que é o vetor de ângulo de junta,
 Qs, na minha área de trabalho, então o robô
 
 00:06:06.250 --> 00:06:11.970
-está nessa configuração e agora vou plotar a
+está nessa configuração. Agora vou plotar a
 elipse para esta configuração em particular, 
 
 00:06:11.970 --> 00:06:18.340
@@ -287,7 +287,7 @@ mudando de Qn para Qs, e aqui temos o elipsoide
 de velocidade para este caso em particular.
 
 00:06:20.220 --> 00:06:25.970
-Agora, podemos ver que é uma elipse; mas
+Agora, podemos ver que é uma elipse, mas
 de lado, não tem espessura alguma, é uma
 
 00:06:25.970 --> 00:06:30.700
@@ -296,7 +296,7 @@ junta em particular, o robô é capaz de mover
 
 00:06:30.700 --> 00:06:34.710
 seu efetuador a partir dessa visão em particular para cima e
-para baixo, para a esquerda e para a direita; mas olhando 
+para baixo, para a esquerda e para a direita. Mas olhando 
 
 00:06:34.710 --> 00:06:40.710
 desta forma, não tem nenhuma habilidade para
