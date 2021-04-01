@@ -1,17 +1,17 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.810 --> 00:00:08.620
 Nós vamos falar agora sobre a forma da
-matriz Jacobiana Um robô manipulador tem
+matriz Jacobiana. Um robô manipulador tem
 
 00:00:08.620 --> 00:00:12.959
-em geral N juntas, N pode ser um número
-pequeno, o robô pode ter apenas duas
+em geral N juntas. N pode ser um número
+pequeno: o robô pode ter apenas duas
 
 00:00:12.959 --> 00:00:17.150
-juntas. O robô pode ter 100 juntas.
+juntas. Mas o robô pode ter 100 juntas.
 Eu quero entender qual o efeito do
 
 00:00:17.150 --> 00:00:22.230
@@ -20,27 +20,27 @@ manipulador de matriz Jacobiana, pois a Jacobiana
 
 00:00:22.230 --> 00:00:28.849
 tem uma coluna por junta. Assim, um robô com N juntas
-tem o manipulador de matriz jacobiana com N colunas.
+tem o operador de matriz jacobiana com N colunas.
 
 00:00:28.849 --> 00:00:34.090
 A Jacobiana tem uma linha para cada elemento
-do vetor da velocidade espacial. Então, para movimentos
+do vetor da velocidade no espaço. Então, para movimentos
 
 00:00:34.090 --> 00:00:39.080
 em três dimensões, o vetor da velocidade
-espacial tem 6 elementos - 3 para a velocidade
+no espaço tem 6 elementos: 3 para a velocidade
 
 00:00:39.080 --> 00:00:43.800
-de translação e 3 para a velocidade angular. E,
-isso significa que a matriz Jacobiana sempre tem
+de translação e 3 para a velocidade angular.
+Isso significa que a matriz Jacobiana sempre tem
 
 00:00:43.800 --> 00:00:48.970
 seis linhas. Então a matriz Jacobiana do robô
 manipulador é uma matriz 6 x N.
 
 00:00:48.970 --> 00:00:53.980
-Esse robô tem apenas 4 juntas e nós chamamos
-de um robô sub-atuado. E, isso quer dizer quer
+Esse robô tem apenas 4 juntas e nós o chamamos
+de um robô sub-atuado. Isso quer dizer quer
 
 00:00:53.980 --> 00:00:59.530
 seu espaço de tarefas não cobre todo o conjunto
@@ -48,11 +48,11 @@ SE3. Ainda que o efetuador alcance
 
 00:00:59.530 --> 00:01:05.800
 todas as posições dentro dos limites de seu espaço
-de trabalho., não é capaz de alcançar todas as orientações possíveis.
+de trabalho, ele não é capaz de alcançar todas as orientações.
 
 00:01:05.800 --> 00:01:10.359
-Então, por exemplo, quando o robô em uma configuração
-assim, pode ajustar a orientação da
+Então, por exemplo, quando o robô  está em 
+uma configuração assim, podemos ajustar a orientação da
 
 00:01:10.359 --> 00:01:14.229
 garra dessa forma. Mas, é impossível para ele
@@ -63,7 +63,7 @@ nessa direção ou nessa direção.
 
 00:01:18.640 --> 00:01:23.740
 Consideremos o caso de um robô com apenas
-4 juntas. Isso geralmente é chamado de um
+4 juntas. Como disse, isso geralmente é chamado de um
 
 00:01:23.740 --> 00:01:29.890
 sistema robótico sub-atuado. Nesse caso,
@@ -78,7 +78,7 @@ um problema. Um robô assim é incapaz de
 rotacionar a ferramenta no eixo x ou y. É
 
 00:01:40.689 --> 00:01:45.880
-a forma que foi construído. Não pode rotacionar
+a forma que foi construído. Não podemos rotacionar
 a ferramenta dessa forma. Então, podemos excluir
 
 00:01:45.880 --> 00:01:51.679
@@ -93,15 +93,15 @@ Se eu fizer isso, então eu devo remover as
 linhas correspondentes na matriz Jacobiana.
 
 00:01:58.469 --> 00:02:04.969
-E, o resultado agora é um sistema 4 x 4. E
-agora, a matriz Jacobiana é uma matriz inversível. Dada
+O resultado agora é um sistema 4 x 4. 
+Agora, a matriz Jacobiana é uma matriz inversível. Dada
 
 00:02:04.969 --> 00:02:09.850
-a velocidade espacial desejada, é um vetor
-de velocidade espacial menor agora. Nós podemos
+a velocidade no espaço desejada, agora temos um 
+vetor de velocidade espacial menor. Nós podemos
 
 00:02:09.850 --> 00:02:14.319
-calcular as velocidades angulares. Precisamos
+calcular as velocidades angulares, pois precisamos
 obter essa velocidade espacial.
 
 00:02:14.319 --> 00:02:19.840
@@ -125,12 +125,12 @@ se lembrar que o termo aqui dentro
 é em fato uma matriz 100 x 100 e precisamos
 
 00:02:41.790 --> 00:02:47.750
-inverter isso. E computacionalmente, isso não
+inverter isso. Computacionalmente, isso não
 é uma coisa simples de se fazer. Contudo, se usarmos
 
 00:02:47.750 --> 00:02:52.769
 essa pseudo-inversa, podemos escrever uma expressão
-que relaciona a velocidade espacial desejada
+que relaciona a velocidade no espaço desejada
 
 00:02:52.769 --> 00:03:00.549
 do efetuador do robô para a velocidade
@@ -138,14 +138,14 @@ requirida para cada uma de suas 100 juntas.
 
 00:03:00.549 --> 00:03:04.819
 Mas nós podemos fazer algo extra também no caso
-de um robô desse - um robô com mais de
+de um robô desse com mais de
 
 00:03:04.819 --> 00:03:11.349
 de 6 juntas. Podemos adicionar esse termo aqui
 e nos referimos a isso como o movimento de espaço nulo.
 
 00:03:11.349 --> 00:03:16.599
-É pré-multiplicado por essa expressão de matriz
+Isso é pré-multiplicado por essa expressão de matriz
 aqui, o que o filtra com eficácia, assim
 
 00:03:16.599 --> 00:03:21.980
@@ -188,16 +188,16 @@ seria a dimensão 94. Isto é 100 menos
 6. Então, N seria uma matriz de 6 x 94 elementos
 
 00:04:11.260 --> 00:04:16.420
-Vou importar o modelo de um redundante
-robô que se move em 3D e esse é o modelo
+Vou importar o modelo de um robô
+que se move em 3D e esse é o modelo.
 
 00:04:16.420 --> 00:04:21.940
-hyper 3D. E, vou pedir um robô
-com 20 articulações. Para ilustrar, por exemplo
+Vou pedir um robô com 20 articulações. 
+Para ilustrar, por exemplo
 
 00:04:21.940 --> 00:04:26.190
-Preciso escolher um conjunto de ângulos de articulação. eu
-precisa escolher 20 números. Eu sei que se
+oreciso escolher um conjunto de ângulos de articulação. eu
+preciso escolher 20 números. Eu sei que se
 
 00:04:26.190 --> 00:04:29.340
 eles são todos iguais a zero, o robô irá
@@ -208,16 +208,16 @@ Então, o que vou fazer é escolher 20
 números aleatórios. Vou usar o MATLAB para contruir
 
 00:04:34.370 --> 00:04:39.650
-uma função rand. Então, este é o meu ângulo de articulação,
+uma função rand. Então, este é o meu ângulo de articulação:
 um vetor de 20 números aleatórios no intervalo de
 
 00:04:39.650 --> 00:04:46.039
-0 à 1. E eu posso plotar esta configuração de uma 
-articulação em particular para um robô e isto é
+0 a 1. E eu posso plotar esta configuração de uma 
+articulação em particular para um robô, isto é
 
 00:04:46.039 --> 00:04:50.630
-o que parece. Se eu posso ter um bit
-de vizualização ao redor, podemos ver que 
+o que aparece. Se eu posso mover um bit
+de vizualização, podemos ver que 
 
 00:04:50.630 --> 00:04:55.139
 a ponta ligeiramente pra cima e tem alguns
@@ -225,7 +225,7 @@ curvas e torções nele.
 
 00:04:55.139 --> 00:05:00.520
 Agora que tenho o conjunto de ângulos de articulações e
-eu tenho um modelo de robô, posso calcular a matrix
+um modelo de robô. Logo, posso calcular a matrix
 
 00:05:00.520 --> 00:05:05.830
 Jacobiana. E vimos como fazer isso para
@@ -233,7 +233,7 @@ muitos outros tipos de robôs. Eu uso o método
 
 00:05:05.830 --> 00:05:11.430
 Jacobiano e eu passo no conjunto de ângulos articulares.
-E, esta é a matrix Jacobiana. Podemos ver
+Esta é a matrix Jacobiana. Podemos ver
 
 00:05:11.430 --> 00:05:16.250
 que tem 6 linhas e 20 colunas
@@ -252,32 +252,32 @@ mas posso calcular o pseudo-inverso. Que
 função pinv e passar na matriz Jacobiana.
 
 00:05:31.000 --> 00:05:36.789
-E, este é o resultado da pseudo-inversa.
-E podemos ver o que temos no espaço de trabalho
+Este é o resultado da pseudo-inversa.
+Podemos ver o que temos, no espaço de trabalho,
 
 00:05:36.789 --> 00:05:41.660
-agora uma matriz 20 x 6, a pseudo-inversa de
+uma matriz 20 x 6, a pseudo-inversa de
 a matriz Jacobiana.
 
 00:05:41.660 --> 00:05:46.889
-Agora, falamos sobre o movimento do espaço nulo.
-E, a fim de calcular o movimento do espaço nulo,
+Agora, falamremos sobre o movimento do espaço nulo.
+A fim de calcular o movimento do espaço nulo,
 
 00:05:46.889 --> 00:05:52.749
 precisamos calcular o espaço nulo da matriz 
 Jacobiano e o MATLAB têm a função de fazer isso.
 
 00:05:52.750 --> 00:05:58.620
-É a função nula, aqui a matriz 
-Jacobiano e aqui está a matriz de espaço nulo.
+É a função null sobre a matriz Jacobiano.
+Aqui está a matriz de espaço nulo.
 
 00:05:58.620 --> 00:06:04.669
 A matriz de espaço nulo tem 20 linhas e apenas
 14 colunas. 14 vem de 20, que é o
 
 00:06:04.669 --> 00:06:09.879
-número de colunas  na matriz original 
-menos 6. E 6 é a classificação da matriz
+número de colunas da matriz original 
+menos 6, que é a classificação da matriz
 
 00:06:09.879 --> 00:06:15.520
 Jacobiana. Esse é o número de colunas na matriz Jacobiana. 
@@ -316,38 +316,38 @@ Ele terá mais linhas do que colunas.
 
 00:06:56.990 --> 00:07:02.460
 Isso significa que o robô não pode acessar todos
-possíveis poses dentro de um SE3. E, em ordem
+possíveis poses dentro de um SE3. Em ordem
 
 00:07:02.470 --> 00:07:07.509
 usar a matriz para fins de controle,
 precisamos corrigir isso e fazemos isso 
 
 00:07:07.509 --> 00:07:12.509
-removendo alguns graus de liberdade espaciais.
+removendo alguns graus de liberdade.
 Eliminamos algumas linhas na matriz Jacobiana
 
 00:07:12.509 --> 00:07:19.210
 para que se torne uma matriz 5 x 5 ou 4 x 4  
-que é então invertível. Dentro do estojo
+que é então invertível. 
 
 00:07:19.210 --> 00:07:24.550
-de um robô com mais de 6 articulações, que
+Para robô com mais de 6 articulações, que
 nós nos referimos como um robô super acionado, a
 
 00:07:24.550 --> 00:07:29.819
-matriz jacobiana tem mais colunas do que tem
+matriz Jacobiana tem mais colunas do que tem
 linhas. É uma matriz 6 x N.
 
 00:07:29.819 --> 00:07:34.930
 Para usar a matriz Jacobiana para controle,
-tomamos seu pseudo-inverso. A
+tomamos seu pseudo-inverso. 
 
 00:07:34.930 --> 00:07:39.190
-grande vantagem de um robô como este é que
+A grande vantagem de um robô como este é que
 podemos pensar em ter juntas sobressalentes e
 
 00:07:39.190 --> 00:07:43.629
-podemos usar algumas dessas juntas sobressalentes para fazer
+que podemos usar algumas dessas juntas sobressalentes para fazer
 o que chamamos de movimento de espaço nulo. E enquanto
 
 00:07:43.629 --> 00:07:47.780
