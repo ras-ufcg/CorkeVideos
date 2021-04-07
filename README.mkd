@@ -49,17 +49,17 @@ _*IR1*_  - `done`
 
 _*IR2*_  - `done`
 
-_*IR3*_  - in progress
+_*IR3*_  - `done`
 
-_*IR4*_  - in progress
+_*IR4*_  - `done`
 
-_*IR5*_  - in progress
+_*IR5*_  - `done`
 
-_*IR6*_  - in progress
+_*IR6*_  - `done`
 
-_*IR7*_  - in progress
+_*IR7*_  - `done`
 
-_*IR8*_  - in progress
+_*IR8*_  - `done`
 
 _*IR9*_  - in progress
 
