@@ -142,146 +142,147 @@ the robot got six joints, the Jacobian matrix
 will be square and we can invert it so long
 
 00:02:55.970 --> 00:03:01.090
-as the robot is not in a singular configuration.
-For a robot with less than six joints which
+que o robô não esteja numa configuração singular.
+Para um robô com menos de seis juntas, o qual
 
 00:03:01.090 --> 00:03:06.840
-we refer to as an under-actuated robot, the
-Jacobian is not square. In order to square
+chamamos de robô sub-atuado, a Jacobiana
+não é quadrada. Para torná-la quadrada,
 
 00:03:06.840 --> 00:03:12.040
-it up so we can use it for control purposes,
-we need to eliminate some rows in that Jacobian
+de modo que possamos usá-lo para propósitos de 
+controle, precisamos eliminar algumas linhas da matriz
 
 00:03:12.040 --> 00:03:17.530
-matrix. For the case of a robot with more
-than six joints, which we refer to as an over-actuated
+Jacobiana. Para o caso de um robô com mais de
+seis juntas, o qual chamamos de robô sobre-atuado,
 
 00:03:17.530 --> 00:03:22.680
-robot, the Jacobian has many more columns
-than has rows. If we want to invert it for
+o Jacobiano possui muitas mais colunas do
+que linhas. Se queremos inverter isso para
 
 00:03:22.680 --> 00:03:26.709
-control purposes, we need to use a technique
-called the Pseudo Inverse. We can also think
+propósitos de controle, precisamos usar uma técnica
+chamada de Pseudo Inversão. Também podemos pensar
 
 00:03:26.709 --> 00:03:30.610
-about the robot like this as having a large
-number of spare joints and we can use this
+num robô como esse como tendo um grande número 
+de juntas extras e podemos usá-las
 
 00:03:30.610 --> 00:03:35.830
-to control the configuration with the shape
-of the robot arm independently of the pose
+para controlar sua configuração com o formato
+do braço do robô independente da pose
 
 00:03:35.830 --> 00:03:39.959
-of its end effector. We refer to this as null
-space motion.
+do seu efetuador. Nos referimos a isso como
+movimento espacial nulo.
 
 00:03:39.959 --> 00:03:44.870
-We can transform velocity expressed with respect
-to one frame to velocity with respect to another
+Podemos transformar uma velocidade expressa em relação a um
+sistema de coordenadas para uma velocidade em relação a outro
 
 00:03:44.870 --> 00:03:50.920
-frame by a Jacobian matrix, and that Jacobian
-matrix is a function of the relative pose
+sistema através de uma matriz Jacobiana,
+a qual é uma função da pose relativa
 
 00:03:50.920 --> 00:03:56.599
-between the two frames. In particular, it’s
-a function of the relative orientation between
+entre os dois sistemas. Em particular, é uma
+função da orientação relativa entre
 
 00:03:56.599 --> 00:03:58.569
-the two coordinate frames.
+os dois sistemas de coordenadas.
 
 00:03:58.569 --> 00:04:03.170
-We can use that velocity transform technique
-in order to determine the robot’s end-effector
+Nós podemos usar essa técnica de transformação
+de velocidade para determinar a velocidade espacial
 
 00:04:03.170 --> 00:04:08.290
-spatial velocity with respect to the end-effector
-coordinate frame rather than the world coordinate
+do efetuador do robô em relação ao sistema de coordenadas
+do efetuador ao invés do sistema de coordenadas
 
 00:04:08.290 --> 00:04:13.720
-frame, and that’s typically a very useful
-and convenient thing to have. We can therefore define
+universal, e isso é algo, geralmente, muito útil
+e conveniente a se ter. Nós podemos, portanto, definir
 
 00:04:13.720 --> 00:04:19.760
-a variant of the Jacobian matrix which gives us the velocity in frame six, the end-effector coordinate frame.
+uma variante da matriz Jacobiana, que nos dá a velocidade
+no sistema seis, o sistema de coordenadas do efetuador.
 
 00:04:20.080 --> 00:04:24.680
-Angular velocity is a somewhat abstract concept
-that’s a little difficult to visualize.
+Velocidade angular é um conceito um tanto abstrato
+e um pouco difícil de visualizar.
 
 00:04:24.690 --> 00:04:28.750
-We often talk about the orientation of a body
-in terms of its roll, pitch, and yaw angles
+Geralmente, falamos sobre a orientação de um corpo
+em termos de seus ângulos de roll, pitch e yaw,
 
 00:04:28.750 --> 00:04:33.160
-so it’s more intuitive to express the rotational
-velocity of an object in terms of the rates
+logo, é mais intuitivo expressar a velocidade
+rotacional de um objeto em termos de suas taxas
 
 00:04:33.160 --> 00:04:39.919
-of change of its roll, pitch, and yaw angles.
-We can derive a 3x3 Jacobian matrix which
+de variação dos seus ângulos de roll, pitch e yaw.
+Podemos derivar uma matriz Jacobiana 3x3 que
 
 00:04:39.919 --> 00:04:45.620
-transforms roll, pitch, and yaw angle rates
-into traditional angular velocity. Then we
+transforma as taxas de variação dos ângulos
+em velocidade angular tradicional. Então,
 
 00:04:45.620 --> 00:04:50.880
-can introduce a variant of a spatial velocity
-vector and we replace the angular velocity
+podemos inserir uma variante de um vetor de velocidade
+espacial e substituir a componente de velocidade
 
 00:04:50.880 --> 00:04:55.590
-component with a roll, pitch, yaw velocity
-component. This leads to something called
+angular por uma de velocidade roll, pitch,
+yaw. Isso resulta em algo chamado
 
 00:04:55.590 --> 00:05:01.020
-the Analytic Jacobian matrix and this maps
-robot joint angle rates to the modified spatial
+matriz Jacobiana Analítica e mapeia as taxas dos
+ângulos de junta do robô no vetor modificado de
 
 00:05:01.020 --> 00:05:02.199
-velocity vector.
+velocidade espacial.
 
 00:05:02.199 --> 00:05:07.160
-We introduced the concept of the velocity
-ellipsoid in three dimensions. The ellipsoid
+Introduzimos o conceito de elipsoide de
+velocidade em três dimensões. O elipsoide
 
 00:05:07.160 --> 00:05:11.940
-says something about the ability of the robot
-to achieve velocity in different directions
+indica algo sobre a habilidade do robô em
+ganhar velocidade em diferentes dimensões
 
 00:05:11.940 --> 00:05:17.110
-in three-dimensional space. The end-effector
-is able to move most quickly in the direction
+num espaçõ tridimensional. O efetuador é
+capaz de se mover mais rapidamente na direção
 
 00:05:17.110 --> 00:05:22.699
-parallel to the longest axis of the ellipsoid
-and it moves most slowly parallel to the direction
+paralela ao eixo mais longo do elipsoide,
+e mais lentamente na direção paralela ao
 
 00:05:22.699 --> 00:05:28.290
-of the shortest axis of the ellipsoid. We
-can describe the overall shape of the ellipsoid
+eixo mais curto do elipsoide. Podemos
+descrever o formato geral do elipsoide
 
 00:05:28.290 --> 00:05:33.509
-in terms of a scalar measure which we call
-manipulability, and it says something about
+em termos de uma medida escalar chamada de
+manipulabilidade, e ela indica algo sobre
 
 00:05:33.509 --> 00:05:39.919
-the compactness of the ellipsoid. If the manipulability
-is equal to one, the ellipsoid is in fact
+a compacidade do elipsoide. Se a manipulabilidade
+é igual a 1, o elipsoide é de fato uma
 
 00:05:39.919 --> 00:05:44.979
-the sphere, and we refer to this as the isotropic
-motion case. The robot is able to move equally
+esfera, e chamamos isto de caso de movimento
+isotrópico. O robô é capaz de se mover igualmente
 
 00:05:44.979 --> 00:05:51.020
-quickly in any direction. In the case of manipulability
-is equal to zero, that indicates that motion
+rápido em qualquer direção. No caso da manipulabilidade
+ser igual a zero, isso indica que o movimento
 
 00:05:51.020 --> 00:05:55.870
-in one partition direction is not possible
-and the three-dimensional ellipsoid has been
+em uma das direções não é possível,
+e o elipsoide tridimensional é
 
 00:05:55.870 --> 00:05:58.310
-flattened into an elliptical plate.
+achatado num plano elíptico.
 
