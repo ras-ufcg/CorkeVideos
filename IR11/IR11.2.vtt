@@ -1,160 +1,159 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.340 --> 00:00:07.830
-Let's return to the simple two-link robot
-manipulator that we looked at much, much earlier
+Vamos retornar ao manipulador de robô simples 
+de duas ligações que examinamos muito, muito antes
 
 00:00:07.830 --> 00:00:12.090
-in the course. When we first looked at it,
-we were interested in the kinematics, that's
+no curso. Quando olhamos pela primeira vez,
+estávamos interessados na cinemática, que é
 
 00:00:12.090 --> 00:00:17.400
-looking at the relationship between the joint
-angles, Q1 and Q2 and the position and orientation
+olhar a relação entre os ângulos da articulação, 
+Q1 e Q2 e a posição e orientação
 
 00:00:17.400 --> 00:00:20.530
-of the end effector.
-Now what we're going to do is to consider
+do efetuador.
+Agora o que vamos fazer é considerar
 
 00:00:20.530 --> 00:00:25.440
-that these links have got masses so I have
-dropped on the symbols for the centre of mass
+que essas ligações têm massas, então 
+coloquei os simbolos do centro de massa
 
 00:00:25.440 --> 00:00:30.600
-of each of these links. So we think about
-how this works mechanically in practice: Each
+de cada uma dessas ligações. Então, pensamos sobre
+como isso funciona mecanicamente na prática: Cada
 
 00:00:30.600 --> 00:00:35.620
-link has to support all of the other links
-that are beyond it and each link of course
+ligação deve oferecer suporte a todas as outras ligações
+que estão além dele e cada ligação é claro,
 
 00:00:35.620 --> 00:00:38.600
-then is supported by all the links that are
-before it.
+então suportada por todas as ligações
+que estão antes dele.
 
 00:00:38.600 --> 00:00:42.620
-So there is mechanically a connection between
-the links, and the weight of one link has to
+Portanto, há mecanicamente uma conexão 
+entre as ligações, e o peso de uma ligação tem que
 
 00:00:42.620 --> 00:00:48.090
-be born by the link before it and the link
-before that and so on. Every link then exerts
+nascer pela ligação anterior e pela ligação anterior 
+e assim por diante. Cada ligação, então exerce
 
 00:00:48.090 --> 00:00:51.850
-a force and a moment on its neighbouring links.
+uma força e um momento em suas ligações vizinhas.
 
 00:00:51.850 --> 00:00:55.879
-So a really useful way to consider the forces
-and moments that are acting on each of these
+Portanto, uma maneira realmente útil de considerar 
+as forças e os momentos que atuam em cada uma dessas
 
 00:00:55.879 --> 00:01:00.870
-links is to draw a free body diagram. What
-we do is we disconnect the different links
+ligações é desenhar um diagrama de corpo livre. 
+O que fazemos é desconectar as diferentes ligações
 
 00:01:00.870 --> 00:01:04.559
-and we look at them individually, they are
-free bodies.
+e olhar para eles individualmente, 
+elas são corpos livres.
 
 00:01:04.559 --> 00:01:09.380
-Each link has got a mass and gravity's going
-to act on that mass with a downward force.
+Cada ligação tem uma massa e a gravidade vai 
+agir sobre essa massa com uma força para baixo
 
 00:01:09.380 --> 00:01:13.399
-The base of the robot is going to provide
-a vertical upward force to hold the red link
+A base do robô vai exercer uma força vertical
+para cima para segurar a ligação vermelha
 
 00:01:13.399 --> 00:01:17.889
-up to stop it from falling down and the green
-link is going to provide a downward force
+para impedi-la de cair e a ligação verde
+exercerá uma força para baixo
 
 00:01:17.889 --> 00:01:21.049
-on the end of the red link due to its own
-weight.
+na extremidade da ligação vermelha 
+devido ao seu próprio peso.
 
 00:01:21.049 --> 00:01:24.420
-Look now at the green link, there's going
-to be an upward force here, which equal and
+Olhe agora para a ligação verde, haverá uma 
+força para cima aqui, que é igual e
 
 00:01:24.420 --> 00:01:28.899
-opposite of the downward force on the red
-link. This is Newton's third law. So if there
+oposta a força para baixo da ligação vermelha.
+Está é a terceira lei de Newton. Então, se houver
 
 00:01:28.899 --> 00:01:32.649
-is a downward force on the red link is the
-weight of green link and there is a upward
+uma força para baixo na ligação vermelha é o
+peso da ligação verde e há uma força para cima
 
 00:01:32.649 --> 00:01:38.099
-force on the green link which is provided
-by the red link to keep it up.
+na ligação verde que é exercida pela 
+ligação vermelha para mantê-la ativa
 
 00:01:38.099 --> 00:01:42.829
-Now there is a moment provided by the motor
-which is driving joint one. It's providing
+Agora há um momento fornecido pelo motor 
+que aciona a articulação um. Ele está exercendo
 
 00:01:42.829 --> 00:01:48.239
-a torque to stop the red link rotating. And
-similarly there's a torque applied to the
+um torque para parar a rotada da ligação vermelha.
+E da mesma forma, há um torque aplicado a
 
 00:01:48.239 --> 00:01:53.779
-green link by the joint two motor to stop
-the green link from rotating. And then there
+ligação verde pelo motor da articulação dois para
+impedir a ligação verde gire. E então, há
 
 00:01:53.779 --> 00:02:00.399
-is a reaction torque, equal and opposite torque
-from that motor which is applied to the red link.
+um torque de reação, torque igual e oposto
+daquele que é aplicado a ligação vermelha.
 
 00:02:00.640 --> 00:02:06.899
-So here we see, all the forces and moments
-that are acting on each of a link's of a robot.
+Então aqui vemos, todas as forças e momentos 
+que estão agindo em cada um das ligações de um robô.
 
 00:02:06.899 --> 00:02:11.969
-These forces and moments depend on the pose
-of each link, depend on the speed of a link
+Essas forças e momentos dependem da posição de 
+cada ligação, dependem da velocidade de uma ligação
 
 00:02:11.969 --> 00:02:16.969
-and the acceleration of the link and of course,
-they also depend on gravity.
+e a aceleração da ligação e, claro, 
+elas também dependem da gravidade.
 
 00:02:16.969 --> 00:02:21.980
-These forces and moments also depend on the
-link parameters; the actual mass of a link
+Essas forças e momentos também dependem dos 
+parâmetros da ligação; a massa real de uma ligação,
 
 00:02:21.980 --> 00:02:27.260
-and its inertia and its length and so on.
-So let's have a look at some of these link parameters.
+sua inércia, seu comprimento e assim pro diante. Então, 
+vamos dar uma olhada em alguns desses parâmetros de ligação.
 
 00:02:27.640 --> 00:02:32.079
-In kinematic parameters, we introduced much
-earlier in the course, we have the link
+Em parâmetros cinemáticos, apresentamos muito 
+antes no curso, temos o comprimento da ligação
 
 00:02:32.079 --> 00:02:40.299
-length. In this case, the length A1 from the
-axis of joint one to the axis of joint two.
+Neste caso, o comprimento A1 do eixo
+da junta um ao eixo da junta dois.
 
 00:02:40.299 --> 00:02:43.430
-And similarly, we have the length of link
-two.
+E da mesma forma, temos o comprimento da ligação dois
 
 00:02:43.430 --> 00:02:48.150
-We introduced link coordinate frames here.
-Coordinate frame one is attached to the end
+Nós introduzimos o sistema de coordenadas de ligações aqui.
+O sistema de coordenadas um é anexado ao final
 
 00:02:48.150 --> 00:02:53.879
-of link one and coordinate frame two is attached
-to the coordinate frame of link two. And we
+da ligação um e o sistema de coordenadas dois é 
+anexado ao sistema de coordenadas da ligação dois.
 
 00:02:53.879 --> 00:02:57.939
-looked at link co-ordinate frames again, much
-earlier when we were considering serial link
+E observamos os sistemas de coordenadas de ligação novamente,
+muito antes quando estávamos considerando a cinemática do
 
 00:02:57.939 --> 00:02:59.959
-manipulator kinematics.
+manipulador de ligação serial.
 
 00:02:59.959 --> 00:03:05.010
-We can also describe the position of the centre
-of mass with respect to the link one coordinate
+Também podemos descrever a posição do centro de massa 
+em relação ao sistema coordenada de uma ligação.
 
 00:03:05.010 --> 00:03:11.140
 frame. In this case, it is a displacement
