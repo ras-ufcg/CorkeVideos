@@ -3,183 +3,185 @@ Kind: captions
 Language: en-GB
 
 00:00:03.220 --> 00:00:07.720
-Now, we are going to talk about joint control
-with disturbances. And the most obvious disturbance,
+Agora, iremos falar sobre controle de juntas
+com pertubações. E a mais óbvia e comum
 
 00:00:07.720 --> 00:00:13.451
-the most common disturbance on a robotic arm
-is the disturbance due to gravity. Imagine
+pertubação em um braço robótico é devido 
+à gravidade.
 
 00:00:13.451 --> 00:00:18.359
-a PUMA robot manipulator in this particular
-configuration. It’s got its arm stretched
+Imagine um manipulador de um robô PUMA. Ele
+tem seu braço esticado na horizontal
 
 00:00:18.359 --> 00:00:23.519
-out horizontally and can you imagine that
-arm weighs quite a lot. So, there is a large
+e você pode imaginar que seu braço pesa 
+um bocado. Então, há um grande torque em 
 
 00:00:23.519 --> 00:00:28.359
-torque on the shoulder joint and there’s
-also a large torque on the elbow joint that
+sua junta de ombro e há um grande torque
+na junta de cotovelo, que é necessária
 
 00:00:28.359 --> 00:00:32.980
-are required in order to keep the arm in that
-horizontal pose.
+para manter o braço nessa pose horizontal.
 
 00:00:32.980 --> 00:00:37.510
-We can look at a more simplified version of
-that particular scenario. Consider here we
+Podemos analisar uma versão mais simplificada
+deste cenário em particular. Considere aqui
 
 00:00:37.510 --> 00:00:42.480
-have an electric motor which is connected
-to a horizontal bar. The bar has a centre
+que temos um motor elétrico que é conectado a
+uma barra horizontal. A barra possui um centro
 
 00:00:42.480 --> 00:00:48.080
-of mass and the centre of mass is a distance
-r from the axis of the motor. And the bar
+de massa e esse centro está a uma distância 
+r do eixo do motor. Essa barra possui
 
 00:00:48.080 --> 00:00:55.010
-has got a mass of m and the bar has a weight
-force, that’s the force due to gravity acting
+uma massa m e possui uma força peso, essa é 
+a força devido a ação da gravidade
 
 00:00:55.010 --> 00:01:00.770
-on the centre of mass and that is a force
-of mg acting in the downward direction.
+sobre o centro de massa e essa é a força 
+mg agindo na direção para baixo.
 
 00:01:00.770 --> 00:01:07.770
-Now, a force of mg with a lever arm length
-of r results in a torque acting on the motor
+Agora, a força mg em um braço de alavanca de
+comprimento r resulta em um torque agindo
 
 00:01:07.770 --> 00:01:11.960
-shaft and the magnitude of that torque is
-given by the mass times the gravitational
+sobre o eixo do motor e a magnitude deste torque
+é dada pela massa vezes a aceleração da 
 
 00:01:11.960 --> 00:01:17.810
-acceleration times the distance of the centre
-of mass from the axis of the motor. In this
+gravidade, vezes a distância do centro de massa
+ao eixo do motor. Nesse caso particular,
 
 00:01:17.810 --> 00:01:21.800
-particular case, the torque is acting in a
-counter clockwise direction. The centre of
+o torque está agindo em uma direção anti-horária.
 
 00:01:21.800 --> 00:01:27.320
+O centro de massa tende a se mover verticalmente
+para baixo. Se de fato realizarmos os cálculos 
 mass wants to move vertically downward. If
 we actually do the maths for the case we looked
 
 00:01:27.320 --> 00:01:32.520
-at a moment ago, the PUMA robot with its arm
-in a horizontal configuration, the torque
+para o caso que vimos há pouco, o robô PUMA com
+seu braço na configuração horizontal, o torque
 
 00:01:32.520 --> 00:01:37.790
-on the shoulder joint is 14 Newton meters.
-If I assume that my arm is one meter long,
+em seu ombro é de 40 Newton metro. Se assumirmos
+que meu braço tem um metro de comprimento,
 
 00:01:37.790 --> 00:01:42.450
-that’s equivalent to holding four kilograms
-with my arm outstretched; that’s a pretty
+isso é equivante a segurar 4 quilos com meu 
+braço esticado: isso não é tão fácil
 
 00:01:42.450 --> 00:01:46.810
-difficult thing to do, though there’s a
-lot of torque acting on the shoulder joint
+de se fazer, embora exista muito torque
+agindo sobre a junta de ombro do
 
 00:01:46.810 --> 00:01:52.260
-of the PUMA robot. And clearly, this is going
-to have an effect on the control of the shoulder
+robô PUMA. Claramente, isso terá algum
+efeito sobre o controle da junta de ombro.
 
 00:01:52.260 --> 00:01:58.010
-joint. So, let’s look now in some more detail
-at our robot joint controller. And this is
+Assim, agora vamos avaliar em mais detalhes
+nosso controlador de junta robôtica. Este é 
 
 00:01:58.010 --> 00:02:02.920
-a block diagram we introduced in the last
-lecture. It’s a feedback controller. The
+o diagrama de blocos que introduzimos em nossa
+última aula. É um controlador de feedback.
 
 00:02:02.920 --> 00:02:07.980
-input to the robot joint controller is the
-desired position, theta star. And the output
+A entrada para o controlador de junta robôtica
+é a posição desejada, teta estrela. E a saída
 
 00:02:07.980 --> 00:02:13.640
-of the joint controller is the actual joint
-position denoted by theta. And as we discussed
+do controlador será a posição efetiva, denotada
+por teta. Assim como discutimos em nossa última 
 
 00:02:13.640 --> 00:02:18.430
+aula, estou usando a transformada de Laplace
+de várias dessas variáveis; então, não suas 
 in the last lecture, I’m using the Laplace
 transform of many of these variables; so not
 
 00:02:18.430 --> 00:02:23.730
-their response in the time domain but their
-response in the Laplace domain. And I denote
+respostas o domínio do tempo mas sim suas
+respostas no domínio de Laplace. E eu denoto
 
 00:02:23.730 --> 00:02:28.050
-the Laplace domain by using capital letters.
-So, that’s why I’ve used capital theta
+o domínio de Laplace usando letras maiúsculas.
+Portanto, por isso uso teta maiúsculo aqui e
 
 00:02:28.050 --> 00:02:34.310
-here and here. Now within this control loop,
-we have a control law, it might be a proportional
+aqui. Agora, dentro do laço de controle, temos
+a lei de controle, podendo ser um controlador 
 
 00:02:34.310 --> 00:02:38.790
-derivative controller, it might be a proportional
-integral derivative controller known as a
+proporcional-derivativo, ou proporcional-integral-
+derivativo conhecido como controlador PID,
 
 00:02:38.790 --> 00:02:44.200
-PID controller and we have the gain of the
-motor driver and we have the gain of the sensor
+temos o ganho do driver motor, o ganho do sensor
 
 00:02:44.200 --> 00:02:49.810
-and we have the transfer function of the actuator,
-that’s the electric motor which is driving
+e temos a função de transferência do atuador, o
+motor elétrico que conduz a junta.
 
 00:02:49.810 --> 00:02:55.370
-the joint. And that has parameters such as
-the motor torque constant, KM; the inertia,
+Essa tem parâmetros como a constante de 
+torque do motor, KM; a inércia, J;
+
 
 00:02:55.370 --> 00:03:01.410
-J; and the viscous friction, B; and S is of
-course the Laplace operator. Now this is a
+o atrito viscoso, B; e S, é claro, o operador
+de Laplace. Agora essa é uma representação
 
 00:03:01.410 --> 00:03:08.150
-very idealistic representation. There is no
-disturbance such as the force of gravity represented
+bastante idealística. Não existem pertubações, 
+como a força da gravidade representada
 
 00:03:08.150 --> 00:03:11.410
-in this block diagram. So, let’s do something
-about that.
+neste diagrama de blocos. Sendo assim, vamos
+fazer algo sobre isso.
 
 00:03:11.410 --> 00:03:16.879
-What I’ve done is I’ve moved the motor
-torque constant out of the actuator transfer
+O que fiz foi mover a constante de torque do motor
+para fora da função de transferência do atuador
 
 00:03:16.879 --> 00:03:22.160
-function and made it an explicit gain block
-which you can see here. The output of that
+e fazê-la um bloco de ganho explícito, que você
+pode ver aqui. A saída daquele bloco de ganho
 
 00:03:22.160 --> 00:03:26.310
-gain block is the actual motor torque.
-Now what I’ve done is actually separated
+é o real torque do motor. Agora o que 
+fiz foi de fato separar o motor
 
 00:03:26.310 --> 00:03:31.260
-the motor into two components. I have a component
-which generates a torque and I have another
+em duas componentes. Eu tenho a componente que 
+gera o torque e tenho outra componente
 
 00:03:31.260 --> 00:03:35.480
-component which represents the inertia and
-viscous friction of the motor.
+que representa a inércia e atrito viscoso
+do motor.
 
 00:03:35.480 --> 00:03:40.270
-Now, I’m going to introduce another summing
-junction which is a where we inject the disturbance
+Agora, irei introduzir outra junção de soma,
+que será onde injetamos o torque de pertubação.
 
 00:03:40.270 --> 00:03:45.410
-torque. So at this particular summing junction,
-we have the sum of the torque which the motor
+Assim, nessa junta de soma em particular, 
+temos a soma do torque criado pelo motor e
 
 00:03:45.410 --> 00:03:50.319
-creates and I add to that the torque which
-is coming from the disturbance source. It
+e adiciono isso ao torque que vem da 
+fonte de pertubação.
 
 00:03:50.319 --> 00:03:55.230
-might be due to gravity. It might be due to
+It might be due to gravity. It might be due to
 something like Coulomb friction which we talked
 
 00:03:55.230 --> 00:04:02.769
