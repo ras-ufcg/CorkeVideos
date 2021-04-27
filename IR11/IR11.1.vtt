@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.220 --> 00:00:07.720
 Agora, iremos falar sobre controle de juntas
@@ -63,8 +63,6 @@ o torque está agindo em uma direção anti-horária.
 00:01:21.800 --> 00:01:27.320
 O centro de massa tende a se mover verticalmente
 para baixo. Se de fato realizarmos os cálculos 
-mass wants to move vertically downward. If
-we actually do the maths for the case we looked
 
 00:01:27.320 --> 00:01:32.520
 para o caso que vimos há pouco, o robô PUMA com
@@ -105,8 +103,6 @@ por teta. Assim como discutimos em nossa última
 00:02:13.640 --> 00:02:18.430
 aula, estou usando a transformada de Laplace
 de várias dessas variáveis; então, não suas 
-in the last lecture, I’m using the Laplace
-transform of many of these variables; so not
 
 00:02:18.430 --> 00:02:23.730
 respostas o domínio do tempo mas sim suas
@@ -134,7 +130,6 @@ motor elétrico que conduz a junta.
 00:02:49.810 --> 00:02:55.370
 Essa tem parâmetros como a constante de 
 torque do motor, KM; a inércia, J;
-
 
 00:02:55.370 --> 00:03:01.410
 o atrito viscoso, B; e S, é claro, o operador
@@ -181,164 +176,164 @@ e adiciono isso ao torque que vem da
 fonte de pertubação.
 
 00:03:50.319 --> 00:03:55.230
-It might be due to gravity. It might be due to
-something like Coulomb friction which we talked
+Pode ser por causa da gravidade. Pode ser por causa de
+algo como a fricção de Coulomb que falamos
 
 00:03:55.230 --> 00:04:02.769
-about in the last lecture and TD is the Laplace
-transform of that disturbance torque.
+sobre na última aula e TD é a transformada de 
+Laplace desse torque de perturbação
 
 00:04:02.769 --> 00:04:07.099
-The introduction of a disturbance, even a
-constant disturbance, will cause an error
+A ocorrência de uma perturbação, mesmo uma
+perturbação constante, causará uma discrepância
 
 00:04:07.099 --> 00:04:13.060
-in the. If we now look a gain at that simplified
-schematic, we have the actual angle of the
+no ângulo da junta. Se agora olharmos de novo nesse esquema
+simplificado, temos o real ângulo de ligação
 
 00:04:13.060 --> 00:04:18.030
-robot link and we have the desired angle of
-the robot link. And we can see that the actual
+do robô e temos o ângulo desejado da
+ligação do robô. E podemos ver que o verdadeiro
 
 00:04:18.030 --> 00:04:22.550
-angle is a little bit different, it’s downwards
-because the force of gravity is pulling it
+ângulo é um pouco diferente, está desviado para baixo
+por causa que a força da gravidade está puxando ele
 
 00:04:22.550 --> 00:04:27.830
-downwards and the motor controller hasn’t
-fully opposed that force of gravity. The controller
+para baixo e o controlador do motor não
+opôs totalmente essa força da gravidade. O controlador
 
 00:04:27.830 --> 00:04:32.660
-that we just used is a proportional-plus-derivative
-controller often known as a PD controller
+que acabamos de usar é um controlador propocional
+derivativo, por vezes conhecido como um controlador PD
 
 00:04:32.660 --> 00:04:38.010
-and it’s very very commonly used in robotic
-systems. So the torque produced by the PD
+e é muito muito comumente usado em sistemas
+roboticos. Daí o torque produzido pelo controle
 
 00:04:38.010 --> 00:04:43.470
-controller is a gain P multiplied by the error
-between where I want the joint angle to be,
+PD é um P de ganho multiplicado pela discrepância
+entre onde eu quero que o ângulo de junta esteja,
 
 00:04:43.470 --> 00:04:49.669
-theta star, and the actual joint angle theta
-plus another gain termed D multiplied by the
+theta asterisco, e o verdadeiro ângulo de junta
+theta mais outro termo de ganho D multiplicado pela
 
 00:04:49.669 --> 00:04:54.630
-velocity of the joint that’s theta dot.
-If we consider the steady state case where
+velocidade da junta que é theta ponto.
+Se considerarmos o estado constante no qual
 
 00:04:54.630 --> 00:04:58.729
-the joint is not moving, it’s deflected
-downwards by gravity; but it’s not moving
+a junta não está se movendo, está defletida
+para baixo pela gravidade; mas não está se movendo
 
 00:04:58.729 --> 00:05:03.180
-any further downwards; it’s in equilibrium;
-then theta dot will be equal to zero. So,
+nem um pouco para baixo; está em equilíbrio;
+portanto theta ponto será igual a zero. Por isso,
 
 00:05:03.180 --> 00:05:08.030
-we can eliminate that term. And if the joint
-is in equilibrium, then the torque generated
+podemos eliminar esse termo. E se a junta
+está em equilíbrio, então o torque gerado
 
 00:05:08.030 --> 00:05:13.370
-by the motor and its controller must be equal
-to the torque due to gravity. So, we can write
+pelo motor e seu controle terá de ser igual
+ao torque causado pela gravidade. Daí, podemos
 
 00:05:13.370 --> 00:05:18.479
-this relationship. And if we do a little bit
-of rearrangement, we can see that the error
+descrever essa relação. Se fizermos um pequeno
+rearranjo, poderemos ver que a discrepância
 
 00:05:18.479 --> 00:05:23.030
-between where we want the joint to be and
-where the joint actually is, is equal to MGR
+entre onde queremos que a junta esteja e
+onde ela na verdade está é igual a MGR
 
 00:05:23.030 --> 00:05:28.030
-divided by P, our proportional gain.
-Now, there are some very interesting consequences
+dividido por P, nosso ganho proporcional.
+Agora, existem algumas consequências bem interessantes 
 
 00:05:28.030 --> 00:05:32.940
-of that. And one is it if we want to reduce
-this error, we need to increase the value
+nisso. E uma é que se queremos reduzir
+essa discrepância, precisaremos aumentar o valor
 
 00:05:32.940 --> 00:05:38.130
-of P. If P is bigger because it’s in the
-denominator, then it makes the error much
+de P. Se P é maior, porque está no
+denominador, ele faz com que a discrepância
 
 00:05:38.130 --> 00:05:41.840
-much smaller.
-We are going to revisit the robot joint model
+seja bem menor.
+Iremos revisitar o modelo de junta do robô
 
 00:05:41.840 --> 00:05:46.780
-that we built in Simulink in the last lecture.
-We’ve put the values of some of the parameters
+que construímos no Simulink na última aula.
+Nós estabelecemos os valores de alguns dos parâmetros
 
 00:05:46.780 --> 00:05:53.009
-into the workspace and this is our model and
-we’re going to bring in my palette of useful
+na área de trabalho e esse é nosso modelo e
+iremos trazer meu conjunto de objetos úteis
 
 00:05:53.009 --> 00:05:59.020
-Simulink objects as well. The first thing
-I’m going to do is to move all of this stuff
+do Simulink também. A primeira coisa
+que irei fazer é mover todas essas coisas
 
 00:05:59.020 --> 00:06:04.270
-across here and I’m going to introduce a
-new gain block which I’m going to drop in
+até aqui e irei introduzir um
+novo bloco de ganho o qual irei colocar
 
 00:06:04.270 --> 00:06:11.419
-here. And what I’m going to do is to remove
-the gain termed KM from the numerator of the
+aqui. E o que irei fazer é remover
+o termo de ganho KM do numerador da
 
 00:06:11.419 --> 00:06:17.840
-transfer function and I’m going to put it
-into this block here. So functionally, this
+função de transferência e irei colocá-lo
+nesse bloco aqui. Daí funcionalmente, isso
 
 00:06:17.840 --> 00:06:25.430
-is exactly the same. We have a gain KM multiplying
-this transfer function here. The output of
+continua exatamente igual. Temos um KM de ganho
+multiplicando essa função de transferência. A saída
 
 00:06:25.430 --> 00:06:29.750
-this gain block is the torque that’s applied
-to the armature of the electric motor.
+desse bloco de ganho é o torque que está aplicado
+na carcaça do motor elétrico.
 
 00:06:29.750 --> 00:06:35.900
-Now what I’m going to do is to introduce
-a disturbance torque. To do that, I need to
+E o que vou fazer agora é introduzir
+um torque de pertubação. Para fazer isso, preciso
 
 00:06:35.900 --> 00:06:43.169
-find a summing junction and there’s a summing
-junction and I’m going to edit this so that
+achar uma junção de soma, e ali está a junção
+de soma, e eu irei editar isso para que
 
 00:06:43.169 --> 00:06:49.550
-it has got a plus in the upward direction.
-I think that will do the trick and I’m going
+ela tenha um acréscimo na direção para cima.
+Eu penso que isso resolverá o problema e irei
 
 00:06:49.550 --> 00:06:58.120
-to remove that wire, put the summing junction
-in here, draw a wire from there to there.
+remover o fio, colocar a junção de soma
+aqui, desenhar o fio daqui até aqui.
 
 00:06:58.120 --> 00:07:09.990
-And the disturbance force is going to come
-from a step function, that’s the source.
+E a força de perturbação irá vir
+de uma função degrau, essa é a origem.
 
 00:07:09.990 --> 00:07:18.110
-Here we go. And I want my step to occur at
-time five in the simulation. The simulation
+Aqui está. E eu quero que meu degrau aconteça
+no tempo 5 da simulação. A simulação
 
 00:07:18.110 --> 00:07:22.860
-runs for 10 seconds, so the disturbance will
-occur at five seconds. Hence, it has got a
+roda por 10 segundos, para que a perturbação
+ocorra aos 5 segundos. Nesse sentido, ela terá
 
 00:07:22.860 --> 00:07:26.789
-value of one.
-So, I’m going to connect that into the summing
+o valor de um.
+Portanto, eu vou conectar isso à junção
 
 00:07:26.789 --> 00:07:32.480
-junction. All right, so what we have now is
-a model like what we had before. But now,
+de soma. Tudo certo, então o que temos agora é
+um modelo como o que tinhamos anteriormente. Mas agora,
 
 00:07:32.480 --> 00:07:38.770
-I can introduce a disturbance torque which
-also acts on the armature of the electric
+Eu posso introduzir um torque de perturbação que
+também age na carcaça do motor
 
 00:07:38.770 --> 00:07:43.350
 motor. There are now two torques acting on the
