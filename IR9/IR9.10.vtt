@@ -1,145 +1,145 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.220 --> 00:00:06.390
-Let’s summarise some of the concepts that
-we’ve learned in this lecture. It’s all
+Vamos resumir alguns dos conceitos que
+aorendemos nesse curso. É tudo
 
 00:00:06.390 --> 00:00:11.370
-being about motion in three-dimensional space.
-First of all, we introduced the concept of
+sobre movimento em um espaço tridimensional.
+Em primeiro lugar, nós introduzimos o conceito de
 
 00:00:11.370 --> 00:00:17.160
-translational velocity that is the rate of
-change of the X, Y and Z components of a point
+velocidade translacional que é a taxa de
+mudança das componentes X, Y e Z de um ponto
 
 00:00:17.160 --> 00:00:22.150
-in space and we define that with respect to
-a reference coordinate frame.
+no espaço e nós definimos isso com relação 
+a um sistema de coordenadas de referência.
 
 00:00:22.150 --> 00:00:27.460
-We introduced the concept of angular velocity
-and that is a vector quantity. The direction
+Nós introduzimos o conceito de velocidade angular
+e essa é uma quantidade vetorial. A direção
 
 00:00:27.460 --> 00:00:31.869
-of the vector is the axis about which the
-body is rotating at that instance in time
+do vetor é o eixo sobre o qual o corpo
+está rotacionando naquele instante no tempo
 
 00:00:31.869 --> 00:00:38.050
-and the magnitude of the vector is the rate
-of rotation. Angular velocity has three components:
+e a magnitude do vetor é a taxa de rotação.
+A velocidade angular tem três componentes:
 
 00:00:38.050 --> 00:00:44.070
-ωx, ωy, and ωz defined with respect to
-a reference coordinate frame.
+ωx, ωy, e ωz definidas com relação ao
+sistema de coordenadas de referência.
 
 00:00:44.070 --> 00:00:48.690
-Translational velocity V and angular velocity
-ω are combined into a quantity we referred
+A velocidade translacional V e a velocidade angular
+ω são combinadas em uma quantidade que nós nos referimos
 
 00:00:48.690 --> 00:00:55.030
-to as spatial velocity or sometimes referred
-to as twist. It’s a six-element vector.
+como velocidade espacial ou algumas vezes
+como torção. É um vetor de seis elementos.
 
 00:00:55.030 --> 00:01:00.060
-We introduced a skew symmetric matrix. This
-is a matrix whose transpose is equal to the
+Nós introduzimos uma matriz antissimétrica. Essa
+é uma matriz cuja transposta é igual a ela mesma
 
 00:01:00.060 --> 00:01:04.439
-negative of itself. When we are talking about
-rotation in three dimensions, the relevant
+negativa. Quando falamos sobre rotação em
+três dimensões, a matriz antissimétrica
 
 00:01:04.439 --> 00:01:10.000
-skew symmetric matrix is a 3.3 element matrix
-which is a function of a vector. There is
+relevante é uma matriz 3x3 a qual é
+uma função de um vetor. Há uma 
 
 00:01:10.000 --> 00:01:14.510
-a really important relationship between the
-angular velocity of that body and the time
+relação muito importante entre a
+velocidade angular do corpo e a derivada 
 
 00:01:14.510 --> 00:01:17.470
-derivative of the rotation matrix.
+no tempo da matriz rotacional.
 
 00:01:17.470 --> 00:01:21.890
-For a robot with six joints, we can write
-a relationship like this, which relates the
+Para um robô com seis juntas, podemos
+escrever uma relação como essa, que relaciona
 
 00:01:21.890 --> 00:01:27.060
-rate of change of the robot joint angles to
-this spatial velocity of the robots end effector,
+a taxa de mudança dos ângulos de junta do robô
+com essa velcidade espacial do efetuador do robô,
 
 00:01:27.060 --> 00:01:32.280
-and the relationship is in terms of a six
-by six Jacobian matrix which we denote by
+e a relação está em termos de uma matriz 
+Jacobiana 6x6 a qual denotamos pelo
 
 00:01:32.280 --> 00:01:38.270
-the symbol J. The Jacobian matrix is a function
-of the joint angles themselves.
+símbolo J. A matriz Jacobiana é uma função
+dos próprios ângulos de juntas.
 
 00:01:38.270 --> 00:01:42.520
-We can write this general relationship between
-the robot joint angle velocity Qdot and spatial
+Nós podemos escrever essa relação geral entre
+a velocidade do ângulo de junta Qdot e a velocidade
 
 00:01:42.520 --> 00:01:47.420
-velocity in terms of the Jacobian matrix.
-If the Jacobian matrix is square, then we
+espacial do robô em termos da matriz Jacobiana.
+Se a matriz Jacobiana é quadrada, então nós
 
 00:01:47.420 --> 00:01:51.920
-can invert the relationship and that allows
-us to transform a desired spatial velocity
+podemos inverter a relação e isso nos permite
+transformar uma velocidade espacial desejada
 
 00:01:51.920 --> 00:01:57.380
-for the robot’s end effector into the joint
-angle rates of the robots’ motors need to attain.
+para o efetuador do robô nas taxas de ângulos de
+juntas dos motores do robô necessárias para atingí-la.
 
 00:01:58.040 --> 00:02:03.740
-The motion of any robot joint affects the
-spatial velocity of the robot’s end effector.
+O movimento de qualquer efetuador de um robô afeta
+a velocidade espacial do seu efetuador.
 
 00:02:03.740 --> 00:02:07.960
-We can think of the columns of the Jacobian
-matrix as described at that relationship.
+Nós podemos pensar nas colunas da matriz
+Jacobiana conforme descrita nessa relação.
 
 00:02:07.960 --> 00:02:12.450
-The first column tells us how the spatial
-velocity is affected by the first joint. The
+A primeira coluna nos fala como a velocidade
+espacial é afetada pela primeira junta. A
 
 00:02:12.450 --> 00:02:17.180
-second column tells us how the spatial velocity
-is affected by the second joint and so on.
+segunda coluna nos fala como a velocidade
+é afetada pela segunda junta e assim por diante.
 
 00:02:17.180 --> 00:02:22.690
-We can think of it as a summation of the effect
-of each of the individual joints, we add them
+Nós podemos pensar nisso como uma soma do efeito
+de cada uma das juntas individualmente, e as adiciomanos
 
 00:02:22.690 --> 00:02:28.360
-all together to determine the overall spatial
-velocity of the robot’s end effector.
+para determinar a velocidade espacial total 
+do efetuador do robô.
 
 00:02:28.360 --> 00:02:33.250
-In some cases, the robot Jacobian can be singular
-and that’s when more than one joint cause
+Em alguns casos, a Jacobiana do robô pode ser
+singular e é quando mais de uma junta causa
 
 00:02:33.250 --> 00:02:38.060
-exactly the same motion of the robot end effector,
-that there are two columns in the Jacobian
+exatamente o mesmo movimento no efetuador do robô,
+que existem duas colunas na matriz Jacobiana
 
 00:02:38.060 --> 00:02:42.280
-matrix which are identical and that makes
-the robot singular.
+que são idênticas e isso faz o robô
+singular.
 
 00:02:42.280 --> 00:02:46.220
-For robots that move in three-dimensional
-space, the Jacobian matrix always has six
+Para robôs que se movem em um espaço
+tridimensional, a matriz Jacobiana sempre tem
 
 00:02:46.220 --> 00:02:51.010
-roles but the number of columns is equal to
-the number of joints that the robot has. If
+seis funções mas o número de colunas é igual 
+ao número de juntas que o robô tem. Se
 
 00:02:51.010 --> 00:02:55.970
-the robot got six joints, the Jacobian matrix
-will be square and we can invert it so long
+o robô tem seis juntas, a matriz Jacobiana
+será quadrada e nós podemos invertê-la desde
 
 00:02:55.970 --> 00:03:01.090
 que o robô não esteja numa configuração singular.
