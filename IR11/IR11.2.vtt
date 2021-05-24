@@ -315,155 +315,158 @@ the center of mass of each of the links. Use
 Newton's law for the translational motion
 
 00:06:29.180 --> 00:06:32.639
-and we use Euler's equation for the rotational
-motion.
+e usamos a equação de Euler para o 
+movimento rotacional.
 
 00:06:32.639 --> 00:06:37.039
-We start at the base of the robot and we work
-outwards, determining the translational and
+Começamos na base do robô e trabalhamos 
+de dentro para fora, determinando a velocidade 
+translacional e angular 
 
 00:06:37.039 --> 00:06:42.759
-angular velocity for the centre of mass of each
-link in turn. Once we get to the end of the
+para o centro de massa de cada ligação por 
+vez. Quando chegamos ao final do 
 
 00:06:42.759 --> 00:06:48.009
-robot, we then work our way back inwards and
-then we determine the force and moment that
+robô, trabalhamos nosso caminho de volta para dentro 
+e então determinamos a força e o momento que 
 
 00:06:48.009 --> 00:06:53.939
-each link exerts on the link that's closer
-towards the base of the robot. This method
+cada ligação exerce, e qual ligação
+está mais próxima da base do robô. Este método 
 
 00:06:53.939 --> 00:06:57.479
-is computationally elegant and very, very
-efficient.
+é computacionalmente elegante e muito, 
+muito eficiente.
 
 00:06:57.479 --> 00:07:02.250
-I'm going to create a two-link robot in MATLAB.
-To do that, I'm going to use toolbox script
+Vou criar um robô de dois links no MATLAB. Para 
+fazer isso, usarei o script da caixa de ferramentas 
 
 00:07:02.250 --> 00:07:09.229
-mdl_twolink and that will create in the MATLAB
-workspace a robot object called two-link.
+mdl_twolink e que criará no espaço de trabalho 
+do MATLAB um objeto robô chamado two-link.
 
 00:07:09.229 --> 00:07:15.689
-This is an object that has great number of methods and properties and we'll start to explore some of these.
+Este é um objeto que possui um número grande de métodos 
+e propriedades e vamos começar a explorar alguns deles.
 
 00:07:15.689 --> 00:07:20.270
-One of the first ones we're going to look
-at is the plot method. So for the robot object
+Um dos primeiros que veremos é o método de plotagem. 
+Portanto, para o objeto robô de 
 
 00:07:20.270 --> 00:07:25.169
-two-link, we’re going to invoke the plot
-method so that’s dot plot invokes the plot
+dois links, vamos invocar o método plot. Para 
+isso usamos .plot para invocar o 
 
 00:07:25.169 --> 00:07:33.720
-method on that object. And I'm going to plot
-it for Q1 equal to zero, and Q2 equal to zero.
+método plot nesse objeto. E vou plotar
+para Q1 igual a zero e Q2 igual a zero.
 
 00:07:33.720 --> 00:07:38.360
-And here we see the robot manipulator. Unlike
-the one we looked at previously which operated
+E aqui vemos o robô manipulador. Ao contrário 
+do que vimos anteriormente, que operava 
 
 00:07:38.360 --> 00:07:46.669
-in the XY plane, we can see that this two-link
-robot is operating in the XZ plane. So gravitational
+no plano XY, podemos ver que este robô de duas
+ligações está operando no plano XZ. Portanto, a aceleração
 
 00:07:46.669 --> 00:07:52.060
-acceleration which is in the Z direction is
-acting on the centre of mass of each of the
+gravitacional que está na direção Z está 
+agindo no centro de massa de cada uma das 
 
 00:07:52.060 --> 00:07:56.289
-links of this robot and will tend to pull
-it down to make it collapse.
+ligações desse robô e tenderá a puxá-lo 
+para baixo para fazê-lo entrar em colapso.
 
 00:07:56.289 --> 00:08:03.319
-And we can use the recursive Newton-Euler
-equation and we can, which is the rne method
+E podemos usar a equação recursiva de 
+Newton-Euler, que é o método rne 
 
 00:08:03.319 --> 00:08:07.979
-for recursive Newton-Euler. And I can ask,
-what are the torques on this robot if the
+para Newton-Euler recursivo. E eu posso pedir, 
+quais são os torques neste robô se os
 
 00:08:07.979 --> 00:08:12.229
-joint angles are both equal to zero? So that's
-a situation I've just plotted.
+ângulos das juntas são iguais a zero? Essa é 
+uma situação que acabei de plotar.
 
 00:08:12.229 --> 00:08:16.969
-And let's say the joints are not moving at
-all, so they've got zero velocity each and
+E digamos que as articulações não estão se movendo, 
+então cada uma têm velocidade zero e 
 
 00:08:16.969 --> 00:08:22.509
-the joints are also not accelerating. So they've
-each got acceleration of zero.
+as articulações também não estão acelerando. 
+Então, cada uma delas tem aceleração zero.
 
 00:08:22.509 --> 00:08:27.689
-It says that the torque on the first joint
-on Q1 is necessary to hold it in this position
+Ele diz que o torque na primeira junta em Q1 
+que é necessário para mantê-la nesta posição 
 
 00:08:27.689 --> 00:08:35.210
-is 19.62 Newton meters and the torque on the
-second joint is 4.9 Newton meters. This makes
+é de 19.62 Newton metros e o torque na 
+segunda junta é de 4.9 Newton metros. Isso faz 
 
 00:08:35.210 --> 00:08:39.830
-intuitive sense to us. The torque on the shoulder
-joint is going to be greater than the torque
+sentido intuitivo para nós. O torque na junta 
+do ombro vai ser maior do que o torque
 
 00:08:39.830 --> 00:08:45.100
-on the elbow joint because the shoulder has
-to hold up the upper arm and the lower arm,
+na articulação do cotovelo porque o ombro tem 
+que sustentar o braço e o antebraço, 
 
 00:08:45.100 --> 00:08:50.940
-where as the elbow joint only has to hold
-up the lower part of the arm.
+enquanto a articulação do cotovelo só precisa 
+sustentar a parte inferior do braço.
 
 00:08:50.940 --> 00:08:55.800
-What we don't have a handle on are the signs
-of these two torques, which way are they acting.
+O que não sabemos são os sinais desses 
+dois torques, de que forma eles estão agindo.
 
 00:08:55.800 --> 00:09:03.790
-So a good way to see that is to re-plot the
-robot using a different option which is jvek.
+Então, uma boa maneira de ver isso é re-plotar 
+o robô usando uma opção diferente que é a jvek.
 
 00:09:03.790 --> 00:09:07.900
-What this shows is the access of rotation
-of each joint.
+O que isso mostra é o acesso de 
+rotação de cada junta.
 
 00:09:07.900 --> 00:09:13.170
-So if we remember our right hand rule, in
-order to understand the direction of a positive
+Então, se nos lembrarmos de nossa regra da mão direita, 
+a fim de entender a direção de um torque positivo,
 
 00:09:13.170 --> 00:09:18.890
-torque, what we do is grab the axis with our
-right hand, point our thumb in the direction
+o que fazemos é agarrar o eixo com nossa mão 
+direita, apontar nosso polegar na direção 
 
 00:09:18.890 --> 00:09:25.130
-of the arrowhead and curl our fingers around the vector to indicate the direction of positive rotation.
+da ponta da seta e enrolamos nossos dedos em torno do 
+vetor para indicar a direção da rotação positiva.
 
 00:09:25.130 --> 00:09:31.840
-What we can see here then is that a positive
-torque of 19.6 acting on a shoulder joint
+O que podemos ver aqui é que um torque positivo 
+de 19.6 agindo na articulação do ombro 
 
 00:09:31.840 --> 00:09:37.610
-is going to be a torque that's trying to lift
-the robot arm up, which is exactly what we
+será um torque que tenta levantar o braço do 
+robô, o que é exatamente o que 
 
 00:09:37.610 --> 00:09:40.940
-would expect and similarly for joint two.
+esperaríamos e da mesma forma para a articulação dois.
 
 00:09:40.940 --> 00:09:46.590
-So the recursive Newton-Euler algorithm has
-given us the torques that are required for
+Portanto, o algoritmo recursivo de Newton-Euler 
+nos deu os torques necessários para que 
 
 00:09:46.590 --> 00:09:52.540
-the robot to stay in this particular configuration
-with both its joint angles equal to zero and
+o robô permanecesse nessa configuração particular 
+com ambos os ângulos das juntas iguais a zero e 
 
 00:09:52.540 --> 00:09:57.770
-with zero joint velocity and with zero joint
-acceleration. These are the torques that are
+com velocidade zero das juntas e com aceleração 
+zero das juntas. Esses são os torques 
 
 00:09:57.770 --> 00:10:01.480
-required for the robot to be in this configuration
-and not move.
+necessários para que o robô esteja nesta configuração 
+e não se mova.
 

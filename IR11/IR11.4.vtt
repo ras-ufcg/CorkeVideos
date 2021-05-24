@@ -3,154 +3,154 @@ Kind: captions
 Language: en-GB
 
 00:00:03.429 --> 00:00:07.609
-Here is the expression we introduced earlier
-for the inverse dynamics of a serial link
+Aqui está a expressão que introduzimos anteriormente
+para a dinâmica inversa de uma ligação serial do
 
 00:00:07.609 --> 00:00:13.480
-robot manipulator expressed in matrix form.
-We are interested now to consider the effect
+robô manipulador expresso em forma de matriz.
+Estamos interessados agora em considerar o efeito
 
 00:00:13.480 --> 00:00:18.650
-of gravity. Gravity is the force that acts
-on the robot even if it's not moving. So we
+da gravidade. A gravidade é a força que atua
+no robô, mesmo que não esteja se movendo. Então nós
 
 00:00:18.650 --> 00:00:24.830
-can eliminate the terms that are proportional
-to the joint acceleration and the joint velocity.
+pode eliminar os termos que são proporcionais
+para a aceleração da articulação e a velocidade da articulação.
 
 00:00:24.830 --> 00:00:29.840
-It's just this term on the end here. The term
-G. This represents the gravity torque that's
+É apenas este termo no final. O termo
+G. Isso representa o torque de gravidade que esta
 
 00:00:29.840 --> 00:00:35.370
-acting on the joints of the robot manipulator.
-It's the torque that counteracts gravity and
+atuando nas articulações do robô manipulador.
+É o torque que neutraliza a gravidade e
 
 00:00:35.370 --> 00:00:38.810
-stops the arm from collapsing under its own
-weight.
+impede que o braço colapse com seu próprio
+peso.
 
 00:00:38.810 --> 00:00:43.640
-Here again we have a symbolic model of our
-2 link robot. And what I'm going to do is
+Aqui, novamente, temos um modelo simbólico de nosso
+robô de 2 ligações. E o que vou fazer é
 
 00:00:43.640 --> 00:00:49.579
-to use the method gravload which tells me
-the torque that is acting on the joints of
+para usar o método gravload que me diz
+o torque que está agindo nas juntas do
 
 00:00:49.579 --> 00:00:57.379
-the robot. The arguments to gravload are the
-joint angles. I pass in a vector which contains
+robô. Os argumentos para gravload são os
+ângulos articulares. Eu passo em um vetor que contém
 
 00:00:57.379 --> 00:01:02.579
-Q1 and Q2; this symbolic joint variables.
-And here's the expression for gravity which
+Q1 e Q2; estas variáveis simbólicas de articulação.
+E aqui está a expressão para gravidade que
 
 00:01:02.579 --> 00:01:08.720
-is acting on the joints of the robot. And
-we see that the term for joint 1 is quite
+está atuando nas articulações do robô. E
+vemos que o termo para a junta 1 é bastante
 
 00:01:08.720 --> 00:01:14.080
-long where as the expression for joint 2 is
-a little bit shorter.
+desde que a expressão para a junta 2 seja
+um pouco mais curto.
 
 00:01:14.080 --> 00:01:18.990
-We can see that this expression contains a
-kinematic parameters the link lengths A1 and
+Podemos ver que esta expressão contém um
+parâmetros cinemáticos, os comprimentos de ligação A1 e
 
 00:01:18.990 --> 00:01:26.650
-A2. The positions of the centres of mass C1
-and C2, the masses of the two joints M1 and
+A2. As posições dos centros de massa C1
+e C2, as massas das duas articulações M1 e
 
 00:01:26.650 --> 00:01:30.939
-M2. And we can see that there are a lot of
-cos and sine terms in here.
+M2.E podemos ver que há muitos
+termos cos e seno aqui.
 
 00:01:30.939 --> 00:01:35.420
-So far we've talked about the forces on the
-robot just due to its own weight. But a useful
+Até agora, falamos sobre as forças no
+robô apenas devido ao seu próprio peso. Mas útil ao
 
 00:01:35.420 --> 00:01:39.900
-robot also has to be able to carry a payload.
-Pick an object up from here and put it down
+robô também deve ser capaz de transportar uma carga útil.
+Pegue um objeto daqui e coloque-o no chão
 
 00:01:39.900 --> 00:01:45.909
-over there. So clearly the last link in the
-chain of the robot has to hold the payload.
+bem ali. Então, claramente, o último ligação na
+cadeia do robô deve conter a carga útil.
 
 00:01:45.909 --> 00:01:50.040
-But that propagates down the chain towards
-the base of the robot. Every joint in the
+Mas isso se propaga abaixo na cadeia em direção
+a base do robô. Cada junta do
 
 00:01:50.040 --> 00:01:56.590
-robot has to help hold up the payload to stop
-it being pulled down by the force of gravity.
+robô tem que ajudar a segurar a carga útil para parar
+sendo puxado para baixo pela força da gravidade.
 
 00:01:56.590 --> 00:02:01.810
-So what's the effect of payload? Well every
-joint has got a maximum possible torque. So
+Então, qual é o efeito da carga útil? Bem toda
+a junta tem um torque máximo possível. então
 
 00:02:01.810 --> 00:02:06.870
-let's imagine that we have a payload on the
-end of the robot and we keep increasing it's mass.
+vamos imaginar que temos uma carga útil no
+fim do robô e vamos aumentando sua massa.
 
 00:02:06.920 --> 00:02:12.800
-We can work out the torque that each of the
-Joints needs to exert in order to hold up
+Podemos calcular o torque que cada uma das
+articulações precisam exercer a fim de sustentar
 
 00:02:12.809 --> 00:02:17.370
-that payload. As we increase the mass of the
-payload, eventually we will find that one
+essa carga útil. Conforme aumentamos a massa do
+carga útil, eventualmente encontraremos aquela
 
 00:02:17.370 --> 00:02:22.950
-joint will hit its torque limit it will become
-overloaded. And that's the maximum payload
+junta atingindo seu limite de torque e se torna
+sobrecarregado. E essa é a carga útil máxima
 
 00:02:22.950 --> 00:02:24.629
-that the robot can hold.
+que o robô pode segurar.
 
 00:02:24.629 --> 00:02:29.599
-Now we know that the gravity torque is the
-function of the configuration of the robot.
+Agora sabemos que o torque da gravidade é 
+função da configuração do robô.
 
 00:02:29.599 --> 00:02:33.579
-If a robot's holding 10 kg there might be
-some configurations particularly where the
+Se um robô está segurando 10 kg, pode haver
+algumas configurações particularmente onde os
 
 00:02:33.579 --> 00:02:39.349
-10 kg is close to the base of the robot where
-it's possible to hold that particular payload.
+10 kg está perto da base do robô onde
+é possível manter essa carga útil específica.
 
 00:02:39.349 --> 00:02:44.279
-But if the robot has got its arm fully stretched,
-it may not be able to hold that particular
+Mas se o robô está com o braço totalmente esticado,
+pode não ser capaz de conter aquela
 
 00:02:44.279 --> 00:02:49.639
-payload. So the maximum payload of the robot
-is a function of the torque capabilities of
+carga útil. Portanto, a carga útil máxima do robô
+é uma função das capacidades de torque dos
 
 00:02:49.639 --> 00:02:55.150
-the motors but it is also a function of the
-configuration of the robot.
+motores, mas também é uma função do
+configuração do robô.
 
 00:02:55.150 --> 00:03:02.249
-I am going to go back to a numerical model
-of our 2 link robot and I load that using
+Vou voltar a um modelo numérico
+do nosso robô de 2 ligações e carrego isso usando
 
 00:03:02.249 --> 00:03:07.689
-the script mdl_twolink.
+o script mdl_twolink.
 
 00:03:07.689 --> 00:03:12.760
-I'm going to now compute the gravity load
-on the robot's joints using the gravload method.
+Vou agora calcular a carga de gravidade
+nas articulações do robô usando o método gravload.
 
 00:03:12.760 --> 00:03:20.189
-I'm going to compute that for joint angle
-0 and 0. And this is the result we get. In
+Vou calcular isso para o ângulo da junta
+0 e 0. E este é o resultado que obtemos. DE
 
 00:03:20.189 --> 00:03:25.400
-fact the same result we got a little bit earlier
-using the recursive Newton-Euler algorithm.
+fato, é o mesmo resultado que obtivemos um pouco antes
+usando o algoritmo recursivo de Newton-Euler.
 
 00:03:25.400 --> 00:03:29.949
 In fact gravity load itself is based on the
