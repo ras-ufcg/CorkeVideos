@@ -3,181 +3,186 @@ Kind: captions
 Language: pt-BR
 
 00:00:03.220 --> 00:00:07.720
-Agora, iremos falar sobre controle de juntas
-com pertubações. E a mais óbvia e comum
+Now, we are going to talk about joint control
+with disturbances. And the most obvious disturbance,
 
 00:00:07.720 --> 00:00:13.451
-pertubação em um braço robótico é devido 
-à gravidade.
+the most common disturbance on a robotic arm
+is the disturbance due to gravity. Imagine
 
 00:00:13.451 --> 00:00:18.359
-Imagine um manipulador de um robô PUMA. Ele
-tem seu braço esticado na horizontal
+a PUMA robot manipulator in this particular
+configuration. It’s got its arm stretched
 
 00:00:18.359 --> 00:00:23.519
-e você pode imaginar que seu braço pesa 
-um bocado. Então, há um grande torque em 
+out horizontally and can you imagine that
+arm weighs quite a lot. So, there is a large
 
 00:00:23.519 --> 00:00:28.359
-sua junta de ombro e há um grande torque
-na junta de cotovelo, que é necessária
+torque on the shoulder joint and there’s
+also a large torque on the elbow joint that
 
 00:00:28.359 --> 00:00:32.980
-para manter o braço nessa pose horizontal.
+are required in order to keep the arm in that
+horizontal pose.
 
 00:00:32.980 --> 00:00:37.510
-Podemos analisar uma versão mais simplificada
-deste cenário em particular. Considere aqui
+We can look at a more simplified version of
+that particular scenario. Consider here we
 
 00:00:37.510 --> 00:00:42.480
-que temos um motor elétrico que é conectado a
-uma barra horizontal. A barra possui um centro
+have an electric motor which is connected
+to a horizontal bar. The bar has a centre
 
 00:00:42.480 --> 00:00:48.080
-de massa e esse centro está a uma distância 
-r do eixo do motor. Essa barra possui
+of mass and the centre of mass is a distance
+r from the axis of the motor. And the bar
 
 00:00:48.080 --> 00:00:55.010
-uma massa m e possui uma força peso, essa é 
-a força devido a ação da gravidade
+has got a mass of m and the bar has a weight
+force, that’s the force due to gravity acting
 
 00:00:55.010 --> 00:01:00.770
-sobre o centro de massa e essa é a força 
-mg agindo na direção para baixo.
+on the centre of mass and that is a force
+of mg acting in the downward direction.
 
 00:01:00.770 --> 00:01:07.770
-Agora, a força mg em um braço de alavanca de
-comprimento r resulta em um torque agindo
+Now, a force of mg with a lever arm length
+of r results in a torque acting on the motor
 
 00:01:07.770 --> 00:01:11.960
-sobre o eixo do motor e a magnitude deste torque
-é dada pela massa vezes a aceleração da 
+shaft and the magnitude of that torque is
+given by the mass times the gravitational
 
 00:01:11.960 --> 00:01:17.810
-gravidade, vezes a distância do centro de massa
-ao eixo do motor. Nesse caso particular,
+acceleration times the distance of the centre
+of mass from the axis of the motor. In this
 
 00:01:17.810 --> 00:01:21.800
-o torque está agindo em uma direção anti-horária.
+particular case, the torque is acting in a
+counter clockwise direction. The centre of
 
 00:01:21.800 --> 00:01:27.320
 O centro de massa tende a se mover verticalmente
 para baixo. Se de fato realizarmos os cálculos 
 
+
 00:01:27.320 --> 00:01:32.520
-para o caso que vimos há pouco, o robô PUMA com
-seu braço na configuração horizontal, o torque
+at a moment ago, the PUMA robot with its arm
+in a horizontal configuration, the torque
 
 00:01:32.520 --> 00:01:37.790
-em seu ombro é de 40 Newton metro. Se assumirmos
-que meu braço tem um metro de comprimento,
+on the shoulder joint is 14 Newton meters.
+If I assume that my arm is one meter long,
 
 00:01:37.790 --> 00:01:42.450
-isso é equivante a segurar 4 quilos com meu 
-braço esticado: isso não é tão fácil
+that’s equivalent to holding four kilograms
+with my arm outstretched; that’s a pretty
 
 00:01:42.450 --> 00:01:46.810
-de se fazer, embora exista muito torque
-agindo sobre a junta de ombro do
+difficult thing to do, though there’s a
+lot of torque acting on the shoulder joint
 
 00:01:46.810 --> 00:01:52.260
-robô PUMA. Claramente, isso terá algum
-efeito sobre o controle da junta de ombro.
+of the PUMA robot. And clearly, this is going
+to have an effect on the control of the shoulder
 
 00:01:52.260 --> 00:01:58.010
-Assim, agora vamos avaliar em mais detalhes
-nosso controlador de junta robôtica. Este é 
+joint. So, let’s look now in some more detail
+at our robot joint controller. And this is
 
 00:01:58.010 --> 00:02:02.920
-o diagrama de blocos que introduzimos em nossa
-última aula. É um controlador de feedback.
+a block diagram we introduced in the last
+lecture. It’s a feedback controller. The
 
 00:02:02.920 --> 00:02:07.980
-A entrada para o controlador de junta robôtica
-é a posição desejada, teta estrela. E a saída
+input to the robot joint controller is the
+desired position, theta star. And the output
 
 00:02:07.980 --> 00:02:13.640
-do controlador será a posição efetiva, denotada
-por teta. Assim como discutimos em nossa última 
+of the joint controller is the actual joint
+position denoted by theta. And as we discussed
 
 00:02:13.640 --> 00:02:18.430
 aula, estou usando a transformada de Laplace
 de várias dessas variáveis; então, não suas 
 
 00:02:18.430 --> 00:02:23.730
-respostas o domínio do tempo mas sim suas
-respostas no domínio de Laplace. E eu denoto
+their response in the time domain but their
+response in the Laplace domain. And I denote
 
 00:02:23.730 --> 00:02:28.050
-o domínio de Laplace usando letras maiúsculas.
-Portanto, por isso uso teta maiúsculo aqui e
+the Laplace domain by using capital letters.
+So, that’s why I’ve used capital theta
 
 00:02:28.050 --> 00:02:34.310
-aqui. Agora, dentro do laço de controle, temos
-a lei de controle, podendo ser um controlador 
+here and here. Now within this control loop,
+we have a control law, it might be a proportional
 
 00:02:34.310 --> 00:02:38.790
-proporcional-derivativo, ou proporcional-integral-
-derivativo conhecido como controlador PID,
+derivative controller, it might be a proportional
+integral derivative controller known as a
 
 00:02:38.790 --> 00:02:44.200
-temos o ganho do driver motor, o ganho do sensor
+PID controller and we have the gain of the
+motor driver and we have the gain of the sensor
 
 00:02:44.200 --> 00:02:49.810
-e temos a função de transferência do atuador, o
-motor elétrico que conduz a junta.
+and we have the transfer function of the actuator,
+that’s the electric motor which is driving
 
 00:02:49.810 --> 00:02:55.370
 Essa tem parâmetros como a constante de 
 torque do motor, KM; a inércia, J;
 
 00:02:55.370 --> 00:03:01.410
-o atrito viscoso, B; e S, é claro, o operador
-de Laplace. Agora essa é uma representação
+J; and the viscous friction, B; and S is of
+course the Laplace operator. Now this is a
 
 00:03:01.410 --> 00:03:08.150
-bastante idealística. Não existem pertubações, 
-como a força da gravidade representada
+very idealistic representation. There is no
+disturbance such as the force of gravity represented
 
 00:03:08.150 --> 00:03:11.410
-neste diagrama de blocos. Sendo assim, vamos
-fazer algo sobre isso.
+in this block diagram. So, let’s do something
+about that.
 
 00:03:11.410 --> 00:03:16.879
-O que fiz foi mover a constante de torque do motor
-para fora da função de transferência do atuador
+What I’ve done is I’ve moved the motor
+torque constant out of the actuator transfer
 
 00:03:16.879 --> 00:03:22.160
-e fazê-la um bloco de ganho explícito, que você
-pode ver aqui. A saída daquele bloco de ganho
+function and made it an explicit gain block
+which you can see here. The output of that
 
 00:03:22.160 --> 00:03:26.310
-é o real torque do motor. Agora o que 
-fiz foi de fato separar o motor
+gain block is the actual motor torque.
+Now what I’ve done is actually separated
 
 00:03:26.310 --> 00:03:31.260
-em duas componentes. Eu tenho a componente que 
-gera o torque e tenho outra componente
+the motor into two components. I have a component
+which generates a torque and I have another
 
 00:03:31.260 --> 00:03:35.480
-que representa a inércia e atrito viscoso
-do motor.
+component which represents the inertia and
+viscous friction of the motor.
 
 00:03:35.480 --> 00:03:40.270
-Agora, irei introduzir outra junção de soma,
-que será onde injetamos o torque de pertubação.
+Now, I’m going to introduce another summing
+junction which is a where we inject the disturbance
 
 00:03:40.270 --> 00:03:45.410
-Assim, nessa junta de soma em particular, 
-temos a soma do torque criado pelo motor e
+torque. So at this particular summing junction,
+we have the sum of the torque which the motor
 
 00:03:45.410 --> 00:03:50.319
-e adiciono isso ao torque que vem da 
-fonte de pertubação.
+creates and I add to that the torque which
+is coming from the disturbance source. It
 
 00:03:50.319 --> 00:03:55.230
 Pode ser por causa da gravidade. Pode ser por causa de
 algo como a fricção de Coulomb que falamos
+
 
 00:03:55.230 --> 00:04:02.769
 sobre na última aula e TD é a transformada de 
@@ -514,6 +519,7 @@ Temos aqui o nosso diagrama de blocos de mais cedo e
 iremos colocar um termo de controle feed
 
 00:11:34.189 --> 00:11:39.259
+
 forward. E a parte chave do controle feed forward
 é que em muitos casos, na verdade nós podemos calcular
 
@@ -683,4 +689,171 @@ Na prática, frequentemente usamos uma mistura de
 00:14:58.689 --> 00:15:03.809
 feedback e feed foward controles. Cada uma 
 tem suas forças e vantagens próprias.
+=======
+feedfoward. E o ponto chave do controlador feedfoward, 
+é que em vários casos, podemos calcular
+
+00:11:39.259 --> 00:11:44.220
+qual será a força de perturbação. Logo, no
+caso da gravidade, se sabemos os ângulos das 
+
+00:11:44.220 --> 00:11:48.569
+juntas, podemos calcular qual é a força de
+gravidade em cada junta.
+
+00:11:48.569 --> 00:11:53.179
+Então, podemos chegar a uma estimativa de qual
+é a perturbação da gravidade e isso deve
+
+00:11:53.179 --> 00:11:57.290
+ser muito útil para nós. Isso é um conhecimento 
+extra sobre a perturbação em que devemos
+
+00:11:57.290 --> 00:12:01.999
+ser capazes de usá-lo para cancelar o distúrbio. 
+A maneira como vamos fazer isso é adicionar outra
+
+00:12:01.999 --> 00:12:06.700
+junção de soma em nossa lei de controle e ela
+possui um sinal negativo e, portanto, tem
+
+00:12:06.700 --> 00:12:12.429
+um ganho negativo ou é uma subtração. E então, 
+para fazer tudo funcionar, e ficar equilibrado,
+
+00:12:12.429 --> 00:12:17.720
+temos que adicionar um ganho aqui. Esse é
+um ganho de um no KdKm.
+
+00:12:17.720 --> 00:12:23.290
+Se você  pensar sobre isso, se nós tivermos nosso 
+torque estimado aqui, dividimos por KD e KM aqui.
+
+00:12:23.290 --> 00:12:30.220
+Nós multiplicamos por KD e KM aqui, então o ganho
+geral agora é um e, em seguida, adicionamos isso ao
+
+00:12:30.220 --> 00:12:35.519
+distúrbio real e por causa do sinal negativo 
+aqui, o distúrbio é cancelado.
+
+00:12:35.519 --> 00:12:41.209
+Esta é a essência do controle feedforward.
+É um truque muito conveniente.
+
+00:12:41.209 --> 00:12:45.899
+Outra estratégia que podemos adotar é aumentar o 
+ganho da integral no momento em que é igual a 
+
+00:12:45.899 --> 00:12:50.699
+zero. Então, eu vou colocar o ganho proporcional
+de volta para um e vou aumentar o
+
+00:12:50.699 --> 00:12:56.589
+ganho da integral para o valor de um. Vamos
+simular isso e ver o que acontece.
+
+00:12:56.589 --> 00:13:01.121
+O que vemos é que o overshoot na resposta da 
+onda quadrada foi reduzido. Está
+
+00:13:01.121 --> 00:13:05.139
+de volta ao que era antes quando tínhamos o
+ganho proporcional igual a um.
+
+00:13:05.139 --> 00:13:10.589
+E aqui podemos ver o efeito do termo integral 
+entrando em ação. Quando a perturbação externa 
+
+00:13:10.589 --> 00:13:16.899
+é aplicada no tempo cinco, o erro no sistema de
+controle aumenta. Isso é então integrado
+
+00:13:16.899 --> 00:13:22.779
+ao longo do tempo para produzir um torque que aumenta
+com o tempo, de modo a empurrar o erro para
+
+00:13:22.779 --> 00:13:28.509
+zero. Podemos ver aqui o efeito do termo integrado
+aumentando. Está empurrando o erro para baixo. 
+
+00:13:28.509 --> 00:13:32.769
+Pelo que podemos ver, após um período curto 
+de tempo, o ascendente do integrado
+
+00:13:32.769 --> 00:13:38.639
+se tornou igual ao valor da perturbação 
+externa. E efetivamente o 
+
+00:13:38.639 --> 00:13:40.929
+cancelou.
+Então, podemos ver no final do traço que 
+
+00:13:40.929 --> 00:13:46.179
+a resposta da onda quadrada é basicamente o que
+queremos que ela seja. A perturbação externa
+
+00:13:46.179 --> 00:13:50.689
+foi rejeitada. Vamos resumir.
+Nós vimos diferentes técnicas
+
+00:13:50.689 --> 00:13:56.260
+para reduzir o efeito da perturbação na 
+posição da junta do robô. Nós começamos
+
+00:13:56.260 --> 00:14:01.369
+observando uma derivada proporcional bastante padrão,
+normalmente conhecida como controle PD, que obteve
+
+00:14:01.369 --> 00:14:06.699
+uma lei de controle como esta, um ganho proporcional
+multiplicado pelo erro da posição mais um ganho
+
+00:14:06.699 --> 00:14:12.239
+derivado multiplicado pela velocidade que ajuda a 
+controlar o overshoot quando a junta está se movendo.
+
+00:14:12.239 --> 00:14:17.509
+Nós vimos que a quantidade de erro é inversamente 
+proporcional ao ganho P. Agora, podemos aumentar
+
+00:14:17.509 --> 00:14:22.579
+P para reduzir o erro, mas isso tem uma séria 
+de consequências adversas como aumentar
+
+00:14:22.579 --> 00:14:27.549
+o overshoot ou fornecer sinais ao motor que 
+ele não pode alcançar.
+
+00:14:27.549 --> 00:14:31.699
+Em seguida, observamos a adição de um termo
+integral. A intuição é que, com o erro constante,
+
+00:14:31.699 --> 00:14:36.249
+a integral ao longo do tempo é um sinal que cresce, 
+o que aumenta o torque de forma a se opor
+
+00:14:36.249 --> 00:14:39.519
+ao torque que está causando a perturbação 
+em primeiro lugar.
+
+00:14:39.519 --> 00:14:43.949
+A terceira abordagem, que examinamos, é o controle 
+de feedforward, que tenta prever ou estimar
+
+00:14:43.949 --> 00:14:48.129
+o distúrbio e, em seguida, cancelá-lo. Uma 
+grande vantagem do controle de feedforward é
+
+00:14:48.129 --> 00:14:53.579
+que mesmo que você não tenha uma estimativa
+perfeita de qual é a perturbação, algum cancelamento
+
+00:14:53.579 --> 00:14:58.689
+melhor do que nenhum cancelamento. 
+Na prática, costumamos usar uma mistura de 
+
+00:14:58.689 --> 00:15:03.809
+controle feedback e feedforward. Cada um deles
+tem pontos fortes e vantagens particulares.
 
