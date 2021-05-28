@@ -113,120 +113,119 @@ que eu pedi.
 
 00:02:51.439 --> 00:02:55.120
 Vamos dar uma olhada de cima nesse robô
-e podemos ver claramente,
+e podemos ver claramente, o efetuador
 
 00:02:55.120 --> 00:03:01.829
-has moved to the position one in the X direction
-and one in the Y direction.
+moveu-se para a posição um na direção X
+e um na direção Y
 
 00:03:01.829 --> 00:03:07.620
-Now let's see if we can find another configuration
-of the robot that has got the same end effector
+Agora, vamos ver se conseguimos encontrar outra
+configuração do robô cujo efetuador tenha a mesma
 
 00:03:07.620 --> 00:03:12.349
-pose. What we're going to do is we're going
-to go back to our inverse kinematics and we're
+pose. O que faremos é voltar para nossa
+cinemática inversa
 
 00:03:12.349 --> 00:03:18.659
-going to give a different initial condition.
-I'm going to start the search with Q1 equal
+e usar uma condição inicial diferente.
+Eu vou iniciar a pesquisa com um Q1 igual
 
 00:03:18.659 --> 00:03:26.370
-to minus one radiance instead of zero radiance
-and run the solver and once again we come
+a menos um radianos ao invés de zero radianos,
+executo o solucionador e outra vez obtemos
 
 00:03:26.370 --> 00:03:30.319
-back to exactly the same solution that I had
-before.
+exatamente a mesma solução de antes.
 
 00:03:30.319 --> 00:03:37.419
-Let's try an different initial condition,
-let's try setting this one to minus one and
+Vamos tentar outra condição diferente,
+vamos tentar colocar esta em menos um e
 
 00:03:37.419 --> 00:03:45.459
-hey, now we have a different solution and
-let's plot what that solution looks like,
+hey, agora nós temos uma solução diferente e
+vamos plotar como seria dessa solução,
 
 00:03:45.459 --> 00:03:52.329
-we can see that once again it has achieved
-the desired end effector position, one in the
+nós podemos ver que, novamente, ele atingiu
+a posição dejesada para o efetuador, um na
 
 00:03:52.329 --> 00:03:56.239
-X direction one in the Y direction, but the
-configuration of the robot is now different.
+direção X e um na direção Y, mas a
+configuração do robô agora está diferente.
 
 00:03:56.239 --> 00:04:02.139
-You see that determining the initial joint
-angles that would achieve that second configuration
+Veja que determinar os ângulos de junta
+iniciais que resultaram nessa segunda configuração
 
 00:04:02.139 --> 00:04:07.480
-was not straight forward, it required a little
-bit of trial and error in order to guide the
+não foi algo trivial, foi preciso um pouco
+de tentativa e erro, a fim de guiar o
 
 00:04:07.480 --> 00:04:13.139
-algorithm, to finding this alternative solution.
+algoritmo, para encontrar essa solução alternativa.
 
 00:04:13.139 --> 00:04:18.329
-Now let's look at performing numerical inverse
-kinematics for this six degree of freedom
+Agora, vamos tentar aplicar cinemática numérica
+inversa para ese robô de seis graus de
 
 00:04:18.329 --> 00:04:21.259
-robot, which moves in three dimensions.
+liberdade, o qual se move em três dimensões.
 
 00:04:21.259 --> 00:04:27.490
-The first thing we're going to do is to load
-a model of the Puma robot, we now have a variable
+A primeira coisa que faremos é carregar
+o modelo do robô Puma. Agora, temos a variável
 
 00:04:27.490 --> 00:04:33.729
-in our workspace and I'm going to plot the
-robot in its zero angle configuration, using
+na nossa área de trabalho, e eu vou plotar o
+robô na sus configuração de ângulo zero, usando
 
 00:04:33.729 --> 00:04:40.810
-the workspace variable QZ which was defined
-by the MDL Puma 560 script. And here we see
+a variável QZ que foi definida pelo
+script MDL Puma 560. E aqui nós vemos
 
 00:04:40.810 --> 00:04:45.199
-the robot in it's zero angle pose. Next thing
-I'm going to do is define the pose that I
+o robô em sua pose de ângulo zero. A próxima
+coisa que farei será definir a pose que eu
 
 00:04:45.199 --> 00:04:51.349
-want the end effector to adopt. And it's going
-to have a translational component of 0.6 in
+quero que o efetuador assuma. E ela terá uma
+componente translacionam de 0.6 na
 
 00:04:51.349 --> 00:04:57.090
-the X direction, 0.2 in the Y direction, zero
-in the Z direction and I'm going to change
+direção X, 0.2 na direção Y, zero
+na direção Z e eu vou mudar
 
 00:04:57.090 --> 00:05:03.430
-the orientation of the end effector. It's got
-a roll angle of zero, pitch angle of 180 degrees
+a orientação do efetuador. Ele terá um
+ângulo roll de zero, ângulo pitch de 180 graus
 
 00:05:03.430 --> 00:05:09.830
-and a yaw angle of 180 degrees, specify degrees
-and this is the homogeneous transformation
+e ângulo yaw de 180 graus, especifique graus
+e esta é a transformação homogênea
 
 00:05:09.830 --> 00:05:13.870
-representing the pose I'd like the robot to
-adopt.
+representando a pose que eu gostaria que
+o robô adotasse.
 
 00:05:13.870 --> 00:05:19.520
-I'm going to enable plot hold and now I'm
-going to plot that particular pose, so we
+Eu vou acionar a opção hold do plot e agora
+vou plotar aquela pose que obtemos, para que
 
 00:05:19.520 --> 00:05:24.810
-can see whether the robot is right now and
-the pose that I would like it to adopt.
+possamos ver onde o robô está no momento e
+a pose que eu gostaria que ele adotasse.
 
 00:05:24.810 --> 00:05:29.759
-Now I'm going to compute the inverse kinematics
-and this time I'm going to do it numerically.
+Agora, eu vou calcular a cinemática inversa
+e, desta vez, farei isso numericamente
 
 00:05:29.759 --> 00:05:36.979
-And I use a slightly different method on the
-P560 object, I use the method ikine, I pass
+Eu uso um método um pouco diferente no objeto
+P560. Eu uso o método chamado ikine. Eu passo
 
 00:05:36.979 --> 00:05:41.720
-na posição que eu gostaria que o robô adotasse e
+a posição que eu gostaria que o robô adotasse e
 passo o conjunto inicial de ângulos de junta
 
 00:05:41.720 --> 00:05:47.080
