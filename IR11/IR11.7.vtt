@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:04.170 --> 00:00:09.090
 In the last lecture, we considered independent
@@ -246,122 +246,120 @@ A more sophisticated technique to deal with
 this is to compute this disturbance torque.
 
 00:05:20.590 --> 00:05:25.610
-If we have a dynamic model of our robot and
-we know the position, velocity and acceleration
+Se tivermos um modelo dinâmico do nosso robô e
+conhecemos a posição, velocidade e aceleração
 
 00:05:25.610 --> 00:05:30.260
-of all of the links, then we can compute this
-disturbance term. So, the control that is
+de todas as ligações, então podemos calcular esse
+termo de pertubação. Logo, o controle que é
 
 00:05:30.260 --> 00:05:36.130
-shown here is effectively a P, D controller.
-This is the P term. This is the D term, and
+mostrado aqui é efetivamente um controlador PD.
+Este é o termo P. Este é o termo D, e
 
 00:05:36.130 --> 00:05:41.840
-this is the feedforward term, with the feedforward,
-the disturbance that we can compute. Of course,
+este é o termo feedfoward, com o feedforward,
+podemos calcular a pertubação. Claro,
 
 00:05:41.840 --> 00:05:46.590
-this means that we need to know accurately
-the dynamic parameters of our robot arm.
+isso significa que precisamos com precisão os
+parâmetros dinâmicos de nosso braço robótico
 
 00:05:46.590 --> 00:05:51.060
-The third approach that we can use is called
-computed-torque control. It has some similarities
+A terceira abordagem que podemos usar é chamada 
+de controle de torque calculado. Tem algumas semelhanças
 
 00:05:51.060 --> 00:05:55.810
-but also, some important differences to the
-feedforward control expression. Here, we can
+mas também, algumas diferenças importantes para a 
+expressão de controle feedforward. Aqui podemos
 
 00:05:55.810 --> 00:05:59.370
-see a term which is effectively a proportional
-controller. Here, we can see a term which
+ver um termo que é efetivamente um controlador
+proporcional. Aqui, podemos ver um termo que
 
 00:05:59.370 --> 00:06:04.440
-is effectively a derivative controller. They're
-multiplied by the inertia matrix and here,
+é efetivamente um controlador derivado. Eles
+são multiplicados pela matriz de inércia e aqui,
 
 00:06:04.440 --> 00:06:08.480
-we have the centripetal and Coriolis term
-and the gravity term.
+temos o termo centrípeto e Coriolis
+e o termo gravidade.
 
 00:06:08.480 --> 00:06:13.050
-What are the pros and cons of these different
-techniques? A gearbox is cheap and straightforward.
+Quais são os prós e os contras dessas diferentes
+técnicas? Uma caixa de câmbio é barata e simples.
 
 00:06:13.050 --> 00:06:19.720
-Often times, we use a gearbox in a robot anyway
-so that we can use a cheaper low torque motor.
+Frequentemente, usamos uma caixa de câmbio em um robô de qualquer maneira,
+para que possamos usar um motor de baixo torque mais barato.
 
 00:06:19.720 --> 00:06:25.640
-Gearboxes do add cost and they add weight.
-They do some inefficiency and they make noise.
+Caixa de câmbio adicionam custo e peso.
+Elas são ineficientes e fazem barulho.
 
 00:06:25.640 --> 00:06:30.750
-Computed-torque control has to be computed
-every single sample. So, if our robot controller
+O controle de torque computado deve ser calculado 
+a cada amostra. Então, se nosso controlador do robô
 
 00:06:30.750 --> 00:06:34.360
-is running, at say, a thousand Hertz, then
-the expression that we had on the previous
+está rodando, digamos, a mil Hertz, então
+a expressão que tínhamos no slide anterior
 
 00:06:34.360 --> 00:06:39.830
-slide needs to be computed at one thousand
-Hertz. That involves the computation of those
+precisa ser calculada em mil Hertz.
+Isso envolve o cálculo daquelas
 
 00:06:39.830 --> 00:06:45.870
-matrices, the M, the C and the G matrix and
-some matrix multiplication. So a lot of computation
+matrizes, M, C e G e alguma multiplicação
+de matrizes. Então, muita computação
 
 00:06:45.870 --> 00:06:50.930
-needs to be done. Once upon a time, this was
-really, really hard to do. In the early days
+precisam ser feitos. Antigamente, isso era muito,
+muito difícil de fazer. Nos primeiros dias 
 
 00:06:50.930 --> 00:06:56.090
-of robotics, when computers were really slow,
-it was a very hard thing. So, all sorts of
+da robótica, quando os computadores eram muito lentos,
+era uma coisa muito difícil. Então, todos os tipos de
 
 00:06:56.090 --> 00:07:01.300
-approximations were introduced, but today
-it's very, very easy to do that at a frequency
+aproximações foram introduzidos, mas hoje
+é muito, muito fácil fazer isso em uma frequência
 
 00:07:01.300 --> 00:07:05.320
-like one thousand Hertz.
-The feedforward control can actually be computed
+como mil hertz. O controle feedforward
+pode realmente ser calculado
 
 00:07:05.320 --> 00:07:10.890
-at a slow rate, and that reflects the reality
-that the dynamic torques don't actually change
+em uma taxa lenta, e isso reflete a realidade
+de que os torques dinâmicos não mudam
 
 00:07:10.890 --> 00:07:16.190
-all that much from one sample time to the
-next. So, the feedforward control signal can
+muito de uma amostra para outra.
+Assim, o sinal de controle feedforward pode
 
 00:07:16.190 --> 00:07:21.360
-be computed at perhaps fifty Hertz or a hundred
-Hertz, while the main control is implemented
+ser calculado em talvez cinquenta Hertz ou cem Hertz,
+enquanto o controle principal é implementado
 
 00:07:21.360 --> 00:07:26.470
-at something like one thousand Hertz. They
-don't have to be computed at the same rate.
+em algo como mil Hertz. Eles
+não precisam ser calculados na mesma taxa.
 
 00:07:26.470 --> 00:07:30.290
-For the computed-torque control and for the
-feedforward control, there is a significant
+Para o controle de torque calculado e para
+o controle feedforward, há um desafio
 
 00:07:30.290 --> 00:07:35.660
-challenge in knowing the actual values of
-the dynamic parameters of each of the links.
+significativo em saber os valores reais dos
+parâmetros dinâmicos de cada uma das ligações.
 
 00:07:35.660 --> 00:07:41.350
-For each link, there are ten dynamic parameters
-as we discussed earlier. So, for a six link
+Para cada ligação, existem dez parâmetros dinâmicos,
+como discutimos anteriormente. Então, para um robô industrial 
 
 00:07:41.350 --> 00:07:48.140
-industrial robot, that's sixty dynamic parameters
-need to be identified. You can do it experimentally
+de seis ligações, são sessenta parâmetros dinâmicos que 
+precisam ser identificados. Você pode fazer isso experimentalmente
 
 00:07:48.140 --> 00:07:50.111
-or you can perhaps do it from a CAD model
-of the robot.
-
+ou talvez a partir de um modelo CAD do robô.
