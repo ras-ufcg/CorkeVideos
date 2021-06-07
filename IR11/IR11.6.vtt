@@ -3,136 +3,137 @@ Kind: captions
 Language: en-GB
 
 00:00:03.270 --> 00:00:09.110
-The last term we're going to look at is the
-term 'C' and it represents the Coriolis and
+O último termo que iremos analisar é o termo
+"C" e ele representa os torques Coriolis e
 
 00:00:09.110 --> 00:00:14.110
-Centripetal torques that exists within a serial
-link robot manipulator. It's often called
+Centrípeta que existem em um manipulador de
+um robô de ligação serial. Ele é comumente 
 
 00:00:14.110 --> 00:00:20.200
-the velocity term because the C matrix multiplies
-the vector Q dot, the vector of joint velocities.
+chamado de termo de velocidade pois a matriz C multiplica
+o vetor Q ponto, o vetor de velocidade das juntas
 
 00:00:20.200 --> 00:00:26.380
-This is the torque that is due to gyroscopic
-effects due to rotating joints within the
+Esse é o torque gerado pelos efeitos giroscópicos, 
+devido à rotação das juntas em um manipulador 
 
 00:00:26.380 --> 00:00:30.910
-robot manipulator. There are actually two
-effects that are modelled by the matrix C and
+do robô. Na realidade, existem dois efeitos
+que são modelados pela matriz C, sendo
 
 00:00:30.910 --> 00:00:35.750
-it's the Coriolis effect which is named after
-the French scientist, mathematician Coriolis
+o efeito Coriolis, nomeado em homenagem ao 
+cientistas matemático francês, Coriolis 
 
 00:00:35.750 --> 00:00:40.960
-and he did a lot of work on understanding
-what goes on in rotating reference frames
+e ele trabalhou muito em compreender o que 
+acontece em sistemas de referência em rotação.
 
 00:00:40.960 --> 00:00:45.410
-and the other force represented by the matrix
-C are centripetal torques.
+A outra força representada pela matriz C são os
+torques centrípetas.
 
 00:00:45.410 --> 00:00:49.880
-Once again we have our two link robot represented
-symbolically and this time we're going to
+Mais uma vez, temos nosso robô de duas ligações
+representado simbolicamente, e desta vez iremos 
 
 00:00:49.880 --> 00:00:55.790
-investigate the Coriolis and centripetal torques.
-And that's done using the method called coriolis
+investigar os torques Coriolis e centrípetas.
+Isso é feito utilizando o método chamado coriolis,
 
 00:00:55.790 --> 00:01:04.269
-and the arguments to that are the joint angles,
-there they are and the joint velocities; Q1D and Q2D.
+e os arguementos para este são os ângulos de junta,
+aqui estão eles, e a velocidade de junta; Q1D e Q2D. 
 
 00:01:05.240 --> 00:01:11.340
-It takes a moment to compute and this is the
-Coriolis and centripetal matrix.
+Leva um tempo para computar, e esta é a matriz
+Coriolis e centrípeta.
 
 00:01:11.340 --> 00:01:18.320
-It's a 2 x 2 matrix and we can see, once again that
-it comprises a number of kinematic and dynamic
+Ela é uma matriz 2 x 2 e podemos ver, mais uma vez,
+que ela compreende um número de parâmetros cinemáticos
 
 00:01:18.329 --> 00:01:22.749
-parameters of a robot and we can also see
-that it's a function of the configuration
+e dinâmicos de um robô. Podemos também ver que 
+ela é função da configuração do robô.
 
 00:01:22.749 --> 00:01:27.459
-of a robot. Interestingly, in this case it’s
-only a function of Q2.
+Curiosamente, neste caso a matriz é apenas 
+função de Q2.
 
 00:01:27.459 --> 00:01:31.810
-For a simple 2 link robot manipulator, the
-C matrix looks something like this. We can
+Para um simples manipulador de um robô de duas
+ligações, a matriz C se parece com algo como isto.  
 
 00:01:31.810 --> 00:01:36.639
-see that the elements are a function of the
-joint angle, in this case just a single joint
+Podemos ver que os elementos são função do ângulo
+de junta, neste caso sendo um único ângulo de junta.
 
 00:01:36.639 --> 00:01:43.560
-angle. Joint 2 angle Q2 and also the velocities
-of the two joints Q1 dot and Q2 dot.
+O ângulo de junta 2, Q2, e também as velocidades
+de duas juntas, Q1 ponto e Q2 ponto.
 
 00:01:43.560 --> 00:01:50.009
-Now the torque, due to the Coriolis and centripetal
-effects can be derived by multiplying the
+Agora o torque, devido ao efeitos Coriolis e centrípetas
+podem ser derivados por multiplicar a matriz C
 
 00:01:50.009 --> 00:01:55.560
-matrix C by the vector of joint velocities
-and if we expand that out, we have the expression
+por um vetor de velocidades de junta, e se 
+expandirmos isso, temos a expressão
 
 00:01:55.560 --> 00:02:02.529
-for the Coriolis and centripetal talks acting
-on Joint 1 and acting on Joint 2.
+para os torques Coriolis e centrípetas agindo 
+sobre a Junta 1 e a Junta 2.
 
 00:02:02.529 --> 00:02:07.539
-Let's consider the case where Joint 1 is not
-moving that’s Q1 dot is equal to zero but
+Vamos considerar o caso em que a Junta 1 não
+está se movendo, isso é Q1 ponto igual a zero.
 
 00:02:07.539 --> 00:02:12.990
-let's say that Joint 2 is moving so Q2 dot
-is not equal to zero. Then although this term
+Porém, digamos que a Junta 2 se move, ou seja,
+Q2 ponto é diferente de zero. Assim, embora esse
 
 00:02:12.990 --> 00:02:19.200
-here is equal to zero. This term here will
-be finite, that is the motion of Joint 2 at
+termo seja igual a zero, esse termo aqui será
+finito, sendo o movimento da Junta 2 em uma 
 
 00:02:19.200 --> 00:02:25.120
-constant velocity is going to induce a torque
-on Joint 1 and that's again something that
+velocidade constante, que irá induzir um torque
+na Junta 1. Isso será, novamente, algo que o
 
 00:02:25.120 --> 00:02:30.690
-the Joint 1 motion controller is going to
-have to fight against, going to have to oppose
+controlador de movimento da Junta 1 terá que 
+se agir contra, tendo que se opor, buscando
 
 00:02:30.690 --> 00:02:33.940
-in order to keep Joint 1 stationary.
+manter a Junta 1 estacionária.
 
 00:02:33.940 --> 00:02:39.130
-And similarly we can see that for Joint 2
-constant velocity motion of Joint 1 is going
+De forma similar, podemos ver que para a Junta 2,
+o movimento em velocidade constante da Junta 1 irá
 
 00:02:39.130 --> 00:02:44.870
-to induce a Coriolis and centripetal effect
-on Joint 2. Now if we look at these terms,
+induzir efeitos Coriolis e centrípetas na 
+Junta 2. Agora, observando estes termos,
 
 00:02:44.870 --> 00:02:50.140
-we can see that some of them are a function
-of a particular joint velocity squared and
+podemos ver que alguns deles são função do quadrado
+da velocidade de uma determinada junta e 
 
 00:02:50.140 --> 00:02:56.280
-these are the centripetal talks and some of
-them are a product of one joint velocity multiplied
+esses são os termos centrípetas. Ainda, alguns deles
+são produto de uma velocidade de junta por uma
 
 00:02:56.280 --> 00:03:02.130
-by a different joint velocity and these are
-the Coriolis terms. So this matrix C has got
+outra velocidade de junta diferente, sendo esses
+os termos Coriolis. Sendo assim, essa matriz C 
 
 00:03:02.130 --> 00:03:07.140
-some terms which are the products of velocities
-of different joints and some are joint velocity
+possui termos que são produtos da velocidade de 
+diferentes juntas e alguns são o quadrado da
 
 00:03:07.140 --> 00:03:10.069
-squared, Coriolis and centripetal effects.
+velocidade de uma única junta, sendo 
+os efeitos Coriolis e centrípetas.
 
