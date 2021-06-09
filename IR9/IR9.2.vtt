@@ -13,7 +13,6 @@ x e y do efetuador e obtemos as expressões para
 00:00:14.740 --> 00:00:19.890
 a taxa de variação da pose do efetuador.
 Essa é a taxa de variação de x e a taxa
-for the rate of change of the end-effector
 
 00:00:19.890 --> 00:00:25.939
 de variação de y em termos da taxa de variação 
@@ -24,16 +23,16 @@ similar para o robô de três juntas onde a pose
 do efetuador é descrita pelas coordenadas
 
 00:00:31.390 --> 00:00:38.420
-x e y, e pelo ângulo de orientação, teta. Além
+x e y e pelo ângulo de orientação, theta. Além
 disso, mais uma vez descrevemos x-ponto, y-ponto
 
 00:00:38.420 --> 00:00:42.829
-e teta-ponto em termos da taxa de variação dos 
+e theta-ponto em termos da taxa de variação dos 
 ângulos de junta do robô.
 
 00:00:42.829 --> 00:00:48.840
-Agora, queremos fazer o mesmo para um robô seis eixos
-como esse robô Puma 560. Descobrimos que isso
+Agora, queremos fazer o mesmo para um robô de seis 
+eixos como esse robô Puma 560. Descobrimos que isso
 
 00:00:48.840 --> 00:00:53.579
 é muito, muito difícil de se fazer. A necessidade 
@@ -44,8 +43,8 @@ a páginas e mais páginas de nosso caderno.
 Isso é bem difícil de se fazer.
 
 00:00:58.370 --> 00:01:02.140
-Assim, nós tomaremos uma abordagem diferente para 
-solucionar esse problema.
+Assim, nós tomaremos uma abordagem diferente 
+para solucionar esse problema.
 
 00:01:02.140 --> 00:01:07.430]
 Então, o que queremos fazer agora é entender a 
@@ -88,8 +87,8 @@ a quarta e assim em diante. Em sua primeira
 aula de cálculo, você teria visto essa relação.
 
 00:01:52.259 --> 00:01:58.040
-Podemos aproximar a derivada de uma função ao
-tomar uma diferença finita.
+Podemos aproximar a derivada de uma 
+função ao tomar uma diferença finita.
 
 00:01:58.040 --> 00:02:04.150
 Neste caso, pertubamos o valor de x em uma
@@ -109,7 +108,7 @@ direta como uma função K e função do ângulo
 
 00:02:21.780 --> 00:02:26.190
 de junta, retornando a posição do efetuador.
-E, você irá notar aqui que utilizei a
+E você irá notar aqui que utilizei a
 
 00:02:26.190 --> 00:02:31.590
 notação de derivada parcial, pois a função
@@ -184,7 +183,7 @@ usamos o método fkine para fazer isso. E,
 
 00:03:59.720 --> 00:04:04.159
 aqui está a pose do efetuador expressa em forma
-de uma matriz de transformação homogênea. Agora,
+de uma matriz de transformação homogênea. Agora
 
 00:04:04.159 --> 00:04:11.239
 o que eu irei fazer é computar a pose do efetuador
@@ -276,7 +275,7 @@ Agora, podemos combinar os componentes nesta expressão
 
 00:05:58.050 --> 00:06:02.920
 simbólica com as componentes na expressão 
-numérica. Então, esta é a expressão - uma
+numérica. Então, essa é a expressão - uma
 
 00:06:02.920 --> 00:06:08.789
 derivada parcial de T com relação a Q1 e
@@ -296,14 +295,14 @@ de Q1 em relação ao tempo, acabo com
 
 00:06:24.660 --> 00:06:31.009
 a taxa de variação da translação em relação
-ao tempo, que é, de fato a velocidade de translação
+ao tempo, que é de fato a velocidade de translação
 
 00:06:31.009 --> 00:06:35.789
 do efetuador. Isso é x ponto, y ponto e z ponto 
 que eu posso também escrever às vezes
 
 00:06:35.789 --> 00:06:43.370
-como Vx, V you Vz. Eu posso rearranjar esta expressão 
+como Vx, Vy ou Vz. Eu posso rearranjar esta expressão 
 e temos uma expressão para a velocidade do efetuador
 
 00:06:43.370 --> 00:06:49.180
@@ -352,7 +351,7 @@ que relacionam a velocidade da articulação
 
 00:07:37.530 --> 00:07:41.880
 Agora vamos considerar a parte rotacional.
-E, isto não é tão simples. Aqui,
+E isto não é tão simples. Aqui
 
 00:07:41.880 --> 00:07:47.860
 escrevi a derivada parcial de uma matriz de
@@ -371,7 +370,7 @@ relação entre a taxa de variação da
 matriz de rotação, a velocidade angular
 
 00:08:03.419 --> 00:08:09.099
-ômega e a própria matriz de rotação. E,
+ômega e a própria matriz de rotação. E
 podemos substituir isso aqui. A matriz
 
 00:08:09.099 --> 00:08:14.240
@@ -380,4 +379,3 @@ inclinação e é uma função do vetor de velocidade
 
 00:08:14.240 --> 00:08:14.669
 angular ômega.
-
