@@ -4,7 +4,7 @@ Language: pt-BR
 
 00:00:03.889 --> 00:00:07.839
 Nós acabamos de trabalhar em um jeito de 
-descrever a relação entre a taxa de mudança 
+descrever a relação entre a taxa de variação
 
 00:00:07.839 --> 00:00:13.520
 de seus ângulos de junta e da velocidade 
@@ -27,10 +27,10 @@ J, é uma matriz 6x6. É quadrada. Então, nós
 
 00:00:33.360 --> 00:00:39.300
 podemos reorganizar essa expressão para obter
-a velocidade do ângulo de junta do tobô que precisamos
+a velocidade do ângulo de junta do robô que precisamos
 
 00:00:39.300 --> 00:00:45.510
-a fim de conseguir a velocidade espacial desejada fddo
+a fim de conseguir a velocidade espacial desejada do
 efetuador do robô e nós podemos fazer isso a não ser que 
 
 00:00:45.510 --> 00:00:49.920
@@ -65,7 +65,7 @@ Seguindo do exemplo mais recente, nós podemos
 testar o determinante da matriz Jacobiana
 
 00:01:26.200 --> 00:01:31.270
-para o a configuaração do ângulo de junta QN. E,
+para a configuaração do ângulo de junta QN. E,
 aqui nós podemos ver o determinante, e não
 
 00:01:31.270 --> 00:01:36.430
@@ -78,7 +78,7 @@ configuração diferente de ângulo de junta, eu vou
 
 00:01:41.540 --> 00:01:46.140
 olhar para a configuração de junta Q0 que é 
-onde todos os ângulos de junta são igual a zero.
+onde todos os ângulos de junta são iguais a zero.
 
 00:01:46.140 --> 00:01:53.040
 Se eu calcular a Jacobiana aqui e passar no
@@ -129,18 +129,16 @@ discreto. Seria calculado em uma série de
 passos no tempo discreto, passo de tempo 1,
 
 00:02:44.569 --> 00:02:50.060
-passo de tempo 2, passo de tempo 3, e vou 
-generalizar isso para o passo de tempo k.
-E, o intervalo entre 
+passo de tempo 2, passo de tempo 3, e vou generalizar 
+isso para o passo de tempo k. E, o intervalo entre 
 
 00:02:50.060 --> 00:02:56.320
-os passos de tempo é dado pelo símbolo delta T.
-Então, no passo de tempo, k, tomarei os ângulos 
-das juntas 
+os passos de tempo é dado pelo símbolo delta T. Então, 
+no passo de tempo, k, tomarei os ângulos das juntas 
 
 00:02:56.320 --> 00:03:01.530
-que são medidos no tempo, k. Calculo o Jacobiano, 
-inverto-o, multiplico-o pela velocidade espacial desejada 
+que são medidos no tempo, k. Calculo a Jacobiana, 
+inverto-a, multiplico-a pela velocidade espacial desejada 
 
 00:03:01.530 --> 00:03:06.970
 e determino a velocidade angular da junta 
@@ -187,7 +185,7 @@ segundo na direção z e sem velocidade angular.
 E, vou colocar isso em um vetor coluna.
 
 00:04:00.769 --> 00:04:06.470
-Então só temos isso. Se, agora, eu multiplicar 
+Então só temos isso. Se agora eu multiplicar 
 o inverso do Jacobiano pela velocidade espacial desejada, 
 
 00:04:06.470 --> 00:04:12.210
