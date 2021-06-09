@@ -15,7 +15,7 @@ que temos que levar a matriz de rotação para
 o outro lado da equação. Nós temos que
 
 00:00:17.769 --> 00:00:23.269
-que calcular sua inversa mas, sabemos que para uma matriz
+que calcular sua inversa, mas sabemos que para uma matriz
 de rotação sua inversa é igual a sua transposta.
 
 00:00:23.270 --> 00:00:28.730
@@ -64,21 +64,21 @@ a Omega X. Nesse caso ambos são zero
 
 00:01:17.329 --> 00:01:23.240
 assim, podemos escrever que Omega X é aproximadamente
-igual a zero vezes Q1ponto. Vamos olhar para
+igual a zero vezes Q1 ponto. Vamos olhar para
 
 00:01:23.240 --> 00:01:27.880
 os elementos de Omega Y e são ambos iguais
-a zero logo, posso dizer feliz que Omega
+a zero, logo posso dizer feliz que Omega Y
 
 00:01:27.880 --> 00:01:30.409
-Y é aproximadamente igual a zero vezes Q1ponto.
+é aproximadamente igual a zero vezes Q1 ponto.
 
 00:01:30.409 --> 00:01:36.169
 Vamos agora olhar para Omega Z e é bem 
 visível que Omega Z é aproximadamente
 
 00:01:36.169 --> 00:01:42.689
-igual a 1 vezes Q1ponto. Então, o que temos feito
+igual a 1 vezes Q1 ponto. Então, o que temos feito
 é combinar os elementos em uma matriz anti-simétrica
 
 00:01:42.689 --> 00:01:48.139
@@ -90,11 +90,11 @@ os componentes da velocidade angular do robô
 efetuador e a taxa de mudança do primeiro
 
 00:01:54.819 --> 00:01:56.399
-ângulo de junta que é Q1ponto.
+ângulo de junta que é Q1 ponto.
 
 00:01:56.399 --> 00:02:02.429
 Assim agora posso escrever em forma de matriz
-dessa forma, e aqui está aquela expressão de novo e
+dessa forma e aqui está aquela expressão de novo e
 
 00:02:02.429 --> 00:02:06.919
 para trazer a tona a expressão que calculamos mais cedo
@@ -105,7 +105,7 @@ robô. E eu posso combinar as duas empilhando
 os dois vetores e deixando o
 
 00:02:11.969 --> 00:02:13.909
-fator comum, Q1ponto, em evidência.
+fator comum, Q1 ponto, em evidência.
 
 00:02:13.909 --> 00:02:18.860
 E agora eu tenho esta relação especial entre a
@@ -117,14 +117,14 @@ junta. Então, aqui está a expressão que acabamos
 
 00:02:23.650 --> 00:02:30.110
 de encontrar e podemos fazer a mesma coisa para
-a junta 2 e a junta 3, assim até a junta 6.
+a junta 2 e a junta 3 e assim até a junta 6.
 
 00:02:30.300 --> 00:02:35.379
 Perceba que os números nos vetores
 de cima e as colunas da matriz são
 
 00:02:35.379 --> 00:02:40.510
-um pouco diferentes, e isso se dá devido aos
+um pouco diferentes e isso se dá devido aos
 vetores de cima serem aproximações da
 
 00:02:40.510 --> 00:02:43.989
@@ -151,8 +151,8 @@ Usamos a letra grega ‘nu’ como fizemos anteriormente
 para representar a velocidade espacial e
 
 00:03:06.900 --> 00:03:12.859
-representamos a velocidade de junta por Qponto.
-Eu usei J maiúsculo para representa a Jacobiana
+representamos a velocidade de junta por Q ponto.
+Eu usei J maiúsculo para representar a Jacobiana
 
 00:03:12.859 --> 00:03:18.269
 manipuladora e indiquei que ela é uma função
