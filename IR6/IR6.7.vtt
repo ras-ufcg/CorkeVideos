@@ -3,174 +3,173 @@ Kind: captions
 Language: en
 
 00:00:04.170 --> 00:00:09.090
-We’re now going to describe some slightly
-mathematical concepts but they’re very useful,
+Agora vamos descrever alguns conceitos
+ligeiramente matemáticos mas eles são muito úteis,
 
 00:00:09.090 --> 00:00:11.650
-so bear with me.
+Então tenha pasciência comigo.
 
 00:00:11.650 --> 00:00:15.080
-So far, when we’ve been talking about robots,
-we’ve been talking a lot about the joint
+Até agora, quando estamos falando sobre robôs,
+falamos muito sobre os ângulos de  
 
 00:00:15.080 --> 00:00:16.080
-angles.
+Juntas.
 
 00:00:16.080 --> 00:00:21.480
-What we’re going to do now is to generalize
-that concept and we’re going to refer to
+O que vamos fazer agora é generalizar 
+esse conceito e nos referimos a
 
 00:00:21.480 --> 00:00:23.869
-generalize joint coordinates.
+generalizar as coordenadas das juntas.
 
 00:00:23.869 --> 00:00:29.779
-Now, for most robots where the joints are
-revolute, that is their rotating time joints,
+Agora, para maioria dos robôs onde as juntas são
+de rotação, ou seja suas juntas de tempo de rotação,
 
 00:00:29.779 --> 00:00:33.900
-then their generalize joint coordinate is
-simply the joint angle.
+a coordenada generalizada da junta é
+simplesmente o ângulo de junta.
 
 00:00:33.900 --> 00:00:40.030
-But, for those small number of robots that
-have got a sliding joint also known as a prismatic
+Mas, para o pequeno número de robôs que
+possuem uma junta deslizante também conhecida como juntas
 
 00:00:40.030 --> 00:00:44.949
-joint, then the generalize joint coordinate
-then would be a length, the length of that
+prismáticas, a coordenada generalizada de junta
+seria um comprimento, o comprimento da 
 
 00:00:44.949 --> 00:00:46.400
-sliding joint.
+junta deslizante.
 
 00:00:46.400 --> 00:00:52.309
-So, generalize joint coordinate is simply
-a way that we can deal with robot joints that
+Então, a coordenada de junta geral é simplesmente
+uma forma que podemos lidar com juntas do robô que
 
 00:00:52.309 --> 00:00:54.299
-either rotate or slide.
+giram ou deslizam.
 
 00:00:54.299 --> 00:01:00.670
-So, the set of all joint coordinates for the
-robot we referred to as the joint configuration.
+Portanto, o conjunto de todas as coordenadas de junta para o robô
+é conhecido como configuração de junta.
 
 00:01:00.670 --> 00:01:06.590
-It’s a vector and typically denoted by the
-symbol Q. And, the length of the vector is
+É um vetor e geralmente denotado pelo 
+símbolo Q. E, o comprimento do vetor é
 
 00:01:06.590 --> 00:01:09.270
-N and N is the number of joints.
+N e N é o número de juntas.
 
 00:01:09.270 --> 00:01:15.490
-So, joint configuration Q is a vector of length
-N and the elements of that vector are either
+Portanto, configuração de junta Q é um vetor de comprimento
+N e os elementos desse vetor são 
 
 00:01:15.490 --> 00:01:18.409
-an angle or a length.
+um ângulo ou um comprimento.
 
 00:01:18.409 --> 00:01:23.479
-The joint angle vector belongs to a space,
-the space C.
+O vetor ângulo de junta pertence a um espaço,
+o espaço C.
 
 00:01:23.479 --> 00:01:26.329
-We refer to this as the configuration space.
+Chamamos isso de espaço de configuração .
 
 00:01:26.329 --> 00:01:34.659
-The joint configurations belong to the set
-C and C is the set of all possible joint configurations.
+As configurações de junta pertencem ao conjunto
+C e C é o conjunto de todas as possíveis configurações de junta.
 
 00:01:34.659 --> 00:01:40.420
-Now, C is a subset of the N dimensional real
-number space.
+Agora, C é um subconjunto do espaço de núemeros reais N dimensional.
 
 00:01:40.420 --> 00:01:44.950
-The other space that’s really important
-when we’re talking about robots is the space
+O outro espaço que é realmente importante
+quando estamos falando sobre robôs é o espaço
 
 00:01:44.950 --> 00:01:52.390
-of all possible end effector poses and we
-refer to this by the symbol T. We say that
+de todas poses possíveis do efetor final e nos referimos
+a isso pelo símbolo T. Falamos que
 
 00:01:52.390 --> 00:01:59.150
-the end effector pose ksi E belongs to the
-set T, the set of all possible end effector
+a pose do efetor final ksi E pertence ao
+conjunto T, o conjunto de todas as poses possíveis do efetor
 
 00:01:59.150 --> 00:02:00.150
-poses.
+final.
 
 00:02:00.150 --> 00:02:06.350
-In two dimensions, T is a subset of all possible
-translations and rotations.
+Em duas dimensões, T é um subconjunto de todas translações
+e rotações possíveis.
 
 00:02:06.350 --> 00:02:11.240
-And, the reason that it’s a subset is that
-the robot has only got finite reach.
+E, o motivo de ser um subconjunto é que
+o robô só tem alcance finito.
 
 00:02:11.240 --> 00:02:12.879
-It can’t reach out to the horizon.
+Não pode alcançar o horizonte.
 
 00:02:12.879 --> 00:02:21.220
-For example, so T is a subset of all possible
-positions and orientations in two dimensions.
+Por exemplo, então T é um subconjunto de todas as posições 
+possíveis e orientações em duas dimensões.
 
 00:02:21.220 --> 00:02:25.110
-For example, we’ve looked at robots where
-the end effector pose is simply described
+Por exemplo, observamos robôs que
+a pose do efetor final é simplesmente descrita
 
 00:02:25.110 --> 00:02:27.420
-by the coordinates X and Y.
+pelas coordenadas X e Y.
 
 00:02:27.420 --> 00:02:32.530
-We’ve also looked at some robots where the
-end effector pose is described by the position
+Também temos visto alguns robôs que a
+pose do efetor final é descrita pela posição
 
 00:02:32.530 --> 00:02:36.170
-X and Y and by the orientation Theta.
+X e Y e pela orientação Theta.
 
 00:02:36.170 --> 00:02:43.090
-In three dimensions, we would say that T is
-a subset of SE3, the set of all possible positions
+Em três dimensões, diríamos que T é
+um subconjunto de SE3, o conjunto de todas posições possíveis
 
 00:02:43.090 --> 00:02:46.030
-and orientations in three dimensional space.
+e orientações no espaço tridimensional.
 
 00:02:46.030 --> 00:02:52.299
-And, we’ve, again, look at some specific
-examples where the end effector pose is described
+E, temos, novamente, visto alguns exemplos 
+específicos onde a pose do efetor final é descrita
 
 00:02:52.299 --> 00:02:57.239
-just in terms of its position, X, Y and Z,
-some robots where the end effector pose is
+apenas em termos dessa posição, X, Y e Z,
+alguns robôs onde a pose do efetor final é 
 
 00:02:57.239 --> 00:03:01.650
-described by position X, Y and Z and a single
-pitch angle.
+descrita pela posição X, Y e Z e um único
+ângulo de inclinação.
 
 00:03:01.650 --> 00:03:05.760
-We’ve also looked at some robots whose end
-effector can be described in terms of the
+Também vimos alguns robôs cujo efetor
+final pode ser descrito em termos da
 
 00:03:05.760 --> 00:03:13.120
-position X, Y and Z and orientation roll,
-pitch and yaw angles for example.
+posição X, Y e Z e orientação de giro,
+ângulo de inclinação e guinada, por exemplo.
 
 00:03:13.120 --> 00:03:15.239
-These are all subsets of SE3.
+Todos esses são subconjuntos de SE3.
 
 00:03:15.239 --> 00:03:20.879
-The next important consideration then is the
-dimensions of these different spaces, the
+A próxima consideração importante são as
+dimensões desses diferentes espaços, o
 
 00:03:20.879 --> 00:03:26.390
-task space, the space in which we describe
-the pose of the end effector, and the configuration
+espaço da tarefa, o espaço no qual descrevemos
+a pose do efetor final, e o espaço de
 
 00:03:26.390 --> 00:03:30.950
-space in which we describe the joint coordinates
-of the robot.
+configuração no qual descrevemos as coordenadas de junta
+do robô.
 
 00:03:30.950 --> 00:03:35.410
-We say that a robot has got so many degrees
-of freedom and that’s equal to the number
+Dizemos que um robô tem tantos graus
+de liberdade e isso é igual ao número
 
 00:03:35.410 --> 00:03:40.189
 de juntas que o robô tem e pela dimensão
