@@ -1,20 +1,20 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:04.170 --> 00:00:09.090
 Agora vamos descrever alguns conceitos
 ligeiramente matemáticos mas eles são muito úteis,
 
 00:00:09.090 --> 00:00:11.650
-Então tenha pasciência comigo.
+Então tenha paciência comigo.
 
 00:00:11.650 --> 00:00:15.080
 Até agora, quando estamos falando sobre robôs,
 falamos muito sobre os ângulos de  
 
 00:00:15.080 --> 00:00:16.080
-Juntas.
+juntas.
 
 00:00:16.080 --> 00:00:21.480
 O que vamos fazer agora é generalizar 
@@ -79,7 +79,7 @@ As configurações de junta pertencem ao conjunto
 C e C é o conjunto de todas as possíveis configurações de junta.
 
 00:01:34.659 --> 00:01:40.420
-Agora, C é um subconjunto do espaço de núemeros reais N dimensional.
+Agora, C é um subconjunto do espaço de números reais N dimensional.
 
 00:01:40.420 --> 00:01:44.950
 O outro espaço que é realmente importante
@@ -91,7 +91,7 @@ a isso pelo símbolo T. Falamos que
 
 00:01:52.390 --> 00:01:59.150
 a pose do efetor final ksi E pertence ao
-conjunto T, o conjunto de todas as poses possíveis do efetor
+conjunto T, o conjunto de todas as poses possíveis do efetuador
 
 00:01:59.150 --> 00:02:00.150
 final.
@@ -149,8 +149,8 @@ Também vimos alguns robôs cujo efetor
 final pode ser descrito em termos da
 
 00:03:05.760 --> 00:03:13.120
-posição X, Y e Z e orientação de giro,
-ângulo de inclinação e guinada, por exemplo.
+posição X, Y e Z e orientação de roll, pitch
+e yaw por exemplo.
 
 00:03:13.120 --> 00:03:15.239
 Todos esses são subconjuntos de SE3.
@@ -168,7 +168,7 @@ configuração no qual descrevemos as coordenadas de junta
 do robô.
 
 00:03:30.950 --> 00:03:35.410
-Dizemos que um robô tem tantos graus
+Dizemos que um robô tem X graus
 de liberdade e isso é igual ao número
 
 00:03:35.410 --> 00:03:40.189
@@ -323,7 +323,7 @@ o jeito disso.
 
 00:06:23.530 --> 00:06:29.150
 Nesse caso, o espaço de tarefa é um subconjunto de
-r ao cubo, o conjunto dos números reais
+R ao cubo, o conjunto dos números reais
 
 00:06:29.150 --> 00:06:30.150
 tridimensionais.
@@ -352,7 +352,7 @@ X, Y e Z e um ângulo de guinada.
 
 00:06:58.340 --> 00:07:04.160
 Portanto, diríamos que seu espaço de tarefa é um
-subconjunto de r ao cubo, o conjunto de todas as
+subconjunto de R ao cubo, o conjunto de todas as
 
 00:07:04.160 --> 00:07:08.290
 possíveis posições, e o conjunto de todas
@@ -453,7 +453,7 @@ esse robô tem, mas acho que tem umas
 
 00:08:58.769 --> 00:09:04.540
 Então, direi que sua configuração espacial
-é um conjunto de espaço 100 dimensional
+é um conjunto de espaço 100-dimensional
 
 00:09:04.540 --> 00:09:05.839
 de números reais.
