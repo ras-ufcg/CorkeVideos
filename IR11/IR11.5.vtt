@@ -1,207 +1,207 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.970 --> 00:00:07.920
-Next, we are going to look at the inertia
-term. That's the torque required to accelerate
+A seguir, veremos o termo da inércia. 
+Esse é o torque necessário para acelerar 
 
 00:00:07.920 --> 00:00:12.650
-the joints of the arm. That's this term here.
-So, we'll cross the other two out.
+as articulações do braço. Esse é o termo aqui. 
+Então, vamos ignorar os outros dois. 
 
 00:00:12.650 --> 00:00:17.730
-Now, I'm going to compute the inertia matrix
-of our robot, and that's yet another method
+Agora, vou calcular a matriz de inércia 
+do nosso robô, e esse é mais um método 
 
 00:00:17.730 --> 00:00:24.269
-on the two-link robot object, and the method
-is called "inertia" and the arguments to that
+do objeto robô twolink, e o método
+é chamado de "inertia" e os argumentos para 
 
 00:00:24.269 --> 00:00:33.290
-are the joint angles of the robot Q1 and Q2.
-And, here we have the 2x2 inertia matrix of
+ele são os ângulos das juntas do robô: Q1 e Q2 . 
+E aqui temos a matriz de inércia 2x2 do 
 
 00:00:33.290 --> 00:00:38.650
-our robot. Once again, we can see that it
-is a function of kinematic and dynamic parameters
+nosso robô. Mais uma vez, podemos ver que ela
+é uma função dos parâmetros cinemáticos e dinâmicos 
 
 00:00:38.650 --> 00:00:44.380
-of a robot, and it's also a function of the
-configuration of the robot, and we can see
+de um robô, e também é uma função da 
+configuração do robô, e podemos ver 
 
 00:00:44.380 --> 00:00:51.140
-sine and cosine of Q2 appearing in this expression.
-Here is the inertia matrix for our two link
+o seno e o cosseno de Q2 aparecendo nesta expressão. 
+Aqui está a matriz de inércia para nosso robô 
 
 00:00:51.140 --> 00:00:55.490
-robot manipulator. It's a 2x2 matrix and it's
-a symmetric matrix; and that means that this
+manipulador de dois links. É uma matriz 2x2 e é 
+uma matriz simétrica; e isso significa que este
 
 00:00:55.490 --> 00:01:00.340
-term here is equal to this term here. And,
-we can see that the inertia matrix is quite
+termo aqui é igual a este termo aqui. E, 
+podemos ver que a matriz de inércia é bastante 
 
 00:01:00.340 --> 00:01:05.189
-complex and it is not constant.
-We can see that the elements in this matrix
+complexa e não é constante. 
+Podemos ver que os elementos nesta matriz 
 
 00:01:05.189 --> 00:01:10.260
-are functions of the joint angles Q2, as well
-as the masses of the robot link, the kinematic
+são funções do ângulo da junta Q2, bem como 
+das massas da ligação do robô, dos parâmetros 
 
 00:01:10.260 --> 00:01:15.390
-parameters A1 and A2, and the position of
-the centre of mass, C2. We can write it in
+cinemáticos A1 e A2, e da posição do 
+centro de massa, C2. Podemos escrevê-la 
 
 00:01:15.390 --> 00:01:22.130
-simplified form where we have just three unique
-elements, I11, I22 on the principal diagonal,
+de forma simplificada, onde temos apenas três 
+elementos únicos, I11, I22 na diagonal principal 
 
 00:01:22.130 --> 00:01:27.260
-and I12 and I21 on the opposite diagonal.
-And, as I just mentioned, the matrix is symmetric
+e I12 e I21 na diagonal secundária. 
+E, como acabei de mencionar, a matriz é simétrica, 
 
 00:01:27.260 --> 00:01:32.280
-so I12 equals I21.
-The vector of torques acting on the robot's
+então I12 é igual a I21. 
+O vetor dos torques atuando nas juntas do robô 
 
 00:01:32.280 --> 00:01:39.170
-joints are given by the inertia matrix multiplied
-by the vector of joint accelerations. Now,
+é dado pela matriz de inércia multiplicada 
+pelo vetor das acelerações das articulações. Agora, 
 
 00:01:39.170 --> 00:01:44.140
-we can expand that out, and we can highlight
-now the two terms on the diagonal.
+podemos expandir isso e podemos destacar 
+agora os dois termos da diagonal.
 
 00:01:44.140 --> 00:01:48.620
-In the previous lecture when we considered
-robot joint control, life was simple. We had
+Na aula anterior, quando consideramos 
+o controle da junta do robô, a vida era simples. Tínhamos 
 
 00:01:48.620 --> 00:01:52.409
-a relationship between the torque that the
-motor applies to a joint, the acceleration
+uma relação entre o torque que o 
+motor aplica a uma junta, a aceleração  
 
 00:01:52.409 --> 00:01:58.320
-of a joint and the inertia of that joint.
-Now, we can see that things are not quite
+de uma junta e a inércia dessa junta.
+Agora, podemos ver que as coisas não são
 
 00:01:58.320 --> 00:02:03.630
-so straightforward. We can see that there
-is a relationship between torque 1 and the
+tão diretas. Podemos ver que existe 
+uma relação entre o torque 1 e a 
 
 00:02:03.630 --> 00:02:09.099
-acceleration of joint 1 just like we had in
-the simpler case. But we now also have these
+aceleração da junta 1, assim como tivemos no 
+caso mais simples. Mas agora também temos esses 
 
 00:02:09.099 --> 00:02:14.870
-disturbance torques. That means that the torque
-acting on joint 1 is due not just to the acceleration
+torques de perturbação. Isso significa que o torque 
+que atua na junta 1 não é apenas devido à aceleração 
 
 00:02:14.870 --> 00:02:18.730
-of joint 1, but also to the acceleration of
-joint 2.
+da junta 1, mas também à aceleração da 
+junta 2. 
 
 00:02:18.730 --> 00:02:23.490
-Imagine for a moment that joint 1 is stationary.
-It's non-accelerating. The joint control is
+Imagine por um momento que a junta 1 é estacionária. 
+Não há acelerando. O controle da junta
 
 00:02:23.490 --> 00:02:28.170
-trying to keep it stationary. If joint number
-2 starts to accelerate, it's going to exert
+está tentando mantê-la parada. Se a junta número
+2 começar a acelerar, ela vai exercer 
 
 00:02:28.170 --> 00:02:33.220
-a torque on joint number 1, which the joint
-1 motor controller is going to have to deal
+um torque na junta número 1, com o qual 
+o controlador do motor da junta 1 terá que lidar. 
 
 00:02:33.220 --> 00:02:37.670
-with. It's going to have to come up with some
-extra torque, apply it to the motor to stop
+Vai ter que haver um torque extra, para aplicar 
+no motor, para parar o movimento da 
 
 00:02:37.670 --> 00:02:44.720
-joint 1 moving, due to the influence of joint
-2. We're going to compute the inertia of this
+junta 1, devido a influência da junta 
+2. Vamos calcular a inércia desse 
 
 00:02:44.720 --> 00:02:50.940
-robot numerically. We're going to use the
-inertia method and going to compute it for
+robô, numericamente. Vamos usar o 
+método "inertia" e calculá-la para 
 
 00:02:50.940 --> 00:02:56.300
-joint angle zero, zero, and this is the inertia
-matrix and we can see that it is symmetric.
+o ângulo da junta zero, zero. E essa é a matriz
+de inércia e podemos ver que ela é simétrica.
 
 00:02:56.300 --> 00:03:02.290
-This element here equals this element here.
-And, just to remind ourselves of the configuration
+Este elemento aqui é igual a este elemento aqui. 
+E, apenas para lembrar-mos da configuração 
 
 00:03:02.290 --> 00:03:07.840
-of this robot, we are going to plot it. There
-it is. So, this is the robot with its arm
+deste robô, vamos plotá-lo. Aí está. 
+Então, esse é o robô com o braço totalmente 
 
 00:03:07.840 --> 00:03:13.920
-fully outstretched. Now, what we can do is
-to change the configuration. So, I'm going
+estendido. Agora, o que podemos fazer é 
+mudar a configuração. Então, vou 
 
 00:03:13.920 --> 00:03:21.520
-to put the robot in to a configuration where
-the second joint angle is 90 degrees. So,
+colocar o robô em uma configuração onde 
+o segundo ângulo da junta é de 90 graus.
 
 00:03:21.520 --> 00:03:27.730
-now the robot looks like this. And, I can
-compute the inertia for this new configuration,
+Então, agora o robô se parece com isso. E posso 
+calcular a inércia para esta nova configuração, 
 
 00:03:27.730 --> 00:03:32.650
-0 pi/2. And, we can see that some elements
-of the inertia matrix have changed.
+0 pi/2. E, podemos ver que alguns elementos 
+da matriz de inércia mudaram. 
 
 00:03:32.650 --> 00:03:36.800
-In fact, they have been reduced. And, this
-element here, which is the inertia seen by
+Na verdade, eles foram reduzidos. E, esse 
+elemento aqui, que é a inércia vista pela 
 
 00:03:36.800 --> 00:03:42.410
-joint 1 is reduced. And that is because the
-centre of mass of joint 2 is now closer to
+junta 1, é reduzido. E isso ocorre porque o 
+centro de massa da junta 2 está agora mais próximo do 
 
 00:03:42.410 --> 00:03:48.010
-the rotational axis of joint 1. Now, I can
-bring that in even further. Let's see what
+eixo de rotação da junta 1. Agora, posso 
+trazer isso para mais perto. Vamos ver como 
 
 00:03:48.010 --> 00:03:53.450
-it looks like if I put the robot in to a configuration
-where the first angle is 0, and the second
+ficaria se eu colocasse o robô em uma configuração 
+onde o primeiro ângulo é 0 e o segundo 
 
 00:03:53.450 --> 00:03:59.769
-joint angle is equal to pi or 180 degrees
-and the arm is folded back on itself, which
+ângulo da junta é igual a pi ou 180 graus. 
+E o braço é dobrado para trás sobre si mesmo, o que 
 
 00:03:59.769 --> 00:04:03.180
-may not actually be physically possible, but
-let's work with that.
+pode não ser fisicamente possível , mas 
+vamos trabalhar com isso. 
 
 00:04:03.180 --> 00:04:12.061
-Now, I can look at the inertia in this configuration
-and see that it is even further reduced. That's
+Agora, posso olhar para a inércia nesta configuração 
+e ver que ela é ainda mais reduzida. Isso 
 
 00:04:12.061 --> 00:04:17.250
-because all the mass of the robot is as close
-as it possibly can get to the rotational axis
+porque toda a massa do robô está o mais 
+próximo possível do eixo de rotação 
 
 00:04:17.250 --> 00:04:21.989
-of joint 1. So, if I collapse that figure,
-then what we can see is progressively the
+da junta 1. Então, se eu fechar essa figura, 
+o que podemos ver é que, progressivamente, as 
 
 00:04:21.989 --> 00:04:27.040
-magnitude of the elements in the inertia matrix
-become less and less as we increase joint
+magnitudes dos elementos da matriz de inércia 
+tornam-se menores conforme aumentamos o ângulo 
 
 00:04:27.040 --> 00:04:30.350
-angle 2.
-And, this is a topic that we will revisit
+da articulação 2. 
+E, esse é um tópico que iremos revisitar 
 
 00:04:30.350 --> 00:04:35.380
-shortly. The problem for a joint control system,
-when the inertia that it has to deal with
+em breve. O problema de um sistema de controle de juntas, 
+quando a inércia com que ele tem que lidar 
 
 00:04:35.380 --> 00:04:37.879
-varies with the configuration of the robot.
+varia com a configuração do robô. 
 
