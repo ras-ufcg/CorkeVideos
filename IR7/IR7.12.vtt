@@ -12,7 +12,7 @@ essa é a função K. Seu argumento é Q e
 
 00:00:14.249 --> 00:00:19.430
 esse é o vetor dos ângulos articulares, seu vetor
-de comprimento N, onde N é o número de junta
+de comprimento N, onde N é o número de juntas
 
 00:00:19.430 --> 00:00:25.690
 que o robô tem. O resultado da função
@@ -31,7 +31,7 @@ inverso que é mostrada aqui como K
 
 00:00:39.340 --> 00:00:46.050
 para o menor. Ele opera no robô
-pose de efetor final e nos diz os ângulos articulares
+pose de efetuador e nos diz os ângulos articulares
 
 00:00:46.050 --> 00:00:52.450
 necessário para conseguir essa pose. O inverso
@@ -73,16 +73,16 @@ para resolver os ângulos das juntas que estamos interessados,
 neste caso, Q1 e Q2 como uma função do
 
 00:01:36.570 --> 00:01:44.820
-efetuador pose XY XY e o robô com comprimentos constante 
+efetuador pose XY XY e o robô com comprimentos constantes 
 de ligação A1 e A2. Nós vamos as
 
 00:01:44.820 --> 00:01:49.729
 equações cinemáticas diretas que aqui estão,
-o efetuador pose, representam X and Y em termos
+a pose do efetuador, representam X and Y em termos
 
 00:01:49.729 --> 00:01:54.250
 dos ângulos articulares e, em seguida, com um grande
-quantidade de manipulação e novamente com algun
+quantidade de manipulação e novamente com algum
 
 00:01:54.250 --> 00:02:00.180
 discernimento e intuição, podemos escrever equações
@@ -90,7 +90,7 @@ que nos dão os ângulos de articulação do robô.
 
 00:02:00.180 --> 00:02:04.960
 As etapas envolvidas na solução analítica
-para a cinemática inversa do robô envolve o
+para a cinemática inversa do robô envolvem os
 
 00:02:04.960 --> 00:02:09.819
 seguintes passos; em primeiro lugar, precisamos de um modelo do
@@ -176,7 +176,7 @@ anterior.
 Nós sabemos a pose que queremos que o efetuador
 
 00:03:46.530 --> 00:03:51.560
-do robô alcance, á qual é chamada ksi*, mas
+do robô alcance, a qual é chamada ksi*, mas
 tudo que precisamos fazer é ajustar os ângulos
 
 00:03:51.560 --> 00:03:58.470
