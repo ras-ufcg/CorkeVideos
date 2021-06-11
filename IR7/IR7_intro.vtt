@@ -1,32 +1,32 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt-BR
 
 00:00:07.120 --> 00:00:11.290
 Na última palestra, falamos sobre cinemática
-direta do robô, e cinemática direta
+direta do robô, cinemática direta
 
 00:00:11.290 --> 00:00:16.380
 é a relação entre os ângulos de juntas do robô, 
 os quais representamos por um vetor que chamo de
 
 00:00:16.380 --> 00:00:19.770
-'Q, e a posição do efetor final do robô.
+'Q', e a posição do efetor final do robô.
 
 00:00:19.770 --> 00:00:24.730
 Podemos descrever isso em termos de uma função
 matemática. Podemos descrever cinemática direta
 
 00:00:24.730 --> 00:00:31.119
-como a funcão curva K do angulos de junta do
+como a funcão curva K dos angulos de junta do
 robô, e o valor retornado desta funcão
 
 00:00:31.119 --> 00:00:37.270
-é a posição do efetor final. Isso é muito
-útil em robótica, mas ainda mais útil é
+é a posição do efetuador final. Isso é muito
+útil em robótica, ainda mais útil é
 
 00:00:37.270 --> 00:00:39.940
-o que é chamado 'Cinemática Inversa'.
+o a chamado 'Cinemática Inversa'.
 
 00:00:39.940 --> 00:00:44.980
 Essa é a função que nos indica os ângulos
@@ -36,12 +36,12 @@ de junta que precisamos para atingir uma
 determinada posição final do robô.
 
 00:00:47.870 --> 00:00:51.769
-Então digamos que queremos o efetor final do robô esteja
+Então digamos que queremos que o efetuador final do robô esteja
 nessa determinada posição no espaço, então
 
 00:00:51.769 --> 00:00:58.300
-quais devem ser os angulos das juntas para que o efetor final do robô chegue a essa determinada posição?
+quais devem ser os angulos das juntas para que o efetuador final do robô chegue a essa determinada posição?
 
 00:00:58.300 --> 00:01:03.600
-Isso é chamado o 'Problema da Cinemática Inversa' que é realmente a chave para armar robôs do tipo.
+Isso é chamado 'Problema da Cinemática Inversa' que é realmente a chave para armar robôs do tipo.
 
