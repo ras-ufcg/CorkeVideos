@@ -1,128 +1,128 @@
 WEBVTT
 Kind: captions
-Language: en
+Language: pt
 
 00:00:03.959 --> 00:00:08.330
-Let's summarize some of the points that we’ve
-talked about in this lecture.
+Vamos resumir alguns dos pontos que nós
+abordamos nessa aula.
 
 00:00:08.330 --> 00:00:12.410
-Today we take for granted that we can use
-GPS to determine our position anywhere on
+Hoje em dia temos a certeza de que podemos usar
+GPS para determinar nossa localização em qualquer 
 
 00:00:12.410 --> 00:00:18.179
-the surface of the planet, but it is a relatively
-recent technology. It only became operational
+lugar na superfície do planeta, mas essa é uma tecnologia
+relativamente recente. Ela só se tornou operacional
 
 00:00:18.179 --> 00:00:25.439
-in 1994, and only became available at reasonable
-accuracy for the general public in the year 2000.
+Em 1994, e só foi disponibilizada com precisão
+razoável para o público geral no ano de 2000.
 
 00:00:26.300 --> 00:00:31.359
-Before the advent of GPS, navigating precisely
-on the surface of the planet or in outer space
+Antes da chegada do GPS, navegar com precisão
+na superfície do planeta ou mesmo no Espaço
 
 00:00:31.359 --> 00:00:36.679
-was very very difficult, and the technology
-that was used was called inertial navigation,
+era muito, muito difícil, e a tecnologia
+que era usada era chamada navegação inercial,
 
 00:00:36.679 --> 00:00:41.489
-and that involved measuring the acceleration
-and angular velocity of a vehicle, and integrating
+e ela envolvia a medição da aceleração
+e da velocidade angular de um veículo, e a integral
 
 00:00:41.489 --> 00:00:44.510
-that over time to determine the position.
+disso pelo tempo para determinar a posição.
 
 00:00:44.510 --> 00:00:49.350
-The key components of an Inertial Navigation
-System are: an inertial measurement unit;
+Os componentes-chave de um Sistema de Navegação
+Inercial são: uma unidade de medição inercial;
 
 00:00:49.350 --> 00:00:54.260
-which contains the sensors that measure acceleration,
-magnetic field, and angular velocity, and
+a qual contém os sensores que medem aceleração,
+campo magnético e velocidade angular, e
 
 00:00:54.260 --> 00:00:58.320
-what’s called dead reckoning software; that
-takes those signals and integrates them over
+o que é chamado de software de navegação estimada; o
+qual capta esses sinais e os integra
 
 00:00:58.320 --> 00:01:02.309
-time to continually update the pose of the
-vehicle.
+ao decorrer do tempo para continuamente atualizar a pose
+do veículo.
 
 00:01:02.309 --> 00:01:07.360
-At a simplistic level we can consider that
-an accelerometer is a mass on a spring inside
+Em um nível simplificado, podemos considerar que
+um acelerômetro é uma massa em uma mola dentro
 
 00:01:07.360 --> 00:01:12.299
-a little box. If we do the algebra we can
-show that the extension of the spring is linearly
+de uma pequena caixa. Se fizermos a matemática, poderemos
+mostrar que a extensão da mola é linearmente
 
 00:01:12.299 --> 00:01:17.770
-proportional to the acceleration of the device
-and the gravitational acceleration. An accelerometer
+proporcional à aceleração do dispositivo
+e à aceleração gravitacional. Um acelerômetro
 
 00:01:17.770 --> 00:01:24.680
-at rest on earth indicates an acceleration
-of 1g in the vertical or upward direction.
+em repouso na Terra indica uma aceleração
+de 1g na direção vertical ou para cima.
 
 00:01:24.680 --> 00:01:28.759
-This is a little bit counter-intuitive, because
-when we drop something it is going to accelerate
+Isso é um pouco contra-intuitivo, porque
+algo que deixamos cair irá acelerar
 
 00:01:28.759 --> 00:01:34.159
-in the downward direction. The accelerometer
-at rest measures 1g upwards. And this is a
+na direção para baixo. O acelerômetro
+em repouso mede 1g para cima. E isso é uma
 
 00:01:34.159 --> 00:01:39.259
-consequence of the equivalence principle.
-An accelerometer on the surface of the earth
+consequência do princípio da equivalência.
+Um acelerômetro na superfície da Terra
 
 00:01:39.259 --> 00:01:45.610
-or an accelerometer mounted in a rocket accelerating
-upwards at 1g, both of them indicate an acceleration
+ou um acelerômetro acoplado em um foguete que acelera
+para cima a 1g, ambos indicam uma aceleração
 
 00:01:45.610 --> 00:01:47.180
-of 1g.
+de 1g.
 
 00:01:47.180 --> 00:01:52.369
-Many devices, for example my phone, contain
-three accelerometers which measure acceleration
+Muitos dispositivos, a exemplo do meu celular, contêm
+três acelerômetros que medem aceleração
 
 00:01:52.369 --> 00:01:58.890
-in the x, y and z directions of a coordinate
-frame B attached to my phone. I can use the
+nas direções x, y e z de um sistema de
+coordenadas B vinculado ao meu celular. Eu posso usar os
 
 00:01:58.890 --> 00:02:03.960
-components of acceleration measured in the
-phone in coordinate frame B to determine the
+componenetes de aceleração medidos no 
+celular no sistema de coordenadas B para determinar o
 
 00:02:03.960 --> 00:02:09.030
-roll and pitch of the phone with respect to
-the blue coordinate frame 0.
+roll e o pitch do celular em relação ao
+sistema de coordenadas azul 0.
 
 00:02:09.030 --> 00:02:13.940
-The earth contains a gigantic but fairly weak
-magnet, but the poles of that magnet are not
+A Terra contém um ímã gigantesco, porém levemente 
+fraco, mas os polos desse ímã não são
 
 00:02:13.940 --> 00:02:18.700
-constant. They change with time. A compass
-has a needle which points towards the north
+constantes. Eles mudam a todo momento. Uma bússola
+possui um ponteiro que aponta em direção ao polo
 
 00:02:18.700 --> 00:02:23.800
-magnetic pole, but the north magnetic pole
-is different to the north geographic pole.
+norte magnético, mas o polo norte magnético
+é diferente do polo norte geográfico.
 
 00:02:23.800 --> 00:02:27.480
-At any particular point on the surface of
-the earth we can establish a right-handed
+Em qualquer ponto específico da superfície da
+Terra podemos estabelecer um sistema de coordenadas
 
 00:02:27.480 --> 00:02:32.920
-coordinate frame where one axis points towards
-the north geographic pole, another axis points
+de base ortogonal, no qual um eixo aponta em direção
+ao polo norte geográfico, outro eixo aponta
 
 00:02:32.920 --> 00:02:37.000
-vertically downwards towards the centre of
-the planet, and the other axis points in the
+verticalmente para baixo em direção ao centro
+do planeta, e outro eixo aponta em
 
 00:02:37.000 --> 00:02:42.690
 direção geográfica ao leste. O vetor do campo
