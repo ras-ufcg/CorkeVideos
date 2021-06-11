@@ -123,127 +123,127 @@ variable.
 So, what are the issues that arise from this?
 
 00:02:37.390 --> 00:02:43.140
-Well firstly, we have an issue because the
-inertia experienced by the joint varies with
+Bem, em primeiro lugar, temos um problema porque
+a inércia experimentada pela junta varia com
 
 00:02:43.140 --> 00:02:47.690
-the configuration of the robot. In the last
-lecture, we tuned our controller so that it
+a configuração do robô. Na última aula, 
+ajustamos nosso controlador para que ele
 
 00:02:47.690 --> 00:02:52.750
-had a nice response in terms of settling time
-and overshoot, but the tuning was a function
+tivesse uma boa resposta em termos de tempo de 
+acomodação e overshoot, mas o ajuste era uma função
 
 00:02:52.750 --> 00:02:58.610
-of the particular values of inertia and viscous
-friction. Now, what we're saying is that the
+dos valores particulares de inércia e atrito 
+viscoso. Agora, o que estamos dizendo é que a
 
 00:02:58.610 --> 00:03:03.330
-inertia that the joint controller sees is
-a function of the configuration. It depends
+inércia que o controlador comum vê é uma 
+função da configuração. Depende
 
 00:03:03.330 --> 00:03:08.030
-on all of the joint angles. So, that means
-that the response of the control system will
+de todos os ângulos articulares. Então, isso 
+significa que a resposta do sistema de controle
 
 00:03:08.030 --> 00:03:10.620
-depend on the robot's pose.
+dependerá da postura do robô.
 
 00:03:10.620 --> 00:03:16.110
-The other big issue is the disturbance torque,
-that's a torque that’s exerted on joint J due
+O outro grande problema é o torque de perturbação,
+que é um torque que é exercido na articulação J devido
 
 00:03:16.110 --> 00:03:23.709
-to motion of all the other joints, acceleration
-and velocity and also, due to gravity. This
+ao movimento de todas as outras articulações, aceleração
+e velocidade e também, devido à gravidade. Isso
 
 00:03:23.709 --> 00:03:28.760
-may lead to undesirable motion of the joint.
-It may lead to path following errors, for
+pode levar a movimentos indesejáveis da articulação. 
+Isso pode levar a erros de seguimento de caminho, por
 
 00:03:28.760 --> 00:03:33.340
-example. So, what can we do about these issues?
-Well, a really simple technique is really
+exemplo. Então, o que podemos fazer sobre essas 
+questões? Bem, uma técnica muito simples e muito
 
 00:03:33.340 --> 00:03:39.670
-widely used in robots is to introduce a gearbox.
-Most robots have a reduction gearbox. So,
+usada em robôs é introduzir uma caixa de engrenagens. 
+A maioria dos robôs possui uma caixa de engrenagens 
 
 00:03:39.670 --> 00:03:45.950
-the output shaft rotates a factor of G times
-slower than the input shaft. G is the gear
+de redução. Portanto, o eixo de saída gira um fator de 
+G vezes mais lento do que o eixo de entrada. G é a relação
 
 00:03:45.950 --> 00:03:50.909
-ratio. The reason that this typically happens
-is that electric motors are capable of running
+de engrenagem A razão pela qual isso normalmente 
+acontece é que os motores elétricos são capazes de 
 
 00:03:50.909 --> 00:03:55.900
-very, very quickly, capable of very, very
-high rotational velocity, but generally quite
+funcionar muito, muito rapidamente, com velocidades
+de rotação muito, muito altas, mas geralmente com
 
 00:03:55.900 --> 00:04:00.079
-low in torque. What a gearbox does is it allows
-us to trade off some of this high angular
+um torque muito baixo. O que uma caixa de engrenagens
+faz é nos permitir trocar parte dessa alta velocidade angular
 
 00:04:00.079 --> 00:04:05.200
-velocity for motor torque. Torque is actually
-more useful than speed. We can see here the
+pelo torque do motor. O torque é realmente mais
+útil do que a velocidade. Podemos ver aqui a
 
 00:04:05.200 --> 00:04:09.069
-relationship between torque and velocity on
-the output side of the gear box indicated
+relação entre o torque e a velocidade no lado 
+da saída da caixa de engrenagens indicada
 
 00:04:09.069 --> 00:04:15.299
-by the subscript l. L meaning the load side
-and torque and velocity on the input side
+pelo subscrito l. L significa o lado da carga e 
+o torque e a velocidade no lado da entrada
 
 00:04:15.299 --> 00:04:19.060
-denoted by the subscript m.
-If we now address the expression that we had
+denotados pelo subscrito m. 
+Se agora abordarmos a expressão que tínhamos
 
 00:04:19.060 --> 00:04:23.600
-from the previous slide and introduce the
-gearbox, we see the expression now looks something
+no slide anterior e introduzirmos a caixa de 
+engrenagens, veremos que a expressão agora se
 
 00:04:23.600 --> 00:04:28.890
-like this. We can see that the effect of this
-variable inertia, the inertia that's a function
+parece com isso. Podemos ver que o efeito dessa 
+inércia variável, a inércia que é função
 
 00:04:28.890 --> 00:04:34.220
-of Q, is now being reduced by a factor of
-G squared. If I considered the case where I've got
+e Q, agora está sendo reduzida por um fator de G 
+ao quadrado. Se eu considerasse o caso onde tenho
 
 00:04:34.220 --> 00:04:40.850
-a reduction gearbox, where G is equal to 50,
-this is a reduction by 2500. It's a very,
+uma caixa de engrenagens de redução, onde G é 
+igual a 50, isso é uma redução de 2500. É uma
 
 00:04:40.850 --> 00:04:46.100
-very significant reduction in this configuration
-dependent inertia. It means that the motor’s
+redução muito, muito significativa nesta inércia 
+dependente da configuração. Isso significa que a
 
 00:04:46.100 --> 00:04:52.090
-own inertia, this term here, will dominate.
-The inertia will look more constant. We can
+própria inércia do motor, este termo aqui, vai 
+dominar. A inércia parecerá mais constante. Também
 
 00:04:52.090 --> 00:04:57.900
-also see that our disturbance term has been
-reduced by a factor of G. Again, if I have
+podemos ver que nosso termo de perturbação foi 
+reduzido por um fator de G. Novamente, se eu
 
 00:04:57.900 --> 00:05:03.790
-a reduction ratio of 50, this term here is
-50 times less significant than it would be
+tiver uma taxa de redução de 50, este termo 
+aqui é 50 vezes menos significativo do que seria
 
 00:05:03.790 --> 00:05:09.140
-without a gearbox. So, a gearbox is useful
-for many reasons and it's a really effective
+sem uma caixa de engrenagens. Portanto, uma caixa de
+engrenagens é útil por vários motivos e é uma forma 
 
 00:05:09.140 --> 00:05:15.220
-way of reducing the effect of disturbance
-torques and configuration dependent inertia.
+realmente eficaz de reduzir o efeito dos torques de 
+perturbação e da inércia dependente da configuração.
 
 00:05:15.220 --> 00:05:20.590
-A more sophisticated technique to deal with
-this is to compute this disturbance torque.
+Uma técnica mais sofisticada para lidar com 
+isso é calcular esse torque de perturbação.
 
 00:05:20.590 --> 00:05:25.610
 Se tivermos um modelo dinâmico do nosso robô e
