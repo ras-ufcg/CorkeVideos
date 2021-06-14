@@ -4,7 +4,7 @@ Language: pt-BR
 
 00:00:03.220 --> 00:00:06.390
 Vamos resumir alguns dos conceitos que
-aorendemos nesse curso. É tudo
+aprendemos nesse curso. É tudo
 
 00:00:06.390 --> 00:00:11.370
 sobre movimento em um espaço tridimensional.
@@ -79,7 +79,7 @@ dos próprios ângulos de juntas.
 
 00:01:38.270 --> 00:01:42.520
 Nós podemos escrever essa relação geral entre
-a velocidade do ângulo de junta Qdot e a velocidade
+a velocidade do ângulo de junta Q ponto e a velocidade
 
 00:01:42.520 --> 00:01:47.420
 espacial do robô em termos da matriz Jacobiana.
@@ -111,7 +111,7 @@ segunda coluna nos fala como a velocidade
 
 00:02:17.180 --> 00:02:22.690
 Nós podemos pensar nisso como uma soma do efeito
-de cada uma das juntas individualmente, e as adiciomanos
+de cada uma das juntas individualmente, e as adicionamos
 
 00:02:22.690 --> 00:02:28.360
 para determinar a velocidade espacial total 
@@ -166,7 +166,7 @@ propósitos de controle, precisamos usar uma técnica
 chamada de Pseudo Inversão. Também podemos pensar
 
 00:03:26.709 --> 00:03:30.610
-num robô como esse como tendo um grande número 
+num robô como esse, como tendo um grande número 
 de juntas extras e podemos usá-las
 
 00:03:30.610 --> 00:03:35.830
