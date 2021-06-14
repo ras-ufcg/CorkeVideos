@@ -135,11 +135,11 @@ Indo para a velocidade máxima o modelo elétrico
 para o motor possui 
 
 00:02:43.849 --> 00:02:48.849
-um gerador, o círculo é fonte de EMF contrário, e
+um gerador, o círculo é fonte de FEM contrário, e
 a medida que o motor aumenta sua rotação, 
 
 00:02:48.849 --> 00:02:54.269
-o EMF contrário se eleva. Assim, quando o EMF
+a FEM contrário se eleva. Assim, quando a FEM
 contrário se iguala à tensão aplicada, a corrente  
 
 00:02:54.269 --> 00:03:00.430
