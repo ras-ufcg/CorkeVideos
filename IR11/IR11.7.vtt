@@ -3,124 +3,124 @@ Kind: captions
 Language: pt-BR
 
 00:00:04.170 --> 00:00:09.090
-In the last lecture, we considered independent
-joint control, which is an idealisation of
+Na última aula, nós consideramos uma junta de
+controle independente, o que é uma idealização
 
 00:00:09.090 --> 00:00:13.781
-the real world. With independent joint control,
-the motor torque has got two components. It
+do mundo real. Com junta de controle independente,
+o torque do motor tem dois componentes.
 
 00:00:13.781 --> 00:00:18.750
-has a component due to the motor's inertia,
-and it has a component due to the motor's
+Tem um componente graças a inércia do motor
+e outro componente graças a fricção viscosa 
 
 00:00:18.750 --> 00:00:24.380
-viscous friction. So, one is a function of
-the motor inertia and the motor's acceleration,
+do motor. Então uma é uma função da inércia e
+da aceleração,
 
 00:00:24.380 --> 00:00:28.270
-the motor's viscous friction and the motor's
-angular velocity.
+da fricção viscosa e da velocidade angular
+do motor.
 
 00:00:28.270 --> 00:00:33.410
-Now, we're going to consider the more realistic
-case of non-independent joint control and
+Agora vamos considerar o caso mais realista
+de junta de controle não independente e
 
 00:00:33.410 --> 00:00:38.070
-we've added the so-called rigid body dynamic
-terms here. What this means is the torque
+adicionamos os chamados termos de dinâmica de
+corpos rígidos aqui. O que isso significa é que
 
 00:00:38.070 --> 00:00:43.030
-seen by the motor on joint J is going
-to be influenced by the acceleration of all
+o torque visto pelo motor na junta J será
+influenciado pela aceleração de todas
 
 00:00:43.030 --> 00:00:48.280
-of the joints, the velocity of all of the
-joints, and gravity. Now, I've introduced
+as juntas, as velocidades e a gravidade de
+todas as juntas. Agora eu introduzi
 
 00:00:48.280 --> 00:00:53.540
-a bit of additional notation here. It's the
-subscript j and what that means is the jth
+um pouco de notação adicional aqui. Esse é o
+subscrito j e o que isso significa é que é a j-ésima
 
 00:00:53.540 --> 00:00:59.720
-row of the corresponding matrix. So, this
-is the jth row of the matrix M, jth row of
+linha da matriz correspondente. Assim, essa
+é a j-ésima linha da matriz M, j-ésima da linha
 
 00:00:59.720 --> 00:01:06.200
-the matrix C or the jth element of the vector
-G. For example, if I multiply the jth row
+da matriz C ou a j-ésima linha do vetor
+G. Por exemplo, se eu multiplicar a j-ésima
 
 00:01:06.200 --> 00:01:12.000
-of the matrix M by the column vector, which
-is the acceleration of all of the joints,
+linha da matriz M pelo vetor da coluna, que é
+a aceleração de todas as juntas,
 
 00:01:12.000 --> 00:01:17.210
-the result will be a scalar. This is a scalar
-expression because it's about the torque acting
+o resultado será um escalar. Essa é uma expressão
+escalar graças a ação do torque
 
 00:01:17.210 --> 00:01:21.229
-on joint J.
-You'll see that there are two terms here that
+na junta J.
+Você verá que existem dois termos aqui que
 
 00:01:21.229 --> 00:01:27.159
-involve joint acceleration. So, what I'm going
-to do is consider the vector Mj in two components.
+envolvem a aceleração da junta. Então, o que eu vou
+fazer é considerar o vetor Mj em dois componentes.
 
 00:01:27.159 --> 00:01:32.170
-There is the component associated with joint
-J and there's the component associated with
+Aqui está a componente associada com a junta
+J e aqui está a componente associada com
 
 00:01:32.170 --> 00:01:38.149
-all of the other joints, which I've denoted
-by M bar. I can do a little bit of rearrangement
+todas as outras juntas, as quais eu indiquei
+por M barra. Eu posso fazer um pouco de rearranjo
 
 00:01:38.149 --> 00:01:43.729
-now. What we have now is an expression for
-the torque acting on joint J in terms of the
+agora. O que temos agora é uma expressão para
+a ação do torque na junta J em termos da
 
 00:01:43.729 --> 00:01:48.579
-motor's own inertia and the component of the
-inertia matrix associated with this joint,
+inércia do próprio motor e a componente da
+matriz de inércia associada com essa junta,
 
 00:01:48.579 --> 00:01:52.539
-the viscous friction, and then, we have all
-of the other terms at the end which are the
+a fricção viscosa, e então temos todos os
+outros termos no fim que são o
 
 00:01:52.539 --> 00:01:56.310
-disturbance torque.
-This term here is the inertia of a motor
+torque de perturbação.
+Esse termo aqui é a inércia do motor
 
 00:01:56.310 --> 00:02:01.659
-which is driving joint J. This is a variable
-inertia term that we pull out off the manipulator
+que está dirigindo a junta J. Essa é uma váriavel
+termo de inércia que retiramos da matriz
 
 00:02:01.659 --> 00:02:06.600
-inertia matrix. We have the motor joint friction,
-which is a function just of the motor driving
+de inércia do manipulador. Temos o atrito da junta
+do motor, que é uma função apenas do motor dirigindo
 
 00:02:06.600 --> 00:02:11.780
-the joint, and then we have this rather complex
-disturbance term on the end, which is the
+a junta, e então temos este termo de perturbação
+bastante complexo no fim, que é a
 
 00:02:11.780 --> 00:02:17.060
-acceleration of all the other joints, the
-Coriolis and centripetal terms and the gravity
+aceleração de todas as outras juntas, os
+termos de Coriolis e centrípetos e o termo
 
 00:02:17.060 --> 00:02:23.349
-term. I can simplify it even further and we
-now have a new inertia, I call that J prime,
+da gravidade. Posso simplificar ainda mais e
+agora temos uma nova inércia, eu a chamo de J prime,
 
 00:02:23.349 --> 00:02:28.290
-which is a function of the configuration of
-the robot. It's a function of Q. We have our
+que é a função de configuração do robô.
+É uma função de Q. Temos nossa
 
 00:02:28.290 --> 00:02:34.260
-viscous friction and we have tau D which is
-the disturbance torque lumped into a single
+fricção viscosa e temos tau D que é o Torque
+de perturbação agrupado em apenas
 
 00:02:34.260 --> 00:02:37.390
-variable.
-So, what are the issues that arise from this?
+uma variável.
+Então, quais são os problemas que surgem disso?
 
 00:02:37.390 --> 00:02:43.140
 Bem, em primeiro lugar, temos um problema porque
