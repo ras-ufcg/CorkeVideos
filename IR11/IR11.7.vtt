@@ -3,19 +3,19 @@ Kind: captions
 Language: pt-BR
 
 00:00:04.170 --> 00:00:09.090
-Na última aula, nós consideramos uma junta de
-controle independente, o que é uma idealização
+Na última aula, nós consideramos juntas de
+controle independentes, o que é uma idealização
 
 00:00:09.090 --> 00:00:13.781
-do mundo real. Com junta de controle independente,
+do mundo real. Em juntas de controle independentes,
 o torque do motor tem dois componentes.
 
 00:00:13.781 --> 00:00:18.750
 Tem um componente graças a inércia do motor
-e outro componente graças a fricção viscosa 
+e outro componente graças ao atrito viscoso 
 
 00:00:18.750 --> 00:00:24.380
-do motor. Então uma é uma função da inércia e
+do motor. Então é em função da inércia e
 da aceleração,
 
 00:00:24.380 --> 00:00:28.270
@@ -24,10 +24,10 @@ do motor.
 
 00:00:28.270 --> 00:00:33.410
 Agora vamos considerar o caso mais realista
-de junta de controle não independente e
+de junta de controle não independente.
 
 00:00:33.410 --> 00:00:38.070
-adicionamos os chamados termos de dinâmica de
+Por isso adicionamos os chamados termos de dinâmica de
 corpos rígidos aqui. O que isso significa é que
 
 00:00:38.070 --> 00:00:43.030
@@ -92,7 +92,7 @@ Esse termo aqui é a inércia do motor
 
 00:01:56.310 --> 00:02:01.659
 que está dirigindo a junta J. Essa é uma váriavel
-termo de inércia que retiramos da matriz
+de inércia que retiramos da matriz
 
 00:02:01.659 --> 00:02:06.600
 de inércia do manipulador. Temos o atrito da junta
@@ -108,14 +108,14 @@ termos de Coriolis e centrípetos e o termo
 
 00:02:17.060 --> 00:02:23.349
 da gravidade. Posso simplificar ainda mais e
-agora temos uma nova inércia, eu a chamo de J prime,
+agora temos uma nova inércia, eu a chamo de J linha,
 
 00:02:23.349 --> 00:02:28.290
 que é a função de configuração do robô.
 É uma função de Q. Temos nossa
 
 00:02:28.290 --> 00:02:34.260
-fricção viscosa e temos tau D que é o Torque
+fricção viscosa e temos tau D que é o torque
 de perturbação agrupado em apenas
 
 00:02:34.260 --> 00:02:37.390
@@ -139,7 +139,7 @@ dos valores particulares de inércia e atrito
 viscoso. Agora, o que estamos dizendo é que a
 
 00:02:58.610 --> 00:03:03.330
-inércia que o controlador comum vê é uma 
+inércia que o controlador vê é uma 
 função da configuração. Depende
 
 00:03:03.330 --> 00:03:08.030
@@ -159,7 +159,7 @@ e velocidade e também, devido à gravidade. Isso
 
 00:03:23.709 --> 00:03:28.760
 pode levar a movimentos indesejáveis da articulação. 
-Isso pode levar a erros de seguimento de caminho, por
+Isso pode levar a erros de rastreio de caminho, por
 
 00:03:28.760 --> 00:03:33.340
 exemplo. Então, o que podemos fazer sobre essas 
@@ -174,7 +174,7 @@ de redução. Portanto, o eixo de saída gira um fator de
 G vezes mais lento do que o eixo de entrada. G é a relação
 
 00:03:45.950 --> 00:03:50.909
-de engrenagem A razão pela qual isso normalmente 
+da engrenagem A, razão pela qual isso normalmente 
 acontece é que os motores elétricos são capazes de 
 
 00:03:50.909 --> 00:03:55.900
@@ -194,11 +194,11 @@ relação entre o torque e a velocidade no lado
 da saída da caixa de engrenagens indicada
 
 00:04:09.069 --> 00:04:15.299
-pelo subscrito l. L significa o lado da carga e 
+pelo subscrito L. L significa o lado da carga e 
 o torque e a velocidade no lado da entrada
 
 00:04:15.299 --> 00:04:19.060
-denotados pelo subscrito m. 
+denotados pelo subscrito M. 
 Se agora abordarmos a expressão que tínhamos
 
 00:04:19.060 --> 00:04:23.600
