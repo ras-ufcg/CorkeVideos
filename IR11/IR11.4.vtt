@@ -153,154 +153,155 @@ fato, é o mesmo resultado que obtivemos um pouco antes
 usando o algoritmo recursivo de Newton-Euler.
 
 00:03:25.400 --> 00:03:29.949
-In fact gravity load itself is based on the
-recursive Newton-Euler algorithm.
+De fato, a carga da gravidade é baseada no 
+algoritmo recursivo de Newton-Euler.
 
 00:03:29.949 --> 00:03:37.159
-Let's just have a look at a configuration
-of our robot. We're going to plot it for joint
+Vamos dar uma olhada na configuração do nosso
+robô. Nós vamos plotar isso para 
 
 00:03:37.159 --> 00:03:43.739
-angles 0 and 0 and this is what it looks like.
-Now let's imagine that we put the robot into
+os ângulos de articulação 0 e 0, e é assim que aparece.
+Agora vamos imaginar que nós colocamos o robô
 
 00:03:43.739 --> 00:03:48.260
-a different configuration. Let's make the
-first joint angle equal to PI on 2 radians
+Em uma configuração diferente. Vamos fazer o
+primeiro ângulo de junta igual a PI/2 radianos
 
 00:03:48.260 --> 00:03:52.379
-or 90 degrees. But now our robot is pointing
-straight upwards.
+Ou 90 graus. Entretanto, o nosso robô está 
+apontando diretamente para cima.
 
 00:03:52.379 --> 00:03:56.659
-So what do we think the gravity load on the
-joints would be in this case? Well it's easy
+Então o que podemos imaginar que a carga gravitacional
+nas articulações serão neste caso? Bem, é simples
 
 00:03:56.659 --> 00:04:03.619
-enough to figure out. We use the twolink object,
-the gravload method and we pass in the joint
+de descobrir. Nós utilizamos o objeto de dois links,
+o método gravload e nós possamos os ângulos de junta
 
 00:04:03.619 --> 00:04:10.699
-angles, PI on 2 and 0. And we see that the
-gravity load on the joints is almost equal
+PI/2 e 0. Assim nós vemos que a carga gravitacional
+nas articulações é praticamente igual a 
 
 00:04:10.699 --> 00:04:15.760
-to zero or some slight numerical error here.
-It's 10 to the minus 14. And this is what
+zero ou algum erro numérico pequeno. 
+Da escala de 10 elevado a -14. E isso é o que
 
 00:04:15.760 --> 00:04:20.609
-we expect because in this particular configuration,
-the joints don't need to exert any torque
+nós esperamos pois nessa configuração particular,
+as articulações não precisam exercer torque algum
 
 00:04:20.609 --> 00:04:26.939
-at all to hold the robot straight up. The
-robot is in fact balancing in an upright
+para manter o robô em posição ereta. 
+O robô está na verdade balanceado numa
 
 00:04:26.939 --> 00:04:31.449
-configuration. It's not stable but it doesn't
-require any joint torque to maintain this
+configuração vertical. Não é estável, mas isso não requer 
+nenhum torque nas juntas para manter esta
 
 00:04:31.449 --> 00:04:34.680
-exact configuration.
+configuração exata.
 
 00:04:34.680 --> 00:04:39.560
-Now we're going to look at the effect on payload.
-I can add a payload to my robot object very
+Agora nós vamos dar uma olhada no efeito na carga.
+Eu posso adicionar uma carga ao meu objeto robótico
 
 00:04:39.560 --> 00:04:45.199
-easily. Here is my robot object and I used
-the payload method and I'm going to add a
+facilmente. Aqui está meu objeto robótico e eu 
+utilizei o método de carga e agora irei adicionar
 
 00:04:45.199 --> 00:04:51.370
-1 kg payload, and it's going to be placed
-at the coordinate 0, 0, 0 with respect to
+uma carga de 1Kg, e será colocado na coordenada
+0, 0, 0 em referência ao
 
 00:04:51.370 --> 00:04:53.240
-the link 2 coordinate frame.
+plano de coordenadas do link 2.
 
 00:04:53.240 --> 00:04:58.800
-So it's actually going to be right on the
-end of link 2. The robot now has a payload
+Então irá atualmente ser posicionada bem no final
+do link 2. O robô agora possui uma carga 
 
 00:04:58.800 --> 00:05:05.020
-and now I'm going to compute the gravity load
-for the robot when it's in the configuration
+e irei computar a carga gravitacional para o robô
+quando está na configuração 0, 0.
 
 00:05:05.020 --> 00:05:10.240
-0,0. So that's with the arm stretched out
-straight and horizontally.
+Assim, com o braço alongado 
+verticalmente e horizontalmente.
 
 00:05:10.240 --> 00:05:14.990
-Now we see that the torque on the joints,
-on joint 1 and joint 2 is increased. And that's
+Agora nós vemos que o torque nas articulações,
+na junta 1 e junta 2 é aumentado. E isto
 
 00:05:14.990 --> 00:05:21.560
-because the robot is trying to hold a 1 kg
-load in this rather awkward configuration.
+é por conta do robô tentando segurar uma carga
+de 1Kg nessa configuração deveras esquisita
 
 00:05:21.560 --> 00:05:26.949
-So the robot joints are going to have to work
-about as hard as they can in order to keep
+Então as articulações do robô terão que trabalhar
+tão intesamente como podem com o intuito de manter
 
 00:05:26.949 --> 00:05:30.330
-that 1 kg from pulling the end of the robot
-down.
+aquele 1 Kg no local sem puxar o 
+final da estrutura para baixo
 
 00:05:30.330 --> 00:05:37.780
-Let's look now at a complex robot model. We
-introduce a model for the PUMA 560 robot.
+Vamos dar uma olhada no modelo complexo do robô.
+Nós introduzimos um modelo para o robô PUMA 560.
 
 00:05:37.780 --> 00:05:42.030
-And you can see that there is a new variable
-in our workspace called P560, it’s another
+E você pode observar que existe uma variável nova
+no nosso espaço de trabalho chamada P560, é um outro
 
 00:05:42.030 --> 00:05:45.750
-serial link object which can describe a robot
-manipulator.
+objeto serial que pode descrever 
+o manipulador do robô.
 
 00:05:45.750 --> 00:05:52.110
-We're going to use the same gravload method
-for this robot. And for one of anything better
+Nós iremos utilizar o mesmo método gravload para
+este robô. E para um qualquer melhor
 
 00:05:52.110 --> 00:05:58.319
-I'm going to put in joint angles all equal
-to zero. And this is what the gravity load
+Eu irei colocar todos os ângulos de junta 
+igual a zero. E é isto que a carga gravitacional
 
 00:05:58.319 --> 00:06:03.449
-looks like. Now we can see what the PUMA robot
-looks like in that particular configuration.
+irá apresentar. Agora nós podemos observar como
+o robô PUMA irá se comportar nessa configuração particular.
 
 00:06:03.449 --> 00:06:13.210
-0, 0, 0, 0, 0, 0. And PUMA robot with a all
-zero joint angle configuration looks like
+0, 0, 0, 0, 0, 0. E um robô PUMA com a configuração 
+em que todos os ângulos de junta são iguais a zero
 
 00:06:13.210 --> 00:06:18.240
-this. The upper arm is horizontal and the
-lower arm is vertical. And these are the joint
+irá se apresentar assim. O braço superior está horizontal
+e o inferior está vertical. E essas são os torques
 
 00:06:18.240 --> 00:06:21.080
-torques that are required to do that.
+das articulações necessários para se fazer isto.
 
 00:06:21.080 --> 00:06:24.479
-The toolbox robot object has got a lot of
-capabilities and one of the things we could
+A caixa de ferramentas do objeto robótico possui
+uma vasta opções de funcionalidade e uma das coisas que
 
 00:06:24.479 --> 00:06:31.780
-do is to change gravitational acceleration.
-And we change that to 0, 0, 9.81, which
+podemos utilizar é mudar a aceleração gravitacional.
+E mudando isto para 0, 0, 9.81, o que representa
 
 00:06:31.780 --> 00:06:37.540
-is nominal earth’s gravity, going to divide
-by 6 because that's what the gravity is on the moon.
+a gravidade nominal da terra, dividida por 6
+pois é esta é a gravidade na lua.
 
 00:06:38.700 --> 00:06:44.520
-Now we can see the gravity load on the robot,
-given that it's on the moon, it's the gravity
+Agora nós podemos ver a carga gravitacional no robô,
+dado que ele está na lua, é a função de carga gravitacional.
 
 00:06:44.530 --> 00:06:52.069
-load function. And I put in the joint angles
-six zeros again. And here we see what the
+E colocando novamente os ângulos de junta como
+seis zeros. Assim, nós vemos aqui
 
 00:06:52.069 --> 00:06:58.829
-gravity load, gravity torques on the joints of this PUMA robot would be if it was working on the moon.
+a carga gravitacional e torque gravitacional nas juntas
+desse robô PUMA para o caso dele estar trabalhando na lua.
 
