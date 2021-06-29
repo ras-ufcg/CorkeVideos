@@ -154,139 +154,138 @@ And we then described a very efficient computer
 algorithm, the recursive Newton-Euler algorithm,
 
 00:03:11.230 --> 00:03:18.720
-which we can use in MATLAB to compute joint
-talks as a function of Q, Q dot, and Q double dot.
+o qual podemos usar no MATLAB para calcular torques
+de junta em função de Q, Q ponto e Q dois pontos.
 
 00:03:18.720 --> 00:03:23.269
-We didn't go into the details of the recursive
-Newton-Euler method. You can find the details
+Não entramos nos detalhes do método recursivo
+Newton-Euler. Você pode achar os detalhes
 
 00:03:23.269 --> 00:03:28.360
-in many textbooks and you can look at the
-code provided with Toolbox.
+em vários livros e também pode olhar no 
+código exibido pela Toolbox.
 
 00:03:28.360 --> 00:03:34.360
-The expressions for robot joint talk as a
-function of Q, Q dot, and Q double dot are
+As expressões para o torque de junta do robô em
+função de Q, Q ponto e Q dois pontos são
 
 00:03:34.360 --> 00:03:39.000
-actually quite complicated but they can be
-factorised and expressed in a very concise
+até um pouco complicadas, mas elas podem ser
+fatoradas e expressas de forma concisa
 
 00:03:39.000 --> 00:03:45.970
-matrix equation. So the torque applied to
-the joint comprises an inertial term, a Coriolis
+em uma equação matricial. Daí o torque aplicado à
+junta implica em um termo inercial, em um termo de
 
 00:03:45.970 --> 00:03:51.459
-and centripetal term and gravity term. We
-then spend a little bit of time investigating
+Coriolis e centrípeto, e em um termo de gravidade. Nós
+vamos passar um tempinho investigando
 
 00:03:51.459 --> 00:03:55.360
-in detail each of these terms.
+detalhadamente cada um desses termos.
 
 00:03:55.360 --> 00:04:00.040
-When it comes to control of a particular robot
-joint, things are much more complicated than
+No que tange ao controle de uma junta específica
+de um robô, as coisas são bem mais complicadas do que
 
 00:04:00.040 --> 00:04:04.819
-they were in the independent joint control
-situation. Then, we had only to deal with
+elas eram na situação do controle de junta
+independente. Antes, tínhamos que lidar apenas
 
 00:04:04.819 --> 00:04:08.790
-the first two terms. Now we have to deal with
-torques that are due to acceleration of all
+com os dois primeiros termos. Agora temos que lidar com 
+torques que são causados pela aceleração de todas
 
 00:04:08.790 --> 00:04:14.900
-the other robot's joints, the velocity of
-all the robot's other joints, and the influence of gravity.
+as outras juntas do robô, com a velocidade de
+todas as outras juntas do robô e com a influência da gravidade.
 
 00:04:14.900 --> 00:04:20.000
-With some mathematical manipulation, we can
-get this down to a fairly concise equation,
+Com alguma manipulação matemática, podemos
+visualizar isso com uma equação um tanto concisa,
 
 00:04:20.000 --> 00:04:24.570
-which looks like this. And the bottom line
-is that the inertia of the robot joint is
+que se apresenta assim. E a linha de baixo
+mostra que a inércia da junta do robô é
 
 00:04:24.570 --> 00:04:29.910
-a function of the configuration of the entire
-robot, it's no longer a constant.
+uma função da configuração de todo o
+robô, não é mais uma constante.
 
 00:04:29.910 --> 00:04:34.810
-We have the viscous friction term and we have
-the disturbance torque term, which is due
+Temos o termo de fricção viscosa e temos
+o termo de perturbação de torque, o qual é causado
 
 00:04:34.810 --> 00:04:40.560
-to acceleration and velocity of all the other
-robot's joints. Time varying inertia is a
+pela aceleração e pela velocidade de todas as outras
+juntas do robô. Inércia com variação no tempo é um
 
 00:04:40.560 --> 00:04:44.340
-bit of a problem because it makes it hard
-to tune the control system to get the best
+pequeno problema porque ela dificulta
+o ajuste do sistema de controle na obtenção do
 
 00:04:44.340 --> 00:04:47.580
-possible settling time and overshoot.
+melhor tempo de adequação e sobressinal.
 
 00:04:47.580 --> 00:04:51.220
-The disturbance torque means more work for
-the joint controller. It has to be very high
+O torque de perturbação significa mais trabalho para
+o controlador de junta. Ele deve obter uma alta
 
 00:04:51.220 --> 00:04:57.699
-performance so that it can reject the disturbance
-torque and perform accurate path following.
+performance para conseguir ignorar o torque de
+perturbação e desempenhar objetivos com ordem e precisão.
 
 00:04:57.699 --> 00:05:02.860
-Some techniques to help eliminate these rigid
-body dynamic effects other introduce a gearbox.
+Existem algumas técnicas que ajudam na eliminação desses efeitos 
+da dinâmica de um corpo rígido, como introduzir uma caixa de 
 
 00:05:02.860 --> 00:05:07.889
-It reduces the configuration-dependent inertia,
-which makes the inertia almost independent
+transmissão. Ela reduz a inércia dependente de configuração,
+a qual torna a inércia quase independente da
 
 00:05:07.889 --> 00:05:13.880
-of robot configuration and it greatly attenuates
-the disturbance torque. A gearbox is a cheap
+configuração do robô e atenua consideravelmente
+o torque de perturbação. Uma caixa de transmissão é um
 
 00:05:13.880 --> 00:05:21.200
-trick and most robots include a gearbox anyway
-to amplify the torque of high-speed electric motors.
+truque simples e a maioria dos robôs possuem ela 
+para amplificar o torque de motores elétricos de alta velocidade.
 
 00:05:21.800 --> 00:05:28.460
-We can also apply a computational technique
-called torque feedforward control or computed
+Podemos aplicar também uma técnica de cálculo
+chamada controle de torque de alimentação direta ou controle
 
 00:05:28.460 --> 00:05:33.169
-torque control. Effectively, what we're doing
-here is trading mechanical complexity and
+de torque calculado. Efetivamente, o que estamos 
+fazendo aqui é trocar o custo e a complexidade 
 
 00:05:33.169 --> 00:05:37.410
-cost - for instance, the addition of a gear
-box - with computation. The computation is
+mecânica - por exemplo, a adição de uma caixa de
+transmissão - com cálculo. O cálculo está
 
 00:05:37.410 --> 00:05:41.050
-getting cheaper and cheaper year on year.
+ficando mais e mais acessível a cada ano.
 
 00:05:41.050 --> 00:05:46.360
-We can rearrange the rigid body equations
-of motion into this form. We can get an expression
+Podemos rearranjar as equações de movimento
+de corpos rígidos dessa forma. Podemos obter uma expressão
 
 00:05:46.360 --> 00:05:52.240
-for Q dot dot - the join acceleration - in
-terms of the torque that I applied to a robot.
+para Q ponto ponto - a aceleração da junta - em
+relação ao toque que apliquei a um robô.
 
 00:05:52.240 --> 00:05:56.800
-I can integrate the acceleration to get velocity,
-integrated again to get position, and now
+Eu posso integrar a aceleração para obter velocidade,
+integrada novamente para obter posição, e agora
 
 00:05:56.800 --> 00:06:01.370
-what I have is the forward dynamics of the
-robot manipulator. This is a function which
+o que tenho é a dinâmica direta do
+manipulador de robô. Essa é uma função que
 
 00:06:01.370 --> 00:06:06.289
-gives me the motion of the robot as a function
-of torque. And this is really useful when
+me dá o movimento do robô como uma função
+de torque. E isso é bastante útil quando
 
 00:06:06.289 --> 00:06:12.430
-I want to simulate the robot motion in a real
-world setting with a controller that I design.
-
+eu quero simular a movimentação do robô em um ambiente
+do mundo real com um controle que eu tenha projetado.
