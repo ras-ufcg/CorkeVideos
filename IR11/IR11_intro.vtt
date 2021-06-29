@@ -1,121 +1,121 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:07.629 --> 00:00:12.619
-In the last lecture we talked about robot
-joint control and that’s the problem of
+Na última aula, falamos sobre o controle da 
+articulação do robô e esse é o problema 
 
 00:00:12.619 --> 00:00:17.890
-how do we control the motor which is actuating
-the joint angle in a robot arm.
+em que controlamos o motor que está atuando 
+no ângulo da junta do braço do robô. 
 
 00:00:17.890 --> 00:00:22.449
-Now in a real robot, this control problem
-is a little bit more complicated than we talked
+Agora, em um robô real, este problema de controle 
+é um pouco mais complicado do que falamos
 
 00:00:22.449 --> 00:00:27.810
-about in the last lecture and a pretty simple
-example can make that clear.
+na última aula e um exemplo bem simples 
+pode deixar isso claro. 
 
 00:00:27.810 --> 00:00:32.419
-If you consider in the problem of controlling
-my shoulder joint, then the weight of my arm,
+Se você considerar o problema de controlar 
+a articulação do meu ombro, então o peso do meu braço, 
 
 00:00:32.419 --> 00:00:37.440
-gravity acting on this arm is going to exert
-a torque on my shoulder and so the arm is
+a gravidade agindo neste braço, vai exercer 
+um torque no meu ombro e então o braço vai 
 
 00:00:37.440 --> 00:00:42.290
-going to want to fall down, so it’s the
-muscles in my arm, have to apply an opposite
+querer cair. Então os músculos do 
+meu braço terão que aplicar um torque oposto 
 
 00:00:42.290 --> 00:00:49.100
-torque in order to keep my arm horizontal.
-So, a really important factor in robot arm control
+a fim de manter meu braço na horizontal.
+Então, um fator realmente importante no controle do braço do robô 
 
 00:00:49.100 --> 00:00:54.920
-is the influence of gravity, the weight force
-that acts on the various links of a robot’s arm.
+é a influência da gravidade, a força peso 
+que atua nas várias ligações do braço de um robô. 
 
 00:00:54.920 --> 00:01:00.350
-Now, another problem is to do with the change
-in inertia. The motor, which is driving, for
+Agora, outro problema tem a ver com a mudança 
+na inércia. O motor que está acionando, por 
 
 00:01:00.350 --> 00:01:05.740
-instance my shoulder joint sees the inertia
-of the motor itself, but it also sees the
+exemplo, a articulação do meu ombro, vê a inércia 
+do próprio motor, mas também vê a 
 
 00:01:05.740 --> 00:01:10.590
-inertia of this link, so in order to accelerate
-this, going to have to accelerate all this
+inércia dessa ligação. Então, para acelerar 
+isso, vou ter que acelerar toda essa 
 
 00:01:10.590 --> 00:01:16.399
-part of my arm and that requires
-additional torque in the motor in order to
+parte do meu braço e isso requer 
+torque adicional no motor para 
 
 00:01:16.399 --> 00:01:20.179
-achieve a particular acceleration; it’s
-a function of the inertia of my arm.
+atingir uma determinada aceleração. É 
+uma função da inércia do meu braço. 
 
 00:01:20.179 --> 00:01:25.450
-Now, the inertia depends on the configuration
-of my arm. My arm here is got maximum inertia
+Agora, a inércia depende da configuração 
+do meu braço. Meu braço aqui tem inércia máxima 
 
 00:01:25.450 --> 00:01:28.969
-about the shoulder axis, but if the arm
-was in a configuration like this, it’s got
+sobre o eixo do ombro, mas se o braço
+estava em uma configuração como esta, ele tem 
 
 00:01:28.969 --> 00:01:33.100
-less inertia. If it was in a configuration
-like this, it’s got less inertia still.
+menos inércia. Se estivesse em uma configuração 
+como essa, ele teria menos inércia ainda. 
 
 00:01:33.100 --> 00:01:39.219
-So, the configuration of the links outwards
-from a particular joint are going to affect
+Logo, a configuração das ligações para fora 
+de uma determinada junta vai afetar 
 
 00:01:39.219 --> 00:01:44.569
-the inertia that that joint sees. So all of
-these sorts of effects, the gravity problem
+a inércia que essa junta vê. Então, todos 
+esses tipos de efeitos, o problema da gravidade 
 
 00:01:44.569 --> 00:01:49.780
-and the inertia problem are lumped together
-in what we call rigid body dynamic effects
+e o problema da inércia, são agrupados 
+no que chamamos de efeitos da dinâmica de corpo rígido 
 
 00:01:49.780 --> 00:01:53.240
-and that’s what we’re going to talk about
-in this particular lecture.
+e é sobre isso que falaremos 
+nesta aula específica. 
 
 00:01:53.240 --> 00:01:58.639
-Now, in the last lecture, we put up this block
-diagram and we worked our way through all
+Agora, na última aula, colocamos este diagrama 
+de blocos e trabalhamos em todos 
 
 00:01:58.639 --> 00:02:02.499
-the different blocks in the diagram. In this
-lecture, what we’re going to do is put the
+os diferentes blocos do diagrama. Nessa 
+aula, o que vamos fazer é colocar os 
 
 00:02:02.499 --> 00:02:10.739
-spotlight on the robot joint itself; this is where one joint interacts with the other joints in the robot arm.
+holofotes na própria junta do robô; é onde uma articulação interage com as outras articulações no braço do robô. 
 
 00:02:10.740 --> 00:02:16.230
-This is where the effects like changing gravity
-and changing inertia, these are mechanic effects,
+É aqui que os efeitos como mudança de gravidade 
+e mudança de inércia, estes são efeitos mecânicos, 
 
 00:02:16.230 --> 00:02:22.010
-come from the robot joint, back through the gearbox and they influence the motor within the robot joint.
+vêm da junta do robô, voltam pela caixa de transmissão e influenciam o motor dentro da junta do robô. 
 
 00:02:22.010 --> 00:02:27.670
-So, that’s the purpose of this lecture,
-is to try and unpack some of these issues,
+Então, esse é o objetivo dessa aula, 
+é tentar desempacotar algumas dessas questões, 
 
 00:02:27.670 --> 00:02:34.580
-see how these gravity problems and the inertia
-effects, impact on the individual motors that
+ver como esses problemas de gravidade e os efeitos 
+da inércia impactam os motores individuais que 
 
 00:02:34.580 --> 00:02:36.470
-are driving the individual joints.
+estão impulsionando as juntas individuais. 
 
 00:02:36.470 --> 00:02:42.030
-We can’t ignore these effects if we want
-to do high quality control of robot joint motion.
+Não podemos ignorar esses efeitos se quisermos 
+fazer um controle de alta qualidade do movimento das juntas do robô. 
 
