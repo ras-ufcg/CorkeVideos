@@ -8,7 +8,7 @@ recursivo Newton-Euler novamente. Mas
 
 00:00:06.720 --> 00:00:10.610
 desta vez, vamos fazer as operações
-simbólicamente usando a capacidade de algebra computacional
+simbolicamente usando a capacidade de algebra computacional
 
 00:00:10.610 --> 00:00:14.089
 do MATLAB.
@@ -35,7 +35,7 @@ uma variável simbólica chamada Q1 e Q2. E
 
 00:00:38.380 --> 00:00:46.810
 Q1D e Q2D para representar a velocidade das juntas
-1 e junta 2 e Q1DDpara representar a aceleração
+1 e junta 2 e Q1DD para representar a aceleração
 
 00:00:46.810 --> 00:00:51.780
 da junta 1 e a aceleração da junta 2.
@@ -81,7 +81,7 @@ Podemos ver G, a aceleração gravitacional,
 existem termos trigonométricos. Existem massas 
 
 00:01:55.409 --> 00:02:00.760
-de juntas. existem todo tipo de coisa. É
+de juntas. existe todo tipo de coisa. É
 uma expressão muito longa e muito complicada
 
 00:02:00.760 --> 00:02:06.880
@@ -98,7 +98,7 @@ atuando na segunda junta do robô. Podemos
 
 00:02:18.450 --> 00:02:23.189
 ver essa expressão muito complexa. Imagine
-o que será para um robô de seis articulações .
+o que será para um robô de seis articulações.
 
 00:02:23.189 --> 00:02:29.200
 Agora, é possível fatorar e simplificar
@@ -129,7 +129,7 @@ no robô manipulador e a gravidade
 Q. M é a matriz de inércia e é  
 
 00:03:06.400 --> 00:03:10.540
-uma função apenas das coordenadas de junta multiplicado pela
+uma função apenas das coordenadas de junta multiplicada pela
 aceleração de junta.
 
 00:03:10.540 --> 00:03:16.200
@@ -143,4 +143,3 @@ e isso representa as forças giroscópicas e
 00:03:21.930 --> 00:03:27.849
 outras forças que atuam nas juntas do robô
 devido à rotação de outras articulações do robô.
-
