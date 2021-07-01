@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.620 --> 00:00:07.180
 Aqui temos algo que deve ser bastante
@@ -11,12 +11,12 @@ denotada A e temos um ponto. Agora, este
 ponto está se movendo. Tem uma velocidade espacial,
 
 00:00:13.380 --> 00:00:19.000
-nu, com relação a coordenada A e eu observo
-neste caminho. Tem velocidade de componente 
+nu, com relação a coordenada A e eu a indico
+desta forma. Tem velocidade de componente 
 
 00:00:19.000 --> 00:00:24.290
-de transição, ponto X e ponto Y e uma componente
-rotacional de velocidade teta ponto, mas eu represento
+de translacional, ponto X e ponto Y e uma componente
+rotacional de velocidade theta ponto, mas eu represento
 
 00:00:24.290 --> 00:00:25.399
 isso por uma única flecha.
@@ -26,15 +26,15 @@ Agora vou apresentar outro sistema de
 coordenadas, uma coordenada vermelha denotada B e
 
 00:00:31.340 --> 00:00:36.890
-temos uma pose relativa que descreve o
-pose de coordenada B em relação à pose de
+temos uma pose relativa que descreve a
+pose de coordenada B em relação à pose da
 
 00:00:36.890 --> 00:00:43.010
 coordenada A. Agora também posso descrever a velocidade
 do ponto em relação ao sistema de coordenadas 
 
 00:00:43.010 --> 00:00:46.890
-B and fazemos isso usando um super script
+B e fazemos isso usando um super script
 B ao invés de A.
 
 00:00:46.890 --> 00:00:53.280
@@ -49,8 +49,8 @@ Matriz Jacobiana, uma Jacobiana que mapeia a velocidade
 de uma coordenada com a outra.
 
 00:01:02.339 --> 00:01:08.090
-Este Jacobiano particular é uma função de
-a pose relativa entre as duas coordenadas.
+Este Jacobiano particular é uma função da
+pose relativa entre as duas coordenadas.
 
 00:01:08.090 --> 00:01:14.110
 É uma matriz três por três que compreende
