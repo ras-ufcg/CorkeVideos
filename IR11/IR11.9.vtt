@@ -1,157 +1,158 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.530 --> 00:00:07.310
-We've covered an awful lot of ground in this
-particular lecture, so let's summarise some
+Cobrimos uma grande parte do terreno nesta 
+palestra em particular, então vamos resumir alguns
 
 00:00:07.310 --> 00:00:10.080
-of the most important points.
+dos pontos mais importantes.
 
 00:00:10.080 --> 00:00:14.249
-In the last lecture, we considered a very
-simplistic control case. We called it independent
+Na última palestra, consideramos um caso de controle 
+bastante simplista. Nós chamamos de controle de
 
 00:00:14.249 --> 00:00:19.350
-joint control and we ignored facts like gravity,
-but in a real robot such as the PUMA robot,
+junta independente e ignoramos fatos como 
+gravidade, mas em um robô real como o robô PUMA,
 
 00:00:19.350 --> 00:00:23.770
-shown here in this particular configuration,
-we can imagine the torque that must be required
+mostrado aqui nesta configuração em particular,
+podemos imaginar o torque requerido na junta do
 
 00:00:23.770 --> 00:00:30.770
-at the shoulder joint and at the elbow joint in order to stop the robot collapsing under the effect of gravity.
+do ombro e do cotovelo para impedir o colapso do 
+robô sob o efeito da gravidade.
 
 00:00:31.060 --> 00:00:36.780
-So this was the robot joint control we had
-for the independent control case and we modified
+Então, esse era o controle de junta que tínhamos
+para o caso do controle independente e o modificamos. 
 
 00:00:36.780 --> 00:00:41.379
-that. We introduced the disturbance torque,
-and this might be due to non-linear friction
+Introduzimos o torque de perturbação, e isso 
+pode ser devido ao atrito não linear
 
 00:00:41.379 --> 00:00:46.140
-or it might be due to gravity. This is the
-disturbance force TD.
+ou devido à gravidade. Essa é a força de 
+perturbação TD.
 
 00:00:46.140 --> 00:00:50.210
-And then we looked at the effect that the
-disturbance torque has on the joint position
+E quando olhamos para o efeito que o torque de 
+perturbação tem na posição da junta
 
 00:00:50.210 --> 00:00:55.219
-and it can be significant, so it's something
-that we need to deal with.
+e pode ser significativo, então é algo com que
+precisamos lidar.
 
 00:00:55.219 --> 00:01:00.519
-We then considered a very simple case: a single
-motor attached to a link, and the link has
+Em seguida, consideramos um caso bem simples: um 
+único motor conectado a uma ligação, e a ligação
 
 00:01:00.519 --> 00:01:05.350
-got mass. If a joint is controlled by a PD
-controller, a pretty typical sort of controller
+possui massa. Se uma junta é controlada por um
+controlador PD, um tipo bastante típico de controlador
 
 00:01:05.350 --> 00:01:11.130
-for a robot joint, then we saw that the effect
-of gravity is to deflect the joint, introducing
+para uma junta do robô, então vimos que o efeito
+da gravidade é desviar a junta, introduzindo
 
 00:01:11.130 --> 00:01:16.700
-a positioning error. The joint angle is not
-the desired joint angle. And the amount of
+um erro no posicionamento. O ângulo da 
+junta não é o ângulo desejado. E a quantidade
 
 00:01:16.700 --> 00:01:22.219
-that error is inversely proportional to the
-controller gain P, so if we want to make the
+desse erro é inversamente proporcional ao
+ganho do controlador P, então se queremos gerar
 
 00:01:22.219 --> 00:01:28.000
-error very small, we need to use a very high
-gain. But we saw that there is some consequences
+um erro bastante pequeno, precisamos ter um ganho
+bem alto. Mas, vimos que existem algumas consequências
 
 00:01:28.000 --> 00:01:33.979
-with increasing the gain, in particular, increased
-overshoot in our joint control system.
+com o aumento do ganho, em particular, aumentou o 
+sobressinal em nosso sistema de controle de junta.
 
 00:01:33.979 --> 00:01:38.759
-So another strategy that we looked at then
-is to introduce an integral term. This is
+Outra estratégia que encontramos foi
+introduzir um termo integral. Isto é,  
 
 00:01:38.759 --> 00:01:43.479
-a term that ramps up while there is a positioning
-error, increasing the torque in the joint
+um termo que aumenta enquanto existir um erro 
+na posição, aumentando o torque na junta
 
 00:01:43.479 --> 00:01:46.770
-until the error is eliminated.
+até o erro ser eliminado.
 
 00:01:46.770 --> 00:01:51.189
-Another strategy we looked at is feedforward
-control. And here, we assume that we can estimate
+Outra estratégia que observamos é o controlador
+feedfoward. E aqui, assumimos que podemos estimar
 
 00:01:51.189 --> 00:01:55.829
-the disturbance torque and in the case of
-gravity, that's most certainly the case. So,
+o torque de perturbação e no caso da gravidade,
+esse é certamente o caso. Então,
 
 00:01:55.829 --> 00:02:01.289
-we estimate what gravity should be and multiply
-it by a gain and introduce it into the output
+estimamos qual deve ser a gravidade, multiplicamos
+por um ganho e introduzimos o valor na saída
 
 00:02:01.289 --> 00:02:04.539
-of our controller, and that cancels out the
-actual disturbance.
+do nosso controlador. E isso cancela a
+perturbação real.
 
 00:02:04.539 --> 00:02:10.310
-This is a technique that works well even if
-our estimate is not too precise. Partial cancellation
+Esta é uma técnica que funciona bem mesmo que nossa
+estimativa não é muito precisa. O Cancelamento parcial
 
 00:02:10.310 --> 00:02:14.450
-of disturbance is better than no cancellation
-at all.
+da perturbação é melhor que nenhum
+cancelamento.
 
 00:02:14.450 --> 00:02:19.290
-Next we considered the dynamic parameters
-of a serial link manipulator.
+Em seguida, consideramos os parâmetros dinâmicos
+de um manipulador de ligações seriais.
 
 00:02:19.290 --> 00:02:22.530
-We've looked at this simple robot earlier when we were studying kinematics.
+Já vimos esse robô simples quando estávamos estudando cinemática.
 
 00:02:22.530 --> 00:02:24.760
-Now we want to understand the dynamics of this.
+Agora queremos entender a dinâmica disso.
 
 00:02:24.760 --> 00:02:29.040
-So we've indicated the center of mass of each
-of the links, and we described the position
+Então, indicamos o centro de massa de cada
+uma das ligações, e descrevemos a posição
 
 00:02:29.040 --> 00:02:34.040
-of the center of mass of each link with respect
-to the link coordinate frame and the inertia
+do centro de massa de cada ligação com respeito
+para o sistema de coordenadas de ligações e a inércia
 
 00:02:34.040 --> 00:02:40.599
-of each link. The mass is a scalar, the position
-of the center of mass is a three-element vector,
+de cada ligação. A massa é um escalar, a posição
+do centro de massa é um vetor de três elementos,
 
 00:02:40.599 --> 00:02:45.440
-and the inertia is a three by three matrix,
-it's a symmetric matrix, so it actually has
+e a inércia é uma matriz três por três, é uma
+matriz simétrica, então ela realmente tem
 
 00:02:45.440 --> 00:02:52.299
-only six unique elements. So each link is
-therefore described by ten dynamic parameters.
+apenas seis elementos únicos. Então, cada ligação é
+portanto, descrita por dez parâmetros dinâmicos.
 
 00:02:52.299 --> 00:02:56.299
-The dynamics of moving bodies is described
-by a number of mathematical techniques. And
+A dinâmica dos corpos em movimento é descrita
+por uma série de técnicas matemáticas. E
 
 00:02:56.299 --> 00:03:02.099
-we used a combination of Newton's second law,
-F equals MA and Euler's equation for rotational
+usamos uma combinação da segunda lei de Newton,
+F é igual a MA e equação de Euler para o movimento
 
 00:03:02.099 --> 00:03:05.620
-motion. Together, we call this a Newton-Euler
-method.
+rotacional. Juntas, chamamos isso de método 
+Newton-Euler.
 
 00:03:05.620 --> 00:03:11.230
-And we then described a very efficient computer
-algorithm, the recursive Newton-Euler algorithm,
+E então descrevemos um algoritmo de computador 
+muito eficiente, o algoritmo recursivo de Newton-Euler,
 
 00:03:11.230 --> 00:03:18.720
 o qual podemos usar no MATLAB para calcular torques
