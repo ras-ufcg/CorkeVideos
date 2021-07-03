@@ -156,163 +156,163 @@ Também podemos descrever a posição do centro de massa
 em relação ao sistema coordenada de uma ligação.
 
 00:03:05.010 --> 00:03:11.140
-frame. In this case, it is a displacement
-of C1 in the negative X1 direction. And we
+Nesse caso é um deslocamento de C1
+na direção negativa de X. E nós
 
 00:03:11.140 --> 00:03:15.280
-also have a mass associated with a link that's
-the mass M1.
+também temos uma massa associada a ligação que
+é a massa M1.
 
 00:03:15.280 --> 00:03:20.390
-Then we also have an inertia. This is the
-inertia of the link with respect to its centre
+Assim temos também uma inércia. Essa é a inércia
+da ligação em relação ao seu centro
 
 00:03:20.390 --> 00:03:26.189
-of mass and we can do the same thing for link
-two, the distance from the link two coordinate
+de massa e podemos fazer a mesma coisa para a
+ligação dois, a distância do sistema de coordenada
 
 00:03:26.189 --> 00:03:32.449
-frame to its centre of mass and the inertia
-of link two with respect to its centre of mass.
+da ligação dois para o seu centro de massa e a inércia
+da ligação dois em relação ao seu centro de massa.
 
 00:03:32.450 --> 00:03:37.019
-So we have now quite a number of parameters
-associated with each of the links. For each
+Portanto temos agora vários parâmetros
+asssocidos a cada uma das ligações. Para cada
 
 00:03:37.019 --> 00:03:41.689
-link, we have a mass, we have a centre of
-mass which in the general case would be a
+ligação, nós temos a massa, o centro de massa
+que no caso geral será o vetor
 
 00:03:41.689 --> 00:03:47.920
-vector described by three numbers and we have
-an inertia matrix. This is a 3x3 matrix and
+descrito por três números e temos uma
+matriz de inércia. Essa é uma matriz 3x3 e
 
 00:03:47.920 --> 00:03:54.160
-if we consider the inertia with respect to
-the centre of mass, that 3x3 is a symmetric matrix.
+se considerarmos a inércia em relação ao
+centro de massa, essa 3x3 é uma matriz simétrica.
 
 00:03:54.160 --> 00:03:58.940
-Now, a symmetric matrix, instead of having
-nine unique elements, its got only six unique
+Agora, a matriz simétrica, em vez de ter
+nove elementos únicos tem apenas seis elementos
 
 00:03:58.950 --> 00:04:03.870
-elements. In total, we have ten parameters
-to describe the dynamics of each link. We
+únicos. No total, temos dez parâmetros para
+descrever a dinâmica de cada ligação.
 
 00:04:03.870 --> 00:04:08.450
-have one mass, we have three translations
-to describe the position of the centre of
+Temos uma massa, três translações para
+descrever a posição do centro de
 
 00:04:08.450 --> 00:04:14.159
-mass with respect to the link coordinate frame,
-and we have six unique elements of the symmetric
+massa em relação ao sistema de coordenadas da ligação,
+e temos seis elementos únicos da matriz
 
 00:04:14.159 --> 00:04:17.720
-inertia matrix, with respect to the centre
-of mass.
+simétrica de inércia, em relação ao
+centro de massa.
 
 00:04:17.720 --> 00:04:24.180
-So for link number one, those parameters are
-M1, the centre of mass is negative C1 in the
+Logo para a ligação número um, esses parâmetros
+são M1, o centro de massa é C1 negativo na
 
 00:04:24.180 --> 00:04:29.020
-X direction. The other two elements are zero,
-the vector R1, describes the position of the
+direção de X. Os outros dois elementos são zero,
+o vetor R1 que descreve a posição do
 
 00:04:29.020 --> 00:04:34.920
-centre of mass. And in this case, it's negative
-C1 and the Y and Z components are equal to zero.
+centro de massa. E nesse caso, é C1 negativo
+e as componentes Y e Z são iguais a zero. 
 
 00:04:34.920 --> 00:04:40.480
-And we have the inertia matrix which has only
-got one element and that is the inertia about
+E nós temos a matriz de inércia que tem apenas
+um elemento que é a inércia sobre
 
 00:04:40.490 --> 00:04:45.680
-the Z axis. Now in this case, the Z axis is
-coming at us out of the page. So we have only
+o eixo Z. Agora, nesse caso, o eixo Z está virado
+para nós, para fora da página. Assim temos apenas
 
 00:04:45.680 --> 00:04:48.330
-one finite element that's IZZ1.
+um elemento finito que é IZZ1.
 
 00:04:48.330 --> 00:04:54.500
-For link two, it looks somewhat similar. These
-are the dynamic parameters of each of the
+Para a ligação dois, parece um pouco semelhante. 
+Esses são os parâmetros dinâmicos de cada uma das
 
 00:04:54.500 --> 00:04:58.900
-links, sometimes referred to as the inertial
-parameters of the links. When it comes to
+ligações, as vezes chamados de parâmetros
+inerciais das ligações. Quando vamos
 
 00:04:58.900 --> 00:05:02.479
-describing the dynamics of moving bodies,
-there are number of different approaches that
+descrever as dinâmicas dos corpos em movimento,
+existem diferentes números de abordagens que
 
 00:05:02.479 --> 00:05:07.900
-we can take, one of the most common of course
-is Newton's second law, F = ma which relates
+podemos ter, uma das mais comuns é claro
+é a segunda lei de Newton, F = ma que relaciona
 
 00:05:07.900 --> 00:05:13.860
-the force applied to the body to the acceleration
-that experiences as a function of its mass.
+a força aplicada ao corpo a aceleração que
+experiencia em função de sua massa.
 
 00:05:13.860 --> 00:05:18.150
-For a rotating body, we can use Euler's equation
-which relates the torque applied to its body
+Para um corpo rotatório, podemos usar a equação de
+Euler que relaciona o torque aplicado ao corpo
 
 00:05:18.150 --> 00:05:23.840
-given by the symbol tau to its rotational
-inertia, J, it's angular rate, Omega, and
+dado pelo símbolo tau para a inércia
+rotacional, J, sua taxa angular, Ômega, e
 
 00:05:23.840 --> 00:05:26.190
-its angular acceleration Omega dot.
+sua aceleração angular Ômega ponto.
 
 00:05:26.190 --> 00:05:31.349
-A quite different approach is Lagrange's equation,
-which relates the kinetic, and potential energy
+Uma abordagem bastante diferente é a equação de Lagrange,
+que relaciona a energia cinética e potencial
 
 00:05:31.349 --> 00:05:38.440
-of a body to the derivatives of the Lagrangian
-term, T minus V, and the derivatives of Lagrangian
+de um corpo as derivada do termo de Lagrande,
+T menos V, e as derivadas de Lagrange em
 
 00:05:38.440 --> 00:05:44.289
-with respect to the generalized coordinates
-and the generalized velocities of the bodies
+relação as coordenadas e velocidades
+gerais dos corpos
 
 00:05:44.289 --> 00:05:45.720
-in the mechanism.
+no mecanismo.
 
 00:05:45.720 --> 00:05:50.210
-We can use any of these approaches to analyze
-the dynamics of a serial link manipulator
+Podemos usar qualquer uma dessas abordagens para
+analisar a dinâmica de um manipulador de ligação serial
 
 00:05:50.210 --> 00:05:55.590
-but in this lecture, we're going to consider
-the Newton-Euler method. This is a combination
+mas nessa aula, vamos considerar o método
+Newton-Euler. É uma combinação
 
 00:05:55.590 --> 00:06:02.020
-of Newton's law to describe translational motion and Euler's equation to describe the rotational motion.
+da lei de Newton para descrever o movimento de translação e a equação de Euler para descrever o movimento de rotação.
 
 00:06:02.020 --> 00:06:07.310
-A very simple and elegant approach to determining
-the dynamic motion of a serial link manipulator
+Uma abordagem muito simples e elegante para determinar
+o movimento dinâmico de um manipulador de ligação serial
 
 00:06:07.310 --> 00:06:11.889
-is what's called the recursive Newton-Euler
-algorithm. And I'm not going to go into all
+é o que chamamos de algoritmo recursivo
+Newton-Euler. E eu não vou entrar em todos os
 
 00:06:11.889 --> 00:06:16.080
-of the details here, you find it in many,
-many textbooks but what I'm want to do is
+detalhes aqui, você encontra isso em muitos,
+muitos livros mas o que eu quero é
 
 00:06:16.080 --> 00:06:19.060
-give you an intuition for how it works.
+dar a vocês uma noção de como funciona.
 
 00:06:19.060 --> 00:06:24.129
-And the first step is to determine the translational
-and rotational velocity and acceleration for
+E o primeiro passo para determinar a velocidade e aceleração
+de translação e rotação para o
 
 00:06:24.129 --> 00:06:29.180
-the center of mass of each of the links. Use
-Newton's law for the translational motion
+centro de massa de cada uma das ligações.
+Usamos a lei de Newton para o movimento de translação
 
 00:06:29.180 --> 00:06:32.639
 e usamos a equação de Euler para o 
