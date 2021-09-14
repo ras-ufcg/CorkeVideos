@@ -28,7 +28,7 @@ como isso funciona mecanicamente na prática: Cada
 
 00:00:30.600 --> 00:00:35.620
 ligação deve oferecer suporte a todas as outras ligações
-que estão além dele e cada ligação é claro,
+que estão além dele e cada ligação, é claro,
 
 00:00:35.620 --> 00:00:38.600
 então suportada por todas as ligações
@@ -36,7 +36,7 @@ que estão antes dele.
 
 00:00:38.600 --> 00:00:42.620
 Portanto, há mecanicamente uma conexão 
-entre as ligações, e o peso de uma ligação tem que
+entre as ligações, o peso de uma ligação tem que
 
 00:00:42.620 --> 00:00:48.090
 nascer pela ligação anterior e pela ligação anterior 
@@ -134,14 +134,14 @@ Neste caso, o comprimento A1 do eixo
 da junta um ao eixo da junta dois.
 
 00:02:40.299 --> 00:02:43.430
-E da mesma forma, temos o comprimento da ligação dois
+E da mesma forma, temos o comprimento da ligação 2
 
 00:02:43.430 --> 00:02:48.150
 Nós introduzimos o sistema de coordenadas de ligações aqui.
-O sistema de coordenadas um é anexado ao final
+O sistema de coordenadas 1 é anexado ao final
 
 00:02:48.150 --> 00:02:53.879
-da ligação um e o sistema de coordenadas dois é 
+da ligação 1 e o sistema de coordenadas dois é 
 anexado ao sistema de coordenadas da ligação dois.
 
 00:02:53.879 --> 00:02:57.939
@@ -153,7 +153,7 @@ manipulador de ligação serial.
 
 00:02:59.959 --> 00:03:05.010
 Também podemos descrever a posição do centro de massa 
-em relação ao sistema coordenada de uma ligação.
+em relação ao sistema de coordenadas de uma ligação.
 
 00:03:05.010 --> 00:03:11.140
 frame. In this case, it is a displacement
