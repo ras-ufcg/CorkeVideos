@@ -285,7 +285,7 @@ manipulador de robô. Essa é uma função que
 
 00:06:01.370 --> 00:06:06.289
 me dá o movimento do robô como uma função
-de torque. E isso é bastante útil quando
+do torque. E isso é bastante útil quando
 
 00:06:06.289 --> 00:06:12.430
 eu quero simular a movimentação do robô em um ambiente
