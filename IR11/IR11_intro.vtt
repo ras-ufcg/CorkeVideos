@@ -27,12 +27,12 @@ a gravidade agindo neste braço, vai exercer
 um torque no meu ombro e então o braço vai 
 
 00:00:37.440 --> 00:00:42.290
-querer cair. Então os músculos do 
+querer cair. Logo após os músculos do 
 meu braço terão que aplicar um torque oposto 
 
 00:00:42.290 --> 00:00:49.100
 a fim de manter meu braço na horizontal.
-Então, um fator realmente importante no controle do braço do robô 
+Daí, um fator realmente importante no controle do braço do robô 
 
 00:00:49.100 --> 00:00:54.920
 é a influência da gravidade, a força peso 
@@ -51,12 +51,12 @@ inércia dessa ligação. Então, para acelerar
 isso, vou ter que acelerar toda essa 
 
 00:01:10.590 --> 00:01:16.399
-parte do meu braço e isso requer 
+parte do meu braço e isso requer um
 torque adicional no motor para 
 
 00:01:16.399 --> 00:01:20.179
 atingir uma determinada aceleração. É 
-uma função da inércia do meu braço. 
+uma função inercial do meu braço. 
 
 00:01:20.179 --> 00:01:25.450
 Agora, a inércia depende da configuração 
