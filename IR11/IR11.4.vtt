@@ -1,6 +1,6 @@
 WEBVTT
 Kind: captions
-Language: en-GB
+Language: pt-BR
 
 00:00:03.429 --> 00:00:07.609
 Aqui está a expressão que introduzimos anteriormente
@@ -15,12 +15,12 @@ da gravidade. A gravidade é a força que atua
 no robô, mesmo que não esteja se movendo. Então nós
 
 00:00:18.650 --> 00:00:24.830
-pode eliminar os termos que são proporcionais
-para a aceleração da articulação e a velocidade da articulação.
+podemos eliminar os termos que são proporcionais
+à aceleração e velocidade da articulação.
 
 00:00:24.830 --> 00:00:29.840
 É apenas este termo no final. O termo
-G. Isso representa o torque de gravidade que esta
+G. Isso representa o torque de gravidade que está
 
 00:00:29.840 --> 00:00:35.370
 atuando nas articulações do robô manipulador.
@@ -40,7 +40,7 @@ o torque que está agindo nas juntas do
 
 00:00:49.579 --> 00:00:57.379
 robô. Os argumentos para gravload são os
-ângulos articulares. Eu passo em um vetor que contém
+ângulos articulares. Eu passo um vetor que contém
 
 00:00:57.379 --> 00:01:02.579
 Q1 e Q2; estas variáveis simbólicas de articulação.
@@ -48,34 +48,34 @@ E aqui está a expressão para gravidade que
 
 00:01:02.579 --> 00:01:08.720
 está atuando nas articulações do robô. E
-vemos que o termo para a junta 1 é bastante
+vemos que a expressão para a junta 1 é bastante longo
 
 00:01:08.720 --> 00:01:14.080
-desde que a expressão para a junta 2 seja
-um pouco mais curto.
+e que a expressão para a junta 2 é um 
+pouco mais curta.
 
 00:01:14.080 --> 00:01:18.990
-Podemos ver que esta expressão contém um
+Podemos ver que esta expressão contém 
 parâmetros cinemáticos, os comprimentos de ligação A1 e
 
 00:01:18.990 --> 00:01:26.650
-A2. As posições dos centros de massa C1
+A2, as posições dos centros de massa C1
 e C2, as massas das duas articulações M1 e
 
 00:01:26.650 --> 00:01:30.939
-M2.E podemos ver que há muitos
-termos cos e seno aqui.
+M2. E podemos ver que há muitos
+termos cossseno e seno aqui.
 
 00:01:30.939 --> 00:01:35.420
 Até agora, falamos sobre as forças no
-robô apenas devido ao seu próprio peso. Mas útil ao
+robô apenas devido ao seu próprio peso. Mas um robô
 
 00:01:35.420 --> 00:01:39.900
-robô também deve ser capaz de transportar uma carga útil.
-Pegue um objeto daqui e coloque-o no chão
+útil também deve ser capaz de transportar uma carg/a.
+Pegar um objeto daqui e colocar no chão
 
 00:01:39.900 --> 00:01:45.909
-bem ali. Então, claramente, o último ligação na
+bem ali. Então, claramente, a último ligação na
 cadeia do robô deve conter a carga útil.
 
 00:01:45.909 --> 00:01:50.040
@@ -84,7 +84,7 @@ a base do robô. Cada junta do
 
 00:01:50.040 --> 00:01:56.590
 robô tem que ajudar a segurar a carga útil para parar
-sendo puxado para baixo pela força da gravidade.
+de ser puxada para baixo pela força da gravidade.
 
 00:01:56.590 --> 00:02:01.810
 Então, qual é o efeito da carga útil? Bem toda
@@ -96,15 +96,15 @@ fim do robô e vamos aumentando sua massa.
 
 00:02:06.920 --> 00:02:12.800
 Podemos calcular o torque que cada uma das
-articulações precisam exercer a fim de sustentar
+articulações precisa exercer a fim de sustentar
 
 00:02:12.809 --> 00:02:17.370
 essa carga útil. Conforme aumentamos a massa do
-carga útil, eventualmente encontraremos aquela
+carga, eventualmente encontraremos aquela
 
 00:02:17.370 --> 00:02:22.950
-junta atingindo seu limite de torque e se torna
-sobrecarregado. E essa é a carga útil máxima
+junta atingindo seu limite de torque e se tornando
+sobrecarregada. E essa é a carga útil máxima
 
 00:02:22.950 --> 00:02:24.629
 que o robô pode segurar.
@@ -146,14 +146,14 @@ nas articulações do robô usando o método gravload.
 
 00:03:12.760 --> 00:03:20.189
 Vou calcular isso para o ângulo da junta
-0 e 0. E este é o resultado que obtemos. DE
+0 e 0. E este é o resultado que obtemos. De
 
 00:03:20.189 --> 00:03:25.400
 fato, é o mesmo resultado que obtivemos um pouco antes
 usando o algoritmo recursivo de Newton-Euler.
 
 00:03:25.400 --> 00:03:29.949
-De fato, a carga da gravidade é baseada no 
+Além disso, a carga da gravidade é baseada no 
 algoritmo recursivo de Newton-Euler.
 
 00:03:29.949 --> 00:03:37.159
@@ -174,11 +174,11 @@ apontando diretamente para cima.
 
 00:03:52.379 --> 00:03:56.659
 Então o que podemos imaginar que a carga gravitacional
-nas articulações serão neste caso? Bem, é simples
+nas articulações será neste caso? Bem, é simples
 
 00:03:56.659 --> 00:04:03.619
-de descobrir. Nós utilizamos o objeto de dois links,
-o método gravload e nós possamos os ângulos de junta
+de descobrir. Nós utilizamos o objeto twolink,
+o método gravload e nós passamos os ângulos de junta
 
 00:04:03.619 --> 00:04:10.699
 PI/2 e 0. Assim nós vemos que a carga gravitacional
@@ -189,7 +189,7 @@ zero ou algum erro numérico pequeno.
 Da escala de 10 elevado a -14. E isso é o que
 
 00:04:15.760 --> 00:04:20.609
-nós esperamos pois nessa configuração particular,
+nós esperamos, pois nessa configuração particular,
 as articulações não precisam exercer torque algum
 
 00:04:20.609 --> 00:04:26.939
@@ -235,7 +235,7 @@ Agora nós vemos que o torque nas articulações,
 na junta 1 e junta 2 é aumentado. E isto
 
 00:05:14.990 --> 00:05:21.560
-é por conta do robô tentando segurar uma carga
+é por conta do robô estar tentando segurar uma carga
 de 1Kg nessa configuração deveras esquisita
 
 00:05:21.560 --> 00:05:26.949
