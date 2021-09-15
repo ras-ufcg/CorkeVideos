@@ -156,129 +156,130 @@ Também podemos descrever a posição do centro de massa
 em relação ao sistema de coordenadas de uma ligação.
 
 00:03:05.010 --> 00:03:11.140
-frame. In this case, it is a displacement
-of C1 in the negative X1 direction. And we
+neste caso, é um deslocamento 
+de c1 na direção negativa de x1. E nós
 
 00:03:11.140 --> 00:03:15.280
-also have a mass associated with a link that's
-the mass M1.
+também temos uma massa associdada a ligação que é 
+a massa M1
 
 00:03:15.280 --> 00:03:20.390
-Then we also have an inertia. This is the
-inertia of the link with respect to its centre
+então nós temos também uma inercia. Essa é a
+inercia de ligação com o respeito ao seu centro
+
 
 00:03:20.390 --> 00:03:26.189
-of mass and we can do the same thing for link
-two, the distance from the link two coordinate
+de massa e podemos fazer a mesma coisa a ligação 
+2, a distancia de ligação entre 2
 
 00:03:26.189 --> 00:03:32.449
-frame to its centre of mass and the inertia
-of link two with respect to its centre of mass.
+sistemas de coordenadas para o seu centro de massa e a inercia 
+de ligação 2 com respeito ao seus centro de massa
 
 00:03:32.450 --> 00:03:37.019
-So we have now quite a number of parameters
-associated with each of the links. For each
+então nós temos agora bastante numeros de paramentos 
+associadado com cada umas das ligações. para cada
 
 00:03:37.019 --> 00:03:41.689
-link, we have a mass, we have a centre of
-mass which in the general case would be a
+ligação , nós temos uma massa, nós temos um centro de 
+massa na qual em geral seria
 
 00:03:41.689 --> 00:03:47.920
-vector described by three numbers and we have
-an inertia matrix. This is a 3x3 matrix and
+descrita por um vector de 3 numeros e nós temos 
+uma matrix inercia. Isso é uma matrix 3x3 e 
 
 00:03:47.920 --> 00:03:54.160
-if we consider the inertia with respect to
-the centre of mass, that 3x3 is a symmetric matrix.
+se considerarmos a inercia com respeito 
+ao seu centro de massa. que 3x3 é uma matrix simetrica
 
 00:03:54.160 --> 00:03:58.940
-Now, a symmetric matrix, instead of having
-nine unique elements, its got only six unique
+agora , uma matrix simetrica , em vez de termos 
+9 elemenos exclusivos, agora temos apenas 6 elementos
 
 00:03:58.950 --> 00:04:03.870
-elements. In total, we have ten parameters
-to describe the dynamics of each link. We
+exclusivos. No total , nós temos 10 parametros 
+para descrever a dinaminca de cada ligação. Nós
 
 00:04:03.870 --> 00:04:08.450
-have one mass, we have three translations
-to describe the position of the centre of
+temos uma massa, nós temos 3 maneiras 
+para descrever a posição do centro de 
 
 00:04:08.450 --> 00:04:14.159
-mass with respect to the link coordinate frame,
-and we have six unique elements of the symmetric
+massa com respeito para a ligação de sistemas de coordenadas
+e nós temos 6 elementos exclusivos
 
 00:04:14.159 --> 00:04:17.720
-inertia matrix, with respect to the centre
-of mass.
+matrix de inercia simetrica, com respeito ao centro 
+de massa
 
 00:04:17.720 --> 00:04:24.180
-So for link number one, those parameters are
-M1, the centre of mass is negative C1 in the
+então para ligação numero 1, aqueles paremetros são 
+M1, o centro de massa é negativo C1 na
 
 00:04:24.180 --> 00:04:29.020
-X direction. The other two elements are zero,
-the vector R1, describes the position of the
+direção de x. O outro dois elementos são zero, 
+o vetor R1, descreve a posição do
 
 00:04:29.020 --> 00:04:34.920
-centre of mass. And in this case, it's negative
-C1 and the Y and Z components are equal to zero.
+centro de massa, e nesse caso, 
+C1 é nagativo e o Y e Z são componentes iguais a zero
 
 00:04:34.920 --> 00:04:40.480
-And we have the inertia matrix which has only
-got one element and that is the inertia about
+e nós temos a matrix inercia na qual 
+tem apenas 1 elemento e que é a inercia sobre
 
 00:04:40.490 --> 00:04:45.680
-the Z axis. Now in this case, the Z axis is
-coming at us out of the page. So we have only
+o eixo Z. Agora neste caso, o eixo Z está 
+vindo para nós fora da página. Portanto nós temos apenas
 
 00:04:45.680 --> 00:04:48.330
-one finite element that's IZZ1.
+um elemento finito que é IZZ1
 
 00:04:48.330 --> 00:04:54.500
-For link two, it looks somewhat similar. These
-are the dynamic parameters of each of the
+para ligação 2, parece de alguma forma semelhante. Esses 
+são os paramentros de dinamica de cada 
 
 00:04:54.500 --> 00:04:58.900
-links, sometimes referred to as the inertial
-parameters of the links. When it comes to
+das ligações , ás vezes referida como o 
+parametro de ligação. Quando se trata
 
 00:04:58.900 --> 00:05:02.479
-describing the dynamics of moving bodies,
-there are number of different approaches that
+de descrever a dinamica dos dos corpos em movimento. 
+há numeros de diferentes abordagens que
 
 00:05:02.479 --> 00:05:07.900
-we can take, one of the most common of course
-is Newton's second law, F = ma which relates
+nós podemos tomar, 1 dos mais comum é claro 
+é a segunda lei de newton, F=ma que relaciona
 
 00:05:07.900 --> 00:05:13.860
 the force applied to the body to the acceleration
 that experiences as a function of its mass.
 
 00:05:13.860 --> 00:05:18.150
-For a rotating body, we can use Euler's equation
-which relates the torque applied to its body
+para um corpo rotativo, nós podemos usar a equação de euler, 
+que relaciona o torque aplicado no seu corpo
 
 00:05:18.150 --> 00:05:23.840
-given by the symbol tau to its rotational
-inertia, J, it's angular rate, Omega, and
+dado pelo simbolo tau para sua 
+inercia rotacinal, J, é variação angular ,Omega, e
 
 00:05:23.840 --> 00:05:26.190
 its angular acceleration Omega dot.
 
 00:05:26.190 --> 00:05:31.349
-A quite different approach is Lagrange's equation,
-which relates the kinetic, and potential energy
+Uma abordagem bastante diferente é a equação de lagrange , 
+que relaciona a cinetica, e energia potencial
 
 00:05:31.349 --> 00:05:38.440
-of a body to the derivatives of the Lagrangian
-term, T minus V, and the derivatives of Lagrangian
+de um corpo para as derivadas de um 
+termo lagrangiano, T menos V, e a derivada do lagragiano
 
 00:05:38.440 --> 00:05:44.289
-with respect to the generalized coordinates
-and the generalized velocities of the bodies
+com respeito ás coordenadas generalizadas 
+e as velocidades geneleralizadas dos corpos
 
 00:05:44.289 --> 00:05:45.720
-in the mechanism.
+no mecanismo.
 
 00:05:45.720 --> 00:05:50.210
 We can use any of these approaches to analyze
